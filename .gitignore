@@ -32,3 +32,16 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# reasonml output 
+.tailwind_ppx_cache
+lib/
+.merlin
+*.log
+.bsb.lock
+_esy
+_build
+*.install
+*.bs.js
+.DS_Store
+out
