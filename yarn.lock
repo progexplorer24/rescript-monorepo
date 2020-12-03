@@ -1067,7 +1067,7 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@babel/types@^7.10.4", "@babel/types@^7.10.5", "@babel/types@^7.11.0", "@babel/types@^7.11.5", "@babel/types@^7.12.1", "@babel/types@^7.12.5", "@babel/types@^7.4.4", "@babel/types@^7.7.4":
+"@babel/types@^7.10.4", "@babel/types@^7.10.5", "@babel/types@^7.11.0", "@babel/types@^7.11.5", "@babel/types@^7.12.1", "@babel/types@^7.4.4", "@babel/types@^7.7.4":
   version "7.12.6"
   resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.12.6.tgz#ae0e55ef1cce1fbc881cd26f8234eb3e657edc96"
   integrity sha512-hwyjw6GvjBLiyy3W0YQf0Z5Zf4NpYejUnKFcfcUhZCSffoBBp30w6wP2Wn6pk31jMYZvcOrB/1b7cGXvEoKogA==
@@ -1076,10 +1076,19 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
+"@babel/types@^7.12.5":
+  version "7.12.7"
+  resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.12.7.tgz#6039ff1e242640a29452c9ae572162ec9a8f5d13"
+  integrity sha512-MNyI92qZq6jrQkXvtIiykvl4WtoRrVV9MPn+ZfsoEENjiWcBQ3ZSHrkxnJWgWtLX3XXqX5hrSQ+X69wkmesXuQ==
+  dependencies:
+    "@babel/helper-validator-identifier" "^7.10.4"
+    lodash "^4.17.19"
+    to-fast-properties "^2.0.0"
+
 "@dylanirlbeck/tailwind-ppx@^0.8.3":
-  version "0.8.3"
-  resolved "https://registry.yarnpkg.com/@dylanirlbeck/tailwind-ppx/-/tailwind-ppx-0.8.3.tgz#f3af9dbe2bbf141dda6dc278cbf63b2b36b258d6"
-  integrity sha512-5YTpWRJoJ4fKWYs4YU4P3jhUYrlbf/50kHZG+/KIjEI40lU2TUZ36Jtl76AzcIho2EcNdXj4ukGXNMCr24AJEA==
+  version "0.8.4"
+  resolved "https://registry.yarnpkg.com/@dylanirlbeck/tailwind-ppx/-/tailwind-ppx-0.8.4.tgz#1043a1cd4a2aa6434f57190c0b64c5f083d3e02f"
+  integrity sha512-9vTmygqVjG8Iv58P+B/qC3tbbQGoQuOEGeZgnnWB0gM/5g5QdS7VDTyyfrGBe4kPv40lkuyyEynrj60Oc+He/A==
 
 "@emotion/cache@^10.0.27":
   version "10.0.29"
@@ -1875,17 +1884,17 @@ browserslist@^4.0.0, browserslist@^4.12.0, browserslist@^4.14.5, browserslist@^4
     node-releases "^1.1.66"
 
 bs-css-emotion@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/bs-css-emotion/-/bs-css-emotion-2.1.0.tgz#d1e82aca79b4da333b774b5c0b6546b22743de3f"
-  integrity sha512-nEnO/BbU4MFNh/zvqLfz+AktVCAJ++9WK/etYmOL4/fCKyKwbc7T/YHMu7Xe9CZ5rwH9s/qST/pEehKq+qVL2g==
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/bs-css-emotion/-/bs-css-emotion-2.2.0.tgz#74455c629472bf29e8ccaa175764fa26f1436491"
+  integrity sha512-gt+GLSeclCHJUK1yp11ahDukrMqHjXUMo+dqWWS96eWCxQKgyw1LrqEADB9LtNjbeVr2KeXbKe6k9w/oaipT/w==
   dependencies:
-    bs-css "13.1.0"
+    bs-css "13.2.0"
     emotion "^10.0.7"
 
-bs-css@13.1.0:
-  version "13.1.0"
-  resolved "https://registry.yarnpkg.com/bs-css/-/bs-css-13.1.0.tgz#2697aba575625d55ad7f07eaef93a74748ec8d42"
-  integrity sha512-G39iqPZdSZyjibeDOljCh2/VDfeQQBEGN2mKK+zQBSjinjfpeTwd4GIK69s5hNXJ2n4k6urHfs9pvwCe2LoExQ==
+bs-css@13.2.0:
+  version "13.2.0"
+  resolved "https://registry.yarnpkg.com/bs-css/-/bs-css-13.2.0.tgz#c28c460b548514f455e7c6ef292bf939aadaeb93"
+  integrity sha512-jbWPoWmNXZO/OrTKWjL4EMTrjal37vHI4QU7gjAsi0+/nMdyub+TLw70v6PWjXLpBWavt3WnGJzINYevXOu5rA==
 
 bs-platform@^8.3.3:
   version "8.3.3"
@@ -3339,9 +3348,9 @@ gauge@~2.7.3:
     wide-align "^1.1.0"
 
 gentype@^3.38.0:
-  version "3.38.0"
-  resolved "https://registry.yarnpkg.com/gentype/-/gentype-3.38.0.tgz#ce7f46250b1b2e944055f4837712d8a916d85196"
-  integrity sha512-67FfVy4u4q2xbhPc09mbh5ZLQLnjeqlRZUOTaEJ38wLX9s5Aftr9CdGV7n9J7DtbWpTyXBE4Rs6HNT/75IOFEQ==
+  version "3.41.0"
+  resolved "https://registry.yarnpkg.com/gentype/-/gentype-3.41.0.tgz#95f17272cadc7542275cc6e377f4dfcecaa2d443"
+  integrity sha512-fpdB3QOibhpB9wPK+ZGS5d84G6w3fB/BCEvt/G81WOZspC2Prh9QN7doifkBP6o1MYIfOAR98sfyvfKyC1fatQ==
 
 get-intrinsic@^1.0.0:
   version "1.0.1"
@@ -3733,9 +3742,9 @@ is-color-stop@^1.0.0:
     rgba-regex "^1.0.0"
 
 is-core-module@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/is-core-module/-/is-core-module-2.1.0.tgz#a4cc031d9b1aca63eecbd18a650e13cb4eeab946"
-  integrity sha512-YcV7BgVMRFRua2FqQzKtTDMz8iCuLEyGKjr70q8Zm1yy2qKcurbFEd79PAdHV77oL3NrAaOVQIbMmiHQCHB7ZA==
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/is-core-module/-/is-core-module-2.2.0.tgz#97037ef3d52224d85163f5597b2b63d9afed981a"
+  integrity sha512-XRAfAdyyY5F5cOXn7hYQDqh2Xmii+DEfIcQGxK/uNwMHhIkPWO0g8msXcbzLe+MpGoR951MlqM/2iIlU4vKDdQ==
   dependencies:
     has "^1.0.3"
 
