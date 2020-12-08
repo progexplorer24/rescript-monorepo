@@ -1,10 +1,7 @@
-const plugins ={
-  tailwindcss: {},
-  autoprefixer: {}
+module.exports = {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {}
+  }
+
 };
-
-if(process.env.NODE_ENV === 'production') {
-  plugins.cssnano = {};
-}
-
-module.exports.postcss = true
