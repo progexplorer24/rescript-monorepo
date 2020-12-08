@@ -7,6 +7,4 @@ if(process.env.NODE_ENV === 'production') {
   plugins.cssnano = {};
 }
 
-module.exports = {
-  plugins: plugins
-};
+module.exports.postcss = true
