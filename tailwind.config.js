@@ -1,8 +1,5 @@
+const colors = require('tailwindcss/colors')
 module.exports = {
-  future: {
-    removeDeprecatedGapUtilities: true,
-    purgeLayersByDefault: true,
-  },
   purge: {
      // Specify the paths to all of the template files in your project
      content: [
