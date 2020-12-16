@@ -5,8 +5,7 @@ let default = () =>
   <div>
     <Head> <title> {"Acme Web Design"->str} </title> <link rel="icon" href="/favicon.ico" /> </Head>
     <main>
-      <nav
-        className="bg-gray-700 md:flex md:items-center md:justify-between   text-white py-2 px-8 md:px-16  border-red-500 border-b-2">
+      <NavAcme>
         <div className="text-xl font-bold text-center">
           <span className="text-red-300"> {"Acme"->str} </span> {"Web Design"->str}
         </div>
@@ -17,9 +16,9 @@ let default = () =>
           <a href="#" className="uppercase h-10 px-2 flex items-center"> {"About"->str} </a>
           <a href="#" className="uppercase h-10 px-2 flex items-center"> {"Services"->str} </a>
         </div>
-      </nav>
+      </NavAcme>
       <section
-        className="bg-cover px-4 sm:px-8 pt-8 pb-4 md:py-16  text-white"
+        className="bg-cover px-4 sm:px-8 pt-8 pb-4 md:py-32  text-white"
         style={ReactDOM.Style.make(~backgroundImage="url('/acme/showcase.jpg')", ())}>
         <h1 className="text-center font-bold text-4xl lg:text-5xl">
           {"Affordable Professional Web Design"->str}
@@ -71,8 +70,9 @@ let default = () =>
           </p>
         </div>
       </section>
-      <section
-        className="w-full h-64 bg-red-800 sm:bg-pink-700 md:bg-purple-700 lg:bg-gray-700 xl:bg-green-600"
-      />
+      <footer
+        className="bg-red-600 text-white h-24 text-center font-bold flex items-center justify-center">
+        <div> {(`Acme Web Design, Copyright ${copySymbol} 2020`)->str} </div>
+      </footer>
     </main>
   </div>
