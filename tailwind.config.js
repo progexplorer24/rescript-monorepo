@@ -12,8 +12,13 @@ module.exports = {
     }
   },
   theme: {
+    /* Here you can extend default tailwindcss values */
     extend: {
-  },
+      screens: {
+        "omnifood-sm": "481px",
+        "omnifood-md": "767px",
+      }
+    },
      /* We override the default font-families with our own default prefs  */
      fontFamily: {
       'sans':['-apple-system', 'BlinkMacSystemFont', 'Helvetica Neue', 'Arial', 'sans-serif'],
