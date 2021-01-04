@@ -9,10 +9,13 @@ const withCSS = require('@zeit/next-css');
 
 const transpileModules = ["bs-platform"].concat(bsconfig["bs-dependencies"]);
 const withTM = require("next-transpile-modules")(transpileModules);
+const withMDX = require('@next/mdx')({
+  extension: /\.mdx?$/,
+})
 
 const config = {
   target: "serverless",
-  pageExtensions: ["jsx", "js", "bs.js"],
+  pageExtensions: ["jsx", "js", "bs.js", "mdx"],
   transpileModules: ["bs-platform"].concat(bsconfig["bs-dependencies"]),
   env: {
     ENV: process.env.NODE_ENV,
@@ -30,4 +33,4 @@ const config = {
   }
 };
 
-module.exports = withTM(withCSS(config));
+module.exports = withMDX(withTM(withCSS(config)));
