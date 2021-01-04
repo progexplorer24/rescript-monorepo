@@ -196,7 +196,7 @@ module Styles = {
   let logo = style(.[
     height(px(50)),
     width(#auto),
-    float(#left),
+    CssJs.float(#left),
     marginTop(px(5)),
     marginBottom(px(5)),
   ])
@@ -215,7 +215,7 @@ module Styles = {
 
   let mainNavSticky = style(.[color(#hex("555"))])
 
-  let mainNav = CssJs.merge(.[style(.[float(#right), marginTop(px(18))]), mainNavSticky])
+  let mainNav = CssJs.merge(.[style(.[CssJs.float(#right), marginTop(px(18))]), mainNavSticky])
 
   let liNav = style(.[display(#inlineBlock), marginLeft(#px(40))])
 
@@ -306,7 +306,7 @@ module Styles = {
 
   let mealsShowcase = CssJs.merge(.[style(.[width(#percent(100.))]), clearfix])
 
-  let mealsLi = style(.[display(#block), float(#left), width(#percent(25.))])
+  let mealsLi = style(.[display(#block), CssJs.float(#left), width(#percent(25.))])
 
   let mealFigure = style(.[
     width(#percent(100.)),
@@ -404,7 +404,7 @@ module Styles = {
       width(#px(50)),
       height(#px(50)),
       textAlign(#center),
-      float(#left),
+      CssJs.float(#left),
       fontSize(#percent(150.)),
       marginRight(#px(25)),
       padding(#px(5)),
@@ -644,9 +644,9 @@ module Styles = {
 
   let footer = style(.[backgroundColor(#hex("333")), padding2(~v=#px(20), ~h=#px(0))])
 
-  let footerNav = style(.[float(#left)])
+  let footerNav = style(.[CssJs.float(#left)])
 
-  let socialLinks = style(.[float(#right)])
+  let socialLinks = style(.[CssJs.float(#right)])
 
   let footerLi = style(.[display(#inlineBlock), marginRight(#px(20))])
   let lastLi = style(.[display(#inlineBlock), marginRight(#px(0))])
@@ -704,7 +704,7 @@ let default = () => {
     </header>
     <section className=Styles.section id="features">
       <div className=Styles.row>
-        <h2 className=Styles.h2> {(`Get food fast ${mdash} not fast food.`)->str} </h2>
+        <h2 className=Styles.h2> {`Get food fast ${mdash} not fast food.`->str} </h2>
         <p className=Styles.p>
           {"Hello, we're Omnifood, your new premium food delivery service. We know you're always busy. No time for cooking. So let us take care of that, we're really good at it, we promise!
           "->str}
@@ -886,7 +886,7 @@ let default = () => {
     </section>
     <section className=Styles.sectionSteps>
       <div className=Styles.row>
-        <h2 className=Styles.h2> {(`How it works ${mdash} Simple as 1, 2, 3`)->str} </h2>
+        <h2 className=Styles.h2> {`How it works ${mdash} Simple as 1, 2, 3`->str} </h2>
       </div>
       <div className={CssJs.merge(.[Styles.row, %tw("grid omnifood-md:grid-cols-2")])}>
         <div className=Styles.leftSection>
@@ -1518,9 +1518,7 @@ let default = () => {
         </div>
       </div>
       <div className=Styles.row>
-        <p className=Styles.footerText>
-          {(`Copyright ${copySymbol} 2020 by Explorer Lab's`)->str}
-        </p>
+        <p className=Styles.footerText> {`Copyright ${copySymbol} 2020 by Explorer Lab's`->str} </p>
       </div>
     </footer>
   </div>
