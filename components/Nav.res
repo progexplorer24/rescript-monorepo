@@ -1,5 +1,5 @@
 module Styles = {
-  open CssJs
+
 }
 
 @react.component
