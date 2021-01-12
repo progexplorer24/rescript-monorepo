@@ -1,7 +1,6 @@
 {
   "name": "rescript-ppx",
   "reason": { "react-jsx": 3 },
-  "bsc-flags": ["-bs-super-errors"],
   "sources": [
     {
       "dir": "pages",
@@ -18,11 +17,19 @@
     {
       "dir": "utils",
       "subdirs": true
+    },
+    {
+      "dir": "hooks",
+      "subdirs": true
+    },
+    {
+      "dir": "styles",
+      "subdirs": true,
     }
   ],
   "package-specs": [
     {
-      "module": "commonjs",
+      "module": "es6",
       "in-source": true
     }
   ],
@@ -31,9 +38,13 @@
   "bs-dependencies": [
     "reason-react",
     "bs-css",
-    "bs-css-emotion"
-    
+    "bs-css-emotion",
+    "bs-webapi"
   ],
   "ppx-flags": ["tailwind-ppx" ],
-  "refmt": 3
+  "refmt": 3,
+  "warnings": {
+    "number": "+A-42-48",
+    "error": "+A-3-44-102-103"
+  }
 }
