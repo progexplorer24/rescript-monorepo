@@ -1,0 +1,6 @@
+let tighter = #em(-0.05)
+let tight = #em(-0.025)
+let normal = #em(0.)
+let wide = #em(0.025)
+let wider = #em(0.05)
+let widest = #em(0.1)
