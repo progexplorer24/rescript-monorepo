@@ -1,4 +1,3 @@
-// INFO: Not completed
 open CssJs
 
 // NOTE: Border Radius - Utilities for controlling the border radius of an element.
@@ -242,6 +241,9 @@ let borderR = style(.[borderRightWidth(Theme.BorderWidth.default)])
 let borderB = style(.[borderBottomWidth(Theme.BorderWidth.default)])
 let borderL = style(.[borderLeftWidth(Theme.BorderWidth.default)])
 
+// NOTE: Border Color - Utilities for controlling the color of an element's borders.
+include Tailwind__BorderColor
+
 // NOTE: Border Style - Utilities for controlling the style of an element's borders.
 let borderSolid = style(.[borderStyle(#solid)])
 let borderDashed = style(.[borderStyle(#dashed)])
@@ -250,12 +252,119 @@ let borderDouble = style(.[borderStyle(#double)])
 let borderNone = style(.[borderStyle(#none)])
 
 // NOTE: Divide Width - Utilities for controlling the border width between elements.
-// TODO: Figure out optimal way to deal width css variables
+let divideY0 = style(.[
+  selector(
+    Selectors.ignoreFirstChild,
+    [borderTopWidth(Theme.BorderWidth._0), borderBottomWidth(Theme.BorderWidth._0)],
+  ),
+])
 
-// NOTE: Divide Color - Utilities for controlling the border color between elements.
-// TODO: Figure out optimal way to deal width css variables
+let divideY = style(.[
+  selector(
+    Selectors.ignoreFirstChild,
+    [borderTopWidth(Theme.BorderWidth.default), borderBottomWidth(Theme.BorderWidth._0)],
+  ),
+])
+let divideY2 = style(.[
+  selector(
+    Selectors.ignoreFirstChild,
+    [borderTopWidth(Theme.BorderWidth._2), borderBottomWidth(Theme.BorderWidth._0)],
+  ),
+])
+let divideY4 = style(.[
+  selector(
+    Selectors.ignoreFirstChild,
+    [borderTopWidth(Theme.BorderWidth._4), borderBottomWidth(Theme.BorderWidth._0)],
+  ),
+])
+let divideY8 = style(.[
+  selector(
+    Selectors.ignoreFirstChild,
+    [borderTopWidth(Theme.BorderWidth._8), borderBottomWidth(Theme.BorderWidth._0)],
+  ),
+])
 
-// NOTE: Divide Opacity - Utilities for controlling the opacity borders between elements.
+let divideYReverse = style(.[
+  selector(
+    Selectors.ignoreFirstChild,
+    [borderTopWidth(Theme.BorderWidth._0), borderBottomWidth(Theme.BorderWidth.default)],
+  ),
+])
+let divideY2Reverse = style(.[
+  selector(
+    Selectors.ignoreFirstChild,
+    [borderTopWidth(Theme.BorderWidth._0), borderBottomWidth(Theme.BorderWidth._2)],
+  ),
+])
+let divideY4Reverse = style(.[
+  selector(
+    Selectors.ignoreFirstChild,
+    [borderTopWidth(Theme.BorderWidth._0), borderBottomWidth(Theme.BorderWidth._4)],
+  ),
+])
+let divideY8Reverse = style(.[
+  selector(
+    Selectors.ignoreFirstChild,
+    [borderTopWidth(Theme.BorderWidth._0), borderBottomWidth(Theme.BorderWidth._8)],
+  ),
+])
+
+let divideX0 = style(.[
+  selector(
+    Selectors.ignoreFirstChild,
+    [borderLeftWidth(Theme.BorderWidth._0), borderRightWidth(Theme.BorderWidth._0)],
+  ),
+])
+
+let divideX = style(.[
+  selector(
+    Selectors.ignoreFirstChild,
+    [borderLeftWidth(Theme.BorderWidth.default), borderRightWidth(Theme.BorderWidth._0)],
+  ),
+])
+let divideX2 = style(.[
+  selector(
+    Selectors.ignoreFirstChild,
+    [borderLeftWidth(Theme.BorderWidth._2), borderRightWidth(Theme.BorderWidth._0)],
+  ),
+])
+let divideX4 = style(.[
+  selector(
+    Selectors.ignoreFirstChild,
+    [borderLeftWidth(Theme.BorderWidth._4), borderRightWidth(Theme.BorderWidth._0)],
+  ),
+])
+let divideX8 = style(.[
+  selector(
+    Selectors.ignoreFirstChild,
+    [borderLeftWidth(Theme.BorderWidth._8), borderRightWidth(Theme.BorderWidth._0)],
+  ),
+])
+
+let divideXReverse = style(.[
+  selector(
+    Selectors.ignoreFirstChild,
+    [borderLeftWidth(Theme.BorderWidth._0), borderRightWidth(Theme.BorderWidth.default)],
+  ),
+])
+let divideX2Reverse = style(.[
+  selector(
+    Selectors.ignoreFirstChild,
+    [borderLeftWidth(Theme.BorderWidth._0), borderRightWidth(Theme.BorderWidth._2)],
+  ),
+])
+let divideX4Reverse = style(.[
+  selector(
+    Selectors.ignoreFirstChild,
+    [borderLeftWidth(Theme.BorderWidth._0), borderRightWidth(Theme.BorderWidth._4)],
+  ),
+])
+let divideX8Reverse = style(.[
+  selector(
+    Selectors.ignoreFirstChild,
+    [borderLeftWidth(Theme.BorderWidth._0), borderRightWidth(Theme.BorderWidth._8)],
+  ),
+])
 
 // NOTE: Divide Style - Utilities for controlling the border style between elements.
 let divideSolid = style(.[borderStyle(#solid)])
@@ -265,16 +374,109 @@ let divideDouble = style(.[borderStyle(#double)])
 let divideNone = style(.[borderStyle(#none)])
 
 // NOTE: Ring Width - Utilities for creating outline rings with box-shadows.
-// TODO: Figure out optimal way to deal width css variables
+// x y blur spread inset
 
-// NOTE: Ring Color - Utilities for setting the color of outline rings.
-// TODO: Figure out optimal way to deal width css variables
+let ringOffsetShadow = (~inset, ~offsetWidth, offsetColor) =>
+  CssJs.Shadow.box(
+    ~inset,
+    ~x=#px(0),
+    ~y=#px(0),
+    ~blur=#px(0),
+    ~spread=#px(offsetWidth),
+    offsetColor,
+  )
 
-// NOTE: Ring Opacity - Utilities for setting the opacity of outline rings.
-// TODO: Figure out optimal way to deal width css variables
+let ringShadow = (~inset, ~spread, color) =>
+  CssJs.Shadow.box(~inset, ~x=#px(0), ~y=#px(0), ~blur=#px(0), ~spread=#px(spread), color)
 
-// NOTE: Ring Offset Width - Utilities for simulating an offset when adding outline rings.
-// TODO: Figure out optimal way to deal width css variables
+let whiteShadow = CssJs.Shadow.box(~x=#px(0), ~y=#px(0), Theme.Colors.white(1.))
 
-// NOTE: Ring Offset Color - Utilities for setting the color of outline ring offsets.
-// TODO: Figure out optimal way to deal width css variables
+let ring0 = (
+  ~inset=false,
+  ~offsetWidth=0,
+  ~offsetColor=Theme.Colors.white(1.),
+  color: CssJs.Types.Color.t,
+) => {
+  style(.[
+    boxShadows([
+      ringOffsetShadow(~inset, ~offsetWidth, offsetColor),
+      ringShadow(~inset, ~spread=0 + offsetWidth, color),
+      whiteShadow,
+    ]),
+  ])
+}
+
+let ring = (
+  ~inset=false,
+  ~offsetWidth=0,
+  ~offsetColor=Theme.Colors.white(1.),
+  color: CssJs.Types.Color.t,
+) => {
+  style(.[
+    boxShadows([
+      ringOffsetShadow(~inset, ~offsetWidth, offsetColor),
+      ringShadow(~inset, ~spread=3 + offsetWidth, color),
+      whiteShadow,
+    ]),
+  ])
+}
+
+let ring1 = (
+  ~inset=false,
+  ~offsetWidth=0,
+  ~offsetColor=Theme.Colors.white(1.),
+  color: CssJs.Types.Color.t,
+) => {
+  style(.[
+    boxShadows([
+      ringOffsetShadow(~inset, ~offsetWidth, offsetColor),
+      ringShadow(~inset, ~spread=1 + offsetWidth, color),
+      whiteShadow,
+    ]),
+  ])
+}
+
+let ring2 = (
+  ~inset=false,
+  ~offsetWidth=0,
+  ~offsetColor=Theme.Colors.white(1.),
+  color: CssJs.Types.Color.t,
+) => {
+  style(.[
+    boxShadows([
+      ringOffsetShadow(~inset, ~offsetWidth, offsetColor),
+      ringShadow(~inset, ~spread=2 + offsetWidth, color),
+      whiteShadow,
+    ]),
+  ])
+}
+
+let ring4 = (
+  ~inset=false,
+  ~offsetWidth=0,
+  ~offsetColor=Theme.Colors.white(1.),
+  color: CssJs.Types.Color.t,
+) => {
+  style(.[
+    boxShadows([
+      ringOffsetShadow(~inset, ~offsetWidth, offsetColor),
+      ringShadow(~inset, ~spread=4 + offsetWidth, color),
+      whiteShadow,
+    ]),
+  ])
+}
+
+let ring8 = (
+  ~inset=false,
+  ~offsetWidth=0,
+  ~offsetColor=Theme.Colors.white(1.),
+  color: CssJs.Types.Color.t,
+) => {
+  style(.[
+    boxShadows([
+      ringOffsetShadow(~inset, ~offsetWidth, offsetColor),
+      ringShadow(~inset, ~spread=8 + offsetWidth, color),
+      whiteShadow,
+    ]),
+  ])
+}
