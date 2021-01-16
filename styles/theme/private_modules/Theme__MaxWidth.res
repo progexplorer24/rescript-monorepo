@@ -1,3 +1,23 @@
+type t = [
+  | #none
+  | #zero
+  | #xs
+  | #sm
+  | #md
+  | #lg
+  | #xl
+  | #xl2
+  | #xl3
+  | #xl4
+  | #xl5
+  | #xl6
+  | #xl7
+  | #full
+  | #min
+  | #max
+  | #prose
+]
+
 let none = #none
 let _0 = #rem(0.)
 let xs = #rem(20.)

@@ -1,3 +1,5 @@
+type t = [#none | #sm | #default | #md | #lg | #xl | #xl2 | #xl3 | #full]
+
 let none = #px(0)
 let sm = #rem(0.125)
 let default = #rem(0.25)

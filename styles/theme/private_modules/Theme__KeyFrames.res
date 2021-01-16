@@ -1,3 +1,5 @@
+type t = [#spin | #ping | #pulse | #bounce]
+
 let spin = CssJs.keyframes(.[
   (0, [CssJs.transform(#rotate(#deg(0.)))]),
   (100, [CssJs.transform(#rotate(#deg(360.)))]),

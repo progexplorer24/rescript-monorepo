@@ -1,17 +1,17 @@
 type t = [
   | #none
-  | #order1
-  | #order2
-  | #order3
-  | #order4
-  | #order5
-  | #order6
-  | #order7
-  | #order8
-  | #order9
-  | #order10
-  | #order11
-  | #order12
+  | #v1
+  | #v2
+  | #v3
+  | #v4
+  | #v5
+  | #v6
+  | #v7
+  | #v8
+  | #v9
+  | #v10
+  | #v11
+  | #v12
   | #first
   | #last
 ]

@@ -1,10 +1,11 @@
-// x y  blur spread
-// INFO: Accept multiple box shadow values
 open CssJs
+
+type t = [#sm | #default | #md | #lg | #xl | #xl2 | #inner]
+// x y  blur spread
 type boxShadows = array<Shadow.t<Shadow.box>>
 let sm: boxShadows = [
   Shadow.box(~x=#px(0), ~y=#px(1), ~blur=#px(3), ~spread=#px(0), #rgba(0, 0, 0, #num(0.1))),
-  Shadow.box(~x=#px(0), ~y=#px(1), ~blur=#px(2), ~spread=#px(0), #rgba(0, 0, 0, #num(0.06))),
+  Shadow.box(~x=#px(0), ~y=#px(1), ~blur=#px(2), ~spread=#px(0), #rgba(0, 0, 0, #num(0.05))),
 ]
 
 let default: boxShadows = [

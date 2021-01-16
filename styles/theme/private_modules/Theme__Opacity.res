@@ -1,25 +1,25 @@
 type t = [
-  | #opacity0
-  | #opacity5
-  | #opacity10
-  | #opacity15
-  | #opacity20
-  | #opacity25
-  | #opacity30
-  | #opacity35
-  | #opacity40
-  | #opacity45
-  | #opacity50
-  | #opacity55
-  | #opacity60
-  | #opacity65
-  | #opacity70
-  | #opacity75
-  | #opacity80
-  | #opacity85
-  | #opacity90
-  | #opacity95
-  | #opacity100
+  | #v0
+  | #v5
+  | #v10
+  | #v15
+  | #v20
+  | #v25
+  | #v30
+  | #v35
+  | #v40
+  | #v45
+  | #v50
+  | #v55
+  | #v60
+  | #v65
+  | #v70
+  | #v75
+  | #v80
+  | #v85
+  | #v90
+  | #v95
+  | #v100
 ]
 let _0 = 0.
 let _5 = 0.05

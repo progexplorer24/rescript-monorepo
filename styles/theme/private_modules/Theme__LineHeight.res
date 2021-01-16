@@ -1,3 +1,19 @@
+type t = [
+  | #h3
+  | #h4
+  | #h5
+  | #h6
+  | #h7
+  | #h8
+  | #h9
+  | #h10
+  | #none
+  | #tight
+  | #snug
+  | #normal
+  | #relaxed
+  | #loose
+]
 let _3 = #rem(0.75)
 let _4 = #rem(1.)
 let _5 = #rem(1.25)

@@ -1,3 +1,5 @@
+type t = [#xs | #sm | #base | #lg | #xl | #xl2 | #xl3 | #xl4 | #xl5 | #xl6 | #xl7 | #xl8 | #xl9]
+
 let xs = #rem(0.75)
 let sm = #rem(0.875)
 let base = #rem(1.)

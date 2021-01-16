@@ -1,3 +1,4 @@
+type t = [#tighter | #tight | #normal | #wide | #wider | #widest]
 let tighter = #em(-0.05)
 let tight = #em(-0.025)
 let normal = #em(0.)
