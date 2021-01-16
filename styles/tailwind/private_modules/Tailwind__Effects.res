@@ -1,8 +1,14 @@
-// INFO: Not completed
 open CssJs
 
 // NOTE: Box Shadow - Utilities for controlling the box shadow of an element.
-// TODO: Figure out optimal way to deal width css variables
+let shadowSm = style(.[boxShadows(Theme.BoxShadow.sm)])
+let shadow = style(.[boxShadows(Theme.BoxShadow.default)])
+let shadowMd = style(.[boxShadows(Theme.BoxShadow.md)])
+let shadowLg = style(.[boxShadows(Theme.BoxShadow.lg)])
+let shadowXl = style(.[boxShadows(Theme.BoxShadow.xl)])
+let shadow2Xl = style(.[boxShadows(Theme.BoxShadow._2xl)])
+let shadowInner = style(.[boxShadows(Theme.BoxShadow.inner)])
+let shadowNone = style(.[boxShadow(#none)])
 
 // NOTE: Opacity - Utilities for controlling the opacity of an element.
 let opacity0 = style(.[opacity(Theme.Opacity._0)])
