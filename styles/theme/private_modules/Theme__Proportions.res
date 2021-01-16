@@ -1,3 +1,32 @@
+type t = [
+  | #v1By2
+  | #v1By3
+  | #v2By3
+  | #v1By4
+  | #v2By4
+  | #v3By4
+  | #v1By5
+  | #v2By5
+  | #v3By5
+  | #v4By5
+  | #v1By6
+  | #v2By6
+  | #v3By6
+  | #v4By6
+  | #v5By6
+  | #v1By12
+  | #v2By12
+  | #v3By12
+  | #v4By12
+  | #v5By12
+  | #v6By12
+  | #v7By12
+  | #v8By12
+  | #v9By12
+  | #v10By12
+  | #v11By12
+]
+
 let _1By2 = #percent(50.)
 let _1By3 = #percent(33.333333)
 let _2By3 = #percent(66.666667)

@@ -1,3 +1,74 @@
+type t = [
+  | #auto
+  | #px
+  | #full
+  | #v0
+  | #v0_5
+  | #v1
+  | #v1_5
+  | #v2
+  | #v2_5
+  | #v3
+  | #v3_5
+  | #v4
+  | #v5
+  | #v6
+  | #v7
+  | #v8
+  | #v9
+  | #v10
+  | #v11
+  | #v12
+  | #v14
+  | #v16
+  | #v18
+  | #v20
+  | #v24
+  | #v28
+  | #v32
+  | #v36
+  | #v40
+  | #v44
+  | #v48
+  | #v52
+  | #v56
+  | #v60
+  | #v64
+  | #v68
+  | #v72
+  | #v76
+  | #v80
+  | #v84
+  | #v88
+  | #v92
+  | #v96
+  | #v100
+  | #v104
+  | #v108
+  | #v112
+  | #v116
+  | #v120
+  | #v124
+  | #v128
+  | #v132
+  | #v136
+  | #v140
+  | #v144
+  | #v148
+  | #v152
+  | #v156
+  | #v160
+  | #v164
+  | #v168
+  | #v172
+  | #v176
+  | #v180
+  | #v184
+  | #v188
+  | #v192
+  | #v196
+  | #v200
+]
 let auto = #auto
 let _0 = #px(0)
 let px = #px(1)
@@ -67,71 +138,3 @@ let _188 = #rem(47.)
 let _192 = #rem(48.)
 let _196 = #rem(49.)
 let _200 = #rem(50.)
-
-let nFull = #percent(-100.)
-let nPx = #px(-1)
-let n0_5 = #rem(-0.125)
-let n1 = #rem(-0.25)
-let n1_5 = #rem(-0.375)
-let n2 = #rem(-0.5)
-let n2_5 = #rem(-0.625)
-let n3 = #rem(-0.75)
-let n3_5 = #rem(-0.875)
-let n4 = #rem(-1.)
-let n5 = #rem(-1.25)
-let n6 = #rem(-1.5)
-let n7 = #rem(-1.75)
-let n8 = #rem(-2.)
-let n9 = #rem(-2.25)
-let n10 = #rem(-2.5)
-let n11 = #rem(-2.75)
-let n12 = #rem(-3.)
-let n14 = #rem(-3.5)
-let n16 = #rem(-4.)
-let n18 = #rem(-4.5)
-let n20 = #rem(-5.)
-let n24 = #rem(-6.)
-let n28 = #rem(-7.)
-let n32 = #rem(-8.)
-let n36 = #rem(-9.)
-let n40 = #rem(-10.)
-let n44 = #rem(-11.)
-let n48 = #rem(-12.)
-let n52 = #rem(-13.)
-let n56 = #rem(-14.)
-let n60 = #rem(-15.)
-let n64 = #rem(-16.)
-let n68 = #rem(-17.)
-let n72 = #rem(-18.)
-let n76 = #rem(-19.)
-let n80 = #rem(-20.)
-let n84 = #rem(-21.)
-let n88 = #rem(-22.)
-let n92 = #rem(-23.)
-let n96 = #rem(-24.)
-let n100 = #rem(-25.)
-let n104 = #rem(-26.)
-let n108 = #rem(-27.)
-let n112 = #rem(-28.)
-let n116 = #rem(-29.)
-let n120 = #rem(-30.)
-let n124 = #rem(-31.)
-let n128 = #rem(-32.)
-let n132 = #rem(-33.)
-let n136 = #rem(-34.)
-let n140 = #rem(-35.)
-let n144 = #rem(-36.)
-let n148 = #rem(-37.)
-let n152 = #rem(-38.)
-let n156 = #rem(-39.)
-let n160 = #rem(-40.)
-let n164 = #rem(-41.)
-let n168 = #rem(-42.)
-let n172 = #rem(-43.)
-let n176 = #rem(-44.)
-let n180 = #rem(-45.)
-let n184 = #rem(-46.)
-let n188 = #rem(-47.)
-let n192 = #rem(-48.)
-let n196 = #rem(-49.)
-let n200 = #rem(-50.)

@@ -3,7 +3,11 @@ module Screens = Theme__Screens
 
 module Spacing = Theme__Spacing
 
+module SpacingNegative = Theme__SpacingNegative
+
 module Proportions = Theme__Proportions
+
+module ProportionsNegative = Theme__ProportionsNegative
 
 module Opacity = Theme__Opacity
 
