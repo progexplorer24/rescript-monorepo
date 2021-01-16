@@ -25,6 +25,10 @@
     {
       "dir": "styles",
       "subdirs": true
+    },
+    {
+      "dir": "layouts",
+      "subdirs": true
     }
   ],
   "package-specs": [
