@@ -27,3 +27,5 @@ include Tailwind__Interactivity
 include Tailwind__SVG
 
 include Tailwind__Accessibility
+
+let merge = CssJs.merge
