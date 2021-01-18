@@ -1,6 +1,6 @@
 module Styles = {
   open Tailwind
-  let elementStyles = CssJs.merge(.[mt4, leadingLoose])
+  let elementStyles = CssJs.merge(.[mb6, leadingLoose])
 }
 
 @react.component
