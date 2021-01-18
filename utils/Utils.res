@@ -1,4 +1,4 @@
-let str = a => ReasonReact.string(a)
+let str = a => React.string(a)
 let clog = str => Js.log(str)
 let copySymbol = `\u00a9`
 let mdash = `\u2014`
