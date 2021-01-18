@@ -29,6 +29,10 @@
     {
       "dir": "layouts",
       "subdirs": true
+    },
+    {
+      "dir": "contexts",
+      "subdirs": true
     }
   ],
   "package-specs": [
