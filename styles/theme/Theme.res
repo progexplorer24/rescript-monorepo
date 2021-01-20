@@ -1,4 +1,5 @@
 // TODO: Write feature request for rescript-vscode - Let users decide what modules to expose in your API
+// TODO: Write feature request for folding regions
 module Screens = Theme__Screens
 
 module Spacing = Theme__Spacing
