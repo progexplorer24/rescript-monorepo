@@ -20,7 +20,6 @@
     "bs-css-emotion": "^2.1.0",
     "bs-webapi": "^0.19.1",
     "emotion": "^11.0.0",
-    "gentype": "^3.38.0",
     "next": "10.0.1",
     "next-transpile-modules": "^4.1.0",
     "postcss": "^7",
