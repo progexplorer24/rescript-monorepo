@@ -3,28 +3,12 @@ module Styles = {
 
   let orderedElementStyles = merge(.[mb4])
 
-  let bulletStyles = merge(.[
-    w3,
-    h3,
-    inlineFlex,
-    itemsCenter,
-    justifyCenter,
-    borderL,
-    borderR,
-    borderIndigo800,
-    roundedFull,
-    bgIndigo50,
-    mr4,
-    // nmb0_5,
-  ])
-
   let numerationStyles = merge(.[
-    textIndigo800,
+    textIndigo800(1.),
     pr1_5,
     borderR,
     roundedRFull,
-    borderIndigo800,
-    // textWhite,
+    borderIndigo800(1.),
     mr3,
     inlineFlex,
   ])

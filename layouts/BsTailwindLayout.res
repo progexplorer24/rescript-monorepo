@@ -9,8 +9,8 @@ module Styles = {
     wFull,
     hFull,
     overflowAuto,
-    bgGray50,
-    textCoolGray800,
+    bgGray50(1.),
+    textCoolGray800(1.),
   ])
   let container = CssJs.merge(.[maxW4Xl, mxAuto])
 

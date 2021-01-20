@@ -10,9 +10,9 @@ module Styles = {
     justifyCenter,
     borderL,
     borderR,
-    borderIndigo800,
+    borderIndigo800(1.),
     roundedFull,
-    bgIndigo50,
+    bgIndigo50(1.),
     mr4,
   ])
 }

@@ -1,7 +1,7 @@
 module Styles = {
   open Tailwind
 
-  let h1Styles = CssJs.merge(.[mb6, text4Xl, fontBlack, textCoolGray900, trackingTight])
+  let h1Styles = CssJs.merge(.[mb6, text4Xl, fontBlack, trackingTight])
 }
 
 @react.component

@@ -1,6 +1,13 @@
 module Styles = {
   open Tailwind
-  let elementStyles = CssJs.merge(.[fontMono, p1, textIndigo800, bgIndigo50, rounded, fontBold])
+  let elementStyles = CssJs.merge(.[
+    fontMono,
+    p1,
+    textIndigo800(1.),
+    bgIndigo50(1.),
+    rounded,
+    fontBold,
+  ])
 }
 
 @react.component

@@ -1,7 +1,13 @@
 module Styles = {
   open Tailwind
   // font-bold underline cursor-pointer text-blue-700
-  let elementStyles = CssJs.merge(.[fontBold, borderB, borderBlue700, cursorPointer, textBlue700])
+  let elementStyles = CssJs.merge(.[
+    fontBold,
+    borderB,
+    borderBlue700(1.),
+    cursorPointer,
+    textBlue700(1.),
+  ])
 }
 
 @react.component
