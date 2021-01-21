@@ -74,8 +74,9 @@ let animateSpin = style(.[
   animation(
     Theme.KeyFrames.spin,
     ~duration=1000,
+    ~delay=0,
     ~timingFunction=#linear,
-    ~delay=50 * 7 * 24 * 60 * 60 * 1000,
+    ~iterationCount=#infinite,
   ),
 ])
 
@@ -84,7 +85,8 @@ let animatePing = style(.[
     Theme.KeyFrames.ping,
     ~duration=1000,
     ~timingFunction=#cubicBezier(0., 0., 0.2, 1.),
-    ~delay=50 * 7 * 24 * 60 * 60 * 1000,
+    ~delay=0,
+    ~iterationCount=#infinite,
   ),
 ])
 
@@ -93,10 +95,11 @@ let animatePulse = style(.[
     Theme.KeyFrames.pulse,
     ~duration=2000,
     ~timingFunction=#cubicBezier(0.4, 0., 0.6, 1.),
-    ~delay=50 * 7 * 24 * 60 * 60 * 1000,
+    ~delay=0,
+    ~iterationCount=#infinite,
   ),
 ])
 
 let animateBounce = style(.[
-  animation(Theme.KeyFrames.bounce, ~duration=1000, ~delay=50 * 7 * 24 * 60 * 60 * 1000),
+  animation(Theme.KeyFrames.bounce, ~duration=1000, ~delay=0, ~iterationCount=#infinite),
 ])
