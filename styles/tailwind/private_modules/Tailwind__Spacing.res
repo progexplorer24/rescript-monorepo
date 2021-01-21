@@ -1,4 +1,3 @@
-// INFO: Not completed
 // TODO: Consider separating margins and paddings.
 open CssJs
 // NOTE: Padding - Utilities for controlling an element's padding.
