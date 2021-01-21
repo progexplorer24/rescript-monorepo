@@ -65,6 +65,15 @@ let default = () => {
       <p>
         {"Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias optio labore natus rem tempora veritatis. Praesentium quia, modi necessitatibus nulla adipisci, veniam itaque officiis rem voluptatem fugit cumque omnis nam nostrum natus tenetur voluptatibus placeat optio quasi, voluptatum obcaecati. Facere voluptatum veniam fugiat nihil dolorem eos quo nulla corrupti dicta."->Utils.str}
       </p>
+      <div>
+        <div> {"1"->Utils.str} </div>
+        <div> {"2"->Utils.str} </div>
+        <div> {"3"->Utils.str} </div>
+        <div> {"4"->Utils.str} </div>
+        <div> {"5"->Utils.str} </div>
+        <div> {"6"->Utils.str} </div>
+        <div> {"7"->Utils.str} </div>
+      </div>
     </div>
     // INFO: TailwindCSS section
     <div>
@@ -151,6 +160,15 @@ let default = () => {
       <p className="text-red-800 text-opacity-85">
         {" Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus a, quidem, ducimus, molestiae officiis beatae veritatis voluptates expedita mollitia ad dicta pariatur. Iusto totam delectus modi nulla asperiores esse voluptatem nam doloremque aliquid, laborum id impedit ullam quod eligendi accusantium illum aperiam, ratione est ipsam soluta sed aliquam? Quam, magni."->Utils.str}
       </p>
+      <div className="grid grid-cols-3 gap-4">
+        <div className="border border-red-400 border-dashed"> {"1"->Utils.str} </div>
+        <div className="border border-red-400 border-dashed"> {"2"->Utils.str} </div>
+        <div className="border border-red-400 border-dashed"> {"3"->Utils.str} </div>
+        <div className="col-span-2 border border-red-400 border-dashed"> {"4"->Utils.str} </div>
+        <div className="border border-red-400 border-dashed"> {"5"->Utils.str} </div>
+        <div className="border border-red-400 border-dashed"> {"6"->Utils.str} </div>
+        <div className="col-span-3 border border-red-400 border-dashed"> {"7"->Utils.str} </div>
+      </div>
     </div>
   </div>
 }
