@@ -391,91 +391,17 @@ let ringShadow = (~inset, ~spread, color) =>
 
 let whiteShadow = CssJs.Shadow.box(~x=#px(0), ~y=#px(0), Theme.Colors.white(1.))
 
-let ring0 = (
-  ~inset=false,
-  ~offsetWidth=0,
-  ~offsetColor=Theme.Colors.white(1.),
-  color: CssJs.Types.Color.t,
-) => {
-  style(.[
-    boxShadows([
-      ringOffsetShadow(~inset, ~offsetWidth, offsetColor),
-      ringShadow(~inset, ~spread=0 + offsetWidth, color),
-      whiteShadow,
-    ]),
-  ])
-}
-
 let ring = (
   ~inset=false,
   ~offsetWidth=0,
   ~offsetColor=Theme.Colors.white(1.),
+  ~width=3,
   color: CssJs.Types.Color.t,
 ) => {
   style(.[
     boxShadows([
       ringOffsetShadow(~inset, ~offsetWidth, offsetColor),
-      ringShadow(~inset, ~spread=3 + offsetWidth, color),
-      whiteShadow,
-    ]),
-  ])
-}
-
-let ring1 = (
-  ~inset=false,
-  ~offsetWidth=0,
-  ~offsetColor=Theme.Colors.white(1.),
-  color: CssJs.Types.Color.t,
-) => {
-  style(.[
-    boxShadows([
-      ringOffsetShadow(~inset, ~offsetWidth, offsetColor),
-      ringShadow(~inset, ~spread=1 + offsetWidth, color),
-      whiteShadow,
-    ]),
-  ])
-}
-
-let ring2 = (
-  ~inset=false,
-  ~offsetWidth=0,
-  ~offsetColor=Theme.Colors.white(1.),
-  color: CssJs.Types.Color.t,
-) => {
-  style(.[
-    boxShadows([
-      ringOffsetShadow(~inset, ~offsetWidth, offsetColor),
-      ringShadow(~inset, ~spread=2 + offsetWidth, color),
-      whiteShadow,
-    ]),
-  ])
-}
-
-let ring4 = (
-  ~inset=false,
-  ~offsetWidth=0,
-  ~offsetColor=Theme.Colors.white(1.),
-  color: CssJs.Types.Color.t,
-) => {
-  style(.[
-    boxShadows([
-      ringOffsetShadow(~inset, ~offsetWidth, offsetColor),
-      ringShadow(~inset, ~spread=4 + offsetWidth, color),
-      whiteShadow,
-    ]),
-  ])
-}
-
-let ring8 = (
-  ~inset=false,
-  ~offsetWidth=0,
-  ~offsetColor=Theme.Colors.white(1.),
-  color: CssJs.Types.Color.t,
-) => {
-  style(.[
-    boxShadows([
-      ringOffsetShadow(~inset, ~offsetWidth, offsetColor),
-      ringShadow(~inset, ~spread=8 + offsetWidth, color),
+      ringShadow(~inset, ~spread=width + offsetWidth, color),
       whiteShadow,
     ]),
   ])
