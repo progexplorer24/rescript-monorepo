@@ -1,8 +1,8 @@
 module Styles = {
   open Tailwind
-  let elementStyles = CssJs.merge(.[mb6, fontBold, textLg])
+  let elementStyles = twStyle([mb6, textLg, fontBold])
 }
 
 @react.component
 let make = (~children, ~className="") =>
-  <h6 className={CssJs.merge(.[Styles.elementStyles, className])}> children </h6>
+  <h6 className={Tailwind.merge(.[Styles.elementStyles, className])}> children </h6>

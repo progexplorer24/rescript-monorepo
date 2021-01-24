@@ -1,24 +1,24 @@
 module Styles = {
   open Tailwind
-  let elementStyles = CssJs.merge(.[mb4])
+  let elementStyles = twStyle([mb4])
 
-  let bulletStyles = merge(.[
+  let bulletStyles = twStyle([
     w3,
-    h3,
-    inlineFlex,
-    itemsCenter,
-    justifyCenter,
+    borderIndigo800(1.),
     borderL,
     borderR,
-    borderIndigo800(1.),
     roundedFull,
     bgIndigo50(1.),
+    itemsCenter,
+    justifyCenter,
+    h3,
     mr4,
+    inlineFlex,
   ])
 }
 
 @react.component
 let make = (~children, ~className="") =>
-  <li className={CssJs.merge(.[Styles.elementStyles, className])}>
+  <li className={Tailwind.merge(.[Styles.elementStyles, className])}>
     <span className=Styles.bulletStyles /> children
   </li>
