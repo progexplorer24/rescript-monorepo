@@ -37,3 +37,5 @@ let tw = rules => Belt.Array.concatMany(rules)
 let twStyle = rules => CssJs.style(. Belt.Array.concatMany(rules))
 
 let selector = (string, rules) => [CssJs.selector(string, rules)]
+
+let fontFamilies = fonts => [CssJs.fontFamilies(fonts)]
