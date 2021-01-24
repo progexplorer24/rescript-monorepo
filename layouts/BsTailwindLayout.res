@@ -2,19 +2,19 @@
 // TODO:
 module Styles = {
   open Tailwind
-  let globalStyles = CssJs.merge(.[
-    fontSans,
-    CssJs.style(.[CssJs.fontFamilies([#custom("Nunito Sans")])]),
-    mxAuto,
-    wFull,
-    hFull,
-    overflowAuto,
-    bgGray50(1.),
-    textCoolGray800(1.),
+  let globalStyles = merge(.[
+    twStyle([
+      fontFamilies([#custom("Nunito Sans")]),
+      wFull,
+      hFull,
+      mxAuto,
+      overflowAuto,
+      bgGray50(1.),
+      textCoolGray800(1.),
+      fontSans,
+    ]),
   ])
-  let container = CssJs.merge(.[maxW4Xl, mxAuto])
-
-  let twStyles = CssJs.merge(.[flex, nspaceX4])
+  let container = twStyle([maxW4Xl, mxAuto])
 }
 
 @react.component
