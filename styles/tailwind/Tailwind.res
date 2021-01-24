@@ -29,3 +29,11 @@ include Tailwind__SVG
 include Tailwind__Accessibility
 
 let merge = CssJs.merge
+
+let style = CssJs.style
+
+let tw = rules => Belt.Array.concatMany(rules)
+
+let twStyle = rules => CssJs.style(. Belt.Array.concatMany(rules))
+
+let selector = (string, rules) => [CssJs.selector(string, rules)]
