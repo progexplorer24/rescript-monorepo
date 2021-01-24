@@ -10,7 +10,7 @@ let transform = (
   ~twScaleY=1.,
   (),
 ) =>
-  style(.[
+  [
     CssJs.transforms([
       CssJs.translateX(#percent(twTranslateX)),
       CssJs.translateY(#percent(twTranslateY)),
@@ -20,7 +20,7 @@ let transform = (
       CssJs.scaleX(twScaleX),
       CssJs.scaleY(twScaleY),
     ]),
-  ])
+  ]
 
 let transformGpu = (
   ~twTranslateX=#percent(0.),
@@ -32,7 +32,7 @@ let transformGpu = (
   ~twScaleY=1.,
   (),
 ) =>
-  style(.[
+  [
     CssJs.transforms([
       CssJs.translate3d(twTranslateX, twTranslateY, #percent(0.)),
       CssJs.rotate(twRotate),
@@ -41,18 +41,18 @@ let transformGpu = (
       CssJs.scaleX(twScaleX),
       CssJs.scaleY(twScaleY),
     ]),
-  ])
-let transformNone = style(.[CssJs.transform(#none)])
+  ]
+let transformNone = [CssJs.transform(#none)]
 
 // NOTE: Transform Origin - Utilities for specifying the origin for an element's transformations.
-let originCenter = style(.[transformOrigin(#percent(50.), #percent(50.))])
-let originRight = style(.[transformOrigin(#percent(50.), #percent(100.))])
-let originLeft = style(.[transformOrigin(#percent(50.), #percent(0.))])
+let originCenter = [transformOrigin(#percent(50.), #percent(50.))]
+let originRight = [transformOrigin(#percent(50.), #percent(100.))]
+let originLeft = [transformOrigin(#percent(50.), #percent(0.))]
 
-let originTop = style(.[transformOrigin(#percent(0.), #percent(50.))])
-let originTopLeft = style(.[transformOrigin(#percent(0.), #percent(0.))])
-let originTopRight = style(.[transformOrigin(#percent(0.), #percent(100.))])
+let originTop = [transformOrigin(#percent(0.), #percent(50.))]
+let originTopLeft = [transformOrigin(#percent(0.), #percent(0.))]
+let originTopRight = [transformOrigin(#percent(0.), #percent(100.))]
 
-let originBottom = style(.[transformOrigin(#percent(100.), #percent(50.))])
-let originBottomRight = style(.[transformOrigin(#percent(100.), #percent(100.))])
-let originBottomLeft = style(.[transformOrigin(#percent(100.), #percent(0.))])
+let originBottom = [transformOrigin(#percent(100.), #percent(50.))]
+let originBottomRight = [transformOrigin(#percent(100.), #percent(100.))]
+let originBottomLeft = [transformOrigin(#percent(100.), #percent(0.))]

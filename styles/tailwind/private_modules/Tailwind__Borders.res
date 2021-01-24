@@ -1,377 +1,377 @@
 open CssJs
 
 // NOTE: Border Radius - Utilities for controlling the border radius of an element.
-let roundedNone = style(.[borderRadius(Theme.BorderRadius.none)])
-let roundedSm = style(.[borderRadius(Theme.BorderRadius.sm)])
-let rounded = style(.[borderRadius(Theme.BorderRadius.default)])
-let roundedMd = style(.[borderRadius(Theme.BorderRadius.md)])
-let roundedLg = style(.[borderRadius(Theme.BorderRadius.lg)])
-let roundedXl = style(.[borderRadius(Theme.BorderRadius.xl)])
-let rounded2Xl = style(.[borderRadius(Theme.BorderRadius._2xl)])
-let rounded3Xl = style(.[borderRadius(Theme.BorderRadius._3xl)])
-let roundedFull = style(.[borderRadius(Theme.BorderRadius.full)])
+let roundedNone = [borderRadius(Theme.BorderRadius.none)]
+let roundedSm = [borderRadius(Theme.BorderRadius.sm)]
+let rounded = [borderRadius(Theme.BorderRadius.default)]
+let roundedMd = [borderRadius(Theme.BorderRadius.md)]
+let roundedLg = [borderRadius(Theme.BorderRadius.lg)]
+let roundedXl = [borderRadius(Theme.BorderRadius.xl)]
+let rounded2Xl = [borderRadius(Theme.BorderRadius._2xl)]
+let rounded3Xl = [borderRadius(Theme.BorderRadius._3xl)]
+let roundedFull = [borderRadius(Theme.BorderRadius.full)]
 
-let roundedTNone = style(.[
+let roundedTNone = [
   borderTopLeftRadius(Theme.BorderRadius.none),
   borderTopRightRadius(Theme.BorderRadius.none),
-])
-let roundedRNone = style(.[
+]
+let roundedRNone = [
   borderTopRightRadius(Theme.BorderRadius.none),
   borderBottomRightRadius(Theme.BorderRadius.none),
-])
-let roundedBNone = style(.[
+]
+let roundedBNone = [
   borderBottomRightRadius(Theme.BorderRadius.none),
   borderBottomLeftRadius(Theme.BorderRadius.none),
-])
-let roundedLNone = style(.[
+]
+let roundedLNone = [
   borderTopLeftRadius(Theme.BorderRadius.none),
   borderBottomLeftRadius(Theme.BorderRadius.none),
-])
+]
 
-let roundedTSm = style(.[
+let roundedTSm = [
   borderTopLeftRadius(Theme.BorderRadius.sm),
   borderTopRightRadius(Theme.BorderRadius.sm),
-])
-let roundedRSm = style(.[
+]
+let roundedRSm = [
   borderBottomRightRadius(Theme.BorderRadius.sm),
   borderTopRightRadius(Theme.BorderRadius.sm),
-])
-let roundedBSm = style(.[
+]
+let roundedBSm = [
   borderBottomRightRadius(Theme.BorderRadius.sm),
   borderBottomLeftRadius(Theme.BorderRadius.sm),
-])
-let roundedLSm = style(.[
+]
+let roundedLSm = [
   borderTopLeftRadius(Theme.BorderRadius.sm),
   borderBottomLeftRadius(Theme.BorderRadius.sm),
-])
+]
 
-let roundedT = style(.[
+let roundedT = [
   borderTopLeftRadius(Theme.BorderRadius.default),
   borderTopRightRadius(Theme.BorderRadius.default),
-])
-let roundedR = style(.[
+]
+let roundedR = [
   borderBottomRightRadius(Theme.BorderRadius.default),
   borderTopRightRadius(Theme.BorderRadius.default),
-])
-let roundedB = style(.[
+]
+let roundedB = [
   borderBottomRightRadius(Theme.BorderRadius.default),
   borderBottomLeftRadius(Theme.BorderRadius.default),
-])
-let roundedL = style(.[
+]
+let roundedL = [
   borderTopLeftRadius(Theme.BorderRadius.default),
   borderBottomLeftRadius(Theme.BorderRadius.default),
-])
+]
 
-let roundedTMd = style(.[
+let roundedTMd = [
   borderTopLeftRadius(Theme.BorderRadius.md),
   borderTopRightRadius(Theme.BorderRadius.md),
-])
-let roundedRMd = style(.[
+]
+let roundedRMd = [
   borderBottomRightRadius(Theme.BorderRadius.md),
   borderTopRightRadius(Theme.BorderRadius.md),
-])
-let roundedBMd = style(.[
+]
+let roundedBMd = [
   borderBottomRightRadius(Theme.BorderRadius.md),
   borderBottomLeftRadius(Theme.BorderRadius.md),
-])
-let roundedLMd = style(.[
+]
+let roundedLMd = [
   borderTopLeftRadius(Theme.BorderRadius.md),
   borderBottomLeftRadius(Theme.BorderRadius.md),
-])
+]
 
-let roundedTLg = style(.[
+let roundedTLg = [
   borderTopLeftRadius(Theme.BorderRadius.lg),
   borderTopRightRadius(Theme.BorderRadius.lg),
-])
-let roundedRLg = style(.[
+]
+let roundedRLg = [
   borderBottomRightRadius(Theme.BorderRadius.lg),
   borderTopRightRadius(Theme.BorderRadius.lg),
-])
-let roundedBLg = style(.[
+]
+let roundedBLg = [
   borderBottomRightRadius(Theme.BorderRadius.lg),
   borderBottomLeftRadius(Theme.BorderRadius.lg),
-])
-let roundedLLg = style(.[
+]
+let roundedLLg = [
   borderTopLeftRadius(Theme.BorderRadius.lg),
   borderBottomLeftRadius(Theme.BorderRadius.lg),
-])
+]
 
-let roundedTXl = style(.[
+let roundedTXl = [
   borderTopLeftRadius(Theme.BorderRadius.xl),
   borderTopRightRadius(Theme.BorderRadius.xl),
-])
-let roundedRXl = style(.[
+]
+let roundedRXl = [
   borderBottomRightRadius(Theme.BorderRadius.xl),
   borderTopRightRadius(Theme.BorderRadius.xl),
-])
-let roundedBXl = style(.[
+]
+let roundedBXl = [
   borderBottomRightRadius(Theme.BorderRadius.xl),
   borderBottomLeftRadius(Theme.BorderRadius.xl),
-])
-let roundedLXl = style(.[
+]
+let roundedLXl = [
   borderTopLeftRadius(Theme.BorderRadius.xl),
   borderBottomLeftRadius(Theme.BorderRadius.xl),
-])
+]
 
-let roundedT2Xl = style(.[
+let roundedT2Xl = [
   borderTopLeftRadius(Theme.BorderRadius._2xl),
   borderTopRightRadius(Theme.BorderRadius._2xl),
-])
-let roundedR2Xl = style(.[
+]
+let roundedR2Xl = [
   borderBottomRightRadius(Theme.BorderRadius._2xl),
   borderTopRightRadius(Theme.BorderRadius._2xl),
-])
-let roundedB2Xl = style(.[
+]
+let roundedB2Xl = [
   borderBottomRightRadius(Theme.BorderRadius._2xl),
   borderBottomLeftRadius(Theme.BorderRadius._2xl),
-])
-let roundedL2Xl = style(.[
+]
+let roundedL2Xl = [
   borderTopLeftRadius(Theme.BorderRadius._2xl),
   borderBottomLeftRadius(Theme.BorderRadius._2xl),
-])
+]
 
-let roundedT3Xl = style(.[
+let roundedT3Xl = [
   borderTopLeftRadius(Theme.BorderRadius._3xl),
   borderTopRightRadius(Theme.BorderRadius._3xl),
-])
-let roundedR3Xl = style(.[
+]
+let roundedR3Xl = [
   borderBottomRightRadius(Theme.BorderRadius._3xl),
   borderTopRightRadius(Theme.BorderRadius._3xl),
-])
-let roundedB3Xl = style(.[
+]
+let roundedB3Xl = [
   borderBottomRightRadius(Theme.BorderRadius._3xl),
   borderBottomLeftRadius(Theme.BorderRadius._3xl),
-])
-let roundedL3Xl = style(.[
+]
+let roundedL3Xl = [
   borderTopLeftRadius(Theme.BorderRadius._3xl),
   borderBottomLeftRadius(Theme.BorderRadius._3xl),
-])
+]
 
-let roundedTFull = style(.[
+let roundedTFull = [
   borderTopLeftRadius(Theme.BorderRadius.full),
   borderTopRightRadius(Theme.BorderRadius.full),
-])
-let roundedRFull = style(.[
+]
+let roundedRFull = [
   borderBottomRightRadius(Theme.BorderRadius.full),
   borderTopRightRadius(Theme.BorderRadius.full),
-])
-let roundedBFull = style(.[
+]
+let roundedBFull = [
   borderBottomRightRadius(Theme.BorderRadius.full),
   borderBottomLeftRadius(Theme.BorderRadius.full),
-])
-let roundedLFull = style(.[
+]
+let roundedLFull = [
   borderTopLeftRadius(Theme.BorderRadius.full),
   borderBottomLeftRadius(Theme.BorderRadius.full),
-])
+]
 
-let roundedTlNone = style(.[borderTopLeftRadius(Theme.BorderRadius.none)])
-let roundedTrNone = style(.[borderTopRightRadius(Theme.BorderRadius.none)])
-let roundedBrNone = style(.[borderBottomRightRadius(Theme.BorderRadius.none)])
-let roundedBlNone = style(.[borderBottomLeftRadius(Theme.BorderRadius.none)])
+let roundedTlNone = [borderTopLeftRadius(Theme.BorderRadius.none)]
+let roundedTrNone = [borderTopRightRadius(Theme.BorderRadius.none)]
+let roundedBrNone = [borderBottomRightRadius(Theme.BorderRadius.none)]
+let roundedBlNone = [borderBottomLeftRadius(Theme.BorderRadius.none)]
 
-let roundedTlSm = style(.[borderTopLeftRadius(Theme.BorderRadius.sm)])
-let roundedTrSm = style(.[borderTopRightRadius(Theme.BorderRadius.sm)])
-let roundedBrSm = style(.[borderBottomRightRadius(Theme.BorderRadius.sm)])
-let roundedBlSm = style(.[borderBottomLeftRadius(Theme.BorderRadius.sm)])
+let roundedTlSm = [borderTopLeftRadius(Theme.BorderRadius.sm)]
+let roundedTrSm = [borderTopRightRadius(Theme.BorderRadius.sm)]
+let roundedBrSm = [borderBottomRightRadius(Theme.BorderRadius.sm)]
+let roundedBlSm = [borderBottomLeftRadius(Theme.BorderRadius.sm)]
 
-let roundedTl = style(.[borderTopLeftRadius(Theme.BorderRadius.default)])
-let roundedTr = style(.[borderTopRightRadius(Theme.BorderRadius.default)])
-let roundedBr = style(.[borderBottomRightRadius(Theme.BorderRadius.default)])
-let roundedBl = style(.[borderBottomLeftRadius(Theme.BorderRadius.default)])
+let roundedTl = [borderTopLeftRadius(Theme.BorderRadius.default)]
+let roundedTr = [borderTopRightRadius(Theme.BorderRadius.default)]
+let roundedBr = [borderBottomRightRadius(Theme.BorderRadius.default)]
+let roundedBl = [borderBottomLeftRadius(Theme.BorderRadius.default)]
 
-let roundedTlMd = style(.[borderTopLeftRadius(Theme.BorderRadius.md)])
-let roundedTrMd = style(.[borderTopRightRadius(Theme.BorderRadius.md)])
-let roundedBrMd = style(.[borderBottomRightRadius(Theme.BorderRadius.md)])
-let roundedBlMd = style(.[borderBottomLeftRadius(Theme.BorderRadius.md)])
+let roundedTlMd = [borderTopLeftRadius(Theme.BorderRadius.md)]
+let roundedTrMd = [borderTopRightRadius(Theme.BorderRadius.md)]
+let roundedBrMd = [borderBottomRightRadius(Theme.BorderRadius.md)]
+let roundedBlMd = [borderBottomLeftRadius(Theme.BorderRadius.md)]
 
-let roundedTlLg = style(.[borderTopLeftRadius(Theme.BorderRadius.lg)])
-let roundedTrLg = style(.[borderTopRightRadius(Theme.BorderRadius.lg)])
-let roundedBrLg = style(.[borderBottomRightRadius(Theme.BorderRadius.lg)])
-let roundedBlLg = style(.[borderBottomLeftRadius(Theme.BorderRadius.lg)])
+let roundedTlLg = [borderTopLeftRadius(Theme.BorderRadius.lg)]
+let roundedTrLg = [borderTopRightRadius(Theme.BorderRadius.lg)]
+let roundedBrLg = [borderBottomRightRadius(Theme.BorderRadius.lg)]
+let roundedBlLg = [borderBottomLeftRadius(Theme.BorderRadius.lg)]
 
-let roundedTlXl = style(.[borderTopLeftRadius(Theme.BorderRadius.xl)])
-let roundedTrXl = style(.[borderTopRightRadius(Theme.BorderRadius.xl)])
-let roundedBrXl = style(.[borderBottomRightRadius(Theme.BorderRadius.xl)])
-let roundedBlXl = style(.[borderBottomLeftRadius(Theme.BorderRadius.xl)])
+let roundedTlXl = [borderTopLeftRadius(Theme.BorderRadius.xl)]
+let roundedTrXl = [borderTopRightRadius(Theme.BorderRadius.xl)]
+let roundedBrXl = [borderBottomRightRadius(Theme.BorderRadius.xl)]
+let roundedBlXl = [borderBottomLeftRadius(Theme.BorderRadius.xl)]
 
-let roundedTl2Xl = style(.[borderTopLeftRadius(Theme.BorderRadius._2xl)])
-let roundedTr2Xl = style(.[borderTopRightRadius(Theme.BorderRadius._2xl)])
-let roundedBr2Xl = style(.[borderBottomRightRadius(Theme.BorderRadius._2xl)])
-let roundedBl2Xl = style(.[borderBottomLeftRadius(Theme.BorderRadius._2xl)])
+let roundedTl2Xl = [borderTopLeftRadius(Theme.BorderRadius._2xl)]
+let roundedTr2Xl = [borderTopRightRadius(Theme.BorderRadius._2xl)]
+let roundedBr2Xl = [borderBottomRightRadius(Theme.BorderRadius._2xl)]
+let roundedBl2Xl = [borderBottomLeftRadius(Theme.BorderRadius._2xl)]
 
-let roundedTl3Xl = style(.[borderTopLeftRadius(Theme.BorderRadius._3xl)])
-let roundedTr3Xl = style(.[borderTopRightRadius(Theme.BorderRadius._3xl)])
-let roundedBr3Xl = style(.[borderBottomRightRadius(Theme.BorderRadius._3xl)])
-let roundedBl3Xl = style(.[borderBottomLeftRadius(Theme.BorderRadius._3xl)])
+let roundedTl3Xl = [borderTopLeftRadius(Theme.BorderRadius._3xl)]
+let roundedTr3Xl = [borderTopRightRadius(Theme.BorderRadius._3xl)]
+let roundedBr3Xl = [borderBottomRightRadius(Theme.BorderRadius._3xl)]
+let roundedBl3Xl = [borderBottomLeftRadius(Theme.BorderRadius._3xl)]
 
-let roundedTlFull = style(.[borderTopLeftRadius(Theme.BorderRadius.full)])
-let roundedTrFull = style(.[borderTopRightRadius(Theme.BorderRadius.full)])
-let roundedBrFull = style(.[borderBottomRightRadius(Theme.BorderRadius.full)])
-let roundedBlFull = style(.[borderBottomLeftRadius(Theme.BorderRadius.full)])
+let roundedTlFull = [borderTopLeftRadius(Theme.BorderRadius.full)]
+let roundedTrFull = [borderTopRightRadius(Theme.BorderRadius.full)]
+let roundedBrFull = [borderBottomRightRadius(Theme.BorderRadius.full)]
+let roundedBlFull = [borderBottomLeftRadius(Theme.BorderRadius.full)]
 
 // NOTE: Border Width - Utilities for controlling the width of an element's fborders
-let border = style(.[borderWidth(Theme.BorderWidth.default)])
-let border0 = style(.[borderWidth(Theme.BorderWidth._0)])
-let border2 = style(.[borderWidth(Theme.BorderWidth._2)])
-let border4 = style(.[borderWidth(Theme.BorderWidth._4)])
-let border8 = style(.[borderWidth(Theme.BorderWidth._8)])
+let border = [borderWidth(Theme.BorderWidth.default)]
+let border0 = [borderWidth(Theme.BorderWidth._0)]
+let border2 = [borderWidth(Theme.BorderWidth._2)]
+let border4 = [borderWidth(Theme.BorderWidth._4)]
+let border8 = [borderWidth(Theme.BorderWidth._8)]
 
-let borderT0 = style(.[borderTopWidth(Theme.BorderWidth._0)])
-let borderR0 = style(.[borderRightWidth(Theme.BorderWidth._0)])
-let borderB0 = style(.[borderBottomWidth(Theme.BorderWidth._0)])
-let borderL0 = style(.[borderLeftWidth(Theme.BorderWidth._0)])
+let borderT0 = [borderTopWidth(Theme.BorderWidth._0)]
+let borderR0 = [borderRightWidth(Theme.BorderWidth._0)]
+let borderB0 = [borderBottomWidth(Theme.BorderWidth._0)]
+let borderL0 = [borderLeftWidth(Theme.BorderWidth._0)]
 
-let borderT2 = style(.[borderTopWidth(Theme.BorderWidth._2)])
-let borderR2 = style(.[borderRightWidth(Theme.BorderWidth._2)])
-let borderB2 = style(.[borderBottomWidth(Theme.BorderWidth._2)])
-let borderL2 = style(.[borderLeftWidth(Theme.BorderWidth._2)])
+let borderT2 = [borderTopWidth(Theme.BorderWidth._2)]
+let borderR2 = [borderRightWidth(Theme.BorderWidth._2)]
+let borderB2 = [borderBottomWidth(Theme.BorderWidth._2)]
+let borderL2 = [borderLeftWidth(Theme.BorderWidth._2)]
 
-let borderT4 = style(.[borderTopWidth(Theme.BorderWidth._4)])
-let borderR4 = style(.[borderRightWidth(Theme.BorderWidth._4)])
-let borderB4 = style(.[borderBottomWidth(Theme.BorderWidth._4)])
-let borderL4 = style(.[borderLeftWidth(Theme.BorderWidth._4)])
+let borderT4 = [borderTopWidth(Theme.BorderWidth._4)]
+let borderR4 = [borderRightWidth(Theme.BorderWidth._4)]
+let borderB4 = [borderBottomWidth(Theme.BorderWidth._4)]
+let borderL4 = [borderLeftWidth(Theme.BorderWidth._4)]
 
-let borderT8 = style(.[borderTopWidth(Theme.BorderWidth._8)])
-let borderR8 = style(.[borderRightWidth(Theme.BorderWidth._8)])
-let borderB8 = style(.[borderBottomWidth(Theme.BorderWidth._8)])
-let borderL8 = style(.[borderLeftWidth(Theme.BorderWidth._8)])
+let borderT8 = [borderTopWidth(Theme.BorderWidth._8)]
+let borderR8 = [borderRightWidth(Theme.BorderWidth._8)]
+let borderB8 = [borderBottomWidth(Theme.BorderWidth._8)]
+let borderL8 = [borderLeftWidth(Theme.BorderWidth._8)]
 
-let borderT = style(.[borderTopWidth(Theme.BorderWidth.default)])
-let borderR = style(.[borderRightWidth(Theme.BorderWidth.default)])
-let borderB = style(.[borderBottomWidth(Theme.BorderWidth.default)])
-let borderL = style(.[borderLeftWidth(Theme.BorderWidth.default)])
+let borderT = [borderTopWidth(Theme.BorderWidth.default)]
+let borderR = [borderRightWidth(Theme.BorderWidth.default)]
+let borderB = [borderBottomWidth(Theme.BorderWidth.default)]
+let borderL = [borderLeftWidth(Theme.BorderWidth.default)]
 
 // NOTE: Border Color - Utilities for controlling the color of an element's borders.
 include Tailwind__BorderColor
 
 // NOTE: Border Style - Utilities for controlling the style of an element's borders.
-let borderSolid = style(.[borderStyle(#solid)])
-let borderDashed = style(.[borderStyle(#dashed)])
-let borderDotted = style(.[borderStyle(#dotted)])
-let borderDouble = style(.[borderStyle(#double)])
-let borderNone = style(.[borderStyle(#none)])
+let borderSolid = [borderStyle(#solid)]
+let borderDashed = [borderStyle(#dashed)]
+let borderDotted = [borderStyle(#dotted)]
+let borderDouble = [borderStyle(#double)]
+let borderNone = [borderStyle(#none)]
 
 // NOTE: Divide Width - Utilities for controlling the border width between elements.
-let divideY0 = style(.[
+let divideY0 = [
   selector(
     Selectors.ignoreFirstChild,
     [borderTopWidth(Theme.BorderWidth._0), borderBottomWidth(Theme.BorderWidth._0)],
   ),
-])
+]
 
-let divideY = style(.[
+let divideY = [
   selector(
     Selectors.ignoreFirstChild,
     [borderTopWidth(Theme.BorderWidth.default), borderBottomWidth(Theme.BorderWidth._0)],
   ),
-])
-let divideY2 = style(.[
+]
+let divideY2 = [
   selector(
     Selectors.ignoreFirstChild,
     [borderTopWidth(Theme.BorderWidth._2), borderBottomWidth(Theme.BorderWidth._0)],
   ),
-])
-let divideY4 = style(.[
+]
+let divideY4 = [
   selector(
     Selectors.ignoreFirstChild,
     [borderTopWidth(Theme.BorderWidth._4), borderBottomWidth(Theme.BorderWidth._0)],
   ),
-])
-let divideY8 = style(.[
+]
+let divideY8 = [
   selector(
     Selectors.ignoreFirstChild,
     [borderTopWidth(Theme.BorderWidth._8), borderBottomWidth(Theme.BorderWidth._0)],
   ),
-])
+]
 
-let divideYReverse = style(.[
+let divideYReverse = [
   selector(
     Selectors.ignoreFirstChild,
     [borderTopWidth(Theme.BorderWidth._0), borderBottomWidth(Theme.BorderWidth.default)],
   ),
-])
-let divideY2Reverse = style(.[
+]
+let divideY2Reverse = [
   selector(
     Selectors.ignoreFirstChild,
     [borderTopWidth(Theme.BorderWidth._0), borderBottomWidth(Theme.BorderWidth._2)],
   ),
-])
-let divideY4Reverse = style(.[
+]
+let divideY4Reverse = [
   selector(
     Selectors.ignoreFirstChild,
     [borderTopWidth(Theme.BorderWidth._0), borderBottomWidth(Theme.BorderWidth._4)],
   ),
-])
-let divideY8Reverse = style(.[
+]
+let divideY8Reverse = [
   selector(
     Selectors.ignoreFirstChild,
     [borderTopWidth(Theme.BorderWidth._0), borderBottomWidth(Theme.BorderWidth._8)],
   ),
-])
+]
 
-let divideX0 = style(.[
+let divideX0 = [
   selector(
     Selectors.ignoreFirstChild,
     [borderLeftWidth(Theme.BorderWidth._0), borderRightWidth(Theme.BorderWidth._0)],
   ),
-])
+]
 
-let divideX = style(.[
+let divideX = [
   selector(
     Selectors.ignoreFirstChild,
     [borderLeftWidth(Theme.BorderWidth.default), borderRightWidth(Theme.BorderWidth._0)],
   ),
-])
-let divideX2 = style(.[
+]
+let divideX2 = [
   selector(
     Selectors.ignoreFirstChild,
     [borderLeftWidth(Theme.BorderWidth._2), borderRightWidth(Theme.BorderWidth._0)],
   ),
-])
-let divideX4 = style(.[
+]
+let divideX4 = [
   selector(
     Selectors.ignoreFirstChild,
     [borderLeftWidth(Theme.BorderWidth._4), borderRightWidth(Theme.BorderWidth._0)],
   ),
-])
-let divideX8 = style(.[
+]
+let divideX8 = [
   selector(
     Selectors.ignoreFirstChild,
     [borderLeftWidth(Theme.BorderWidth._8), borderRightWidth(Theme.BorderWidth._0)],
   ),
-])
+]
 
-let divideXReverse = style(.[
+let divideXReverse = [
   selector(
     Selectors.ignoreFirstChild,
     [borderLeftWidth(Theme.BorderWidth._0), borderRightWidth(Theme.BorderWidth.default)],
   ),
-])
-let divideX2Reverse = style(.[
+]
+let divideX2Reverse = [
   selector(
     Selectors.ignoreFirstChild,
     [borderLeftWidth(Theme.BorderWidth._0), borderRightWidth(Theme.BorderWidth._2)],
   ),
-])
-let divideX4Reverse = style(.[
+]
+let divideX4Reverse = [
   selector(
     Selectors.ignoreFirstChild,
     [borderLeftWidth(Theme.BorderWidth._0), borderRightWidth(Theme.BorderWidth._4)],
   ),
-])
-let divideX8Reverse = style(.[
+]
+let divideX8Reverse = [
   selector(
     Selectors.ignoreFirstChild,
     [borderLeftWidth(Theme.BorderWidth._0), borderRightWidth(Theme.BorderWidth._8)],
   ),
-])
+]
 
 // NOTE: Divide Style - Utilities for controlling the border style between elements.
-let divideSolid = style(.[borderStyle(#solid)])
-let divideDashed = style(.[borderStyle(#dashed)])
-let divideDotted = style(.[borderStyle(#dotted)])
-let divideDouble = style(.[borderStyle(#double)])
-let divideNone = style(.[borderStyle(#none)])
+let divideSolid = [borderStyle(#solid)]
+let divideDashed = [borderStyle(#dashed)]
+let divideDotted = [borderStyle(#dotted)]
+let divideDouble = [borderStyle(#double)]
+let divideNone = [borderStyle(#none)]
 
 // NOTE: Ring Width - Utilities for creating outline rings with box-shadows.
 // x y blur spread inset
@@ -398,11 +398,11 @@ let ring = (
   ~width=3,
   color: CssJs.Types.Color.t,
 ) => {
-  style(.[
+  [
     boxShadows([
       ringOffsetShadow(~inset, ~offsetWidth, offsetColor),
       ringShadow(~inset, ~spread=width + offsetWidth, color),
       whiteShadow,
     ]),
-  ])
+  ]
 }

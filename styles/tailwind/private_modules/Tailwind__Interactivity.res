@@ -1,34 +1,34 @@
 open CssJs
 
 // NOTE: Appearance - Utilities for suppressing native form control styling.
-let appearanceNone = style(.[CssJs.unsafe("appearance", "none")])
+let appearanceNone = [CssJs.unsafe("appearance", "none")]
 
 // NOTE: Cursor - Utilities for controlling the cursor style when hovering over an element.
-let cursorAuto = style(.[cursor(#auto)])
-let cursorDefault = style(.[cursor(#default)])
-let cursorPointer = style(.[cursor(#pointer)])
-let cursorWait = style(.[cursor(#wait)])
-let cursorText = style(.[cursor(#text)])
-let cursorMove = style(.[cursor(#move)])
-let cursorNotAllowed = style(.[cursor(#notAllowed)])
+let cursorAuto = [cursor(#auto)]
+let cursorDefault = [cursor(#default)]
+let cursorPointer = [cursor(#pointer)]
+let cursorWait = [cursor(#wait)]
+let cursorText = [cursor(#text)]
+let cursorMove = [cursor(#move)]
+let cursorNotAllowed = [cursor(#notAllowed)]
 
 // NOTE: Outline - Utilities for controlling an element's outline.
-let outlineNone = style(.[outline(#px(2), #solid, Theme.Colors.transparent), outlineOffset(#px(2))])
-let outlineWhite = style(.[outline(#px(2), #dotted, Theme.Colors.white(1.)), outlineOffset(#px(2))])
-let outlineBlack = style(.[outline(#px(2), #dotted, Theme.Colors.black(1.)), outlineOffset(#px(2))])
+let outlineNone = [outline(#px(2), #solid, Theme.Colors.transparent), outlineOffset(#px(2))]
+let outlineWhite = [outline(#px(2), #dotted, Theme.Colors.white(1.)), outlineOffset(#px(2))]
+let outlineBlack = [outline(#px(2), #dotted, Theme.Colors.black(1.)), outlineOffset(#px(2))]
 
 // NOTE: Pointer Events - Utilities for controlling whether an element responds to pointer events.
-let pointerEventsNone = style(.[pointerEvents(#none)])
-let pointerEventsAuto = style(.[pointerEvents(#auto)])
+let pointerEventsNone = [pointerEvents(#none)]
+let pointerEventsAuto = [pointerEvents(#auto)]
 
 // NOTE: Resize - Utilities for controlling how an element can be resized.
-let resizeNone = style(.[resize(#none)])
-let resizeY = style(.[resize(#vertical)])
-let resizeX = style(.[resize(#horizontal)])
-let resize = style(.[resize(#both)])
+let resizeNone = [resize(#none)]
+let resizeY = [resize(#vertical)]
+let resizeX = [resize(#horizontal)]
+let resize = [resize(#both)]
 
 // NOTE: User Select - Utilities for controlling whether the user can select text in an element.
-let selectNone = style(.[userSelect(#none)])
-let selectText = style(.[userSelect(#text)])
-let selectAll = style(.[userSelect(#all)])
-let selectAuto = style(.[userSelect(#auto)])
+let selectNone = [userSelect(#none)]
+let selectText = [userSelect(#text)]
+let selectAll = [userSelect(#all)]
+let selectAuto = [userSelect(#auto)]

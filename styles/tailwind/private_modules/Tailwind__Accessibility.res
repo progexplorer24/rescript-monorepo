@@ -1,7 +1,10 @@
 open CssJs
 
+type rulesArray = array<CssJs.rule>
+
 // NOTE: Screen Readers - Utilities for improving accessibility with screen readers.
-let srOnly = style(.[
+// Css_AtomicTypes.
+let srOnly = [
   position(#absolute),
   width(#px(1)),
   height(#px(1)),
@@ -11,9 +14,9 @@ let srOnly = style(.[
   CssJs.unsafe("clip", "rect(0, 0, 0, 0)"),
   whiteSpace(#nowrap),
   borderWidth(#px(0)),
-])
+]
 
-let noSrOnly = style(.[
+let noSrOnly = [
   position(#static),
   width(#auto),
   height(#auto),
@@ -22,4 +25,4 @@ let noSrOnly = style(.[
   overflow(#visible),
   CssJs.unsafe("clip", "auto"),
   whiteSpace(#normal),
-])
+]

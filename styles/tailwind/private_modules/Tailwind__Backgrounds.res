@@ -1,42 +1,42 @@
 // INFO: Not completed
 open CssJs
 // NOTE: Background Attachment - Utilities for controlling how a background image behaves when scrolling.
-let bgFixed = style(.[backgroundAttachment(#fixed)])
-let bgLocal = style(.[backgroundAttachment(#local)])
-let bgScroll = style(.[backgroundAttachment(#scroll)])
+let bgFixed = [backgroundAttachment(#fixed)]
+let bgLocal = [backgroundAttachment(#local)]
+let bgScroll = [backgroundAttachment(#scroll)]
 
 // NOTE: Background Clip - Utilities for controlling the bounding box of an element's background.
-let bgClipBorder = style(.[backgroundClip(#borderBox)])
-let bgClipPadding = style(.[backgroundClip(#paddingBox)])
-let bgClipContent = style(.[backgroundClip(#contentBox)])
-let bgClipText = style(.[CssJs.unsafe("background-clip", "text")])
+let bgClipBorder = [backgroundClip(#borderBox)]
+let bgClipPadding = [backgroundClip(#paddingBox)]
+let bgClipContent = [backgroundClip(#contentBox)]
+let bgClipText = [CssJs.unsafe("background-clip", "text")]
 
 // NOTE: Background Color - Utilities for controlling an element's background color.
 include Tailwind__BackgroundColor
 
 // NOTE: Background Position - Utilities for controlling the position of an element's background image.
-let bgBottom = style(.[backgroundPosition(#bottom)])
-let bgCenter = style(.[backgroundPosition(#center)])
-let bgLeft = style(.[backgroundPosition(#left)])
-let bgLeftBottom = style(.[backgroundPositions([#left, #bottom])])
-let bgLeftTop = style(.[backgroundPositions([#left, #top])])
-let bgRight = style(.[backgroundPosition(#right)])
-let bgRightBottom = style(.[backgroundPositions([#right, #bottom])])
-let bgRightTop = style(.[backgroundPositions([#right, #top])])
-let bgTop = style(.[backgroundPosition(#top)])
+let bgBottom = [backgroundPosition(#bottom)]
+let bgCenter = [backgroundPosition(#center)]
+let bgLeft = [backgroundPosition(#left)]
+let bgLeftBottom = [backgroundPositions([#left, #bottom])]
+let bgLeftTop = [backgroundPositions([#left, #top])]
+let bgRight = [backgroundPosition(#right)]
+let bgRightBottom = [backgroundPositions([#right, #bottom])]
+let bgRightTop = [backgroundPositions([#right, #top])]
+let bgTop = [backgroundPosition(#top)]
 
 // NOTE: Background Repeat - Utilities for controlling the repetition of an element's background image.
-let bgRepeat = style(.[backgroundRepeat(#repeat)])
-let bgNoRepeat = style(.[backgroundRepeat(#noRepeat)])
-let bgRepeatX = style(.[backgroundRepeat(#repeatX)])
-let bgRepeatY = style(.[backgroundRepeat(#repeatY)])
-let bgRepeatRound = style(.[backgroundRepeat(#round)])
-let bgRepeatSpace = style(.[backgroundRepeat(#space)])
+let bgRepeat = [backgroundRepeat(#repeat)]
+let bgNoRepeat = [backgroundRepeat(#noRepeat)]
+let bgRepeatX = [backgroundRepeat(#repeatX)]
+let bgRepeatY = [backgroundRepeat(#repeatY)]
+let bgRepeatRound = [backgroundRepeat(#round)]
+let bgRepeatSpace = [backgroundRepeat(#space)]
 
 // NOTE: Background Size - Utilities for controlling the background size of an element's background image.
-let bgAuto = style(.[backgroundSize(#auto)])
-let bgCover = style(.[backgroundSize(#cover)])
-let bgContain = style(.[backgroundSize(#contain)])
+let bgAuto = [backgroundSize(#auto)]
+let bgCover = [backgroundSize(#cover)]
+let bgContain = [backgroundSize(#contain)]
 
 // NOTE: Background Image - Utilities for controlling an element's background image.
 // INFO: Solved - but needs more feedback
@@ -51,7 +51,7 @@ let linGradient = (direction, listOfTuples: list<colorTuple>) =>
       acc ++ combineGradientColors((percent, color))
     )})`
 
-let bgNone = style(.[backgroundImage(#none)])
+let bgNone = [backgroundImage(#none)]
 let toT = colorList => CssJs.Types.Gradient.toString(CssJs.linearGradient(deg(0.), colorList))
 let toTr = colorList => linGradient("to top right", colorList)
 let toR = colorList => CssJs.Types.Gradient.toString(CssJs.linearGradient(deg(90.), colorList))
@@ -61,19 +61,27 @@ let toBl = colorList => linGradient("to bottom left", colorList)
 let toL = colorList => CssJs.Types.Gradient.toString(CssJs.linearGradient(deg(270.), colorList))
 let toTl = colorList => linGradient("to top left", colorList)
 
-let bgGradientToT = (colorList: list<colorTuple>) =>
-  style(.[CssJs.unsafe("background-image", toT(colorList))])
-let bgGradientToTr = (colorList: list<colorTuple>) =>
-  style(.[CssJs.unsafe("background-image", toTr(colorList))])
-let bgGradientToR = (colorList: list<colorTuple>) =>
-  style(.[CssJs.unsafe("background-image", toR(colorList))])
-let bgGradientToBr = (colorList: list<colorTuple>) =>
-  style(.[CssJs.unsafe("background-image", toBr(colorList))])
-let bgGradientToB = (colorList: list<colorTuple>) =>
-  style(.[CssJs.unsafe("background-image", toB(colorList))])
-let bgGradientToBl = (colorList: list<colorTuple>) =>
-  style(.[CssJs.unsafe("background-image", toBl(colorList))])
-let bgGradientToL = (colorList: list<colorTuple>) =>
-  style(.[CssJs.unsafe("background-image", toL(colorList))])
-let bgGradientToTl = (colorList: list<colorTuple>) =>
-  style(.[CssJs.unsafe("background-image", toTl(colorList))])
+let bgGradientToT = (colorList: list<colorTuple>) => [
+  CssJs.unsafe("background-image", toT(colorList)),
+]
+let bgGradientToTr = (colorList: list<colorTuple>) => [
+  CssJs.unsafe("background-image", toTr(colorList)),
+]
+let bgGradientToR = (colorList: list<colorTuple>) => [
+  CssJs.unsafe("background-image", toR(colorList)),
+]
+let bgGradientToBr = (colorList: list<colorTuple>) => [
+  CssJs.unsafe("background-image", toBr(colorList)),
+]
+let bgGradientToB = (colorList: list<colorTuple>) => [
+  CssJs.unsafe("background-image", toB(colorList)),
+]
+let bgGradientToBl = (colorList: list<colorTuple>) => [
+  CssJs.unsafe("background-image", toBl(colorList)),
+]
+let bgGradientToL = (colorList: list<colorTuple>) => [
+  CssJs.unsafe("background-image", toL(colorList)),
+]
+let bgGradientToTl = (colorList: list<colorTuple>) => [
+  CssJs.unsafe("background-image", toTl(colorList)),
+]

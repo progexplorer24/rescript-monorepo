@@ -1,76 +1,76 @@
 open CssJs
 
 // NOTE: Transition Property - Utilities for controlling which CSS properties transition.
-let transitionNone = style(.[transitionProperty("none")])
-let transitionAll = style(.[
+let transitionNone = [transitionProperty("none")]
+let transitionAll = [
   transition("all", ~duration=Theme.Duration._150, ~timingFunction=Theme.TimingFunction.easeInOut),
-])
-let transition = style(.[
+]
+let transition = [
   transition(
     "background-color, border-color, color, fill, stroke, opacity, box-shadow, transform",
     ~duration=Theme.Duration._150,
     ~timingFunction=Theme.TimingFunction.easeInOut,
   ),
-])
-let transitionColors = style(.[
+]
+let transitionColors = [
   CssJs.transition(
     "background-color, border-color, color, fill, stroke, opacity, box-shadow, transform",
     ~duration=Theme.Duration._150,
     ~timingFunction=Theme.TimingFunction.easeInOut,
   ),
-])
-let transitionOpacity = style(.[
+]
+let transitionOpacity = [
   CssJs.transition(
     "opacity",
     ~duration=Theme.Duration._150,
     ~timingFunction=Theme.TimingFunction.easeInOut,
   ),
-])
-let transitionShadow = style(.[
+]
+let transitionShadow = [
   CssJs.transition(
     "box-shadow",
     ~duration=Theme.Duration._150,
     ~timingFunction=Theme.TimingFunction.easeInOut,
   ),
-])
+]
 
-let transitionTransform = style(.[
+let transitionTransform = [
   CssJs.transition(
     "transform",
     ~duration=Theme.Duration._150,
     ~timingFunction=Theme.TimingFunction.easeInOut,
   ),
-])
+]
 
 // NOTE: Transition Duration - Utilities for controlling the duration of CSS transitions.
-let duration75 = style(.[transitionDuration(Theme.Duration._75)])
-let duration100 = style(.[transitionDuration(Theme.Duration._100)])
-let duration150 = style(.[transitionDuration(Theme.Duration._150)])
-let duration200 = style(.[transitionDuration(Theme.Duration._200)])
-let duration300 = style(.[transitionDuration(Theme.Duration._300)])
-let duration500 = style(.[transitionDuration(Theme.Duration._500)])
-let duration700 = style(.[transitionDuration(Theme.Duration._700)])
-let duration1000 = style(.[transitionDuration(Theme.Duration._1000)])
+let duration75 = [transitionDuration(Theme.Duration._75)]
+let duration100 = [transitionDuration(Theme.Duration._100)]
+let duration150 = [transitionDuration(Theme.Duration._150)]
+let duration200 = [transitionDuration(Theme.Duration._200)]
+let duration300 = [transitionDuration(Theme.Duration._300)]
+let duration500 = [transitionDuration(Theme.Duration._500)]
+let duration700 = [transitionDuration(Theme.Duration._700)]
+let duration1000 = [transitionDuration(Theme.Duration._1000)]
 
 // NOTE: Transition Timing Function - Utilities for controlling the easing of CSS transitions.
-let easeLinear = style(.[transitionTimingFunction(Theme.TimingFunction.linear)])
-let easeIn = style(.[transitionTimingFunction(Theme.TimingFunction.easeIn)])
-let easeOut = style(.[transitionTimingFunction(Theme.TimingFunction.easeOut)])
-let easeInOut = style(.[transitionTimingFunction(Theme.TimingFunction.easeInOut)])
+let easeLinear = [transitionTimingFunction(Theme.TimingFunction.linear)]
+let easeIn = [transitionTimingFunction(Theme.TimingFunction.easeIn)]
+let easeOut = [transitionTimingFunction(Theme.TimingFunction.easeOut)]
+let easeInOut = [transitionTimingFunction(Theme.TimingFunction.easeInOut)]
 
 // NOTE: Transition Delay - Utilities for controlling the delay of CSS transitions.
-let delay75 = style(.[transitionDelay(Theme.Duration._75)])
-let delay100 = style(.[transitionDelay(Theme.Duration._100)])
-let delay150 = style(.[transitionDelay(Theme.Duration._150)])
-let delay200 = style(.[transitionDelay(Theme.Duration._200)])
-let delay300 = style(.[transitionDelay(Theme.Duration._300)])
-let delay500 = style(.[transitionDelay(Theme.Duration._500)])
-let delay700 = style(.[transitionDelay(Theme.Duration._700)])
-let delay1000 = style(.[transitionDelay(Theme.Duration._1000)])
+let delay75 = [transitionDelay(Theme.Duration._75)]
+let delay100 = [transitionDelay(Theme.Duration._100)]
+let delay150 = [transitionDelay(Theme.Duration._150)]
+let delay200 = [transitionDelay(Theme.Duration._200)]
+let delay300 = [transitionDelay(Theme.Duration._300)]
+let delay500 = [transitionDelay(Theme.Duration._500)]
+let delay700 = [transitionDelay(Theme.Duration._700)]
+let delay1000 = [transitionDelay(Theme.Duration._1000)]
 
 // NOTE: Animation - Utilities for animating elements with CSS animations.
-let animateNone = style(.[animationValue(#value("none"))])
-let animateSpin = style(.[
+let animateNone = [animationValue(#value("none"))]
+let animateSpin = [
   animation(
     Theme.KeyFrames.spin,
     ~duration=1000,
@@ -78,9 +78,9 @@ let animateSpin = style(.[
     ~timingFunction=#linear,
     ~iterationCount=#infinite,
   ),
-])
+]
 
-let animatePing = style(.[
+let animatePing = [
   animation(
     Theme.KeyFrames.ping,
     ~duration=1000,
@@ -88,9 +88,9 @@ let animatePing = style(.[
     ~delay=0,
     ~iterationCount=#infinite,
   ),
-])
+]
 
-let animatePulse = style(.[
+let animatePulse = [
   animation(
     Theme.KeyFrames.pulse,
     ~duration=2000,
@@ -98,8 +98,8 @@ let animatePulse = style(.[
     ~delay=0,
     ~iterationCount=#infinite,
   ),
-])
+]
 
-let animateBounce = style(.[
+let animateBounce = [
   animation(Theme.KeyFrames.bounce, ~duration=1000, ~delay=0, ~iterationCount=#infinite),
-])
+]
