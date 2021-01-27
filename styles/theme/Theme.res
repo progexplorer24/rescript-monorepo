@@ -43,3 +43,5 @@ module FontSize = Theme__FontSize
 module LetterSpacing = Theme__LetterSpacing
 
 module LineHeight = Theme__LineHeight
+
+module FontWeight = Theme__FontWeight

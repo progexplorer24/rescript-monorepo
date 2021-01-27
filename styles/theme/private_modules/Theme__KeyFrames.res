@@ -40,3 +40,11 @@ let bounce = CssJs.keyframes(.[
     ],
   ),
 ])
+
+let toValue = animation =>
+  switch animation {
+  | #spin => spin
+  | #ping => ping
+  | #pulse => pulse
+  | #bounce => bounce
+  }

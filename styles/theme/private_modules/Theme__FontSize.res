@@ -13,3 +13,20 @@ let _6xl = #rem(3.75)
 let _7xl = #rem(4.5)
 let _8xl = #rem(6.)
 let _9xl = #rem(8.)
+
+let toValue = fontSize =>
+  switch fontSize {
+  | #xs => xs
+  | #sm => sm
+  | #base => base
+  | #lg => lg
+  | #xl => xl
+  | #xl2 => _2xl
+  | #xl3 => _3xl
+  | #xl4 => _4xl
+  | #xl5 => _5xl
+  | #xl6 => _6xl
+  | #xl7 => _7xl
+  | #xl8 => _8xl
+  | #xl9 => _9xl
+  }

@@ -9,3 +9,16 @@ let xl = #rem(0.75)
 let _2xl = #rem(1.)
 let _3xl = #rem(1.5)
 let full = #px(9999)
+
+let toRadius = (borderRadius): CssJs.Types.Length.t =>
+  switch borderRadius {
+  | #none => none
+  | #sm => sm
+  | #default => default
+  | #md => md
+  | #lg => lg
+  | #xl => xl
+  | #xl2 => _2xl
+  | #xl3 => _3xl
+  | #full => full
+  }

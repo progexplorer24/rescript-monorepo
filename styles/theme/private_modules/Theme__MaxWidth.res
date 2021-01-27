@@ -13,8 +13,6 @@ type t = [
   | #xl6
   | #xl7
   | #full
-  | #min
-  | #max
   | #prose
 ]
 
@@ -32,6 +30,23 @@ let _5xl = #rem(64.)
 let _6xl = #rem(72.)
 let _7xl = #rem(80.)
 let full = #percent(100.)
-let min = #minContent
-let max = #maxContent
-let prose = #ch(65)
+let prose = #ch(65.)
+
+let toValue = width =>
+  switch width {
+  | #none => none
+  | #zero => _0
+  | #xs => xs
+  | #sm => sm
+  | #md => md
+  | #lg => lg
+  | #xl => xl
+  | #xl2 => _2xl
+  | #xl3 => _3xl
+  | #xl4 => _4xl
+  | #xl5 => _5xl
+  | #xl6 => _6xl
+  | #xl7 => _7xl
+  | #full => full
+  | #prose => prose
+  }

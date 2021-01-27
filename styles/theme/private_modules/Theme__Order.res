@@ -31,3 +31,22 @@ let _11 = 11
 let _12 = 12
 let first = 9999
 let last = -9999
+
+let toValue = order =>
+  switch order {
+  | #none => none
+  | #first => first
+  | #last => last
+  | #v1 => _1
+  | #v2 => _2
+  | #v3 => _3
+  | #v4 => _4
+  | #v5 => _5
+  | #v6 => _6
+  | #v7 => _7
+  | #v8 => _8
+  | #v9 => _9
+  | #v10 => _10
+  | #v11 => _11
+  | #v12 => _12
+  }

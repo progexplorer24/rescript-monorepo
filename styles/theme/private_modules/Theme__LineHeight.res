@@ -1,12 +1,12 @@
 type t = [
-  | #h3
-  | #h4
-  | #h5
-  | #h6
-  | #h7
-  | #h8
-  | #h9
-  | #h10
+  | #v3
+  | #v4
+  | #v5
+  | #v6
+  | #v7
+  | #v8
+  | #v9
+  | #v10
   | #none
   | #tight
   | #snug
@@ -28,3 +28,21 @@ let snug = #abs(1.375)
 let normal = #abs(1.5)
 let relaxed = #abs(1.625)
 let loose = #abs(2.)
+
+let toValue = lineHeight =>
+  switch lineHeight {
+  | #v3 => _3
+  | #v4 => _4
+  | #v5 => _5
+  | #v6 => _6
+  | #v7 => _7
+  | #v8 => _8
+  | #v9 => _9
+  | #v10 => _10
+  | #none => none
+  | #tight => tight
+  | #snug => snug
+  | #normal => normal
+  | #relaxed => relaxed
+  | #loose => loose
+  }

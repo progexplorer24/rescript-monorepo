@@ -39,3 +39,15 @@ let inner: boxShadows = [
     #rgba(0, 0, 0, #num(0.06)),
   ),
 ]
+let none = #none
+
+let toShadow = shadow =>
+  switch shadow {
+  | #sm => sm
+  | #default => default
+  | #md => md
+  | #lg => lg
+  | #xl => xl
+  | #xl2 => _2xl
+  | #inner => inner
+  }
