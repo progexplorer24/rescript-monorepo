@@ -1,14 +1,22 @@
 module Styles = {
   open Tailwind
-  let wrapper = merge(.[twStyle([gridCols2, maxW6Xl, mxAuto, mt6, grid])])
-  let hover = twStyle([selector("&:hover", tw([srOnly, noSrOnly, bgBlue700(1.), bgRed700(1.)]))])
+  let wrapper = merge(.[twStyle([gridCols2, maxW(#xl6), mx(#auto), mt(#v6), grid])])
+  let hover = twStyle([selector("&:hover", tw([srOnly, noSrOnly, bg(#blue700, ~opacity=0.5)]))])
+
+  let shadow = twStyle([shadow(#xl)])
 }
 
 let default = () => {
   <div className=Styles.wrapper>
     <div>
       <h2 className=Styles.hover> {"Bs-TailwindCSS"->Utils.str} </h2>
-      <input type_="text" name="" id="" placeholder="Put some text here" />
+      <input
+        type_="text"
+        name=""
+        id=""
+        placeholder="Put some text here"
+        className={Tailwind.merge(.[Styles.shadow])}
+      />
       <button>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
           <circle

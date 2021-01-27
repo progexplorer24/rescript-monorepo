@@ -1,6 +1,6 @@
 module Styles = {
   open Tailwind
-  let elementStyles = twStyle([mb6, text2Xl, fontBlack])
+  let elementStyles = twStyle([mb(#v6), text(#xl2), fontWeight(#v900)])
 }
 
 @react.component

@@ -1,16 +1,16 @@
 module Styles = {
   open Tailwind
 
-  let orderedElementStyles = twStyle([mb4])
+  let orderedElementStyles = twStyle([mb(#v4)])
 
   let numerationStyles = twStyle([
-    borderR,
-    pr1_5,
-    roundedRFull,
-    borderIndigo800(1.),
-    mr3,
+    borderR(#v1),
+    pr(#v1_5),
+    roundedR(#full),
+    borderColor(#indigo800),
+    mr(#v3),
     inlineFlex,
-    textIndigo800(1.),
+    textColor(#indigo800),
   ])
 }
 

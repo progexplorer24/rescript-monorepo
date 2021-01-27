@@ -5,16 +5,16 @@ module Styles = {
   let globalStyles = merge(.[
     twStyle([
       fontFamilies([#custom("Nunito Sans")]),
-      wFull,
-      hFull,
-      mxAuto,
+      w(#full),
+      h(#full),
+      mx(#auto),
       overflowAuto,
-      bgGray50(1.),
-      textCoolGray800(1.),
+      bg(#gray50),
+      textColor(#coolGray800),
       fontSans,
     ]),
   ])
-  let container = twStyle([maxW4Xl, mxAuto])
+  let container = twStyle([maxW(#xl4), mx(#auto)])
 }
 
 @react.component

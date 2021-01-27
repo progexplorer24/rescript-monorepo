@@ -1,7 +1,7 @@
 module Styles = {
   open Tailwind
 
-  let h1Styles = twStyle([mb6, text4Xl, fontBlack, trackingTight])
+  let h1Styles = twStyle([mb(#v6), text(#xl4), fontWeight(#v900), tracking(#tight)])
 }
 
 @react.component

@@ -2,11 +2,11 @@ module Styles = {
   open Tailwind
 
   let elementStyles = twStyle([
-    borderBlue700(1.),
-    borderB,
+    borderColor(#blue700),
+    borderB(#v1),
     cursorPointer,
-    textBlue700(1.),
-    fontBold,
+    textColor(#blue700),
+    fontWeight(#v700),
   ])
 }
 

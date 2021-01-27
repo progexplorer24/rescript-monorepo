@@ -1,6 +1,13 @@
 module Styles = {
   open Tailwind
-  let elementStyles = twStyle([rounded, p1, bgIndigo50(1.), textIndigo800(1.), fontMono, fontBold])
+  let elementStyles = twStyle([
+    rounded(#default),
+    p(#v1),
+    bg(#indigo50),
+    textColor(#indigo800),
+    fontMono,
+    fontWeight(#v700),
+  ])
 }
 
 @react.component
