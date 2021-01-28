@@ -11,6 +11,8 @@ import { make as LinkExternalMdx } from "../../components/mdx-components/LinkExt
 import { make as OlMdx } from "../../components/mdx-components/OlMdx.bs.js";
 import { make as UlMdx } from "../../components/mdx-components/UlMdx.bs.js";
 import { make as LiMdx } from "../../components/mdx-components/LiMdx.bs.js";
+import { make as Blockquote } from "../../components/mdx-components/Blockquote.bs.js";
+import { make as Utils } from "../../utils/Utils.bs.js";
 
 <BsTailwindLayout>
 
@@ -45,6 +47,15 @@ import { make as LiMdx } from "../../components/mdx-components/LiMdx.bs.js";
   </LinkExternalMdx>{" "}
   Quam.
 </PMdx>
+
+<Blockquote>
+  commodi itaque beatae expedita! Inventore harum id, ullam consequuntur quaerat
+  sed iusto magnam laborum corrupti sapiente repe
+</Blockquote>
+
+> Quote here.
+>
+> {Utils.mdash} <cite>Benjamin Franklin</cite>
 
 <PMdx>
   Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus facilis
