@@ -45,3 +45,13 @@ module LetterSpacing = Theme__LetterSpacing
 module LineHeight = Theme__LineHeight
 
 module FontWeight = Theme__FontWeight
+
+module GridCols = Theme__GridCols
+
+module ColSpan = Theme__ColSpan
+
+module ColStart = Theme__ColStart
+
+module GridRows = Theme__GridRows
+
+module RowSpan = Theme__RowSpan

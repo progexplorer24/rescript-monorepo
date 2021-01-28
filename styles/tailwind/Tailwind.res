@@ -365,83 +365,66 @@ let order = order => [CssJs.order(Theme.Order.toValue(order))]
 // HACK: Change this
 
 // NOTE: Grid Template Columns - Utilities for specifying the columns in a grid layout.
-let gridCols1 = [gridTemplateColumns([#repeat(#num(1), #minmax(#zero, #fr(1.)))])]
-let gridCols2 = [gridTemplateColumns([#repeat(#num(2), #minmax(#zero, #fr(1.)))])]
-let gridCols3 = [gridTemplateColumns([#repeat(#num(3), #minmax(#zero, #fr(1.)))])]
-let gridCols4 = [gridTemplateColumns([#repeat(#num(4), #minmax(#zero, #fr(1.)))])]
-let gridCols5 = [gridTemplateColumns([#repeat(#num(5), #minmax(#zero, #fr(1.)))])]
-let gridCols6 = [gridTemplateColumns([#repeat(#num(6), #minmax(#zero, #fr(1.)))])]
-let gridCols7 = [gridTemplateColumns([#repeat(#num(7), #minmax(#zero, #fr(1.)))])]
-let gridCols8 = [gridTemplateColumns([#repeat(#num(8), #minmax(#zero, #fr(1.)))])]
-let gridCols9 = [gridTemplateColumns([#repeat(#num(9), #minmax(#zero, #fr(1.)))])]
-let gridCols10 = [gridTemplateColumns([#repeat(#num(10), #minmax(#zero, #fr(1.)))])]
-let gridCols11 = [gridTemplateColumns([#repeat(#num(11), #minmax(#zero, #fr(1.)))])]
-let gridCols12 = [gridTemplateColumns([#repeat(#num(12), #minmax(#zero, #fr(1.)))])]
-let gridColsNone = [CssJs.unsafe("grid-template-columns", "none")]
+type gCols = Theme.GridCols.t
+type gridColumnType = [#none | gCols]
+
+let gridCols = columns =>
+  switch columns {
+  | #none => [CssJs.unsafe("grid-template-columns", "none")]
+  | #...gCols as cols => [gridTemplateColumns(Theme.GridCols.toValue(cols))]
+  }
 
 // NOTE: Grid Column Start / End - Utilities for controlling how elements are sized and placed across grid columns.
-let colAuto = [CssJs.unsafe("grid-column", "auto")]
-let colSpan1 = [CssJs.unsafe("grid-column", "span 1 / span 1")]
-let colSpan2 = [CssJs.unsafe("grid-column", "span 2 / span 2")]
-let colSpan3 = [CssJs.unsafe("grid-column", "span 3 / span 3")]
-let colSpan4 = [CssJs.unsafe("grid-column", "span 4 / span 4")]
-let colSpan5 = [CssJs.unsafe("grid-column", "span 5 / span 5")]
-let colSpan6 = [CssJs.unsafe("grid-column", "span 6 / span 6")]
-let colSpan7 = [CssJs.unsafe("grid-column", "span 7 / span 7")]
-let colSpan8 = [CssJs.unsafe("grid-column", "span 8 / span 8")]
-let colSpan9 = [CssJs.unsafe("grid-column", "span 9 / span 9")]
-let colSpan10 = [CssJs.unsafe("grid-column", "span 10 / span 10")]
-let colSpan11 = [CssJs.unsafe("grid-column", "span 11 / span 11")]
-let colSpan12 = [CssJs.unsafe("grid-column", "span 12 / span 12")]
-let colSpanFull = [CssJs.unsafe("grid-column", "1 / -1")]
-let colStart1 = [gridColumnStart(1)]
-let colStart2 = [gridColumnStart(2)]
-let colStart3 = [gridColumnStart(3)]
-let colStart4 = [gridColumnStart(4)]
-let colStart5 = [gridColumnStart(5)]
-let colStart6 = [gridColumnStart(6)]
-let colStart7 = [gridColumnStart(7)]
-let colStart8 = [gridColumnStart(8)]
-let colStart9 = [gridColumnStart(9)]
-let colStart10 = [gridColumnStart(10)]
-let colStart11 = [gridColumnStart(11)]
-let colStart12 = [gridColumnStart(12)]
-let colStart13 = [gridColumnStart(13)]
-let colStartAuto = [CssJs.unsafe("grid-column-start", "auto")]
+type spanType = Theme.ColSpan.t
+let col = column => [CssJs.unsafe("grid-column", Theme.ColSpan.toValue(column))]
+// let colAuto = [CssJs.unsafe("grid-column", "auto")]
+// let colSpan1 = [CssJs.unsafe("grid-column", "span 1 / span 1")]
+// let colSpan2 = [CssJs.unsafe("grid-column", "span 2 / span 2")]
+// let colSpan3 = [CssJs.unsafe("grid-column", "span 3 / span 3")]
+// let colSpan4 = [CssJs.unsafe("grid-column", "span 4 / span 4")]
+// let colSpan5 = [CssJs.unsafe("grid-column", "span 5 / span 5")]
+// let colSpan6 = [CssJs.unsafe("grid-column", "span 6 / span 6")]
+// let colSpan7 = [CssJs.unsafe("grid-column", "span 7 / span 7")]
+// let colSpan8 = [CssJs.unsafe("grid-column", "span 8 / span 8")]
+// let colSpan9 = [CssJs.unsafe("grid-column", "span 9 / span 9")]
+// let colSpan10 = [CssJs.unsafe("grid-column", "span 10 / span 10")]
+// let colSpan11 = [CssJs.unsafe("grid-column", "span 11 / span 11")]
+// let colSpan12 = [CssJs.unsafe("grid-column", "span 12 / span 12")]
+// let colSpanFull = [CssJs.unsafe("grid-column", "1 / -1")]
+type colStartEnd = Theme.ColStart.t
+type colStartEndType = [#auto | colStartEnd]
+let colStart = (cols: colStartEndType) =>
+  switch cols {
+  | #auto => [CssJs.unsafe("grid-column-start", "auto")]
+  | #...colStartEnd as cs => [gridColumnStart(Theme.ColStart.toValue(cs))]
+  }
 
-let colEnd1 = [gridColumnEnd(1)]
-let colEnd2 = [gridColumnEnd(2)]
-let colEnd3 = [gridColumnEnd(3)]
-let colEnd4 = [gridColumnEnd(4)]
-let colEnd5 = [gridColumnEnd(5)]
-let colEnd6 = [gridColumnEnd(6)]
-let colEnd7 = [gridColumnEnd(7)]
-let colEnd8 = [gridColumnEnd(8)]
-let colEnd9 = [gridColumnEnd(9)]
-let colEnd10 = [gridColumnEnd(10)]
-let colEnd11 = [gridColumnEnd(11)]
-let colEnd12 = [gridColumnEnd(12)]
-let colEnd13 = [gridColumnEnd(13)]
-let colEndAuto = [CssJs.unsafe("grid-column-end", "auto")]
+let colEnd = (cols: colStartEndType) =>
+  switch cols {
+  | #auto => [CssJs.unsafe("grid-column-end", "auto")]
+  | #...colStartEnd as cs => [gridColumnEnd(Theme.ColStart.toValue(cs))]
+  }
 
 // NOTE: Grid Template Rows - Utilities for specifying the rows in a grid layout.
-let gridRows1 = [gridTemplateRows([#repeat(#num(1), #minmax(#zero, #fr(1.)))])]
-let gridRows2 = [gridTemplateRows([#repeat(#num(2), #minmax(#zero, #fr(1.)))])]
-let gridRows3 = [gridTemplateRows([#repeat(#num(3), #minmax(#zero, #fr(1.)))])]
-let gridRows4 = [gridTemplateRows([#repeat(#num(4), #minmax(#zero, #fr(1.)))])]
-let gridRows5 = [gridTemplateRows([#repeat(#num(5), #minmax(#zero, #fr(1.)))])]
-let gridRows6 = [gridTemplateRows([#repeat(#num(6), #minmax(#zero, #fr(1.)))])]
-let gridRowsNone = [CssJs.unsafe("grid-template-rows", "none")]
+type gRows = Theme.GridRows.t
+type gridRowsType = [#none | gRows]
+
+let gridRows = (rows: gridRowsType) =>
+  switch rows {
+  | #none => [CssJs.unsafe("grid-template-rows", "none")]
+  | #...gRows as r => [gridTemplateRows(Theme.GridRows.toValue(r))]
+  }
 
 // NOTE: Grid Row Start / End - Utilities for controlling how elements are sized and placed across grid rows.
-let rowAuto = [CssJs.unsafe("grid-row", "auto")]
-let rowSpan1 = [CssJs.unsafe("grid-row", "span 1 / span 1")]
-let rowSpan2 = [CssJs.unsafe("grid-row", "span 2 / span 2")]
-let rowSpan3 = [CssJs.unsafe("grid-row", "span 3 / span 3")]
-let rowSpan4 = [CssJs.unsafe("grid-row", "span 4 / span 4")]
-let rowSpan5 = [CssJs.unsafe("grid-row", "span 5 / span 5")]
-let rowSpan6 = [CssJs.unsafe("grid-row", "span 6 / span 6")]
-let rowSpanFull = [gridRow(1, -1)]
+type rowSpan = Theme.RowSpan.t
+type rowSpanType = [rowSpan | #auto | #full]
+let row = count =>
+  switch count {
+  | #auto => [CssJs.unsafe("grid-row", "auto")]
+  | #full => [gridRow(1, -1)]
+  | #...rowSpan as rs => [CssJs.unsafe("grid-row", Theme.RowSpan.toValue(rs))]
+  }
+
 let rowStart1 = [gridRowStart(1)]
 let rowStart2 = [gridRowStart(2)]
 let rowStart3 = [gridRowStart(3)]
