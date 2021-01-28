@@ -800,9 +800,9 @@ let listOutside = [listStylePosition(#outside)]
 
 // NOTE: Placeholder Color - Utilities for controlling the color of placeholder text.
 // NOTE: Placeholder Color - Utilities for controlling the color of placeholder text.
-type color = Theme.Colors.t
+type colorType = Theme.Colors.t
 
-let placeholder = (~opacity=1., color: color) => [
+let placeholder = (~opacity=1., color: colorType) => [
   CssJs.placeholder([CssJs.color(Theme.Colors.toColor(color, ~opacity))]),
 ]
 
@@ -813,7 +813,9 @@ let textRight = [textAlign(#right)]
 let textJustify = [textAlign(#justify)]
 
 // NOTE: Text Color - Utilities for controlling the text color of an element.
-let textColor = (~opacity=1., color: color) => [CssJs.color(Theme.Colors.toColor(color, ~opacity))]
+let textColor = (~opacity=1., color: colorType) => [
+  CssJs.color(Theme.Colors.toColor(color, ~opacity)),
+]
 
 // NOTE: Text Decoration - Utilities for controlling the decoration of text.
 let underline = [textDecoration(#underline)]
@@ -864,7 +866,7 @@ let bgClipContent = [backgroundClip(#contentBox)]
 let bgClipText = [CssJs.unsafe("background-clip", "text")]
 
 // NOTE: Background Color - Utilities for controlling an element's background color.
-let bg = (~opacity=1., color: color) => [backgroundColor(Theme.Colors.toColor(color, ~opacity))]
+let bg = (~opacity=1., color: colorType) => [backgroundColor(Theme.Colors.toColor(color, ~opacity))]
 
 // NOTE: Background Position - Utilities for controlling the position of an element's background image.
 let bgBottom = [backgroundPosition(#bottom)]
@@ -1245,6 +1247,19 @@ let style = CssJs.style
 let tw = rules => Belt.Array.concatMany(rules)
 
 let twStyle = rules => CssJs.style(. Belt.Array.concatMany(rules))
+
+/**
+ 
+  @param breakpoint number in pixels where set min-width of a break point
+  @param styles pass here emotion css prop or tailwind macro styles
+ 
+  Example: breakpoint(300)(tw`bg-purple-400`) - It will add a purple background to the element at 300px breakpoint and higher.
+ */
+let addMinWidthBreakpoint = (breakpoint, styles) =>
+  CssJs.style(.[CssJs.media(`screen and (min-width: ${Belt.Int.toString(breakpoint)}px)`, styles)])
+
+let addMaxWidthBreakpoint = (breakpoint, styles) =>
+  CssJs.style(.[CssJs.media(`screen and (max-width: ${Belt.Int.toString(breakpoint)}px)`, styles)])
 
 let fontFamilies = fonts => [CssJs.fontFamilies(fonts)]
 
