@@ -1,6 +1,6 @@
 module Styles = {
   open Tailwind
-  let wrapper = merge(.[twStyle([gridCols2, maxW(#xl6), mx(#auto), mt(#v6), grid])])
+  let wrapper = merge(.[twStyle([gridCols(#v2), maxW(#xl6), mx(#auto), mt(#v6), grid])])
   let hover = twStyle([selector("&:hover", tw([srOnly, noSrOnly, bg(#blue700, ~opacity=0.5)]))])
 
   let shadow = twStyle([shadow(#xl)])
