@@ -182,7 +182,6 @@ let sticky = [position(#sticky)]
 
 // INFO: LAYOUT
 // NOTE: Top / Right / Bottom / Left - Utilities for controlling the placement of positioned elements.
-// TODO: Refactor spacing types
 type spacing = Theme.Spacing.t
 type proportions = Theme.Proportions.t
 type inset = [spacing | proportions | #auto]
@@ -646,7 +645,62 @@ let nspaceX = (size: negativeMargin) => [
   ),
 ]
 
-include Tailwind__Sizing
+// INFO: SIZING
+// NOTE: Width - Utilities for setting the width of an element
+
+type spacingHeight = [spacing | proportions | #screen | #auto]
+type spacingWidth = [spacingHeight | #minContent | #maxContent]
+
+let w = (width: spacingWidth) =>
+  switch width {
+  | #minContent => [CssJs.unsafe("width", "min-content")]
+  | #maxContent => [CssJs.unsafe("width", "max-content")]
+  | #screen => [CssJs.width(#vw(100.))]
+  | #auto => [CssJs.width(#auto)]
+  | #...spacing as sp => [CssJs.width(Theme.Spacing.toValue(sp))]
+  | #...proportions as prop => [CssJs.width(Theme.Proportions.toValue(prop))]
+  }
+
+// NOTE:  Min-Width - Utilities for setting the minimum width of an element
+let minW0 = [minWidth(#px(0))]
+let minWFull = [minWidth(#percent(100.))]
+let minWMin = [CssJs.unsafe("min-width", "min-content")]
+let minWMax = [CssJs.unsafe("min-width", "max-content")]
+
+// NOTE: Max-Width - Utilities for setting the maximum width of an element
+type widths = Theme.MaxWidth.t
+type screens = Theme.Screens.t
+type maxWidth = [widths | screens | #minContent | #maxContent]
+
+let maxW = (max: maxWidth) =>
+  switch max {
+  | #minContent => [CssJs.unsafe("max-width", "min-content")]
+  | #maxContent => [CssJs.unsafe("max-width", "max-content")]
+  | #...widths as wd => [maxWidth(Theme.MaxWidth.toValue(wd))]
+  | #...screens as sc => [maxWidth(Theme.Screens.toValue(sc))]
+  }
+
+// NOTE: Height - Utilities for setting the height of an element
+let h = (height: spacingHeight) =>
+  switch height {
+  | #screen => [CssJs.height(#vw(100.))]
+  | #auto => [CssJs.height(#auto)]
+  | #...spacing as sp => [CssJs.height(Theme.Spacing.toValue(sp))]
+  | #...proportions as prop => [CssJs.height(Theme.Proportions.toValue(prop))]
+  }
+
+// NOTE: Min-Height - Utilities for setting the minimum height of an element
+let minH0 = [minHeight(#px(0))]
+let minHFull = [minHeight(#percent(100.))]
+let minHScreen = [minHeight(#vh(100.))]
+
+// NOTE: Max-Height - Utilities for setting the maximum height of an element
+type maxHeightType = [spacing | #screen]
+let maxH = height =>
+  switch height {
+  | #screen => [CssJs.height(#vh(100.))]
+  | #...spacing as h => [CssJs.height(Theme.Spacing.toValue(h))]
+  }
 
 // INFO: TYPOGRAPHY
 // NOTE: Font Family - Utilities for controlling the font family of an element.
@@ -1124,6 +1178,63 @@ let noSrOnly = [
   CssJs.unsafe("clip", "auto"),
   whiteSpace(#normal),
 ]
+
+// INFO: TRANSFORMATIONS
+// NOTE: Transform - Utilities for controlling transform behaviour.
+let transform = (
+  ~twTranslateX=0.,
+  ~twTranslateY=0.,
+  ~twRotate=#deg(0.),
+  ~twSkewX=#deg(0.),
+  ~twSkewY=#deg(0.),
+  ~twScaleX=1.,
+  ~twScaleY=1.,
+  (),
+) => [
+  CssJs.transforms([
+    CssJs.translateX(#percent(twTranslateX)),
+    CssJs.translateY(#percent(twTranslateY)),
+    CssJs.rotate(twRotate),
+    CssJs.skewX(twSkewX),
+    CssJs.skewY(twSkewY),
+    CssJs.scaleX(twScaleX),
+    CssJs.scaleY(twScaleY),
+  ]),
+]
+
+let transformGpu = (
+  ~twTranslateX=#percent(0.),
+  ~twTranslateY=#percent(0.),
+  ~twRotate=#deg(0.),
+  ~twSkewX=#deg(0.),
+  ~twSkewY=#deg(0.),
+  ~twScaleX=1.,
+  ~twScaleY=1.,
+  (),
+) => [
+  CssJs.transforms([
+    CssJs.translate3d(twTranslateX, twTranslateY, #percent(0.)),
+    CssJs.rotate(twRotate),
+    CssJs.skewX(twSkewX),
+    CssJs.skewY(twSkewY),
+    CssJs.scaleX(twScaleX),
+    CssJs.scaleY(twScaleY),
+  ]),
+]
+let transformNone = [CssJs.transform(#none)]
+
+// NOTE: Transform Origin - Utilities for specifying the origin for an element's transformations.
+let originCenter = [transformOrigin(#percent(50.), #percent(50.))]
+let originRight = [transformOrigin(#percent(50.), #percent(100.))]
+let originLeft = [transformOrigin(#percent(50.), #percent(0.))]
+
+let originTop = [transformOrigin(#percent(0.), #percent(50.))]
+let originTopLeft = [transformOrigin(#percent(0.), #percent(0.))]
+let originTopRight = [transformOrigin(#percent(0.), #percent(100.))]
+
+let originBottom = [transformOrigin(#percent(100.), #percent(50.))]
+let originBottomRight = [transformOrigin(#percent(100.), #percent(100.))]
+let originBottomLeft = [transformOrigin(#percent(100.), #percent(0.))]
 
 // INFO: FUNCTIONS
 
