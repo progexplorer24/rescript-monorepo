@@ -1,7 +1,7 @@
 open Tailwind
 
 module Outline = {
-  let defaultSize = twStyle([w(#v4), h(#v4)])
+  let defaultSize = twStyle([w(#v10), h(#v10)])
 
   @react.component
   let accessibility = (
@@ -29,7 +29,7 @@ module Outline = {
   let add = (
     ~className="",
     ~fill="none",
-    ~stroke="currentCollor",
+    ~stroke="currentColor",
     ~strokeLinecap="round",
     ~strokeLinejoin="round",
     ~strokeWidth="32",
