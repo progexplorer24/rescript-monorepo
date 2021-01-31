@@ -7,7 +7,7 @@ module Styles = {
 }
 
 let default = () => {
-  <ApplyTypography>
+  <HeadConfiguration font=#PaytoneOne>
     <div className=Styles.wrapper>
       <div>
         <h2 className=Styles.hover> {"Bs-TailwindCSS"->Utils.str} </h2>
@@ -186,5 +186,5 @@ let default = () => {
         </div>
       </div>
     </div>
-  </ApplyTypography>
+  </HeadConfiguration>
 }
