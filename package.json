@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "bsb -clean-world -make-world && next build",
     "start": "next start",
     "res:build": "bsb -make-world",
     "res:clean": "bsb -clean-world",
