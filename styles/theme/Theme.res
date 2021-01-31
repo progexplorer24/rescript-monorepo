@@ -55,3 +55,7 @@ module ColStart = Theme__ColStart
 module GridRows = Theme__GridRows
 
 module RowSpan = Theme__RowSpan
+
+module Row = Theme__Row
+
+module GoogleFonts = Theme__GoogleFonts
