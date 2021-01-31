@@ -2,6 +2,7 @@ open CssJs
 
 // INFO: TRANSITIONS AND ANIMATIONS
 // NOTE: Transition Property - Utilities for controlling which CSS properties transition.
+
 let transitionNone = [transitionProperty("none")]
 let transitionAll = [
   transition("all", ~duration=Theme.Duration._150, ~timingFunction=Theme.TimingFunction.easeInOut),
@@ -425,22 +426,20 @@ let row = count =>
   | #...rowSpan as rs => [CssJs.unsafe("grid-row", Theme.RowSpan.toValue(rs))]
   }
 
-let rowStart1 = [gridRowStart(1)]
-let rowStart2 = [gridRowStart(2)]
-let rowStart3 = [gridRowStart(3)]
-let rowStart4 = [gridRowStart(4)]
-let rowStart5 = [gridRowStart(5)]
-let rowStart6 = [gridRowStart(6)]
-let rowStart7 = [gridRowStart(7)]
-let rowStartAuto = [CssJs.unsafe("grid-row-start", "auto")]
-let rowEnd1 = [gridRowEnd(1)]
-let rowEnd2 = [gridRowEnd(2)]
-let rowEnd3 = [gridRowEnd(3)]
-let rowEnd4 = [gridRowEnd(4)]
-let rowEnd5 = [gridRowEnd(5)]
-let rowEnd6 = [gridRowEnd(6)]
-let rowEnd7 = [gridRowEnd(7)]
-let rowEndAuto = [CssJs.unsafe("grid-row-end", "auto")]
+type rowS = Theme.Row.t
+type rowStartEnd = [rowS | #auto]
+
+let rowStart = (rows: rowStartEnd) =>
+  switch rows {
+  | #auto => [CssJs.unsafe("grid-row-start", "auto")]
+  | #...rowS as r => [gridRowStart(Theme.Row.toValue(r))]
+  }
+
+let rowEnd = (rows: rowStartEnd) =>
+  switch rows {
+  | #auto => [CssJs.unsafe("grid-row-end", "auto")]
+  | #...rowS as r => [gridRowEnd(Theme.Row.toValue(r))]
+  }
 
 // NOTE: Grid Auto Flow - Utilities for controlling how elements in a grid are auto-placed.
 let gridFlowRow = [gridAutoFlow(#row)]
@@ -461,8 +460,6 @@ let autoRowsMax = [gridAutoRows(#maxContent)]
 let autoRowsFr = [gridAutoRows(#minmax(#zero, #fr(1.)))]
 
 // NOTE: Gap - Utilities for controlling gutters between grid rows and columns.
-
-type spacing2 = Theme.Spacing.t
 
 let gap = value => [CssJs.gridGap(Theme.Spacing.toValue(value))]
 let gapX = value => [CssJs.gridColumnGap(Theme.Spacing.toValue(value))]
@@ -614,7 +611,7 @@ let nspaceY = (size: negativeMargin) => [
   ),
 ]
 
-let spaceX = (size: spacing2) => [
+let spaceX = (size: spacing) => [
   selector(
     Selectors.ignoreFirstChild,
     [marginLeft(Theme.Spacing.toValue(size)), marginRight(Theme.Spacing._0)],
@@ -1231,17 +1228,10 @@ let tw = rules => Belt.Array.concatMany(rules)
 
 let twStyle = rules => CssJs.style(. Belt.Array.concatMany(rules))
 
-/**
- 
-  @param breakpoint number in pixels where set min-width of a break point
-  @param styles pass here emotion css prop or tailwind macro styles
- 
-  Example: breakpoint(300)(tw`bg-purple-400`) - It will add a purple background to the element at 300px breakpoint and higher.
- */
-let addMinWidthBreakpoint = (breakpoint, styles) =>
+let minWBreakpoint = (breakpoint, styles) =>
   CssJs.style(.[CssJs.media(`screen and (min-width: ${Belt.Int.toString(breakpoint)}px)`, styles)])
 
-let addMaxWidthBreakpoint = (breakpoint, styles) =>
+let maxWBreakpoint = (breakpoint, styles) =>
   CssJs.style(.[CssJs.media(`screen and (max-width: ${Belt.Int.toString(breakpoint)}px)`, styles)])
 
 let fontFamilies = fonts => [CssJs.fontFamilies(fonts)]
