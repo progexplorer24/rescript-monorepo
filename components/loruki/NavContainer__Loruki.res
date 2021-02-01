@@ -1,7 +1,7 @@
 module Styles = {
   open Tailwind
 
-  let elementStyles = twStyle([maxW(#xl6), mx(#auto), mx(#auto), overflowAuto, bg(#blue900)])
+  let elementStyles = twStyle([bg(#blue900)])
 }
 
 @react.component
