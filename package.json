@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "bsb -clean-world -make-world && next build",
+    "build": "bsb -clean-world -make-world && npx tailwindcss-cli@latest build ./styles/base.css -c ./tailwind.config.js -o ./tailwind.css && next build",
     "start": "next start",
     "res:build": "bsb -make-world",
     "res:clean": "bsb -clean-world",
@@ -15,6 +15,7 @@
     "@mdx-js/loader": "^1.6.22",
     "@next/mdx": "^10.0.4",
     "@tailwindcss/forms": "^0.2.1",
+    "@tailwindcss/postcss7-compat": "^2.0.2",
     "@zeit/next-css": "^1.0.1",
     "autoprefixer": "^9",
     "bs-css-emotion": "^2.1.0",
@@ -29,7 +30,6 @@
     "tailwindcss": "npm:@tailwindcss/postcss7-compat"
   },
   "devDependencies": {
-    "@dylanirlbeck/tailwind-ppx": "^0.8.3",
     "bs-platform": "^8.3.3",
     "cssnano": "^4.1.10"
   }
