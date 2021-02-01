@@ -192,62 +192,61 @@ type t = [
   | #MontserratAlternates
   | #PaytoneOne
   | #Ramabhadra
+  | #HindVadodara
+  | #JosefinSlab
+  | #SecularOne
+  | #Sriracha
+  | #SpecialElite
+  | #Quantico
+  | #PlayfairDisplaySC
+  | #Economica
+  | #RopaSans
+  | #IstokWeb
+  | #Quattrocento
+  | #Cookie
+  | #ChakraPetch
+  | #Lemonada
+  | #SawarabiMincho
+  | #Yellowtail
+  | #Sanchez
+  | #Handlee
+  | #PoiretOne
+  | #PressStart2P
+  | #AdventPro
+  | #FiraSansExtraCondensed
+  | #CrimsonPro
+  | #Spectral
+  | #BaiJamjuree
+  | #DMSerifDisplay
+  | #Philosopher
+  | #Neuton
+  | #Bangers
+  | #Viadaloka
+  | #HammersmithOne
+  | #AndikaNewBasic
+  | #Cormorant
+  | #AsapCondensed
+  | #RedHatDisplay
+  | #Ruda
+  | #PublicSans
+  | #Karma
+  | #Taviraj
+  | #DMSerifText
+  | #Monoton
+  | #UnicaOne
+  | #Jura
+  | #Faustina
+  | #Alice
+  | #PragatiNarrow
+  | #Neucha
+  | #Texturina
+  | #NotoSerifTC
+  | #Jost
+  | #Gudea
+  | #Jaldi
+  | #Saira
 ]
-// TODO: Rest
 
-// | #HindVadodara
-// | #JosefinSlab
-// | #SecularOne
-// | #Sriracha
-// | #SpecialElite
-// | #Quantico
-// | #PlayfairDisplaySC
-// | #Economica
-// | #RopaSans
-// | #IstokWeb
-// | #Quattrocento
-// | #Cookie
-// | #ChakraPetch
-// | #Lemonada
-// | #SawarabiMincho
-// | #Yellowtail
-// | #Sanchez
-// | #Handlee
-// | #PoiretOne
-// | #PressStart2P
-// | #AdventPro
-// | #FiraSansExtraCondensed
-// | #CrimsonPro
-// | #Spectral
-// | #BaiJamjuree
-// | #DMSerifDisplay
-// | #Philosopher
-// | #Neuton
-// | #Bangers
-// | #Viadaloka
-// | #HammersmithOne
-// | #AndikaNewBasic
-// | #Cormorant
-// | #AsapCondensed
-// | #RedHatDisplay
-// | #Ruda
-// | #PublicSans
-// | #Karma
-// | #Taviraj
-// | #DMSerifText
-// | #Monoton
-// | #UnicaOne
-// | #Jura
-// | #Faustina
-// | #Alice
-// | #PragatiNarrow
-// | #Neucha
-// | #Texturina
-// | #NotoSerifTC
-// | #Jost
-// | #Gudea
-// | #Jaldi
-// | #Saira
 // | #Merienda
 // | #GothicA1
 // | #SigmarOne
@@ -319,6 +318,8 @@ type t = [
 // | #Antic
 // | #Sarala
 // | #Arsenal
+// TODO: Rest
+
 // | #BowlbyOneSC
 // | #BigShouldersStencilText
 // | #BigShouldersStencilDisplay
@@ -1217,4 +1218,57 @@ let tovalue = fontName =>
   | #MontserratAlternates => "Montserrat Alternates"
   | #PaytoneOne => "Paytone One"
   | #Ramabhadra => "Ramabhadra"
+  | #HindVadodara => "Hind Vadodara"
+  | #JosefinSlab => "Josefin Slab"
+  | #SecularOne => "Secular One"
+  | #Sriracha => "Sriracha"
+  | #SpecialElite => "Special Elite"
+  | #Quantico => "Quantico"
+  | #PlayfairDisplaySC => "Playfair Display SC"
+  | #Economica => "Economica"
+  | #RopaSans => "Ropa Sans"
+  | #IstokWeb => "Istok Web"
+  | #Quattrocento => "Quattrocento"
+  | #Cookie => "Cookie"
+  | #ChakraPetch => "Chakra Petch"
+  | #Lemonada => "Lemonada"
+  | #SawarabiMincho => "Sawarabi Mincho"
+  | #Yellowtail => "Yellowtail"
+  | #Sanchez => "Sanchez"
+  | #Handlee => "Handlee"
+  | #PoiretOne => "Poiret One"
+  | #PressStart2P => "Press Start 2P"
+  | #AdventPro => "Advent Pro"
+  | #FiraSansExtraCondensed => "Fira Sans Extra Condensed"
+  | #CrimsonPro => "Crimson Pro"
+  | #Spectral => "Spectral"
+  | #BaiJamjuree => "Bai Jamjuree"
+  | #DMSerifDisplay => "DM Serif Display"
+  | #Philosopher => "Philosopher"
+  | #Neuton => "Neuton"
+  | #Bangers => "Bangers"
+  | #Viadaloka => "Viadaloka"
+  | #HammersmithOne => "Hammersmith One"
+  | #AndikaNewBasic => "Andika New Basic"
+  | #Cormorant => "Cormorant"
+  | #AsapCondensed => "Asap Condensed"
+  | #RedHatDisplay => "Red Hat Display"
+  | #Ruda => "Ruda"
+  | #PublicSans => "Public Sans"
+  | #Karma => "Krama"
+  | #Taviraj => "Taviraj"
+  | #DMSerifText => "DM Serif Text"
+  | #Monoton => "Monoton"
+  | #UnicaOne => "Unica One"
+  | #Jura => "Jura"
+  | #Faustina => "Faustina"
+  | #Alice => "Alice"
+  | #PragatiNarrow => "Pragati Narrow"
+  | #Neucha => "Neucha"
+  | #Texturina => "Texturina"
+  | #NotoSerifTC => "Noto Serif TC"
+  | #Jost => "Jost"
+  | #Gudea => "Gudea"
+  | #Jaldi => "Jaldi"
+  | #Saira => "Saira"
   }
