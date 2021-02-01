@@ -363,8 +363,6 @@ let flexShrink = [CssJs.flexGrow(0.)]
 type order = Theme.Order.t
 let order = order => [CssJs.order(Theme.Order.toValue(order))]
 
-// HACK: Change this
-
 // NOTE: Grid Template Columns - Utilities for specifying the columns in a grid layout.
 type gCols = Theme.GridCols.t
 type gridColumnType = [#none | gCols]
@@ -377,29 +375,15 @@ let gridCols = columns =>
 
 // NOTE: Grid Column Start / End - Utilities for controlling how elements are sized and placed across grid columns.
 type spanType = Theme.ColSpan.t
-let col = column => [CssJs.unsafe("grid-column", Theme.ColSpan.toValue(column))]
-// let colAuto = [CssJs.unsafe("grid-column", "auto")]
-// let colSpan1 = [CssJs.unsafe("grid-column", "span 1 / span 1")]
-// let colSpan2 = [CssJs.unsafe("grid-column", "span 2 / span 2")]
-// let colSpan3 = [CssJs.unsafe("grid-column", "span 3 / span 3")]
-// let colSpan4 = [CssJs.unsafe("grid-column", "span 4 / span 4")]
-// let colSpan5 = [CssJs.unsafe("grid-column", "span 5 / span 5")]
-// let colSpan6 = [CssJs.unsafe("grid-column", "span 6 / span 6")]
-// let colSpan7 = [CssJs.unsafe("grid-column", "span 7 / span 7")]
-// let colSpan8 = [CssJs.unsafe("grid-column", "span 8 / span 8")]
-// let colSpan9 = [CssJs.unsafe("grid-column", "span 9 / span 9")]
-// let colSpan10 = [CssJs.unsafe("grid-column", "span 10 / span 10")]
-// let colSpan11 = [CssJs.unsafe("grid-column", "span 11 / span 11")]
-// let colSpan12 = [CssJs.unsafe("grid-column", "span 12 / span 12")]
-// let colSpanFull = [CssJs.unsafe("grid-column", "1 / -1")]
 type colStartEnd = Theme.ColStart.t
 type colStartEndType = [#auto | colStartEnd]
+
+let col = column => [CssJs.unsafe("grid-column", Theme.ColSpan.toValue(column))]
 let colStart = (cols: colStartEndType) =>
   switch cols {
   | #auto => [CssJs.unsafe("grid-column-start", "auto")]
   | #...colStartEnd as cs => [gridColumnStart(Theme.ColStart.toValue(cs))]
   }
-
 let colEnd = (cols: colStartEndType) =>
   switch cols {
   | #auto => [CssJs.unsafe("grid-column-end", "auto")]
@@ -464,8 +448,6 @@ let autoRowsFr = [gridAutoRows(#minmax(#zero, #fr(1.)))]
 let gap = value => [CssJs.gridGap(Theme.Spacing.toValue(value))]
 let gapX = value => [CssJs.gridColumnGap(Theme.Spacing.toValue(value))]
 let gapY = value => [CssJs.gridRowGap(Theme.Spacing.toValue(value))]
-
-// HACK: End hack
 
 // INFO: BOX ALIGNMENT
 // NOTE: Justify Content - Utilities for controlling how flex and grid items are positioned along a container's main axis.
@@ -1228,11 +1210,19 @@ let tw = rules => Belt.Array.concatMany(rules)
 
 let twStyle = rules => CssJs.style(. Belt.Array.concatMany(rules))
 
-let minWBreakpoint = (breakpoint, styles) =>
-  CssJs.style(.[CssJs.media(`screen and (min-width: ${Belt.Int.toString(breakpoint)}px)`, styles)])
+let minWBreakpoint = (breakpoint, styles) => [
+  CssJs.media(`screen and (min-width: ${Belt.Int.toString(breakpoint)}px)`, tw(styles)),
+]
 
-let maxWBreakpoint = (breakpoint, styles) =>
-  CssJs.style(.[CssJs.media(`screen and (max-width: ${Belt.Int.toString(breakpoint)}px)`, styles)])
+let maxWBreakpoint = (breakpoint, styles) => [
+  CssJs.media(`screen and (max-width: ${Belt.Int.toString(breakpoint)}px)`, tw(styles)),
+]
+
+let sm = minWBreakpoint(640)
+let md = minWBreakpoint(768)
+let lg = minWBreakpoint(1024)
+let xl = minWBreakpoint(1280)
+let xl2 = minWBreakpoint(1536)
 
 let fontFamilies = fonts => [CssJs.fontFamilies(fonts)]
 
@@ -1240,48 +1230,49 @@ let fontFamilies = fonts => [CssJs.fontFamilies(fonts)]
 
 let selector = (string, rules) => [CssJs.selector(string, rules)]
 
-let active = rules => [CssJs.active(rules)]
-let checked = rules => [CssJs.checked(rules)]
-let default = rules => [CssJs.default(rules)]
-let defined = rules => [CssJs.defined(rules)]
-let disabled = rules => [CssJs.disabled(rules)]
-let empty = rules => [CssJs.empty(rules)]
-let enabled = rules => [CssJs.enabled(rules)]
-let first = rules => [CssJs.first(rules)]
-let firstChild = rules => [CssJs.firstChild(rules)]
-let firstOfType = rules => [CssJs.firstOfType(rules)]
-let focus = rules => [CssJs.focus(rules)]
-let focusWithin = rules => [CssJs.focusWithin(rules)]
+let active = rules => [CssJs.active(tw(rules))]
+let checked = rules => [CssJs.checked(tw(rules))]
+let default = rules => [CssJs.default(tw(rules))]
+let defined = rules => [CssJs.defined(tw(rules))]
+let disabled = rules => [CssJs.disabled(tw(rules))]
+let empty = rules => [CssJs.empty(tw(rules))]
+let enabled = rules => [CssJs.enabled(tw(rules))]
+let first = rules => [CssJs.first(tw(rules))]
+let firstChild = rules => [CssJs.firstChild(tw(rules))]
+let firstOfType = rules => [CssJs.firstOfType(tw(rules))]
+let focus = rules => [CssJs.focus(tw(rules))]
+let focusWithin = rules => [CssJs.focusWithin(tw(rules))]
 // TODO: host selector
 
-let hover = rules => [CssJs.hover(rules)]
-let indeterminate = rules => [CssJs.indeterminate(rules)]
-let inRange = rules => [CssJs.inRange(rules)]
-let invalid = rules => [CssJs.invalid(rules)]
+let hover = rules => [CssJs.hover(tw(rules))]
+let indeterminate = rules => [CssJs.indeterminate(tw(rules))]
+let inRange = rules => [CssJs.inRange(tw(rules))]
+let invalid = rules => [CssJs.invalid(tw(rules))]
 // TODO: lang selector
 
-let lastChild = rules => [CssJs.lastChild(rules)]
-let lastOfType = rules => [CssJs.lastOfType(rules)]
-let link = rules => [CssJs.lastOfType(rules)]
-let not = rules => [CssJs.not__(rules)]
+let lastChild = rules => [CssJs.lastChild(tw(rules))]
+let lastOfType = rules => [CssJs.lastOfType(tw(rules))]
+let link = rules => [CssJs.lastOfType(tw(rules))]
+//  TODO: Figure out not function
+// let not = rules => [CssJs.not__(tw(rules))]
 // TODO: Nth selectors
 
-let onlyChild = rules => [CssJs.onlyChild(rules)]
-let onlyOfType = rules => [CssJs.onlyOfType(rules)]
-let optional = rules => [CssJs.optional(rules)]
-let outOfRange = rules => [CssJs.outOfRange(rules)]
-let readOnly = rules => [CssJs.readOnly(rules)]
-let readWrite = rules => [CssJs.readWrite(rules)]
-let required = rules => [CssJs.required(rules)]
+let onlyChild = rules => [CssJs.onlyChild(tw(rules))]
+let onlyOfType = rules => [CssJs.onlyOfType(tw(rules))]
+let optional = rules => [CssJs.optional(tw(rules))]
+let outOfRange = rules => [CssJs.outOfRange(tw(rules))]
+let readOnly = rules => [CssJs.readOnly(tw(rules))]
+let readWrite = rules => [CssJs.readWrite(tw(rules))]
+let required = rules => [CssJs.required(tw(rules))]
 // TODO: why right selector is commented out?
-let root = rules => [CssJs.root(rules)]
-let scope = rules => [CssJs.scope(rules)]
-let target = rules => [CssJs.target(rules)]
-let valid = rules => [CssJs.valid(rules)]
-let visited = rules => [CssJs.visited(rules)]
+let root = rules => [CssJs.root(tw(rules))]
+let scope = rules => [CssJs.scope(tw(rules))]
+let target = rules => [CssJs.target(tw(rules))]
+let valid = rules => [CssJs.valid(tw(rules))]
+let visited = rules => [CssJs.visited(tw(rules))]
 
-let after = rules => [CssJs.after(rules)]
-let before = rules => [CssJs.before(rules)]
-let firstLetter = rules => [CssJs.firstLetter(rules)]
-let firstLine = rules => [CssJs.firstLine(rules)]
-let selection = rules => [CssJs.selection(rules)]
+let after = rules => [CssJs.after(tw(rules))]
+let before = rules => [CssJs.before(tw(rules))]
+let firstLetter = rules => [CssJs.firstLetter(tw(rules))]
+let firstLine = rules => [CssJs.firstLine(tw(rules))]
+let selection = rules => [CssJs.selection(tw(rules))]
