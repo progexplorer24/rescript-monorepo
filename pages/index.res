@@ -218,7 +218,8 @@ let default = () => {
           </ul>
         </nav>
       </header>
-      <div className={CssJs.merge(.[Styles.content, %tw("place-items-center")])}>
+      <div
+        className={CssJs.merge(.[Styles.content, Tailwind.twStyle([Tailwind.placeItemsCenter])])}>
         <h2> {"Your content would go here"->str} </h2>
       </div>
     </main>
