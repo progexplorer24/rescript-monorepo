@@ -92,7 +92,7 @@ let default = () => {
       </div>
       // INFO: TailwindCSS section
       <div>
-        <h2 className=%tw("text-5xl text-gray-800 text-opacity-80 mb-4 leading-none")>
+        <h2 className="text-5xl text-gray-800 text-opacity-80 mb-4 leading-none">
           {"Normal TailwindCSS"->Utils.str}
         </h2>
         <input
@@ -100,9 +100,9 @@ let default = () => {
           name=""
           id=""
           placeholder="Put some text here"
-          className=%tw("placeholder-red-400 placeholder-opacity-90 ring-yellow-500 ring-4 mb-4")
+          className="placeholder-red-400 placeholder-opacity-90 ring-yellow-500 ring-4 mb-4"
         />
-        <button className=%tw("block p-3 mb-4 bg-gray-600 text-white")>
+        <button className="block p-3 mb-4 bg-gray-600 text-white">
           <svg
             className="animate-spin h-5 w-5 text-white inline-block mr-3"
             xmlns="http://www.w3.org/2000/svg"
@@ -119,7 +119,7 @@ let default = () => {
           </svg>
           {"Button"->Utils.str}
         </button>
-        <button className=%tw("block p-3 mb-4 bg-gray-600 text-white")>
+        <button className="block p-3 mb-4 bg-gray-600 text-white">
           <svg
             className="animate-bounce h-5 w-5 text-white inline-block mr-3"
             xmlns="http://www.w3.org/2000/svg"
@@ -136,7 +136,7 @@ let default = () => {
           </svg>
           {"Button"->Utils.str}
         </button>
-        <button className=%tw("block p-3 mb-4 bg-gray-600 text-white")>
+        <button className="block p-3 mb-4 bg-gray-600 text-white">
           <svg
             className="animate-ping h-5 w-5 text-white inline-block mr-3"
             xmlns="http://www.w3.org/2000/svg"
@@ -153,7 +153,7 @@ let default = () => {
           </svg>
           {"Button"->Utils.str}
         </button>
-        <button className=%tw("block p-3 mb-4 bg-gray-600 text-white")>
+        <button className="block p-3 mb-4 bg-gray-600 text-white">
           <svg
             className="animate-pulse h-5 w-5 text-white inline-block mr-3"
             xmlns="http://www.w3.org/2000/svg"

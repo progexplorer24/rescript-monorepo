@@ -76,6 +76,9 @@ module Styles = {
 
   let mainOrange = "e67e22"
 
+  let omnifoodSm = Tailwind.minWBreakpoint(481)
+  let omnifoodMd = Tailwind.minWBreakpoint(767)
+
   let smallGlobal = style(.[
     media("screen and (max-width: 767px)", [overflowX(#hidden), fontSize(#px(15))]),
   ])
@@ -289,7 +292,7 @@ module Styles = {
   // NOTE: Icon styles
   let bigIcons = CssJs.merge(.[
     style(.[color(#hex(mainOrange)), marginBottom(#px(10))]),
-    %tw("w-16 h-16 block fill-current"),
+    Tailwind.twStyle([Tailwind.w(#v16), Tailwind.h(#v16), Tailwind.block, Tailwind.fillCurrent]),
   ])
 
   // NOTE: Favourite meals
@@ -369,7 +372,7 @@ module Styles = {
   let mediumWorkStop = style(.[media("screen and (max-width: 1023px)", [marginBottom(#px(40))])])
 
   let worksStop = CssJs.merge(.[
-    %tw("flex omnifood-md:items-start items-center"),
+    Tailwind.twStyle([Tailwind.flex, Tailwind.itemsCenter, omnifoodMd([Tailwind.itemsStart])]),
     style(.[overflow(#auto), marginBottom(#px(50))]),
     mediumWorkStop,
     smallWorkStop,
@@ -391,7 +394,7 @@ module Styles = {
   ])
 
   let workStopNumber = CssJs.merge(.[
-    %tw("flex-shrink-0"),
+    Tailwind.twStyle([Tailwind.flexShrink0]),
     style(.[
       color(#hex(mainOrange)),
       border(px(2), #solid, #hex(mainOrange)),
@@ -444,7 +447,15 @@ module Styles = {
 
   let cityFeature = CssJs.merge(.[style(.[marginBottom(#px(10))]), mediumCityFeature])
 
-  let fourColumns = CssJs.merge(.[%tw("grid grid-cols-1 omnifood-md:grid-cols-4 gap-6"), row])
+  let fourColumns = CssJs.merge(.[
+    Tailwind.twStyle([
+      Tailwind.grid,
+      Tailwind.gridCols(#v1),
+      Tailwind.gap(#v6),
+      omnifoodMd([Tailwind.gridCols(#v4)]),
+    ]),
+    row,
+  ])
 
   let mediumIconSmall = style(.[
     media("screen and (max-width: 1023px)", [width(#px(16)), marginRight(#px(5))]),
@@ -484,7 +495,11 @@ module Styles = {
   // NOTE: Customer experiance
 
   let threeColumns = CssJs.merge(.[
-    %tw("grid grid-cols-1 omnifood-sm:grid-cols-3 omnifood-sm:gap-6"),
+    Tailwind.twStyle([
+      Tailwind.grid,
+      Tailwind.gridCols(#v1),
+      omnifoodSm([Tailwind.gridCols(#v3), Tailwind.gap(#v6)]),
+    ]),
     row,
   ])
 
@@ -504,7 +519,7 @@ module Styles = {
       backgroundSize(#cover),
       backgroundAttachment(#fixed),
     ]),
-    %tw("text-white"),
+    Tailwind.twStyle([Tailwind.textColor(#white)]),
   ])
 
   let blockquoteBefore = style(.[
@@ -563,7 +578,10 @@ module Styles = {
     mediumPlanBoxDiv,
   ])
 
-  let threeColumnsPricing = CssJs.merge(.[%tw("grid omnifood-md:grid-cols-3 gap-6"), row])
+  let threeColumnsPricing = CssJs.merge(.[
+    Tailwind.twStyle([Tailwind.grid, Tailwind.gap(#v6), omnifoodMd([Tailwind.gridCols(#v3)])]),
+    row,
+  ])
 
   let smPlanPrice = style(.[media("screen and (max-width: 1023px)", [fontSize(#percent(300.))])])
 
@@ -632,7 +650,10 @@ module Styles = {
 
   // NOTE: Footer Section
 
-  let twoColumns = CssJs.merge(.[%tw("grid grid-cols-2 gap-6"), row])
+  let twoColumns = CssJs.merge(.[
+    Tailwind.twStyle([Tailwind.grid, Tailwind.gridCols(#v2), Tailwind.gap(#v6)]),
+    row,
+  ])
 
   let footer = style(.[backgroundColor(#hex("333")), padding2(~v=#px(20), ~h=#px(0))])
 
@@ -701,7 +722,16 @@ let default = () => {
           {"Hello, we're Omnifood, your new premium food delivery service. We know you're always busy. No time for cooking. So let us take care of that, we're really good at it, we promise!
           "->str}
         </p>
-        <div className=%tw("grid mt-8 gap-4 omnifood-md:grid-cols-4 grid-cols-1")>
+        <div
+          className={Tailwind.merge(.[
+            Tailwind.twStyle([
+              Tailwind.grid,
+              Tailwind.mt(#v8),
+              Tailwind.gap(#v4),
+              Tailwind.gridCols(#v1),
+              Styles.omnifoodMd([Tailwind.gridCols(#v4)]),
+            ]),
+          ])}>
           <div className=Styles.box>
             <svg xmlns="http://www.w3.org/2000/svg" className=Styles.bigIcons viewBox="0 0 512 512">
               <path
@@ -880,7 +910,11 @@ let default = () => {
       <div className=Styles.row>
         <h2 className=Styles.h2> {`How it works ${mdash} Simple as 1, 2, 3`->str} </h2>
       </div>
-      <div className={CssJs.merge(.[Styles.row, %tw("grid omnifood-md:grid-cols-2")])}>
+      <div
+        className={CssJs.merge(.[
+          Styles.row,
+          Tailwind.twStyle([Tailwind.grid, Styles.omnifoodMd([Tailwind.gridCols(#v2)])]),
+        ])}>
         <div className=Styles.leftSection>
           <img
             src="/omnifood/app-iPhone.png" alt="Omnifood app on iPhone" className=Styles.appScreen
@@ -1055,7 +1089,12 @@ let default = () => {
       </div>
       <div
         className={CssJs.merge(.[
-          %tw("grid grid-cols-1 omnifood-md:grid-cols-3  gap-6"),
+          Tailwind.twStyle([
+            Tailwind.grid,
+            Tailwind.gridCols(#v1),
+            Tailwind.gap(#v6),
+            Styles.omnifoodMd([Tailwind.gridCols(#v3)]),
+          ]),
           Styles.row,
         ])}>
         <blockquote className=Styles.blockquote>
@@ -1352,14 +1391,24 @@ let default = () => {
       <div className=Styles.row>
         <form action="#" method="post" className=Styles.contactForm>
           <div className=Styles.threeColumns>
-            <div className=%tw("omnifood-sm:col-span-1")>
+            <div
+              className={Tailwind.merge(.[
+                Tailwind.twStyle([Styles.omnifoodSm([Tailwind.col(#span1)])]),
+              ])}>
               <label
                 htmlFor="name"
-                className=%tw("omnifood-sm:flex omnifood-sm:h-full  omnifood-sm:items-center")>
+                className={Tailwind.merge(.[
+                  Tailwind.twStyle([
+                    Styles.omnifoodMd([Tailwind.flex, Tailwind.h(#full), Tailwind.itemsCenter]),
+                  ]),
+                ])}>
                 {"Name"->str}
               </label>
             </div>
-            <div className=%tw("col-span-1 omnifood-sm:col-span-2")>
+            <div
+              className={Tailwind.merge(.[
+                Tailwind.twStyle([Tailwind.col(#span1), Styles.omnifoodSm([Tailwind.col(#span2)])]),
+              ])}>
               <input
                 type_="text"
                 name="name"
@@ -1371,14 +1420,25 @@ let default = () => {
             </div>
           </div>
           <div className=Styles.threeColumns>
-            <div className=%tw("mt-4 omnifood-sm:mt-0 col-span-1")>
+            <div
+              className={Tailwind.merge(.[
+                Tailwind.twStyle([
+                  Tailwind.mt(#v4),
+                  Tailwind.col(#span1),
+                  Styles.omnifoodSm([Tailwind.mt(#v0)]),
+                ]),
+              ])}>
               <label
-                className=%tw("omnifood-sm:flex omnifood-sm:h-full  omnifood-sm:items-center")
+                className={Tailwind.merge(.[
+                  Tailwind.twStyle([
+                    Styles.omnifoodSm([Tailwind.flex, Tailwind.h(#full), Tailwind.itemsCenter]),
+                  ]),
+                ])}
                 htmlFor="email">
                 {"Email"->str}
               </label>
             </div>
-            <div className=%tw("col-span-2")>
+            <div className={Tailwind.merge(.[Tailwind.twStyle([Tailwind.col(#span2)])])}>
               <input
                 type_="email"
                 name="name"
@@ -1390,14 +1450,25 @@ let default = () => {
             </div>
           </div>
           <div className=Styles.threeColumns>
-            <div className=%tw("mt-4 omnifood-sm:mt-0 col-span-1")>
+            <div
+              className={Tailwind.merge(.[
+                Tailwind.twStyle([
+                  Tailwind.mt(#v4),
+                  Tailwind.col(#span1),
+                  Styles.omnifoodSm([Tailwind.mt(#v0)]),
+                ]),
+              ])}>
               <label
-                className=%tw("omnifood-sm:flex omnifood-sm:h-full  omnifood-sm:items-center")
+                className={Tailwind.merge(.[
+                  Tailwind.twStyle([
+                    Styles.omnifoodSm([Tailwind.flex, Tailwind.h(#full), Tailwind.itemsCenter]),
+                  ]),
+                ])}
                 htmlFor="find-us">
                 {"How did you find us"->str}
               </label>
             </div>
-            <div className=%tw("col-span-2")>
+            <div className={Tailwind.merge(.[Tailwind.twStyle([Tailwind.col(#span2)])])}>
               <select name="find-us" id="find-us" className=Styles.inputStyles>
                 <option value="friends" selected=true> {"Friends"->str} </option>
                 <option value="search"> {"Search engine"->str} </option>
@@ -1407,27 +1478,49 @@ let default = () => {
             </div>
           </div>
           <div className=Styles.threeColumns>
-            <div className=%tw("col-span-1 mt-4 omnifood-sm:mt-0")>
+            <div
+              className={Tailwind.merge(.[
+                Tailwind.twStyle([
+                  Tailwind.col(#span1),
+                  Tailwind.mt(#v4),
+                  Styles.omnifoodSm([Tailwind.mt(#v0)]),
+                ]),
+              ])}>
               <label
-                className=%tw("omnifood-sm:flex omnifood-sm:h-full  omnifood-sm:items-center")
+                className={Tailwind.merge(.[
+                  Tailwind.twStyle([
+                    Styles.omnifoodSm([Tailwind.flex, Tailwind.h(#full), Tailwind.itemsEnd]),
+                  ]),
+                ])}
                 htmlFor="news">
                 {"Newsletter"->str}
               </label>
             </div>
-            <div className=%tw("col-span-2")>
+            <div className={Tailwind.merge(.[Tailwind.twStyle([Tailwind.col(#span2)])])}>
               <input type_="checkbox" name="news" id="news" className=Styles.checkboxStyles />
               {"Yes, please"->str}
             </div>
           </div>
           <div className=Styles.threeColumns>
-            <div className=%tw("col-span-1 mt-4 omnifood-sm:mt-0")>
+            <div
+              className={Tailwind.merge(.[
+                Tailwind.twStyle([
+                  Tailwind.col(#span1),
+                  Tailwind.mt(#v4),
+                  Styles.omnifoodSm([Tailwind.mt(#v0)]),
+                ]),
+              ])}>
               <label
-                className=%tw("omnifood-sm:flex omnifood-sm:h-full  omnifood-sm:items-center")
+                className={Tailwind.merge(.[
+                  Tailwind.twStyle([
+                    Styles.omnifoodSm([Tailwind.flex, Tailwind.h(#full), Tailwind.itemsCenter]),
+                  ]),
+                ])}
                 htmlFor="message">
                 {"Drop us a line"->str}
               </label>
             </div>
-            <div className=%tw("col-span-2")>
+            <div className={Tailwind.merge(.[Tailwind.twStyle([Tailwind.col(#span2)])])}>
               <textarea
                 name="message"
                 id="message"
@@ -1437,9 +1530,13 @@ let default = () => {
             </div>
           </div>
           <div className=Styles.threeColumns>
-            <div className=%tw("col-span-1")> <label htmlFor=""> {nbsp->str} </label> </div>
-            <div className=%tw("col-span-2")>
-              <button type_="submit" className={CssJs.merge(.[Styles.btnFull, %tw("mt-5")])}>
+            <div className={Tailwind.merge(.[Tailwind.twStyle([Tailwind.col(#span1)])])}>
+              <label htmlFor=""> {nbsp->str} </label>
+            </div>
+            <div className={Tailwind.merge(.[Tailwind.twStyle([Tailwind.col(#span2)])])}>
+              <button
+                type_="submit"
+                className={CssJs.merge(.[Styles.btnFull, Tailwind.twStyle([Tailwind.mt(#v5)])])}>
                 {"Send it!"->str}
               </button>
             </div>
