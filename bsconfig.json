@@ -45,7 +45,6 @@
     "bs-css-emotion",
     "bs-webapi"
   ],
-  "ppx-flags": ["tailwind-ppx" ],
   "refmt": 3,
   "warnings": {
     "number": "+A-42-48",
