@@ -16,37 +16,21 @@ type t = [
   | #prose
 ]
 
-let none = #none
-let _0 = #rem(0.)
-let xs = #rem(20.)
-let sm = #rem(24.)
-let md = #rem(28.)
-let lg = #rem(32.)
-let xl = #rem(36.)
-let _2xl = #rem(42.)
-let _3xl = #rem(48.)
-let _4xl = #rem(56.)
-let _5xl = #rem(64.)
-let _6xl = #rem(72.)
-let _7xl = #rem(80.)
-let full = #percent(100.)
-let prose = #ch(65.)
-
 let toValue = width =>
   switch width {
-  | #none => none
-  | #zero => _0
-  | #xs => xs
-  | #sm => sm
-  | #md => md
-  | #lg => lg
-  | #xl => xl
-  | #xl2 => _2xl
-  | #xl3 => _3xl
-  | #xl4 => _4xl
-  | #xl5 => _5xl
-  | #xl6 => _6xl
-  | #xl7 => _7xl
-  | #full => full
-  | #prose => prose
+  | #none => #none
+  | #zero => #rem(0.)
+  | #xs => #rem(20.)
+  | #sm => #rem(24.)
+  | #md => #rem(28.)
+  | #lg => #rem(32.)
+  | #xl => #rem(36.)
+  | #xl2 => #rem(42.)
+  | #xl3 => #rem(48.)
+  | #xl4 => #rem(56.)
+  | #xl5 => #rem(64.)
+  | #xl6 => #rem(72.)
+  | #xl7 => #rem(80.)
+  | #full => #percent(100.)
+  | #prose => #ch(65.)
   }

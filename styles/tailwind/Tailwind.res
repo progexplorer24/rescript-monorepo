@@ -5,42 +5,46 @@ open CssJs
 
 let transitionNone = [transitionProperty("none")]
 let transitionAll = [
-  transition("all", ~duration=Theme.Duration._150, ~timingFunction=Theme.TimingFunction.easeInOut),
+  transition(
+    "all",
+    ~duration=Theme.Duration.toValue(#v150),
+    ~timingFunction=Theme.TimingFunction.toValue(#easeInOut),
+  ),
 ]
 let transition = [
   transition(
     "background-color, border-color, color, fill, stroke, opacity, box-shadow, transform",
-    ~duration=Theme.Duration._150,
-    ~timingFunction=Theme.TimingFunction.easeInOut,
+    ~duration=Theme.Duration.toValue(#v150),
+    ~timingFunction=Theme.TimingFunction.toValue(#easeInOut),
   ),
 ]
 let transitionColors = [
   CssJs.transition(
     "background-color, border-color, color, fill, stroke, opacity, box-shadow, transform",
-    ~duration=Theme.Duration._150,
-    ~timingFunction=Theme.TimingFunction.easeInOut,
+    ~duration=Theme.Duration.toValue(#v150),
+    ~timingFunction=Theme.TimingFunction.toValue(#easeInOut),
   ),
 ]
 let transitionOpacity = [
   CssJs.transition(
     "opacity",
-    ~duration=Theme.Duration._150,
-    ~timingFunction=Theme.TimingFunction.easeInOut,
+    ~duration=Theme.Duration.toValue(#v150),
+    ~timingFunction=Theme.TimingFunction.toValue(#easeInOut),
   ),
 ]
 let transitionShadow = [
   CssJs.transition(
     "box-shadow",
-    ~duration=Theme.Duration._150,
-    ~timingFunction=Theme.TimingFunction.easeInOut,
+    ~duration=Theme.Duration.toValue(#v150),
+    ~timingFunction=Theme.TimingFunction.toValue(#easeInOut),
   ),
 ]
 
 let transitionTransform = [
   CssJs.transition(
     "transform",
-    ~duration=Theme.Duration._150,
-    ~timingFunction=Theme.TimingFunction.easeInOut,
+    ~duration=Theme.Duration.toValue(#v150),
+    ~timingFunction=Theme.TimingFunction.toValue(#easeInOut),
   ),
 ]
 
@@ -48,10 +52,10 @@ let transitionTransform = [
 let duration = miliseconds => [transitionDuration(Theme.Duration.toValue(miliseconds))]
 
 // NOTE: Transition Timing Function - Utilities for controlling the easing of CSS transitions.
-let easeLinear = [transitionTimingFunction(Theme.TimingFunction.linear)]
-let easeIn = [transitionTimingFunction(Theme.TimingFunction.easeIn)]
-let easeOut = [transitionTimingFunction(Theme.TimingFunction.easeOut)]
-let easeInOut = [transitionTimingFunction(Theme.TimingFunction.easeInOut)]
+let easeLinear = [transitionTimingFunction(Theme.TimingFunction.toValue(#linear))]
+let easeIn = [transitionTimingFunction(Theme.TimingFunction.toValue(#easeIn))]
+let easeOut = [transitionTimingFunction(Theme.TimingFunction.toValue(#easeOut))]
+let easeInOut = [transitionTimingFunction(Theme.TimingFunction.toValue(#easeInOut))]
 
 // NOTE: Transition Delay - Utilities for controlling the delay of CSS transitions.
 let delay = miliseconds => [transitionDelay(Theme.Duration.toValue(miliseconds))]
@@ -582,28 +586,28 @@ let nml = (size: negativeMargin) => [marginLeft(Theme.SpacingNegative.toValue(si
 let spaceY = (size: spacing) => [
   selector(
     Selectors.ignoreFirstChild,
-    [marginTop(Theme.Spacing.toValue(size)), marginBottom(Theme.Spacing._0)],
+    [marginTop(Theme.Spacing.toValue(size)), marginBottom(Theme.Spacing.toValue(#v0))],
   ),
 ]
 
 let nspaceY = (size: negativeMargin) => [
   selector(
     Selectors.ignoreFirstChild,
-    [marginTop(Theme.SpacingNegative.toValue(size)), marginBottom(Theme.Spacing._0)],
+    [marginTop(Theme.SpacingNegative.toValue(size)), marginBottom(Theme.Spacing.toValue(#v0))],
   ),
 ]
 
 let spaceX = (size: spacing) => [
   selector(
     Selectors.ignoreFirstChild,
-    [marginLeft(Theme.Spacing.toValue(size)), marginRight(Theme.Spacing._0)],
+    [marginLeft(Theme.Spacing.toValue(size)), marginRight(Theme.Spacing.toValue(#v0))],
   ),
 ]
 
 let nspaceX = (size: negativeMargin) => [
   selector(
     Selectors.ignoreFirstChild,
-    [marginLeft(Theme.SpacingNegative.toValue(size)), marginRight(Theme.Spacing._0)],
+    [marginLeft(Theme.SpacingNegative.toValue(size)), marginRight(Theme.Spacing.toValue(#v0))],
   ),
 ]
 
@@ -713,17 +717,17 @@ let fontMono = [
 type fontSize = Theme.FontSize.t
 let text = size =>
   switch size {
-  | #xs => [fontSize(Theme.FontSize.toValue(size)), lineHeight(Theme.LineHeight._5)]
-  | #sm => [fontSize(Theme.FontSize.toValue(size)), lineHeight(Theme.LineHeight._5)]
-  | #base => [fontSize(Theme.FontSize.toValue(size)), lineHeight(Theme.LineHeight._6)]
-  | #lg => [fontSize(Theme.FontSize.toValue(size)), lineHeight(Theme.LineHeight._7)]
-  | #xl => [fontSize(Theme.FontSize.toValue(size)), lineHeight(Theme.LineHeight._7)]
-  | #xl2 => [fontSize(Theme.FontSize.toValue(size)), lineHeight(Theme.LineHeight._8)]
-  | #xl3 => [fontSize(Theme.FontSize.toValue(size)), lineHeight(Theme.LineHeight._9)]
-  | #xl4 => [fontSize(Theme.FontSize.toValue(size)), lineHeight(Theme.LineHeight._10)]
+  | #xs => [fontSize(Theme.FontSize.toValue(size)), lineHeight(Theme.LineHeight.toValue(#v5))]
+  | #sm => [fontSize(Theme.FontSize.toValue(size)), lineHeight(Theme.LineHeight.toValue(#v5))]
+  | #base => [fontSize(Theme.FontSize.toValue(size)), lineHeight(Theme.LineHeight.toValue(#v6))]
+  | #lg => [fontSize(Theme.FontSize.toValue(size)), lineHeight(Theme.LineHeight.toValue(#v7))]
+  | #xl => [fontSize(Theme.FontSize.toValue(size)), lineHeight(Theme.LineHeight.toValue(#v7))]
+  | #xl2 => [fontSize(Theme.FontSize.toValue(size)), lineHeight(Theme.LineHeight.toValue(#v8))]
+  | #xl3 => [fontSize(Theme.FontSize.toValue(size)), lineHeight(Theme.LineHeight.toValue(#v9))]
+  | #xl4 => [fontSize(Theme.FontSize.toValue(size)), lineHeight(Theme.LineHeight.toValue(#v10))]
   | #xl5 | #xl6 | #xl7 | #xl8 | #xl9 => [
       fontSize(Theme.FontSize.toValue(size)),
-      lineHeight(Theme.LineHeight.none),
+      lineHeight(Theme.LineHeight.toValue(#none)),
     ]
   }
 
@@ -969,7 +973,7 @@ let divideY = (width, ~reverse=false, ()) =>
         selector(
           Selectors.ignoreFirstChild,
           [
-            borderTopWidth(Theme.BorderWidth._0),
+            borderTopWidth(Theme.BorderWidth.toWidth(#v0)),
             borderBottomWidth(Theme.BorderWidth.toWidth(width)),
           ],
         ),
@@ -979,7 +983,7 @@ let divideY = (width, ~reverse=false, ()) =>
           Selectors.ignoreFirstChild,
           [
             borderTopWidth(Theme.BorderWidth.toWidth(width)),
-            borderBottomWidth(Theme.BorderWidth._0),
+            borderBottomWidth(Theme.BorderWidth.toWidth(#v0)),
           ],
         ),
       ]
@@ -991,7 +995,7 @@ let divideX = (width, ~reverse=false, ()) =>
           Selectors.ignoreFirstChild,
           [
             borderRightWidth(Theme.BorderWidth.toWidth(width)),
-            borderLeftWidth(Theme.BorderWidth._0),
+            borderLeftWidth(Theme.BorderWidth.toWidth(#v0)),
           ],
         ),
       ]
@@ -1000,7 +1004,7 @@ let divideX = (width, ~reverse=false, ()) =>
           Selectors.ignoreFirstChild,
           [
             borderLeftWidth(Theme.BorderWidth.toWidth(width)),
-            borderRightWidth(Theme.BorderWidth._0),
+            borderRightWidth(Theme.BorderWidth.toWidth(#v0)),
           ],
         ),
       ]
@@ -1028,12 +1032,12 @@ let ringOffsetShadow = (~inset, ~offsetWidth, offsetColor) =>
 let ringShadow = (~inset, ~spread, color) =>
   CssJs.Shadow.box(~inset, ~x=#px(0), ~y=#px(0), ~blur=#px(0), ~spread=#px(spread), color)
 
-let whiteShadow = CssJs.Shadow.box(~x=#px(0), ~y=#px(0), Theme.Colors.white(1.))
+let whiteShadow = CssJs.Shadow.box(~x=#px(0), ~y=#px(0), Theme.Colors.toColor(#white))
 
 let ring = (
   ~inset=false,
   ~offsetWidth=0,
-  ~offsetColor=Theme.Colors.white(1.),
+  ~offsetColor=Theme.Colors.toColor(#white),
   ~width=3,
   color: CssJs.Types.Color.t,
 ) => {
@@ -1083,9 +1087,12 @@ let cursorMove = [cursor(#move)]
 let cursorNotAllowed = [cursor(#notAllowed)]
 
 // NOTE: Outline - Utilities for controlling an element's outline.
-let outlineNone = [outline(#px(2), #solid, Theme.Colors.transparent), outlineOffset(#px(2))]
-let outlineWhite = [outline(#px(2), #dotted, Theme.Colors.white(1.)), outlineOffset(#px(2))]
-let outlineBlack = [outline(#px(2), #dotted, Theme.Colors.black(1.)), outlineOffset(#px(2))]
+let outlineNone = [
+  outline(#px(2), #solid, Theme.Colors.toColor(#transparent)),
+  outlineOffset(#px(2)),
+]
+let outlineWhite = [outline(#px(2), #dotted, Theme.Colors.toColor(#white)), outlineOffset(#px(2))]
+let outlineBlack = [outline(#px(2), #dotted, Theme.Colors.toColor(#black)), outlineOffset(#px(2))]
 
 // NOTE: Pointer Events - Utilities for controlling whether an element responds to pointer events.
 let pointerEventsNone = [pointerEvents(#none)]
