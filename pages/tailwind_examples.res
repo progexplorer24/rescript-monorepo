@@ -7,7 +7,7 @@ module Styles = {
 }
 
 let default = () => {
-  <HeadConfiguration font=#PaytoneOne>
+  <HeadConfiguration font=#Montserrat(#italic100)>
     <div className=Styles.wrapper>
       <div>
         <h2 className=Styles.hover> {"Bs-TailwindCSS"->Utils.str} </h2>

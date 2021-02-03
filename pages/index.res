@@ -25,8 +25,8 @@ open Hooks
 module Styles = {
   open CssJs
 
-  let mq800 = addMinWidthBreakpoint(800)
-  let max799 = addMaxWidthBreakpoint(799)
+  let mq800 = Tailwind.minWBreakpoint(800)
+  let max799 = Tailwind.maxWBreakpoint(799)
 
   let defaultColor = rgba(85, 214, 170, #percent(85.))
 
@@ -48,9 +48,11 @@ module Styles = {
     display(#grid),
   ])
 
-  let header800 = mq800([
-    display(#grid),
-    gridTemplateColumns([#fr(1.), #auto, #minmax(#px(600), #fr(3.)), #fr(1.)]),
+  let header800 = Tailwind.twStyle([
+    mq800([
+      Tailwind.grid,
+      [gridTemplateColumns([#fr(1.), #auto, #minmax(#px(600), #fr(3.)), #fr(1.)])],
+    ]),
   ])
 
   let header = CssJs.merge(.[
@@ -65,65 +67,76 @@ module Styles = {
     header800,
   ])
 
-  let logo800 = mq800([gridColumn(2, 3)])
+  let logo800 = Tailwind.twStyle([mq800([[gridColumn(2, 3)]])])
 
   let logo = CssJs.merge(.[logo800])
 
-  let nav800 = mq800([
-    position(#relative),
-    gridColumn(3, 4),
-    display(#flex),
-    justifyContent(#flexEnd),
-    alignItems(#center),
+  let nav800 = Tailwind.twStyle([
+    mq800([
+      [
+        position(#relative),
+        gridColumn(3, 4),
+        display(#flex),
+        justifyContent(#flexEnd),
+        alignItems(#center),
+      ],
+    ]),
   ])
 
-  let max799Nav = max799([
-    position(#absolute),
-    textAlign(#left),
-    top(#percent(100.)),
-    left(#px(0)),
-    backgroundColor(defaultColor),
-    width(#percent(100.)),
-    transform(#scale(1., 0.)),
-    transformOrigin(px(0), px(0)),
-    // TODO: Prevent animation while resizing.
-    // INFO: https://css-tricks.com/stop-animations-during-window-resizing/
-    transition("transform", ~duration=400, ~timingFunction=#easeInOut),
+  let max799Nav = Tailwind.twStyle([
+    max799([
+      [
+        position(#absolute),
+        textAlign(#left),
+        top(#percent(100.)),
+        left(#px(0)),
+        backgroundColor(defaultColor),
+        width(#percent(100.)),
+        transform(#scale(1., 0.)),
+        transformOrigin(px(0), px(0)),
+        // INFO: https://css-tricks.com/stop-animations-during-window-resizing/
+        transition("transform", ~duration=400, ~timingFunction=#easeInOut),
+      ],
+    ]),
   ])
 
   let nav = CssJs.merge(.[max799Nav, nav800])
 
-  let navUl800 = mq800([display(#flex), justifyContent(#flexEnd)])
+  let navUl800 = Tailwind.twStyle([mq800([[display(#flex), justifyContent(#flexEnd)]])])
 
   let navUl = navUl800
 
-  let navLi800 = mq800([marginBottom(#rem(0.)), marginLeft(#rem(3.))])
+  let navLi800 = Tailwind.twStyle([mq800([[marginBottom(#rem(0.)), marginLeft(#rem(3.))]])])
 
   let navLi = CssJs.merge(.[style(.[marginBottom(#rem(1.)), marginLeft(#rem(1.))]), navLi800])
 
   let navAHover = style(.[hover([color(#hex("000"))])])
 
-  let navA800 = mq800([
-    opacity(1.),
-    position(#relative),
-    before([
-      contentRule(#text("")),
-      height(#px(5)),
-      backgroundColor(#hex("000")),
-      display(#block),
-      position(#absolute),
-      // NOTE: If you want animation to start at the bottom
-      // bottom(#rem(-0.5)),
-      top(#rem(-0.5)),
-      left(#px(0)),
-      right(#px(0)),
-      transform(#scale(0., 1.)),
-      // NOTE: If you want animation to start from left for example
-      // transformOrigin(#px(0), #px(0)),
-      //  transformOrigin(#px(0), #percent(100.)),
-      transition("transform", ~timingFunction=#easeInOut, ~duration=250),
+  let navA800 = Tailwind.twStyle([
+    mq800([
+      [
+        opacity(1.),
+        position(#relative),
+        before([
+          contentRule(#text("")),
+          height(#px(5)),
+          backgroundColor(#hex("000")),
+          display(#block),
+          position(#absolute),
+          // NOTE: If you want animation to start at the bottom
+          // bottom(#rem(-0.5)),
+          top(#rem(-0.5)),
+          left(#px(0)),
+          right(#px(0)),
+          transform(#scale(0., 1.)),
+          // NOTE: If you want animation to start from left for example
+          // transformOrigin(#px(0), #px(0)),
+          //  transformOrigin(#px(0), #percent(100.)),
+          transition("transform", ~timingFunction=#easeInOut, ~duration=250),
+        ]),
+        hover([before([transform(#scale(1., 1.))])]),
+      ],
     ]),
-    hover([before([transform(#scale(1., 1.))])]),
   ])
 
   let navA = CssJs.merge(.[
@@ -152,7 +165,7 @@ module Styles = {
 
   let navToggle = CssJs.merge(.[style(.[display(#none)]), toggleNav])
 
-  let toggleLabel800 = mq800([display(#none)])
+  let toggleLabel800 = Tailwind.twStyle([mq800([[display(#none)]])])
 
   let toggleLabel = CssJs.merge(.[
     style(.[

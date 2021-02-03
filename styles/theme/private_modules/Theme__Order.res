@@ -16,37 +16,21 @@ type t = [
   | #last
 ]
 
-let none = 0
-let _1 = 1
-let _2 = 2
-let _3 = 3
-let _4 = 4
-let _5 = 5
-let _6 = 6
-let _7 = 7
-let _8 = 8
-let _9 = 9
-let _10 = 10
-let _11 = 11
-let _12 = 12
-let first = 9999
-let last = -9999
-
 let toValue = order =>
   switch order {
-  | #none => none
-  | #first => first
-  | #last => last
-  | #v1 => _1
-  | #v2 => _2
-  | #v3 => _3
-  | #v4 => _4
-  | #v5 => _5
-  | #v6 => _6
-  | #v7 => _7
-  | #v8 => _8
-  | #v9 => _9
-  | #v10 => _10
-  | #v11 => _11
-  | #v12 => _12
+  | #none => 0
+  | #first => 9999
+  | #last => -9999
+  | #v1 => 1
+  | #v2 => 2
+  | #v3 => 3
+  | #v4 => 4
+  | #v5 => 5
+  | #v6 => 6
+  | #v7 => 7
+  | #v8 => 8
+  | #v9 => 9
+  | #v10 => 10
+  | #v11 => 11
+  | #v12 => 12
   }
