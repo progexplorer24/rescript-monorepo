@@ -1,10 +1,261 @@
+type normalWeights = [#v100 | #v200 | #v300 | #v400 | #v500 | #v600 | #v700 | #v800 | #v900]
+
+type italicWeights = [
+  | #italic100
+  | #italic200
+  | #italic300
+  | #italic400
+  | #italic500
+  | #italic600
+  | #italic700
+  | #italic800
+  | #italic900
+]
+type weightType<'a> = [<
+  | #v100
+  | #v200
+  | #v300
+  | #v400
+  | #v500
+  | #v600
+  | #v700
+  | #v800
+  | #v900
+  | #italic100
+  | #italic200
+  | #italic300
+  | #italic400
+  | #italic500
+  | #italic600
+  | #italic700
+  | #italic800
+  | #italic900
+] as 'a
+
+let toWeightValue = (weight: weightType<'a>) =>
+  switch weight {
+  | #v100 => 100
+  | #v200 => 200
+  | #v300 => 300
+  | #v400 => 400
+  | #v500 => 500
+  | #v600 => 600
+  | #v700 => 700
+  | #v800 => 800
+  | #v900 => 900
+  | #italic100 => 100
+  | #italic200 => 200
+  | #italic300 => 300
+  | #italic400 => 400
+  | #italic500 => 500
+  | #italic600 => 600
+  | #italic700 => 700
+  | #italic800 => 800
+  | #italic900 => 900
+  }
+
+type weights18 = [normalWeights | italicWeights]
+type normal8 = [#v100 | #v200 | #v300 | #v400 | #v600 | #v700 | #v800 | #v900]
+
+type italic8 = [
+  | #italic100
+  | #italic200
+  | #italic300
+  | #italic400
+  | #italic600
+  | #italic700
+  | #italic800
+  | #italic900
+]
+
+type weights16 = [normal8 | italic8]
+
+// NOTE: 30 fonts
+type styles18 = [
+  | #Montserrat(weights18)
+  | #Poppins(weights18)
+  | #Raleway(weights18)
+  | #WorkSans(weights18)
+  | #FiraSans(weights18)
+  | #Barlow(weights18)
+  | #LibreFranklin(weights18)
+  | #Bitter(weights18)
+  | #BarlowCondensed(weights18)
+  | #Exo2(weights18)
+  | #Kanit(weights18)
+  | #Prompt(weights18)
+  | #FiraSansCondensed(weights18)
+  | #Exo(weights18)
+  | #BarlowSemiCondensed(weights18)
+  | #MontserratAlternates(weights18)
+  | #FiraSansExtraCondensed(weights18)
+  | #PublicSans(weights18)
+  | #Saira(weights18)
+  | #Jost(weights18)
+  | #Taviraj(weights18)
+  | #Texturina(weights18)
+  | #Fraunces(weights18)
+  | #Piazolla(weights18)
+  | #Trirong(weights18)
+  | #Grandstander(weights18)
+  | #Epilogue(weights18)
+  | #Petrona(weights18)
+  | #Tomorrow(weights18)
+  | #Grenze(weights18)
+]
+// | #Overpass(weights16)
+// | #Mulish(weights16)
+
+// type styles16 = [#Overpass(weights16) | #Mulish(weights16)]
+
+// type fontType = [styles18 | styles16]
+
+type fontRecord = {
+  fontName: string,
+  weight: weightType<weights18>,
+}
+
+let toFontValue = (font: styles18) =>
+  switch font {
+  | #Montserrat(weight) => {
+      fontName: "Montserrat",
+      weight: weight,
+    }
+  | #Poppins(weight) => {
+      fontName: "Poppins",
+      weight: weight,
+    }
+  | #Raleway(weight) => {
+      fontName: "Raleway",
+      weight: weight,
+    }
+  | #WorkSans(weight) => {
+      fontName: "Work Sans",
+      weight: weight,
+    }
+  | #FiraSans(weight) => {
+      fontName: "Fira Sans",
+      weight: weight,
+    }
+  | #Barlow(weight) => {
+      fontName: "Barlow",
+      weight: weight,
+    }
+  | #LibreFranklin(weight) => {
+      fontName: "Libre Franklin",
+      weight: weight,
+    }
+  | #Bitter(weight) => {
+      fontName: "Bitter",
+      weight: weight,
+    }
+  | #Fraunces(weight) => {
+      fontName: "Fraunces",
+      weight: weight,
+    }
+  | #BarlowCondensed(weight) => {
+      fontName: "Barlow Condensed",
+      weight: weight,
+    }
+  | #Exo2(weight) => {
+      fontName: "Exo 2",
+      weight: weight,
+    }
+  | #Kanit(weight) => {
+      fontName: "Kanit",
+      weight: weight,
+    }
+  | #Prompt(weight) => {
+      fontName: "Prompt",
+      weight: weight,
+    }
+  | #FiraSansCondensed(weight) => {
+      fontName: "Fira Sans Condensed",
+      weight: weight,
+    }
+  | #Exo(weight) => {
+      fontName: "Exo",
+      weight: weight,
+    }
+  | #BarlowSemiCondensed(weight) => {
+      fontName: "Barlow Semi Condensed",
+      weight: weight,
+    }
+  | #MontserratAlternates(weight) => {
+      fontName: "Montserrat Alternates",
+      weight: weight,
+    }
+  | #FiraSansExtraCondensed(weight) => {
+      fontName: "Fira Sans Extra Condensed",
+      weight: weight,
+    }
+  | #PublicSans(weight) => {
+      fontName: "Public Sans",
+      weight: weight,
+    }
+  | #Taviraj(weight) => {
+      fontName: "Taviraj",
+      weight: weight,
+    }
+  | #Saira(weight) => {
+      fontName: "Saira",
+      weight: weight,
+    }
+
+  | #Texturina(weight) => {
+      fontName: "Texturina",
+      weight: weight,
+    }
+  | #Jost(weight) => {
+      fontName: "Jost",
+      weight: weight,
+    }
+  | #Piazolla(weight) => {
+      fontName: "Piazzolla",
+      weight: weight,
+    }
+  | #Trirong(weight) => {
+      fontName: "Trirong",
+      weight: weight,
+    }
+  | #Grandstander(weight) => {
+      fontName: "Grandstander",
+      weight: weight,
+    }
+  | #Epilogue(weight) => {
+      fontName: "Epilogue",
+      weight: weight,
+    }
+  | #Petrona(weight) => {
+      fontName: "Petrona",
+      weight: weight,
+    }
+  | #Tomorrow(weight) => {
+      fontName: "Tomorrow",
+      weight: weight,
+    }
+  | #Grenze(weight) => {
+      fontName: "Grenze",
+      weight: weight,
+    }
+
+  // | #Overpass(weight) fontRecord<weights16> => {
+  //     fontName: "Overpass",
+  //     weight: wg,
+  //   }
+  // | #Mulish(weight) => {
+  //     fontName: "Mulish",
+  //     weight: weight,
+  //   }
+  }
+
 type t = [
   | #Roboto
   | #PottaOne
   | #YuseiMagic
   | #OpenSans
   | #HachiMaruPop
-  | #NotoSanaJP
+  | #NotoSansJP
   | #Lato
   | #Montserrat
   | #Fraunces
@@ -245,243 +496,243 @@ type t = [
   | #Gudea
   | #Jaldi
   | #Saira
+  | #Merienda
+  | #GothicA1
+  | #SigmarOne
+  | #CabinCondensed
+  | #HomemadeApple
+  | #Khand
+  | #Unna
+  | #Mitr
+  | #GentiumBasic
+  | #BenchNine
+  | #Amaranth
+  | #PontanoSans
+  | #SpaceMono
+  | #Actor
+  | #Armata
+  | #Viga
+  | #PTMono
+  | #Aleo
+  | #Palanquin
+  | #Tangerine
+  | #JuliusSansOne
+  | #SuezOne
+  | #Lusitana
+  | #YesevaOne
+  | #GentiumBookBasic
+  | #RockSalt
+  | #MarckScript
+  | #Knewave
+  | #Allura
+  | #Playball
+  | #BadScript
+  | #Allan
+  | #SawarabiGothic
+  | #Audiowide
+  | #Marcellus
+  | #FugazOne
+  | #Gruppo
+  | #GochiHand
+  | #TenorSans
+  | #NerkoOne
+  | #Alef
+  | #NanumPenScript
+  | #SairaSemiCondensed
+  | #MarkaziText
+  | #Pangolin
+  | #Gelasio
+  | #Castoro
+  | #NothingYouCouldDo
+  | #Varela
+  | #ShadowsIntoLightTwo
+  | #NotoSerifSC
+  | #Eczar
+  | #AlexBrush
+  | #Mali
+  | #Electrolize
+  | #SignikaNegative
+  | #Itim
+  | #AbhayaLibre
+  | #NanumGothicCoding
+  | #Rufina
+  | #EncodeSansCondensed
+  | #Bungee
+  | #SortsMillGoudy
+  | #CantataOne
+  | #Aclonica
+  | #Engagement
+  | #MrDafoe
+  | #Damion
+  | #Antic
+  | #Sarala
+  | #Arsenal
+  | #BowlbyOneSC
+  | #BigShouldersStencilText
+  | #BigShouldersStencilDisplay
+  | #BigShouldersStencilDisplay
+  | #BigShouldersInlineText
+  | #BigShouldersInlineDisplay
+  | #BlackOpsOne
+  | #OleoScript
+  | #LilitaOne
+  | #PinyonScript
+  | #Sintony
+  | #BalooChettan2
+  | #CoveredByYourGrace
+  | #Krub
+  | #Glegoo
+  | #Cousine
+  | #Cousine
+  | #FiraMono
+  | #Lateef
+  | #Lalezar
+  | #LibreBarcodeEAN13Text
+  | #Jomhuria
+  | #Overlock
+  | #Boogaloo
+  | #CutiveMono
+  | #SairaExtraCondensed
+  | #Alata
+  | #Average
+  | #Sofia
+  | #Rancho
+  | #Caudex
+  | #ReemKufi
+  | #PTSerifCaption
+  | #Pridi
+  | #RubikMonoOne
+  | #Kreon
+  | #KosugiMaru
+  | #Enriqueta
+  | #NotoSerifKR
+  | #Coda
+  | #Chewy
+  | #CourierPrime
+  | #DoHyeon
+  | #Allerta
+  | #SpaceGrotesk
+  | #Yrsa
+  | #AlegreyaSansSC
+  | #Schoolbell
+  | #Laila
+  | #AnonymousPro
+  | #Syncopate
+  | #Scheherazade
+  | #FrederickatheGreat
+  | #Capriola
+  | #MiriamLibre
+  | #Niconne
+  | #ShareTechMono
+  | #Michroma
+  | #AveriaSerifLibre
+  | #MartelSans
+  | #Piazzolla
+  | #OverpassMono
+  | #Candal
+  | #CaveatBrush
+  | #Kameron
+  | #Basic
+  | #Aldrich
+  | #LibreBarcode128
+  | #ArbutusSlab
+  | #Trispace
+  | #Italianno
+  | #NixieOne
+  | #BlackHanSans
+  | #Bevan
+  | #Mallanna
+  | #ReenieBeanie
+  | #LexendDeca
+  | #Sansita
+  | #BerkshireSwash
+  | #Molengo
+  | #CabinSketch
+  | #Kadwa
+  | #AnnieUseYourTelescope
+  | #RedHatText
+  | #Bentham
+  | #Mada
+  | #MuktaVaani
+  | #Norican
+  | #Forum
+  | #SixCaps
+  | #JustAnotherHand
+  | #MuktaMalar
+  | #DaysOne
+  | #Rambla
+  | #ArimaMandurai
+  | #Charm
+  | #VT323
+  | #Scada
+  | #LeckerliOne
+  | #Nobile
+  | #Spinnaker
+  | #Shrikhand
+  | #TitanOne
+  | #Telex
+  | #ComingSoon
+  | #HoltwoodOneSC
+  | #MarcellusSC
+  | #BubblegumSans
+  | #Trirong
+  | #Suranna
+  | #CinzelDecorative
+  | #BungeeInline
+  | #AllertaSencil
+  | #ContrailOne
+  | #Graduate
+  | #RhodiumLibre
+  | #RacingSansOne
+  | #Yesteryear
+  | #Share
+  | #Thasadith
+  | #Judson
+  | #AlegreyaSC
+  | #Rochester
+  | #HerrVonMullerhoff
+  | #ChangaOne
+  | #Oranienbaum
+  | #PalanquinDark
+  | #Arizonia
+  | #Wallpoet
+  | #IMFellDoublePica
+  | #Rye
+  | #Literata
+  | #Singlet
+  | #Biryani
+  | #Creepster
+  | #Amiko
+  | #Voltaire
+  | #Delius
+  | #FaunaOne
+  | #Homenaje
+  | #MrsSaintDelafield
+  | #Sen
+  | #Corben
+  | #Lustria
+  | #Copse
+  | #SansitaSwashed
+  | #Amita
+  | #CarroisGothic
+  | #Kristi
+  | #Pattaya
+  | #Kurale
+  | #Andada
+  | #Magra
+  | #MeriendaOne
+  | #GrandHotel
+  | #AverageSans
+  | #Halant
+  | #Marmelad
+  | #OxygenMono
+  | #Trocchi
+  | #IBMPlexSansCondensed
 ]
 
-// | #Merienda
-// | #GothicA1
-// | #SigmarOne
-// | #CabinCondensed
-// | #HomemadeApple
-// | #Khand
-// | #Unna
-// | #Mitr
-// | #GentiumBasic
-// | #BenchNine
-// | #Amaranth
-// | #PontanoSans
-// | #SpaceMono
-// | #Actor
-// | #Armata
-// | #Viga
-// | #PTMono
-// | #Aleo
-// | #Palanquin
-// | #Tangerine
-// | #JuliusSansOne
-// | #SuezOne
-// | #Lusitana
-// | #YesevaOne
-// | #GentiumBookBasic
-// | #RockSalt
-// | #MarckScript
-// | #Knewave
-// | #Allura
-// | #Playball
-// | #BadScript
-// | #Allan
-// | #SawarabiGothic
-// | #Audiowide
-// | #Marcellus
-// | #FugazOne
-// | #Gruppo
-// | #GochiHand
-// | #TenorSans
-// | #NerkoOne
-// | #Alef
-// | #NanumPenScript
-// | #SairaSemiCondensed
-// | #MarkaziText
-// | #Pangolin
-// | #Gelasio
-// | #Castoro
-// | #NothingYouCouldDo
-// | #Varela
-// | #ShadowsIntoLightTwo
-// | #NotoSerifSC
-// | #Eczar
-// | #AlexBrush
-// | #Mali
-// | #Electrolize
-// | #SignikaNegative
-// | #Itim
-// | #AbhayaLibre
-// | #NanumGothicCoding
-// | #Rufina
-// | #EncodeSansCondensed
-// | #Bungee
-// | #SortsMillGoudy
-// | #CantataOne
-// | #Aclonica
-// | #Engagement
-// | #MrDafoe
-// | #Damion
-// | #Antic
-// | #Sarala
-// | #Arsenal
 // TODO: Rest
 
-// | #BowlbyOneSC
-// | #BigShouldersStencilText
-// | #BigShouldersStencilDisplay
-// | #BigShouldersStencilDisplay
-// | #BigShouldersInlineText
-// | #BigShouldersInlineDisplay
-// | #BlackOpsOne
-// | #OleoScript
-// | #LilitaOne
-// | #PinyonScript
-// | #Sintony
-// | #BalooChettan2
-// | #CoveredByYourGrace
-// | #Krub
-// | #Glegoo
-// | #Cousine
-// | #Cousine
-// | #FiraMono
-// | #Lateef
-// | #Lalezar
-// | #LibreBarcodeEAN13Text
-// | #Jomhuria
-// | #Overlock
-// | #Boogaloo
-// | #CutiveMono
-// | #SairaExtraCondensed
-// | #Alata
-// | #Average
-// | #Sofia
-// | #Rancho
-// | #Caudex
-// | #ReemKufi
-// | #PTSerifCaption
-// | #Pridi
-// | #RubikMonoOne
-// | #Kreon
-// | #KosufiMaru
-// | #Enriqueta
-// | #NotoSerifKR
-// | #Coda
-// | #Chewy
-// | #CourierPrime
-// | #DoHyeon
-// | #Allerta
-// | #SpaceGrotesk
-// | #Yrsa
-// | #AlegreyaSansSC
-// | #Schoolbell
-// | #Laila
-// | #AnonymousPro
-// | #Syncopate
-// | #Scheherazade
-// | #FrederickatheGreat
-// | #Capriola
-// | #MiriamLibre
-// | #Niconne
-// | #ShareTechMono
-// | #Michroma
-// | #AveriaSerifLibre
-// | #MartelSans
-// | #Piazzolla
-// | #OverpassMono
-// | #Candal
-// | #CaveatBrush
-// | #Kameron
-// | #Basic
-// | #Aldrich
-// | #LibreBarcode128
-// | #ArbutusSlab
-// | #Trispace
-// | #Italianno
-// | #NixieOne
-// | #BlackHanSans
-// | #Bevan
-// | #Mallanna
-// | #ReenieBeanie
-// | #LexendDeca
-// | #Sansita
-// | #BerkshireSwash
-// | #Molengo
-// | #CabinSketch
-// | #Kadwa
-// | #AnnieUseYourTelescope
-// | #RedHatText
-// | #Bentham
-// | #Mada
-// | #MuktaVaani
-// | #Norican
-// | #Forum
-// | #SixCaps
-// | #JustAnotherHand
-// | #MuktaMalar
-// | #DaysOne
-// | #Rambla
-// | #ArimaMandurai
-// | #Charm
-// | #VT323
-// | #Scada
-// | #LeckerliOne
-// | #Nobile
-// | #Spinnaker
-// | #Shrikhand
-// | #TitanOne
-// | #Telex
-// | #ComingSoon
-// | #HoltwoodOneSC
-// | #MarcellusSC
-// | #BubblegumSans
-// | #Triong
-// | #Trirong
-// | #Suranna
-// | #CinzelDecorative
-// | #BungeeInline
-// | #AllertaSencil
-// | #ContrailOne
-// | #Graduate
-// | #RhodiumLibre
-// | #RacingSansOne
-// | #Yesteryear
-// | #Share
-// | #Thasadith
-// | #Judson
-// | #AlegreyaSC
-// | #Rochester
-// | #HerrVonMullerhoff
-// | #ChangaOne
-// | #Oranienbaum
-// | #PalanquinDark
-// | #Arizonia
-// | #Wallpoet
-// | #IMFellDoublePica
-// | #Rye
-// | #Literata
-// | #Singlet
-// | #Biryani
-// | #Creepster
-// | #Amiko
-// | #Voltaire
-// | #Delius
-// | #FaunaOne
-// | #Homenaje
-// | #MrsSaintDelafield
-// | #Sen
-// | #Corben
-// | #Lustria
-// | #Copse
-// | #SansitaSwashed
-// | #Amita
-// | #CarroisGothic
-// | #Kristi
-// | #Pattaya
-// | #Kurale
-// | #Andada
-// | #Magra
-// | #MeriendaOne
-// | #GrandHotel
-// | #AverageSans
-// | #Halant
-// | #Marmelad
-// | #OxygenMono
-// | #Trocchi
-// | #IBMPlexSansCondensed
+// TODO: Part 1
 // | #Ovo
 // | #PetitFormalScript
 // | #SeaweedScript
@@ -528,6 +779,8 @@ type t = [
 // | #K2D
 // | #Lekton
 // | #TenaliRamakrishna
+
+// TODO: Part 2
 // | #Marvel
 // | #JockeyOne
 // | #Petrona
@@ -557,6 +810,8 @@ type t = [
 // | #TurretRoad
 // | #StardosStencil
 // | #Inder
+
+// TODO: Part 3
 // | #Gabriela
 // | #SedgwickAve
 // | #IMFellEnglish
@@ -580,6 +835,8 @@ type t = [
 // | #ChelseaMarket
 // | #RammettoOne
 // | #Manjari
+
+// TODO: Part 4
 // | #ShortStack
 // | #Mandali
 // | #Belgrano
@@ -604,6 +861,8 @@ type t = [
 // | #Limelight
 // | #BioRhyme
 // | #Quando
+
+// TODO: Part 5
 // | #Qwigley
 // | #McLaren
 // | #Goldman
@@ -634,6 +893,8 @@ type t = [
 // | #ClickerScript
 // | #Andika
 // | #FiraCode
+
+// TODO: Part 6
 // | #BeVietnam
 // | #MaShanZheng
 // | #LexendMega
@@ -649,6 +910,8 @@ type t = [
 // | #ArefRuqaa
 // | #NTR
 // | #FasterOne
+
+// TODO: Part 7
 // | #Meddon
 // | #MeeraInimai
 // | #Iceland
@@ -676,6 +939,8 @@ type t = [
 // | #WendyOne
 // | #CarroisGothicSC
 // | #Ledger
+
+// TODO: Part 8
 // | #ShareTech
 // | #OverTheRainbow
 // | #Ranchers
@@ -711,6 +976,8 @@ type t = [
 // | #Peralta
 // | #PollerOne
 // | #DMMono
+
+// TODO: Part 9
 // | #MuseoModerno
 // | #Puritan
 // | #Notable
@@ -745,6 +1012,8 @@ type t = [
 // | #JustMeAgainDownHere
 // | #Milonga
 // | #Bilbo
+
+// TODO: Part 10
 // | #MacondoSwashCaps
 // | #Dynalight
 // | #Ribeye
@@ -775,6 +1044,8 @@ type t = [
 // | #BalooBhaina2
 // | #Almendra
 // | #HennyPenny
+
+// TODO: Part 11
 // | #Farro
 // | #WireOne
 // | #Habibi
@@ -799,6 +1070,8 @@ type t = [
 // | #LibreBarcode39ExtendedText
 // | #Angkor
 // | #Bayon
+
+// TODO: Part 12
 // | #IMFellFrenchCanon
 // | #Quintessential
 // | #Fenix
@@ -828,6 +1101,8 @@ type t = [
 // | #BalooBhai2
 // | #UncialAntiqua
 // | #SairaStencilOne
+
+// TODO: Part 13
 // | #Asar
 // | #Sancreek
 // | #InriaSerif
@@ -859,6 +1134,8 @@ type t = [
 // | #Bellota
 // | #BigelowRules
 // | #Dorsa
+
+// TODO: Part 14
 // | #LondrinaOutline
 // | #IbarraRealNova
 // | #RumRaisin
@@ -888,6 +1165,8 @@ type t = [
 // | #LibreCaslonDisplay
 // | #ModernAntiqua
 // | #Jomolhari
+
+// TODO: Part 15
 // | #MaidenOrange
 // | #ChelaOne
 // | #MissFajardose
@@ -918,6 +1197,8 @@ type t = [
 // | #Romanesco
 // | #InriaSans
 // | #OldenBurg
+
+// TODO: Part 16
 // | #RibeyeMarrow
 // | #Asset
 // | #Kavivanar
@@ -946,6 +1227,8 @@ type t = [
 // | #Bahiana
 // | #MrsSheppards
 // | #Galdeano
+
+// TODO: Part 17
 // | #Plaster
 // | #KeaniaOne
 // | #Gupter
@@ -969,6 +1252,8 @@ type t = [
 // | #PurplePurse
 // | #SedgwickAveDisplay
 // | #SnowburstOne
+
+// TODO: Part 18
 // | #JacquesFrancois
 // | #NovaSlim
 // | #IrishGrover
@@ -1002,6 +1287,8 @@ type t = [
 // | #Astloch
 // | #NovaOval
 // | #NovaCut
+
+// TODO: Part 19
 // | #GeostarFill
 // | #MiltonianTattoo
 // | #Langar
@@ -1029,7 +1316,7 @@ let tovalue = fontName =>
   | #YuseiMagic => "Yusei Magic"
   | #OpenSans => "Open Sans"
   | #HachiMaruPop => "Hachi Maru Pop"
-  | #NotoSanaJP => "Noto Sans JP"
+  | #NotoSansJP => "Noto Sans JP"
   | #Lato => "Lato"
   | #Montserrat => "Montserrat"
   | #Fraunces => "Fraunces"
@@ -1271,4 +1558,245 @@ let tovalue = fontName =>
   | #Gudea => "Gudea"
   | #Jaldi => "Jaldi"
   | #Saira => "Saira"
+
+  | #Merienda => "Merienda"
+  | #GothicA1 => "Gothic A1"
+  | #SigmarOne => "Sigmar One"
+  | #CabinCondensed => "Cabin Condensed"
+  | #HomemadeApple => "Homemade Apple"
+  | #Khand => "Khand"
+  | #Unna => "Unna"
+  | #Mitr => "Mitr"
+  | #GentiumBasic => "Gentium Basic"
+  | #BenchNine => "BenchNine"
+  | #Amaranth => "Amaranth"
+  | #PontanoSans => "Pontano Sans"
+  | #SpaceMono => "Space Mono"
+  | #Actor => "Actor"
+  | #Armata => "Armata"
+  | #Viga => "Viga"
+  | #PTMono => "PTMono"
+  | #Aleo => "Aleo"
+  | #Palanquin => "Palanquin"
+  | #Tangerine => "Tangerine"
+  | #JuliusSansOne => "Julius Sans One"
+  | #SuezOne => "Suez One"
+  | #Lusitana => "Lusitana"
+  | #YesevaOne => "Yeseva One"
+  | #GentiumBookBasic => "Gentium Book Basic"
+  | #RockSalt => "Rock Salt"
+  | #MarckScript => "Marck Script"
+  | #Knewave => "Knewave"
+  | #Allura => "Allura"
+  | #Playball => "Playball"
+  | #BadScript => "Bad Script"
+  | #Allan => "Allan"
+
+  | #SawarabiGothic => "Sawarabi Gothic"
+  | #Audiowide => "Audiowide"
+  | #Marcellus => "Marcellus"
+  | #FugazOne => "Fugaz One"
+  | #Gruppo => "Gruppo"
+  | #GochiHand => "Gochi Hand"
+  | #TenorSans => "Tenor Sans"
+  | #NerkoOne => "Nerko One"
+  | #Alef => "Alef"
+  | #NanumPenScript => "Nanum Pen Script"
+  | #SairaSemiCondensed => "Saira Semi Condensed"
+  | #MarkaziText => "Markazi Text"
+  | #Pangolin => "Pangolin"
+  | #Gelasio => "Gelasio"
+  | #Castoro => "Castoro"
+  | #NothingYouCouldDo => "Nothing You Could Do"
+  | #Varela => "Varela"
+  | #ShadowsIntoLightTwo => "Shadows Into Light Two"
+  | #NotoSerifSC => "Noto Serif SC"
+  | #Eczar => "Eczar"
+  | #AlexBrush => "AlexBrush"
+  | #Mali => "Mali"
+  | #Electrolize => "Electrolize"
+  | #SignikaNegative => "Signika Negative"
+  | #Itim => "Itim"
+  | #AbhayaLibre => "Abhaya Libre"
+  | #NanumGothicCoding => "Nanum Gothic Coding"
+  | #Rufina => "Rufina"
+  | #EncodeSansCondensed => "Encode Sans Condensed"
+  | #Bungee => "Bungee"
+  | #SortsMillGoudy => "Sorts Mill Goudy"
+  | #CantataOne => "Cantata One"
+  | #Aclonica => "Aclonica"
+  | #Engagement => "Engagement"
+  | #MrDafoe => "MrDafoe"
+  | #Damion => "Damion"
+  | #Antic => "Antic"
+  | #Sarala => "Sarala"
+  | #Arsenal => "Arsenal"
+
+  | #BowlbyOneSC => "Bowlby One SC"
+  | #BigShouldersStencilText => "Big Shoulders Stencil Text"
+  | #BigShouldersStencilDisplay => "Big Shoulders Stencil Display"
+  | #BigShouldersInlineText => "Big Shoulders Inline Text"
+  | #BigShouldersInlineDisplay => "Big Shoulders Inline Display"
+  | #BlackOpsOne => "Black Ops One"
+  | #OleoScript => "Oleo Script"
+  | #LilitaOne => "Lilita One"
+  | #PinyonScript => "Pinyon Script"
+  | #Sintony => "Sintony"
+  | #BalooChettan2 => "Baloo Chettan 2"
+  | #CoveredByYourGrace => "Covered By Your Grace"
+  | #Krub => "Krub"
+  | #Glegoo => "Glegoo"
+  | #Cousine => "Cousine"
+  | #FiraMono => "Fira Mono"
+  | #Lateef => "Lateef"
+  | #Lalezar => "Lalezar"
+  | #LibreBarcodeEAN13Text => "Libre Barcode EAN13 Text"
+  | #Jomhuria => "Jomhuria"
+  | #Overlock => "Overlock"
+  | #Boogaloo => "Boogaloo"
+  | #CutiveMono => "Cutive Mono"
+  | #SairaExtraCondensed => "Saira Extra Condensed"
+
+  | #Alata => "Alata"
+  | #Average => "Average"
+  | #Sofia => "Sofia"
+  | #Rancho => "Rancho"
+  | #Caudex => "Caudex"
+  | #ReemKufi => "Reem Kufi"
+  | #PTSerifCaption => "PT Serif Caption"
+  | #Pridi => "Pridi"
+  | #RubikMonoOne => "Rubik Mono One"
+  | #Kreon => "Kreon"
+  | #KosugiMaru => "Kosugi Maru"
+  | #Enriqueta => "Enriqueta"
+  | #NotoSerifKR => "Noto Serif KR"
+  | #Coda => "Coda"
+  | #Chewy => "Chewy"
+  | #CourierPrime => "Courier Prime"
+  | #DoHyeon => "Do Hyeon"
+  | #Allerta => "Allerta"
+  | #SpaceGrotesk => "Space Grotesk"
+  | #Yrsa => "Yrsa"
+  | #AlegreyaSansSC => "Alegreya Sans SC"
+  | #Schoolbell => "Schoolbell"
+  | #Laila => "Laila"
+  | #AnonymousPro => "Anonymous Pro"
+  | #Syncopate => "Syncopate"
+  | #Scheherazade => "Scheherazade"
+  | #FrederickatheGreat => "Fredericka the Great"
+  | #Capriola => "Capriola"
+  | #MiriamLibre => "Miriam Libre"
+  | #Niconne => "Niconne"
+  | #ShareTechMono => "Share Tech Mono"
+  | #Michroma => "Michroma"
+  | #AveriaSerifLibre => "Averia Serif Libre"
+  | #MartelSans => "Martel Sans"
+  | #Piazzolla => "Piazzolla"
+  | #OverpassMono => "Overpass Mono"
+  | #Candal => "Candal"
+  | #CaveatBrush => "Caveat Brush"
+  | #Kameron => "Kameron"
+  | #Basic => "Basic"
+  | #Aldrich => "Aldrich"
+  | #LibreBarcode128 => "Libre Barcode 128"
+
+  | #ArbutusSlab => "Arbutus Slab"
+  | #Trispace => "Trispace"
+  | #Italianno => "Italianno"
+  | #NixieOne => "Nixie One"
+  | #BlackHanSans => "Black Han Sans"
+  | #Bevan => "Bevan"
+  | #Mallanna => "Mallanna"
+  | #ReenieBeanie => "Reenie Beanie"
+  | #LexendDeca => "Lexend Deca"
+  | #Sansita => "Sansita"
+  | #BerkshireSwash => "Berkshire Swash"
+  | #Molengo => "Molengo"
+  | #CabinSketch => "Cabin Sketch"
+  | #Kadwa => "Kadwa"
+  | #AnnieUseYourTelescope => "Annie Use Your Telescope"
+  | #RedHatText => "Red Hat Text"
+  | #Bentham => "Bentham"
+  | #Mada => "Mada"
+  | #MuktaVaani => "Mukta Vaani"
+  | #Norican => "Norican"
+  | #Forum => "Forum"
+  | #SixCaps => "Six Caps"
+  | #JustAnotherHand => "Just Another Hand"
+  | #MuktaMalar => "Mukta Malar"
+  | #DaysOne => "Days One"
+
+  | #Rambla => "Rambla"
+  | #ArimaMandurai => "Arima Madurai"
+  | #Charm => "Charm"
+  | #VT323 => "VT323"
+  | #Scada => "Scada"
+  | #LeckerliOne => "Leckerli One"
+  | #Nobile => "Nobile"
+  | #Spinnaker => "Spinnaker"
+  | #Shrikhand => "Shrikhand"
+  | #TitanOne => "Titan One"
+  | #Telex => "Telex"
+  | #ComingSoon => "Coming Soon"
+  | #HoltwoodOneSC => "Holtwood One SC"
+  | #MarcellusSC => "Marcellus SC"
+  | #BubblegumSans => "Bubblegum Sans"
+  | #Trirong => "Trirong"
+  | #Suranna => "Suranna"
+  | #CinzelDecorative => "Cinzel Decorative"
+  | #BungeeInline => "Bungee Inline"
+  | #AllertaSencil => "Allerta Stencil"
+  | #ContrailOne => "Contrail One"
+  | #Graduate => "Graduate"
+  | #RhodiumLibre => "Rhodium Libre"
+  | #RacingSansOne => "Racing Sans One"
+  | #Yesteryear => "Yesteryear"
+  | #Share => "Share"
+  | #Thasadith => "Thasadith"
+  | #Judson => "Judson"
+  | #AlegreyaSC => "Alegreya SC"
+  | #Rochester => "Rochester"
+  | #HerrVonMullerhoff => "Herr Von Muellerhoff"
+  | #ChangaOne => "Changa One"
+  | #Oranienbaum => "Oranienbaum"
+  | #PalanquinDark => "Palanquin Dark"
+  | #Arizonia => "Arizonia"
+  | #Wallpoet => "Wallpoet"
+  | #IMFellDoublePica => "IM Fell Double Pica"
+  | #Rye => "Rye"
+
+  | #Literata => "Literata"
+  | #Singlet => "Singlet"
+  | #Biryani => "Biryani"
+  | #Creepster => "Creepster"
+  | #Amiko => "Amiko"
+  | #Voltaire => "Voltaire"
+  | #Delius => "Delius"
+  | #FaunaOne => "Fauna One"
+  | #Homenaje => "Homenaje"
+  | #MrsSaintDelafield => "Mrs Saint Delafield"
+  | #Sen => "Sen"
+  | #Corben => "Corben"
+  | #Lustria => "Lustria"
+  | #Copse => "Copse"
+  | #SansitaSwashed => "Sansita Swashed"
+  | #Amita => "Amita"
+  | #CarroisGothic => "Carrois Gothic"
+  | #Kristi => "Kristi"
+  | #Pattaya => "Pattaya"
+  | #Kurale => "Kurale"
+  | #Andada => "Andada"
+  | #Magra => "Magra"
+  | #MeriendaOne => "Merienda One"
+  | #GrandHotel => "Grand Hotel"
+  | #AverageSans => "Average Sans"
+  | #Halant => "Halant"
+  | #Marmelad => "Marmelad"
+  | #OxygenMono => "Oxygen Mono"
+  | #Trocchi => "Trocchi"
+  | #IBMPlexSansCondensed => "IBM Plex Sans Condensed"
   }
+
+// type notoWeights = [#v100 | #v300 | #v400 | #v500 | #v700 | #v900]
+
+// let
