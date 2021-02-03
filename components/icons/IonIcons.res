@@ -140,4 +140,150 @@ module Outline = {
   <path fill stroke strokeLinecap strokeLinejoin strokeWidth d="M250.26 166.05L256 288l5.73-121.95a5.74 5.74 0 00-5.79-6h0a5.74 5.74 0 00-5.68 6z"/>
   <path d="M256 367.91a20 20 0 1120-20 20 20 0 01-20 20z"/>
   </svg>
+
+  @react.component
+  let americanFootball = ( 
+    ~className="",
+    ~fill="none",
+    ~stroke="currentColor",
+    ~strokeLinecap="round",
+    ~strokeLinejoin="round",
+    ~strokeWidth="32",
+  ) =>
+  <svg 
+  xmlns="http://www.w3.org/2000/svg" 
+  className={merge(.[defaultSize, className])}  
+  viewBox="0 0 512 512">
+  <ellipse cx="256" cy="256" rx="267.57" ry="173.44" transform="rotate(-45 256 256.002)" fill stroke strokeLinecap strokeLinejoin strokeWidth/>
+  <path fill stroke strokeLinecap strokeLinejoin strokeWidth d="M334.04 177.96L177.96 334.04M278.3 278.3l-44.6-44.6M322.89 233.7l-44.59-44.59M456.68 211.4L300.6 55.32M211.4 456.68L55.32 300.6M233.7 322.89l-44.59-44.59"/>
+  </svg>
+
+  @react.component
+  let analytics = ( 
+    ~className="",
+    ~fill="none",
+    ~stroke="currentColor",
+    ~strokeLinecap="round",
+    ~strokeLinejoin="round",
+    ~strokeWidth="32",
+  ) =>
+  <svg 
+  xmlns="http://www.w3.org/2000/svg" 
+  className={merge(.[defaultSize, className])}  
+  viewBox="0 0 512 512">
+  <path fill stroke strokeLinecap strokeLinejoin strokeWidth d="M344 280l88-88M232 216l64 64M80 320l104-104"/>
+  <circle cx="456" cy="168" r="24" fill stroke strokeLinecap strokeLinejoin strokeWidth/>
+  <circle cx="320" cy="304" r="24" fill stroke strokeLinecap strokeLinejoin strokeWidth/>
+  <circle cx="208" cy="192" r="24" fill stroke strokeLinecap strokeLinejoin strokeWidth/>
+  <circle cx="56" cy="344" r="24" fill stroke strokeLinecap strokeLinejoin strokeWidth/>
+  </svg>
+
+  @react.component
+  let aperture = ( 
+    ~className="",
+    ~fill="none",
+    ~stroke="currentColor",
+    ~strokeLinecap="round",
+    ~strokeLinejoin="round",
+    ~strokeWidth="32",
+    ~strokeMiterlimit="10",
+  ) =>
+  <svg 
+  xmlns="http://www.w3.org/2000/svg" 
+  className={merge(.[defaultSize, className])}  
+  viewBox="0 0 512 512">
+  <path d="M448 256c0-106-86-192-192-192S64 150 64 256s86 192 192 192 192-86 192-192z" fill stroke strokeMiterlimit strokeWidth/>
+  <path fill stroke strokeLinecap strokeLinejoin strokeWidth d="M360 94.59V296M443.13 212.87L296 360M417.41 360H216M299.13 443.13l-144-144M152 416V216M68.87 299.13l144-144M94.59 152H288M212.87 68.87L360 216"/>
+  </svg>
+
+  @react.component
+  let apps = ( 
+    ~className="",
+    ~fill="none",
+    ~stroke="currentColor",
+    ~strokeWidth="32",
+    ~strokeMiterlimit="10",
+  ) =>
+  <svg 
+  xmlns="http://www.w3.org/2000/svg" 
+  className={merge(.[defaultSize, className])}  
+  viewBox="0 0 512 512">
+  <rect x="64" y="64" width="80" height="80" rx="40" ry="40" fill stroke strokeMiterlimit strokeWidth/>
+  <rect x="216" y="64" width="80" height="80" rx="40" ry="40" fill stroke strokeMiterlimit strokeWidth/>
+  <rect x="368" y="64" width="80" height="80" rx="40" ry="40" fill stroke strokeMiterlimit strokeWidth/>
+  <rect x="64" y="216" width="80" height="80" rx="40" ry="40" fill stroke strokeMiterlimit strokeWidth/>
+  <rect x="216" y="216" width="80" height="80" rx="40" ry="40" fill stroke strokeMiterlimit strokeWidth/>
+  <rect x="368" y="216" width="80" height="80" rx="40" ry="40" fill stroke strokeMiterlimit strokeWidth/>
+  <rect x="64" y="368" width="80" height="80" rx="40" ry="40" fill stroke strokeMiterlimit strokeWidth/>
+  <rect x="216" y="368" width="80" height="80" rx="40" ry="40" fill stroke strokeMiterlimit strokeWidth/>
+  <rect x="368" y="368" width="80" height="80" rx="40" ry="40" fill stroke strokeMiterlimit strokeWidth/>
+  </svg>
+
+  @react.component
+  let archive = ( 
+    ~className="",
+    ~fill="none",
+    ~stroke="currentColor",
+    ~strokeLinecap="round",
+    ~strokeLinejoin="round",
+    ~strokeWidth="32",
+  ) =>
+  <svg 
+  xmlns="http://www.w3.org/2000/svg" 
+  className={merge(.[defaultSize, className])}  
+  viewBox="0 0 512 512">
+  <path d="M80 152v256a40.12 40.12 0 0040 40h272a40.12 40.12 0 0040-40V152" fill stroke strokeLinecap strokeLinejoin strokeWidth/>
+  <rect x="48" y="64" width="416" height="80" rx="28" ry="28" fill stroke strokeLinejoin strokeWidth/>
+  <path fill stroke strokeLinecap strokeLinejoin strokeWidth d="M320 304l-64 64-64-64M256 345.89V224"/>
+  </svg>
+
+  @react.component
+  let arrowBack = ( 
+    ~className="",
+    ~fill="none",
+    ~stroke="currentColor",
+    ~strokeLinecap="round",
+    ~strokeLinejoin="round",
+    ~strokeWidth="32",
+  ) =>
+  <svg 
+  xmlns="http://www.w3.org/2000/svg" 
+  className={merge(.[defaultSize, className])}  
+  viewBox="0 0 512 512">
+  <path fill stroke strokeLinecap strokeLinejoin strokeWidth d="M244 400L100 256l144-144M120 256h292"/>
+  </svg>
+
+  @react.component
+  let arrowBackCircle = ( 
+    ~className="",
+    ~fill="none",
+    ~stroke="currentColor",
+    ~strokeLinecap="round",
+    ~strokeLinejoin="round",
+    ~strokeWidth="32",
+    ~strokeMiterlimit="10",
+  ) =>
+  <svg 
+  xmlns="http://www.w3.org/2000/svg" 
+  className={merge(.[defaultSize, className])}  
+  viewBox="0 0 512 512">
+  <path fill stroke strokeLinecap strokeLinejoin strokeWidth d="M249.38 336L170 256l79.38-80M181.03 256H342"/>
+  <path d="M448 256c0-106-86-192-192-192S64 150 64 256s86 192 192 192 192-86 192-192z" fill stroke strokeMiterlimit strokeWidth/>
+  </svg>
+
+  @react.component
+  let arrowDown = ( 
+    ~className="",
+    ~fill="none",
+    ~stroke="currentColor",
+    ~strokeLinecap="round",
+    ~strokeLinejoin="round",
+    ~strokeWidth="32",
+  ) =>
+  <svg 
+  xmlns="http://www.w3.org/2000/svg" 
+  className={merge(.[defaultSize, className])}  
+  viewBox="0 0 512 512">
+  <path fill stroke strokeLinecap strokeLinejoin strokeWidth d="M112 268l144 144 144-144M256 392V100"/>
+  </svg>
 }
