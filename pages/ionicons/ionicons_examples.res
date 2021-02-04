@@ -197,5 +197,42 @@ let default = () => {
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"barcode"->Utils.str} </h2>
       </div>
     </div>
+    <h1 className=Styles.h1> {"Filled"->Utils.str} </h1>
+    <div
+      className={Tailwind.merge(.[
+      Styles.grid,
+      Styles.gridBreakpoints450,
+      Styles.gridBreakpoints830,
+    ])}>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Filled.accessibility />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"accessibility"->Utils.str} </h2>
+      </div>
+    </div>
+    <h1 className=Styles.h1> {"Sharp"->Utils.str} </h1>
+    <div
+      className={Tailwind.merge(.[
+      Styles.grid,
+      Styles.gridBreakpoints450,
+      Styles.gridBreakpoints830,
+    ])}>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Sharp.accessibility />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"accessibility"->Utils.str} </h2>
+      </div>
+    </div>
+    <h1 className=Styles.h1> {"Logos"->Utils.str} </h1>
+    <div
+      className={Tailwind.merge(.[
+      Styles.grid,
+      Styles.gridBreakpoints450,
+      Styles.gridBreakpoints830,
+    ])}>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.logo />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"alipay"->Utils.str} </h2>
+      </div>
+    </div>
   </div>
 }
+    
