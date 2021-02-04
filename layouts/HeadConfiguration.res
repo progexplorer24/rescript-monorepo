@@ -11,29 +11,47 @@ module Styles = {
 type normalWeights = Theme.GoogleFonts.normalWeights
 type italicWeights = Theme.GoogleFonts.italicWeights
 
+// type fonts = [#Poppins(Theme.GoogleFonts.weights18) | #Overpass(Theme.GoogleFonts.weights16)]
+
+// type record = {
+//   fontName: string,
+//   weight: int,
+// }
+
+// let toFontValue = (font: fonts) =>
+//   switch font {
+//   | #Poppins(weight) => {fontName: "Poppins", weight: toWeightValue(weight)}
+//   | #Overpass(weight) => {fontName: "Overpass", weight: toWeightValue(weight)}
+//   }
+
+module GenerateLink = {
+  let isItalic = bool => bool ? "1," : ""
+
+  let weightString = (~italic=false, weight: int) =>
+    `wght@${isItalic(italic)}${Belt.Int.toString(weight)}`
+
+  let linkFontName = fontString => Js.String2.replaceByRe(fontString, %re("/ /g"), "+")
+
+  let ital = ":ital,"
+
+  let generateLink = (fontName, weight, isItalic) =>
+    `https://fonts.googleapis.com/css2?family=${linkFontName(fontName)}${isItalic
+        ? ital
+        : ":"}${weightString(weight, ~italic=isItalic)}&display=swap`
+
+  // let generateItalicLinks = ({fontName, weight, isItalic}: Theme.GoogleFonts.fontRecord) =>
+
+  //   | #...italicWeights as iw =>
+  //     `https://fonts.googleapis.com/css2?family=${linkFontName(fontName)}:ital,${weightString(
+  //         iw,
+  //         ~italic=true,
+  //       )}&display=swap`
+  //   }
+}
+
 @react.component
 let make = (~children, ~font: Theme.GoogleFonts.styles18=#Montserrat(#v300)) => {
-  // let fontString = Theme.GoogleFonts.to(font)
-  let isItalic = bool => bool ? "1," : ""
-  let weightString = (~italic=false, weight: Theme.GoogleFonts.weightType<'a>) =>
-    `wght@${isItalic(italic)}${Belt.Int.toString(Theme.GoogleFonts.toWeightValue(weight))}`
-  let linkFontName = fontString => Js.String2.replaceByRe(fontString, %re("/ /g"), "+")
-  let fontObject = Theme.GoogleFonts.toFontValue(font)
-
-  // Theme.GoogleFonts.fon
-
-  let generateItalicLinks = ({fontName, weight}: Theme.GoogleFonts.fontRecord) =>
-    switch weight {
-    | #...normalWeights as fw =>
-      `https://fonts.googleapis.com/css2?family=${linkFontName(fontName)}:${weightString(
-          fw,
-        )}&display=swap`
-    | #...italicWeights as iw =>
-      `https://fonts.googleapis.com/css2?family=${linkFontName(fontName)}:ital,${weightString(
-          iw,
-          ~italic=true,
-        )}&display=swap`
-    }
+  let {fontName, weight, isItalic} = Theme.GoogleFonts.toFontValue(font)
 
   // let generatelinkWithWeight = ({fontName, weight}: Theme.GoogleFonts.fontRecord) =>
   //   `https://fonts.googleapis.com/css2?family=${linkFontName(fontName)}${weightString(
@@ -59,8 +77,8 @@ let make = (~children, ~font: Theme.GoogleFonts.styles18=#Montserrat(#v300)) => 
       <media name="viewport" content="width=device-width, initial-sacle=1.0" />
       <title> {"Title"->Utils.str} </title>
       <link rel="preconnect" href="https://fonts.gstatic.com" />
-      <link href={generateItalicLinks(fontObject)} rel="stylesheet" />
+      <link href={GenerateLink.generateLink(fontName, weight, isItalic)} rel="stylesheet" />
     </Next.Head>
-    <div className={Tailwind.merge(.[Styles.fontStyles(fontObject.fontName)])}> children </div>
+    <div className={Tailwind.merge(.[Styles.fontStyles(fontName)])}> children </div>
   </>
 }

@@ -32,26 +32,85 @@ type weightType<'a> = [<
   | #italic900
 ] as 'a
 
+type weightRecord = {
+  weight: int,
+  isItalic: bool,
+}
+
 let toWeightValue = (weight: weightType<'a>) =>
   switch weight {
-  | #v100 => 100
-  | #v200 => 200
-  | #v300 => 300
-  | #v400 => 400
-  | #v500 => 500
-  | #v600 => 600
-  | #v700 => 700
-  | #v800 => 800
-  | #v900 => 900
-  | #italic100 => 100
-  | #italic200 => 200
-  | #italic300 => 300
-  | #italic400 => 400
-  | #italic500 => 500
-  | #italic600 => 600
-  | #italic700 => 700
-  | #italic800 => 800
-  | #italic900 => 900
+  | #v100 => {
+      weight: 100,
+      isItalic: false,
+    }
+  | #v200 => {
+      weight: 200,
+      isItalic: false,
+    }
+  | #v300 => {
+      weight: 300,
+      isItalic: false,
+    }
+  | #v400 => {
+      weight: 400,
+      isItalic: false,
+    }
+  | #v500 => {
+      weight: 500,
+      isItalic: false,
+    }
+  | #v600 => {
+      weight: 600,
+      isItalic: false,
+    }
+  | #v700 => {
+      weight: 700,
+      isItalic: false,
+    }
+  | #v800 => {
+      weight: 800,
+      isItalic: false,
+    }
+  | #v900 => {
+      weight: 900,
+      isItalic: false,
+    }
+  | #italic100 => {
+      weight: 100,
+      isItalic: true,
+    }
+  | #italic200 => {
+      weight: 200,
+      isItalic: true,
+    }
+  | #italic300 => {
+      weight: 300,
+      isItalic: true,
+    }
+  | #italic400 => {
+      weight: 400,
+      isItalic: true,
+    }
+  | #italic500 => {
+      weight: 500,
+      isItalic: true,
+    }
+  | #italic600 => {
+      weight: 600,
+      isItalic: true,
+    }
+  | #italic700 => {
+      weight: 700,
+      isItalic: true,
+    }
+  | #italic800 => {
+      weight: 800,
+      isItalic: true,
+    }
+  | #italic900 => {
+      weight: 900,
+      isItalic: true,
+    }
   }
 
 type weights18 = [normalWeights | italicWeights]
@@ -102,151 +161,312 @@ type styles18 = [
   | #Petrona(weights18)
   | #Tomorrow(weights18)
   | #Grenze(weights18)
+  | #Overpass(weights16)
+  | #Mulish(weights16)
 ]
-// | #Overpass(weights16)
-// | #Mulish(weights16)
 
-// type styles16 = [#Overpass(weights16) | #Mulish(weights16)]
+type styles16 = [#Overpass(weights16) | #Mulish(weights16)]
 
-// type fontType = [styles18 | styles16]
+type fonts = [styles18 | styles16]
 
 type fontRecord = {
   fontName: string,
-  weight: weightType<weights18>,
+  weight: int,
+  isItalic: bool,
 }
 
 let toFontValue = (font: styles18) =>
   switch font {
   | #Montserrat(weight) => {
-      fontName: "Montserrat",
-      weight: weight,
+      let {weight, isItalic} = toWeightValue(weight)
+
+      {
+        fontName: "Montserrat",
+        weight: weight,
+        isItalic: isItalic,
+      }
     }
   | #Poppins(weight) => {
-      fontName: "Poppins",
-      weight: weight,
+      let {weight, isItalic} = toWeightValue(weight)
+
+      {
+        fontName: "Poppins",
+        weight: weight,
+        isItalic: isItalic,
+      }
     }
   | #Raleway(weight) => {
-      fontName: "Raleway",
-      weight: weight,
+      let {weight, isItalic} = toWeightValue(weight)
+
+      {
+        fontName: "Raleway",
+        weight: weight,
+        isItalic: isItalic,
+      }
     }
   | #WorkSans(weight) => {
-      fontName: "Work Sans",
-      weight: weight,
+      let {weight, isItalic} = toWeightValue(weight)
+
+      {
+        fontName: "Work Sans",
+        weight: weight,
+        isItalic: isItalic,
+      }
     }
   | #FiraSans(weight) => {
-      fontName: "Fira Sans",
-      weight: weight,
+      let {weight, isItalic} = toWeightValue(weight)
+
+      {
+        fontName: "Fira Sans",
+        weight: weight,
+        isItalic: isItalic,
+      }
     }
   | #Barlow(weight) => {
-      fontName: "Barlow",
-      weight: weight,
+      let {weight, isItalic} = toWeightValue(weight)
+
+      {
+        fontName: "Barlow",
+        weight: weight,
+        isItalic: isItalic,
+      }
     }
   | #LibreFranklin(weight) => {
-      fontName: "Libre Franklin",
-      weight: weight,
+      let {weight, isItalic} = toWeightValue(weight)
+
+      {
+        fontName: "Libre Franklin",
+        weight: weight,
+        isItalic: isItalic,
+      }
     }
   | #Bitter(weight) => {
-      fontName: "Bitter",
-      weight: weight,
+      let {weight, isItalic} = toWeightValue(weight)
+
+      {
+        fontName: "Bitter",
+        weight: weight,
+        isItalic: isItalic,
+      }
     }
   | #Fraunces(weight) => {
-      fontName: "Fraunces",
-      weight: weight,
+      let {weight, isItalic} = toWeightValue(weight)
+
+      {
+        fontName: "Fraunces",
+        weight: weight,
+        isItalic: isItalic,
+      }
     }
   | #BarlowCondensed(weight) => {
-      fontName: "Barlow Condensed",
-      weight: weight,
+      let {weight, isItalic} = toWeightValue(weight)
+
+      {
+        fontName: "Barlow Condensed",
+        weight: weight,
+        isItalic: isItalic,
+      }
     }
   | #Exo2(weight) => {
-      fontName: "Exo 2",
-      weight: weight,
+      let {weight, isItalic} = toWeightValue(weight)
+
+      {
+        fontName: "Exo 2",
+        weight: weight,
+        isItalic: isItalic,
+      }
     }
   | #Kanit(weight) => {
-      fontName: "Kanit",
-      weight: weight,
+      let {weight, isItalic} = toWeightValue(weight)
+
+      {
+        fontName: "Kanit",
+        weight: weight,
+        isItalic: isItalic,
+      }
     }
   | #Prompt(weight) => {
-      fontName: "Prompt",
-      weight: weight,
+      let {weight, isItalic} = toWeightValue(weight)
+
+      {
+        fontName: "Prompt",
+        weight: weight,
+        isItalic: isItalic,
+      }
     }
   | #FiraSansCondensed(weight) => {
-      fontName: "Fira Sans Condensed",
-      weight: weight,
+      let {weight, isItalic} = toWeightValue(weight)
+
+      {
+        fontName: "Fira Sans Condensed",
+        weight: weight,
+        isItalic: isItalic,
+      }
     }
   | #Exo(weight) => {
-      fontName: "Exo",
-      weight: weight,
+      let {weight, isItalic} = toWeightValue(weight)
+
+      {
+        fontName: "Exo",
+        weight: weight,
+        isItalic: isItalic,
+      }
     }
   | #BarlowSemiCondensed(weight) => {
-      fontName: "Barlow Semi Condensed",
-      weight: weight,
+      let {weight, isItalic} = toWeightValue(weight)
+
+      {
+        fontName: "Barlow Semi Condensed",
+        weight: weight,
+        isItalic: isItalic,
+      }
     }
   | #MontserratAlternates(weight) => {
-      fontName: "Montserrat Alternates",
-      weight: weight,
+      let {weight, isItalic} = toWeightValue(weight)
+
+      {
+        fontName: "Montserrat Alternates",
+        weight: weight,
+        isItalic: isItalic,
+      }
     }
   | #FiraSansExtraCondensed(weight) => {
-      fontName: "Fira Sans Extra Condensed",
-      weight: weight,
+      let {weight, isItalic} = toWeightValue(weight)
+
+      {
+        fontName: "Fira Sans Extra Condensed",
+        weight: weight,
+        isItalic: isItalic,
+      }
     }
   | #PublicSans(weight) => {
-      fontName: "Public Sans",
-      weight: weight,
+      let {weight, isItalic} = toWeightValue(weight)
+
+      {
+        fontName: "Public Sans",
+        weight: weight,
+        isItalic: isItalic,
+      }
     }
   | #Taviraj(weight) => {
-      fontName: "Taviraj",
-      weight: weight,
+      let {weight, isItalic} = toWeightValue(weight)
+
+      {
+        fontName: "Taviraj",
+        weight: weight,
+        isItalic: isItalic,
+      }
     }
   | #Saira(weight) => {
-      fontName: "Saira",
-      weight: weight,
+      let {weight, isItalic} = toWeightValue(weight)
+
+      {
+        fontName: "Saira",
+        weight: weight,
+        isItalic: isItalic,
+      }
     }
 
   | #Texturina(weight) => {
-      fontName: "Texturina",
-      weight: weight,
+      let {weight, isItalic} = toWeightValue(weight)
+
+      {
+        fontName: "Texturina",
+        weight: weight,
+        isItalic: isItalic,
+      }
     }
   | #Jost(weight) => {
-      fontName: "Jost",
-      weight: weight,
+      let {weight, isItalic} = toWeightValue(weight)
+
+      {
+        fontName: "Jost",
+        weight: weight,
+        isItalic: isItalic,
+      }
     }
   | #Piazolla(weight) => {
-      fontName: "Piazzolla",
-      weight: weight,
+      let {weight, isItalic} = toWeightValue(weight)
+
+      {
+        fontName: "Piazolla",
+        weight: weight,
+        isItalic: isItalic,
+      }
     }
   | #Trirong(weight) => {
-      fontName: "Trirong",
-      weight: weight,
+      let {weight, isItalic} = toWeightValue(weight)
+
+      {
+        fontName: "Trirong",
+        weight: weight,
+        isItalic: isItalic,
+      }
     }
   | #Grandstander(weight) => {
-      fontName: "Grandstander",
-      weight: weight,
+      let {weight, isItalic} = toWeightValue(weight)
+
+      {
+        fontName: "Grandstander",
+        weight: weight,
+        isItalic: isItalic,
+      }
     }
   | #Epilogue(weight) => {
-      fontName: "Epilogue",
-      weight: weight,
+      let {weight, isItalic} = toWeightValue(weight)
+
+      {
+        fontName: "Epilogue",
+        weight: weight,
+        isItalic: isItalic,
+      }
     }
   | #Petrona(weight) => {
-      fontName: "Petrona",
-      weight: weight,
+      let {weight, isItalic} = toWeightValue(weight)
+
+      {
+        fontName: "Petrona",
+        weight: weight,
+        isItalic: isItalic,
+      }
     }
   | #Tomorrow(weight) => {
-      fontName: "Tomorrow",
-      weight: weight,
+      let {weight, isItalic} = toWeightValue(weight)
+
+      {
+        fontName: "Tomorrow",
+        weight: weight,
+        isItalic: isItalic,
+      }
     }
   | #Grenze(weight) => {
-      fontName: "Grenze",
-      weight: weight,
+      let {weight, isItalic} = toWeightValue(weight)
+
+      {
+        fontName: "Grenze",
+        weight: weight,
+        isItalic: isItalic,
+      }
     }
 
-  // | #Overpass(weight) fontRecord<weights16> => {
-  //     fontName: "Overpass",
-  //     weight: wg,
-  //   }
-  // | #Mulish(weight) => {
-  //     fontName: "Mulish",
-  //     weight: weight,
-  //   }
+  | #Overpass(weight) => {
+      let {weight, isItalic} = toWeightValue(weight)
+
+      {
+        fontName: "Overpass",
+        weight: weight,
+        isItalic: isItalic,
+      }
+    }
+  | #Mulish(weight) => {
+      let {weight, isItalic} = toWeightValue(weight)
+
+      {
+        fontName: "Mulish",
+        weight: weight,
+        isItalic: isItalic,
+      }
+    }
   }
 
 type t = [
