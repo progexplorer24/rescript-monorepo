@@ -35,6 +35,7 @@ module Styles = {
     strokeLinecap,
     %re("/stroke-miterlimit='10'/g"),
     "strokeMiterlimit",
+  )
 
   let stroke = Js.String2.replaceByRe(strokeMiterlimit, %re("/stroke='currentColor'/g"), "stroke")
   let fill = Js.String2.replaceByRe(stroke, %re("/fill='none'/g"), "fill")
@@ -230,7 +231,6 @@ let default = () => {
         <IonIcons.Outline.barcode />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"barcode"->Utils.str} </h2>
       </div>
-
       <div className={Tailwind.merge(.[Styles.block])}>
         <IonIcons.Outline.baseball />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"baseball"->Utils.str} </h2>
@@ -263,7 +263,6 @@ let default = () => {
         <IonIcons.Outline.beaker />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"beaker"->Utils.str} </h2>
       </div>
-
       <div className={Tailwind.merge(.[Styles.block])}>
         <IonIcons.Outline.bed />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"bed"->Utils.str} </h2>
