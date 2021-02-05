@@ -26,7 +26,9 @@ module Styles = {
   let gridBreakpoints450 = twStyle([min450([gridCols(#v3)])])
 
   
+
 let svgString = "<svg xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'><title>Book</title><path d='M256 160c16-63.16 76.43-95.41 208-96a15.94 15.94 0 0116 16v288a16 16 0 01-16 16c-128 0-177.45 25.81-208 64-30.37-38-80-64-208-64-9.88 0-16-8.05-16-17.93V80a15.94 15.94 0 0116-16c131.57.59 192 32.84 208 96zM256 160v288' fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='32'/></svg>"
+
   let strokeLinecap = Js.String2.replaceByRe(svgString, %re("/stroke-linecap='round'/g"), "strokeLinecap")
   let strokeMiterlimit = Js.String2.replaceByRe(strokeLinecap, %re("/stroke-miterlimit='10'/g"), "strokeMiterlimit")
   let stroke = Js.String2.replaceByRe(strokeMiterlimit, %re("/stroke='currentColor'/g"), "stroke")
@@ -60,7 +62,7 @@ let default = () => {
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"add"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.addCircle />
+        <IonIcons.Outline.addCircle strokeWidth="44" />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"addCircle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
@@ -288,6 +290,22 @@ let default = () => {
       <div className={Tailwind.merge(.[Styles.block])}>
         <IonIcons.Filled.accessibility />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"accessibility"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Filled.add />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"add"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Filled.addCircle />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"addCircle"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Filled.airplane />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"airplane"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Filled.alarm />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"alarm"->Utils.str} </h2>
       </div>
     </div>
     <h1 className=Styles.h1> {"Sharp Icons"->Utils.str} </h1>
