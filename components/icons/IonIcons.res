@@ -2741,6 +2741,750 @@ module Outline = {
       viewBox="0 0 512 512">
       <path fill stroke strokeLinecap strokeLinejoin strokeWidth d="M416 128L192 384l-96-96" />
     </svg>
+
+  @react.component
+  let checkmarkCircle = (
+    ~className="",
+    ~fill="none",
+    ~stroke="currentColor",
+    ~strokeLinecap="round",
+    ~strokeLinejoin="round",
+    ~strokeWidth="32",
+    ~strokeMiterlimit="10",
+  ) =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        d="M448 256c0-106-86-192-192-192S64 150 64 256s86 192 192 192 192-86 192-192z"
+        fill
+        stroke
+        strokeMiterlimit
+        strokeWidth
+      />
+      <path fill stroke strokeLinecap strokeLinejoin strokeWidth d="M352 176L217.6 336 160 272" />
+    </svg>
+
+  @react.component
+  let checkmarkDone = (
+    ~className="",
+    ~fill="none",
+    ~stroke="currentColor",
+    ~strokeLinecap="round",
+    ~strokeLinejoin="round",
+    ~strokeWidth="32",
+  ) =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        fill
+        stroke
+        strokeLinecap
+        strokeLinejoin
+        strokeWidth
+        d="M464 128L240 384l-96-96M144 384l-96-96M368 128L232 284"
+      />
+    </svg>
+
+  @react.component
+  let checkmarkDoneCircle = (
+    ~className="",
+    ~fill="none",
+    ~stroke="currentColor",
+    ~strokeLinecap="round",
+    ~strokeLinejoin="round",
+    ~strokeWidth="32",
+    ~strokeMiterlimit="10",
+  ) =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        d="M448 256c0-106-86-192-192-192S64 150 64 256s86 192 192 192 192-86 192-192z"
+        fill
+        stroke
+        strokeMiterlimit
+        strokeWidth
+      />
+      <path
+        fill
+        stroke
+        strokeLinecap
+        strokeLinejoin
+        strokeWidth
+        d="M368 192L256.13 320l-47.95-48M191.95 320L144 272M305.71 192l-51.55 59"
+      />
+    </svg>
+
+  @react.component
+  let chevronBack = (
+    ~className="",
+    ~fill="none",
+    ~stroke="currentColor",
+    ~strokeLinecap="round",
+    ~strokeLinejoin="round",
+    ~strokeWidth="48",
+  ) =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path fill stroke strokeLinecap strokeLinejoin strokeWidth d="M328 112L184 256l144 144" />
+    </svg>
+
+  @react.component
+  let chevronBackCircle = (
+    ~className="",
+    ~fill="none",
+    ~stroke="currentColor",
+    ~strokeLinecap="round",
+    ~strokeLinejoin="round",
+    ~strokeWidth="32",
+    ~strokeMiterlimit="10",
+  ) =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        d="M256 64C150 64 64 150 64 256s86 192 192 192 192-86 192-192S362 64 256 64z"
+        fill
+        stroke
+        strokeMiterlimit
+        strokeWidth
+      />
+      <path fill stroke strokeLinecap strokeLinejoin strokeWidth d="M296 352l-96-96 96-96" />
+    </svg>
+
+  @react.component
+  let chevronDown = (
+    ~className="",
+    ~fill="none",
+    ~stroke="currentColor",
+    ~strokeLinecap="round",
+    ~strokeLinejoin="round",
+    ~strokeWidth="48",
+  ) =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path fill stroke strokeLinecap strokeLinejoin strokeWidth d="M112 184l144 144 144-144" />
+    </svg>
+
+  @react.component
+  let chevronDownCircle = (
+    ~className="",
+    ~fill="none",
+    ~stroke="currentColor",
+    ~strokeLinecap="round",
+    ~strokeLinejoin="round",
+    ~strokeWidth="32",
+    ~strokeMiterlimit="10",
+  ) =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        d="M256 64C150 64 64 150 64 256s86 192 192 192 192-86 192-192S362 64 256 64z"
+        fill
+        stroke
+        strokeMiterlimit
+        strokeWidth
+      />
+      <path fill stroke strokeLinecap strokeLinejoin strokeWidth d="M352 216l-96 96-96-96" />
+    </svg>
+
+  @react.component
+  let chevronForward = (
+    ~className="",
+    ~fill="none",
+    ~stroke="currentColor",
+    ~strokeLinecap="round",
+    ~strokeLinejoin="round",
+    ~strokeWidth="48",
+  ) =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path fill stroke strokeLinecap strokeLinejoin strokeWidth d="M184 112l144 144-144 144" />
+    </svg>
+
+  @react.component
+  let chevronForwardCircle = (
+    ~className="",
+    ~fill="none",
+    ~stroke="currentColor",
+    ~strokeLinecap="round",
+    ~strokeLinejoin="round",
+    ~strokeWidth="32",
+    ~strokeMiterlimit="10",
+  ) =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        d="M64 256c0 106 86 192 192 192s192-86 192-192S362 64 256 64 64 150 64 256z"
+        fill
+        stroke
+        strokeMiterlimit
+        strokeWidth
+      />
+      <path fill stroke strokeLinecap strokeLinejoin strokeWidth d="M216 352l96-96-96-96" />
+    </svg>
+
+  @react.component
+  let chevronUp = (
+    ~className="",
+    ~fill="none",
+    ~stroke="currentColor",
+    ~strokeLinecap="round",
+    ~strokeLinejoin="round",
+    ~strokeWidth="48",
+  ) =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path fill stroke strokeLinecap strokeLinejoin strokeWidth d="M112 328l144-144 144 144" />
+    </svg>
+
+  @react.component
+  let chevronUpCircle = (
+    ~className="",
+    ~fill="none",
+    ~stroke="currentColor",
+    ~strokeLinecap="round",
+    ~strokeLinejoin="round",
+    ~strokeWidth="32",
+    ~strokeMiterlimit="10",
+  ) =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path fill stroke strokeLinecap strokeLinejoin strokeWidth d="M352 296l-96-96-96 96" />
+      <path
+        d="M256 64C150 64 64 150 64 256s86 192 192 192 192-86 192-192S362 64 256 64z"
+        fill
+        stroke
+        strokeMiterlimit
+        strokeWidth
+      />
+    </svg>
+
+  @react.component
+  let clipboard = (
+    ~className="",
+    ~fill="none",
+    ~stroke="currentColor",
+    ~strokeLinejoin="round",
+    ~strokeWidth="32",
+  ) =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        d="M336 64h32a48 48 0 0148 48v320a48 48 0 01-48 48H144a48 48 0 01-48-48V112a48 48 0 0148-48h32"
+        fill
+        stroke
+        strokeLinejoin
+        strokeWidth
+      />
+      <rect
+        x="176"
+        y="32"
+        width="160"
+        height="64"
+        rx="26.13"
+        ry="26.13"
+        fill
+        stroke
+        strokeLinejoin
+        strokeWidth
+      />
+    </svg>
+
+  @react.component
+  let close = (
+    ~className="",
+    ~fill="none",
+    ~stroke="currentColor",
+    ~strokeLinecap="round",
+    ~strokeLinejoin="round",
+    ~strokeWidth="32",
+  ) =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        fill stroke strokeLinecap strokeLinejoin strokeWidth d="M368 368L144 144M368 144L144 368"
+      />
+    </svg>
+
+  @react.component
+  let closeCircle = (
+    ~className="",
+    ~fill="none",
+    ~stroke="currentColor",
+    ~strokeLinecap="round",
+    ~strokeLinejoin="round",
+    ~strokeWidth="32",
+    ~strokeMiterlimit="10",
+  ) =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        d="M448 256c0-106-86-192-192-192S64 150 64 256s86 192 192 192 192-86 192-192z"
+        fill
+        stroke
+        strokeMiterlimit
+        strokeWidth
+      />
+      <path
+        fill stroke strokeLinecap strokeLinejoin strokeWidth d="M320 320L192 192M192 320l128-128"
+      />
+    </svg>
+
+  @react.component
+  let cloud = (
+    ~className="",
+    ~fill="none",
+    ~stroke="currentColor",
+    ~strokeLinejoin="round",
+    ~strokeWidth="32",
+  ) =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        d="M400 240c-8.89-89.54-71-144-144-144-69 0-113.44 48.2-128 96-60 6-112 43.59-112 112 0 66 54 112 120 112h260c55 0 100-27.44 100-88 0-59.82-53-85.76-96-88z"
+        fill
+        stroke
+        strokeLinejoin
+        strokeWidth
+      />
+    </svg>
+
+  @react.component
+  let cloudCircle = (
+    ~className="",
+    ~fill="none",
+    ~stroke="currentColor",
+    ~strokeWidth="32",
+    ~strokeMiterlimit="10",
+  ) =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        d="M333.88 240.59a8 8 0 01-6.66-6.66C320.68 192.78 290.82 168 256 168c-32.37 0-53.93 21.22-62.48 43.58a7.92 7.92 0 01-6.16 5c-27.67 4.35-50.82 22.56-51.35 54.3-.52 31.53 25.51 57.11 57 57.11H326c27.5 0 50-13.72 50-44 0-27.22-22-40.41-42.12-43.4z"
+      />
+      <path
+        d="M448 256c0-106-86-192-192-192S64 150 64 256s86 192 192 192 192-86 192-192z"
+        fill
+        stroke
+        strokeMiterlimit
+        strokeWidth
+      />
+    </svg>
+
+  @react.component
+  let cloudDone = (
+    ~className="",
+    ~fill="none",
+    ~stroke="currentColor",
+    ~strokeLinecap="round",
+    ~strokeLinejoin="round",
+    ~strokeWidth="32",
+  ) =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        d="M400 240c-8.89-89.54-71-144-144-144-69 0-113.44 48.2-128 96-60 6-112 43.59-112 112 0 66 54 112 120 112h260c55 0 100-27.44 100-88 0-59.82-53-85.76-96-88z"
+        fill
+        stroke
+        strokeLinejoin
+        strokeWidth
+      />
+      <path fill stroke strokeLinecap strokeLinejoin strokeWidth d="M317 208L209.2 336 163 284.8" />
+    </svg>
+
+  @react.component
+  let cloudDownload = (
+    ~className="",
+    ~fill="none",
+    ~stroke="currentColor",
+    ~strokeLinecap="round",
+    ~strokeLinejoin="round",
+    ~strokeWidth="32",
+  ) =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        d="M320 336h76c55 0 100-21.21 100-75.6s-53-73.47-96-75.6C391.11 99.74 329 48 256 48c-69 0-113.44 45.79-128 91.2-60 5.7-112 35.88-112 98.4S70 336 136 336h56M192 400.1l64 63.9 64-63.9M256 224v224.03"
+        fill
+        stroke
+        strokeLinecap
+        strokeLinejoin
+        strokeWidth
+      />
+    </svg>
+
+  @react.component
+  let cloudOffline = (
+    ~className="",
+    ~fill="none",
+    ~stroke="currentColor",
+    ~strokeLinecap="round",
+    ~strokeLinejoin="round",
+    ~strokeWidth="32",
+    ~strokeMiterlimit="10",
+  ) =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        d="M93.72 183.25C49.49 198.05 16 233.1 16 288c0 66 54 112 120 112h184.37M467.82 377.74C485.24 363.3 496 341.61 496 312c0-59.82-53-85.76-96-88-8.89-89.54-71-144-144-144-26.16 0-48.79 6.93-67.6 18.14"
+        fill
+        stroke
+        strokeLinecap
+        strokeLinejoin
+        strokeWidth
+      />
+      <path fill stroke strokeLinecap strokeMiterlimit strokeWidth d="M448 448L64 64" />
+    </svg>
+
+  @react.component
+  let cloudUpload = (
+    ~className="",
+    ~fill="none",
+    ~stroke="currentColor",
+    ~strokeLinecap="round",
+    ~strokeLinejoin="round",
+    ~strokeWidth="32",
+  ) =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        d="M320 367.79h76c55 0 100-29.21 100-83.6s-53-81.47-96-83.6c-8.89-85.06-71-136.8-144-136.8-69 0-113.44 45.79-128 91.2-60 5.7-112 43.88-112 106.4s54 106.4 120 106.4h56"
+        fill
+        stroke
+        strokeLinecap
+        strokeLinejoin
+        strokeWidth
+      />
+      <path
+        fill
+        stroke
+        strokeLinecap
+        strokeLinejoin
+        strokeWidth
+        d="M320 255.79l-64-64-64 64M256 448.21V207.79"
+      />
+    </svg>
+
+  @react.component
+  let cloudy = (
+    ~className="",
+    ~fill="none",
+    ~stroke="currentColor",
+    ~strokeLinejoin="round",
+    ~strokeWidth="32",
+  ) =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        d="M100.18 241.19a15.93 15.93 0 0013.37-13.25C126.6 145.59 186.34 96 256 96c64.69 0 107.79 42.36 124.92 87a16.11 16.11 0 0012.53 10.18C449.36 202.06 496 239.21 496 304c0 66-54 112-120 112H116c-55 0-100-27.44-100-88 0-54.43 43.89-80.81 84.18-86.81z"
+        fill
+        stroke
+        strokeLinejoin
+        strokeWidth
+      />
+    </svg>
+
+  @react.component
+  let cloudyNight = (
+    ~className="",
+    ~fill="none",
+    ~stroke="currentColor",
+    ~strokeLinecap="round",
+    ~strokeLinejoin="round",
+    ~strokeWidth="32",
+  ) =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        d="M388.31 272c47.75 0 89.77-27.77 107.69-68.92-14.21 6.18-30.9 8.61-47.38 8.61A116.31 116.31 0 01332.31 95.38c0-16.48 2.43-33.17 8.61-47.38C299.77 65.92 272 107.94 272 155.69a116.31 116.31 0 003.44 28.18"
+        fill
+        stroke
+        strokeLinecap
+        strokeLinejoin
+        strokeWidth
+      />
+      <path
+        d="M90.61 306.85A16.07 16.07 0 00104 293.6C116.09 220.17 169.63 176 232 176c57.93 0 96.62 37.75 112.2 77.74a15.84 15.84 0 0012.2 9.87c50 8.15 91.6 41.54 91.6 99.59 0 59.4-48.6 100.8-108 100.8H106c-49.5 0-90-24.7-90-79.2 0-48.47 38.67-72.22 74.61-77.95z"
+        fill
+        stroke
+        strokeLinejoin
+        strokeWidth
+      />
+    </svg>
+
+  @react.component
+  let code = (
+    ~className="",
+    ~fill="none",
+    ~stroke="currentColor",
+    ~strokeLinecap="round",
+    ~strokeLinejoin="round",
+    ~strokeWidth="32",
+  ) =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        fill
+        stroke
+        strokeLinecap
+        strokeLinejoin
+        strokeWidth
+        d="M160 368L32 256l128-112M352 368l128-112-128-112"
+      />
+    </svg>
+
+  @react.component
+  let codeDownload = (
+    ~className="",
+    ~fill="none",
+    ~stroke="currentColor",
+    ~strokeLinecap="round",
+    ~strokeLinejoin="round",
+    ~strokeWidth="32",
+  ) =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        fill
+        stroke
+        strokeLinecap
+        strokeLinejoin
+        strokeWidth
+        d="M160 368L32 256l128-112M352 368l128-112-128-112M192 288.1l64 63.9 64-63.9M256 160v176.03"
+      />
+    </svg>
+
+  @react.component
+  let codeSlash = (
+    ~className="",
+    ~fill="none",
+    ~stroke="currentColor",
+    ~strokeLinecap="round",
+    ~strokeLinejoin="round",
+    ~strokeWidth="32",
+  ) =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        fill
+        stroke
+        strokeLinecap
+        strokeLinejoin
+        strokeWidth
+        d="M160 368L32 256l128-112M352 368l128-112-128-112M304 96l-96 320"
+      />
+    </svg>
+
+  @react.component
+  let codeWorking = (
+    ~className="",
+    ~fill="none",
+    ~stroke="currentColor",
+    ~strokeLinecap="round",
+    ~strokeLinejoin="round",
+    ~strokeWidth="32",
+  ) =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <circle cx="256" cy="256" r="26" />
+      <circle cx="346" cy="256" r="26" />
+      <circle cx="166" cy="256" r="26" />
+      <path
+        fill
+        stroke
+        strokeLinecap
+        strokeLinejoin
+        strokeWidth
+        d="M160 368L32 256l128-112M352 368l128-112-128-112"
+      />
+    </svg>
+
+  @react.component
+  let cog = (~className="") =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        d="M456.7 242.27l-26.08-4.2a8 8 0 01-6.6-6.82c-.5-3.2-1-6.41-1.7-9.51a8.08 8.08 0 013.9-8.62l23.09-12.82a8.05 8.05 0 003.9-9.92l-4-11a7.94 7.94 0 00-9.4-5l-25.89 5a8 8 0 01-8.59-4.11q-2.25-4.2-4.8-8.41a8.16 8.16 0 01.7-9.52l17.29-19.94a8 8 0 00.3-10.62l-7.49-9a7.88 7.88 0 00-10.5-1.51l-22.69 13.63a8 8 0 01-9.39-.9c-2.4-2.11-4.9-4.21-7.4-6.22a8 8 0 01-2.5-9.11l9.4-24.75A8 8 0 00365 78.77l-10.2-5.91a8 8 0 00-10.39 2.21l-16.64 20.84a7.15 7.15 0 01-8.5 2.5s-5.6-2.3-9.8-3.71A8 8 0 01304 87l.4-26.45a8.07 8.07 0 00-6.6-8.42l-11.59-2a8.07 8.07 0 00-9.1 5.61l-8.6 25.05a8 8 0 01-7.79 5.41h-9.8a8.07 8.07 0 01-7.79-5.41l-8.6-25.05a8.07 8.07 0 00-9.1-5.61l-11.59 2a8.07 8.07 0 00-6.6 8.42l.4 26.45a8 8 0 01-5.49 7.71c-2.3.9-7.3 2.81-9.7 3.71-2.8 1-6.1.2-8.8-2.91l-16.51-20.34A8 8 0 00156.75 73l-10.2 5.91a7.94 7.94 0 00-3.3 10.09l9.4 24.75a8.06 8.06 0 01-2.5 9.11c-2.5 2-5 4.11-7.4 6.22a8 8 0 01-9.39.9L111 116.14a8 8 0 00-10.5 1.51l-7.49 9a8 8 0 00.3 10.62l17.29 19.94a8 8 0 01.7 9.52q-2.55 4-4.8 8.41a8.11 8.11 0 01-8.59 4.11l-25.89-5a8 8 0 00-9.4 5l-4 11a8.05 8.05 0 003.9 9.92L85.58 213a7.94 7.94 0 013.9 8.62c-.6 3.2-1.2 6.31-1.7 9.51a8.08 8.08 0 01-6.6 6.82l-26.08 4.2a8.09 8.09 0 00-7.1 7.92v11.72a7.86 7.86 0 007.1 7.92l26.08 4.2a8 8 0 016.6 6.82c.5 3.2 1 6.41 1.7 9.51a8.08 8.08 0 01-3.9 8.62L62.49 311.7a8.05 8.05 0 00-3.9 9.92l4 11a7.94 7.94 0 009.4 5l25.89-5a8 8 0 018.59 4.11q2.25 4.2 4.8 8.41a8.16 8.16 0 01-.7 9.52l-17.29 19.96a8 8 0 00-.3 10.62l7.49 9a7.88 7.88 0 0010.5 1.51l22.69-13.63a8 8 0 019.39.9c2.4 2.11 4.9 4.21 7.4 6.22a8 8 0 012.5 9.11l-9.4 24.75a8 8 0 003.3 10.12l10.2 5.91a8 8 0 0010.39-2.21l16.79-20.64c2.1-2.6 5.5-3.7 8.2-2.6 3.4 1.4 5.7 2.2 9.9 3.61a8 8 0 015.49 7.71l-.4 26.45a8.07 8.07 0 006.6 8.42l11.59 2a8.07 8.07 0 009.1-5.61l8.6-25a8 8 0 017.79-5.41h9.8a8.07 8.07 0 017.79 5.41l8.6 25a8.07 8.07 0 009.1 5.61l11.59-2a8.07 8.07 0 006.6-8.42l-.4-26.45a8 8 0 015.49-7.71c4.2-1.41 7-2.51 9.6-3.51s5.8-1 8.3 2.1l17 20.94A8 8 0 00355 439l10.2-5.91a7.93 7.93 0 003.3-10.12l-9.4-24.75a8.08 8.08 0 012.5-9.12c2.5-2 5-4.1 7.4-6.21a8 8 0 019.39-.9L401 395.66a8 8 0 0010.5-1.51l7.49-9a8 8 0 00-.3-10.62l-17.29-19.94a8 8 0 01-.7-9.52q2.55-4.05 4.8-8.41a8.11 8.11 0 018.59-4.11l25.89 5a8 8 0 009.4-5l4-11a8.05 8.05 0 00-3.9-9.92l-23.09-12.82a7.94 7.94 0 01-3.9-8.62c.6-3.2 1.2-6.31 1.7-9.51a8.08 8.08 0 016.6-6.82l26.08-4.2a8.09 8.09 0 007.1-7.92V250a8.25 8.25 0 00-7.27-7.73zM256 112a143.82 143.82 0 01139.38 108.12A16 16 0 01379.85 240H274.61a16 16 0 01-13.91-8.09l-52.1-91.71a16 16 0 019.85-23.39A146.94 146.94 0 01256 112zM112 256a144 144 0 0143.65-103.41 16 16 0 0125.17 3.47L233.06 248a16 16 0 010 15.87l-52.67 91.7a16 16 0 01-25.18 3.36A143.94 143.94 0 01112 256zm144 144a146.9 146.9 0 01-38.19-4.95 16 16 0 01-9.76-23.44l52.58-91.55a16 16 0 0113.88-8H379.9a16 16 0 0115.52 19.88A143.84 143.84 0 01256 400z"
+      />
+    </svg>
+
+  @react.component
+  let colorFill = (
+    ~className="",
+    ~fill="none",
+    ~stroke="currentColor",
+    ~strokeWidth="32",
+    ~strokeMiterlimit="10",
+  ) =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        d="M419.1 337.45a3.94 3.94 0 00-6.1 0c-10.5 12.4-45 46.55-45 77.66 0 27 21.5 48.89 48 48.89h0c26.5 0 48-22 48-48.89 0-31.11-34.3-65.26-44.9-77.66zM387 287.9L155.61 58.36a36 36 0 00-51 0l-5.15 5.15a36 36 0 000 51l52.89 52.89 57-57L56.33 263.2a28 28 0 00.3 40l131.2 126a28.05 28.05 0 0038.9-.1c37.8-36.6 118.3-114.5 126.7-122.9 5.8-5.8 18.2-7.1 28.7-7.1h.3a6.53 6.53 0 004.57-11.2z"
+        fill
+        stroke
+        strokeMiterlimit
+        strokeWidth
+      />
+    </svg>
+
+  @react.component
+  let colorFilter = (
+    ~className="",
+    ~fill="none",
+    ~stroke="currentColor",
+    ~strokeLinejoin="round",
+    ~strokeWidth="32",
+  ) =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <circle cx="256" cy="184" r="120" fill stroke strokeLinejoin strokeWidth />
+      <circle cx="344" cy="328" r="120" fill stroke strokeLinejoin strokeWidth />
+      <circle cx="168" cy="328" r="120" fill stroke strokeLinejoin strokeWidth />
+    </svg>
+
+  @react.component
+  let colorPalette = (
+    ~className="",
+    ~fill="none",
+    ~stroke="currentColor",
+    ~strokeWidth="32",
+    ~strokeMiterlimit="10",
+  ) =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        d="M430.11 347.9c-6.6-6.1-16.3-7.6-24.6-9-11.5-1.9-15.9-4-22.6-10-14.3-12.7-14.3-31.1 0-43.8l30.3-26.9c46.4-41 46.4-108.2 0-149.2-34.2-30.1-80.1-45-127.8-45-55.7 0-113.9 20.3-158.8 60.1-83.5 73.8-83.5 194.7 0 268.5 41.5 36.7 97.5 55 152.9 55.4h1.7c55.4 0 110-17.9 148.8-52.4 14.4-12.7 11.99-36.6.1-47.7z"
+        fill
+        stroke
+        strokeMiterlimit
+        strokeWidth
+      />
+      <circle cx="144" cy="208" r="32" />
+      <circle cx="152" cy="311" r="32" />
+      <circle cx="224" cy="144" r="32" />
+      <circle cx="256" cy="367" r="48" />
+      <circle cx="328" cy="144" r="32" />
+    </svg>
+
+  @react.component
+  let colorWand = (
+    ~className="",
+    ~fill="none",
+    ~stroke="currentColor",
+    ~strokeLinecap="round",
+    ~strokeWidth="32",
+    ~strokeMiterlimit="10",
+  ) =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <rect
+        fill
+        stroke
+        strokeMiterlimit
+        strokeWidth
+        x="280.48"
+        y="122.9"
+        width="63.03"
+        height="378.2"
+        rx="31.52"
+        transform="rotate(-45 312.002 311.994)"
+      />
+      <path
+        d="M178.38 178.38a31.64 31.64 0 000 44.75L223.25 268 268 223.25l-44.87-44.87a31.64 31.64 0 00-44.75 0z"
+      />
+      <path
+        stroke
+        strokeMiterlimit
+        strokeWidth
+        strokeLinecap
+        d="M48 192h48M90.18 90.18l33.94 33.94M192 48v48M293.82 90.18l-33.94 33.94M124.12 259.88l-33.94 33.94"
+      />
+    </svg>
+
+  @react.component
+  let compass = (
+    ~className="",
+    ~fill="none",
+    ~stroke="currentColor",
+    ~strokeWidth="32",
+    ~strokeMiterlimit="10",
+  ) =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        d="M448 256c0-106-86-192-192-192S64 150 64 256s86 192 192 192 192-86 192-192z"
+        fill
+        stroke
+        strokeMiterlimit
+        strokeWidth
+      />
+      <path
+        d="M350.67 150.93l-117.2 46.88a64 64 0 00-35.66 35.66l-46.88 117.2a8 8 0 0010.4 10.4l117.2-46.88a64 64 0 0035.66-35.66l46.88-117.2a8 8 0 00-10.4-10.4zM256 280a24 24 0 1124-24 24 24 0 01-24 24z"
+      />
+    </svg>
 }
 
 module Filled = {
