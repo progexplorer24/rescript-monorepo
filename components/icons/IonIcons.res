@@ -1778,6 +1778,40 @@ module Filled = {
         d="M256.07 96c-97 0-176 78.95-176 176a175.23 175.23 0 0040.81 112.56l-36.12 36.13a16 16 0 1022.63 22.62l36.12-36.12a175.63 175.63 0 00225.12 0l36.13 36.12a16 16 0 1022.63-22.62l-36.13-36.13A175.17 175.17 0 00432.07 272c0-97-78.95-176-176-176zm16 176a16 16 0 01-16 16h-80a16 16 0 010-32h64v-96a16 16 0 0132 0z"
       />
     </svg>
+  @react.component
+  let albums = (~className="") =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        d="M368 96H144a16 16 0 010-32h224a16 16 0 010 32zM400 144H112a16 16 0 010-32h288a16 16 0 010 32zM419.13 448H92.87A44.92 44.92 0 0148 403.13V204.87A44.92 44.92 0 0192.87 160h326.26A44.92 44.92 0 01464 204.87v198.26A44.92 44.92 0 01419.13 448z"
+      />
+    </svg>
+
+  @react.component
+  let alert = (
+    ~className="",
+    ~fill="none",
+    ~stroke="currentColor",
+    ~strokeLinecap="round",
+    ~strokeLinejoin="round",
+    ~strokeWidth="32",
+  ) =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        d="M256 80c-8.66 0-16.58 7.36-16 16l8 216a8 8 0 008 8h0a8 8 0 008-8l8-216c.58-8.64-7.34-16-16-16z"
+        fill
+        stroke
+        strokeLinecap
+        strokeLinejoin
+        strokeWidth
+      />
+      <circle cx="256" cy="416" r="16" fill stroke strokeLinecap strokeLinejoin strokeWidth />
+    </svg>
 }
 module Sharp = {
   let defaultSize = twStyle([w(#v10), h(#v10)])
