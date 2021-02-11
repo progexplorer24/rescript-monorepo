@@ -3,6 +3,10 @@ module Styles = {
   let wrapper = merge(.[twStyle([gridCols(#v2), maxW(#xl6), mx(#auto), mt(#v6), grid])])
   let hover = twStyle([selector("&:hover", tw([srOnly, noSrOnly, bg(#blue700, ~opacity=0.5)]))])
 
+  let alegreya = twStyle([[CssJs.fontFamily(#custom("Alegreya Sans"))]])
+  let crimson = twStyle([[CssJs.fontFamily(#custom("Crimson Pro"))]])
+  let jetBrains = twStyle([[CssJs.fontFamily(#custom("JetBrains Mono"))]])
+
   let shadow = twStyle([shadow(#xl)])
 }
 
@@ -32,11 +36,22 @@ module Styles = {
 
 // Js.log(apostrophe)
 
+// Theme.GoogleFonts.st
+
 let default = () => {
-  <HeadConfiguration font=#Poppins(#italic900)>
+  <HeadConfiguration>
     <div className=Styles.wrapper>
       <div>
-        <h2 className=Styles.hover> {"Bs-TailwindCSS"->Utils.str} </h2>
+        <h2 className={Tailwind.merge(.[Styles.hover])}> {"Bs-TailwindCSS"->Utils.str} </h2>
+        <h2 className={Tailwind.merge(.[Styles.alegreya])}>
+          {"This is a level 2 heading"->Utils.str}
+        </h2>
+        <h2 className={Tailwind.merge(.[Styles.crimson])}>
+          {"This is a level 2 heading"->Utils.str}
+        </h2>
+        <h2 className={Tailwind.merge(.[Styles.jetBrains])}>
+          {"This is a level 2 heading"->Utils.str}
+        </h2>
         <input
           type_="text"
           name=""
