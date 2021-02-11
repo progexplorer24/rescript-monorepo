@@ -766,6 +766,30 @@ let default = () => {
         <IonIcons.Filled.ban />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"ban"->Utils.str} </h2>
       </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Filled.bandage />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"bandage"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Filled.barChart />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"barChart"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Filled.barbell />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"barbell"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Filled.barcode />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"barcode"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Filled.baseball />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"baseball"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Filled.basket />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"basket"->Utils.str} </h2>
+      </div>
     </div>
     <h1 className=Styles.h1> {"Sharp Icons"->Utils.str} </h1>
     <div
