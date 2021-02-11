@@ -331,6 +331,42 @@ let default = () => {
         <IonIcons.Filled.alert />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"alert"->Utils.str} </h2>
       </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+      <IonIcons.Filled.alertCircle />
+      <h2 className={Tailwind.merge(.[Styles.h2])}> {"alertCircle"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+      <IonIcons.Filled.americanFootball />
+      <h2 className={Tailwind.merge(.[Styles.h2])}> {"americanFootball"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+      <IonIcons.Filled.analytics />
+      <h2 className={Tailwind.merge(.[Styles.h2])}> {"analytics"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+      <IonIcons.Filled.aperture />
+      <h2 className={Tailwind.merge(.[Styles.h2])}> {"aperture"->Utils.str} </h2>
+      </div>
+      // <div className={Tailwind.merge(.[Styles.block])}>
+      // <IonIcons.Filled.aperture />
+      // <h2 className={Tailwind.merge(.[Styles.h2])}> {"aperture"->Utils.str} </h2>
+      // </div>
+      // <div className={Tailwind.merge(.[Styles.block])}>
+      // <IonIcons.Filled.aperture />
+      // <h2 className={Tailwind.merge(.[Styles.h2])}> {"aperture"->Utils.str} </h2>
+      // </div>
+      // <div className={Tailwind.merge(.[Styles.block])}>
+      // <IonIcons.Filled.aperture />
+      // <h2 className={Tailwind.merge(.[Styles.h2])}> {"aperture"->Utils.str} </h2>
+      // </div>
+      // <div className={Tailwind.merge(.[Styles.block])}>
+      // <IonIcons.Filled.aperture />
+      // <h2 className={Tailwind.merge(.[Styles.h2])}> {"aperture"->Utils.str} </h2>
+      // </div>
+      // <div className={Tailwind.merge(.[Styles.block])}>
+      // <IonIcons.Filled.aperture />
+      // <h2 className={Tailwind.merge(.[Styles.h2])}> {"aperture"->Utils.str} </h2>
+      // </div>
     </div>
     <h1 className=Styles.h1> {"Sharp Icons"->Utils.str} </h1>
     <div
