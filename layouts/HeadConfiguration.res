@@ -1,84 +1,100 @@
-module Styles = {
-  open Tailwind
-
-  let font = fontName => fontFamilies([#custom(fontName)])
-
-  let fontStyles = fontName => twStyle([font(fontName)])
-}
-
-// TODO: Przeanalizować każdy przypadek dla każdego możliwego wariantu: - default font, default italic font, changed font Weight font, changed font Weight italic font,
-
-type normalWeights = Theme.GoogleFonts.normalWeights
-type italicWeights = Theme.GoogleFonts.italicWeights
-
-// type fonts = [#Poppins(Theme.GoogleFonts.weights18) | #Overpass(Theme.GoogleFonts.weights16)]
-
-// type record = {
-//   fontName: string,
-//   weight: int,
-// }
-
-// let toFontValue = (font: fonts) =>
-//   switch font {
-//   | #Poppins(weight) => {fontName: "Poppins", weight: toWeightValue(weight)}
-//   | #Overpass(weight) => {fontName: "Overpass", weight: toWeightValue(weight)}
-//   }
-
 module GenerateLink = {
-  let isItalic = bool => bool ? "1," : ""
+  type italicSpec = {
+    prefix: string,
+    normalPrefix: string,
+    italicPrefix: string,
+  }
 
-  let weightString = (~italic=false, weight: int) =>
-    `wght@${isItalic(italic)}${Belt.Int.toString(weight)}`
+  type weights = array<Theme.GoogleFonts.weightRecord>
+
+  type fontName = string
+
+  type fontFamilies = array<Theme.GoogleFonts.fontRecord>
+
+  let hasItalics = (weights: weights) =>
+    Belt.Array.some(weights, a => a.isItalic === true)
+      ? {
+          prefix: ":ital,",
+          normalPrefix: "0,",
+          italicPrefix: "1,",
+        }
+      : {
+          prefix: ":",
+          normalPrefix: "",
+          italicPrefix: "",
+        }
+
+  let weightPrefix = (
+    {weight, isItalic}: Theme.GoogleFonts.weightRecord,
+    normalPrefix,
+    italicPrefix,
+  ) => `${isItalic ? italicPrefix : normalPrefix}${Belt.Int.toString(weight)};`
+
+  let generateWeights = (~normalPrefix="", ~italicPrefix="", weights: weights) =>
+    Js.String2.slice(
+      Belt.Array.reduce(weights, "", (acc, value) =>
+        acc ++ weightPrefix(value, normalPrefix, italicPrefix)
+      ),
+      ~from=0,
+      ~to_=-1,
+    )
 
   let linkFontName = fontString => Js.String2.replaceByRe(fontString, %re("/ /g"), "+")
 
-  let ital = ":ital,"
+  let createFontFamily = (fontName, weights) => {
+    let {prefix, normalPrefix, italicPrefix} = hasItalics(weights)
+    `family=${linkFontName(fontName)}${prefix}wght@${generateWeights(
+        weights,
+        ~normalPrefix,
+        ~italicPrefix,
+      )}&`
+  }
 
-  let generateLink = (fontName, weight, isItalic) =>
-    `https://fonts.googleapis.com/css2?family=${linkFontName(fontName)}${isItalic
-        ? ital
-        : ":"}${weightString(weight, ~italic=isItalic)}&display=swap`
+  let createFontFamilies = (fontFamilies: fontFamilies) => {
+    Belt.Array.reduce(fontFamilies, "", (acc, font) =>
+      acc ++ createFontFamily(font.fontName, font.weights)
+    )
+  }
 
-  // let generateItalicLinks = ({fontName, weight, isItalic}: Theme.GoogleFonts.fontRecord) =>
-
-  //   | #...italicWeights as iw =>
-  //     `https://fonts.googleapis.com/css2?family=${linkFontName(fontName)}:ital,${weightString(
-  //         iw,
-  //         ~italic=true,
-  //       )}&display=swap`
-  //   }
+  let generateLink = fontFamilies => {
+    `https://fonts.googleapis.com/css2?${createFontFamilies(fontFamilies)}display=swap`
+  }
 }
 
 @react.component
-let make = (~children, ~font: Theme.GoogleFonts.styles18=#Montserrat(#v300)) => {
-  let {fontName, weight, isItalic} = Theme.GoogleFonts.toFontValue(font)
+let make = (
+  ~children,
+  ~fonts: Theme.GoogleFonts.fontsArray=[
+    #AlegreyaSans([#v400]),
+    #CrimsonPro([#v200, #italic200, #italic300]),
+    #JetBrainsMono([#v800]),
+  ],
+  ~title="Page Title",
+) => {
+  let fontFamilies = Theme.GoogleFonts.toFontValues(fonts)
+  // NOTE: Multiple font Families
+  // https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&family=Barlow:ital,wght@1,300&display=swap
+  //
 
-  // let generatelinkWithWeight = ({fontName, weight}: Theme.GoogleFonts.fontRecord) =>
-  //   `https://fonts.googleapis.com/css2?family=${linkFontName(fontName)}${weightString(
-  //       weight,
-  //     )}&display=swap`
-  // let generateLink = font => `https://fonts.googleapis.com/css2?family=${font}&display=swap`
+  //  https://fonts.googleapis.com/css2?family=Alegreya+Sans&family=Crimson+Pro:ital,wght@0,200;1,200;1,300&family=JetBrains+Mono:wght@800&display=swap
+  //  https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400&family=Crimson+Pro:ital,wght@0,200;1,200;1,300&family=JetBrains+Mono:wght@800&display=swap
 
-  // | #v100 => generatelinkWithWeight(linkFontName, 100)
-  //   | #v300 => generatelinkWithWeight(linkFontName, 300)
-  //   | #v400 => generateLink(linkFontName)
-  //   | #v500 => generatelinkWithWeight(linkFontName, 500)
-  //   | #v700 => generatelinkWithWeight(linkFontName, 700)
-  //   | #v900 => generatelinkWithWeight(linkFontName, 900)
+  // NOTE: Single font Family
+  // https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&display=swap
+  // https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&display=swap
 
-  // let googleLink = (font: fontType) =>
-  //   switch font {
-  //   | #NotoSansJP(fontValue) =>
-  //     generatelinkWithWeight(Theme.GoogleFonts.toFontValue(#NotoSansJP(fontValue)))
-  //   }
+  // https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,600;1,300&display=swap
+  // https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,600;1,300&display=swap
 
+  // https://fonts.googleapis.com/css2?family=Barlow:ital,wght@1,300&display=swap
+  // https://fonts.googleapis.com/css2?family=Barlow:ital,wght@1,300&display=swap
   <>
     <Next.Head>
       <media name="viewport" content="width=device-width, initial-sacle=1.0" />
-      <title> {"Title"->Utils.str} </title>
+      <title> {title->Utils.str} </title>
       <link rel="preconnect" href="https://fonts.gstatic.com" />
-      <link href={GenerateLink.generateLink(fontName, weight, isItalic)} rel="stylesheet" />
+      <link href={GenerateLink.generateLink(fontFamilies)} rel="stylesheet" />
     </Next.Head>
-    <div className={Tailwind.merge(.[Styles.fontStyles(fontName)])}> children </div>
+    children
   </>
 }

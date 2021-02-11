@@ -1,6 +1,22 @@
-type normalWeights = [#v100 | #v200 | #v300 | #v400 | #v500 | #v600 | #v700 | #v800 | #v900]
+// TODO: Accept array of weights & array of fonts
 
-type italicWeights = [
+// #region  REGION: All possible weights combinations
+
+type _100_200_300_400_500_600_700_800_900 = [
+  | #v100
+  | #v200
+  | #v300
+  | #v400
+  | #v500
+  | #v600
+  | #v700
+  | #v800
+  | #v900
+]
+
+type _100_200_300_400_500_600_700_800_900_array = array<_100_200_300_400_500_600_700_800_900>
+
+type italic_100_200_300_400_500_600_700_800_900 = [
   | #italic100
   | #italic200
   | #italic300
@@ -11,8 +27,14 @@ type italicWeights = [
   | #italic800
   | #italic900
 ]
-type weightType<'a> = [<
-  | #v100
+
+type withItalics_100_200_300_400_500_600_700_800_900_array = array<
+  [_100_200_300_400_500_600_700_800_900 | italic_100_200_300_400_500_600_700_800_900],
+>
+
+// INFO: One weight not available
+
+type _200_300_400_500_600_700_800_900 = [
   | #v200
   | #v300
   | #v400
@@ -21,7 +43,10 @@ type weightType<'a> = [<
   | #v700
   | #v800
   | #v900
-  | #italic100
+]
+
+type _200_300_400_500_600_700_800_900_array = array<_200_300_400_500_600_700_800_900>
+type italic_200_300_400_500_600_700_800_900 = [
   | #italic200
   | #italic300
   | #italic400
@@ -30,6 +55,393 @@ type weightType<'a> = [<
   | #italic700
   | #italic800
   | #italic900
+]
+
+type withItalics_200_300_400_500_600_700_800_900_array = array<
+  [_200_300_400_500_600_700_800_900 | italic_200_300_400_500_600_700_800_900],
+>
+
+type _100_200_300_400_500_600_700_800 = [
+  | #v100
+  | #v200
+  | #v300
+  | #v400
+  | #v500
+  | #v600
+  | #v700
+  | #v800
+]
+
+type _100_200_300_400_500_600_700_800_array = array<_100_200_300_400_500_600_700_800>
+type italic_100_200_300_400_500_600_700_800 = [
+  | #italic100
+  | #italic200
+  | #italic300
+  | #italic400
+  | #italic500
+  | #italic600
+  | #italic700
+  | #italic800
+]
+
+type withItalics_100_200_300_400_500_600_700_800_array = array<
+  [_100_200_300_400_500_600_700_800 | italic_100_200_300_400_500_600_700_800],
+>
+
+type _100_200_300_400_500_600_700_900 = [
+  | #v100
+  | #v200
+  | #v300
+  | #v400
+  | #v500
+  | #v600
+  | #v700
+  | #v900
+]
+type italic_100_200_300_400_500_600_700_900 = [
+  | #italic100
+  | #italic200
+  | #italic300
+  | #italic400
+  | #italic500
+  | #italic600
+  | #italic700
+  | #italic900
+]
+
+type withItalics_100_200_300_400_500_600_700_900_array = array<
+  [_100_200_300_400_500_600_700_900 | italic_100_200_300_400_500_600_700_900],
+>
+
+type _100_200_300_400_600_700_800_900 = [
+  | #v100
+  | #v200
+  | #v300
+  | #v400
+  | #v600
+  | #v700
+  | #v800
+  | #v900
+]
+type _100_200_300_400_600_700_800_900_array = array<_100_200_300_400_600_700_800_900>
+type italic_100_200_300_400_600_700_800_900 = [
+  | #italic100
+  | #italic200
+  | #italic300
+  | #italic400
+  | #italic600
+  | #italic700
+  | #italic800
+  | #italic900
+]
+
+type withItalics_100_200_300_400_600_700_800_900_array = array<
+  [_100_200_300_400_600_700_800_900 | italic_100_200_300_400_600_700_800_900],
+>
+
+// INFO: Two weights not available
+
+type _100_300_400_500_700_800_900 = [#v100 | #v300 | #v400 | #v500 | #v700 | #v800 | #v900]
+type _100_300_400_500_700_800_900_array = array<_100_300_400_500_700_800_900>
+type italic_100_300_400_500_700_800_900 = [
+  | #italic100
+  | #italic300
+  | #italic400
+  | #italic500
+  | #italic700
+  | #italic800
+  | #italic900
+]
+
+type withItalics_100_300_400_500_700_800_900_array = array<
+  [_100_300_400_500_700_800_900 | italic_100_300_400_500_700_800_900],
+>
+
+type _100_200_300_400_500_600_700 = [#v100 | #v200 | #v300 | #v400 | #v500 | #v600 | #v700]
+type _100_200_300_400_500_600_700_array = array<
+  [#v100 | #v200 | #v300 | #v400 | #v500 | #v600 | #v700],
+>
+type italic_100_200_300_400_500_600_700 = [
+  | #italic100
+  | #italic200
+  | #italic300
+  | #italic400
+  | #italic500
+  | #italic600
+  | #italic700
+]
+
+type withItalics_100_200_300_400_500_600_700_array = array<
+  [_100_200_300_400_500_600_700 | italic_100_200_300_400_500_600_700],
+>
+
+type _100_300_400_500_600_700_800 = [#v100 | #v300 | #v400 | #v500 | #v600 | #v700 | #v800]
+type italic_100_300_400_500_600_700_800 = [
+  | #italic100
+  | #italic300
+  | #italic400
+  | #italic500
+  | #italic600
+  | #italic700
+  | #italic800
+]
+
+type withItalics_100_300_400_500_600_700_800_array = array<
+  [_100_300_400_500_600_700_800 | italic_100_300_400_500_600_700_800],
+>
+
+type _200_300_400_500_600_700_800 = [#v200 | #v300 | #v400 | #v500 | #v600 | #v700 | #v800]
+type _200_300_400_500_600_700_800_array = array<_200_300_400_500_600_700_800>
+type italic_200_300_400_500_600_700_800 = [
+  | #italic200
+  | #italic300
+  | #italic400
+  | #italic500
+  | #italic600
+  | #italic700
+  | #italic800
+]
+
+type withItalics_200_300_400_500_600_700_800_array = array<
+  [_200_300_400_500_600_700_800 | italic_200_300_400_500_600_700_800],
+>
+
+type _200_300_400_600_700_800_900 = [#v200 | #v300 | #v400 | #v600 | #v700 | #v800 | #v900]
+type _200_300_400_600_700_800_900_array = array<
+  [#v200 | #v300 | #v400 | #v600 | #v700 | #v800 | #v900],
+>
+type italic_200_300_400_600_700_800_900 = [
+  | #italic200
+  | #italic300
+  | #italic400
+  | #italic600
+  | #italic700
+  | #italic800
+  | #italic900
+]
+
+type withItalics_200_300_400_600_700_800_900_array = array<
+  [_200_300_400_600_700_800_900 | italic_200_300_400_600_700_800_900],
+>
+
+type _300_400_500_600_700_800_900 = [#v300 | #v400 | #v500 | #v600 | #v700 | #v800 | #v900]
+type _300_400_500_600_700_800_900_array = array<_300_400_500_600_700_800_900>
+type italic_300_400_500_600_700_800_900 = [
+  | #italic300
+  | #italic400
+  | #italic500
+  | #italic600
+  | #italic700
+  | #italic800
+  | #italic900
+]
+
+type withItalics_300_400_500_600_700_800_900_array = array<
+  [_300_400_500_600_700_800_900 | italic_300_400_500_600_700_800_900],
+>
+
+type _200_300_400_500_600_700_900 = [#v200 | #v300 | #v400 | #v500 | #v600 | #v700 | #v900]
+type _200_300_400_500_600_700_900_array = array<_200_300_400_500_600_700_900>
+type italic_200_300_400_500_600_700_900 = [
+  | #italic200
+  | #italic300
+  | #italic400
+  | #italic500
+  | #italic600
+  | #italic700
+  | #italic900
+]
+
+type withItalics_200_300_400_500_600_700_900_array = array<
+  [_200_300_400_500_600_700_900 | italic_200_300_400_500_600_700_900],
+>
+
+// INFO: Three weights not available
+
+type _200_300_400_500_600_700 = [#v200 | #v300 | #v400 | #v500 | #v600 | #v700]
+type italic_200_300_400_500_600_700 = [
+  | #italic200
+  | #italic300
+  | #italic400
+  | #italic500
+  | #italic600
+  | #italic700
+]
+
+type withItalics_200_300_400_500_600_700_array = array<
+  [_200_300_400_500_600_700 | italic_200_300_400_500_600_700],
+>
+
+type _400_500_600_700_800_900 = [#v400 | #v500 | #v600 | #v700 | #v800 | #v900]
+type italic_400_500_600_700_800_900 = [
+  | #italic400
+  | #italic500
+  | #italic600
+  | #italic700
+  | #italic800
+  | #italic900
+]
+
+type withItalics_400_500_600_700_800_900_array = array<
+  [_400_500_600_700_800_900 | italic_400_500_600_700_800_900],
+>
+
+type _300_400_500_600_700_800 = [#v300 | #v400 | #v500 | #v600 | #v700 | #v800]
+type italic_300_400_500_600_700_800 = [
+  | #italic300
+  | #italic400
+  | #italic500
+  | #italic600
+  | #italic700
+  | #italic800
+]
+
+type withItalics_300_400_500_600_700_800_array = array<
+  [_300_400_500_600_700_800 | italic_300_400_500_600_700_800],
+>
+
+type _100_300_400_500_700_900 = [#v100 | #v300 | #v400 | #v500 | #v700 | #v900]
+type italic_100_300_400_500_700_900 = [
+  | #italic100
+  | #italic300
+  | #italic400
+  | #italic500
+  | #italic700
+  | #italic900
+]
+
+type withItalics_100_300_400_500_700_900_array = array<
+  [_100_300_400_500_700_900 | italic_100_300_400_500_700_900],
+>
+
+// INFO: Four weights not available
+
+type _400_500_700_800_900 = [#v400 | #v500 | #v700 | #v800 | #v900]
+type _400_500_700_800_900_array = array<[#v400 | #v500 | #v700 | #v800 | #v900]>
+type italic_400_500_700_800_900 = [#italic400 | #italic500 | #italic700 | #italic800 | #italic900]
+
+type withItalics_400_500_700_800_900_array = array<
+  [_400_500_700_800_900 | italic_400_500_700_800_900],
+>
+
+type _300_400_500_600_700 = [#v300 | #v400 | #v500 | #v600 | #v700]
+type italic_300_400_500_600_700 = [#italic300 | #italic400 | #italic500 | #italic600 | #italic700]
+
+type withItalics_300_400_500_600_700_array = array<
+  [_300_400_500_600_700 | italic_300_400_500_600_700],
+>
+
+type _400_500_600_700_800 = [#v400 | #v500 | #v600 | #v700 | #v800]
+type italic_400_500_600_700_800 = [#italic400 | #italic500 | #italic600 | #italic700 | #italic800]
+
+type withItalics_400_500_600_700_800_array = array<
+  [_400_500_600_700_800 | italic_400_500_600_700_800],
+>
+
+type _200_300_400_600_700 = [#v200 | #v300 | #v400 | #v600 | #v700]
+type italic_200_300_400_600_700 = [#italic200 | #italic300 | #italic400 | #italic600 | #italic700]
+
+type withItalics_200_300_400_600_700_array = array<
+  [_200_300_400_600_700 | italic_200_300_400_600_700],
+>
+
+type _100_300_400_700_900 = [#v100 | #v300 | #v400 | #v700 | #v900]
+type italic_100_300_400_700_900 = [
+  | #italic100
+  | #italic300
+  | #italic400
+  | #italic600
+  | #italic700
+  | #italic900
+]
+
+type withItalics_100_300_400_700_900_array = array<
+  [_100_300_400_700_900 | italic_100_300_400_700_900],
+>
+
+type _300_400_600_700_800 = [#v300 | #v400 | #v600 | #v700 | #v800]
+type italic_300_400_600_700_800 = [#italic300 | #italic400 | #italic600 | #italic700 | #italic800]
+
+type withItalics_300_400_600_700_800_array = array<
+  [_300_400_600_700_800 | italic_300_400_600_700_800],
+>
+
+type _200_300_400_600_700_900 = [#v200 | #v300 | #v400 | #v600 | #v700 | #v900]
+type italic_200_300_400_600_700_900 = [
+  | #italic200
+  | #italic300
+  | #italic400
+  | #italic600
+  | #italic700
+  | #italic900
+]
+
+type withItalics_200_300_400_600_700_900_array = array<
+  [_200_300_400_600_700_900 | italic_200_300_400_600_700_900],
+>
+
+type withItalics_titilliumWeb_array = array<[_200_300_400_600_700_900 | italic_200_300_400_600_700]>
+
+// INFO: Fonts with 4 weights
+
+type _400_500_600_700 = [#v400 | #v500 | #v600 | #v700]
+type _400_500_600_700_array = array<[#v400 | #v500 | #v600 | #v700]>
+type italics_400_500_600_700 = [#italic400 | #italic500 | #italic600 | #italic700]
+
+type _300_400_700_900 = [#v300 | #v400 | #v700 | #v900]
+type italics_300_400_700_900 = [#italic300 | #italic400 | #italic700 | #italic900]
+
+type _400_500_700_900 = [#v400 | #v500 | #v700 | #v900]
+type italics_400_500_700_900 = [#italic400 | #italic500 | #italic700 | #italic900]
+
+type _400_700_800_900 = [#v400 | #v700 | #v800 | #v900]
+type italics_400_700_800_900 = [#italic400 | #italic700 | #italic800 | #italic900]
+
+type _300_400_500_700 = [#v300 | #v400 | #v500 | #v700]
+type italics_300_400_500_700 = [#italic300 | #italic400 | #italic500 | #italic700]
+
+type withItalics_400_500_600_700_array = array<[_400_500_600_700 | italics_400_500_600_700]>
+type withItalics_300_400_700_900_array = array<[_300_400_700_900 | italics_300_400_700_900]>
+type withItalics_400_500_700_900_array = array<[_400_500_700_900 | italics_400_500_700_900]>
+type withItalics_400_700_800_900_array = array<[_400_700_800_900 | italics_400_700_800_900]>
+type withItalics_300_400_500_700_array = array<[_300_400_500_700 | italics_300_400_500_700]>
+
+// INFO: Single weights
+
+type _100_200_300_400_500_700_800_900 = [
+  | #v100
+  | #v200
+  | #v300
+  | #v400
+  | #v500
+  | #v700
+  | #v800
+  | #v900
+]
+
+type _100_200_300_400_500_700_800_900_array = array<_100_200_300_400_500_700_800_900>
+
+type _100_300_400_500_600_700_800_900 = [
+  | #v100
+  | #v300
+  | #v400
+  | #v500
+  | #v600
+  | #v700
+  | #v800
+  | #v900
+]
+type _100_300_400_500_600_700_800_900_array = array<_100_300_400_500_600_700_800_900>
+
+type _200_300_400_500_700_800_900 = [#v200 | #v300 | #v400 | #v500 | #v700 | #v800 | #v900]
+type _200_300_400_500_700_800_900_array = array<_200_300_400_500_700_800_900>
+
+// #endregion     ENDREGION: All possible weights combinations
+
+// #region REGION: Convert weights to spec object
+type weightType<'a> = [<
+  | _100_200_300_400_500_600_700_800_900
+  | italic_100_200_300_400_500_600_700_800_900
 ] as 'a
 
 type weightRecord = {
@@ -113,1910 +525,902 @@ let toWeightValue = (weight: weightType<'a>) =>
     }
   }
 
-type weights18 = [normalWeights | italicWeights]
-type normal8 = [#v100 | #v200 | #v300 | #v400 | #v600 | #v700 | #v800 | #v900]
+let toArrayWeightValue = (weightsArray: array<weightType<'a>>) =>
+  Belt.Array.map(weightsArray, element => toWeightValue(element))
 
-type italic8 = [
-  | #italic100
-  | #italic200
-  | #italic300
-  | #italic400
-  | #italic600
-  | #italic700
-  | #italic800
-  | #italic900
-]
-
-type weights16 = [normal8 | italic8]
-
-// NOTE: 30 fonts
-type styles18 = [
-  | #Montserrat(weights18)
-  | #Poppins(weights18)
-  | #Raleway(weights18)
-  | #WorkSans(weights18)
-  | #FiraSans(weights18)
-  | #Barlow(weights18)
-  | #LibreFranklin(weights18)
-  | #Bitter(weights18)
-  | #BarlowCondensed(weights18)
-  | #Exo2(weights18)
-  | #Kanit(weights18)
-  | #Prompt(weights18)
-  | #FiraSansCondensed(weights18)
-  | #Exo(weights18)
-  | #BarlowSemiCondensed(weights18)
-  | #MontserratAlternates(weights18)
-  | #FiraSansExtraCondensed(weights18)
-  | #PublicSans(weights18)
-  | #Saira(weights18)
-  | #Jost(weights18)
-  | #Taviraj(weights18)
-  | #Texturina(weights18)
-  | #Fraunces(weights18)
-  | #Piazolla(weights18)
-  | #Trirong(weights18)
-  | #Grandstander(weights18)
-  | #Epilogue(weights18)
-  | #Petrona(weights18)
-  | #Tomorrow(weights18)
-  | #Grenze(weights18)
-  | #Overpass(weights16)
-  | #Mulish(weights16)
-]
-
-type styles16 = [#Overpass(weights16) | #Mulish(weights16)]
-
-type fonts = [styles18 | styles16]
+// #endregion     ENDREGION: Convert weights to spec object
 
 type fontRecord = {
   fontName: string,
-  weight: int,
-  isItalic: bool,
+  weights: array<weightRecord>,
 }
 
-let toFontValue = (font: styles18) =>
-  switch font {
-  | #Montserrat(weight) => {
-      let {weight, isItalic} = toWeightValue(weight)
-
-      {
-        fontName: "Montserrat",
-        weight: weight,
-        isItalic: isItalic,
-      }
-    }
-  | #Poppins(weight) => {
-      let {weight, isItalic} = toWeightValue(weight)
-
-      {
-        fontName: "Poppins",
-        weight: weight,
-        isItalic: isItalic,
-      }
-    }
-  | #Raleway(weight) => {
-      let {weight, isItalic} = toWeightValue(weight)
-
-      {
-        fontName: "Raleway",
-        weight: weight,
-        isItalic: isItalic,
-      }
-    }
-  | #WorkSans(weight) => {
-      let {weight, isItalic} = toWeightValue(weight)
-
-      {
-        fontName: "Work Sans",
-        weight: weight,
-        isItalic: isItalic,
-      }
-    }
-  | #FiraSans(weight) => {
-      let {weight, isItalic} = toWeightValue(weight)
-
-      {
-        fontName: "Fira Sans",
-        weight: weight,
-        isItalic: isItalic,
-      }
-    }
-  | #Barlow(weight) => {
-      let {weight, isItalic} = toWeightValue(weight)
-
-      {
-        fontName: "Barlow",
-        weight: weight,
-        isItalic: isItalic,
-      }
-    }
-  | #LibreFranklin(weight) => {
-      let {weight, isItalic} = toWeightValue(weight)
-
-      {
-        fontName: "Libre Franklin",
-        weight: weight,
-        isItalic: isItalic,
-      }
-    }
-  | #Bitter(weight) => {
-      let {weight, isItalic} = toWeightValue(weight)
-
-      {
-        fontName: "Bitter",
-        weight: weight,
-        isItalic: isItalic,
-      }
-    }
-  | #Fraunces(weight) => {
-      let {weight, isItalic} = toWeightValue(weight)
-
-      {
-        fontName: "Fraunces",
-        weight: weight,
-        isItalic: isItalic,
-      }
-    }
-  | #BarlowCondensed(weight) => {
-      let {weight, isItalic} = toWeightValue(weight)
-
-      {
-        fontName: "Barlow Condensed",
-        weight: weight,
-        isItalic: isItalic,
-      }
-    }
-  | #Exo2(weight) => {
-      let {weight, isItalic} = toWeightValue(weight)
-
-      {
-        fontName: "Exo 2",
-        weight: weight,
-        isItalic: isItalic,
-      }
-    }
-  | #Kanit(weight) => {
-      let {weight, isItalic} = toWeightValue(weight)
-
-      {
-        fontName: "Kanit",
-        weight: weight,
-        isItalic: isItalic,
-      }
-    }
-  | #Prompt(weight) => {
-      let {weight, isItalic} = toWeightValue(weight)
-
-      {
-        fontName: "Prompt",
-        weight: weight,
-        isItalic: isItalic,
-      }
-    }
-  | #FiraSansCondensed(weight) => {
-      let {weight, isItalic} = toWeightValue(weight)
-
-      {
-        fontName: "Fira Sans Condensed",
-        weight: weight,
-        isItalic: isItalic,
-      }
-    }
-  | #Exo(weight) => {
-      let {weight, isItalic} = toWeightValue(weight)
-
-      {
-        fontName: "Exo",
-        weight: weight,
-        isItalic: isItalic,
-      }
-    }
-  | #BarlowSemiCondensed(weight) => {
-      let {weight, isItalic} = toWeightValue(weight)
-
-      {
-        fontName: "Barlow Semi Condensed",
-        weight: weight,
-        isItalic: isItalic,
-      }
-    }
-  | #MontserratAlternates(weight) => {
-      let {weight, isItalic} = toWeightValue(weight)
-
-      {
-        fontName: "Montserrat Alternates",
-        weight: weight,
-        isItalic: isItalic,
-      }
-    }
-  | #FiraSansExtraCondensed(weight) => {
-      let {weight, isItalic} = toWeightValue(weight)
-
-      {
-        fontName: "Fira Sans Extra Condensed",
-        weight: weight,
-        isItalic: isItalic,
-      }
-    }
-  | #PublicSans(weight) => {
-      let {weight, isItalic} = toWeightValue(weight)
-
-      {
-        fontName: "Public Sans",
-        weight: weight,
-        isItalic: isItalic,
-      }
-    }
-  | #Taviraj(weight) => {
-      let {weight, isItalic} = toWeightValue(weight)
-
-      {
-        fontName: "Taviraj",
-        weight: weight,
-        isItalic: isItalic,
-      }
-    }
-  | #Saira(weight) => {
-      let {weight, isItalic} = toWeightValue(weight)
-
-      {
-        fontName: "Saira",
-        weight: weight,
-        isItalic: isItalic,
-      }
-    }
-
-  | #Texturina(weight) => {
-      let {weight, isItalic} = toWeightValue(weight)
-
-      {
-        fontName: "Texturina",
-        weight: weight,
-        isItalic: isItalic,
-      }
-    }
-  | #Jost(weight) => {
-      let {weight, isItalic} = toWeightValue(weight)
-
-      {
-        fontName: "Jost",
-        weight: weight,
-        isItalic: isItalic,
-      }
-    }
-  | #Piazolla(weight) => {
-      let {weight, isItalic} = toWeightValue(weight)
-
-      {
-        fontName: "Piazolla",
-        weight: weight,
-        isItalic: isItalic,
-      }
-    }
-  | #Trirong(weight) => {
-      let {weight, isItalic} = toWeightValue(weight)
-
-      {
-        fontName: "Trirong",
-        weight: weight,
-        isItalic: isItalic,
-      }
-    }
-  | #Grandstander(weight) => {
-      let {weight, isItalic} = toWeightValue(weight)
-
-      {
-        fontName: "Grandstander",
-        weight: weight,
-        isItalic: isItalic,
-      }
-    }
-  | #Epilogue(weight) => {
-      let {weight, isItalic} = toWeightValue(weight)
-
-      {
-        fontName: "Epilogue",
-        weight: weight,
-        isItalic: isItalic,
-      }
-    }
-  | #Petrona(weight) => {
-      let {weight, isItalic} = toWeightValue(weight)
-
-      {
-        fontName: "Petrona",
-        weight: weight,
-        isItalic: isItalic,
-      }
-    }
-  | #Tomorrow(weight) => {
-      let {weight, isItalic} = toWeightValue(weight)
-
-      {
-        fontName: "Tomorrow",
-        weight: weight,
-        isItalic: isItalic,
-      }
-    }
-  | #Grenze(weight) => {
-      let {weight, isItalic} = toWeightValue(weight)
-
-      {
-        fontName: "Grenze",
-        weight: weight,
-        isItalic: isItalic,
-      }
-    }
-
-  | #Overpass(weight) => {
-      let {weight, isItalic} = toWeightValue(weight)
-
-      {
-        fontName: "Overpass",
-        weight: weight,
-        isItalic: isItalic,
-      }
-    }
-  | #Mulish(weight) => {
-      let {weight, isItalic} = toWeightValue(weight)
-
-      {
-        fontName: "Mulish",
-        weight: weight,
-        isItalic: isItalic,
-      }
-    }
-  }
-
-type t = [
-  | #Roboto
-  | #PottaOne
-  | #YuseiMagic
-  | #OpenSans
-  | #HachiMaruPop
-  | #NotoSansJP
-  | #Lato
-  | #Montserrat
-  | #Fraunces
-  | #RobotoCondensed
-  | #SourceSansPro
-  | #Oswald
-  | #LondrinaSolid
-  | #Poppins
-  | #RobotoMono
-  | #NotoSans
-  | #Raleway
-  | #Imbue
-  | #Ubuntu
-  | #PTSans
-  | #RobotoSlab
-  | #Merriweather
-  | #PlayfairDisplay
-  | #Lora
-  | #Nunito
-  | #OpenSansCondensed
-  | #NotoSansKR
-  | #Rubik
-  | #PTSerif
-  | #CodaCaption
-  | #NotoSerif
-  | #WorkSans
-  | #NotoSansTC
-  | #FiraSans
-  | #NanumGothic
-  | #NunitoSans
-  | #TitilliumWeb
-  | #Quicksand
-  | #HindSiligur
-  | #BodoniModa
-  | #Slabo27px
-  | #Mukta
-  | #Karla
-  | #Barlow
-  | #Inconsolata
-  | #Heebo
-  | #Oxygen
-  | #SourceCodePro
-  | #Hanalei
-  | #Inter
-  | #JosefinSans
-  | #PTSansNarrow
-  | #Dosis
-  | #Arimo
-  | #LibreFranklin
-  | #LibreBaskerville
-  | #YanoneKaffeesatz
-  | #Cabin
-  | #Anton
-  | #BigShouldersDisplay
-  | #BebasNeue
-  | #NotoSansSC
-  | #Bitter
-  | #CrimsonText
-  | #IBMPlexSans
-  | #Lobster
-  | #Abel
-  | #DancingScript
-  | #Hind
-  | #FjallaOne
-  | #SourceSerifPro
-  | #NotoSansHK
-  | #Comfortaa
-  | #VarelaRound
-  | #IndieFlower
-  | #ZillaSlab
-  | #AnticSlab
-  | #Arvo
-  | #BarlowCondensed
-  | #Pacifico
-  | #Cairo
-  | #Kanit
-  | #Exo2
-  | #MerriweatherSans
-  | #Syne
-  | #Asap
-  | #ArchitectsDaughter
-  | #Overpass
-  | #ShadowsIntoLight
-  | #EBGaramond
-  | #Teko
-  | #HindiMadurai
-  | #ArchivoNarrow
-  | #Questrial
-  | #Prompt
-  | #BalsamiqSans
-  | #AbrilFatface
-  | #MavenPro
-  | #DMSans
-  | #Gorditas
-  | #Assistant
-  | #Martel
-  | #Acme
-  | #FredokaOne
-  | #CormorantGaramond
-  | #AmaticSC
-  | #IBMPlexSerif
-  | #Play
-  | #PermanentMarker
-  | #Catamaran
-  | #FiraSansCondensed
-  | #Caveat
-  | #Rajdhani
-  | #Domine
-  | #BreeSerif
-  | #Satisfy
-  | #Signika
-  | #Exo
-  | #AlfaSlabOne
-  | #NotoSerifJp
-  | #Righteous
-  | #PatrickHand
-  | #ABeeZee
-  | #Tajawal
-  | #Mulish
-  | #PTSansCaption
-  | #NanumMyeongjo
-  | #Cinzel
-  | #Archivo
-  | #CarterOne
-  | #PatuaOne
-  | #CreteRound
-  | #Amiri
-  | #Vollkorn
-  | #Monda
-  | #SquadaOne
-  | #RussoOne
-  | #Courgette
-  | #FrankRuhlLibre
-  | #BarlowSemiCondensed
-  | #AlegreyaSans
-  | #UbuntuCondensed
-  | #LobsterTwo
-  | #Yantramanav
-  | #FrancoisOne
-  | #Tinos
-  | #Changa
-  | #LuckiestGuy
-  | #Sarabun
-  | #JetBrainsMono
-  | #Alegreya
-  | #ArchivoBlack
-  | #KaushanScript
-  | #Staatliches
-  | #Cardo
-  | #MPLUSRounded1c
-  | #IBMPlexMono
-  | #Kalam
-  | #GreatVibes
-  | #Cuprum
-  | #MPLUS1p
-  | #OriginalSurfer
-  | #Spartan
-  | #GloriaHallelujah
-  | #PathwayGothicOne
-  | #Almarai
-  | #HindGuntur
-  | #Sacramento
-  | #NoticiaText
-  | #Ultra
-  | #ConcertOne
-  | #DidactGothic
-  | #Rokkitt
-  | #Parisienne
-  | #Volkhov
-  | #Baloo2
-  | #QuattrocentoSans
-  | #EncodeSans
-  | #Varta
-  | #PassionOne
-  | #SairaCondensed
-  | #Prata
-  | #Cantarell
-  | #NewsCycle
-  | #Padauk
-  | #OldStandardTT
-  | #Orbitron
-  | #Manrope
-  | #Chivo
-  | #Arapey
-  | #MontserratAlternates
-  | #PaytoneOne
-  | #Ramabhadra
-  | #HindVadodara
-  | #JosefinSlab
-  | #SecularOne
-  | #Sriracha
-  | #SpecialElite
-  | #Quantico
-  | #PlayfairDisplaySC
-  | #Economica
-  | #RopaSans
-  | #IstokWeb
-  | #Quattrocento
-  | #Cookie
-  | #ChakraPetch
-  | #Lemonada
-  | #SawarabiMincho
-  | #Yellowtail
-  | #Sanchez
-  | #Handlee
-  | #PoiretOne
-  | #PressStart2P
-  | #AdventPro
-  | #FiraSansExtraCondensed
-  | #CrimsonPro
-  | #Spectral
-  | #BaiJamjuree
-  | #DMSerifDisplay
-  | #Philosopher
-  | #Neuton
-  | #Bangers
-  | #Viadaloka
-  | #HammersmithOne
-  | #AndikaNewBasic
-  | #Cormorant
-  | #AsapCondensed
-  | #RedHatDisplay
-  | #Ruda
-  | #PublicSans
-  | #Karma
-  | #Taviraj
-  | #DMSerifText
-  | #Monoton
-  | #UnicaOne
-  | #Jura
-  | #Faustina
-  | #Alice
-  | #PragatiNarrow
-  | #Neucha
-  | #Texturina
-  | #NotoSerifTC
-  | #Jost
-  | #Gudea
-  | #Jaldi
-  | #Saira
-  | #Merienda
-  | #GothicA1
-  | #SigmarOne
-  | #CabinCondensed
-  | #HomemadeApple
-  | #Khand
-  | #Unna
-  | #Mitr
-  | #GentiumBasic
-  | #BenchNine
-  | #Amaranth
-  | #PontanoSans
-  | #SpaceMono
-  | #Actor
-  | #Armata
-  | #Viga
-  | #PTMono
-  | #Aleo
-  | #Palanquin
-  | #Tangerine
-  | #JuliusSansOne
-  | #SuezOne
-  | #Lusitana
-  | #YesevaOne
-  | #GentiumBookBasic
-  | #RockSalt
-  | #MarckScript
-  | #Knewave
-  | #Allura
-  | #Playball
-  | #BadScript
-  | #Allan
-  | #SawarabiGothic
-  | #Audiowide
-  | #Marcellus
-  | #FugazOne
-  | #Gruppo
-  | #GochiHand
-  | #TenorSans
-  | #NerkoOne
-  | #Alef
-  | #NanumPenScript
-  | #SairaSemiCondensed
-  | #MarkaziText
-  | #Pangolin
-  | #Gelasio
-  | #Castoro
-  | #NothingYouCouldDo
-  | #Varela
-  | #ShadowsIntoLightTwo
-  | #NotoSerifSC
-  | #Eczar
-  | #AlexBrush
-  | #Mali
-  | #Electrolize
-  | #SignikaNegative
-  | #Itim
-  | #AbhayaLibre
-  | #NanumGothicCoding
-  | #Rufina
-  | #EncodeSansCondensed
-  | #Bungee
-  | #SortsMillGoudy
-  | #CantataOne
-  | #Aclonica
-  | #Engagement
-  | #MrDafoe
-  | #Damion
-  | #Antic
-  | #Sarala
-  | #Arsenal
-  | #BowlbyOneSC
-  | #BigShouldersStencilText
-  | #BigShouldersStencilDisplay
-  | #BigShouldersStencilDisplay
-  | #BigShouldersInlineText
-  | #BigShouldersInlineDisplay
-  | #BlackOpsOne
-  | #OleoScript
-  | #LilitaOne
-  | #PinyonScript
-  | #Sintony
-  | #BalooChettan2
-  | #CoveredByYourGrace
-  | #Krub
-  | #Glegoo
-  | #Cousine
-  | #Cousine
-  | #FiraMono
-  | #Lateef
-  | #Lalezar
-  | #LibreBarcodeEAN13Text
-  | #Jomhuria
-  | #Overlock
-  | #Boogaloo
-  | #CutiveMono
-  | #SairaExtraCondensed
-  | #Alata
-  | #Average
-  | #Sofia
-  | #Rancho
-  | #Caudex
-  | #ReemKufi
-  | #PTSerifCaption
-  | #Pridi
-  | #RubikMonoOne
-  | #Kreon
-  | #KosugiMaru
-  | #Enriqueta
-  | #NotoSerifKR
-  | #Coda
-  | #Chewy
-  | #CourierPrime
-  | #DoHyeon
-  | #Allerta
-  | #SpaceGrotesk
-  | #Yrsa
-  | #AlegreyaSansSC
-  | #Schoolbell
-  | #Laila
-  | #AnonymousPro
-  | #Syncopate
-  | #Scheherazade
-  | #FrederickatheGreat
-  | #Capriola
-  | #MiriamLibre
-  | #Niconne
-  | #ShareTechMono
-  | #Michroma
-  | #AveriaSerifLibre
-  | #MartelSans
-  | #Piazzolla
-  | #OverpassMono
-  | #Candal
-  | #CaveatBrush
-  | #Kameron
-  | #Basic
-  | #Aldrich
-  | #LibreBarcode128
-  | #ArbutusSlab
-  | #Trispace
-  | #Italianno
-  | #NixieOne
-  | #BlackHanSans
-  | #Bevan
-  | #Mallanna
-  | #ReenieBeanie
-  | #LexendDeca
-  | #Sansita
-  | #BerkshireSwash
-  | #Molengo
-  | #CabinSketch
-  | #Kadwa
-  | #AnnieUseYourTelescope
-  | #RedHatText
-  | #Bentham
-  | #Mada
-  | #MuktaVaani
-  | #Norican
-  | #Forum
-  | #SixCaps
-  | #JustAnotherHand
-  | #MuktaMalar
-  | #DaysOne
-  | #Rambla
-  | #ArimaMandurai
-  | #Charm
-  | #VT323
-  | #Scada
-  | #LeckerliOne
-  | #Nobile
-  | #Spinnaker
-  | #Shrikhand
-  | #TitanOne
-  | #Telex
-  | #ComingSoon
-  | #HoltwoodOneSC
-  | #MarcellusSC
-  | #BubblegumSans
-  | #Trirong
-  | #Suranna
-  | #CinzelDecorative
-  | #BungeeInline
-  | #AllertaSencil
-  | #ContrailOne
-  | #Graduate
-  | #RhodiumLibre
-  | #RacingSansOne
-  | #Yesteryear
-  | #Share
-  | #Thasadith
-  | #Judson
-  | #AlegreyaSC
-  | #Rochester
-  | #HerrVonMullerhoff
-  | #ChangaOne
-  | #Oranienbaum
-  | #PalanquinDark
-  | #Arizonia
-  | #Wallpoet
-  | #IMFellDoublePica
-  | #Rye
-  | #Literata
-  | #Singlet
-  | #Biryani
-  | #Creepster
-  | #Amiko
-  | #Voltaire
-  | #Delius
-  | #FaunaOne
-  | #Homenaje
-  | #MrsSaintDelafield
-  | #Sen
-  | #Corben
-  | #Lustria
-  | #Copse
-  | #SansitaSwashed
-  | #Amita
-  | #CarroisGothic
-  | #Kristi
-  | #Pattaya
-  | #Kurale
-  | #Andada
-  | #Magra
-  | #MeriendaOne
-  | #GrandHotel
-  | #AverageSans
-  | #Halant
-  | #Marmelad
-  | #OxygenMono
-  | #Trocchi
-  | #IBMPlexSansCondensed
+// NOTE: 159 fonts 7+ font styles
+type fonts = [
+  | #AdventPro(_100_200_300_400_500_600_700_array)
+  | #Alegreya(_400_500_700_800_900_array)
+  | #AlegreyaSC(_400_500_700_800_900_array)
+  | #AlegreyaSans(withItalics_100_300_400_500_700_800_900_array)
+  | #AlegreyaSansSC(withItalics_100_300_400_500_700_800_900_array)
+  | #Archivo(withItalics_400_500_600_700_array)
+  | #ArchivoNarrow(withItalics_400_500_600_700_array)
+  | #ArimaMadurai(_100_200_300_400_500_700_800_900_array)
+  | #Arimo(withItalics_400_500_600_700_array)
+  | #Asap(withItalics_400_500_600_700_array)
+  | #AsapCondensed(withItalics_400_500_600_700_array)
+  | #Assistant(_200_300_400_500_600_700_800_array)
+  | #BaiJamjuree(withItalics_200_300_400_500_600_700_array)
+  | #Barlow(withItalics_100_200_300_400_500_600_700_800_900_array)
+  | #BarlowCondensed(withItalics_100_200_300_400_500_600_700_800_900_array)
+  | #BarlowSemiCondensed(withItalics_100_200_300_400_500_600_700_800_900_array)
+  | #BeVietnam(withItalics_100_300_400_500_600_700_800_array)
+  | #BigShouldersDisplay(_100_300_400_500_600_700_800_900_array)
+  | #BigShouldersInlineDisplay(_100_300_400_500_600_700_800_900_array)
+  | #BigShouldersInlineText(_100_300_400_500_600_700_800_900_array)
+  | #BigShouldersStencilDisplay(_100_300_400_500_600_700_800_900_array)
+  | #BigShouldersStencilText(_100_300_400_500_600_700_800_900_array)
+  | #BigShouldersText(_100_300_400_500_600_700_800_900_array)
+  | #Biryani(_200_300_400_600_700_800_900_array)
+  | #Bitter(withItalics_100_200_300_400_500_600_700_800_900_array)
+  | #Blinker(_100_200_300_400_600_700_800_900_array)
+  | #BodoniModa(withItalics_400_500_600_700_800_900_array)
+  | #Cabin(withItalics_400_500_600_700_array)
+  | #Catamaran(_100_200_300_400_500_600_700_800_900_array)
+  | #ChakraPetch(withItalics_300_400_500_600_700_array)
+  | #Changa(_200_300_400_500_600_700_800_array)
+  | #Chivo(withItalics_300_400_700_900_array)
+  | #Commissioner(_100_200_300_400_500_600_700_800_900_array)
+  | #Cormorant(withItalics_300_400_500_600_700_array)
+  | #CormorantGaramond(withItalics_300_400_500_600_700_array)
+  | #CormorantInfant(withItalics_300_400_500_600_700_array)
+  | #CrimsonPro(withItalics_200_300_400_500_600_700_800_900_array)
+  | #Cuprum(withItalics_400_500_600_700_array)
+  | #DarkerGrotesque(_300_400_500_600_700_800_900_array)
+  | #Dosis(_200_300_400_500_600_700_800_array)
+  | #EBGaramond(withItalics_400_500_600_700_800_array)
+  | #EncodeSans(_100_200_300_400_500_600_700_800_900_array)
+  | #EncodeSansCondensed(_100_200_300_400_500_600_700_800_900_array)
+  | #EncodeSansExpanded(_100_200_300_400_500_600_700_800_900_array)
+  | #EncodeSansSemiCondensed(_100_200_300_400_500_600_700_800_900_array)
+  | #EncodeSansSemiExpanded(_100_200_300_400_500_600_700_800_900_array)
+  | #Epilogue(withItalics_100_200_300_400_500_600_700_800_900_array)
+  | #Exo(withItalics_100_200_300_400_500_600_700_800_900_array)
+  | #Exo2(withItalics_100_200_300_400_500_600_700_800_900_array)
+  | #ExpletusSans(withItalics_400_500_600_700_array)
+  | #Fahkwang(withItalics_200_300_400_500_600_700_array)
+  | #Faustina(withItalics_400_500_600_700_array)
+  | #FiraSans(withItalics_100_200_300_400_500_600_700_800_900_array)
+  | #FiraSansCondensed(withItalics_100_200_300_400_500_600_700_800_900_array)
+  | #FiraSansExtraCondensed(withItalics_100_200_300_400_500_600_700_800_900_array)
+  | #Fraunces(withItalics_100_200_300_400_500_600_700_800_900_array)
+  | #Gelasio(withItalics_400_500_600_700_array)
+  | #GothicA1(_100_200_300_400_500_600_700_800_900_array)
+  | #Grandstander(withItalics_100_200_300_400_500_600_700_800_900_array)
+  | #Grenze(withItalics_100_200_300_400_500_600_700_800_900_array)
+  | #GrenzeGotisch(_100_200_300_400_500_600_700_800_900_array)
+  | #Heebo(_100_200_300_400_500_600_700_800_900_array)
+  | #HeptaSlab(_100_200_300_400_500_600_700_800_900_array)
+  | #IbarraRealNova(withItalics_400_500_600_700_array)
+  | #IBMPlexMono(withItalics_100_200_300_400_500_600_700_array)
+  | #IBMPlexSans(withItalics_100_200_300_400_500_600_700_array)
+  | #IBMPlexSansCondensed(withItalics_100_200_300_400_500_600_700_array)
+  | #IBMPlexSerif(withItalics_100_200_300_400_500_600_700_array)
+  | #Imbue(_100_200_300_400_500_600_700_800_900_array)
+  | #Inconsolata(_200_300_400_500_600_700_800_900_array)
+  | #InknutAntiqua(_300_400_500_600_700_800_900_array)
+  | #Inter(_100_200_300_400_500_600_700_800_900_array)
+  | #JetBrainsMono(withItalics_100_200_300_400_500_600_700_800_array)
+  | #JosefinSans(withItalics_100_200_300_400_500_600_700_array)
+  | #JosefinSlab(withItalics_100_200_300_400_500_600_700_array)
+  | #Jost(withItalics_100_200_300_400_500_600_700_800_900_array)
+  | #K2D(withItalics_100_200_300_400_500_600_700_800_array)
+  | #Kanit(withItalics_100_200_300_400_500_600_700_800_900_array)
+  | #Karla(withItalics_200_300_400_500_600_700_800_array)
+  | #Kodchasan(withItalics_200_300_400_500_600_700_array)
+  | #KoHo(withItalics_200_300_400_500_600_700_array)
+  | #Krub(withItalics_200_300_400_500_600_700_array)
+  | #Kufam(withItalics_400_500_600_700_800_900_array)
+  | #KulimPark(withItalics_200_300_400_600_700_array)
+  | #Lato(withItalics_100_300_400_700_900_array)
+  | #LibreFranklin(withItalics_100_200_300_400_500_600_700_800_900_array)
+  | #Literata(withItalics_200_300_400_500_600_700_800_900_array)
+  | #Livvic(withItalics_100_200_300_400_500_600_700_900_array)
+  | #Lora(withItalics_400_500_600_700_array)
+  | #MPLUS1p(_100_300_400_500_700_800_900_array)
+  | #MPLUSRounded1c(_100_300_400_500_700_800_900_array)
+  | #Mada(_200_300_400_500_600_700_900_array)
+  | #Mali(withItalics_200_300_400_500_600_700_array)
+  | #Manrope(_200_300_400_500_600_700_800_array)
+  | #Manuale(withItalics_400_500_600_700_array)
+  | #Martel(_200_300_400_600_700_800_900_array)
+  | #MartelSans(_200_300_400_600_700_800_900_array)
+  | #Merriweather(withItalics_300_400_700_900_array)
+  | #MerriweatherSans(withItalics_300_400_500_600_700_800_array)
+  | #Montserrat(withItalics_100_200_300_400_500_600_700_800_900_array)
+  | #MontserratAlternates(withItalics_100_200_300_400_500_600_700_800_900_array)
+  | #Mukta(_200_300_400_500_600_700_800_array)
+  | #MuktaMahee(_200_300_400_500_600_700_800_array)
+  | #MuktaMalar(_200_300_400_500_600_700_800_array)
+  | #MuktaVaani(_200_300_400_500_600_700_800_array)
+  | #Mulish(withItalics_200_300_400_500_600_700_800_900_array)
+  | #MuseoModerno(_100_200_300_400_500_600_700_800_900_array)
+  | #Niramit(withItalics_200_300_400_500_600_700_array)
+  | #NotoSerifJP(_200_300_400_500_600_700_900_array)
+  | #NotoSerifKR(_200_300_400_500_600_700_900_array)
+  | #NotoSerifSC(_200_300_400_500_600_700_900_array)
+  | #NotoSerifTC(_200_300_400_500_600_700_900_array)
+  | #Nunito(withItalics_200_300_400_600_700_800_900_array)
+  | #NunitoSans(withItalics_200_300_400_600_700_800_900_array)
+  | #OpenSans(withItalics_300_400_600_700_800_array)
+  | #Overpass(withItalics_100_200_300_400_600_700_800_900_array)
+  | #Oxanium(_200_300_400_500_600_700_800_array)
+  | #Palanquin(_100_200_300_400_500_600_700_array)
+  | #Petrona(withItalics_100_200_300_400_500_600_700_800_900_array)
+  | #Piazolla(withItalics_100_200_300_400_500_600_700_800_900_array)
+  | #PlayfairDisplay(withItalics_400_500_600_700_800_900_array)
+  | #Poppins(withItalics_100_200_300_400_500_600_700_800_900_array)
+  | #Prompt(withItalics_100_200_300_400_500_600_700_800_900_array)
+  | #ProzaLibre(withItalics_400_500_600_700_800_array)
+  | #PublicSans(withItalics_100_200_300_400_500_600_700_800_900_array)
+  | #Raleway(withItalics_100_200_300_400_500_600_700_800_900_array)
+  | #Recursive(_300_400_500_600_700_800_900_array)
+  | #RedHatDisplay(withItalics_400_500_700_900_array)
+  | #Roboto(withItalics_100_300_400_500_700_900_array)
+  | #RobotoMono(withItalics_100_200_300_400_500_600_700_array)
+  | #RobotoSlab(_100_200_300_400_500_600_700_800_900_array)
+  | #Rokkitt(_100_200_300_400_500_600_700_800_900_array)
+  | #Rosario(withItalics_300_400_500_600_700_array)
+  | #Rubik(withItalics_300_400_500_600_700_800_900_array)
+  | #Saira(withItalics_100_200_300_400_500_600_700_800_900_array)
+  | #SairaCondensed(_100_200_300_400_500_600_700_800_900_array)
+  | #SairaExtraCondensed(_100_200_300_400_500_600_700_800_900_array)
+  | #SairaSemiCondensed(_100_200_300_400_500_600_700_800_900_array)
+  | #Sansita(withItalics_400_700_800_900_array)
+  | #SansitaSwashed(_300_400_500_600_700_800_900_array)
+  | #Sarabun(withItalics_100_200_300_400_500_600_700_800_array)
+  | #Sora(_100_200_300_400_500_600_700_800_array)
+  | #SourceCodePro(withItalics_200_300_400_500_600_700_900_array)
+  | #SourceSansPro(withItalics_200_300_400_600_700_900_array)
+  | #SourceSerifPro(withItalics_200_300_400_600_700_900_array)
+  | #Spartan(_100_200_300_400_500_600_700_800_900_array)
+  | #Spectral(withItalics_200_300_400_500_600_700_800_array)
+  | #SpectralSC(withItalics_200_300_400_500_600_700_800_array)
+  | #Tajawal(_200_300_400_500_700_800_900_array)
+  | #Taviraj(withItalics_100_200_300_400_500_600_700_800_900_array)
+  | #Texturina(withItalics_100_200_300_400_500_600_700_800_900_array)
+  | #TitilliumWeb(withItalics_titilliumWeb_array)
+  | #Tomorrow(withItalics_100_200_300_400_500_600_700_800_900_array)
+  | #Trirong(withItalics_100_200_300_400_500_600_700_800_900_array)
+  | #Trispace(_100_200_300_400_500_600_700_800_array)
+  | #Ubuntu(withItalics_300_400_500_700_array)
+  | #Vollkorn(withItalics_400_500_600_700_800_900_array)
+  | #WorkSans(withItalics_100_200_300_400_500_600_700_800_900_array)
+  | #ZillaSlab(withItalics_300_400_500_600_700_array)
 ]
 
-// TODO: Rest
+type fontsArray = array<fonts>
 
-// TODO: Part 1
-// | #Ovo
-// | #PetitFormalScript
-// | #SeaweedScript
-// | #RalewayDots
-// | #GildaDisplay
-// | #Athiti
-// | #Niramit
-// | #NanumBrushScript
-// | #LoveYaLikeASister
-// | #GFSDidot
-// | #Metrophobic
-// | #Slabo13px
-// | #Rosario
-// | #Blinker
-// | #Aladin
-// | #Coustard
-// | #Cambay
-// | #Carme
-// | #RozhaOne
-// | #CedarvilleCursive
-// | #Calligraffitti
-// | #Hanuman
-// | #Poly
-// | #Grandstander
-// | #MonsieurLaDoulaise
-// | #Cutive
-// | #KellySlab
-// | #LibreCaslonText
-// | #Kosugi
-// | #Pompiere
-// | #Baskervville
-// | #Mitree
-// | #Belleza
-// | #LeBelleAurore
-// | #ChauPhilomeneOne
-// | #Radley
-// | #Lemon
-// | #DuruSans
-// | #DoppioOne
-// | #Gugi
-// | #UnifrakturMaguntia
-// | #SyneMono
-// | #SyneTactile
-// | #K2D
-// | #Lekton
-// | #TenaliRamakrishna
+let toFontValue2 = (font: fonts) =>
+  switch font {
+  | #Montserrat(weights) => {
+      fontName: "Montserrat",
+      weights: toArrayWeightValue(weights),
+    }
+  | #Poppins(weights) => {
+      fontName: "Poppins",
+      weights: toArrayWeightValue(weights),
+    }
+  | #Raleway(weights) => {
+      fontName: "Raleway",
+      weights: toArrayWeightValue(weights),
+    }
+  | #WorkSans(weights) => {
+      fontName: "Work Sans",
+      weights: toArrayWeightValue(weights),
+    }
+  | #FiraSans(weights) => {
+      fontName: "Fira Sans",
+      weights: toArrayWeightValue(weights),
+    }
+  | #Barlow(weights) => {
+      fontName: "Barlow",
+      weights: toArrayWeightValue(weights),
+    }
+  | #LibreFranklin(weights) => {
+      fontName: "Libre Franklin",
+      weights: toArrayWeightValue(weights),
+    }
+  | #Bitter(weights) => {
+      fontName: "Bitter",
+      weights: toArrayWeightValue(weights),
+    }
+  | #Fraunces(weights) => {
+      fontName: "Fraunces",
+      weights: toArrayWeightValue(weights),
+    }
+  | #BarlowCondensed(weights) => {
+      fontName: "Barlow Condensed",
+      weights: toArrayWeightValue(weights),
+    }
+  | #Exo2(weights) => {
+      fontName: "Exo 2",
+      weights: toArrayWeightValue(weights),
+    }
+  | #Kanit(weights) => {
+      fontName: "Kanit",
+      weights: toArrayWeightValue(weights),
+    }
+  | #Prompt(weights) => {
+      fontName: "Prompt",
+      weights: toArrayWeightValue(weights),
+    }
+  | #FiraSansCondensed(weights) => {
+      fontName: "Fira Sans Condensed",
+      weights: toArrayWeightValue(weights),
+    }
+  | #Exo(weights) => {
+      fontName: "Exo",
+      weights: toArrayWeightValue(weights),
+    }
+  | #BarlowSemiCondensed(weights) => {
+      fontName: "Barlow Semi Condensed",
+      weights: toArrayWeightValue(weights),
+    }
+  | #MontserratAlternates(weights) => {
+      fontName: "Montserrat Alternates",
+      weights: toArrayWeightValue(weights),
+    }
+  | #FiraSansExtraCondensed(weights) => {
+      fontName: "Fira Sans Extra Condensed",
+      weights: toArrayWeightValue(weights),
+    }
+  | #PublicSans(weights) => {
+      fontName: "Public Sans",
+      weights: toArrayWeightValue(weights),
+    }
+  | #Taviraj(weights) => {
+      fontName: "Taviraj",
+      weights: toArrayWeightValue(weights),
+    }
+  | #Saira(weights) => {
+      fontName: "Saira",
+      weights: toArrayWeightValue(weights),
+    }
 
-// TODO: Part 2
-// | #Marvel
-// | #JockeyOne
-// | #Petrona
-// | #Sunflower
-// | #EmilysCandy
-// | #Montaga
-// | #kronaOne
-// | #epilogue
-// | #balooDa2
-// | #Amethysta
-// | #ComicNeue
-// | #Commissioner
-// | #CormorantInfant
-// | #Battambang
-// | #Battambang
-// | #Harmattan
-// | #Chonburi
-// | #DarkerGrotesque
-// | #Alike
-// | #ZCOOLXiaoWei
-// | #B612
-// | #Alatsi
-// | #AveiraLibre
-// | #GoudyBookletter1911
-// | #DavidLibre
-// | #XanhMono
-// | #TurretRoad
-// | #StardosStencil
-// | #Inder
+  | #Texturina(weights) => {
+      fontName: "Texturina",
+      weights: toArrayWeightValue(weights),
+    }
+  | #Jost(weights) => {
+      fontName: "Jost",
+      weights: toArrayWeightValue(weights),
+    }
+  | #Piazolla(weights) => {
+      fontName: "Piazolla",
+      weights: toArrayWeightValue(weights),
+    }
+  | #Trirong(weights) => {
+      fontName: "Trirong",
+      weights: toArrayWeightValue(weights),
+    }
+  | #Grandstander(weights) => {
+      fontName: "Grandstander",
+      weights: toArrayWeightValue(weights),
+    }
+  | #Epilogue(weights) => {
+      fontName: "Epilogue",
+      weights: toArrayWeightValue(weights),
+    }
+  | #Petrona(weights) => {
+      fontName: "Petrona",
+      weights: toArrayWeightValue(weights),
+    }
+  | #Tomorrow(weights) => {
+      fontName: "Tomorrow",
+      weights: toArrayWeightValue(weights),
+    }
+  | #Grenze(weights) => {
+      fontName: "Grenze",
+      weights: toArrayWeightValue(weights),
+    }
 
-// TODO: Part 3
-// | #Gabriela
-// | #SedgwickAve
-// | #IMFellEnglish
-// | #Frijole
-// | #Kufam
-// | #SueEllenFrancisco
-// | #Mate
-// | #Jua
-// | #AnticDidone
-// | #Gurajada
-// | #NewRocker
-// | #CevicheOne
-// | #OleoScriptSwashCaps
-// | #Buenard
-// | #SpectralSC
-// | #Esteban
-// | #MrDeHaviland
-// | #BowlbyOne
-// | #Balthazar
-// | #Mirza
-// | #ChelseaMarket
-// | #RammettoOne
-// | #Manjari
+  | #Overpass(weights) => {
+      fontName: "Overpass",
+      weights: toArrayWeightValue(weights),
+    }
+  | #Mulish(weights) => {
+      fontName: "Mulish",
+      weights: toArrayWeightValue(weights),
+    }
 
-// TODO: Part 4
-// | #ShortStack
-// | #Mandali
-// | #Belgrano
-// | #RougeScript
-// | #Baumans
-// | #Podkova
-// | #FingerPaint
-// | #Megrim
-// | #CormorantSC
-// | #FreckleFace
-// | #Brawler
-// | #BalooTamma2
-// | #Convergence
-// | #DawningOfANewDay
-// | #FanwoodText
-// | #GravitasOne
-// | #VastShadow
-// | #Skranji
-// | #AlikeAngular
-// | #BilboSwashCaps
-// | #PatrickHandSC
-// | #Limelight
-// | #BioRhyme
-// | #Quando
+  | #CrimsonPro(weights) => {
+      fontName: "Crimson Pro",
+      weights: toArrayWeightValue(weights),
+    }
+  | #JetBrainsMono(weights) => {
+      fontName: "JetBrains Mono",
+      weights: toArrayWeightValue(weights),
+    }
+  | #K2D(weights) => {
+      fontName: "K2D",
+      weights: toArrayWeightValue(weights),
+    }
+  | #Sarabun(weights) => {
+      fontName: "Sarabun",
+      weights: toArrayWeightValue(weights),
+    }
+  | #Literata(weights) => {
+      fontName: "Literata",
+      weights: toArrayWeightValue(weights),
+    }
+  | #Livvic(weights) => {
+      fontName: "Livvic",
+      weights: toArrayWeightValue(weights),
+    }
+  | #RobotoMono(weights) => {
+      fontName: "Roboto Mono",
+      weights: toArrayWeightValue(weights),
+    }
 
-// TODO: Part 5
-// | #Qwigley
-// | #McLaren
-// | #Goldman
-// | #Oregano
-// | #Bellefair
-// | #KumbhSans
-// | #Anaheim
-// | #HappyMonkey
-// | #BalooThambi2
-// | #MountainsOfChristmas
-// | #Numans
-// | #Rasa
-// | #B612Mono
-// | #Sarpanch
-// | #Montez
-// | #Timmana
-// | #WaitingForTheSunrise
-// | #Rakkas
-// | #BungeeShade
-// | #ProzaLibre
-// | #AguafinaScript
-// | #RedRose
-// | #VesperLibre
-// | #Fondamento
-// | #LibreBarcode39
-// | #Galada
-// | #Zeyada
-// | #ClickerScript
-// | #Andika
-// | #FiraCode
+  | #NunitoSans(weights) => {
+      fontName: "Nunito Sans",
+      weights: toArrayWeightValue(weights),
+    }
 
-// TODO: Part 6
-// | #BeVietnam
-// | #MaShanZheng
-// | #LexendMega
-// | #Manuale
-// | #GrenzeGotisch
-// | #Unkempt
-// | #DenkOne
-// | #Gaegu
-// | #GiveYouGlory
-// | #EncodeSansSemiCondensed
-// | #Cambo
-// | #CraftyGirls
-// | #ArefRuqaa
-// | #NTR
-// | #FasterOne
+  | #BeVietnam(weights) => {
+      fontName: "Be Vietnam",
+      weights: toArrayWeightValue(weights),
+    }
 
-// TODO: Part 7
-// | #Meddon
-// | #MeeraInimai
-// | #Iceland
-// | #ExpletusSans
-// | #Pavanam
-// | #MouseMemoirs
-// | #Mansalva
-// | #Atma
-// | #LifeSavers
-// | #EuphoriaScript
-// | #HeptaSlab
-// | #Sora
-// | #IMFellDWPica
-// | #Geo
-// | #NovaMono
-// | #Orienta
-// | #Tienne
-// | #EncodeSansExpanded
-// | #Livvic
-// | #VollkornSC
-// | #Federo
-// | #InknutAntiqua
-// | #Katibeh
-// | #Sail
-// | #WendyOne
-// | #CarroisGothicSC
-// | #Ledger
+  | #Spectral(weights) => {
+      fontName: "Spectral",
+      weights: toArrayWeightValue(weights),
+    }
 
-// TODO: Part 8
-// | #ShareTech
-// | #OverTheRainbow
-// | #Ranchers
-// | #Caladea
-// | #UnifrakturCook
-// | #UnifrakturCook
-// | #Tauri
-// | #CherryCreamSoda
-// | #Strait
-// | #Mako
-// | #Englebert
-// | #IMFellEnglishSC
-// | #WalterTurncoat
-// | #MontserratSubrayada
-// | #Metamorphous
-// | #Asul
-// | #Calistoga
-// | #DeliusSwashCaps
-// | #Sumana
-// | #Artifika
-// | #Amarante
-// | #Codystar
-// | #Koulen
-// | #AveriaSansLibre
-// | #CantoraOne
-// | #TradeWinds
-// | #HiMelody
-// | #Salsa
-// | #Imprima
-// | #Shojumaru
-// | #Flamenco
-// | #ZCOOLQingKeHuangYou
-// | #Peralta
-// | #PollerOne
-// | #DMMono
+  | #SourceCodePro(weights) => {
+      fontName: "Source Code Pro",
+      weights: toArrayWeightValue(weights),
+    }
 
-// TODO: Part 9
-// | #MuseoModerno
-// | #Puritan
-// | #Notable
-// | #Voces
-// | #ScopeOne
-// | #NovaFlat
-// | #CormorantUpright
-// | #LovedByTheKing
-// | #Farsan
-// | #LilyScriptOne
-// | #Gafata
-// | #SpicyRice
-// | #Tillana
-// | #NovaSquare
-// | #ProstoOne
-// | #VampiroOne
-// | #NovaRound
-// | #BubblerOne
-// | #TheGirlNextDoor
-// | #HeadlandOne
-// | #MuktaMahee
-// | #FontdinerSwanky
-// | #Italiana
-// | #FjordOne
-// | #Slackey
-// | #CherrySwash
-// | #Arya
-// | #PortLligatSans
-// | #MedulaOne
-// | #Fresca
-// | #Dokdo
-// | #JustMeAgainDownHere
-// | #Milonga
-// | #Bilbo
+  | #AlegreyaSans(weights) => {
+      fontName: "Alegreya Sans",
+      weights: toArrayWeightValue(weights),
+    }
+  | #IBMPlexSansCondensed(weights) => {
+      fontName: "IBM Plex Sans Condensed",
+      weights: toArrayWeightValue(weights),
+    }
+  | #AlegreyaSansSC(weights) => {
+      fontName: "Alegreya Sans SC",
+      weights: toArrayWeightValue(weights),
+    }
+  | #JosefinSans(weights) => {
+      fontName: "Josefin Sans",
+      weights: toArrayWeightValue(weights),
+    }
+  | #Nunito(weights) => {
+      fontName: "Nunito",
+      weights: toArrayWeightValue(weights),
+    }
+  | #IBMPlexMono(weights) => {
+      fontName: "IBM Plex Mono",
+      weights: toArrayWeightValue(weights),
+    }
+  | #IBMPlexSans(weights) => {
+      fontName: "IBM Plex Sans",
+      weights: toArrayWeightValue(weights),
+    }
 
-// TODO: Part 10
-// | #MacondoSwashCaps
-// | #Dynalight
-// | #Ribeye
-// | #Vibur
-// | #LexendZetta
-// | #IMFellFrenchCanonSC
-// | #Mina
-// | #Elise
-// | #MateSC
-// | #Coiny
-// | #DeliusUnicase
-// | #Sura
-// | #PirataOne
-// | #Kranky
-// | #YeonSung
-// | #Chicle
-// | #GermaniaOne
-// | #Ranga
-// | #RuslanDisplay
-// | #PortLligatSlab
-// | #Paprika
-// | #KiteOne
-// | #Eater
-// | #Oxanium
-// | #LeagueScript
-// | #YatraOne
-// | #BighShouldersText
-// | #BalooBhaina2
-// | #Almendra
-// | #HennyPenny
+  | #IBMPlexSerif(weights) => {
+      fontName: "IBM Plex Serif",
+      weights: toArrayWeightValue(weights),
+    }
+  | #JosefinSlab(weights) => {
+      fontName: "Josefin Slab",
+      weights: toArrayWeightValue(weights),
+    }
 
-// TODO: Part 11
-// | #Farro
-// | #WireOne
-// | #Habibi
-// | #Khmer
-// | #TextMeOne
-// | #Shanti
-// | #LoversQuarrel
-// | #GamjaFlower
-// | #EncodeSansSemiExpanded
-// | #Julee
-// | #AveiraGruesaLibre
-// | #BellotaText
-// | #Kodchasan
-// | #Stalemate
-// | #Ramaraja
-// | #Moul
-// | #SwankyAndMooMoo
-// | #Cagliostro
-// | #HanaleiFill
-// | #Rosarivo
-// | #Modak
-// | #LibreBarcode39ExtendedText
-// | #Angkor
-// | #Bayon
+  | #Rubik(weights) => {
+      fontName: "Rubik",
+      weights: toArrayWeightValue(weights),
+    }
+  | #Karla(weights) => {
+      fontName: "Karla",
+      weights: toArrayWeightValue(weights),
+    }
 
-// TODO: Part 12
-// | #IMFellFrenchCanon
-// | #Quintessential
-// | #Fenix
-// | #Crushed
-// | #SongMyung
-// | #KottaOne
-// | #Mogra
-// | #ZCOOLKuaiLe
-// | #Rationale
-// | #StintUltraCondensed
-// | #MysteryQuest
-// | #Stylish
-// | #SonsieOne
-// | #Prociono
-// | #Buda
-// | #Nokora
-// | #Ruluko
-// | #Stoke
-// | #KoHo
-// | #MajorMonoDisplay
-// | #EastSeaDokdo
-// | #Chamonman
-// | #Underdog
-// | #ZillaSlabHighlight
-// | #Dekko
-// | #Simonetta
-// | #BalooBhai2
-// | #UncialAntiqua
-// | #SairaStencilOne
+  | #SpectralSC(weights) => {
+      fontName: "Spectral SC",
+      weights: toArrayWeightValue(weights),
+    }
 
-// TODO: Part 13
-// | #Asar
-// | #Sancreek
-// | #InriaSerif
-// | #OverlockSC
-// | #KumarOne
-// | #BalooPaaji2
-// | #Margarine
-// | #Nosifer
-// | #StintUltraExpanded
-// | #ElsieSwashCaps
-// | #Chango
-// | #Iceberg
-// | #Metal
-// | #DellaRespira
-// | #Tomorrow
-// | #Fahkwang
-// | #Chathura
-// | #MarkoOne
-// | #Rowdies
-// | #Offside
-// | #Solway
-// | #Akronim
-// | #LexendExa
-// | #Sarina
-// | #LakkiReddy
-// | #Barrio
-// | #DonegalOne
-// | #IMFellGreatPrimer
-// | #Bellota
-// | #BigelowRules
-// | #Dorsa
+  | #Krub(weights) => {
+      fontName: "Krub",
+      weights: toArrayWeightValue(weights),
+    }
 
-// TODO: Part 14
-// | #LondrinaOutline
-// | #IbarraRealNova
-// | #RumRaisin
-// | #Wellfleet
-// | #Condiment
-// | #MeieScript
-// | #Redressed
-// | #AtomicAge
-// | #Junge
-// | #IMFellDWPicaSC
-// | #CroissantOne
-// | #TulpenOne
-// | #AutourOne
-// | #CormorantUnicase
-// | #Spirax
-// | #Arbutus
-// | #Smythe
-// | #Gayathri
-// | #EagleLake
-// | #JotiOne
-// | #LindenHill
-// | #Ruthie
-// | #Monofett
-// | #Griffy
-// | #Kavoon
-// | #Miniver
-// | #LibreCaslonDisplay
-// | #ModernAntiqua
-// | #Jomolhari
+  | #Roboto(weights) => {
+      fontName: "Roboto",
+      weights: toArrayWeightValue(weights),
+    }
+  | #Niramit(weights) => {
+      fontName: "Niramit",
+      weights: toArrayWeightValue(weights),
+    }
+  | #KoHo(weights) => {
+      fontName: "KoHo",
+      weights: toArrayWeightValue(weights),
+    }
+  | #Mali(weights) => {
+      fontName: "Mali",
+      weights: toArrayWeightValue(weights),
+    }
+  | #Kufam(weights) => {
+      fontName: "Kufam",
+      weights: toArrayWeightValue(weights),
+    }
+  | #Fahkwang(weights) => {
+      fontName: "Fahkwang",
+      weights: toArrayWeightValue(weights),
+    }
+  | #Vollkorn(weights) => {
+      fontName: "Vollkorn",
+      weights: toArrayWeightValue(weights),
+    }
+  | #SourceSerifPro(weights) => {
+      fontName: "Source Serif Pro",
+      weights: toArrayWeightValue(weights),
+    }
+  | #MerriweatherSans(weights) => {
+      fontName: "Merriweather Sans",
+      weights: toArrayWeightValue(weights),
+    }
+  | #PlayfairDisplay(weights) => {
+      fontName: "Playfair Display",
+      weights: toArrayWeightValue(weights),
+    }
+  | #BaiJamjuree(weights) => {
+      fontName: "Bai Jamjuree",
+      weights: toArrayWeightValue(weights),
+    }
+  | #Kodchasan(weights) => {
+      fontName: "Kodchasan",
+      weights: toArrayWeightValue(weights),
+    }
+  | #SourceSansPro(weights) => {
+      fontName: "Source Sans Pro",
+      weights: toArrayWeightValue(weights),
+    }
+  | #BodoniModa(weights) => {
+      fontName: "Bodoni Moda",
+      weights: toArrayWeightValue(weights),
+    }
+  | #Alegreya(weights) => {
+      fontName: "Alegreya",
+      weights: toArrayWeightValue(weights),
+    }
+  | #AlegreyaSC(weights) => {
+      fontName: "Alegreya SC",
+      weights: toArrayWeightValue(weights),
+    }
+  | #ChakraPetch(weights) => {
+      fontName: "Chakra Petch",
+      weights: toArrayWeightValue(weights),
+    }
+  | #Cormorant(weights) => {
+      fontName: "Cormorant",
+      weights: toArrayWeightValue(weights),
+    }
+  | #CormorantGaramond(weights) => {
+      fontName: "Cormorant Garamond",
+      weights: toArrayWeightValue(weights),
+    }
+  | #CormorantInfant(weights) => {
+      fontName: "Cormorant Infant",
+      weights: toArrayWeightValue(weights),
+    }
+  | #EBGaramond(weights) => {
+      fontName: "EB Garamond",
+      weights: toArrayWeightValue(weights),
+    }
+  | #KulimPark(weights) => {
+      fontName: "Kulim Park",
+      weights: toArrayWeightValue(weights),
+    }
+  | #Lato(weights) => {
+      fontName: "Lato",
+      weights: toArrayWeightValue(weights),
+    }
+  | #OpenSans(weights) => {
+      fontName: "Open Sans",
+      weights: toArrayWeightValue(weights),
+    }
+  | #ProzaLibre(weights) => {
+      fontName: "Proza Libre",
+      weights: toArrayWeightValue(weights),
+    }
+  | #Rosario(weights) => {
+      fontName: "Rosario",
+      weights: toArrayWeightValue(weights),
+    }
+  | #TitilliumWeb(weights) => {
+      fontName: "Titillium Web",
+      weights: toArrayWeightValue(weights),
+    }
+  | #ZillaSlab(weights) => {
+      fontName: "Zilla Slab",
+      weights: toArrayWeightValue(weights),
+    }
 
-// TODO: Part 15
-// | #MaidenOrange
-// | #ChelaOne
-// | #MissFajardose
-// | #SreeKrushnadevaraya
-// | #CuteFont
-// | #Gotu
-// | #Trykker
-// | #Sahitya
-// | #SirinStencil
-// | #BalooTammudu2
-// | #GlassAntiqua
-// | #GoblinOne
-// | #Srisakdi
-// | #Inika
-// | #LibreBarcode39Text
-// | #KulimPark
-// | #SeymourOne
-// | #JacquesFrancoisShadow
-// | #OdorMeanChey
-// | #BigshotOne
-// | #Felipa
-// | #MetalMania
-// | #Diplomata
-// | #Contnet
-// | #LibreBarcode39Extended
-// | #Piedra
-// | #Devonshire
-// | #Romanesco
-// | #InriaSans
-// | #OldenBurg
+  | #Catamaran(weights) => {
+      fontName: "Catamaran",
+      weights: toArrayWeightValue(weights),
+    }
 
-// TODO: Part 16
-// | #RibeyeMarrow
-// | #Asset
-// | #Kavivanar
-// | #Ewert
-// | #Molle
-// | #Flavors
-// | #JollyLodger
-// | #Lancelot
-// | #PoorStory
-// | #Snippet
-// | #PrincessSofia
-// | #Chilanka
-// | #Bokor
-// | #BethEllen
-// | #Revalia
-// | #CaesarDressing
-// | #Girassol
-// | #LondrinaShadow
-// | #ViaodaLibre
-// | #MedievalSharp
-// | #DrSugiyama
-// | #DiplomataSC
-// | #AlmendraSC
-// | #LibreBarcode128Text
-// | #JimNightshade
-// | #Bahiana
-// | #MrsSheppards
-// | #Galdeano
+  | #Commissioner(weights) => {
+      fontName: "Commissioner",
+      weights: toArrayWeightValue(weights),
+    }
 
-// TODO: Part 17
-// | #Plaster
-// | #KeaniaOne
-// | #Gupter
-// | #SulphurPoint
-// | #IMFellGreatPrimerSC
-// | #GFSNeohellenic
-// | #BungeeOutline
-// | #Peddana
-// | #Risque
-// | #StalinistOne
-// | #OdibeeSans
-// | #Recursive
-// | #SupermercadoOne
-// | #Barriecito
-// | #Galindo
-// | #KumarOneOutline
-// | #Smokum
-// | #EmblemaOne
-// | #AlmendraDisplay
-// | #LexendGiga
-// | #PurplePurse
-// | #SedgwickAveDisplay
-// | #SnowburstOne
+  | #EncodeSans(weights) => {
+      fontName: "Encode Sans",
+      weights: toArrayWeightValue(weights),
+    }
 
-// TODO: Part 18
-// | #JacquesFrancois
-// | #NovaSlim
-// | #IrishGrover
-// | #MrBedfort
-// | #BlackAndWhitePicture
-// | #Macondo
-// | #IMFellDoublePicaSC
-// | #FascinateInline
-// | #Sunshiney
-// | #RaviPrakash
-// | #BungeeHairline
-// | #RugeBoogie
-// | #Trochut
-// | #LexendTera
-// | #LexendPeta
-// | #LiuJianMaoCao
-// | #Federant
-// | #EricaOne
-// | #ButterflyKids
-// | #KirangHaerang
-// | #ZhiMangXing
-// | #Gidugu
-// | #Grenze
-// | #Unlock
-// | #Vibes
-// | #Bonbon
-// | #NovaScript
-// | #Bahianita
-// | #Sevillana
-// | #Lacquer
-// | #Astloch
-// | #NovaOval
-// | #NovaCut
+  | #EncodeSansCondensed(weights) => {
+      fontName: "Encode Sans Condensed",
+      weights: toArrayWeightValue(weights),
+    }
 
-// TODO: Part 19
-// | #GeostarFill
-// | #MiltonianTattoo
-// | #Langar
-// | #PasseroOne
-// | #Fascinate
-// | #Butcherman
-// | #Miltonian
-// | #Aubrey
-// | #SofadiOne
-// | #Combo
-// | #LongCang
-// | #Fruktur
-// | #Suravaram
-// | #Geostar
-// | #BioRhymeExpanded
-// | #Warnes
-// | #SingleDay
-// | #Dhurjati
-// | #Kenia
+  | #EncodeSansExpanded(weights) => {
+      fontName: "Encode Sans Expanded",
+      weights: toArrayWeightValue(weights),
+    }
 
-let tovalue = fontName =>
-  switch fontName {
-  | #Roboto => "Roboto"
-  | #PottaOne => "Potta One"
-  | #YuseiMagic => "Yusei Magic"
-  | #OpenSans => "Open Sans"
-  | #HachiMaruPop => "Hachi Maru Pop"
-  | #NotoSansJP => "Noto Sans JP"
-  | #Lato => "Lato"
-  | #Montserrat => "Montserrat"
-  | #Fraunces => "Fraunces"
-  | #RobotoCondensed => "Roboto Condensed"
-  | #SourceSansPro => "Source Sans Pro"
-  | #Oswald => "Oswald"
-  | #LondrinaSolid => "Londrina Solid"
-  | #Poppins => "Poppins"
-  | #RobotoMono => "Roboto Mono"
-  | #NotoSans => "Noto Sans"
-  | #Raleway => "Raleway"
-  | #Imbue => "Imbue"
-  | #Ubuntu => "Ubuntu"
-  | #PTSans => "PT Sans"
-  | #RobotoSlab => "Roboto Slab"
-  | #Merriweather => "Merriweather"
-  | #PlayfairDisplay => "Playfair Display"
-  | #Lora => "Lora"
-  | #Nunito => "Nunito"
-  | #OpenSansCondensed => "Open Sans Condensed"
-  | #NotoSansKR => "Noto Sans KR"
-  | #Rubik => "Rubik"
-  | #PTSerif => "PT Serif"
-  | #CodaCaption => "Coda Caption"
-  | #NotoSerif => "Noto Serif"
-  | #WorkSans => "Work Sans"
-  | #NotoSansTC => "Noto Sans TC"
-  | #FiraSans => "Fira Sans"
-  | #NanumGothic => "Nanum Gothic"
-  | #NunitoSans => "Nunito Sans"
-  | #TitilliumWeb => "Titillium Web"
-  | #Quicksand => "Quicksand"
-  | #HindSiligur => "Hind Siliguri"
-  | #BodoniModa => "Bodoni Moda"
-  | #Slabo27px => "Slabo 27px"
-  | #Mukta => "Mukata"
-  | #Karla => "Karla"
-  | #Barlow => "Barlow"
-  | #Inconsolata => "Inconsolata"
-  | #Heebo => "Heebo"
-  | #Oxygen => "Oxygen"
-  | #SourceCodePro => "Source Code Pro"
-  | #Hanalei => "Hanalei"
-  | #Inter => "Inter"
-  | #JosefinSans => "Josefin Sans"
-  | #PTSansNarrow => "PT Sans Narrow"
-  | #Dosis => "Dosis"
-  | #Arimo => "Arimo"
-  | #LibreFranklin => "Libre Franklin"
-  | #LibreBaskerville => "Libre Baskerville"
-  | #YanoneKaffeesatz => "Yanone Kaffeesatz"
-  | #Cabin => "Cabin"
-  | #Anton => "Anton"
-  | #BigShouldersDisplay => "Big Shoulders Display"
-  | #BebasNeue => "Bebas Neue"
-  | #NotoSansSC => "Noto Sans SC"
-  | #Bitter => "Bitter"
-  | #CrimsonText => "Crimson Text"
-  | #IBMPlexSans => "IBM Plex Sans"
-  | #Lobster => "Lobster"
-  | #Abel => "Abel"
-  | #DancingScript => "DancingScript"
-  | #Hind => "Hind"
-  | #FjallaOne => "Fjalla One"
-  | #SourceSerifPro => "Source Serif Pro"
-  | #NotoSansHK => "Noto Sans HK"
-  | #Comfortaa => "Comfortaa"
-  | #VarelaRound => "Varela Round"
-  | #IndieFlower => "Indie Flower"
-  | #ZillaSlab => "Zilla Slab"
-  | #AnticSlab => "Antic Slab"
-  | #Arvo => "Arvo"
-  | #BarlowCondensed => "Barlow Condensed"
-  | #Pacifico => "Pacifico"
-  | #Cairo => "Cairo"
-  | #Kanit => "Kanit"
-  | #Exo2 => "Exo 2"
-  | #MerriweatherSans => "Merriweather Sans"
-  | #Syne => "Syne"
-  | #Asap => "Asap"
-  | #ArchitectsDaughter => "Architects Daughter"
-  | #Overpass => "Overpass"
-  | #ShadowsIntoLight => "Shadows Into Light"
-  | #EBGaramond => "EB Garamond"
-  | #Teko => "Teko"
-  | #HindiMadurai => "Hind Madurai"
-  | #ArchivoNarrow => "Archivo Narrow"
-  | #Questrial => "Questrial"
-  | #Prompt => "Prompt"
-  | #BalsamiqSans => "Balsamiq Sans"
-  | #AbrilFatface => "Abril Fatface"
-  | #MavenPro => "Maven Pro"
-  | #DMSans => "DM Sans"
+  | #EncodeSansSemiCondensed(weights) => {
+      fontName: "Encode Sans Semi Condensed",
+      weights: toArrayWeightValue(weights),
+    }
 
-  | #Gorditas => "Gorditas"
-  | #Assistant => "Assistant"
-  | #Martel => "Martel"
-  | #Acme => "Acme"
-  | #FredokaOne => "Fredoka One"
-  | #CormorantGaramond => "Cormorant Garamond"
-  | #AmaticSC => "Amatic SC"
-  | #IBMPlexSerif => "IBM Plex Serif"
-  | #Play => "Play"
-  | #PermanentMarker => "Permanent Marker"
-  | #Catamaran => "Catamaran"
-  | #FiraSansCondensed => "Fira Sans Condensed"
-  | #Caveat => "Caveat"
-  | #Rajdhani => "Rajdhani"
-  | #Domine => "Domine"
-  | #BreeSerif => "BreeSerif"
-  | #Satisfy => "Satisfy"
-  | #Signika => "Signika"
-  | #Exo => "Exo"
-  | #AlfaSlabOne => "Alfa Slab One"
-  | #NotoSerifJp => "Noto Serif JP"
-  | #Righteous => "Righteous"
-  | #PatrickHand => "Patrick Hand"
-  | #ABeeZee => "ABeeZee"
-  | #Tajawal => "Tajawal"
-  | #Mulish => "Mulish"
-  | #PTSansCaption => "PT Sans Caption"
-  | #NanumMyeongjo => "Nanum Myeongjo"
-  | #Cinzel => "Cinzel"
-  | #Archivo => "Archivo"
-  | #CarterOne => "Carter One"
-  | #PatuaOne => "Patua One"
-  | #CreteRound => "Create Round"
-  | #Amiri => "Amiri"
-  | #Vollkorn => "Vollkorn"
-  | #Monda => "Monda"
-  | #SquadaOne => "Squada One"
-  | #RussoOne => "Russo One"
-  | #Courgette => "Courgette"
-  | #FrankRuhlLibre => "Frank Ruhl Libre"
-  | #BarlowSemiCondensed => "Barlow Semi Condensed"
-  | #AlegreyaSans => "Alegreya Sans"
-  | #UbuntuCondensed => "Ubuntu Condensed"
-  | #LobsterTwo => "Lobster Two"
-  | #Yantramanav => "Yantramanav"
-  | #FrancoisOne => "Francois One"
-  | #Tinos => "Tinos"
-  | #Changa => "Changa"
-  | #LuckiestGuy => "Luckiest Guy"
-  | #Sarabun => "Sarabun"
-  | #JetBrainsMono => "JetBrains Mono"
-  | #Alegreya => "Alegreya"
-  | #ArchivoBlack => "Archivo Black"
-  | #KaushanScript => "Kaushan Script"
-  | #Staatliches => "Staatliches"
-  | #Cardo => "Cardo"
-  | #MPLUSRounded1c => "M PLUS Rounded 1c"
-  | #IBMPlexMono => "IBM Plex Mono"
-  | #Kalam => "Kalam"
-  | #GreatVibes => "Great Vibes"
-  | #Cuprum => "Cuprum"
-  | #MPLUS1p => "M PLUS 1p"
-  | #OriginalSurfer => "Original Surfer"
-  | #Spartan => "Spartan"
-  | #GloriaHallelujah => "Gloria Hallelujah"
-  | #PathwayGothicOne => "Pathway Gothic One"
-  | #Almarai => "Almarai"
-  | #HindGuntur => "Hind Guntur"
-  | #Sacramento => "Sacramento"
-  | #NoticiaText => "Noticia Text"
-  | #Ultra => "Ultra"
-  | #ConcertOne => "Concert One"
-  | #DidactGothic => "Didact Gothic"
-  | #Rokkitt => "Rokkitt"
-  | #Parisienne => "Parisienne"
-  | #Volkhov => "Volkhov"
-  | #Baloo2 => "Baloo 2"
-  | #QuattrocentoSans => "Quattrocento Sans"
-  | #EncodeSans => "Encode Sans"
-  | #Varta => "Varta"
-  | #PassionOne => "Passion One"
-  | #SairaCondensed => "Saira Condensed"
-  | #Prata => "Prata"
-  | #Cantarell => "Cantarell"
-  | #NewsCycle => "News Cycle"
-  | #Padauk => "Paduk"
-  | #OldStandardTT => "Old Standard TT"
-  | #Orbitron => "Orbitron"
-  | #Manrope => "Manrope"
-  | #Chivo => "Chivo"
-  | #Arapey => "Arapey"
-  | #MontserratAlternates => "Montserrat Alternates"
-  | #PaytoneOne => "Paytone One"
-  | #Ramabhadra => "Ramabhadra"
-  | #HindVadodara => "Hind Vadodara"
-  | #JosefinSlab => "Josefin Slab"
-  | #SecularOne => "Secular One"
-  | #Sriracha => "Sriracha"
-  | #SpecialElite => "Special Elite"
-  | #Quantico => "Quantico"
-  | #PlayfairDisplaySC => "Playfair Display SC"
-  | #Economica => "Economica"
-  | #RopaSans => "Ropa Sans"
-  | #IstokWeb => "Istok Web"
-  | #Quattrocento => "Quattrocento"
-  | #Cookie => "Cookie"
-  | #ChakraPetch => "Chakra Petch"
-  | #Lemonada => "Lemonada"
-  | #SawarabiMincho => "Sawarabi Mincho"
-  | #Yellowtail => "Yellowtail"
-  | #Sanchez => "Sanchez"
-  | #Handlee => "Handlee"
-  | #PoiretOne => "Poiret One"
-  | #PressStart2P => "Press Start 2P"
-  | #AdventPro => "Advent Pro"
-  | #FiraSansExtraCondensed => "Fira Sans Extra Condensed"
-  | #CrimsonPro => "Crimson Pro"
-  | #Spectral => "Spectral"
-  | #BaiJamjuree => "Bai Jamjuree"
-  | #DMSerifDisplay => "DM Serif Display"
-  | #Philosopher => "Philosopher"
-  | #Neuton => "Neuton"
-  | #Bangers => "Bangers"
-  | #Viadaloka => "Viadaloka"
-  | #HammersmithOne => "Hammersmith One"
-  | #AndikaNewBasic => "Andika New Basic"
-  | #Cormorant => "Cormorant"
-  | #AsapCondensed => "Asap Condensed"
-  | #RedHatDisplay => "Red Hat Display"
-  | #Ruda => "Ruda"
-  | #PublicSans => "Public Sans"
-  | #Karma => "Krama"
-  | #Taviraj => "Taviraj"
-  | #DMSerifText => "DM Serif Text"
-  | #Monoton => "Monoton"
-  | #UnicaOne => "Unica One"
-  | #Jura => "Jura"
-  | #Faustina => "Faustina"
-  | #Alice => "Alice"
-  | #PragatiNarrow => "Pragati Narrow"
-  | #Neucha => "Neucha"
-  | #Texturina => "Texturina"
-  | #NotoSerifTC => "Noto Serif TC"
-  | #Jost => "Jost"
-  | #Gudea => "Gudea"
-  | #Jaldi => "Jaldi"
-  | #Saira => "Saira"
+  | #EncodeSansSemiExpanded(weights) => {
+      fontName: "Encode Sans Semi Expanded",
+      weights: toArrayWeightValue(weights),
+    }
 
-  | #Merienda => "Merienda"
-  | #GothicA1 => "Gothic A1"
-  | #SigmarOne => "Sigmar One"
-  | #CabinCondensed => "Cabin Condensed"
-  | #HomemadeApple => "Homemade Apple"
-  | #Khand => "Khand"
-  | #Unna => "Unna"
-  | #Mitr => "Mitr"
-  | #GentiumBasic => "Gentium Basic"
-  | #BenchNine => "BenchNine"
-  | #Amaranth => "Amaranth"
-  | #PontanoSans => "Pontano Sans"
-  | #SpaceMono => "Space Mono"
-  | #Actor => "Actor"
-  | #Armata => "Armata"
-  | #Viga => "Viga"
-  | #PTMono => "PTMono"
-  | #Aleo => "Aleo"
-  | #Palanquin => "Palanquin"
-  | #Tangerine => "Tangerine"
-  | #JuliusSansOne => "Julius Sans One"
-  | #SuezOne => "Suez One"
-  | #Lusitana => "Lusitana"
-  | #YesevaOne => "Yeseva One"
-  | #GentiumBookBasic => "Gentium Book Basic"
-  | #RockSalt => "Rock Salt"
-  | #MarckScript => "Marck Script"
-  | #Knewave => "Knewave"
-  | #Allura => "Allura"
-  | #Playball => "Playball"
-  | #BadScript => "Bad Script"
-  | #Allan => "Allan"
+  | #GothicA1(weights) => {
+      fontName: "Gothic A1",
+      weights: toArrayWeightValue(weights),
+    }
 
-  | #SawarabiGothic => "Sawarabi Gothic"
-  | #Audiowide => "Audiowide"
-  | #Marcellus => "Marcellus"
-  | #FugazOne => "Fugaz One"
-  | #Gruppo => "Gruppo"
-  | #GochiHand => "Gochi Hand"
-  | #TenorSans => "Tenor Sans"
-  | #NerkoOne => "Nerko One"
-  | #Alef => "Alef"
-  | #NanumPenScript => "Nanum Pen Script"
-  | #SairaSemiCondensed => "Saira Semi Condensed"
-  | #MarkaziText => "Markazi Text"
-  | #Pangolin => "Pangolin"
-  | #Gelasio => "Gelasio"
-  | #Castoro => "Castoro"
-  | #NothingYouCouldDo => "Nothing You Could Do"
-  | #Varela => "Varela"
-  | #ShadowsIntoLightTwo => "Shadows Into Light Two"
-  | #NotoSerifSC => "Noto Serif SC"
-  | #Eczar => "Eczar"
-  | #AlexBrush => "AlexBrush"
-  | #Mali => "Mali"
-  | #Electrolize => "Electrolize"
-  | #SignikaNegative => "Signika Negative"
-  | #Itim => "Itim"
-  | #AbhayaLibre => "Abhaya Libre"
-  | #NanumGothicCoding => "Nanum Gothic Coding"
-  | #Rufina => "Rufina"
-  | #EncodeSansCondensed => "Encode Sans Condensed"
-  | #Bungee => "Bungee"
-  | #SortsMillGoudy => "Sorts Mill Goudy"
-  | #CantataOne => "Cantata One"
-  | #Aclonica => "Aclonica"
-  | #Engagement => "Engagement"
-  | #MrDafoe => "MrDafoe"
-  | #Damion => "Damion"
-  | #Antic => "Antic"
-  | #Sarala => "Sarala"
-  | #Arsenal => "Arsenal"
+  | #GrenzeGotisch(weights) => {
+      fontName: "Grenze Gotisch",
+      weights: toArrayWeightValue(weights),
+    }
 
-  | #BowlbyOneSC => "Bowlby One SC"
-  | #BigShouldersStencilText => "Big Shoulders Stencil Text"
-  | #BigShouldersStencilDisplay => "Big Shoulders Stencil Display"
-  | #BigShouldersInlineText => "Big Shoulders Inline Text"
-  | #BigShouldersInlineDisplay => "Big Shoulders Inline Display"
-  | #BlackOpsOne => "Black Ops One"
-  | #OleoScript => "Oleo Script"
-  | #LilitaOne => "Lilita One"
-  | #PinyonScript => "Pinyon Script"
-  | #Sintony => "Sintony"
-  | #BalooChettan2 => "Baloo Chettan 2"
-  | #CoveredByYourGrace => "Covered By Your Grace"
-  | #Krub => "Krub"
-  | #Glegoo => "Glegoo"
-  | #Cousine => "Cousine"
-  | #FiraMono => "Fira Mono"
-  | #Lateef => "Lateef"
-  | #Lalezar => "Lalezar"
-  | #LibreBarcodeEAN13Text => "Libre Barcode EAN13 Text"
-  | #Jomhuria => "Jomhuria"
-  | #Overlock => "Overlock"
-  | #Boogaloo => "Boogaloo"
-  | #CutiveMono => "Cutive Mono"
-  | #SairaExtraCondensed => "Saira Extra Condensed"
+  | #Heebo(weights) => {
+      fontName: "Heebo",
+      weights: toArrayWeightValue(weights),
+    }
 
-  | #Alata => "Alata"
-  | #Average => "Average"
-  | #Sofia => "Sofia"
-  | #Rancho => "Rancho"
-  | #Caudex => "Caudex"
-  | #ReemKufi => "Reem Kufi"
-  | #PTSerifCaption => "PT Serif Caption"
-  | #Pridi => "Pridi"
-  | #RubikMonoOne => "Rubik Mono One"
-  | #Kreon => "Kreon"
-  | #KosugiMaru => "Kosugi Maru"
-  | #Enriqueta => "Enriqueta"
-  | #NotoSerifKR => "Noto Serif KR"
-  | #Coda => "Coda"
-  | #Chewy => "Chewy"
-  | #CourierPrime => "Courier Prime"
-  | #DoHyeon => "Do Hyeon"
-  | #Allerta => "Allerta"
-  | #SpaceGrotesk => "Space Grotesk"
-  | #Yrsa => "Yrsa"
-  | #AlegreyaSansSC => "Alegreya Sans SC"
-  | #Schoolbell => "Schoolbell"
-  | #Laila => "Laila"
-  | #AnonymousPro => "Anonymous Pro"
-  | #Syncopate => "Syncopate"
-  | #Scheherazade => "Scheherazade"
-  | #FrederickatheGreat => "Fredericka the Great"
-  | #Capriola => "Capriola"
-  | #MiriamLibre => "Miriam Libre"
-  | #Niconne => "Niconne"
-  | #ShareTechMono => "Share Tech Mono"
-  | #Michroma => "Michroma"
-  | #AveriaSerifLibre => "Averia Serif Libre"
-  | #MartelSans => "Martel Sans"
-  | #Piazzolla => "Piazzolla"
-  | #OverpassMono => "Overpass Mono"
-  | #Candal => "Candal"
-  | #CaveatBrush => "Caveat Brush"
-  | #Kameron => "Kameron"
-  | #Basic => "Basic"
-  | #Aldrich => "Aldrich"
-  | #LibreBarcode128 => "Libre Barcode 128"
+  | #HeptaSlab(weights) => {
+      fontName: "Hepta Slab",
+      weights: toArrayWeightValue(weights),
+    }
 
-  | #ArbutusSlab => "Arbutus Slab"
-  | #Trispace => "Trispace"
-  | #Italianno => "Italianno"
-  | #NixieOne => "Nixie One"
-  | #BlackHanSans => "Black Han Sans"
-  | #Bevan => "Bevan"
-  | #Mallanna => "Mallanna"
-  | #ReenieBeanie => "Reenie Beanie"
-  | #LexendDeca => "Lexend Deca"
-  | #Sansita => "Sansita"
-  | #BerkshireSwash => "Berkshire Swash"
-  | #Molengo => "Molengo"
-  | #CabinSketch => "Cabin Sketch"
-  | #Kadwa => "Kadwa"
-  | #AnnieUseYourTelescope => "Annie Use Your Telescope"
-  | #RedHatText => "Red Hat Text"
-  | #Bentham => "Bentham"
-  | #Mada => "Mada"
-  | #MuktaVaani => "Mukta Vaani"
-  | #Norican => "Norican"
-  | #Forum => "Forum"
-  | #SixCaps => "Six Caps"
-  | #JustAnotherHand => "Just Another Hand"
-  | #MuktaMalar => "Mukta Malar"
-  | #DaysOne => "Days One"
+  | #Imbue(weights) => {
+      fontName: "Imbue",
+      weights: toArrayWeightValue(weights),
+    }
 
-  | #Rambla => "Rambla"
-  | #ArimaMandurai => "Arima Madurai"
-  | #Charm => "Charm"
-  | #VT323 => "VT323"
-  | #Scada => "Scada"
-  | #LeckerliOne => "Leckerli One"
-  | #Nobile => "Nobile"
-  | #Spinnaker => "Spinnaker"
-  | #Shrikhand => "Shrikhand"
-  | #TitanOne => "Titan One"
-  | #Telex => "Telex"
-  | #ComingSoon => "Coming Soon"
-  | #HoltwoodOneSC => "Holtwood One SC"
-  | #MarcellusSC => "Marcellus SC"
-  | #BubblegumSans => "Bubblegum Sans"
-  | #Trirong => "Trirong"
-  | #Suranna => "Suranna"
-  | #CinzelDecorative => "Cinzel Decorative"
-  | #BungeeInline => "Bungee Inline"
-  | #AllertaSencil => "Allerta Stencil"
-  | #ContrailOne => "Contrail One"
-  | #Graduate => "Graduate"
-  | #RhodiumLibre => "Rhodium Libre"
-  | #RacingSansOne => "Racing Sans One"
-  | #Yesteryear => "Yesteryear"
-  | #Share => "Share"
-  | #Thasadith => "Thasadith"
-  | #Judson => "Judson"
-  | #AlegreyaSC => "Alegreya SC"
-  | #Rochester => "Rochester"
-  | #HerrVonMullerhoff => "Herr Von Muellerhoff"
-  | #ChangaOne => "Changa One"
-  | #Oranienbaum => "Oranienbaum"
-  | #PalanquinDark => "Palanquin Dark"
-  | #Arizonia => "Arizonia"
-  | #Wallpoet => "Wallpoet"
-  | #IMFellDoublePica => "IM Fell Double Pica"
-  | #Rye => "Rye"
+  | #Inter(weights) => {
+      fontName: "Inter",
+      weights: toArrayWeightValue(weights),
+    }
 
-  | #Literata => "Literata"
-  | #Singlet => "Singlet"
-  | #Biryani => "Biryani"
-  | #Creepster => "Creepster"
-  | #Amiko => "Amiko"
-  | #Voltaire => "Voltaire"
-  | #Delius => "Delius"
-  | #FaunaOne => "Fauna One"
-  | #Homenaje => "Homenaje"
-  | #MrsSaintDelafield => "Mrs Saint Delafield"
-  | #Sen => "Sen"
-  | #Corben => "Corben"
-  | #Lustria => "Lustria"
-  | #Copse => "Copse"
-  | #SansitaSwashed => "Sansita Swashed"
-  | #Amita => "Amita"
-  | #CarroisGothic => "Carrois Gothic"
-  | #Kristi => "Kristi"
-  | #Pattaya => "Pattaya"
-  | #Kurale => "Kurale"
-  | #Andada => "Andada"
-  | #Magra => "Magra"
-  | #MeriendaOne => "Merienda One"
-  | #GrandHotel => "Grand Hotel"
-  | #AverageSans => "Average Sans"
-  | #Halant => "Halant"
-  | #Marmelad => "Marmelad"
-  | #OxygenMono => "Oxygen Mono"
-  | #Trocchi => "Trocchi"
-  | #IBMPlexSansCondensed => "IBM Plex Sans Condensed"
+  | #MuseoModerno(weights) => {
+      fontName: "MuseoModerno",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #Rokkitt(weights) => {
+      fontName: "Rokkitt",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #RobotoSlab(weights) => {
+      fontName: "Roboto Slab",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #SairaCondensed(weights) => {
+      fontName: "Saira Condensed",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #SairaExtraCondensed(weights) => {
+      fontName: "Saira Extra Condensed",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #SairaSemiCondensed(weights) => {
+      fontName: "Saira Semi Condensed",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #Spartan(weights) => {
+      fontName: "Spartan",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #Archivo(weights) => {
+      fontName: "Archivo",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #ArchivoNarrow(weights) => {
+      fontName: "Archivo Narrow",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #ArimaMadurai(weights) => {
+      fontName: "Arima Madurai",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #Arimo(weights) => {
+      fontName: "Arimo",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #Asap(weights) => {
+      fontName: "Asap",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #AsapCondensed(weights) => {
+      fontName: "Asap Condensed",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #BigShouldersDisplay(weights) => {
+      fontName: "Big Shoulders Display",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #BigShouldersInlineDisplay(weights) => {
+      fontName: "Big Shoulders Inline Display",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #BigShouldersInlineText(weights) => {
+      fontName: "Big Shoulders Inline Text",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #BigShouldersStencilDisplay(weights) => {
+      fontName: "Big Shoulders Stencil Display",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #BigShouldersStencilText(weights) => {
+      fontName: "Big Shoulders Stencil Text",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #BigShouldersText(weights) => {
+      fontName: "Big Shoulders Text",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #Blinker(weights) => {
+      fontName: "Blinker",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #Cabin(weights) => {
+      fontName: "Cabin",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #Chivo(weights) => {
+      fontName: "Chivo",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #Cuprum(weights) => {
+      fontName: "Cuprum",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #ExpletusSans(weights) => {
+      fontName: "Expletus Sans",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #Faustina(weights) => {
+      fontName: "Faustina",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #Gelasio(weights) => {
+      fontName: "Gelasio",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #IbarraRealNova(weights) => {
+      fontName: "Ibarra Real Nova",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #Inconsolata(weights) => {
+      fontName: "Inconsolata",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #Lora(weights) => {
+      fontName: "Lora",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #Manuale(weights) => {
+      fontName: "Manuale",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #Merriweather(weights) => {
+      fontName: "Merriweather",
+      weights: toArrayWeightValue(weights),
+    }
+  | #RedHatDisplay(weights) => {
+      fontName: "Red Hat Display",
+      weights: toArrayWeightValue(weights),
+    }
+  | #Sansita(weights) => {
+      fontName: "Sansita",
+      weights: toArrayWeightValue(weights),
+    }
+  | #Sora(weights) => {
+      fontName: "Sora",
+      weights: toArrayWeightValue(weights),
+    }
+  | #Trispace(weights) => {
+      fontName: "Trispace",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #Ubuntu(weights) => {
+      fontName: "Ubuntu",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #AdventPro(weights) => {
+      fontName: "Advent Pro",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #Assistant(weights) => {
+      fontName: "Assistant",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #Biryani(weights) => {
+      fontName: "Biryani",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #Changa(weights) => {
+      fontName: "Changa",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #DarkerGrotesque(weights) => {
+      fontName: "Darker Grotesque",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #Dosis(weights) => {
+      fontName: "Dosis",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #InknutAntiqua(weights) => {
+      fontName: "Inknut Antiqua",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #MPLUS1p(weights) => {
+      fontName: "M PLUS 1p",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #MPLUSRounded1c(weights) => {
+      fontName: "M PLUS Rounded 1c",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #Mada(weights) => {
+      fontName: "Mada",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #Manrope(weights) => {
+      fontName: "Manrope",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #Martel(weights) => {
+      fontName: "Martel",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #MartelSans(weights) => {
+      fontName: "Martel Sans",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #Mukta(weights) => {
+      fontName: "Mukta",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #MuktaMahee(weights) => {
+      fontName: "Mukta Mahee",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #MuktaMalar(weights) => {
+      fontName: "Mukta Malar",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #MuktaVaani(weights) => {
+      fontName: "Mukta Vaani",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #NotoSerifJP(weights) => {
+      fontName: "Noto Serif JP",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #NotoSerifKR(weights) => {
+      fontName: "Noto Serif KR",
+      weights: toArrayWeightValue(weights),
+    }
+  | #NotoSerifSC(weights) => {
+      fontName: "Noto Serif SC",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #NotoSerifTC(weights) => {
+      fontName: "Noto Serif TC",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #Oxanium(weights) => {
+      fontName: "Oxanium",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #Palanquin(weights) => {
+      fontName: "Palanquin",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #Recursive(weights) => {
+      fontName: "Recursive",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #SansitaSwashed(weights) => {
+      fontName: "Sansita Swashed",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #Tajawal(weights) => {
+      fontName: "Tajawal",
+      weights: toArrayWeightValue(weights),
+    }
   }
 
-// type notoWeights = [#v100 | #v300 | #v400 | #v500 | #v700 | #v900]
-
-// let
+let toFontValues = (fonts: fontsArray) => Belt.Array.map(fonts, font => toFontValue2(font))
