@@ -1810,7 +1810,7 @@ module Sharp = {
     </svg>
 
   @react.component
-  let addCircleSharp = (~className="") =>
+  let addCircle = (~className="") =>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       className={merge(.[defaultSize, className])}
@@ -1821,7 +1821,7 @@ module Sharp = {
     </svg>
 
   @react.component
-  let airPlaneSharp = (~className="") =>
+  let airPlane = (~className="") =>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       className={merge(.[defaultSize, className])}
@@ -1832,7 +1832,7 @@ module Sharp = {
     </svg>
 
   @react.component
-  let alarmSharp = (~className="") =>
+  let alarm = (~className="") =>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       className={merge(.[defaultSize, className])}
@@ -1846,7 +1846,7 @@ module Sharp = {
     </svg>
 
   @react.component
-  let albumsSharp = (~className="") =>
+  let albums = (~className="") =>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       className={merge(.[defaultSize, className])}
@@ -1855,7 +1855,7 @@ module Sharp = {
     </svg>
 
   @react.component
-  let alertSharp = (
+  let alert = (
     ~className="",
     ~fill="none",
     ~stroke="currentColor",
@@ -1878,7 +1878,7 @@ module Sharp = {
     </svg>
 
   @react.component
-  let alertCircleSharp = (~className="", ~fill="none") =>
+  let alertCircle = (~className="", ~fill="none") =>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       className={merge(.[defaultSize, className])}
@@ -1890,7 +1890,7 @@ module Sharp = {
     </svg>
 
   @react.component
-  let americanFootballSharp = (~className="") =>
+  let americanFootball = (~className="") =>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       className={merge(.[defaultSize, className])}
@@ -1901,7 +1901,7 @@ module Sharp = {
     </svg>
 
   @react.component
-  let analyticsSharp = (~className="") =>
+  let analytics = (~className="") =>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       className={merge(.[defaultSize, className])}
@@ -1912,7 +1912,7 @@ module Sharp = {
     </svg>
 
   @react.component
-  let apetureSharp = (~className="") =>
+  let apeture = (~className="") =>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       className={merge(.[defaultSize, className])}
@@ -1923,7 +1923,7 @@ module Sharp = {
     </svg>
 
   @react.component
-  let appsSharp = (~className="") =>
+  let apps = (~className="") =>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       className={merge(.[defaultSize, className])}
@@ -1939,7 +1939,7 @@ module Sharp = {
       <rect x="352" y="352" width="112" height="112" rx="8" ry="8" />
     </svg>
   @react.component
-  let archiveSharp = (~className="") =>
+  let archive = (~className="") =>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       className={merge(.[defaultSize, className])}
@@ -1951,7 +1951,7 @@ module Sharp = {
     </svg>
 
   @react.component
-  let arrowBackSharp = (
+  let arrowBack = (
     ~className="",
     ~fill="none",
     ~stroke="currentColor",
@@ -1974,7 +1974,7 @@ module Sharp = {
     </svg>
 
   @react.component
-  let arrowBackCircleSharp = (~className="") =>
+  let arrowBackCircle = (~className="") =>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       className={merge(.[defaultSize, className])}
@@ -1985,7 +1985,7 @@ module Sharp = {
     </svg>
 
   @react.component
-  let arrowDownSharp = (
+  let arrowDown = (
     ~className="",
     ~fill="none",
     ~stroke="currentColor",
@@ -2008,7 +2008,7 @@ module Sharp = {
     </svg>
 
   @react.component
-  let arrowDownCircleSharp = (~className="") =>
+  let arrowDownCircle = (~className="") =>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       className={merge(.[defaultSize, className])}
@@ -2019,7 +2019,7 @@ module Sharp = {
     </svg>
 
   @react.component
-  let arrowForwardSharp = (
+  let arrowForward = (
     ~className="",
     ~fill="none",
     ~stroke="currentColor",
@@ -2042,7 +2042,7 @@ module Sharp = {
     </svg>
 
   @react.component
-  let arrowForwardCircleSharp = (~className="") =>
+  let arrowForwardCircle = (~className="") =>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       className={merge(.[defaultSize, className])}
@@ -2053,7 +2053,7 @@ module Sharp = {
     </svg>
 
   @react.component
-  let arrowRedoSharp = (~className="") =>
+  let arrowRedo = (~className="") =>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       className={merge(.[defaultSize, className])}
@@ -2064,7 +2064,7 @@ module Sharp = {
     </svg>
 
   @react.component
-  let arrowRedoCircleSharp = (~className="") =>
+  let arrowRedoCircle = (~className="") =>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       className={merge(.[defaultSize, className])}
@@ -2075,7 +2075,7 @@ module Sharp = {
     </svg>
 
   @react.component
-  let arrowUndoSharp = (~className="") =>
+  let arrowUndo = (~className="") =>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       className={merge(.[defaultSize, className])}
@@ -2086,7 +2086,7 @@ module Sharp = {
     </svg>
 
   @react.component
-  let arrowUndoCircleSharp = (~className="") =>
+  let arrowUndoCircle = (~className="") =>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       className={merge(.[defaultSize, className])}
@@ -2097,7 +2097,7 @@ module Sharp = {
     </svg>
 
   @react.component
-  let arrowUpSharp = (
+  let arrowUp = (
     ~className="",
     ~fill="none",
     ~stroke="currentColor",
@@ -2120,7 +2120,7 @@ module Sharp = {
     </svg>
 
   @react.component
-  let arrowUpCircleSharp = (~className="") =>
+  let arrowUpCircle = (~className="") =>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       className={merge(.[defaultSize, className])}
@@ -2131,7 +2131,7 @@ module Sharp = {
     </svg>
 
   @react.component
-  let atSharp = (~className="") =>
+  let at = (~className="") =>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       className={merge(.[defaultSize, className])}
@@ -2142,7 +2142,7 @@ module Sharp = {
     </svg>
 
   @react.component
-  let atCircleSharp = (~className="") =>
+  let atCircle = (~className="") =>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       className={merge(.[defaultSize, className])}
@@ -2156,7 +2156,7 @@ module Sharp = {
     </svg>
 
   @react.component
-  let attachSharp = (
+  let attach = (
     ~className="",
     ~fill="none",
     ~stroke="currentColor",
@@ -2179,7 +2179,7 @@ module Sharp = {
     </svg>
 
   @react.component
-  let backspaceSharp = (~className="") =>
+  let backspace = (~className="") =>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       className={merge(.[defaultSize, className])}
@@ -2187,6 +2187,694 @@ module Sharp = {
       <path
         d="M144 96L32 256l112 160h304V96zm215.3 226.34L336.67 345l-65-65-65 65L184 322.34l65-65-65-65 22.63-22.63 65 65 65-65 22.63 22.63-65 65z"
       />
+    </svg>
+
+  @react.component
+  let bag = (~className="") =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        d="M372 160v-12A116.13 116.13 0 00258.89 32h-5.78A116.13 116.13 0 00140 148v12H52a4 4 0 00-4 4v300a16 16 0 0016 16h384a16 16 0 0016-16V164a4 4 0 00-4-4zm-40 0H180v-11c0-41.84 33.41-76.56 75.25-77A76.08 76.08 0 01332 148z"
+      />
+    </svg>
+
+  @react.component
+  let bagAdd = (~className="") =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        d="M460 160h-88v-12A116.13 116.13 0 00258.89 32h-5.78A116.13 116.13 0 00140 148v12H52a4 4 0 00-4 4v300a16 16 0 0016 16h384a16 16 0 0016-16V164a4 4 0 00-4-4zm-280-11c0-41.84 33.41-76.56 75.25-77A76.08 76.08 0 01332 148v12H180zm156 187h-64v64h-32v-64h-64v-32h64v-64h32v64h64z"
+      />
+    </svg>
+
+  @react.component
+  let bagCheck = (~className="") =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        d="M460 160h-88v-12A116.13 116.13 0 00258.89 32h-5.78A116.13 116.13 0 00140 148v12H52a4 4 0 00-4 4v300a16 16 0 0016 16h384a16 16 0 0016-16V164a4 4 0 00-4-4zm-280-11c0-41.84 33.41-76.56 75.25-77A76.08 76.08 0 01332 148v12H180zm50.81 252.12l-61.37-71.72 24.31-20.81L230 350.91l87.51-109.4 25 20z"
+      />
+    </svg>
+
+  @react.component
+  let bagHandle = (~className="") =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        d="M460 160h-88v-12A116.13 116.13 0 00258.89 32h-5.78A116.13 116.13 0 00140 148v12H52a4 4 0 00-4 4v300a16 16 0 0016 16h384a16 16 0 0016-16V164a4 4 0 00-4-4zm-280-11c0-41.84 33.41-76.56 75.25-77A76.08 76.08 0 01332 148v12H180zm188 91a112 112 0 01-224 0v-32h32v32a80 80 0 00160 0v-32h32z"
+      />
+    </svg>
+
+  @react.component
+  let bagRemove = (~className="") =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        d="M460 160h-88v-12A116.13 116.13 0 00258.89 32h-5.78A116.13 116.13 0 00140 148v12H52a4 4 0 00-4 4v300a16 16 0 0016 16h384a16 16 0 0016-16V164a4 4 0 00-4-4zm-280-11c0-41.84 33.41-76.56 75.25-77A76.08 76.08 0 01332 148v12H180zm156 187H176v-32h160z"
+      />
+    </svg>
+
+  @react.component
+  let balloon = (~className="") =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        d="M391 307.27c32.75-46.35 46.59-101.63 39-155.68C416.47 55.59 327.38-11.54 231.38 2S68.24 104.53 81.73 200.53c7.57 53.89 36.12 103.16 80.37 138.74 26.91 21.64 57.59 36.1 86.05 41.33l-8.36 45.23a8 8 0 009 9.38L279 431c15.9 35.87 41.65 60.48 78.41 75l14.88 5.88 11.77-29.75-14.88-5.89c-26.35-10.42-44.48-26.16-57-49.92l21.84-3.07a8 8 0 006.05-11.49l-20.49-41.16c25.98-12.87 51.49-35.18 71.42-63.33zm-160.82 15.66c-41.26-16.32-76.3-52.7-91.45-94.94l-5.4-15.06 30.12-10.8 5.4 15.06c14.5 40.44 47.27 65.77 73.1 76l14.88 5.88-11.77 29.76z"
+      />
+    </svg>
+
+  @react.component
+  let ban = (~className="") =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        d="M414.39 97.61A224 224 0 1097.61 414.39 224 224 0 10414.39 97.61zM432 256a175.09 175.09 0 01-35.8 106.26L149.74 115.8A175.09 175.09 0 01256 80c97.05 0 176 79 176 176zm-352 0a175.09 175.09 0 0135.8-106.26L362.26 396.2A175.09 175.09 0 01256 432c-97 0-176-78.95-176-176z"
+      />
+    </svg>
+
+  @react.component
+  let bandage = (~className="") =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        d="M27.71 337.1a40 40 0 000 56.54l90.65 90.65a40 40 0 0056.54 0l75.1-75.1L102.81 262zM496 147.1a39.87 39.87 0 00-11.75-28.38l-91-91a40.14 40.14 0 00-56.75 0L264 100.28 411.72 248l72.53-72.53A39.85 39.85 0 00496 147.1zM273.06 386.19l116-116L241.77 123l-116 116zm19.63-141.5a16 16 0 110 22.62 16 16 0 010-22.62zm-48-48a16 16 0 110 22.62 16 16 0 010-22.62zm0 96a16 16 0 110 22.62 16 16 0 010-22.62zm-25.38-48a16 16 0 11-22.62 0 16 16 0 0122.62 0z"
+      />
+    </svg>
+
+  @react.component
+  let barChart = (~className="") =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path d="M496 496H16V16h32v448h448v32z" />
+      <path d="M192 432H80V208h112zM336 432H224V160h112zM479.64 432h-112V96h112z" />
+    </svg>
+
+  @react.component
+  let barbell = (~className="") =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path d="M496 176h-58v-64h-76v122H150V112H74v64H16v160h58v64h76V278h212v122h76v-64h58V176z" />
+    </svg>
+
+  @react.component
+  let barcode = (
+    ~className="",
+    ~fill="none",
+    ~stroke="currentColor",
+    ~strokeLinecap="square",
+    ~strokeLinejoin="round",
+    ~strokeWidth="32",
+  ) =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        fill
+        stroke
+        strokeLinecap
+        strokeLinejoin
+        strokeWidth
+        d="M400 400.33l48-.33V112l-48 .33M112 112l-48 .33v288l48-.33M384 192v128M320 160v192M256 176v160M192 160v192M128 192v128"
+      />
+    </svg>
+
+  @react.component
+  let baseballe = (~className="") =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        d="M302.16 56.2a13.88 13.88 0 01-3.42 8.91l-.11 5.13-27.71-.57c0 1.3.09 2.61.16 3.91a177.33 177.33 0 003.45 26.31l24.72-7.18 7.81 26.88-24.71 7.18a177.21 177.21 0 0013.34 27.69l21.27-15 16.16 22.86-21.29 15.05q5.25 6.33 11.11 12.19c3.91 3.91 8 7.6 12.2 11.1l15.71-22.22 22.86 16.16L358 216.75a178.78 178.78 0 0027.68 13.32l7.49-25.8 26.89 7.81-7.5 25.83a177.8 177.8 0 0031 3.67l-.41-24.67 17.41-.29A208 208 0 00301.82 52.93a13.65 13.65 0 01.34 3.27zM214 441.64l27.91.49a177.46 177.46 0 00-3.62-29.95l-24.14 7-7.81-26.88 24.11-7a177.92 177.92 0 00-13.33-27.68L196.79 372l-16.16-22.86L201 334.73c-3.49-4.22-7.19-8.3-11.09-12.2s-8-7.62-12.19-11.12l-13.91 19.68L141 314.93l13.9-19.66a177.26 177.26 0 00-27.7-13.33l-6.37 21.94-26.89-7.81 6.38-22a177.32 177.32 0 00-26.32-3.4c-1.59-.09-3.18-.16-4.78-.2l.4 22.34-17.71.32a207.88 207.88 0 00161.81 166.48z"
+      />
+      <path
+        d="M444.65 302.67l-.55-33.06a206 206 0 01-39.33-4.74L397 291.8l-26.94-7.8 7.83-27a206.91 206.91 0 01-36.06-17.35l-16.36 23.15-22.86-16.16 16.33-23.11a204.21 204.21 0 01-30-30l-22.19 15.67-16.16-22.87 22.17-15.67a206 206 0 01-17.38-36.06l-25.75 7.48-7.81-26.89 25.73-7.47q-2-9.21-3.18-18.64h-.47l-.78-14-.33-6-17.94-.32a13.38 13.38 0 01-1.79-.16l-6.35-.13.06-2.47a14 14 0 01-5.66-11.49 13.27 13.27 0 01.13-1.67A208 208 0 0052.16 217.43l16.1-.28.45 25.18 6.83.38 14 .77v.48q9.42 1.17 18.64 3.18l6.68-23L141.7 232l-6.7 23a205.3 205.3 0 0136.06 17.38l14.53-20.56L208.47 268 194 288.5a203.5 203.5 0 0130 30l21.3-15 16.16 22.86-21.36 15.05a206.86 206.86 0 0117.34 36.06l25.27-7.33 7.81 26.86-25.24 7.33a205.9 205.9 0 014.72 38.3l29.42.53-.29 16.48a207.94 207.94 0 00160-157.21z"
+      />
+    </svg>
+
+  @react.component
+  let basket = (~className="") =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path d="M339.2 217.6L256 106.67 172.8 217.6l-25.6-19.2 96-128a16 16 0 0125.6 0l96 128z" />
+      <path
+        d="M441.59 192H70.41a12 12 0 00-11.68 14.77L112.59 434h286.82l53.86-227.23A12 12 0 00441.59 192zM256 351.66A37.71 37.71 0 11293.89 314 37.88 37.88 0 01256 351.66z"
+      />
+    </svg>
+
+  @react.component
+  let basketball = (~className="") =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        d="M256 233.37l34.45-34.45a207.08 207.08 0 01-50.12-135.25c0-5 .19-10.05.54-15A207.09 207.09 0 00120.67 98zM313.14 176.23L391.33 98A207.07 207.07 0 00273 48.8c-.41 4.9-.64 9.86-.64 14.87a175.25 175.25 0 0040.78 112.56zM335.77 198.86a175.25 175.25 0 00112.56 40.81c5 0 10-.23 14.87-.64A207.07 207.07 0 00414 120.67zM176.23 313.14a175.23 175.23 0 00-112.56-40.81q-7.52 0-14.87.64A207.07 207.07 0 0098 391.33zM256 278.63l-34.45 34.45a207.08 207.08 0 0150.12 135.25c0 5-.19 10.05-.54 15A207.06 207.06 0 00391.33 414zM448.33 271.67a207.08 207.08 0 01-135.25-50.12L278.63 256 414 391.33a207.09 207.09 0 0049.39-120.2c-5.01.35-10.02.54-15.06.54zM233.37 256L98 120.67a207.06 207.06 0 00-49.39 120.2c5-.35 10-.54 15-.54a207.08 207.08 0 01135.25 50.12zM120.67 414A207.07 207.07 0 00239 463.2q.63-7.35.64-14.87a175.23 175.23 0 00-40.81-112.56z"
+      />
+    </svg>
+
+  @react.component
+  let batteryCharging = (~className="") =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        d="M306.68 237.62h-66.5l15.33-54.7 6.43-22.92 3.94-14 4.29-15.33a3.56 3.56 0 00.06-.44v-.19a1.85 1.85 0 000-.23 2 2 0 000-.24v-.14c0-.1-.07-.19-.11-.29v-.05a2.33 2.33 0 00-2-1.35h-.1a2.25 2.25 0 00-1.8 1l-12.5 17.15-18.82 25.55-8.36 11.48-35.41 48.6L160 274.26h66.44l-30 107a3.93 3.93 0 00-.06.48v.1a1.94 1.94 0 000 .34.29.29 0 000 .09 3 3 0 00.07.32v.06a1.83 1.83 0 00.14.32 2.38 2.38 0 001.52 1.16H198.68a2.1 2.1 0 001.31-.5l.06-.05a2.6 2.6 0 00.42-.45L223.3 352l13-17.82z"
+      />
+      <path
+        d="M289.78 134.55l-.14.74-.21.73-6.72 24H417V352H248.05l-23.33 32H449V128H290.13a22.62 22.62 0 01-.35 6.55zM49 160h169.49l23.31-32H17v256h159.49a22.73 22.73 0 01.34-6.67l.15-.75.2-.73 6.69-23.85H49z"
+      />
+      <path
+        d="M264.76 329.08h130.55V182.92H276.28l-9.73 34.7H346l-23.16 31.78-58.08 79.68zM160 294.26h-39.31l23.15-31.78 57.95-79.56H70.69v146.16h119.6l9.77-34.82H160zM465 202.67h32v106.67h-32z"
+      />
+    </svg>
+
+  @react.component
+  let batteryDead = (
+    ~className="",
+    ~fill="none",
+    ~stroke="currentColor",
+    ~strokeLinecap="square",
+    ~strokeMiterlimit="10",
+    ~strokeWidth="32",
+  ) =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        fill
+        stroke
+        strokeLinecap
+        strokeMiterlimit
+        strokeWidth
+        d="M32 144h400v224H32zM480 218.67v74.66"
+      />
+    </svg>
+
+  @react.component
+  let batteryFull = (~className="") =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path d="M17 384h432V128H17zm32-224h368v192H49z" />
+      <path d="M70.69 182.94h324.63v146.13H70.69zM465 202.67h32v106.67h-32z" />
+    </svg>
+
+  @react.component
+  let batteryHalf = (~className="") =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path d="M17 384h432V128H17zm32-224h368v192H49z" />
+      <path d="M70.69 182.92H256v146.16H70.69zM465 202.67h32v106.67h-32z" />
+    </svg>
+
+  @react.component
+  let beaker = (~className="") =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        d="M453.55 54.7L464 32H128.4c-27.74 0-49 6.57-63.31 19.51C54.39 61.27 48 74.89 48 88v24h16c31 0 32 16.79 32 35v313a20 20 0 0020 20h312a20 20 0 0020-20V96c0-17.16 2.28-34.14 5.55-41.3zM416 96v64H128v-22c0-36.15-21-51-41.77-53.46C89 70 105.7 64.05 128.4 64.05h289.92A221.83 221.83 0 00416 96z"
+      />
+    </svg>
+
+  @react.component
+  let bed = (~className="") =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        d="M432 224V96a16 16 0 00-16-16H96a16 16 0 00-16 16v128a48 48 0 00-48 48v160h36v-32h376v32h36V272a48 48 0 00-48-48zm-192 0H120v-32a16 16 0 0116-16h88a16 16 0 0116 16zm32-32a16 16 0 0116-16h88a16 16 0 0116 16v32H272z"
+      />
+    </svg>
+
+  @react.component
+  let beer = (~className="") =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        d="M448 208h-80v-5.74A63.93 63.93 0 00321.65 96a111 111 0 00-27.59-47.29A108.62 108.62 0 00216 16c-29.91 0-57.78 12.28-79 34.67a56 56 0 00-67.51 77.51c-1 .86-1.91 1.74-2.83 2.66A63.56 63.56 0 0048 176.26a62.65 62.65 0 0020.77 46.54A65 65 0 0080 231v249a16 16 0 0016 16h256a16 16 0 0016-16v-48h80a16 16 0 0016-16V224a16 16 0 00-16-16zM176 432h-32V240h32zm64 0h-32V240h32zm64 0h-32V240h32zm16-240c-8.33 0-20.55-5.18-26.69-11.31l-4.68-4.69H148.79L145 186.53c-5.81 16-18.83 20.41-28.73 21.29a34.08 34.08 0 01-25.91-8.67 31 31 0 01-10.32-23 31.8 31.8 0 019.33-22.71c.16-.17.33-.32.5-.49A31.78 31.78 0 01112 144c.09 0 9.12.34 16.4 5.8l12.8 9.6 19.2-25.6-12.8-9.6A63.69 63.69 0 00112 112a64.79 64.79 0 00-14 1.55 24 24 0 0141.4-23.68l.23.35.4.46a35.78 35.78 0 015 8.94l5.62 15 30-11.24-5.62-15a68.2 68.2 0 00-10-17.74c-.38-.52-.79-1-1.19-1.51C178.38 55.45 196.64 48 216 48a76.86 76.86 0 0155.23 23.18A80.2 80.2 0 01292.61 142l-3 15.72 31.43 6 3-15.72a111.78 111.78 0 001.96-19.43 32 32 0 01-6 63.43zm112 208h-64V240h64z"
+      />
+    </svg>
+
+  @react.component
+  let bicycle = (~className="") =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        d="M320 192l-29.5-60.1C284.32 118 284.32 118 264 118c-13.26 0-14.76 0-23 7.3l-71.7 69.1c-8.3 8.45-9.3 9.45-9.3 26.6 0 12.67 3.78 14.61 18.51 22.9L240 278v90h32V254s-29-17-48.3-30l48.9-51.5c18.7 28.5 27.3 51.5 38 51.5H384v-32z"
+      />
+      <path
+        d="M388 448a92 92 0 1192-92 92.1 92.1 0 01-92 92zm0-152a60 60 0 1060 60 60.07 60.07 0 00-60-60zM124 448a92 92 0 1192-92 92.1 92.1 0 01-92 92zm0-152a60 60 0 1060 60 60.07 60.07 0 00-60-60zM320 128a31.89 31.89 0 0032-32.1A31.55 31.55 0 00320.2 64a32 32 0 10-.2 64z"
+      />
+    </svg>
+
+  @react.component
+  let bluetooth = (~className="") =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        d="M397.41 161.13L236-.28v212.8l-94.17-80.72-26 30.37L225.27 256 115.8 349.83l26 30.37 94.2-80.72v212.8l161.41-161.41L286.73 256zM276 96.28l62.59 62.59L276 212.52zm62.58 256.85L276 415.72V299.48z"
+      />
+    </svg>
+
+  @react.component
+  let boat = (~className="") =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        d="M477.77 246.42c-2.13-6-7.23-9.55-12.56-11.95L432 221.38V92a20 20 0 00-20-20h-76V40a16 16 0 00-16-16H192a16 16 0 00-16 16v32h-76a20 20 0 00-20 20v129.46l-33.08 13.06c-5.33 2.4-10.58 6-12.72 12s-3.16 11.81-1 19L84.25 415.7h1.06c34.12 0 64-17.41 85.31-43.82 21.32 26.41 51.18 42.12 85.3 42.12s64-15.76 85.31-42.17c21.32 26.41 51.18 43.87 85.3 43.87h1.06l51.25-150.17c2.16-6 1.07-13.1-1.07-19.11zM256 152l-144 56.83V108a4 4 0 014-4h280a4 4 0 014 4v100.76z"
+      />
+      <path
+        d="M345.22 407c-52.25 36.26-126.35 36.25-178.6 0 0 0-45.64 63-94.64 63l13.33 1c29.86 0 58.65-11.73 85.31-25.59a185.33 185.33 0 00170.6 0c26.66 13.87 55.45 25.6 85.31 25.6l13.33-1C392.21 470 345.22 407 345.22 407z"
+      />
+    </svg>
+
+  @react.component
+  let body = (~className="") =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <circle cx="256" cy="56" r="56" />
+      <path
+        d="M464 128H48v52h144l-32 325.13 51 6.87 21.65-192h47.02L301 512l51-6.98L320 180h144v-52z"
+      />
+    </svg>
+
+  @react.component
+  let bonfire = (~className="") =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        d="M199.89 336l-15.25-5.62a100.35 100.35 0 01-32-23.08c-13.93-14.9-29.29-40.71-23.38-79.11 5.2-33.73 44.2-74.21 69.34-97.87 27.24-25.62 66-65.85 64.15-99.15L262 16h15.18C328.53 16 384 53.62 384 114.41c0 45.57-22 77.61-68.91 106.9-8 5-16.44 9.66-25.42 14.53-30.63 16.62-75.29 49.83-85.73 85.32zM181.19 113.59C201 95 218.91 78.15 227.62 59.79q-2.76-1.68-5.7-3.09c-11.87-5.69-26.1-8.34-44.76-8.34h-16.94l.56 16.49c.47 14.06-6.06 22.51-14.33 33.21C137.8 109.26 128 121.94 128 141c0 10.23 1.29 18.76 4.2 26.36q3.5-5.31 7.61-10.63c12.19-15.73 27.05-29.68 41.38-43.14z"
+      />
+      <path
+        d="M330.34 239.85c-9.31 5.9-19 11.14-29.25 16.71-32.65 17.69-63.48 34.44-73.23 67.44l-.6 2a110.5 110.5 0 0045.87 10c29.66 0 57.45-11.13 78.24-31.36A107.38 107.38 0 00384 227a92.39 92.39 0 00-5.59-31c-11.35 16.18-27.14 30.58-48.07 43.85zM268.72 360h-25.44a4 4 0 00-3.92 3.22l-25.36 128a4 4 0 003.92 4.78h76.26a4 4 0 003.92-4.78l-25.41-128a4 4 0 00-3.97-3.22zM325.68 354.32l-11.36 11.36a4 4 0 00-.5 5.05l59.47 89.21a4 4 0 006.16.61l41.1-41.1a4 4 0 00-.61-6.16l-89.21-59.47a4 4 0 00-5.05.5zM388 336a4 4 0 00-4 4v8.61a4 4 0 003.34 3.95l88 14.66a4 4 0 004.66-3.94V340a4 4 0 00-4-4zM186.32 354.32l11.36 11.36a4 4 0 01.5 5.05l-59.47 89.21a4 4 0 01-6.16.61l-41.1-41.1a4 4 0 01.61-6.16l89.21-59.47a4 4 0 015.05.5zM124 336H36a4 4 0 00-4 4v23.28a4 4 0 004.66 3.94l88-14.66a4 4 0 003.34-3.95V340a4 4 0 00-4-4z"
+      />
+    </svg>
+
+  @react.component
+  let book = (~className="") =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        d="M464 48c-67.61.29-117.87 9.6-154.24 25.69-27.14 12-37.76 21.08-37.76 51.84V448c41.57-37.5 78.46-48 224-48V48zM48 48c67.61.29 117.87 9.6 154.24 25.69 27.14 12 37.76 21.08 37.76 51.84V448c-41.57-37.5-78.46-48-224-48V48z"
+      />
+    </svg>
+
+  @react.component
+  let bookmark = (~className="") =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path d="M416 480L256 357.41 96 480V32h320z" />
+    </svg>
+
+  @react.component
+  let bookmarks = (~className="") =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path d="M112 0v48h304v368l48 32V0H112z" /> <path d="M48 80v432l168-124 168 124V80H48z" />
+    </svg>
+
+  @react.component
+  let bowlingBall = (~className="") =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        d="M414.39 97.61A224 224 0 1097.61 414.39 224 224 0 10414.39 97.61zM286 230a28 28 0 1128-28 28 28 0 01-28 28zm8-76a28 28 0 1128-28 28 28 0 01-28 28zm68 44a28 28 0 1128-28 28 28 0 01-28 28z"
+      />
+    </svg>
+
+  @react.component
+  let briefcase = (~className="") =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        d="M336 288H176v-32H16v196a12 12 0 0012 12h456a12 12 0 0012-12V256H336zM496 124a12 12 0 00-12-12H384V56a8 8 0 00-8-8H136a8 8 0 00-8 8v56H28a12 12 0 00-12 12v100h480zm-152-12H168V88h176z"
+      />
+    </svg>
+
+  @react.component
+  let browsers = (~className="") =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        d="M32 64v384a16 16 0 0016 16h416a16 16 0 0016-16V64a16 16 0 00-16-16H48a16 16 0 00-16 16zm408 364H72a4 4 0 01-4-4V152a4 4 0 014-4h368a4 4 0 014 4v272a4 4 0 01-4 4z"
+      />
+    </svg>
+
+  @react.component
+  let brush = (~className="") =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        d="M480 96l-64-64-244 260 64 64zM142 320c-36.52 0-66 30.63-66 68.57 0 25.43-31 45.72-44 45.72C52.24 462.17 86.78 480 120 480c48.62 0 88-40.91 88-91.43 0-37.94-29.48-68.57-66-68.57z"
+      />
+    </svg>
+
+  @react.component
+  let bug = (~className="") =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        d="M480 304.13v-32h-80V215.2c29.42-27.95 32-64.76 32-103.2V96h-32v16c0 28-1.86 48.15-9.9 63.84C368 128 324.32 112 256 112c-39.8 0-75.19 7.06-100.43 24.32-14.9 10.19-25.2 24.91-32.7 39.72C114 160.57 112 140.82 112 112V96H80v16c0 37.44 2.59 73.36 32 101.2v58.93H32v32l80-.13c0 19 3.7 53.09 10.39 69.69C96.6 396.76 80 422.31 80 464v16h32v-16c0-27.66 9.1-44.71 26.17-61.32C160 448 177 464 240 464V176h32v288c65 0 80-16 101.83-61.32C390.9 419.29 400 436.35 400 464v16h32v-16c0-41.68-16.6-67.23-42.39-90.31C396.3 357.09 400 323 400 304z"
+      />
+      <path
+        d="M256 32c-48.06 0-96 0-96 84 26.12-14 59.35-20 96-20 24.09 0 46.09 2.65 65.39 8 10.75 3 24.66 8.71 30.61 12 0-84-47.94-84-96-84z"
+      />
+    </svg>
+
+  @react.component
+  let build = (~className="") =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        d="M230 209.2L32 405.58 106.65 480l197.59-198.17c46.47 17.46 105.52 12.54 143-24.78 40.44-40.32 40.35-108 16.81-156.79l-87.33 87.06-52.32-52.13 87.33-87.06C363 24.46 294.67 24.34 254.23 64.66c-38.03 37.91-42.78 97.6-24.23 144.54z"
+      />
+    </svg>
+
+  @react.component
+  let bulb = (~className="") =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        d="M208 464h96v32h-96zM192 416h128v32H192zM369.42 62.69C339.35 32.58 299.07 16 256 16A159.62 159.62 0 0096 176c0 46.62 17.87 90.23 49 119.64l4.36 4.09C167.37 316.57 192 339.64 192 360v40h48V269.11L195.72 244 214 217.72 256 240l41.29-22.39 19.1 25.68-44.39 26V400h48v-40c0-19.88 24.36-42.93 42.15-59.77l4.91-4.66C399.08 265 416 223.61 416 176a159.16 159.16 0 00-46.58-113.31z"
+      />
+    </svg>
+
+  @react.component
+  let bus = (~className="", ~fill="none") =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path d="M400 64H112a16 16 0 000 32h288a16 16 0 000-32z" fill />
+      <path
+        d="M424 32H88a24 24 0 00-24 24v360a32 32 0 0016 27.71V480h72v-32h208v32h72v-36.29A32 32 0 00448 416V56a24 24 0 00-24-24zM175.82 371.47a32 32 0 11-35.3-35.29 32.09 32.09 0 0135.3 35.29zM240 288H96V128h144zm16-192H96.46L96 64h320l-.46 32H256zm16 32h144v160H272zm64.18 236.53a32 32 0 1135.3 35.29 32.09 32.09 0 01-35.3-35.29z"
+      />
+    </svg>
+
+  @react.component
+  let business = (~className="") =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        d="M320 176V16H32v480h128v-96h32v96h288V176zM112 432H80v-32h32zm0-80H80v-32h32zm0-80H80v-32h32zm0-80H80v-32h32zm0-80H80V80h32zm128-32h32v32h-32zm-48 272h-32v-32h32zm0-80h-32v-32h32zm0-80h-32v-32h32zm0-80h-32V80h32zm80 320h-32v-32h32zm0-80h-32v-32h32zm0-80h-32v-32h32zm0-80h-32v-32h32v32zm176 272H320v-32h32v-32h-32v-48h32v-32h-32v-48h32v-32h-32v-32h128z"
+      />
+      <path d="M384 400h32v32h-32zM384 320h32v32h-32zM384 240h32v32h-32z" />
+    </svg>
+
+  @react.component
+  let cafe = (~className="") =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        d="M448 64H80v254.34a19.83 19.83 0 005.86 14.14l29.65 29.66a19.87 19.87 0 0014.15 5.86h204.68a19.87 19.87 0 0014.15-5.86l29.65-29.66a19.83 19.83 0 005.86-14.14V192h32a16 16 0 0011.31-4.69l32-32A16 16 0 00464 144V80a16 16 0 00-16-16zm-16 73.37L409.37 160H384V96h48zM48 400h368v32H48z"
+      />
+    </svg>
+
+  @react.component
+  let calculator = (~className="") =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        d="M416 48a16 16 0 00-16-16H112a16 16 0 00-16 16v416a16 16 0 0016 16h288a16 16 0 0016-16zM192 432h-48v-48h48zm0-80h-48v-48h48zm0-80h-48v-48h48zm88 160h-48v-48h48zm0-80h-48v-48h48zm0-80h-48v-48h48zm88 160h-48V304h48zm0-160h-48v-48h48zm0-96H144V80h224z"
+      />
+    </svg>
+
+  @react.component
+  let calendar = (~className="") =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        d="M32 456a24 24 0 0024 24h400a24 24 0 0024-24V176H32zm320-244a4 4 0 014-4h40a4 4 0 014 4v40a4 4 0 01-4 4h-40a4 4 0 01-4-4zm0 80a4 4 0 014-4h40a4 4 0 014 4v40a4 4 0 01-4 4h-40a4 4 0 01-4-4zm-80-80a4 4 0 014-4h40a4 4 0 014 4v40a4 4 0 01-4 4h-40a4 4 0 01-4-4zm0 80a4 4 0 014-4h40a4 4 0 014 4v40a4 4 0 01-4 4h-40a4 4 0 01-4-4zm0 80a4 4 0 014-4h40a4 4 0 014 4v40a4 4 0 01-4 4h-40a4 4 0 01-4-4zm-80-80a4 4 0 014-4h40a4 4 0 014 4v40a4 4 0 01-4 4h-40a4 4 0 01-4-4zm0 80a4 4 0 014-4h40a4 4 0 014 4v40a4 4 0 01-4 4h-40a4 4 0 01-4-4zm-80-80a4 4 0 014-4h40a4 4 0 014 4v40a4 4 0 01-4 4h-40a4 4 0 01-4-4zm0 80a4 4 0 014-4h40a4 4 0 014 4v40a4 4 0 01-4 4h-40a4 4 0 01-4-4zM456 64h-55.92V32h-48v32H159.92V32h-48v32H56a23.8 23.8 0 00-24 23.77V144h448V87.77A23.8 23.8 0 00456 64z"
+      />
+    </svg>
+
+  @react.component
+  let calendarClear = (~className="") =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        d="M32 456a24 24 0 0024 24h400a24 24 0 0024-24V192H32zM480 87.77A23.8 23.8 0 00456 64h-55.92V32h-48v32H159.92V32h-48v32H56a23.8 23.8 0 00-24 23.77V144h448z"
+      />
+    </svg>
+
+  @react.component
+  let calendarNumber = (~className="") =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        d="M32 456a24 24 0 0024 24h400a24 24 0 0024-24V176H32zm310.17-244H368v200h-32V256.29l-35.39 26.08-19-25.76zM222 335.3c-8.54-8.74-22.75-12.67-30.11-12.67h-16v-32h16c4.85 0 17.41-2.6 25.28-10.65a22 22 0 006.57-16.08c0-23.23-28.63-23.9-31.89-23.9-17.34 0-23.8 10.61-24.07 11.06l-8.13 13.78-27.56-16.27 8.14-13.77c7.64-13 25.22-26.8 51.62-26.8 16.44 0 31.76 4.77 43.13 13.42 13.39 10.2 20.76 25.28 20.76 42.48A54 54 0 01240 302.35c-1.15 1.18-2.36 2.28-3.59 3.35a66.18 66.18 0 018.42 7.23c10.56 10.8 16.14 25.75 16.14 43.25 0 18.06-7.61 34-21.42 44.92-12.17 9.61-28.75 14.9-46.7 14.9-27.87 0-48.48-18.16-57.66-33.7l-8.13-13.78 27.56-16.27 8.16 13.75c1.08 1.84 11.15 18 30.1 18 16.66 0 36.12-7.29 36.12-27.82 0-6.25-1.22-14.95-7-20.88zM456 64h-55.92V32h-48v32H159.92V32h-48v32H56a23.8 23.8 0 00-24 23.77V144h448V87.77A23.8 23.8 0 00456 64z"
+      />
+    </svg>
+
+  @react.component
+  let call = (~className="") =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        d="M478.94 370.14c-5.22-5.56-23.65-22-57.53-43.75-34.13-21.94-59.3-35.62-66.52-38.81a3.83 3.83 0 00-3.92.49c-11.63 9.07-31.21 25.73-32.26 26.63-6.78 5.81-6.78 5.81-12.33 4-9.76-3.2-40.08-19.3-66.5-45.78s-43.35-57.55-46.55-67.3c-1.83-5.56-1.83-5.56 4-12.34.9-1.05 17.57-20.63 26.64-32.25a3.83 3.83 0 00.49-3.92c-3.19-7.23-16.87-32.39-38.81-66.52-21.78-33.87-38.2-52.3-43.76-57.52a3.9 3.9 0 00-3.89-.87 322.35 322.35 0 00-56 25.45A338 338 0 0033.35 92a3.83 3.83 0 00-1.26 3.74c2.09 9.74 12.08 50.4 43.08 106.72 31.63 57.48 53.55 86.93 100 133.22S252 405.21 309.54 436.84c56.32 31 97 41 106.72 43.07a3.86 3.86 0 003.75-1.26A337.73 337.73 0 00454.35 430a322.7 322.7 0 0025.45-56 3.9 3.9 0 00-.86-3.86z"
+      />
+    </svg>
+
+  @react.component
+  let camera = (~className="") =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <circle cx="256" cy="272" r="64" />
+      <path
+        d="M456 144h-83c-3 0-6.72-1.94-9.62-5L336.1 96.2C325 80 320 80 302 80h-92c-18 0-24 0-34.07 16.21L148.62 139c-2.22 2.42-5.34 5-8.62 5v-16a8 8 0 00-8-8H92a8 8 0 00-8 8v16H56a24 24 0 00-24 24v240a24 24 0 0024 24h400a24 24 0 0024-24V168a24 24 0 00-24-24zM260.51 367.9a96 96 0 1191.39-91.39 96.11 96.11 0 01-91.39 91.39z"
+      />
+    </svg>
+
+  @react.component
+  let cameraReverse = (~className="") =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        d="M456 144h-83c-3 0-6.72-1.94-9.62-5l-27.31-42.79C326 80 320 80 302 80h-92c-18 0-23 0-34.07 16.21L148.62 139c-2.22 2.42-5.34 5-8.62 5v-16a8 8 0 00-8-8H92a8 8 0 00-8 8v16H56a24 24 0 00-24 24v240a24 24 0 0024 24h400a24 24 0 0024-24V168a24 24 0 00-24-24zM256 368c-47.82 0-87.76-34.23-95-80h-43.63L176 229.37 234.63 288H194a64.07 64.07 0 00102.63 33.49L320 343l-3.68 3.72A96.64 96.64 0 01256 368zm80-53.84L277.11 256H318a64.26 64.26 0 00-103-33.36L192 200l3.14-2.45A96.19 96.19 0 01255.76 176c47.85 0 87 34.19 94.24 80h44.92z"
+      />
+    </svg>
+
+  @react.component
+  let car = (~className="") =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        d="M447.68 220.78a16.44 16.44 0 00-1-3.1l-48-112A16 16 0 00384 96H128a16 16 0 00-14.71 9.7l-48 112a16.44 16.44 0 00-1 3.1A16.15 16.15 0 0064 224v184a8 8 0 008 8h32a8 8 0 008-8v-24h288v24a8 8 0 008 8h32a8 8 0 008-8V224a16.15 16.15 0 00-.32-3.22zM144 320a32 32 0 1132-32 32 32 0 01-32 32zm224 0a32 32 0 1132-32 32 32 0 01-32 32zM104.26 208l34.29-80h234.9l34.29 80z"
+      />
+    </svg>
+
+  @react.component
+  let carSport = (~className="") =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        d="M488 224c-3-5-32.61-17.79-32.61-17.79 5.15-2.66 8.67-3.21 8.67-14.21 0-12-.06-16-8.06-16h-27.14c-.11-.24-.23-.49-.34-.74-17.52-38.26-19.87-47.93-46-60.95C347.47 96.88 281.76 96 256 96s-91.47.88-126.49 18.31c-26.16 13-25.51 19.69-46 60.95 0 .11-.21.4-.4.74H55.94c-7.94 0-8 4-8 16 0 11 3.52 11.55 8.67 14.21C56.61 206.21 28 220 24 224s-8 32-8 80 4 96 4 96h11.94c0 14 2.06 16 8.06 16h80c6 0 8-2 8-16h256c0 14 2 16 8 16h82c4 0 6-3 6-16h12s4-49 4-96-5-75-8-80zm-362.74 44.94A516.94 516.94 0 0170.42 272c-20.42 0-21.12 1.31-22.56-11.44a72.16 72.16 0 01.51-17.51L49 240h3c12 0 23.27.51 44.55 6.78a98 98 0 0130.09 15.06C131 265 132 268 132 268zm247.16 72L368 352H144s.39-.61-5-11.18c-4-7.82 1-12.82 8.91-15.66C163.23 319.64 208 304 256 304s93.66 13.48 108.5 21.16C370 328 376.83 330 372.42 341zm-257-136.53a96.23 96.23 0 01-9.7.07c2.61-4.64 4.06-9.81 6.61-15.21 8-17 17.15-36.24 33.44-44.35 23.54-11.72 72.33-17 110.23-17s86.69 5.24 110.23 17c16.29 8.11 25.4 27.36 33.44 44.35 2.57 5.45 4 10.66 6.68 15.33-2 .11-4.3 0-9.79-.19zm347.72 56.11C461 273 463 272 441.58 272a516.94 516.94 0 01-54.84-3.06c-2.85-.51-3.66-5.32-1.38-7.1a93.84 93.84 0 0130.09-15.06c21.28-6.27 33.26-7.11 45.09-6.69a3.22 3.22 0 013.09 3 70.18 70.18 0 01-.49 17.47z"
+      />
+    </svg>
+
+  @react.component
+  let card = (~className="") =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        d="M32 416a16 16 0 0016 16h416a16 16 0 0016-16V222H32zm66-138a8 8 0 018-8h92a8 8 0 018 8v64a8 8 0 01-8 8h-92a8 8 0 01-8-8zM464 80H48a16 16 0 00-16 16v66h448V96a16 16 0 00-16-16z"
+      />
+    </svg>
+
+  @react.component
+  let caretBack = (~className="") =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path d="M368 64L144 256l224 192V64z" />
+    </svg>
+
+  @react.component
+  let caretBackCircle = (~className="") =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        d="M48 256c0 114.87 93.13 208 208 208s208-93.13 208-208S370.87 48 256 48 48 141.13 48 256zm252 108.27L169.91 256 300 147.73z"
+      />
+    </svg>
+
+  @react.component
+  let caretDown = (~className="") =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path d="M64 144l192 224 192-224H64z" />
+    </svg>
+
+  @react.component
+  let caretDownCircle = (~className="") =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        d="M464 256c0-114.87-93.13-208-208-208S48 141.13 48 256s93.13 208 208 208 208-93.13 208-208zm-99.73-44L256 342.09 147.73 212z"
+      />
+    </svg>
+
+  @react.component
+  let caretForward = (~className="") =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path d="M144 448l224-192L144 64v384z" />
+    </svg>
+
+  @react.component
+  let caretForwardCircle = (~className="") =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        d="M464 256c0-114.87-93.13-208-208-208S48 141.13 48 256s93.13 208 208 208 208-93.13 208-208zM212 147.73L342.09 256 212 364.27z"
+      />
+    </svg>
+
+  @react.component
+  let caretUp = (~className="") =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path d="M448 368L256 144 64 368h384z" />
+    </svg>
+
+  @react.component
+  let caretUpCircle = (~className="") =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        d="M256 48C141.13 48 48 141.13 48 256s93.13 208 208 208 208-93.13 208-208S370.87 48 256 48zM147.73 300L256 169.91 364.27 300z"
+      />
+    </svg>
+
+  @react.component
+  let cart = (~className="") =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <circle cx="176" cy="416" r="32" />
+      <circle cx="400" cy="416" r="32" />
+      <path
+        d="M167.78 304h261.34l38.4-192H133.89l-8.47-48H32v32h66.58l48 272H432v-32H173.42l-5.64-32z"
+      />
+    </svg>
+
+  @react.component
+  let cash = (~className="") =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        d="M48 368h416v32H48zM80 416h352v32H80zM480 176a96.11 96.11 0 01-96-96V64H128v16a96.11 96.11 0 01-96 96H16v64h16a96.11 96.11 0 0196 96v16h256v-16a96.11 96.11 0 0196-96h16v-64zM256 304a96 96 0 1196-96 96.11 96.11 0 01-96 96z"
+      />
+      <path
+        d="M96 80V64H16v80h16a64.07 64.07 0 0064-64zM32 272H16v80h80v-16a64.07 64.07 0 00-64-64zM480 144h16V64h-80v16a64.07 64.07 0 0064 64zM416 336v16h80v-80h-16a64.07 64.07 0 00-64 64z"
+      />
+      <circle cx="256" cy="208" r="64" />
     </svg>
 }
 
