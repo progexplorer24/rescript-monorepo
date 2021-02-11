@@ -1,18 +1,27 @@
 module Styles = {
   open Tailwind
-  let wrapper = merge(.[twStyle([maxW(#xl6), mx(#auto), mt(#v6)])])
+
+  let lead = merge(.[twStyle([ text(#xl3), mb(#v8), leading(#normal)])])
+  let paragraph = merge(.[twStyle([my(#v8), text(#xl3), leading(#normal)])])
+  let paragraph2 = merge(.[twStyle([my(#v8), text(#xl3), leading(#normal)])])
+  let wrapper = merge(.[twStyle([maxW(#xl4), mx(#auto), mt(#v6), textColor(#trueGray700)])])
 }
 
 let default = () => {
-  <div className=Styles.wrapper>
+  <HeadConfiguration title="My fonts" fonts=[
+    #Roboto([#v400])
+  ]>
+    <div className=Styles.wrapper>
     <article>
-      <p>
+    <div>
+      <p className=Styles.lead>
         {"Until now, trying to style an article, document, or blog post with Tailwind has been a tedious task that required a keen eye for typography and a lot of complex custom CSS."->Utils.str}
       </p>
-      <p>
+      </div>
+      <p className=Styles.paragraph>
         {"By default, Tailwind removes all of the default browser styling from paragraphs, headings, lists and more. This ends up being really useful for building application UIs because you spend less time undoing user-agent styles, but when you really are just trying to style some content that came from a rich-text editor in a CMS or a markdown file, it can be surprising and unintuitive."->Utils.str}
       </p>
-      <p>
+      <p className=Styles.paragraph2>
         {"We get lots of complaints about it actually, with people regularly asking us things like:"->Utils.str}
       </p>
       <blockquote>
@@ -370,4 +379,6 @@ let default = () => {
       </p>
     </article>
   </div>
+  
+  </HeadConfiguration>
 }
