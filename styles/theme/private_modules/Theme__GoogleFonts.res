@@ -32,6 +32,58 @@ type withItalics_100_200_300_400_500_600_700_800_900_array = array<
   [_100_200_300_400_500_600_700_800_900 | italic_100_200_300_400_500_600_700_800_900],
 >
 
+type _100_200_300_400_500_700_800_900 = [
+  | #v100
+  | #v200
+  | #v300
+  | #v400
+  | #v500
+  | #v700
+  | #v800
+  | #v900
+]
+
+type _100_200_300_400_500_700_800_900_array = array<_100_200_300_400_500_700_800_900>
+
+type _100_300_400_500_600_700_800_900 = [
+  | #v100
+  | #v300
+  | #v400
+  | #v500
+  | #v600
+  | #v700
+  | #v800
+  | #v900
+]
+type _100_300_400_500_600_700_800_900_array = array<_100_300_400_500_600_700_800_900>
+
+type _200_300_400_500_700_800_900 = [#v200 | #v300 | #v400 | #v500 | #v700 | #v800 | #v900]
+type _200_300_400_500_700_800_900_array = array<_200_300_400_500_700_800_900>
+
+type _200_300_400_500_600_700 = [#v200 | #v300 | #v400 | #v500 | #v600 | #v700]
+type _200_300_400_500_600_700_array = array<_200_300_400_500_600_700>
+
+type _400_500_600_700_800_900 = [#v400 | #v500 | #v600 | #v700 | #v800 | #v900]
+type _400_500_600_700_800_900_array = array<_400_500_600_700_800_900>
+
+type _100_300_400_500_700_900 = [#v100 | #v300 | #v400 | #v500 | #v700 | #v900]
+type _100_300_400_500_700_900_array = array<_100_300_400_500_700_900>
+
+type _200_300_400_500_700_800 = [#v200 | #v300 | #v400 | #v500 | #v700 | #v800]
+type _200_300_400_500_700_800_array = array<_200_300_400_500_700_800>
+
+type _200_300_400_700_800 = [#v200 | #v300 | #v400 | #v700 | #v800]
+type _200_300_400_700_800_array = array<_200_300_400_700_800>
+
+type _100_300_400_700_800 = [#v100 | #v300 | #v400 | #v700 | #v800]
+type _100_300_400_700_800_array = array<_100_300_400_700_800>
+
+type _300_400_500_700_900 = [#v300 | #v400 | #v500 | #v700 | #v900]
+type _300_400_500_700_900_array = array<_300_400_500_700_900>
+
+type _300_400_500_700_800 = [#v300 | #v400 | #v500 | #v700 | #v800]
+type _300_400_500_700_800_array = array<_300_400_500_700_800>
+
 // INFO: One weight not available
 
 type _200_300_400_500_600_700_800_900 = [
@@ -258,7 +310,6 @@ type withItalics_200_300_400_500_600_700_900_array = array<
 
 // INFO: Three weights not available
 
-type _200_300_400_500_600_700 = [#v200 | #v300 | #v400 | #v500 | #v600 | #v700]
 type italic_200_300_400_500_600_700 = [
   | #italic200
   | #italic300
@@ -272,7 +323,6 @@ type withItalics_200_300_400_500_600_700_array = array<
   [_200_300_400_500_600_700 | italic_200_300_400_500_600_700],
 >
 
-type _400_500_600_700_800_900 = [#v400 | #v500 | #v600 | #v700 | #v800 | #v900]
 type italic_400_500_600_700_800_900 = [
   | #italic400
   | #italic500
@@ -300,7 +350,6 @@ type withItalics_300_400_500_600_700_800_array = array<
   [_300_400_500_600_700_800 | italic_300_400_500_600_700_800],
 >
 
-type _100_300_400_500_700_900 = [#v100 | #v300 | #v400 | #v500 | #v700 | #v900]
 type italic_100_300_400_500_700_900 = [
   | #italic100
   | #italic300
@@ -325,6 +374,7 @@ type withItalics_400_500_700_800_900_array = array<
 >
 
 type _300_400_500_600_700 = [#v300 | #v400 | #v500 | #v600 | #v700]
+type _300_400_500_600_700_array = array<_300_400_500_600_700>
 type italic_300_400_500_600_700 = [#italic300 | #italic400 | #italic500 | #italic600 | #italic700]
 
 type withItalics_300_400_500_600_700_array = array<
@@ -332,6 +382,7 @@ type withItalics_300_400_500_600_700_array = array<
 >
 
 type _400_500_600_700_800 = [#v400 | #v500 | #v600 | #v700 | #v800]
+type _400_500_600_700_800_array = array<_400_500_600_700_800>
 type italic_400_500_600_700_800 = [#italic400 | #italic500 | #italic600 | #italic700 | #italic800]
 
 type withItalics_400_500_600_700_800_array = array<
@@ -360,6 +411,7 @@ type withItalics_100_300_400_700_900_array = array<
 >
 
 type _300_400_600_700_800 = [#v300 | #v400 | #v600 | #v700 | #v800]
+type _300_400_600_700_800_array = array<_300_400_600_700_800>
 type italic_300_400_600_700_800 = [#italic300 | #italic400 | #italic600 | #italic700 | #italic800]
 
 type withItalics_300_400_600_700_800_array = array<
@@ -367,6 +419,7 @@ type withItalics_300_400_600_700_800_array = array<
 >
 
 type _200_300_400_600_700_900 = [#v200 | #v300 | #v400 | #v600 | #v700 | #v900]
+type _200_300_400_600_700_900_array = array<_200_300_400_600_700_900>
 type italic_200_300_400_600_700_900 = [
   | #italic200
   | #italic300
@@ -385,7 +438,7 @@ type withItalics_titilliumWeb_array = array<[_200_300_400_600_700_900 | italic_2
 // INFO: Fonts with 4 weights
 
 type _400_500_600_700 = [#v400 | #v500 | #v600 | #v700]
-type _400_500_600_700_array = array<[#v400 | #v500 | #v600 | #v700]>
+type _400_500_600_700_array = array<_400_500_600_700>
 type italics_400_500_600_700 = [#italic400 | #italic500 | #italic600 | #italic700]
 
 type _300_400_700_900 = [#v300 | #v400 | #v700 | #v900]
@@ -406,35 +459,37 @@ type withItalics_400_500_700_900_array = array<[_400_500_700_900 | italics_400_5
 type withItalics_400_700_800_900_array = array<[_400_700_800_900 | italics_400_700_800_900]>
 type withItalics_300_400_500_700_array = array<[_300_400_500_700 | italics_300_400_500_700]>
 
-// INFO: Single weights
+// INFO: Fonts with 3 weights
 
-type _100_200_300_400_500_700_800_900 = [
-  | #v100
-  | #v200
-  | #v300
-  | #v400
-  | #v500
-  | #v700
-  | #v800
-  | #v900
-]
+type _300_400_700 = [#v300 | #v400 | #v700]
+type _300_400_700_array = array<_300_400_700>
+type italics_300_400_700 = [#italic300 | #italic400 | #italic700]
 
-type _100_200_300_400_500_700_800_900_array = array<_100_200_300_400_500_700_800_900>
+type withItalics_300_400_700_array = array<[_300_400_700 | italics_300_400_700]>
 
-type _100_300_400_500_600_700_800_900 = [
-  | #v100
-  | #v300
-  | #v400
-  | #v500
-  | #v600
-  | #v700
-  | #v800
-  | #v900
-]
-type _100_300_400_500_600_700_800_900_array = array<_100_300_400_500_600_700_800_900>
+type _400_600_700 = [#v400 | #v600 | #v700]
+// type _400_600_700_array = array<_400_600_700>
+type italics_400_600_700 = [#italic400 | #italic600 | #italic700]
 
-type _200_300_400_500_700_800_900 = [#v200 | #v300 | #v400 | #v500 | #v700 | #v800 | #v900]
-type _200_300_400_500_700_800_900_array = array<_200_300_400_500_700_800_900>
+type withItalics_400_600_700_array = array<[_400_600_700 | italics_400_600_700]>
+
+type _300_400_500 = [#v300 | #v400 | #v500]
+// type _300_400_500_array = array<_300_400_500>
+type italics_300_400_500 = [#italic300 | #italic400 | #italic500]
+
+type withItalics_300_400_500_array = array<[_300_400_500 | italics_300_400_500]>
+
+type _400_500_700 = [#v300 | #v400 | #v500]
+// type _400_500_700_array = array<_400_500_700>
+type italics_400_500_700 = [#italic300 | #italic400 | #italic500]
+
+type withItalics_400_500_700_array = array<[_400_500_700 | italics_400_500_700]>
+
+type _400_700_900 = [#v400 | #v700 | #v900]
+// type _400_700_900_array = array<_400_700_900>
+type italics_400_700_900 = [#italic400 | #italic700 | #italic900]
+
+type withItalics_400_700_900_array = array<[_400_700_900 | italics_400_700_900]>
 
 // #endregion     ENDREGION: All possible weights combinations
 
@@ -535,13 +590,20 @@ type fontRecord = {
   weights: array<weightRecord>,
 }
 
-// NOTE: 159 fonts 7+ font styles
+type neuton = [#v200 | #v300 | #v400 | #italic400 | #v700 | #v800]
+type neuton_array = array<neuton>
+
+// INFO: Types
+
+// NOTE: 243 fonts 5+ font styles + 58 new
 type fonts = [
+  | #AbhayaLibre(_400_500_600_700_800_array)
   | #AdventPro(_100_200_300_400_500_600_700_array)
   | #Alegreya(_400_500_700_800_900_array)
-  | #AlegreyaSC(_400_500_700_800_900_array)
   | #AlegreyaSans(withItalics_100_300_400_500_700_800_900_array)
   | #AlegreyaSansSC(withItalics_100_300_400_500_700_800_900_array)
+  | #AlegreyaSC(_400_500_700_800_900_array)
+  | #Aleo(withItalics_300_400_700_array)
   | #Archivo(withItalics_400_500_600_700_array)
   | #ArchivoNarrow(withItalics_400_500_600_700_array)
   | #ArimaMadurai(_100_200_300_400_500_700_800_900_array)
@@ -549,10 +611,26 @@ type fonts = [
   | #Asap(withItalics_400_500_600_700_array)
   | #AsapCondensed(withItalics_400_500_600_700_array)
   | #Assistant(_200_300_400_500_600_700_800_array)
+  | #Athiti(_200_300_400_500_600_700_array)
+  | #Atma(_300_400_500_600_700_array)
+  | #AveriaLibre(withItalics_300_400_700_array)
+  | #AveriaSansLibre(withItalics_300_400_700_array)
+  | #AveriaSerifLibre(withItalics_300_400_700_array)
   | #BaiJamjuree(withItalics_200_300_400_500_600_700_array)
+  | #Baloo2(_400_500_600_700_800_array)
+  | #BalooBhai2(_400_500_600_700_800_array)
+  | #BalooBhaina2(_400_500_600_700_800_array)
+  | #BalooChettan2(_400_500_600_700_800_array)
+  | #BalooDa2(_400_500_600_700_800_array)
+  | #BalooPaaji2(_400_500_600_700_800_array)
+  | #BalooTamma2(_400_500_600_700_800_array)
+  | #BalooTammudu2(_400_500_600_700_800_array)
+  | #BalooThambi2(_400_500_600_700_800_array)
   | #Barlow(withItalics_100_200_300_400_500_600_700_800_900_array)
   | #BarlowCondensed(withItalics_100_200_300_400_500_600_700_800_900_array)
   | #BarlowSemiCondensed(withItalics_100_200_300_400_500_600_700_800_900_array)
+  | #Bellota(withItalics_300_400_700_array)
+  | #BellotaText(withItalics_300_400_700_array)
   | #BeVietnam(withItalics_100_300_400_500_600_700_800_array)
   | #BigShouldersDisplay(_100_300_400_500_600_700_800_900_array)
   | #BigShouldersInlineDisplay(_100_300_400_500_600_700_800_900_array)
@@ -560,24 +638,38 @@ type fonts = [
   | #BigShouldersStencilDisplay(_100_300_400_500_600_700_800_900_array)
   | #BigShouldersStencilText(_100_300_400_500_600_700_800_900_array)
   | #BigShouldersText(_100_300_400_500_600_700_800_900_array)
+  | #BioRhyme(_200_300_400_700_800_array)
+  | #BioRhymeExpanded(_200_300_400_700_800_array)
   | #Biryani(_200_300_400_600_700_800_900_array)
   | #Bitter(withItalics_100_200_300_400_500_600_700_800_900_array)
   | #Blinker(_100_200_300_400_600_700_800_900_array)
   | #BodoniModa(withItalics_400_500_600_700_800_900_array)
   | #Cabin(withItalics_400_500_600_700_array)
+  | #Cairo(_200_300_400_600_700_900_array)
   | #Catamaran(_100_200_300_400_500_600_700_800_900_array)
   | #ChakraPetch(withItalics_300_400_500_600_700_array)
   | #Changa(_200_300_400_500_600_700_800_array)
+  | #Chathura(_100_300_400_700_800_array)
+  | #Cinzel(_400_500_600_700_800_900_array)
   | #Chivo(withItalics_300_400_700_900_array)
+  | #Comfortaa(_300_400_500_600_700_array)
+  | #ComicNeue(withItalics_300_400_700_array)
   | #Commissioner(_100_200_300_400_500_600_700_800_900_array)
   | #Cormorant(withItalics_300_400_500_600_700_array)
+  | #CormorantSC(_300_400_500_600_700_array)
+  | #CormorantUnicase(_300_400_500_600_700_array)
+  | #CormorantUpright(_300_400_500_600_700_array)
   | #CormorantGaramond(withItalics_300_400_500_600_700_array)
   | #CormorantInfant(withItalics_300_400_500_600_700_array)
   | #CrimsonPro(withItalics_200_300_400_500_600_700_800_900_array)
+  | #CrimsonText(withItalics_400_600_700_array)
   | #Cuprum(withItalics_400_500_600_700_array)
+  | #DMMono(withItalics_300_400_500_array)
+  | #DMSans(withItalics_400_500_700_array)
   | #DarkerGrotesque(_300_400_500_600_700_800_900_array)
   | #Dosis(_200_300_400_500_600_700_800_array)
   | #EBGaramond(withItalics_400_500_600_700_800_array)
+  | #Eczar(_400_500_600_700_800_array)
   | #EncodeSans(_100_200_300_400_500_600_700_800_900_array)
   | #EncodeSansCondensed(_100_200_300_400_500_600_700_800_900_array)
   | #EncodeSansExpanded(_100_200_300_400_500_600_700_800_900_array)
@@ -589,17 +681,25 @@ type fonts = [
   | #ExpletusSans(withItalics_400_500_600_700_array)
   | #Fahkwang(withItalics_200_300_400_500_600_700_array)
   | #Faustina(withItalics_400_500_600_700_array)
+  | #FiraCode(_300_400_500_600_700_array)
   | #FiraSans(withItalics_100_200_300_400_500_600_700_800_900_array)
   | #FiraSansCondensed(withItalics_100_200_300_400_500_600_700_800_900_array)
   | #FiraSansExtraCondensed(withItalics_100_200_300_400_500_600_700_800_900_array)
+  | #FrankRuhlLibre(_300_400_500_700_900_array)
   | #Fraunces(withItalics_100_200_300_400_500_600_700_800_900_array)
   | #Gelasio(withItalics_400_500_600_700_array)
   | #GothicA1(_100_200_300_400_500_600_700_800_900_array)
   | #Grandstander(withItalics_100_200_300_400_500_600_700_800_900_array)
   | #Grenze(withItalics_100_200_300_400_500_600_700_800_900_array)
   | #GrenzeGotisch(_100_200_300_400_500_600_700_800_900_array)
+  | #Halant(_300_400_500_600_700_array)
   | #Heebo(_100_200_300_400_500_600_700_800_900_array)
   | #HeptaSlab(_100_200_300_400_500_600_700_800_900_array)
+  | #Hind(_300_400_500_600_700_array)
+  | #HindGuntur(_300_400_500_600_700_array)
+  | #HindMadurai(_300_400_500_600_700_array)
+  | #HindSiliguri(_300_400_500_600_700_array)
+  | #HindVadodara(_300_400_500_600_700_array)
   | #IbarraRealNova(withItalics_400_500_600_700_array)
   | #IBMPlexMono(withItalics_100_200_300_400_500_600_700_array)
   | #IBMPlexSans(withItalics_100_200_300_400_500_600_700_array)
@@ -608,20 +708,29 @@ type fonts = [
   | #Imbue(_100_200_300_400_500_600_700_800_900_array)
   | #Inconsolata(_200_300_400_500_600_700_800_900_array)
   | #InknutAntiqua(_300_400_500_600_700_800_900_array)
+  | #InriaSans(withItalics_300_400_700_array)
+  | #InriaSerif(withItalics_300_400_700_array)
   | #Inter(_100_200_300_400_500_600_700_800_900_array)
   | #JetBrainsMono(withItalics_100_200_300_400_500_600_700_800_array)
   | #JosefinSans(withItalics_100_200_300_400_500_600_700_array)
   | #JosefinSlab(withItalics_100_200_300_400_500_600_700_array)
   | #Jost(withItalics_100_200_300_400_500_600_700_800_900_array)
+  | #Jura(_300_400_500_600_700_array)
   | #K2D(withItalics_100_200_300_400_500_600_700_800_array)
   | #Kanit(withItalics_100_200_300_400_500_600_700_800_900_array)
   | #Karla(withItalics_200_300_400_500_600_700_800_array)
+  | #Karma(_300_400_500_600_700_array)
+  | #Khand(_300_400_500_600_700_array)
+  | #Khula(_300_400_600_700_800_array)
   | #Kodchasan(withItalics_200_300_400_500_600_700_array)
   | #KoHo(withItalics_200_300_400_500_600_700_array)
+  | #Kreon(_300_400_500_600_700_array)
   | #Krub(withItalics_200_300_400_500_600_700_array)
   | #Kufam(withItalics_400_500_600_700_800_900_array)
   | #KulimPark(withItalics_200_300_400_600_700_array)
+  | #Laila(_300_400_500_600_700_array)
   | #Lato(withItalics_100_300_400_700_900_array)
+  | #Lemonada(_300_400_500_600_700_array)
   | #LibreFranklin(withItalics_100_200_300_400_500_600_700_800_900_array)
   | #Literata(withItalics_200_300_400_500_600_700_800_900_array)
   | #Livvic(withItalics_100_200_300_400_500_600_700_900_array)
@@ -629,13 +738,16 @@ type fonts = [
   | #MPLUS1p(_100_300_400_500_700_800_900_array)
   | #MPLUSRounded1c(_100_300_400_500_700_800_900_array)
   | #Mada(_200_300_400_500_600_700_900_array)
+  | #Maitree(_200_300_400_500_600_700_array)
   | #Mali(withItalics_200_300_400_500_600_700_array)
   | #Manrope(_200_300_400_500_600_700_800_array)
   | #Manuale(withItalics_400_500_600_700_array)
   | #Martel(_200_300_400_600_700_800_900_array)
   | #MartelSans(_200_300_400_600_700_800_900_array)
+  | #MavenPro(_400_500_600_700_800_900_array)
   | #Merriweather(withItalics_300_400_700_900_array)
   | #MerriweatherSans(withItalics_300_400_500_600_700_800_array)
+  | #Mitr(_200_300_400_500_600_700_array)
   | #Montserrat(withItalics_100_200_300_400_500_600_700_800_900_array)
   | #MontserratAlternates(withItalics_100_200_300_400_500_600_700_800_900_array)
   | #Mukta(_200_300_400_500_600_700_800_array)
@@ -644,7 +756,14 @@ type fonts = [
   | #MuktaVaani(_200_300_400_500_600_700_800_array)
   | #Mulish(withItalics_200_300_400_500_600_700_800_900_array)
   | #MuseoModerno(_100_200_300_400_500_600_700_800_900_array)
+  | #Neuton(neuton_array)
   | #Niramit(withItalics_200_300_400_500_600_700_array)
+  | #Nobile(withItalics_400_500_700_array)
+  | #NotoSansHK(_100_300_400_500_700_900_array)
+  | #NotoSansJP(_100_300_400_500_700_900_array)
+  | #NotoSansKR(_100_300_400_500_700_900_array)
+  | #NotoSansSC(_100_300_400_500_700_900_array)
+  | #NotoSansTC(_100_300_400_500_700_900_array)
   | #NotoSerifJP(_200_300_400_500_600_700_900_array)
   | #NotoSerifKR(_200_300_400_500_600_700_900_array)
   | #NotoSerifSC(_200_300_400_500_600_700_900_array)
@@ -652,25 +771,38 @@ type fonts = [
   | #Nunito(withItalics_200_300_400_600_700_800_900_array)
   | #NunitoSans(withItalics_200_300_400_600_700_800_900_array)
   | #OpenSans(withItalics_300_400_600_700_800_array)
+  | #Orbitron(_400_500_600_700_800_900_array)
+  | #Oswald(_200_300_400_500_600_700_array)
+  | #Overlock(withItalics_400_700_900_array)
   | #Overpass(withItalics_100_200_300_400_600_700_800_900_array)
   | #Oxanium(_200_300_400_500_600_700_800_array)
   | #Palanquin(_100_200_300_400_500_600_700_array)
   | #Petrona(withItalics_100_200_300_400_500_600_700_800_900_array)
   | #Piazolla(withItalics_100_200_300_400_500_600_700_800_900_array)
   | #PlayfairDisplay(withItalics_400_500_600_700_800_900_array)
+  | #PlayfairDisplaySC(withItalics_400_700_900_array)
+  | #Podkova(_400_500_600_700_800_array)
   | #Poppins(withItalics_100_200_300_400_500_600_700_800_900_array)
+  | #Pridi(_200_300_400_500_600_700_array)
   | #Prompt(withItalics_100_200_300_400_500_600_700_800_900_array)
   | #ProzaLibre(withItalics_400_500_600_700_800_array)
   | #PublicSans(withItalics_100_200_300_400_500_600_700_800_900_array)
+  | #Quicksand(_300_400_500_600_700_array)
+  | #Rajdhani(_300_400_500_600_700_array)
   | #Raleway(withItalics_100_200_300_400_500_600_700_800_900_array)
+  | #Rasa(_300_400_500_600_700_array)
   | #Recursive(_300_400_500_600_700_800_900_array)
   | #RedHatDisplay(withItalics_400_500_700_900_array)
+  | #RedHatText(withItalics_400_500_700_array)
+  | #RedRose(_300_400_500_600_700_array)
   | #Roboto(withItalics_100_300_400_500_700_900_array)
+  | #RobotoCondensed(withItalics_300_400_700_array)
   | #RobotoMono(withItalics_100_200_300_400_500_600_700_array)
   | #RobotoSlab(_100_200_300_400_500_600_700_800_900_array)
   | #Rokkitt(_100_200_300_400_500_600_700_800_900_array)
   | #Rosario(withItalics_300_400_500_600_700_array)
   | #Rubik(withItalics_300_400_500_600_700_800_900_array)
+  | #Ruda(_400_500_600_700_800_900_array)
   | #Saira(withItalics_100_200_300_400_500_600_700_800_900_array)
   | #SairaCondensed(_100_200_300_400_500_600_700_800_900_array)
   | #SairaExtraCondensed(_100_200_300_400_500_600_700_800_900_array)
@@ -678,23 +810,35 @@ type fonts = [
   | #Sansita(withItalics_400_700_800_900_array)
   | #SansitaSwashed(_300_400_500_600_700_800_900_array)
   | #Sarabun(withItalics_100_200_300_400_500_600_700_800_array)
+  | #Sarpanch(withItalics_400_500_600_700_800_900_array)
+  | #Signika(_300_400_500_600_700_array)
+  | #Solway(_300_400_500_700_800_array)
   | #Sora(_100_200_300_400_500_600_700_800_array)
   | #SourceCodePro(withItalics_200_300_400_500_600_700_900_array)
   | #SourceSansPro(withItalics_200_300_400_600_700_900_array)
   | #SourceSerifPro(withItalics_200_300_400_600_700_900_array)
+  | #SpaceGrotesk(_300_400_500_600_700_array)
   | #Spartan(_100_200_300_400_500_600_700_800_900_array)
   | #Spectral(withItalics_200_300_400_500_600_700_800_array)
   | #SpectralSC(withItalics_200_300_400_500_600_700_800_array)
+  | #Syne(_400_500_600_700_800_array)
   | #Tajawal(_200_300_400_500_700_800_900_array)
   | #Taviraj(withItalics_100_200_300_400_500_600_700_800_900_array)
+  | #Teko(_300_400_500_600_700_array)
   | #Texturina(withItalics_100_200_300_400_500_600_700_800_900_array)
+  | #Tillana(_400_500_600_700_800_array)
   | #TitilliumWeb(withItalics_titilliumWeb_array)
   | #Tomorrow(withItalics_100_200_300_400_500_600_700_800_900_array)
   | #Trirong(withItalics_100_200_300_400_500_600_700_800_900_array)
   | #Trispace(_100_200_300_400_500_600_700_800_array)
+  | #TurretRoad(_200_300_400_500_700_800_array)
   | #Ubuntu(withItalics_300_400_500_700_array)
+  | #Varta(_300_400_500_600_700_array)
   | #Vollkorn(withItalics_400_500_600_700_800_900_array)
   | #WorkSans(withItalics_100_200_300_400_500_600_700_800_900_array)
+  | #YanoneKaffeesatz(_200_300_400_500_600_700_array)
+  | #Yantramanav(_100_300_400_500_700_900_array)
+  | #Yrsa(_300_400_500_600_700_array)
   | #ZillaSlab(withItalics_300_400_500_600_700_array)
 ]
 
@@ -1419,6 +1563,422 @@ let toFontValue2 = (font: fonts) =>
 
   | #Tajawal(weights) => {
       fontName: "Tajawal",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #Aleo(weights) => {
+      fontName: "Aleo",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #Athiti(weights) => {
+      fontName: "Athiti",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #AveriaLibre(weights) => {
+      fontName: "Averia Libre",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #AveriaSansLibre(weights) => {
+      fontName: "Averia Sans Libre",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #AveriaSerifLibre(weights) => {
+      fontName: "Averia Serif Libre",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #Bellota(weights) => {
+      fontName: "Bellota",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #BellotaText(weights) => {
+      fontName: "Bellota Text",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #Cairo(weights) => {
+      fontName: "Cairo",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #Cinzel(weights) => {
+      fontName: "Cinzel",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #ComicNeue(weights) => {
+      fontName: "Comic Neue",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #CrimsonText(weights) => {
+      fontName: "Crimson Text",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #DMMono(weights) => {
+      fontName: "DM Mono",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #DMSans(weights) => {
+      fontName: "DM Sans",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #InriaSans(weights) => {
+      fontName: "Inria Sans",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #InriaSerif(weights) => {
+      fontName: "Inria Serif",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #Maitree(weights) => {
+      fontName: "Maitree",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #MavenPro(weights) => {
+      fontName: "Maven Pro",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #Mitr(weights) => {
+      fontName: "Mitr",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #Neuton(weights) => {
+      fontName: "Neuton",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #Nobile(weights) => {
+      fontName: "Nobile",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #NotoSansHK(weights) => {
+      fontName: "Noto Sans HK",
+      weights: toArrayWeightValue(weights),
+    }
+  | #NotoSansJP(weights) => {
+      fontName: "Noto Sans HK",
+      weights: toArrayWeightValue(weights),
+    }
+  | #NotoSansKR(weights) => {
+      fontName: "Noto Sans HK",
+      weights: toArrayWeightValue(weights),
+    }
+  | #NotoSansSC(weights) => {
+      fontName: "Noto Sans HK",
+      weights: toArrayWeightValue(weights),
+    }
+  | #NotoSansTC(weights) => {
+      fontName: "Noto Sans HK",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #Orbitron(weights) => {
+      fontName: "Orbitron",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #Oswald(weights) => {
+      fontName: "Oswald",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #Overlock(weights) => {
+      fontName: "Overlock",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #PlayfairDisplaySC(weights) => {
+      fontName: "Playfair Display SC",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #Pridi(weights) => {
+      fontName: "Pridi",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #RedHatText(weights) => {
+      fontName: "Red Hat Text",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #RobotoCondensed(weights) => {
+      fontName: "Roboto Condensed",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #Ruda(weights) => {
+      fontName: "Ruda",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #Sarpanch(weights) => {
+      fontName: "Sarpanch",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #TurretRoad(weights) => {
+      fontName: "Turret Road",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #YanoneKaffeesatz(weights) => {
+      fontName: "Yanone Kaffeesatz",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #Yantramanav(weights) => {
+      fontName: "Yantramanav",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #AbhayaLibre(weights) => {
+      fontName: "Abhaya Libre",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #Atma(weights) => {
+      fontName: "Atma",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #Baloo2(weights) => {
+      fontName: "Baloo 2",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #BalooBhai2(weights) => {
+      fontName: "Baloo Bhai 2",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #BalooBhaina2(weights) => {
+      fontName: "Baloo Bhaina 2",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #BalooChettan2(weights) => {
+      fontName: "Baloo Chettan 2",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #BalooDa2(weights) => {
+      fontName: "Baloo Da 2",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #BalooPaaji2(weights) => {
+      fontName: "Baloo Paaji 2",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #BalooTamma2(weights) => {
+      fontName: "Baloo Tamma 2",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #BalooTammudu2(weights) => {
+      fontName: "Baloo Tammudu 2",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #BalooThambi2(weights) => {
+      fontName: "Baloo Thambi 2",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #BioRhyme(weights) => {
+      fontName: "BioRhyme",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #BioRhymeExpanded(weights) => {
+      fontName: "BioRhyme Expanded",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #Chathura(weights) => {
+      fontName: "Chathura",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #Comfortaa(weights) => {
+      fontName: "Comfortaa",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #CormorantSC(weights) => {
+      fontName: "Cormorant SC",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #CormorantUnicase(weights) => {
+      fontName: "Cormorant Unicase",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #CormorantUpright(weights) => {
+      fontName: "Cormorant Upright",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #Eczar(weights) => {
+      fontName: "Eczar",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #FrankRuhlLibre(weights) => {
+      fontName: "Frank Ruhl Libre",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #Halant(weights) => {
+      fontName: "Halant",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #Hind(weights) => {
+      fontName: "Hind",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #HindGuntur(weights) => {
+      fontName: "Hind Guntur",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #HindMadurai(weights) => {
+      fontName: "Hind Madurai",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #HindSiliguri(weights) => {
+      fontName: "Hind Siliguri",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #HindVadodara(weights) => {
+      fontName: "Hind Vadodara",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #Karma(weights) => {
+      fontName: "Karma",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #Khand(weights) => {
+      fontName: "Khand",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #Khula(weights) => {
+      fontName: "Khula",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #Kreon(weights) => {
+      fontName: "Kreon",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #Laila(weights) => {
+      fontName: "Laila",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #Lemonada(weights) => {
+      fontName: "Lemonada",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #Podkova(weights) => {
+      fontName: "Podkova",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #Quicksand(weights) => {
+      fontName: "Quicksand",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #Rajdhani(weights) => {
+      fontName: "Rajdhani",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #Rasa(weights) => {
+      fontName: "Rasa",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #RedRose(weights) => {
+      fontName: "Red Rose",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #Signika(weights) => {
+      fontName: "Signika",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #Solway(weights) => {
+      fontName: "Solway",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #SpaceGrotesk(weights) => {
+      fontName: "Space Grotesk",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #Syne(weights) => {
+      fontName: "Syne",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #Teko(weights) => {
+      fontName: "Teko",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #Tillana(weights) => {
+      fontName: "Tillana",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #Varta(weights) => {
+      fontName: "Varta",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #Yrsa(weights) => {
+      fontName: "Yrsa",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #Jura(weights) => {
+      fontName: "Jura",
+      weights: toArrayWeightValue(weights),
+    }
+
+  | #FiraCode(weights) => {
+      fontName: "Fira Code",
       weights: toArrayWeightValue(weights),
     }
   }
