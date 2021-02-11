@@ -25,7 +25,7 @@ module Styles = {
   let gridBreakpoints830 = twStyle([min830([gridCols(#v6)])])
   let gridBreakpoints450 = twStyle([min450([gridCols(#v3)])])
 
-  let svgString = "<svg xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'><title>Compass</title><path d='M448 256c0-106-86-192-192-192S64 150 64 256s86 192 192 192 192-86 192-192z' fill='none' stroke='currentColor' stroke-miterlimit='10' stroke-width='32'/><path d='M350.67 150.93l-117.2 46.88a64 64 0 00-35.66 35.66l-46.88 117.2a8 8 0 0010.4 10.4l117.2-46.88a64 64 0 0035.66-35.66l46.88-117.2a8 8 0 00-10.4-10.4zM256 280a24 24 0 1124-24 24 24 0 01-24 24z'/></svg>"
+  let svgString = "<svg xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'><title>Cut</title><circle cx='104' cy='152' r='56' fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='32'/><circle cx='104' cy='360' r='56' fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='32'/><path d='M157 175l-11 15 37 15s3.46-6.42 7-10z' fill='none' stroke='currentColor' stroke-linecap='square' stroke-miterlimit='10' stroke-width='32'/><path d='M154.17 334.43L460 162c-2.5-6.7-28-12-64-4-29.12 6.47-121.16 29.05-159.16 56.05C205.85 236.06 227 272 192 298c-25.61 19-44.43 22.82-44.43 22.82zM344.47 278.24L295 306.67c14.23 6.74 65.54 33.27 117 36.33 14.92.89 30 .39 39-6z' fill='none' stroke='currentColor' stroke-linecap='round' stroke-miterlimit='10' stroke-width='32'/><circle cx='256' cy='240' r='32' fill='none' stroke='currentColor' stroke-miterlimit='10' stroke-width='32'/></svg>"
   let strokeLinecap = Js.String2.replaceByRe(
     svgString,
     %re("/stroke-linecap='round'/g"),
@@ -583,6 +583,38 @@ let default = () => {
         <IonIcons.Outline.compass />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"compass"->Utils.str} </h2>
       </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Outline.construct />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"construct"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Outline.contract />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"contract"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Outline.contrast />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"contrast"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Outline.copy />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"copy"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Outline.create />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"create"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Outline.crop />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"crop"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Outline.cube />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"cube"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Outline.cut />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"cut"->Utils.str} </h2>
+      </div>
     </div>
     <h1 className=Styles.h1> {"Filled Icons"->Utils.str} </h1>
     <div
@@ -628,32 +660,32 @@ let default = () => {
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"add"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Sharp.addCircleSharp />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"addCircleSharp"->Utils.str} </h2>
+        <IonIcons.Sharp.addCircle />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"addCircle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Sharp.airPlaneSharp />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"airPlaneSharp"->Utils.str} </h2>
+        <IonIcons.Sharp.airPlane />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"airPlane"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Sharp.alarmSharp />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"alarmSharp"->Utils.str} </h2>
+        <IonIcons.Sharp.alarm />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"alarm"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Sharp.albumsSharp />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"albumsSharp"->Utils.str} </h2>
+        <IonIcons.Sharp.albums />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"albums"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Sharp.alertSharp />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"alartSharp"->Utils.str} </h2>
+        <IonIcons.Sharp.alert />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"alart"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Sharp.alertCircleSharp />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"alartCircleSharp"->Utils.str} </h2>
+        <IonIcons.Sharp.alertCircle />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"alartCircle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Sharp.americanFootballSharp />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"americanFootballSharp"->Utils.str} </h2>
+        <IonIcons.Sharp.americanFootball />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"americanFootball"->Utils.str} </h2>
       </div>
     </div>
     <h1 className=Styles.h1> {"Logos"->Utils.str} </h1>
