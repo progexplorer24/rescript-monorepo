@@ -6645,6 +6645,1746 @@ module Outline = {
         strokeWidth
       />
     </svg>
+
+  //   @react.component
+  // let mail = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let mailOpen = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let mailUnread = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let male = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let maleFemale = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let man = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let map = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let medal = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let medical = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let medkit = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let megaphone = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let menu = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let mic = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let micCircle = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let micOff = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let micOffCircle = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let moon = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let move = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let musical = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let musicalNotes = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let navigate = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let navigateCircle = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let newspaper = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let notifications = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let notificationsCircle = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let notificationsOff = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let notificationsOffCircle = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let nuclear = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let nutrition = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let open = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let options = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let paperPlane = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let partlySunny = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let pause = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let pauseCircle = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let paw = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let pencil = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let people = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let peopleCircle = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let person = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let personAdd = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let personCircle = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let personRemove = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let phoneLandscape = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let phonePortrait = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let pieChart = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let pin = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let pint = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let pizza = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let planet = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let play = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let playBack = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let playBackCircle = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let playCircle = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let playForward = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let playForwardCircle = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let playSkipBack = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let playSkipBackCircle = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let playSkipForward = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let playSkipForwardCircle = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let podium = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let power = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let pricetag = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let pricetags = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let print = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let prism = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let pulse = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let push = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let qrCode = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let radio = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let radioButtonOff = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let radioButtonOn = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let rainy = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let reader = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let receipt = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let recording = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let refresh = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let refreshCircle = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let reload = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let reloadCircle = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let remove = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let removeCircle = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let reorderFour = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let reorderThree = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let reorderTwo = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let repeat = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let resize = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let restaurant = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let returnDownBack = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let returnDownForward = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let returnUpBack = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let returnUpForward = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let ribbon = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let rocket = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let rose = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let sad = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let save = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let scale = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let scan = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let scanCircle = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let school = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let search = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let searchCircle = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let send = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let server = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let settings = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let shapes = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let share = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let shareSocial = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let shield = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let shieldCheckmark = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let shieldHalf = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let shirt = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let shuffle = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let skull = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let snow = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let sparkles = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let speedometer = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let square = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let star = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let starHalf = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let statsChart = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let stop = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let stopCircle = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let stopwatch = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let storefront = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let subway = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let sunny = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let swap-horizontal = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let swapVertical = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let sync = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let syncCircle = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let tabletLandscape = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let tabletPortrait = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let telescope = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let tennisball = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let terminal = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let text = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let thermometer = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let thumbsDown = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let thumbsUp = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let thunderstorm = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let ticket = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let time = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let timer = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let today = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let toggle = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let trailSign = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let train = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let transgender = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let trash = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let trashBin = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let trendingDown = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let trendingUp = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let triangle = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let trophy = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let tv = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let umbrella = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let unlink = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let videocam = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let videocamOff = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let volumeHigh = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let volumeLow = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let volumeMedium = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let volumeMute = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let volumeOff = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let walk = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let wallet = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let warning = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let watch = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let water = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let wifi = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let wine = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
+
+  // @react.component
+  // let woman = (
+  //   ~className="",
+  //   ~fill="none",
+  //   ~stroke="currentColor",
+  //   ~strokeLinecap="round",
+  //   ~strokeLinejoin="round",
+  //   ~strokeWidth="32",
+  // ) =>
 }
 
 module Filled = {
