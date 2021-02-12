@@ -790,6 +790,30 @@ let default = () => {
         <IonIcons.Filled.basket />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"basket"->Utils.str} </h2>
       </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Filled.basketball />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"basketball"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Filled.batteryCharging />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"batteryCharging"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Filled.batteryDead />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"batteryDead"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Filled.batteryFull />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"batteryFull"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Filled.batteryHalf />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"batteryHalf"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Filled.beaker />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"beaker"->Utils.str} </h2>
+      </div>
     </div>
     <h1 className=Styles.h1> {"Sharp Icons"->Utils.str} </h1>
     <div
