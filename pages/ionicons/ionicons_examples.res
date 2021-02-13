@@ -910,6 +910,30 @@ let default = () => {
         <IonIcons.Filled.calendarNumber />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"calendarNumber"->Utils.str} </h2>
       </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Filled.call />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"call"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Filled.camera />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"camera"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Filled.cameraReverse />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"cameraReverse"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Filled.car />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"car"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Filled.carSport />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"carSport"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Filled.card />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"card"->Utils.str} </h2>
+      </div>
     </div>
     <h1 className=Styles.h1> {"Sharp Icons"->Utils.str} </h1>
     <div
