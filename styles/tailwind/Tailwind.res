@@ -1230,12 +1230,11 @@ let md = minWBreakpoint(768)
 let lg = minWBreakpoint(1024)
 let xl = minWBreakpoint(1280)
 let xl2 = minWBreakpoint(1536)
-
 let fontFamilies = fonts => [CssJs.fontFamilies(fonts)]
 
 // INFO: Selectors
 
-let selector = (string, rules) => [CssJs.selector(string, rules)]
+let selector = (string, rules) => [CssJs.selector(string, tw(rules))]
 
 let active = rules => [CssJs.active(tw(rules))]
 let checked = rules => [CssJs.checked(tw(rules))]
