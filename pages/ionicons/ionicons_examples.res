@@ -982,48 +982,46 @@ let default = () => {
         <IonIcons.Filled.chatbox />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"chatbox"->Utils.str} </h2>
       </div>
-      // <div className={Tailwind.merge(.[Styles.block])}>
-      //   <IonIcons.Filled.caretForwardCircle />
-      //   <h2 className={Tailwind.merge(.[Styles.h2])}> {"caretForwardCircle"->Utils.str} </h2>
-      // </div><div className={Tailwind.merge(.[Styles.block])}>
-      //   <IonIcons.Filled.caretForwardCircle />
-      //   <h2 className={Tailwind.merge(.[Styles.h2])}> {"caretForwardCircle"->Utils.str} </h2>
-      // </div><div className={Tailwind.merge(.[Styles.block])}>
-      //   <IonIcons.Filled.caretForwardCircle />
-      //   <h2 className={Tailwind.merge(.[Styles.h2])}> {"caretForwardCircle"->Utils.str} </h2>
-      // </div><div className={Tailwind.merge(.[Styles.block])}>
-      //   <IonIcons.Filled.caretForwardCircle />
-      //   <h2 className={Tailwind.merge(.[Styles.h2])}> {"caretForwardCircle"->Utils.str} </h2>
-      // </div><div className={Tailwind.merge(.[Styles.block])}>
-      //   <IonIcons.Filled.caretForwardCircle />
-      //   <h2 className={Tailwind.merge(.[Styles.h2])}> {"caretForwardCircle"->Utils.str} </h2>
-      // </div><div className={Tailwind.merge(.[Styles.block])}>
-      //   <IonIcons.Filled.caretForwardCircle />
-      //   <h2 className={Tailwind.merge(.[Styles.h2])}> {"caretForwardCircle"->Utils.str} </h2>
-      // </div><div className={Tailwind.merge(.[Styles.block])}>
-      //   <IonIcons.Filled.caretForwardCircle />
-      //   <h2 className={Tailwind.merge(.[Styles.h2])}> {"caretForwardCircle"->Utils.str} </h2>
-      // </div><div className={Tailwind.merge(.[Styles.block])}>
-      //   <IonIcons.Filled.caretForwardCircle />
-      //   <h2 className={Tailwind.merge(.[Styles.h2])}> {"caretForwardCircle"->Utils.str} </h2>
-      // </div><div className={Tailwind.merge(.[Styles.block])}>
-      //   <IonIcons.Filled.caretForwardCircle />
-      //   <h2 className={Tailwind.merge(.[Styles.h2])}> {"caretForwardCircle"->Utils.str} </h2>
-      // </div><div className={Tailwind.merge(.[Styles.block])}>
-      //   <IonIcons.Filled.caretForwardCircle />
-      //   <h2 className={Tailwind.merge(.[Styles.h2])}> {"caretForwardCircle"->Utils.str} </h2>
-      // </div>
-
-      // ten Icons
-
-      // <div className={Tailwind.merge(.[Styles.block])}>
-      //   <IonIcons.Filled.caretForwardCircle />
-      //   <h2 className={Tailwind.merge(.[Styles.h2])}> {"caretForwardCircle"->Utils.str} </h2>
-      // </div>
-      // <div className={Tailwind.merge(.[Styles.block])}>
-      //   <IonIcons.Filled.caretForwardCircle />
-      //   <h2 className={Tailwind.merge(.[Styles.h2])}> {"caretForwardCircle"->Utils.str} </h2>
-      // </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Filled.chatboxEllipses />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"chatboxEllipses"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Filled.chatbubble />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"chatbubble"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Filled.chatbubbleEllipses />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"chatbubbleEllipses"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Filled.chatbubbles />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"chatbubbles"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Filled.checkbox />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"checkbox"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Filled.checkmark />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"checkmark"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Filled.checkmarkCircle />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"checkmarkDone"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Filled.checkmarkDone />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"checkmarkDone"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Filled.checkmarkDoneCircle />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"checkmarkDoneCircle"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Filled.chevronBack />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"chevronBack"->Utils.str} </h2>
+      </div>
       // <div className={Tailwind.merge(.[Styles.block])}>
       //   <IonIcons.Filled.caretForwardCircle />
       //   <h2 className={Tailwind.merge(.[Styles.h2])}> {"caretForwardCircle"->Utils.str} </h2>
@@ -1056,9 +1054,16 @@ let default = () => {
       //   <IonIcons.Filled.caretForwardCircle />
       //   <h2 className={Tailwind.merge(.[Styles.h2])}> {"caretForwardCircle"->Utils.str} </h2>
       // </div>
-
-      // ten icons
-
+      // <div className={Tailwind.merge(.[Styles.block])}>
+      //   <IonIcons.Filled.caretForwardCircle />
+      //   <h2 className={Tailwind.merge(.[Styles.h2])}> {"caretForwardCircle"->Utils.str} </h2>
+      // </div>
+      // <div className={Tailwind.merge(.[Styles.block])}>
+      //   <IonIcons.Filled.caretForwardCircle />
+      //   <h2 className={Tailwind.merge(.[Styles.h2])}> {"caretForwardCircle"->Utils.str} </h2>
+      // </div>
+      // ten
+      // icons
       // <div className={Tailwind.merge(.[Styles.block])}>
       //   <IonIcons.Filled.caretForwardCircle />
       //   <h2 className={Tailwind.merge(.[Styles.h2])}> {"caretForwardCircle"->Utils.str} </h2>
