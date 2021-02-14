@@ -4798,26 +4798,75 @@ module Filled = {
         d="M464 256c0-114.87-93.13-208-208-208S48 141.13 48 256s93.13 208 208 208 208-93.13 208-208zm-252 74.14V181.86a16 16 0 0126.23-12.29l89.09 74.13a16 16 0 010 24.6l-89.09 74.13A16 16 0 01212 330.14z"
       />
     </svg>
-  //   @react.component
-  // let caretForwardCircle = (~className="") =>
-
-  // @react.component
-  // let caretForwardCircle = (~className="") =>
-
-  // @react.component
-  // let caretForwardCircle = (~className="") =>
-
-  // @react.component
-  // let caretForwardCircle = (~className="") =>
-
-  // @react.component
-  // let caretForwardCircle = (~className="") =>
-
-  // @react.component
-  // let caretForwardCircle = (~className="") =>
-
-  // one row
-
+  @react.component
+  let caretUp = (~className="") =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        d="M414 321.94L274.22 158.82a24 24 0 00-36.44 0L98 321.94c-13.34 15.57-2.28 39.62 18.22 39.62h279.6c20.5 0 31.56-24.05 18.18-39.62z"
+      />
+    </svg>
+  @react.component
+  let caretUpCircle = (~className="") =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        d="M256 48C141.13 48 48 141.13 48 256s93.13 208 208 208 208-93.13 208-208S370.87 48 256 48zm74.14 252H181.86a16 16 0 01-12.29-26.23l74.13-89.09a16 16 0 0124.6 0l74.13 89.09A16 16 0 01330.14 300z"
+      />
+    </svg>
+  @react.component
+  let cart = (~className="") =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <circle cx="176" cy="416" r="32" />
+      <circle cx="400" cy="416" r="32" />
+      <path
+        d="M456.8 120.78a23.92 23.92 0 00-18.56-8.78H133.89l-6.13-34.78A16 16 0 00112 64H48a16 16 0 000 32h50.58l45.66 258.78A16 16 0 00160 368h256a16 16 0 000-32H173.42l-5.64-32h241.66A24.07 24.07 0 00433 284.71l28.8-144a24 24 0 00-5-19.93z"
+      />
+    </svg>
+  @react.component
+  let cash = (~className="") =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        d="M448 400H64a16 16 0 010-32h384a16 16 0 010 32zM416 448H96a16 16 0 010-32h320a16 16 0 010 32zM32 272H16v48a32 32 0 0032 32h48v-16a64.07 64.07 0 00-64-64z"
+      />
+      <path
+        d="M480 240h16v-64h-16a96.11 96.11 0 01-96-96V64H128v16a96.11 96.11 0 01-96 96H16v64h16a96.11 96.11 0 0196 96v16h256v-16a96.11 96.11 0 0196-96zm-224 64a96 96 0 1196-96 96.11 96.11 0 01-96 96z"
+      />
+      <circle cx="256" cy="208" r="64" />
+      <path
+        d="M416 336v16h48a32 32 0 0032-32v-48h-16a64.07 64.07 0 00-64 64zM480 144h16V96a32 32 0 00-32-32h-48v16a64.07 64.07 0 0064 64zM96 80V64H48a32 32 0 00-32 32v48h16a64.07 64.07 0 0064-64z"
+      />
+    </svg>
+  @react.component
+  let cellular = (~className="") =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        d="M472 432h-48a24 24 0 01-24-24V104a24 24 0 0124-24h48a24 24 0 0124 24v304a24 24 0 01-24 24zM344 432h-48a24 24 0 01-24-24V184a24 24 0 0124-24h48a24 24 0 0124 24v224a24 24 0 01-24 24zM216 432h-48a24 24 0 01-24-24V248a24 24 0 0124-24h48a24 24 0 0124 24v160a24 24 0 01-24 24zM88 432H40a24 24 0 01-24-24v-96a24 24 0 0124-24h48a24 24 0 0124 24v96a24 24 0 01-24 24z"
+      />
+    </svg>
+  @react.component
+  let chatbox = (~className="") =>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={merge(.[defaultSize, className])}
+      viewBox="0 0 512 512">
+      <path
+        d="M144 464a16 16 0 01-16-16v-64h-24a72.08 72.08 0 01-72-72V120a72.08 72.08 0 0172-72h304a72.08 72.08 0 0172 72v192a72.08 72.08 0 01-72 72H245.74l-91.49 76.29A16.05 16.05 0 01144 464z"
+      />
+    </svg>
   // @react.component
   // let caretForwardCircle = (~className="") =>
 
