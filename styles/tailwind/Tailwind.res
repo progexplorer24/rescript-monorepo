@@ -1231,6 +1231,7 @@ let lg = minWBreakpoint(1024)
 let xl = minWBreakpoint(1280)
 let xl2 = minWBreakpoint(1536)
 let fontFamilies = fonts => [CssJs.fontFamilies(fonts)]
+let fontName = font => [CssJs.fontFamily(#custom(font))]
 
 // INFO: Selectors
 
