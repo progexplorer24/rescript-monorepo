@@ -1671,15 +1671,15 @@ let toFontValue2 = (font: fonts) =>
       weights: toArrayWeightValue(weights),
     }
   | #NotoSansJP(weights) => {
-      fontName: "Noto Sans HK",
+      fontName: "Noto Sans JP",
       weights: toArrayWeightValue(weights),
     }
   | #NotoSansKR(weights) => {
-      fontName: "Noto Sans HK",
+      fontName: "Noto Sans KR",
       weights: toArrayWeightValue(weights),
     }
   | #NotoSansSC(weights) => {
-      fontName: "Noto Sans HK",
+      fontName: "Noto Sans SC",
       weights: toArrayWeightValue(weights),
     }
   | #NotoSansTC(weights) => {
