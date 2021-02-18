@@ -800,59 +800,55 @@ module Styles = {
  */
   // #endregion ENDREGION:
 
-  let round = float => float_of_string(Js.Float.toFixedWithPrecision(~digits=7, float))
+  let baseSm = 14.
 
-  let em = (px, base) => #em(round(px /. base))
-
-  // EDGE CASE: Don't add top margin for first child element
   //  twStyle([md([maxW(#xl3)])]),
   //   twStyle([lg([maxW(#xl4), py(#v16), px(#v8)])]),
   //   twStyle([xl([maxW(#xl6)])]),
   let wrapper = merge(.[twStyle([px(#v4), py(#v10), mx(#auto)])])
 
+  // EDGE CASE: Don't add top margin for first child element
   let proseFirstChild = selector("& >", [firstChild([mt(#v0)])])
   let proseLastChild = selector("& >", [lastChild([mb(#v0)])])
 
-  let proseSm = twStyle([sm([])])
+  let proseBase = twStyle([mx(#auto), Typography.maxW(65), Typography.fontSize(baseSm)])
 
-  let proseBase = twStyle([mx(#auto), [CssJs.maxWidth(#ch(65.))], text(#sm)])
-
-  let prose = merge(.[proseBase, proseSm, twStyle([proseFirstChild]), twStyle([proseLastChild])])
+  let prose = merge(.[proseBase, twStyle([proseFirstChild]), twStyle([proseLastChild])])
 
   // NOTE: Solution for sm screen size
   let paragraph = twStyle([
-    [CssJs.lineHeight(#abs(round(24. /. 14.)))],
+    Typography.leading(24., baseSm),
     textColor(#coolGray700),
-    [CssJs.marginTop(em(16., 14.))],
-    [CssJs.marginBottom(em(16., 14.))],
+    Typography.my(16., baseSm),
   ])
+
+  let rebaseLead = 18.
 
   let lead = twStyle([
     textColor(#coolGray600),
-    [CssJs.fontSize(em(18., 14.))],
-    [CssJs.marginTop(em(16., 18.))],
-    [CssJs.marginBottom(em(16., 18.))],
-    [CssJs.lineHeight(#abs(round(28. /. 18.)))],
+    Typography.fontSize(rebaseLead),
+    Typography.my(16., rebaseLead),
+    Typography.leading(28., rebaseLead),
   ])
 
   let link = twStyle([textColor(#coolGray900), underline, fontWeight(#v500)])
 
   let strong = twStyle([textColor(#coolGray900), fontWeight(#v600)])
 
-  let removeTopMarginFromNextElement = selector("hr + *", [mt(#v0)])
+  // HACK: Increase specifity because styles are not applied
+  let removeTopMarginFromNextElement = selector("&& + *", [mt(#v0)])
 
   let hr = twStyle([
     borderT(#v1),
     borderColor(#coolGray200),
-    [CssJs.marginTop(em(40., 14.))],
-    [CssJs.marginBottom(em(40., 14.))],
+    Typography.my(40., baseSm),
     removeTopMarginFromNextElement,
   ])
 
-  let openQuote = [CssJs.contentRule(#openQuote)]
-  let closeQuote = [CssJs.contentRule(#closeQuote)]
-
   // TODO: Check what happens when you add multiple paragraphs
+
+  let rebaseBlockquote = 18.
+
   let blockquote = twStyle([
     italic,
     borderColor(#coolGray200),
@@ -862,27 +858,28 @@ module Styles = {
       "p",
       [
         textColor(#coolGray900),
-        firstOfType([before([openQuote])]),
-        lastOfType([after([closeQuote])]),
+        firstOfType([before([contentOpen])]),
+        lastOfType([after([contentClose])]),
       ],
     ),
-    [CssJs.marginTop(em(24., 18.))],
-    [CssJs.marginBottom(em(24., 18.))],
-    [CssJs.paddingLeft(em(20., 18.))],
+    Typography.my(24., rebaseBlockquote),
+    Typography.pl(20., rebaseBlockquote),
   ])
+
+  // let rebaseCode = 12.
 
   let code = twStyle([
     fontMono,
-    [CssJs.fontSize(em(12., 14.))],
+    Typography.fontSize(12.),
     textColor(#coolGray900),
     fontWeight(#v600),
-    before([[CssJs.contentRule(#text(Utils.grave))]]),
-    after([[CssJs.contentRule(#text(Utils.grave))]]),
+    before([contentText(Utils.grave)]),
+    after([contentText(Utils.grave)]),
   ])
 
   // EDGE CASE: Code element inside h2 & h3
-  let codeInsideH2 = selector("& code", [[CssJs.fontSize(em(18., 20.))]])
-  let codeInsideH3 = selector("& code", [[CssJs.fontSize(em(16., 18.))]])
+  let codeInsideH2 = selector("& code", [Typography.fontSize(18.)])
+  let codeInsideH3 = selector("& code", [Typography.fontSize(16.)])
 
   //  h1: {
   //         fontSize: em(30, 14),
@@ -892,57 +889,56 @@ module Styles = {
   //       },
 
   // let h1 = twStyle([textColor(#coolGray900), fontWeight(#v800)])
+
+  let rebaseH2 = 20.
+
   let h2 = merge(.[
     twStyle([
       textColor(#coolGray900),
       fontWeight(#v700),
-      [CssJs.fontSize(em(20., 14.))],
-      [CssJs.lineHeight(#abs(round(28. /. 20.)))],
-      [CssJs.marginBottom(em(16., 20.))],
-      [CssJs.marginTop(em(32., 20.))],
+      Typography.fontSize(rebaseH2),
+      Typography.leading(28., rebaseH2),
+      Typography.mt(32., rebaseH2),
+      Typography.mb(16., rebaseH2),
       removeTopMarginFromNextElement,
       codeInsideH2,
     ]),
   ])
 
+  let rebaseH3 = 18.
+
   let h3 = twStyle([
     textColor(#coolGray900),
     fontWeight(#v600),
-    text(#lg),
-    [CssJs.marginTop(em(28., 18.))],
-    [CssJs.marginBottom(em(8., 18.))],
-    [CssJs.lineHeight(#abs(round(28. /. 18.)))],
+    Typography.fontSize(rebaseH3),
+    Typography.leading(28., rebaseH3),
+    Typography.mt(28., rebaseH3),
+    Typography.mb(8., rebaseH3),
     removeTopMarginFromNextElement,
     codeInsideH3,
   ])
 
   let h4 = twStyle([
-    [CssJs.marginTop(em(20., 14.))],
-    [CssJs.marginBottom(em(8., 14.))],
-    [CssJs.lineHeight(#abs(round(20. /. 14.)))],
+    Typography.leading(20., baseSm),
+    Typography.mt(20., baseSm),
+    Typography.mb(8., baseSm),
     textColor(#coolGray900),
     fontWeight(#v600),
     removeTopMarginFromNextElement,
   ])
 
+  let rebasePre = 12.
   // ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace
   let pre = twStyle([
     overflowXAuto,
     bg(#coolGray800),
     textColor(#coolGray200),
-    [CssJs.fontSize(em(12., 14.))],
-    [CssJs.lineHeight(#abs(round(20. /. 12.)))],
-    [CssJs.marginTop(em(20., 12.))],
-    [CssJs.marginBottom(em(20., 12.))],
+    Typography.fontSize(rebasePre),
+    Typography.leading(20., rebasePre),
+    Typography.my(20., rebasePre),
+    Typography.px(12., rebasePre),
+    Typography.py(8., rebasePre),
     rounded(#default),
-    [
-      CssJs.padding4(
-        ~top=em(8., 12.),
-        ~bottom=em(8., 12.),
-        ~left=em(12., 12.),
-        ~right=em(12., 12.),
-      ),
-    ],
     selector(
       "& code",
       [
@@ -951,32 +947,25 @@ module Styles = {
         borderR(#v0),
         bg(#transparent),
         p(#v0),
-        [
-          CssJs.fontFamilies([
-            #custom("ui-monospace"),
-            #custom("SFMono-Regular"),
-            #custom("Menlo"),
-            #custom("Monaco"),
-            #custom("Consolas"),
-            #custom("Liberation Mono"),
-            #custom("Courier New"),
-            #monospace,
-          ]),
-        ],
-        before([[CssJs.contentRule(#none)]]),
-        after([[CssJs.contentRule(#none)]]),
+        fontFamilies([
+          #custom("ui-monospace"),
+          #custom("SFMono-Regular"),
+          #custom("Menlo"),
+          #custom("Monaco"),
+          #custom("Consolas"),
+          #custom("Liberation Mono"),
+          #custom("Courier New"),
+          #monospace,
+        ]),
+        before([contentNone]),
+        after([contentNone]),
       ],
     ),
   ])
 
   // INFO: List Styles
-
-  let nestedList = selector(
-    "& ul, & ol",
-    [[CssJs.marginTop(em(8., 14.))], [CssJs.marginBottom(em(8., 14.))]],
-  )
-
-  let listPadding = twStyle([[CssJs.marginTop(em(16., 14.))], [CssJs.marginBottom(em(16., 14.))]])
+  let nestedList = selector("& ul, & ol", [Typography.my(8., baseSm)])
+  let listPadding = twStyle([Typography.my(16., baseSm)])
 
   // | #circle
   // | #decimal
@@ -994,16 +983,12 @@ module Styles = {
   let li = twStyle([
     relative,
     textColor(#coolGray700),
-    [CssJs.lineHeight(#abs(round(24. /. 14.)))],
-    [CssJs.paddingLeft(em(22., 14.))],
-    [CssJs.marginTop(em(4., 14.))],
-    [CssJs.marginBottom(em(4., 14.))],
+    Typography.my(4., baseSm),
+    Typography.pl(22., baseSm),
+    Typography.leading(24., baseSm),
     selector(
       "& > *",
-      [
-        firstChild([[CssJs.marginTop(em(16., 14.))]]),
-        lastChild([[CssJs.marginBottom(em(16., 14.))]]),
-      ],
+      [firstChild([Typography.mt(16., baseSm)]), lastChild([Typography.mb(16., baseSm)])],
     ),
   ])
 
@@ -1027,21 +1012,19 @@ module Styles = {
     [
       before([
         absolute,
-        [CssJs.contentRule(#text(""))],
+        contentText(""),
         bg(#coolGray300),
         rounded(#full),
-        [CssJs.height(em(5., 14.))],
-        [CssJs.width(em(5., 14.))],
-        [CssJs.top(#em(round(12. /. 14.) -. round(2.5 /. 14.)))],
-        [CssJs.left(em(3., 14.))],
+        // Typography.w(5., 14.),
+        // Typography.h(5., 14.),
+        Typography.square(5., baseSm),
+        Typography.topCalc(#sub(24. /. 2., 2.5), ~base=baseSm),
+        Typography.left(3., baseSm),
       ]),
     ],
   )
 
-  let liParagraph = selector(
-    "& > li p",
-    [[CssJs.marginTop(em(8., 14.))], [CssJs.marginBottom(em(8., 14.))]],
-  )
+  let liParagraph = selector("& > li p", [Typography.my(8., baseSm)])
 
   let ul = merge(.[
     listPadding,
@@ -1049,16 +1032,17 @@ module Styles = {
     twStyle([liParagraph]),
     twStyle([nestedList]),
   ])
-  // HACK: Duplicate simple selectors to increase specifity - otherwise this styles are not applied
-  let anyChild = selector("&& > *", [[CssJs.marginTop(#zero)], [CssJs.marginBottom(#zero)]])
+  // HACK: Increase specifity because styles are not applied
+  let anyChild = selector("&& > *", [my(#v0)])
 
-  // HACK: Again, we need use dobule "&" because we increased specifity
+  let rebaseFigcaption = 12.
+  // HACK: Increase specifity because styles are not applied
   let figureFigcaption = selector(
     "&& figcaption",
     [
-      text(#xs),
-      [CssJs.lineHeight(#abs(round(16. /. 12.)))],
-      [CssJs.marginTop(em(8., 12.))],
+      Typography.fontSize(rebaseFigcaption),
+      Typography.leading(16., rebaseFigcaption),
+      Typography.mt(8., rebaseFigcaption),
       textColor(#coolGray500),
     ],
   )
@@ -1068,31 +1052,30 @@ module Styles = {
   //   marginBottom: em(24, 14),
   // },
 
-  //         anyChild,
-  // figcaption,
+  let figure = twStyle([Typography.my(24., baseSm), anyChild, figureFigcaption])
 
-  let figure = twStyle([
-    [CssJs.marginTop(em(24., 14.))],
-    [CssJs.marginBottom(em(24., 14.))],
-    anyChild,
-    figureFigcaption,
-  ])
+  let img = twStyle([Typography.my(24., baseSm)])
 
-  let img = twStyle([[CssJs.marginTop(em(24., 14.))], [CssJs.marginBottom(em(24., 14.))]])
+  let rebaseTable = 12.
 
   let table = twStyle([
-    text(#xs),
-    leading(#normal),
+    Typography.fontSize(rebaseTable),
+    Typography.leading(18., rebaseTable),
+    Typography.my(24., rebaseTable),
     w(#full),
-    textLeft,
     tableAuto,
-    [CssJs.marginTop(em(32., 16.))],
-    [CssJs.marginBottom(em(32., 16.))],
+    textLeft,
   ])
 
   let theadTh = selector(
     "& th",
-    [px(#v3), pb(#v2), firstChild([pl(#v0)]), lastChild([pr(#v0)]), alignBottom],
+    [
+      Typography.px(12., rebaseTable),
+      Typography.pb(8., rebaseTable),
+      firstChild([pl(#v0)]),
+      lastChild([pr(#v0)]),
+      alignBottom,
+    ],
   )
 
   let thead = twStyle([
@@ -1106,8 +1089,8 @@ module Styles = {
   let tbodyTd = selector(
     "& td",
     [
-      py(#v2),
-      px(#v3),
+      Typography.px(12., rebaseTable),
+      Typography.py(8., rebaseTable),
       alignTop,
       textColor(#coolGray700),
       firstChild([pl(#v0)]),
@@ -1285,7 +1268,7 @@ let default = () => {
               {" want, without any of the downsides of doing something stupid like disabling our base styles."->Utils.str}
             </Mdx.p>
             <Mdx.p>
-              {"It adds a new"->Utils.str}
+              {"It adds a new "->Utils.str}
               <Mdx.inlineCode> {"prose"->Utils.str} </Mdx.inlineCode>
               {" class that you can slap on any block of vanilla HTML content and turn it into a beautiful, well-formatted document:"->Utils.str}
             </Mdx.p>
