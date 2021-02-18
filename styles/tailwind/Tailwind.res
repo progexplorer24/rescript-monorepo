@@ -1232,7 +1232,11 @@ let xl = minWBreakpoint(1280)
 let xl2 = minWBreakpoint(1536)
 let fontFamilies = fonts => [CssJs.fontFamilies(fonts)]
 let fontName = font => [CssJs.fontFamily(#custom(font))]
-
+let contentText = text => [CssJs.contentRule(#text(text))]
+// WARNING: This is not a function - create separate section for Atomic types not available in tailwind
+let contentNone = [CssJs.contentRule(#none)]
+let contentOpen = [CssJs.contentRule(#openQuote)]
+let contentClose = [CssJs.contentRule(#closeQuote)]
 // INFO: Selectors
 
 let selector = (string, rules) => [CssJs.selector(string, tw(rules))]
@@ -1283,3 +1287,75 @@ let before = rules => [CssJs.before(tw(rules))]
 let firstLetter = rules => [CssJs.firstLetter(tw(rules))]
 let firstLine = rules => [CssJs.firstLine(tw(rules))]
 let selection = rules => [CssJs.selection(tw(rules))]
+
+// #region REGION: Typography
+
+module Typography = {
+  let round = float => float_of_string(Js.Float.toFixedWithPrecision(~digits=7, float))
+
+  let em = (px, base) => #em(round(px /. base))
+
+  let toRem = px => #rem(px /. 16.)
+
+  let leading = (px, base) => [CssJs.lineHeight(#abs(round(px /. base)))]
+
+  let mt = (px, base) => [CssJs.marginTop(em(px, base))]
+  let mr = (px, base) => [CssJs.marginRight(em(px, base))]
+  let ml = (px, base) => [CssJs.marginLeft(em(px, base))]
+  let mb = (px, base) => [CssJs.marginBottom(em(px, base))]
+  let my = (px, base) => [CssJs.marginBottom(em(px, base)), CssJs.marginTop(em(px, base))]
+  let mx = (px, base) => [CssJs.marginLeft(em(px, base)), CssJs.marginRight(em(px, base))]
+
+  let pt = (px, base) => [CssJs.paddingTop(em(px, base))]
+  let pr = (px, base) => [CssJs.paddingRight(em(px, base))]
+  let pl = (px, base) => [CssJs.paddingLeft(em(px, base))]
+  let pb = (px, base) => [CssJs.paddingBottom(em(px, base))]
+  let py = (px, base) => [CssJs.paddingBottom(em(px, base)), CssJs.paddingTop(em(px, base))]
+  let px = (px, base) => [CssJs.paddingLeft(em(px, base)), CssJs.paddingRight(em(px, base))]
+
+  let w = (px, base) => [CssJs.width(em(px, base))]
+  let h = (px, base) => [CssJs.height(em(px, base))]
+  let square = (px, base) => [CssJs.width(em(px, base)), CssJs.height(em(px, base))]
+  let rect = (~w, ~h, ~base) => [CssJs.width(em(w, base)), CssJs.height(em(h, base))]
+
+  type mathOperations = [#sub(float, float) | #add(float, float)]
+
+  let top = (px, base) => [CssJs.top(em(px, base))]
+  let right = (px, base) => [CssJs.right(em(px, base))]
+  let bottom = (px, base) => [CssJs.bottom(em(px, base))]
+  let left = (px, base) => [CssJs.left(em(px, base))]
+
+  let topCalc = (mathOperation, ~base) =>
+    switch mathOperation {
+    | #add(a, b) => [CssJs.top(#em(round(a /. base) +. round(b /. base)))]
+
+    | #sub(a, b) => [CssJs.top(#em(round(a /. base) -. round(b /. base)))]
+    }
+
+  let rightCalc = (mathOperation, ~base) =>
+    switch mathOperation {
+    | #add(a, b) => [CssJs.right(#em(round(a /. base) +. round(b /. base)))]
+
+    | #sub(a, b) => [CssJs.right(#em(round(a /. base) -. round(b /. base)))]
+    }
+
+  let bottomCalc = (mathOperation, ~base) =>
+    switch mathOperation {
+    | #add(a, b) => [CssJs.bottom(#em(round(a /. base) +. round(b /. base)))]
+
+    | #sub(a, b) => [CssJs.bottom(#em(round(a /. base) -. round(b /. base)))]
+    }
+
+  let leftCalc = (mathOperation, ~base) =>
+    switch mathOperation {
+    | #add(a, b) => [CssJs.left(#em(round(a /. base) +. round(b /. base)))]
+
+    | #sub(a, b) => [CssJs.left(#em(round(a /. base) -. round(b /. base)))]
+    }
+  // INFO: Represents the width, or more precisely the advance measure, of the glyph "0" (zero, the Unicode character U+0030) in the element's font.
+  let maxW = characters => [CssJs.maxWidth(#ch(Belt.Int.toFloat(characters)))]
+
+  let fontSize = px => [CssJs.fontSize(toRem(px))]
+}
+
+// #endregion ENDREGION: Elastic
