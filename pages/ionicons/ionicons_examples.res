@@ -2354,6 +2354,361 @@ let default = () => {
         <IonIcons.Logos.alipay />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"alipay"->Utils.str} </h2>
       </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.amazon />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"amazon"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.amplify />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"amplify"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.android />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"android"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.angular />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"angular"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.apple />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"apple"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.appleAppStore />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"appleAppStore"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.appleAr />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"appleAr"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.behance />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"behance"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.bitBucket />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"bitBucket"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.bitCoin />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"bitCoin"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.buffer />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"buffer"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.capacitor />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"capacitor"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.chrome />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"chrome"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.closedCaptioning />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"closedCaptioning"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.codepen />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"codepen"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.css3 />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"css3"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.designerNews />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"designerNews"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.devianStart />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"devianStart"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.discord />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"discord"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.docker />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"docker"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.dribbble />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"dribbble"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.dropBox />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"dropBox"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.edge />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"edge"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.electron />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"electron"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.euro />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"euro"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.facebook />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"facebook"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.figma />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"figma"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.fireBase />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"fireBase"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.fireFox />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"fireFox"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.flickr />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"flickr"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.fourSquare />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"fourSquare"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.github />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"github"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.gitlab />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"gitlab"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.google />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"google"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.googlePlayStore />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"googlePlayStore"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.hackerNews />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"hackerNews"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.html5 />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"html5"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.instagram />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"instagram"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.ionic />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"ionic"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.ionitron />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"ionitron"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.javascript />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"javascript"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.laravel />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"laravel"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.linkedin />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"linkedin"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.markDown />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"markDown"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.mastodon />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"mastodon"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.medium />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"medium"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.microsoft />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"microsoft"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.noSmoking />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"noSmoking"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.nodejs />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"nodejs"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.npm />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"npm"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.octocat />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"octocat"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.paypal />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"paypal"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.pinterest />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"pinterest"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.playstation />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"playstation"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.pwa />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"pwa"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.python />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"python"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.react />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"react"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.reddit />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"reddit"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.rrs />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"rrs"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.sass />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"sass"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.skype />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"skype"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.slack />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"slack"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.snapChat />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"snapChat"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.soundCloud />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"soundCloud"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.stackOverFlow />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"stackOverFlow"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.steam />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"steam"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.stencil />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"stencil"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.tableau />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"tableau"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.tikTok />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"tikTok"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.tumblr />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"tumblr"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.tux />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"tux"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.twitch />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"twitch"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.twitter />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"twitter"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.usd />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"usd"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.venmo />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"venmo"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.vercel />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"vercel"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.vimeo />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"vimeo"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.vk /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"vk"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.vue />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"vue"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.webComponent />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"webComponent"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.weChat />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"weChat"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.whatsapp />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"whatsapp"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.windows />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"windows"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.wordpress />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"wordpress"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.xbox />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"xbox"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.xing />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"xing"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.yahoo />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"yahoo"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.yen />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"yen"->Utils.str} </h2>
+      </div>
+      <div className={Tailwind.merge(.[Styles.block])}>
+        <IonIcons.Logos.youtube />
+        <h2 className={Tailwind.merge(.[Styles.h2])}> {"youtube"->Utils.str} </h2>
+      </div>
     </div>
   </div>
 }
