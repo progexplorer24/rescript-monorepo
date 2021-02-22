@@ -4,9 +4,7 @@ module Styles = {
   // #region REGION: Useful tips
   /*
 
-  // #region REGION: Medium Screen
-
-        'ol[type="A"]': {
+  'ol[type="A"]': {
           '--list-counter-style': 'upper-alpha',
         },
         'ol[type="a"]': {
@@ -33,394 +31,13 @@ module Styles = {
         'ol[type="1"]': {
           '--list-counter-style': 'decimal',
         },
-
-// REGION: medium Screen
-      {
-        fontSize: rem(16),
-        lineHeight: round(28 / 16),
-        p: {
-          marginTop: em(20, 16),
-          marginBottom: em(20, 16),
-        },
-        '[class~="lead"]': {
-          fontSize: em(20, 16),
-          lineHeight: round(32 / 20),
-          marginTop: em(24, 20),
-          marginBottom: em(24, 20),
-        },
-        blockquote: {
-          marginTop: em(32, 20),
-          marginBottom: em(32, 20),
-          paddingLeft: em(20, 20),
-        },
-        h1: {
-          fontSize: em(36, 16),
-          marginTop: '0',
-          marginBottom: em(32, 36),
-          lineHeight: round(40 / 36),
-        },
-        h2: {
-          fontSize: em(24, 16),
-          marginTop: em(48, 24),
-          marginBottom: em(24, 24),
-          lineHeight: round(32 / 24),
-        },
-        h3: {
-          fontSize: em(20, 16),
-          marginTop: em(32, 20),
-          marginBottom: em(12, 20),
-          lineHeight: round(32 / 20),
-        },
-        h4: {
-          marginTop: em(24, 16),
-          marginBottom: em(8, 16),
-          lineHeight: round(24 / 16),
-        },
-        img: {
-          marginTop: em(32, 16),
-          marginBottom: em(32, 16),
-        },
-        video: {
-          marginTop: em(32, 16),
-          marginBottom: em(32, 16),
-        },
-        figure: {
-          marginTop: em(32, 16),
-          marginBottom: em(32, 16),
-        },
-        'figure > *': {
-          marginTop: '0',
-          marginBottom: '0',
-        },
-        'figure figcaption': {
-          fontSize: em(14, 16),
-          lineHeight: round(20 / 14),
-          marginTop: em(12, 14),
-        },
-        code: {
-          fontSize: em(14, 16),
-        },
-        'h2 code': {
-          fontSize: em(21, 24),
-        },
-        'h3 code': {
-          fontSize: em(18, 20),
-        },
-        pre: {
-          fontSize: em(14, 16),
-          lineHeight: round(24 / 14),
-          marginTop: em(24, 14),
-          marginBottom: em(24, 14),
-          borderRadius: rem(6),
-          paddingTop: em(12, 14),
-          paddingRight: em(16, 14),
-          paddingBottom: em(12, 14),
-          paddingLeft: em(16, 14),
-        },
-        ol: {
-          marginTop: em(20, 16),
-          marginBottom: em(20, 16),
-        },
-        ul: {
-          marginTop: em(20, 16),
-          marginBottom: em(20, 16),
-        },
-        li: {
-          marginTop: em(8, 16),
-          marginBottom: em(8, 16),
-        },
-        'ol > li': {
-          paddingLeft: em(28, 16),
-        },
-        'ol > li::before': {
-          left: '0',
-        },
-        'ul > li': {
-          paddingLeft: em(28, 16),
-        },
-        'ul > li::before': {
-          width: em(6, 16),
-          height: em(6, 16),
-          top: `calc(${em(28 / 2, 16)} - ${em(3, 16)})`,
-          left: em(4, 16),
-        },
-        '> ul > li p': {
-          marginTop: em(12, 16),
-          marginBottom: em(12, 16),
-        },
-        '> ul > li > *:first-child': {
-          marginTop: em(20, 16),
-        },
-        '> ul > li > *:last-child': {
-          marginBottom: em(20, 16),
-        },
-        '> ol > li > *:first-child': {
-          marginTop: em(20, 16),
-        },
-        '> ol > li > *:last-child': {
-          marginBottom: em(20, 16),
-        },
-        'ul ul, ul ol, ol ul, ol ol': {
-          marginTop: em(12, 16),
-          marginBottom: em(12, 16),
-        },
-        hr: {
-          marginTop: em(48, 16),
-          marginBottom: em(48, 16),
-        },
-        'hr + *': {
-          marginTop: '0',
-        },
-        'h2 + *': {
-          marginTop: '0',
-        },
-        'h3 + *': {
-          marginTop: '0',
-        },
-        'h4 + *': {
-          marginTop: '0',
-        },
-        table: {
-          fontSize: em(14, 16),
-          lineHeight: round(24 / 14),
-        },
-        'thead th': {
-          paddingRight: em(8, 14),
-          paddingBottom: em(8, 14),
-          paddingLeft: em(8, 14),
-        },
-        'thead th:first-child': {
-          paddingLeft: '0',
-        },
-        'thead th:last-child': {
-          paddingRight: '0',
-        },
-        'tbody td': {
-          paddingTop: em(8, 14),
-          paddingRight: em(8, 14),
-          paddingBottom: em(8, 14),
-          paddingLeft: em(8, 14),
-        },
-        'tbody td:first-child': {
-          paddingLeft: '0',
-        },
-        'tbody td:last-child': {
-          paddingRight: '0',
-        },
-      },
-      {
-        '> :first-child': {
-          marginTop: '0',
-        },
-        '> :last-child': {
-          marginBottom: '0',
-        },
-      },
-    ],
-  },
-
-
-  // #endregion ENDREGION: 
-
-  // #region REGION: Large Screens specification
-
-  INFO: To create responsive breakpoint in your Styles module use:
-  INFO: let blockquoteLg = tailwindStyles([lg([ PUT YOUR STYLES HERE ])])
-
-  lg: {
-    css: [
-      {
-        fontSize: rem(18),
-        lineHeight: round(32 / 18),
-        p: {
-          marginTop: em(24, 18),
-          marginBottom: em(24, 18),
-        },
-        '[class~="lead"]': {
-          fontSize: em(22, 18),
-          lineHeight: round(32 / 22),
-          marginTop: em(24, 22),
-          marginBottom: em(24, 22),
-        },
-        blockquote: {
-          marginTop: em(40, 24),
-          marginBottom: em(40, 24),
-          paddingLeft: em(24, 24),
-        },
-        h1: {
-          fontSize: em(48, 18),
-          marginTop: '0',
-          marginBottom: em(40, 48),
-          lineHeight: round(48 / 48),
-        },
-        h2: {
-          fontSize: em(30, 18),
-          marginTop: em(56, 30),
-          marginBottom: em(32, 30),
-          lineHeight: round(40 / 30),
-        },
-        h3: {
-          fontSize: em(24, 18),
-          marginTop: em(40, 24),
-          marginBottom: em(16, 24),
-          lineHeight: round(36 / 24),
-        },
-        h4: {
-          marginTop: em(32, 18),
-          marginBottom: em(8, 18),
-          lineHeight: round(28 / 18),
-        },
-        img: {
-          marginTop: em(32, 18),
-          marginBottom: em(32, 18),
-        },
-        video: {
-          marginTop: em(32, 18),
-          marginBottom: em(32, 18),
-        },
-        figure: {
-          marginTop: em(32, 18),
-          marginBottom: em(32, 18),
-        },
-        'figure > *': {
-          marginTop: '0',
-          marginBottom: '0',
-        },
-        'figure figcaption': {
-          fontSize: em(16, 18),
-          lineHeight: round(24 / 16),
-          marginTop: em(16, 16),
-        },
-        code: {
-          fontSize: em(16, 18),
-        },
-        'h2 code': {
-          fontSize: em(26, 30),
-        },
-        'h3 code': {
-          fontSize: em(21, 24),
-        },
-        pre: {
-          fontSize: em(16, 18),
-          lineHeight: round(28 / 16),
-          marginTop: em(32, 16),
-          marginBottom: em(32, 16),
-          borderRadius: rem(6),
-          paddingTop: em(16, 16),
-          paddingRight: em(24, 16),
-          paddingBottom: em(16, 16),
-          paddingLeft: em(24, 16),
-        },
-        ol: {
-          marginTop: em(24, 18),
-          marginBottom: em(24, 18),
-        },
-        ul: {
-          marginTop: em(24, 18),
-          marginBottom: em(24, 18),
-        },
-        li: {
-          marginTop: em(12, 18),
-          marginBottom: em(12, 18),
-        },
-        'ol > li': {
-          paddingLeft: em(30, 18),
-        },
-        'ol > li::before': {
-          left: '0',
-        },
-        'ul > li': {
-          paddingLeft: em(30, 18),
-        },
-        'ul > li::before': {
-          width: em(6, 18),
-          height: em(6, 18),
-          top: `calc(${em(32 / 2, 18)} - ${em(3, 18)})`,
-          left: em(4, 18),
-        },
-        '> ul > li p': {
-          marginTop: em(16, 18),
-          marginBottom: em(16, 18),
-        },
-        '> ul > li > *:first-child': {
-          marginTop: em(24, 18),
-        },
-        '> ul > li > *:last-child': {
-          marginBottom: em(24, 18),
-        },
-        '> ol > li > *:first-child': {
-          marginTop: em(24, 18),
-        },
-        '> ol > li > *:last-child': {
-          marginBottom: em(24, 18),
-        },
-        'ul ul, ul ol, ol ul, ol ol': {
-          marginTop: em(16, 18),
-          marginBottom: em(16, 18),
-        },
-        hr: {
-          marginTop: em(56, 18),
-          marginBottom: em(56, 18),
-        },
-        'hr + *': {
-          marginTop: '0',
-        },
-        'h2 + *': {
-          marginTop: '0',
-        },
-        'h3 + *': {
-          marginTop: '0',
-        },
-        'h4 + *': {
-          marginTop: '0',
-        },
-        table: {
-          fontSize: em(16, 18),
-          lineHeight: round(24 / 16),
-        },
-        'thead th': {
-          paddingRight: em(12, 16),
-          paddingBottom: em(12, 16),
-          paddingLeft: em(12, 16),
-        },
-        'thead th:first-child': {
-          paddingLeft: '0',
-        },
-        'thead th:last-child': {
-          paddingRight: '0',
-        },
-        'tbody td': {
-          paddingTop: em(12, 16),
-          paddingRight: em(12, 16),
-          paddingBottom: em(12, 16),
-          paddingLeft: em(12, 16),
-        },
-        'tbody td:first-child': {
-          paddingLeft: '0',
-        },
-        'tbody td:last-child': {
-          paddingRight: '0',
-        },
-      },
-      {
-        '> :first-child': {
-          marginTop: '0',
-        },
-        '> :last-child': {
-          marginBottom: '0',
-        },
-      },
-    ],
-  },
-
-  // #endregion ENDREGION: Large Screens specification
   
 
   // #region REGION: Extra large screen specification
 
    INFO: To create responsive breakpoint in your Styles module use:
   INFO: let blockquoteLg = tailwindStyles([xl([ PUT YOUR STYLES HERE ])])
-   xl: {
+   lg: {
     css: [
       {
         fontSize: rem(20),
@@ -608,248 +225,108 @@ module Styles = {
 
   // #endregion ENDREGION: 
 
-  // #region REGION: 2xl screen specification
+#endregion ENDREGION: Useful Tips */
 
-   '2xl': {
-    css: [
-      {
-        fontSize: rem(24),
-        lineHeight: round(40 / 24),
-        p: {
-          marginTop: em(32, 24),
-          marginBottom: em(32, 24),
-        },
-        '[class~="lead"]': {
-          fontSize: em(30, 24),
-          lineHeight: round(44 / 30),
-          marginTop: em(32, 30),
-          marginBottom: em(32, 30),
-        },
-        blockquote: {
-          marginTop: em(64, 36),
-          marginBottom: em(64, 36),
-          paddingLeft: em(40, 36),
-        },
-        h1: {
-          fontSize: em(64, 24),
-          marginTop: '0',
-          marginBottom: em(56, 64),
-          lineHeight: round(64 / 64),
-        },
-        h2: {
-          fontSize: em(48, 24),
-          marginTop: em(72, 48),
-          marginBottom: em(40, 48),
-          lineHeight: round(52 / 48),
-        },
-        h3: {
-          fontSize: em(36, 24),
-          marginTop: em(56, 36),
-          marginBottom: em(24, 36),
-          lineHeight: round(44 / 36),
-        },
-        h4: {
-          marginTop: em(40, 24),
-          marginBottom: em(16, 24),
-          lineHeight: round(36 / 24),
-        },
-        img: {
-          marginTop: em(48, 24),
-          marginBottom: em(48, 24),
-        },
-        video: {
-          marginTop: em(48, 24),
-          marginBottom: em(48, 24),
-        },
-        figure: {
-          marginTop: em(48, 24),
-          marginBottom: em(48, 24),
-        },
-        'figure > *': {
-          marginTop: '0',
-          marginBottom: '0',
-        },
-        'figure figcaption': {
-          fontSize: em(20, 24),
-          lineHeight: round(32 / 20),
-          marginTop: em(20, 20),
-        },
-        code: {
-          fontSize: em(20, 24),
-        },
-        'h2 code': {
-          fontSize: em(42, 48),
-        },
-        'h3 code': {
-          fontSize: em(32, 36),
-        },
-        pre: {
-          fontSize: em(20, 24),
-          lineHeight: round(36 / 20),
-          marginTop: em(40, 20),
-          marginBottom: em(40, 20),
-          borderRadius: rem(8),
-          paddingTop: em(24, 20),
-          paddingRight: em(32, 20),
-          paddingBottom: em(24, 20),
-          paddingLeft: em(32, 20),
-        },
-        ol: {
-          marginTop: em(32, 24),
-          marginBottom: em(32, 24),
-        },
-        ul: {
-          marginTop: em(32, 24),
-          marginBottom: em(32, 24),
-        },
-        li: {
-          marginTop: em(12, 24),
-          marginBottom: em(12, 24),
-        },
-        'ol > li': {
-          paddingLeft: em(40, 24),
-        },
-        'ol > li::before': {
-          left: '0',
-        },
-        'ul > li': {
-          paddingLeft: em(40, 24),
-        },
-        'ul > li::before': {
-          width: em(8, 24),
-          height: em(8, 24),
-          top: `calc(${em(40 / 2, 24)} - ${em(4, 24)})`,
-          left: em(6, 24),
-        },
-        '> ul > li p': {
-          marginTop: em(20, 24),
-          marginBottom: em(20, 24),
-        },
-        '> ul > li > *:first-child': {
-          marginTop: em(32, 24),
-        },
-        '> ul > li > *:last-child': {
-          marginBottom: em(32, 24),
-        },
-        '> ol > li > *:first-child': {
-          marginTop: em(32, 24),
-        },
-        '> ol > li > *:last-child': {
-          marginBottom: em(32, 24),
-        },
-        'ul ul, ul ol, ol ul, ol ol': {
-          marginTop: em(16, 24),
-          marginBottom: em(16, 24),
-        },
-        hr: {
-          marginTop: em(72, 24),
-          marginBottom: em(72, 24),
-        },
-        'hr + *': {
-          marginTop: '0',
-        },
-        'h2 + *': {
-          marginTop: '0',
-        },
-        'h3 + *': {
-          marginTop: '0',
-        },
-        'h4 + *': {
-          marginTop: '0',
-        },
-        table: {
-          fontSize: em(20, 24),
-          lineHeight: round(28 / 20),
-        },
-        'thead th': {
-          paddingRight: em(12, 20),
-          paddingBottom: em(16, 20),
-          paddingLeft: em(12, 20),
-        },
-        'thead th:first-child': {
-          paddingLeft: '0',
-        },
-        'thead th:last-child': {
-          paddingRight: '0',
-        },
-        'tbody td': {
-          paddingTop: em(16, 20),
-          paddingRight: em(12, 20),
-          paddingBottom: em(16, 20),
-          paddingLeft: em(12, 20),
-        },
-        'tbody td:first-child': {
-          paddingLeft: '0',
-        },
-        'tbody td:last-child': {
-          paddingRight: '0',
-        },
-      },
-      {
-        '> :first-child': {
-          marginTop: '0',
-        },
-        '> :last-child': {
-          marginBottom: '0',
-        },
-      },
-    ],
-  },
-  // #endregion ENDREGION: 
+  let base = 14.
+  let baseSm = 16.
+  let baseLg = 18.
+  let baseXl = 24.
 
- */
-  // #endregion ENDREGION:
+  let wrapperXl = twStyle([xl([maxW(#xl6)])])
+  let wrapperBase = twStyle([px(#v4), py(#v10), mx(#auto), maxW(#xl3)])
+  let wrapperSm = twStyle([sm([py(#v12), px(#v6)])])
+  let wrapperLg = twStyle([lg([px(#v8), py(#v16), maxW(#xl4)])])
+  let wrapper = merge(.[wrapperBase, wrapperSm, wrapperLg, wrapperXl])
 
-  let baseSm = 14.
+  // EDGE CASE: Don't add top margin for first child element and bottom margin for last child element
+  let proseFirstChild = twStyle([selector("& >", [firstChild([mt(#v0)])])])
+  let proseLastChild = twStyle([selector("& >", [lastChild([mb(#v0)])])])
 
-  //  twStyle([md([maxW(#xl3)])]),
-  //   twStyle([lg([maxW(#xl4), py(#v16), px(#v8)])]),
-  //   twStyle([xl([maxW(#xl6)])]),
-  let wrapper = merge(.[twStyle([px(#v4), py(#v10), mx(#auto)])])
+  let proseBase = twStyle([mx(#auto), Typography.maxW(65), Typography.fontSize(base)])
+  let proseSm = twStyle([sm([Typography.fontSize(baseSm), Typography.leading(28., baseSm)])])
+  let proseLg = twStyle([lg([Typography.fontSize(baseLg), Typography.leading(32., baseLg)])])
+  let proseXl = twStyle([xl([Typography.fontSize(baseXl), Typography.leading(40., baseXl)])])
 
-  // EDGE CASE: Don't add top margin for first child element
-  let proseFirstChild = selector("& >", [firstChild([mt(#v0)])])
-  let proseLastChild = selector("& >", [lastChild([mb(#v0)])])
-
-  let proseBase = twStyle([mx(#auto), Typography.maxW(65), Typography.fontSize(baseSm)])
-
-  let prose = merge(.[proseBase, twStyle([proseFirstChild]), twStyle([proseLastChild])])
+  let prose = merge(.[proseBase, proseSm, proseLg, proseXl, proseFirstChild, proseLastChild])
 
   // NOTE: Solution for sm screen size
-  let paragraph = twStyle([
-    Typography.leading(24., baseSm),
+  let paragraphBase = twStyle([
+    Typography.leading(24., base),
     textColor(#coolGray700),
-    Typography.my(16., baseSm),
+    Typography.my(16., base),
   ])
+  let paragraphSm = twStyle([sm([Typography.my(20., baseSm)])])
+  let paragraphLg = twStyle([lg([Typography.my(24., baseLg)])])
+  let paragraphXl = twStyle([xl([Typography.my(32., baseXl)])])
+
+  let paragraph = merge(.[paragraphBase, paragraphSm, paragraphLg, paragraphXl])
 
   let rebaseLead = 18.
-
-  let lead = twStyle([
+  let rebaseLeadSm = 20.
+  let rebaseLeadLg = 22.
+  let rebaseLeadXl = 30.
+  let leadBase = twStyle([
     textColor(#coolGray600),
     Typography.fontSize(rebaseLead),
     Typography.my(16., rebaseLead),
     Typography.leading(28., rebaseLead),
   ])
 
+  let leadSm = twStyle([
+    sm([
+      Typography.fontSize(rebaseLeadSm),
+      Typography.leading(32., rebaseLeadSm),
+      Typography.my(24., rebaseLeadSm),
+    ]),
+  ])
+
+  let leadLg = twStyle([
+    lg([
+      Typography.fontSize(rebaseLeadLg),
+      Typography.leading(32., rebaseLeadLg),
+      Typography.my(24., rebaseLeadLg),
+    ]),
+  ])
+  let leadXl = twStyle([
+    xl([
+      Typography.fontSize(rebaseLeadXl),
+      Typography.leading(44., rebaseLeadXl),
+      Typography.my(32., rebaseLeadXl),
+    ]),
+  ])
+
+  let lead = merge(.[leadBase, leadSm, leadLg, leadXl])
+
   let link = twStyle([textColor(#coolGray900), underline, fontWeight(#v500)])
 
   let strong = twStyle([textColor(#coolGray900), fontWeight(#v600)])
 
   // HACK: Increase specifity because styles are not applied
+  // EDGE CASE: Remove margin top from next element of h2-h4 & hr
   let removeTopMarginFromNextElement = selector("&& + *", [mt(#v0)])
 
-  let hr = twStyle([
+  let hrBase = twStyle([
     borderT(#v1),
     borderColor(#coolGray200),
-    Typography.my(40., baseSm),
+    Typography.my(40., base),
     removeTopMarginFromNextElement,
   ])
 
+  let hrSm = twStyle([sm([Typography.my(48., baseSm)])])
+  let hrLg = twStyle([lg([Typography.my(56., baseLg)])])
+  let hrXl = twStyle([xl([Typography.my(72., baseXl)])])
+
+  let hr = merge(.[hrBase, hrSm, hrLg, hrXl])
+
   // TODO: Check what happens when you add multiple paragraphs
 
-  let rebaseBlockquote = 18.
+  // TODO: Rebase blockqoute fontSize to 20px - investigate
 
-  let blockquote = twStyle([
+  let rebaseBlockquote = 18.
+  let rebaseBlockquoteSm = 20.
+  let rebaseBlockquoteLg = 24.
+  let rebaseBlockquoteXl = 36.
+  let blockquoteBase = twStyle([
     italic,
     borderColor(#coolGray200),
     fontWeight(#v500),
@@ -865,34 +342,85 @@ module Styles = {
     Typography.my(24., rebaseBlockquote),
     Typography.pl(20., rebaseBlockquote),
   ])
+  let blockquoteSm = twStyle([
+    sm([Typography.my(32., rebaseBlockquoteSm), Typography.pl(20., rebaseBlockquoteSm)]),
+  ])
 
-  // let rebaseCode = 12.
+  let blockquoteLg = twStyle([
+    lg([Typography.my(40., rebaseBlockquoteLg), Typography.pl(24., rebaseBlockquoteLg)]),
+  ])
+  let blockquoteXl = twStyle([
+    xl([Typography.my(64., rebaseBlockquoteXl), Typography.pl(40., rebaseBlockquoteXl)]),
+  ])
 
-  let code = twStyle([
+  let blockquote = merge(.[blockquoteBase, blockquoteSm, blockquoteLg, blockquoteXl])
+
+  let rebaseCode = 12.
+  let rebaseCodeSm = 14.
+  let rebaseCodeLg = 16.
+  let rebaseCodeXl = 20.
+  let codeBase = twStyle([
     fontMono,
-    Typography.fontSize(12.),
+    Typography.fontSize(rebaseCode),
     textColor(#coolGray900),
     fontWeight(#v600),
     before([contentText(Utils.grave)]),
     after([contentText(Utils.grave)]),
   ])
 
-  // EDGE CASE: Code element inside h2 & h3
-  let codeInsideH2 = selector("& code", [Typography.fontSize(18.)])
-  let codeInsideH3 = selector("& code", [Typography.fontSize(16.)])
+  let codeSm = twStyle([sm([Typography.fontSize(rebaseCodeSm)])])
+  let codeLg = twStyle([lg([Typography.fontSize(rebaseCodeLg)])])
+  let codeXl = twStyle([lg([Typography.fontSize(rebaseCodeXl)])])
 
-  //  h1: {
+  let code = merge(.[codeBase, codeSm, codeLg, codeXl])
+
+  // EDGE CASE: Code element inside h2 & h3
+  let codeInsideH2Base = twStyle([selector("& code", [Typography.fontSize(18.)])])
+  let codeInsideH2Sm = twStyle([sm([selector("& code", [Typography.fontSize(21.)])])])
+  let codeInsideH2Lg = twStyle([lg([selector("& code", [Typography.fontSize(26.)])])])
+  let codeInsideH2Xl = twStyle([xl([selector("& code", [Typography.fontSize(42.)])])])
+
+  let codeInsideH3Base = twStyle([selector("& code", [Typography.fontSize(16.)])])
+  let codeInsideH3Sm = twStyle([sm([selector("& code", [Typography.fontSize(18.)])])])
+  let codeInsideH3Lg = twStyle([lg([selector("& code", [Typography.fontSize(21.)])])])
+  let codeInsideH3Xl = twStyle([xl([selector("& code", [Typography.fontSize(32.)])])])
+
+  let codeInsideH2 = merge(.[codeInsideH2Base, codeInsideH2Sm, codeInsideH2Lg, codeInsideH2Xl])
+  let codeInsideH3 = merge(.[codeInsideH3Base, codeInsideH3Sm, codeInsideH3Lg, codeInsideH3Xl])
+
+  // sm      h1: {
+  //         fontSize: em(36, 16),
+  //         marginTop: '0',
+  //         marginBottom: em(32, 36),
+  //         lineHeight: round(40 / 36),
+  //       },
+  // base h1: {
   //         fontSize: em(30, 14),
   //         marginTop: '0',
   //         marginBottom: em(24, 30),
   //         lineHeight: round(36 / 30),
   //       },
+  //    lg h1: {
+  //       fontSize: em(48, 18),
+  //       marginTop: '0',
+  //       marginBottom: em(40, 48),
+  //       lineHeight: round(48 / 48),
+  //     },
+  // xl h1: {
+  //   fontSize: em(64, 24),
+  //   marginTop: '0',
+  //   marginBottom: em(56, 64),
+  //   lineHeight: round(64 / 64),
+  // },
 
   // let h1 = twStyle([textColor(#coolGray900), fontWeight(#v800)])
 
   let rebaseH2 = 20.
+  let rebaseH2Sm = 24.
+  let rebaseH2Lg = 30.
+  let rebaseH2Xl = 48.
 
-  let h2 = merge(.[
+  let h2Base = merge(.[
     twStyle([
       textColor(#coolGray900),
       fontWeight(#v700),
@@ -901,35 +429,115 @@ module Styles = {
       Typography.mt(32., rebaseH2),
       Typography.mb(16., rebaseH2),
       removeTopMarginFromNextElement,
-      codeInsideH2,
+    ]),
+    codeInsideH2,
+  ])
+
+  let h2Sm = twStyle([
+    sm([
+      Typography.fontSize(rebaseH2Sm),
+      Typography.leading(32., rebaseH2Sm),
+      Typography.mt(48., rebaseH2Sm),
+      Typography.mb(24., rebaseH2Sm),
     ]),
   ])
 
-  let rebaseH3 = 18.
+  let h2Lg = twStyle([
+    lg([
+      Typography.fontSize(rebaseH2Lg),
+      Typography.leading(40., rebaseH2Lg),
+      Typography.mt(56., rebaseH2Lg),
+      Typography.mb(32., rebaseH2Lg),
+    ]),
+  ])
 
-  let h3 = twStyle([
-    textColor(#coolGray900),
-    fontWeight(#v600),
-    Typography.fontSize(rebaseH3),
-    Typography.leading(28., rebaseH3),
-    Typography.mt(28., rebaseH3),
-    Typography.mb(8., rebaseH3),
-    removeTopMarginFromNextElement,
+  let h2Xl = twStyle([
+    xl([
+      Typography.fontSize(rebaseH2Xl),
+      Typography.leading(52., rebaseH2Xl),
+      Typography.mt(72., rebaseH2Xl),
+      Typography.mb(40., rebaseH2Xl),
+    ]),
+  ])
+
+  let h2 = merge(.[h2Base, h2Sm, h2Lg, h2Xl])
+
+  let rebaseH3 = 18.
+  let rebaseH3Sm = 20.
+  let rebaseH3Lg = 24.
+  let rebaseH3Xl = 36.
+
+  let h3Base = merge(.[
+    twStyle([
+      textColor(#coolGray900),
+      fontWeight(#v600),
+      Typography.fontSize(rebaseH3),
+      Typography.leading(28., rebaseH3),
+      Typography.mt(28., rebaseH3),
+      Typography.mb(8., rebaseH3),
+      removeTopMarginFromNextElement,
+    ]),
     codeInsideH3,
   ])
 
-  let h4 = twStyle([
-    Typography.leading(20., baseSm),
-    Typography.mt(20., baseSm),
-    Typography.mb(8., baseSm),
+  let h3Sm = twStyle([
+    sm([
+      Typography.fontSize(rebaseH3Sm),
+      Typography.leading(32., rebaseH3Sm),
+      Typography.mt(32., rebaseH3Sm),
+      Typography.mb(12., rebaseH3Sm),
+    ]),
+  ])
+
+  let h3Lg = twStyle([
+    lg([
+      Typography.fontSize(rebaseH3Lg),
+      Typography.mt(40., rebaseH3Lg),
+      Typography.mb(16., rebaseH3Lg),
+      Typography.leading(36., rebaseH3Lg),
+    ]),
+  ])
+
+  let h3Xl = twStyle([
+    xl([
+      Typography.fontSize(rebaseH3Xl),
+      Typography.mt(56., rebaseH3Xl),
+      Typography.mb(24., rebaseH3Xl),
+      Typography.leading(44., rebaseH3Xl),
+    ]),
+  ])
+
+  let h3 = merge(.[h3Base, h3Sm, h3Lg, h3Xl])
+
+  let h4Base = twStyle([
+    Typography.leading(20., base),
+    Typography.mt(20., base),
+    Typography.mb(8., base),
     textColor(#coolGray900),
     fontWeight(#v600),
     removeTopMarginFromNextElement,
   ])
 
+  let h4Sm = twStyle([
+    sm([Typography.mt(24., baseSm), Typography.mb(8., baseSm), Typography.leading(24., baseSm)]),
+  ])
+
+  let h4Lg = twStyle([
+    lg([Typography.mt(32., baseLg), Typography.mb(8., baseLg), Typography.leading(28., baseLg)]),
+  ])
+
+  let h4Xl = twStyle([
+    xl([Typography.mt(40., baseXl), Typography.mb(16., baseXl), Typography.leading(36., baseXl)]),
+  ])
+
+  let h4 = merge(.[h4Base, h4Sm, h4Lg, h4Xl])
+
   let rebasePre = 12.
+  let rebasePreSm = 14.
+  let rebasePreLg = 16.
+  let rebasePreXl = 20.
   // ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace
-  let pre = twStyle([
+  let preBase = twStyle([
     overflowXAuto,
     bg(#coolGray800),
     textColor(#coolGray200),
@@ -962,10 +570,47 @@ module Styles = {
       ],
     ),
   ])
+  let preSm = twStyle([
+    Typography.fontSize(rebasePreSm),
+    Typography.leading(24., rebasePreSm),
+    Typography.my(24., rebasePreSm),
+    Typography.px(16., rebasePreSm),
+    Typography.py(12., rebasePreSm),
+  ])
+
+  let preLg = twStyle([
+    Typography.fontSize(rebasePreLg),
+    Typography.leading(28., rebasePreLg),
+    Typography.my(32., rebasePreLg),
+    Typography.px(24., rebasePreLg),
+    Typography.py(16., rebasePreLg),
+    rounded(#md),
+  ])
+
+  let preXl = twStyle([
+    Typography.fontSize(rebasePreXl),
+    Typography.leading(36., rebasePreXl),
+    Typography.my(40., rebasePreXl),
+    Typography.px(32., rebasePreXl),
+    Typography.py(24., rebasePreXl),
+    rounded(#lg),
+  ])
+
+  let pre = merge(.[preBase, preSm, preLg, preXl])
 
   // INFO: List Styles
-  let nestedList = selector("& ul, & ol", [Typography.my(8., baseSm)])
-  let listPadding = twStyle([Typography.my(16., baseSm)])
+
+  let nestedListBase = twStyle([selector("& ul, & ol", [Typography.my(8., base)])])
+  let nestedListSm = twStyle([sm([selector("& ul, & ol", [Typography.my(12., baseSm)])])])
+  let nestedListLg = twStyle([lg([selector("& ul, & ol", [Typography.my(16., baseLg)])])])
+  let nestedListXl = twStyle([xl([selector("& ul, & ol", [Typography.my(16., baseXl)])])])
+  let nestedList = merge(.[nestedListBase, nestedListSm, nestedListLg, nestedListXl])
+
+  let listPaddingBase = twStyle([Typography.my(16., base)])
+  let listPaddingSm = twStyle([sm([Typography.my(20., baseSm)])])
+  let listPaddingLg = twStyle([lg([Typography.my(24., baseLg)])])
+  let listPaddingXl = twStyle([xl([Typography.my(32., baseXl)])])
+  let listPadding = merge(.[listPaddingBase, listPaddingSm, listPaddingLg, listPaddingXl])
 
   // | #circle
   // | #decimal
@@ -980,85 +625,252 @@ module Styles = {
   // | #upperAlpha
   // | #upperLatin
   // | #upperRoman
-  let li = twStyle([
+
+  let liBase = twStyle([
     relative,
     textColor(#coolGray700),
-    Typography.my(4., baseSm),
-    Typography.pl(22., baseSm),
-    Typography.leading(24., baseSm),
+    Typography.my(4., base),
+    Typography.pl(22., base),
+    Typography.leading(24., base),
     selector(
       "& > *",
-      [firstChild([Typography.mt(16., baseSm)]), lastChild([Typography.mb(16., baseSm)])],
+      [firstChild([Typography.mt(16., base)]), lastChild([Typography.mb(16., base)])],
     ),
   ])
 
-  let olElements = selector(
-    "& > li",
-    [
-      before([
-        [CssJs.contentRules([#counter("list-item", #decimal), #text(".")])],
-        absolute,
-        fontWeight(#v400),
-        textColor(#coolGray500),
-        left(#v0),
-      ]),
-    ],
-  )
-
-  let ol = merge(.[listPadding, twStyle([olElements]), twStyle([nestedList])])
-
-  let ulElements = selector(
-    "& > li",
-    [
-      before([
-        absolute,
-        contentText(""),
-        bg(#coolGray300),
-        rounded(#full),
-        // Typography.w(5., 14.),
-        // Typography.h(5., 14.),
-        Typography.square(5., baseSm),
-        Typography.topCalc(#sub(24. /. 2., 2.5), ~base=baseSm),
-        Typography.left(3., baseSm),
-      ]),
-    ],
-  )
-
-  let liParagraph = selector("& > li p", [Typography.my(8., baseSm)])
-
-  let ul = merge(.[
-    listPadding,
-    twStyle([ulElements]),
-    twStyle([liParagraph]),
-    twStyle([nestedList]),
+  let liSm = twStyle([
+    sm([
+      Typography.my(8., baseSm),
+      selector(
+        "& > *",
+        [firstChild([Typography.mt(20., baseSm)]), lastChild([Typography.mb(20., baseSm)])],
+      ),
+    ]),
   ])
+
+  let liLg = twStyle([
+    lg([
+      Typography.my(12., baseLg),
+      selector(
+        "& > *",
+        [firstChild([Typography.mt(24., baseLg)]), lastChild([Typography.mb(24., baseLg)])],
+      ),
+    ]),
+  ])
+
+  let liXl = twStyle([
+    xl([
+      Typography.my(12., baseXl),
+      selector(
+        "& > *",
+        [firstChild([Typography.mt(32., baseXl)]), lastChild([Typography.mb(32., baseXl)])],
+      ),
+    ]),
+  ])
+
+  let li = merge(.[liBase, liSm, liLg, liXl])
+
+  let olElementsBase = twStyle([
+    selector(
+      "& > li",
+      [
+        before([
+          [CssJs.contentRules([#counter("list-item", #decimal), #text(".")])],
+          absolute,
+          fontWeight(#v400),
+          textColor(#coolGray500),
+          left(#v0),
+        ]),
+      ],
+    ),
+  ])
+
+  let olElementsSm = twStyle([sm([selector("& > li", [Typography.pl(28., baseSm)])])])
+  let olElementsLg = twStyle([lg([selector("& > li", [Typography.pl(30., baseLg)])])])
+  let olElementsXl = twStyle([xl([selector("& > li", [Typography.pl(40., baseXl)])])])
+
+  let olElements = merge(.[olElementsBase, olElementsSm, olElementsLg, olElementsXl])
+
+  let ol = merge(.[listPadding, olElements, nestedList])
+
+  let ulElementsBase = twStyle([
+    selector(
+      "& > li",
+      [
+        Typography.pl(30., baseLg),
+        before([
+          absolute,
+          contentText(""),
+          bg(#coolGray300),
+          rounded(#full),
+          Typography.square(5., base),
+          Typography.topCalc(#sub(24. /. 2., 2.5), ~base),
+          Typography.left(3., base),
+        ]),
+      ],
+    ),
+  ])
+
+  let ulElementsSm = twStyle([
+    sm([
+      selector(
+        "& > li",
+        [
+          Typography.pl(28., baseSm),
+          before([
+            Typography.square(6., baseSm),
+            Typography.topCalc(#sub(28. /. 2., 3.), ~base=baseSm),
+            Typography.left(4., baseSm),
+          ]),
+        ],
+      ),
+    ]),
+  ])
+
+  let ulElementsLg = twStyle([
+    lg([
+      selector(
+        "& > li",
+        [
+          Typography.pl(30., baseLg),
+          before([
+            Typography.square(6., baseLg),
+            Typography.topCalc(#sub(32. /. 2., 3.), ~base=baseLg),
+            Typography.left(4., baseLg),
+          ]),
+        ],
+      ),
+    ]),
+  ])
+
+  let ulElementsXl = twStyle([
+    xl([
+      selector(
+        "& > li",
+        [
+          Typography.pl(40., baseXl),
+          before([
+            Typography.square(8., baseXl),
+            Typography.topCalc(#sub(40. /. 2., 4.), ~base=baseXl),
+            Typography.left(6., baseXl),
+          ]),
+        ],
+      ),
+    ]),
+  ])
+
+  let ulElements = merge(.[ulElementsBase, ulElementsSm, ulElementsLg, ulElementsXl])
+
+  let liParagraphBase = twStyle([selector("& > li p", [Typography.my(8., base)])])
+  let liParagraphSm = twStyle([sm([selector("& > li p", [Typography.my(12., baseSm)])])])
+  let liParagraphLg = twStyle([lg([selector("& > li p", [Typography.my(16., baseLg)])])])
+  let liParagraphXl = twStyle([xl([selector("& > li p", [Typography.my(20., baseXl)])])])
+
+  let liParagraph = merge(.[liParagraphBase, liParagraphSm, liParagraphLg, liParagraphXl])
+
+  let ul = merge(.[listPadding, ulElements, liParagraph, nestedList])
   // HACK: Increase specifity because styles are not applied
   let anyChild = selector("&& > *", [my(#v0)])
 
   let rebaseFigcaption = 12.
+  let rebaseFigcaptionSm = 14.
+  let rebaseFigcaptionLg = 16.
+  let rebaseFigcaptionXl = 20.
   // HACK: Increase specifity because styles are not applied
-  let figureFigcaption = selector(
-    "&& figcaption",
-    [
-      Typography.fontSize(rebaseFigcaption),
-      Typography.leading(16., rebaseFigcaption),
-      Typography.mt(8., rebaseFigcaption),
-      textColor(#coolGray500),
-    ],
-  )
+  let figureFigcaptionBase = twStyle([
+    selector(
+      "&& figcaption",
+      [
+        Typography.fontSize(rebaseFigcaption),
+        Typography.leading(16., rebaseFigcaption),
+        Typography.mt(8., rebaseFigcaption),
+        textColor(#coolGray500),
+      ],
+    ),
+  ])
 
-  // video: {
+  let figureFigcaptionSm = twStyle([
+    sm([
+      selector(
+        "&& figcaption",
+        [
+          Typography.fontSize(rebaseFigcaptionSm),
+          Typography.leading(20., rebaseFigcaptionSm),
+          Typography.mt(12., rebaseFigcaptionSm),
+        ],
+      ),
+    ]),
+  ])
+
+  let figureFigcaptionLg = twStyle([
+    lg([
+      selector(
+        "&& figcaption",
+        [
+          Typography.fontSize(rebaseFigcaptionLg),
+          Typography.leading(24., rebaseFigcaptionLg),
+          Typography.mt(16., rebaseFigcaptionLg),
+        ],
+      ),
+    ]),
+  ])
+
+  let figureFigcaptionXl = twStyle([
+    xl([
+      selector(
+        "&& figcaption",
+        [
+          Typography.fontSize(rebaseFigcaptionXl),
+          Typography.leading(32., rebaseFigcaptionXl),
+          Typography.mt(20., rebaseFigcaptionXl),
+        ],
+      ),
+    ]),
+  ])
+
+  let figureFigcaption = merge(.[
+    figureFigcaptionBase,
+    figureFigcaptionSm,
+    figureFigcaptionLg,
+    figureFigcaptionXl,
+  ])
+  // base video: {
   //   marginTop: em(24, 14),
   //   marginBottom: em(24, 14),
+  //      sm video: {
+  //         marginTop: em(32, 16),
+  //         marginBottom: em(32, 16),
+  //       },
+  //      lg video: {
+  //         marginTop: em(32, 18),
+  //         marginBottom: em(32, 18),
+  //       },
+  // xl video: {
+  //   marginTop: em(48, 24),
+  //   marginBottom: em(48, 24),
   // },
 
-  let figure = twStyle([Typography.my(24., baseSm), anyChild, figureFigcaption])
+  let figureBase = merge(.[twStyle([Typography.my(24., base), anyChild]), figureFigcaption])
 
-  let img = twStyle([Typography.my(24., baseSm)])
+  let figureSm = twStyle([sm([Typography.my(32., baseSm)])])
+  let figureLg = twStyle([lg([Typography.my(32., baseLg)])])
+  let figureXl = twStyle([xl([Typography.my(48., baseXl)])])
+
+  let figure = merge(.[figureBase, figureSm, figureLg, figureXl])
+
+  let imgBase = twStyle([Typography.my(24., base)])
+  let imgSm = twStyle([sm([Typography.my(32., baseSm)])])
+  let imgLg = twStyle([lg([Typography.my(32., baseLg)])])
+  let imgXl = twStyle([xl([Typography.my(48., baseXl)])])
+
+  let img = merge(.[imgBase, imgSm, imgLg, imgXl])
 
   let rebaseTable = 12.
+  let rebaseTableSm = 14.
+  let rebaseTableLg = 16.
+  let rebaseTableXl = 20.
 
-  let table = twStyle([
+  let tableBase = twStyle([
     Typography.fontSize(rebaseTable),
     Typography.leading(18., rebaseTable),
     Typography.my(24., rebaseTable),
@@ -1067,43 +879,84 @@ module Styles = {
     textLeft,
   ])
 
-  let theadTh = selector(
-    "& th",
-    [
-      Typography.px(12., rebaseTable),
-      Typography.pb(8., rebaseTable),
-      firstChild([pl(#v0)]),
-      lastChild([pr(#v0)]),
-      alignBottom,
-    ],
-  )
-
-  let thead = twStyle([
-    theadTh,
-    textColor(#coolGray900),
-    fontWeight(#v600),
-    borderB(#v1),
-    borderColor(#coolGray300),
+  let tableSm = twStyle([
+    sm([Typography.fontSize(rebaseTableSm), Typography.leading(24., rebaseTableSm)]),
+  ])
+  let tableLg = twStyle([
+    lg([Typography.fontSize(rebaseTableLg), Typography.leading(24., rebaseTableLg)]),
+  ])
+  let tableXl = twStyle([
+    xl([Typography.fontSize(rebaseTableXl), Typography.leading(28., rebaseTableXl)]),
   ])
 
-  let tbodyTd = selector(
-    "& td",
-    [
-      Typography.px(12., rebaseTable),
-      Typography.py(8., rebaseTable),
-      alignTop,
-      textColor(#coolGray700),
-      firstChild([pl(#v0)]),
-      lastChild([pr(#v0)]),
-    ],
-  )
+  let table = merge(.[tableBase, tableSm, tableLg, tableXl])
+
+  let theadThBase = twStyle([
+    selector(
+      "& th",
+      [
+        Typography.px(12., rebaseTable),
+        Typography.pb(8., rebaseTable),
+        firstChild([pl(#v0)]),
+        lastChild([pr(#v0)]),
+        alignBottom,
+      ],
+    ),
+  ])
+
+  let theadThSm = twStyle([
+    sm([selector("& th", [Typography.px(8., rebaseTableSm), Typography.pb(8., rebaseTableSm)])]),
+  ])
+
+  let theadThLg = twStyle([
+    lg([selector("& th", [Typography.px(12., rebaseTableLg), Typography.pb(12., rebaseTableLg)])]),
+  ])
+
+  let theadThXl = twStyle([
+    xl([selector("& th", [Typography.px(12., rebaseTableXl), Typography.pb(16., rebaseTableXl)])]),
+  ])
+
+  let theadTh = merge(.[theadThBase, theadThSm, theadThLg, theadThXl])
+
+  let thead = merge(.[
+    theadTh,
+    twStyle([textColor(#coolGray900), fontWeight(#v600), borderB(#v1), borderColor(#coolGray300)]),
+  ])
+
+  let tbodyTdBase = twStyle([
+    selector(
+      "& td",
+      [
+        Typography.px(12., rebaseTable),
+        Typography.py(8., rebaseTable),
+        alignTop,
+        textColor(#coolGray700),
+        firstChild([pl(#v0)]),
+        lastChild([pr(#v0)]),
+      ],
+    ),
+  ])
+
+  let tbodyTdSm = twStyle([
+    sm([selector("& td", [Typography.py(8., rebaseTableSm), Typography.px(8., rebaseTableSm)])]),
+  ])
+
+  let tbodyTdLg = twStyle([
+    lg([selector("& td", [Typography.py(12., rebaseTableLg), Typography.px(12., rebaseTableLg)])]),
+  ])
+
+  let tbodyTdXl = twStyle([
+    xl([selector("& td", [Typography.py(16., rebaseTableXl), Typography.px(12., rebaseTableXl)])]),
+  ])
+
+  let tbodyTd = merge(.[tbodyTdBase, tbodyTdSm, tbodyTdLg, tbodyTdXl])
 
   let tbodyTr = selector(
     "& tr",
     [borderB(#v1), borderColor(#coolGray300), lastChild([borderB(#v0)])],
   )
 
-  let tbody = merge(.[twStyle([tbodyTd]), twStyle([tbodyTr])])
+  let tbody = merge(.[tbodyTd, twStyle([tbodyTr])])
 }
 
 module Mdx = {
