@@ -1288,7 +1288,7 @@ let firstLetter = rules => [CssJs.firstLetter(tw(rules))]
 let firstLine = rules => [CssJs.firstLine(tw(rules))]
 let selection = rules => [CssJs.selection(tw(rules))]
 
-// #region REGION: Typography
+// #region REGION: Typography module
 
 module Typography = {
   let round = float => float_of_string(Js.Float.toFixedWithPrecision(~digits=7, float))
@@ -1358,4 +1358,4 @@ module Typography = {
   let fontSize = px => [CssJs.fontSize(toRem(px))]
 }
 
-// #endregion ENDREGION: Elastic
+// #endregion ENDREGION: Typography module
