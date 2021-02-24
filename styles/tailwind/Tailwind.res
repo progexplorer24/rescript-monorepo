@@ -1241,6 +1241,7 @@ let contentClose = [CssJs.contentRule(#closeQuote)]
 
 let selector = (string, rules) => [CssJs.selector(string, tw(rules))]
 
+let marker = rules => [CssJs.selector("&::marker", tw(rules))]
 let active = rules => [CssJs.active(tw(rules))]
 let checked = rules => [CssJs.checked(tw(rules))]
 let default = rules => [CssJs.default(tw(rules))]
