@@ -1,5 +1,5 @@
 {
-  "name": "rescript-ppx",
+  "name": "rescript-monorepo",
   "reason": { "react-jsx": 3 },
   "sources": [
     {
@@ -7,27 +7,7 @@
       "subdirs": true
     },
     {
-      "dir": "components",
-      "subdirs": true
-    },
-    {
-      "dir": "bindings",
-      "subdirs": true
-    },
-    {
-      "dir": "utils",
-      "subdirs": true
-    },
-    {
-      "dir": "hooks",
-      "subdirs": true
-    },
-    {
-      "dir": "styles",
-      "subdirs": true
-    },
-    {
-      "dir": "layouts",
+      "dir": "src",
       "subdirs": true
     }
   ],
