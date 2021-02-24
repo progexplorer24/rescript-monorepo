@@ -1,4 +1,4 @@
-import ResApp from "./App.bs.js"
+import ResApp from "src/App.bs.js"
 // TODO: Learn more about Fast Refresh
 // TODO: Change project structure
 // TODO: https://github.com/ryyppy/rescript-nextjs-template/pull/23
