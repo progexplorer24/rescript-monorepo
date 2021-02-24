@@ -1,43 +1,9 @@
 module Styles = {
   open Tailwind
 
-  // #region REGION: Useful tips
-  /*
+  /* REGION: xl #region 
 
-  'ol[type="A"]': {
-          '--list-counter-style': 'upper-alpha',
-        },
-        'ol[type="a"]': {
-          '--list-counter-style': 'lower-alpha',
-        },
-        'ol[type="A" s]': {
-          '--list-counter-style': 'upper-alpha',
-        },
-        'ol[type="a" s]': {
-          '--list-counter-style': 'lower-alpha',
-        },
-        'ol[type="I"]': {
-          '--list-counter-style': 'upper-roman',
-        },
-        'ol[type="i"]': {
-          '--list-counter-style': 'lower-roman',
-        },
-        'ol[type="I" s]': {
-          '--list-counter-style': 'upper-roman',
-        },
-        'ol[type="i" s]': {
-          '--list-counter-style': 'lower-roman',
-        },
-        'ol[type="1"]': {
-          '--list-counter-style': 'decimal',
-        },
-  
-
-  // #region REGION: Extra large screen specification
-
-   INFO: To create responsive breakpoint in your Styles module use:
-  INFO: let blockquoteLg = tailwindStyles([xl([ PUT YOUR STYLES HERE ])])
-   lg: {
+   xl: {
     css: [
       {
         fontSize: rem(20),
@@ -222,18 +188,42 @@ module Styles = {
       },
     ],
   },
-
-  // #endregion ENDREGION: 
-
-#endregion ENDREGION: Useful Tips */
+  
+   ENDREGION: xl #endregion */
 
   let base = 14.
   let baseSm = 16.
   let baseLg = 18.
   let baseXl = 24.
-
+  // CssJs.Types.FontFamilyName.
+  // CssJs.Types.FontFamilyName.
   let wrapperXl = twStyle([xl([maxW(#xl6)])])
-  let wrapperBase = twStyle([px(#v4), py(#v10), mx(#auto), maxW(#xl3)])
+  let wrapperBase = twStyle([
+    px(#v4),
+    py(#v10),
+    mx(#auto),
+    maxW(#xl3),
+    [
+      CssJs.fontFamilies([
+        #custom("ui-sans-serif"),
+        #systemUi,
+        #custom("-apple-system"),
+        #custom("BlinkMacSystemFont"),
+        #custom("Segoe UI"),
+        #custom("Roboto"),
+        #custom("Helvetica Neue"),
+        #custom("Arial"),
+        #custom("Noto Sans"),
+        #sansSerif,
+        #custom("Apple Color Emoji"),
+        #custom("Segoe UI Emoji"),
+        #custom("Segoe UI Symbol"),
+        #custom("Noto Color Emoji"),
+
+        // ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji
+      ]),
+    ],
+  ])
   let wrapperSm = twStyle([sm([py(#v12), px(#v6)])])
   let wrapperLg = twStyle([lg([px(#v8), py(#v16), maxW(#xl4)])])
   let wrapper = merge(.[wrapperBase, wrapperSm, wrapperLg, wrapperXl])
@@ -370,7 +360,7 @@ module Styles = {
 
   let codeSm = twStyle([sm([Typography.fontSize(rebaseCodeSm)])])
   let codeLg = twStyle([lg([Typography.fontSize(rebaseCodeLg)])])
-  let codeXl = twStyle([lg([Typography.fontSize(rebaseCodeXl)])])
+  let codeXl = twStyle([xl([Typography.fontSize(rebaseCodeXl)])])
 
   let code = merge(.[codeBase, codeSm, codeLg, codeXl])
 
@@ -571,29 +561,35 @@ module Styles = {
     ),
   ])
   let preSm = twStyle([
-    Typography.fontSize(rebasePreSm),
-    Typography.leading(24., rebasePreSm),
-    Typography.my(24., rebasePreSm),
-    Typography.px(16., rebasePreSm),
-    Typography.py(12., rebasePreSm),
+    sm([
+      Typography.fontSize(rebasePreSm),
+      Typography.leading(24., rebasePreSm),
+      Typography.my(24., rebasePreSm),
+      Typography.px(16., rebasePreSm),
+      Typography.py(12., rebasePreSm),
+    ]),
   ])
 
   let preLg = twStyle([
-    Typography.fontSize(rebasePreLg),
-    Typography.leading(28., rebasePreLg),
-    Typography.my(32., rebasePreLg),
-    Typography.px(24., rebasePreLg),
-    Typography.py(16., rebasePreLg),
-    rounded(#md),
+    lg([
+      Typography.fontSize(rebasePreLg),
+      Typography.leading(28., rebasePreLg),
+      Typography.my(32., rebasePreLg),
+      Typography.px(24., rebasePreLg),
+      Typography.py(16., rebasePreLg),
+      rounded(#md),
+    ]),
   ])
 
   let preXl = twStyle([
-    Typography.fontSize(rebasePreXl),
-    Typography.leading(36., rebasePreXl),
-    Typography.my(40., rebasePreXl),
-    Typography.px(32., rebasePreXl),
-    Typography.py(24., rebasePreXl),
-    rounded(#lg),
+    xl([
+      Typography.fontSize(rebasePreXl),
+      Typography.leading(36., rebasePreXl),
+      Typography.my(40., rebasePreXl),
+      Typography.px(32., rebasePreXl),
+      Typography.py(24., rebasePreXl),
+      rounded(#lg),
+    ]),
   ])
 
   let pre = merge(.[preBase, preSm, preLg, preXl])
@@ -670,28 +666,52 @@ module Styles = {
 
   let li = merge(.[liBase, liSm, liLg, liXl])
 
-  let olElementsBase = twStyle([
-    selector(
-      "& > li",
-      [
-        before([
-          [CssJs.contentRules([#counter("list-item", #decimal), #text(".")])],
-          absolute,
-          fontWeight(#v400),
-          textColor(#coolGray500),
-          left(#v0),
-        ]),
-      ],
-    ),
-  ])
+  type listStyleType = [
+    | #decimal
+    | #lowerAlpha
+    | #lowerGreek
+    | #lowerLatin
+    | #lowerRoman
+    | #upperAlpha
+    | #upperLatin
+    | #upperRoman
+  ]
 
-  let olElementsSm = twStyle([sm([selector("& > li", [Typography.pl(28., baseSm)])])])
-  let olElementsLg = twStyle([lg([selector("& > li", [Typography.pl(30., baseLg)])])])
-  let olElementsXl = twStyle([xl([selector("& > li", [Typography.pl(40., baseXl)])])])
+  let olItemsBase = (listStyleType: listStyleType) => {
+    let selectedType = switch listStyleType {
+    | #decimal => #decimal
+    | #upperAlpha => #upperAlpha
+    | #upperLatin => #upperLatin
+    | #upperRoman => #upperRoman
+    | #lowerAlpha => #lowerAlpha
+    | #lowerGreek => #lowerGreek
+    | #lowerLatin => #lowerLatin
+    | #lowerRoman => #lowerRoman
+    }
+    twStyle([
+      selector(
+        "& > li",
+        [
+          before([
+            [CssJs.contentRules([#counter("list-item", selectedType), #text(".")])],
+            absolute,
+            fontWeight(#v400),
+            textColor(#coolGray500),
+            left(#v0),
+          ]),
+        ],
+      ),
+    ])
+  }
+  // }
 
-  let olElements = merge(.[olElementsBase, olElementsSm, olElementsLg, olElementsXl])
+  let olItemsSm = twStyle([sm([selector("& > li", [Typography.pl(28., baseSm)])])])
+  let olItemsLg = twStyle([lg([selector("& > li", [Typography.pl(30., baseLg)])])])
+  let olItemsXl = twStyle([xl([selector("& > li", [Typography.pl(40., baseXl)])])])
 
-  let ol = merge(.[listPadding, olElements, nestedList])
+  let olItems = merge(.[olItemsBase(#decimal), olItemsSm, olItemsLg, olItemsXl])
+
+  let ol = merge(.[listPadding, olItems, nestedList])
 
   let ulElementsBase = twStyle([
     selector(
@@ -1085,7 +1105,7 @@ let codeExample2 = "module.exports = {
 }"
 
 let default = () => {
-  <HeadConfiguration title="tailwind CSS Typography">
+  <HeadConfiguration title="Typography Example">
     <main>
       <div className={Tailwind.merge(.[Styles.wrapper])}>
         <article>
