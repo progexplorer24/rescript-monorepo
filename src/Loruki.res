@@ -63,7 +63,7 @@ let default = () => {
           <Next.Link href="/">
             <a className={Tailwind.merge(.[Styles.a, Styles.aHover])}> {"Read More"->Utils.str} </a>
           </Next.Link>
-          <IonIcons.Outline.add />
+          <Ion.Outline.add />
         </div>
         <div>
           <h2> {"Request a Demo"->Utils.str} </h2>

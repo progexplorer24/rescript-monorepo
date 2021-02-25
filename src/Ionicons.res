@@ -72,1659 +72,1588 @@ let default = () => {
         Styles.gridBreakpoints830,
       ])}>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.accessibility />
+        <Ion.Outline.accessibility />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"accessibility"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.add />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"add"->Utils.str} </h2>
+        <Ion.Outline.add /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"add"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.addCircle strokeWidth="44" />
+        <Ion.Outline.addCircle strokeWidth="44" />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"addCircle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.airplane />
+        <Ion.Outline.airplane />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"airplane"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.alarm />
+        <Ion.Outline.alarm />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"alarm"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.album />
+        <Ion.Outline.album />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"album"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.alert />
+        <Ion.Outline.alert />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"alert"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.alertCircle />
+        <Ion.Outline.alertCircle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"alertCircle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.americanFootball />
+        <Ion.Outline.americanFootball />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"americanFootball"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.analytics />
+        <Ion.Outline.analytics />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"analytics"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.aperture />
+        <Ion.Outline.aperture />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"aperture"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.apps />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"apps"->Utils.str} </h2>
+        <Ion.Outline.apps /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"apps"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.archive />
+        <Ion.Outline.archive />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"archive"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.arrowBack />
+        <Ion.Outline.arrowBack />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"arrowBack"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.arrowBackCircle />
+        <Ion.Outline.arrowBackCircle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"arrowBackCircle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.arrowDown />
+        <Ion.Outline.arrowDown />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"arrowDown"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.arrowDownCircle />
+        <Ion.Outline.arrowDownCircle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"arrowDownCircle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.arrowForward />
+        <Ion.Outline.arrowForward />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"arrowForward"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.arrowForwardCircle />
+        <Ion.Outline.arrowForwardCircle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"arrowForwardCircle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.arrowRedo />
+        <Ion.Outline.arrowRedo />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"arrowRedo"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.arrowRedoCircle />
+        <Ion.Outline.arrowRedoCircle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"arrowRedoCircle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.arrowUndo />
+        <Ion.Outline.arrowUndo />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"arrowUndo"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.arrowUndoCircle />
+        <Ion.Outline.arrowUndoCircle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"arrowUndoCircle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.arrowUp />
+        <Ion.Outline.arrowUp />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"arrowUp"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.arrowUpCircle />
+        <Ion.Outline.arrowUpCircle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"arrowUpCircle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.at />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"at"->Utils.str} </h2>
+        <Ion.Outline.at /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"at"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.atCircle />
+        <Ion.Outline.atCircle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"atCircle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.attach />
+        <Ion.Outline.attach />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"attach"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.backspace />
+        <Ion.Outline.backspace />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"backspace"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.bag />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"bag"->Utils.str} </h2>
+        <Ion.Outline.bag /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"bag"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.bagAdd />
+        <Ion.Outline.bagAdd />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"bagAdd"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.bagCheck />
+        <Ion.Outline.bagCheck />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"bagCheck"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.bagHandle />
+        <Ion.Outline.bagHandle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"bagHandle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.bagRemove />
+        <Ion.Outline.bagRemove />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"bagRemove"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.baloon />
+        <Ion.Outline.baloon />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"baloon"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.ban />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"ban"->Utils.str} </h2>
+        <Ion.Outline.ban /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"ban"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.bandage />
+        <Ion.Outline.bandage />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"bandage"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.barChart />
+        <Ion.Outline.barChart />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"barChart"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.barbell />
+        <Ion.Outline.barbell />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"barbell"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.barcode />
+        <Ion.Outline.barcode />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"barcode"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.baseball />
+        <Ion.Outline.baseball />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"baseball"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.basket />
+        <Ion.Outline.basket />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"basket"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.basketball />
+        <Ion.Outline.basketball />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"basketball"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.batteryCharging />
+        <Ion.Outline.batteryCharging />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"batteryCharging"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.batteryDead />
+        <Ion.Outline.batteryDead />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"batteryDead"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.batteryFull />
+        <Ion.Outline.batteryFull />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"batteryFull"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.batteryHalf />
+        <Ion.Outline.batteryHalf />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"batteryHalf"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.beaker />
+        <Ion.Outline.beaker />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"beaker"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.bed />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"bed"->Utils.str} </h2>
+        <Ion.Outline.bed /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"bed"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.beer />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"beer"->Utils.str} </h2>
+        <Ion.Outline.beer /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"beer"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.bicycle />
+        <Ion.Outline.bicycle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"bicycle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.bluetooth />
+        <Ion.Outline.bluetooth />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"bluetooth"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.boat />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"boat"->Utils.str} </h2>
+        <Ion.Outline.boat /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"boat"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.body />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"body"->Utils.str} </h2>
+        <Ion.Outline.body /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"body"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.bonfire />
+        <Ion.Outline.bonfire />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"bonfire"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.book />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"book"->Utils.str} </h2>
+        <Ion.Outline.book /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"book"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.bookmark />
+        <Ion.Outline.bookmark />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"bookmark"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.bookmarks />
+        <Ion.Outline.bookmarks />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"bookmarks"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.bowlingBall />
+        <Ion.Outline.bowlingBall />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"bowlingBall"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.briefcase />
+        <Ion.Outline.briefcase />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"briefcase"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.browsers />
+        <Ion.Outline.browsers />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"browsers"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.brush />
+        <Ion.Outline.brush />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"brush"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.bug />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"bug"->Utils.str} </h2>
+        <Ion.Outline.bug /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"bug"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.build />
+        <Ion.Outline.build />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"build"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.bulb />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"bulb"->Utils.str} </h2>
+        <Ion.Outline.bulb /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"bulb"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.bus />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"bus"->Utils.str} </h2>
+        <Ion.Outline.bus /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"bus"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.business />
+        <Ion.Outline.business />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"business"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.cafe />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"cafe"->Utils.str} </h2>
+        <Ion.Outline.cafe /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"cafe"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.calculator />
+        <Ion.Outline.calculator />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"calculator"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.calendar />
+        <Ion.Outline.calendar />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"calendar"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.calendarClear />
+        <Ion.Outline.calendarClear />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"calendarClear"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.calendarNumber />
+        <Ion.Outline.calendarNumber />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"calendarNumber"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.call />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"call"->Utils.str} </h2>
+        <Ion.Outline.call /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"call"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.camera />
+        <Ion.Outline.camera />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"camera"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.cameraReverse />
+        <Ion.Outline.cameraReverse />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"cameraReverse"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.car />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"car"->Utils.str} </h2>
+        <Ion.Outline.car /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"car"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.carSport />
+        <Ion.Outline.carSport />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"carSport"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.card />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"card"->Utils.str} </h2>
+        <Ion.Outline.card /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"card"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.caretBack />
+        <Ion.Outline.caretBack />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"caretBack"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.caretBackCircle />
+        <Ion.Outline.caretBackCircle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"caretBackCircle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.caretDown />
+        <Ion.Outline.caretDown />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"caretDown"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.caretDownCircle />
+        <Ion.Outline.caretDownCircle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"caretDownCircle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.caretForward />
+        <Ion.Outline.caretForward />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"caretForward"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.caretForwardCircle />
+        <Ion.Outline.caretForwardCircle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"caretForwardCircle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.caretUp />
+        <Ion.Outline.caretUp />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"caretUp"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.caretUpCircle />
+        <Ion.Outline.caretUpCircle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"caretUpCircle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.cart />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"cart"->Utils.str} </h2>
+        <Ion.Outline.cart /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"cart"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.cash />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"cash"->Utils.str} </h2>
+        <Ion.Outline.cash /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"cash"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.cellular />
+        <Ion.Outline.cellular />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"cellular"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.chatbox />
+        <Ion.Outline.chatbox />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"chatbox"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.chatboxEllipses />
+        <Ion.Outline.chatboxEllipses />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"chatboxEllipses"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.chatbubble />
+        <Ion.Outline.chatbubble />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"chatbubble"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.chatbubbleEllipses />
+        <Ion.Outline.chatbubbleEllipses />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"chatbubbleEllipses"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.chatbubbles />
+        <Ion.Outline.chatbubbles />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"chatbubbles"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.checkbox />
+        <Ion.Outline.checkbox />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"checkbox"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.checkmark />
+        <Ion.Outline.checkmark />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"checkmark"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.checkmarkCircle />
+        <Ion.Outline.checkmarkCircle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"checkmarkCircle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.checkmarkDone />
+        <Ion.Outline.checkmarkDone />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"checkmarkDone"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.checkmarkDoneCircle />
+        <Ion.Outline.checkmarkDoneCircle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"checkmarkDoneCircle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.chevronBack />
+        <Ion.Outline.chevronBack />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"chevronBack"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.chevronBackCircle />
+        <Ion.Outline.chevronBackCircle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"chevronBackCircle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.chevronDown />
+        <Ion.Outline.chevronDown />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"chevronDown"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.chevronDownCircle />
+        <Ion.Outline.chevronDownCircle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"chevronDownCircle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.chevronForward />
+        <Ion.Outline.chevronForward />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"chevronForward"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.chevronForwardCircle />
+        <Ion.Outline.chevronForwardCircle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"chevronForwardCircle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.chevronUp />
+        <Ion.Outline.chevronUp />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"chevronUp"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.chevronUpCircle />
+        <Ion.Outline.chevronUpCircle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"chevronUpCircle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.clipboard />
+        <Ion.Outline.clipboard />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"clipboard"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.close />
+        <Ion.Outline.close />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"close"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.closeCircle />
+        <Ion.Outline.closeCircle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"closeCircle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.cloud />
+        <Ion.Outline.cloud />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"cloud"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.cloudCircle />
+        <Ion.Outline.cloudCircle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"cloudCircle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.cloudDone />
+        <Ion.Outline.cloudDone />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"cloudDone"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.cloudDownload />
+        <Ion.Outline.cloudDownload />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"cloudDownload"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.cloudOffline />
+        <Ion.Outline.cloudOffline />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"cloudOffline"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.cloudUpload />
+        <Ion.Outline.cloudUpload />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"cloudUpload"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.cloudy />
+        <Ion.Outline.cloudy />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"cloudy"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.cloudyNight />
+        <Ion.Outline.cloudyNight />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"cloudyNight"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.code />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"code"->Utils.str} </h2>
+        <Ion.Outline.code /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"code"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.codeDownload />
+        <Ion.Outline.codeDownload />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"codeDownload"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.codeSlash />
+        <Ion.Outline.codeSlash />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"codeSlash"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.codeWorking />
+        <Ion.Outline.codeWorking />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"codeWorking"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.cog />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"cog"->Utils.str} </h2>
+        <Ion.Outline.cog /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"cog"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.colorFill />
+        <Ion.Outline.colorFill />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"colorFill"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.colorFilter />
+        <Ion.Outline.colorFilter />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"colorFilter"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.colorPalette />
+        <Ion.Outline.colorPalette />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"colorPalette"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.colorWand />
+        <Ion.Outline.colorWand />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"colorWand"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.compass />
+        <Ion.Outline.compass />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"compass"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.construct />
+        <Ion.Outline.construct />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"construct"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.contract />
+        <Ion.Outline.contract />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"contract"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.contrast />
+        <Ion.Outline.contrast />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"contrast"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.copy />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"copy"->Utils.str} </h2>
+        <Ion.Outline.copy /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"copy"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.create />
+        <Ion.Outline.create />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"create"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.crop />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"crop"->Utils.str} </h2>
+        <Ion.Outline.crop /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"crop"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.cube />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"cube"->Utils.str} </h2>
+        <Ion.Outline.cube /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"cube"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.cut />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"cut"->Utils.str} </h2>
+        <Ion.Outline.cut /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"cut"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.desktop />
+        <Ion.Outline.desktop />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"desktop"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.diamond />
+        <Ion.Outline.diamond />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"diamond"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.dice />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"dice"->Utils.str} </h2>
+        <Ion.Outline.dice /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"dice"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.disc />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"disc"->Utils.str} </h2>
+        <Ion.Outline.disc /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"disc"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.document />
+        <Ion.Outline.document />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"document"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.documentAttach />
+        <Ion.Outline.documentAttach />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"documentAttach"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.documentLock />
+        <Ion.Outline.documentLock />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"documentLock"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.documentText />
+        <Ion.Outline.documentText />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"documentText"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.documents />
+        <Ion.Outline.documents />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"documents"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.download />
+        <Ion.Outline.download />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"download"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.duplicate />
+        <Ion.Outline.duplicate />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"duplicate"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.ear />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"ear"->Utils.str} </h2>
+        <Ion.Outline.ear /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"ear"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.earth />
+        <Ion.Outline.earth />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"earth"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.easel />
+        <Ion.Outline.easel />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"easel"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.egg />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"egg"->Utils.str} </h2>
+        <Ion.Outline.egg /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"egg"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.ellipse />
+        <Ion.Outline.ellipse />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"ellipse"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.ellipsisHorizontal />
+        <Ion.Outline.ellipsisHorizontal />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"ellipsisHorizontal"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.ellipsisHorizontalCircle />
+        <Ion.Outline.ellipsisHorizontalCircle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"ellipsisHorizontalCircle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.ellipsisVertical />
+        <Ion.Outline.ellipsisVertical />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"ellipsisVertical"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.ellipsisVerticalCircle />
+        <Ion.Outline.ellipsisVerticalCircle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"ellipsisVerticalCircle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.enter />
+        <Ion.Outline.enter />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"enter"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.exit />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"exit"->Utils.str} </h2>
+        <Ion.Outline.exit /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"exit"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.expand />
+        <Ion.Outline.expand />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"expand"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.extensionPuzzle />
+        <Ion.Outline.extensionPuzzle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"extensionPuzzle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.eye />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"eye"->Utils.str} </h2>
+        <Ion.Outline.eye /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"eye"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.eyeOff />
+        <Ion.Outline.eyeOff />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"eyeOff"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.eyedrop />
+        <Ion.Outline.eyedrop />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"eyedrop"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.fastFood />
+        <Ion.Outline.fastFood />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"fastFood"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.female />
+        <Ion.Outline.female />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"female"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.fileTray />
+        <Ion.Outline.fileTray />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"fileTray"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.fileTrayFull />
+        <Ion.Outline.fileTrayFull />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"fileTrayFull"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.fileTrayStacked />
+        <Ion.Outline.fileTrayStacked />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"fileTrayStacked"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.film />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"film"->Utils.str} </h2>
+        <Ion.Outline.film /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"film"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.filter />
+        <Ion.Outline.filter />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"filter"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.filterCircle />
+        <Ion.Outline.filterCircle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"filterCircle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.fingerPrint />
+        <Ion.Outline.fingerPrint />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"fingerPrint"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.fish />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"fish"->Utils.str} </h2>
+        <Ion.Outline.fish /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"fish"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.fitness />
+        <Ion.Outline.fitness />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"fitness"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.flag />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"flag"->Utils.str} </h2>
+        <Ion.Outline.flag /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"flag"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.flame />
+        <Ion.Outline.flame />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"flame"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.flash />
+        <Ion.Outline.flash />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"flash"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.flashOff />
+        <Ion.Outline.flashOff />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"flashOff"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.flashlight />
+        <Ion.Outline.flashlight />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"flashlight"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.flask />
+        <Ion.Outline.flask />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"flask"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.flower />
+        <Ion.Outline.flower />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"flower"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.folder />
+        <Ion.Outline.folder />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"folder"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.folderOpen />
+        <Ion.Outline.folderOpen />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"folderOpen"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.football />
+        <Ion.Outline.football />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"football"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.footsteps />
+        <Ion.Outline.footsteps />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"footsteps"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.funnel />
+        <Ion.Outline.funnel />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"funnel"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.gameController />
+        <Ion.Outline.gameController />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"gameController"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.gift />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"gift"->Utils.str} </h2>
+        <Ion.Outline.gift /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"gift"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.gitBranch />
+        <Ion.Outline.gitBranch />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"gitBranch"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.gitCommit />
+        <Ion.Outline.gitCommit />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"gitCommit"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.gitCompare />
+        <Ion.Outline.gitCompare />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"gitCompare"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.gitMerge />
+        <Ion.Outline.gitMerge />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"gitMerge"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.gitNetwork />
+        <Ion.Outline.gitNetwork />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"gitNetwork"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.gitPullRequest />
+        <Ion.Outline.gitPullRequest />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"gitPullRequest"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.glasses />
+        <Ion.Outline.glasses />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"glasses"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.globe />
+        <Ion.Outline.globe />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"globe"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.golf />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"golf"->Utils.str} </h2>
+        <Ion.Outline.golf /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"golf"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.grid />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"grid"->Utils.str} </h2>
+        <Ion.Outline.grid /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"grid"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.hammer />
+        <Ion.Outline.hammer />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"hammer"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.handLeft />
+        <Ion.Outline.handLeft />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"handLeft"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.handRight />
+        <Ion.Outline.handRight />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"flame"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.happy />
+        <Ion.Outline.happy />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"happy"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.hardwareChip />
+        <Ion.Outline.hardwareChip />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"flame"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.headset />
+        <Ion.Outline.headset />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"headset"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.heart />
+        <Ion.Outline.heart />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"heart"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.heartCircle />
+        <Ion.Outline.heartCircle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"heartCircle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.heartDislike />
+        <Ion.Outline.heartDislike />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"heartDislike"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.heartDislikeCircle />
+        <Ion.Outline.heartDislikeCircle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"heartDislikeCircle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.heartHalf />
+        <Ion.Outline.heartHalf />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"heartHalf"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.help />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"help"->Utils.str} </h2>
+        <Ion.Outline.help /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"help"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.helpBuoy />
+        <Ion.Outline.helpBuoy />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"helpBuoy"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.helpCircle />
+        <Ion.Outline.helpCircle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"helpCircle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.home />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"home"->Utils.str} </h2>
+        <Ion.Outline.home /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"home"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.hourglass />
+        <Ion.Outline.hourglass />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"hourglass"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.iceCream />
+        <Ion.Outline.iceCream />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"iceCream"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.idCard />
+        <Ion.Outline.idCard />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"idCard"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.image />
+        <Ion.Outline.image />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"image"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.images />
+        <Ion.Outline.images />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"images"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.infinite />
+        <Ion.Outline.infinite />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"infinite"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.information />
+        <Ion.Outline.information />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"information"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.informationCircle />
+        <Ion.Outline.informationCircle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"informationCircle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.invertMode />
+        <Ion.Outline.invertMode />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"invertMode"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.journal />
+        <Ion.Outline.journal />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"journal"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.key />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"key"->Utils.str} </h2>
+        <Ion.Outline.key /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"key"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.keypad />
+        <Ion.Outline.keypad />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"keypad"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.language />
+        <Ion.Outline.language />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"language"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.laptop />
+        <Ion.Outline.laptop />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"laptop"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.layers />
+        <Ion.Outline.layers />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"layers"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.leaf />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"leaf"->Utils.str} </h2>
+        <Ion.Outline.leaf /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"leaf"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.library />
+        <Ion.Outline.library />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"library"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.link />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"link"->Utils.str} </h2>
+        <Ion.Outline.link /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"link"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.list />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"list"->Utils.str} </h2>
+        <Ion.Outline.list /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"list"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.listCircle />
+        <Ion.Outline.listCircle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"listCircle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.locate />
+        <Ion.Outline.locate />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"locate"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.location />
+        <Ion.Outline.location />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"location"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.lockClosed />
+        <Ion.Outline.lockClosed />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"lockClosed"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.lockOpen />
+        <Ion.Outline.lockOpen />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"lockOpen"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.logIn />
+        <Ion.Outline.logIn />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"logIn"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.logOut />
+        <Ion.Outline.logOut />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"logOut"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.magnet />
+        <Ion.Outline.magnet />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"magnet"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.mail />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"mail"->Utils.str} </h2>
+        <Ion.Outline.mail /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"mail"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.mailOpen />
+        <Ion.Outline.mailOpen />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"mailOpen"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.mailUnread />
+        <Ion.Outline.mailUnread />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"mailUnread"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.male />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"male"->Utils.str} </h2>
+        <Ion.Outline.male /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"male"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.maleFemale />
+        <Ion.Outline.maleFemale />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"maleFemale"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.man />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"man"->Utils.str} </h2>
+        <Ion.Outline.man /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"man"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.map />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"map"->Utils.str} </h2>
+        <Ion.Outline.map /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"map"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.medal />
+        <Ion.Outline.medal />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"medal"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.medical />
+        <Ion.Outline.medical />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"medical"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.medkit />
+        <Ion.Outline.medkit />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"medkit"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.megaphone />
+        <Ion.Outline.megaphone />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"megaphone"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.menu />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"menu"->Utils.str} </h2>
+        <Ion.Outline.menu /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"menu"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.mic />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"mic"->Utils.str} </h2>
+        <Ion.Outline.mic /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"mic"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.micCircle />
+        <Ion.Outline.micCircle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"micCircle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.micOff />
+        <Ion.Outline.micOff />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"micOff"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.micOffCircle />
+        <Ion.Outline.micOffCircle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"micOffCircle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.moon />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"moon"->Utils.str} </h2>
+        <Ion.Outline.moon /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"moon"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.move />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"move"->Utils.str} </h2>
+        <Ion.Outline.move /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"move"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.musicalNote />
+        <Ion.Outline.musicalNote />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"musicalNote"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.musicalNotes />
+        <Ion.Outline.musicalNotes />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"musicalNotes"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.navigate />
+        <Ion.Outline.navigate />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"navigate"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.navigateCircle />
+        <Ion.Outline.navigateCircle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"navigateCircle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.newspaper />
+        <Ion.Outline.newspaper />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"newspaper"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.notifications />
+        <Ion.Outline.notifications />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"notifications"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.notificationsCircle />
+        <Ion.Outline.notificationsCircle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"notificationsCircle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.notificationsOff />
+        <Ion.Outline.notificationsOff />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"notificationsOff"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.notificationsOffCircle />
+        <Ion.Outline.notificationsOffCircle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"notificationsOffCircle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.nuclear />
+        <Ion.Outline.nuclear />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"nuclear"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.nutrition />
+        <Ion.Outline.nutrition />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"nutrition"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.openLink />
+        <Ion.Outline.openLink />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"openLink"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.options />
+        <Ion.Outline.options />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"options"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.paperPlane />
+        <Ion.Outline.paperPlane />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"paperPlane"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.partlySunny />
+        <Ion.Outline.partlySunny />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"partlySunny"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.pause />
+        <Ion.Outline.pause />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"pause"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.pauseCircle />
+        <Ion.Outline.pauseCircle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"pauseCircle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.paw />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"paw"->Utils.str} </h2>
+        <Ion.Outline.paw /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"paw"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.pencil />
+        <Ion.Outline.pencil />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"pencil"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.people />
+        <Ion.Outline.people />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"people"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.peopleCircle />
+        <Ion.Outline.peopleCircle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"peopleCircle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.person />
+        <Ion.Outline.person />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"person"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.personAdd />
+        <Ion.Outline.personAdd />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"personAdd"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.personCircle />
+        <Ion.Outline.personCircle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"personCircle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.personRemove />
+        <Ion.Outline.personRemove />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"personRemove"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.phoneLandscape />
+        <Ion.Outline.phoneLandscape />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"phoneLandscape"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.phonePortrait />
+        <Ion.Outline.phonePortrait />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"phonePortrait"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.pieChart />
+        <Ion.Outline.pieChart />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"pieChart"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.pin />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"pin"->Utils.str} </h2>
+        <Ion.Outline.pin /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"pin"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.pint />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"pint"->Utils.str} </h2>
+        <Ion.Outline.pint /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"pint"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.pizza />
+        <Ion.Outline.pizza />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"pizza"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.planet />
+        <Ion.Outline.planet />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"planet"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.play />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"play"->Utils.str} </h2>
+        <Ion.Outline.play /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"play"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.playBack />
+        <Ion.Outline.playBack />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"playBack"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.playBackCircle />
+        <Ion.Outline.playBackCircle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"playBackCircle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.playCircle />
+        <Ion.Outline.playCircle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"playCircle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.playForward />
+        <Ion.Outline.playForward />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"playForward"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.playForwardCircle />
+        <Ion.Outline.playForwardCircle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"playForwardCircle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.playSkipBack />
+        <Ion.Outline.playSkipBack />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"playSkipBack"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.playSkipBackCircle />
+        <Ion.Outline.playSkipBackCircle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"playSkipBackCircle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.playSkipForward />
+        <Ion.Outline.playSkipForward />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"playSkipForward"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.playSkipForwardCircle />
+        <Ion.Outline.playSkipForwardCircle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"playSkipForwardCircle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.podium />
+        <Ion.Outline.podium />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"podium"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.power />
+        <Ion.Outline.power />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"power"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.pricetag />
+        <Ion.Outline.pricetag />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"pricetag"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.pricetags />
+        <Ion.Outline.pricetags />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"pricetags"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.print />
+        <Ion.Outline.print />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"print"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.prism />
+        <Ion.Outline.prism />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"prism"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.pulse />
+        <Ion.Outline.pulse />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"pulse"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.push />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"push"->Utils.str} </h2>
+        <Ion.Outline.push /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"push"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.qrCode />
+        <Ion.Outline.qrCode />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"qrCode"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.radio />
+        <Ion.Outline.radio />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"radio"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.radioButtonOff />
+        <Ion.Outline.radioButtonOff />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"radioButtonOff"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.radioButtonOn />
+        <Ion.Outline.radioButtonOn />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"radioButtonOn"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.rainy />
+        <Ion.Outline.rainy />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"rainy"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.reader />
+        <Ion.Outline.reader />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"reader"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.receipt />
+        <Ion.Outline.receipt />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"receipt"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.recording />
+        <Ion.Outline.recording />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"recording"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.refresh />
+        <Ion.Outline.refresh />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"refresh"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.refreshCircle />
+        <Ion.Outline.refreshCircle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"refreshCircle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.reload />
+        <Ion.Outline.reload />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"reload"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.reloadCircle />
+        <Ion.Outline.reloadCircle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"reloadCircle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.remove />
+        <Ion.Outline.remove />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"remove"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.removeCircle />
+        <Ion.Outline.removeCircle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"removeCircle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.reorderFour />
+        <Ion.Outline.reorderFour />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"reorderFour"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.reorderThree />
+        <Ion.Outline.reorderThree />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"reorderThree"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.reorderTwo />
+        <Ion.Outline.reorderTwo />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"reorderTwo"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.repeat />
+        <Ion.Outline.repeat />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"repeat"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.resize />
+        <Ion.Outline.resize />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"resize"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.restaurant />
+        <Ion.Outline.restaurant />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"restaurant"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.returnDownBack />
+        <Ion.Outline.returnDownBack />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"returnDownBack"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.returnDownForward />
+        <Ion.Outline.returnDownForward />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"returnDownForward"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.returnUpBack />
+        <Ion.Outline.returnUpBack />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"returnUpBack"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.returnUpForward />
+        <Ion.Outline.returnUpForward />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"returnUpForward"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.ribbon />
+        <Ion.Outline.ribbon />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"ribbon"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.rocket />
+        <Ion.Outline.rocket />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"rocket"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.rose />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"rose"->Utils.str} </h2>
+        <Ion.Outline.rose /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"rose"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.sad />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"sad"->Utils.str} </h2>
+        <Ion.Outline.sad /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"sad"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.save />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"save"->Utils.str} </h2>
+        <Ion.Outline.save /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"save"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.scale />
+        <Ion.Outline.scale />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"scale"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.scan />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"scan"->Utils.str} </h2>
+        <Ion.Outline.scan /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"scan"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.scanCircle />
+        <Ion.Outline.scanCircle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"scanCircle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.school />
+        <Ion.Outline.school />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"school"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.search />
+        <Ion.Outline.search />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"search"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.searchCircle />
+        <Ion.Outline.searchCircle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"searchCircle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.send />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"send"->Utils.str} </h2>
+        <Ion.Outline.send /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"send"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.server />
+        <Ion.Outline.server />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"server"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.settings />
+        <Ion.Outline.settings />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"settings"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.shapes />
+        <Ion.Outline.shapes />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"shapes"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.share />
+        <Ion.Outline.share />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"share"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.shareSocial />
+        <Ion.Outline.shareSocial />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"shareSocial"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.shield />
+        <Ion.Outline.shield />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"shield"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.shieldCheckmark />
+        <Ion.Outline.shieldCheckmark />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"shieldCheckmark"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.shieldHalf />
+        <Ion.Outline.shieldHalf />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"shieldHalf"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.shirt />
+        <Ion.Outline.shirt />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"shirt"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.shuffle />
+        <Ion.Outline.shuffle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"shuffle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.skull />
+        <Ion.Outline.skull />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"skull"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.snow />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"snow"->Utils.str} </h2>
+        <Ion.Outline.snow /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"snow"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.sparkles />
+        <Ion.Outline.sparkles />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"sparkles"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.speedometer />
+        <Ion.Outline.speedometer />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"speedometer"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.square />
+        <Ion.Outline.square />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"square"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.star />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"star"->Utils.str} </h2>
+        <Ion.Outline.star /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"star"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.starHalf />
+        <Ion.Outline.starHalf />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"starHalf"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.statsChart />
+        <Ion.Outline.statsChart />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"statsChart"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.stop />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"stop"->Utils.str} </h2>
+        <Ion.Outline.stop /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"stop"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.stopCircle />
+        <Ion.Outline.stopCircle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"stopCircle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.stopwatch />
+        <Ion.Outline.stopwatch />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"stopwatch"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.storefront />
+        <Ion.Outline.storefront />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"storefront"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.subway />
+        <Ion.Outline.subway />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"subway"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.sunny />
+        <Ion.Outline.sunny />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"sunny"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.swapHorizontal />
+        <Ion.Outline.swapHorizontal />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"swapHorizontal"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.swapVertical />
+        <Ion.Outline.swapVertical />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"swapVertical"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.sync />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"sync"->Utils.str} </h2>
+        <Ion.Outline.sync /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"sync"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.syncCircle />
+        <Ion.Outline.syncCircle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"syncCircle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.tabletLandscape />
+        <Ion.Outline.tabletLandscape />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"tabletLandscape"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.tabletPortrait />
+        <Ion.Outline.tabletPortrait />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"tabletPortrait"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.telescope />
+        <Ion.Outline.telescope />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"telescope"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.tennisball />
+        <Ion.Outline.tennisball />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"tennisball"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.terminal />
+        <Ion.Outline.terminal />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"terminal"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.text />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"text"->Utils.str} </h2>
+        <Ion.Outline.text /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"text"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.thermometer />
+        <Ion.Outline.thermometer />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"thermometer"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.thumbsDown />
+        <Ion.Outline.thumbsDown />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"thumbsDown"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.thumbsUp />
+        <Ion.Outline.thumbsUp />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"thumbsUp"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.thunderstorm />
+        <Ion.Outline.thunderstorm />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"thunderstorm"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.ticket />
+        <Ion.Outline.ticket />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"ticket"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.time />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"time"->Utils.str} </h2>
+        <Ion.Outline.time /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"time"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.timer />
+        <Ion.Outline.timer />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"timer"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.today />
+        <Ion.Outline.today />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"today"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.toggle />
+        <Ion.Outline.toggle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"toggle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.trailSign />
+        <Ion.Outline.trailSign />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"trailSign"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.train />
+        <Ion.Outline.train />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"train"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.transgender />
+        <Ion.Outline.transgender />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"transgender"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.trash />
+        <Ion.Outline.trash />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"trash"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.trashBin />
+        <Ion.Outline.trashBin />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"trashBin"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.trendingDown />
+        <Ion.Outline.trendingDown />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"trendingDown"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.trendingUp />
+        <Ion.Outline.trendingUp />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"trendingUp"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.triangle />
+        <Ion.Outline.triangle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"triangle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.trophy />
+        <Ion.Outline.trophy />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"trophy"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.tv />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"tv"->Utils.str} </h2>
+        <Ion.Outline.tv /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"tv"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.umbrella />
+        <Ion.Outline.umbrella />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"umbrella"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.unlink />
+        <Ion.Outline.unlink />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"unlink"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.videocam />
+        <Ion.Outline.videocam />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"videocam"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.videocamOff />
+        <Ion.Outline.videocamOff />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"videocamOff"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.volumeHigh />
+        <Ion.Outline.volumeHigh />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"volumeHigh"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.volumeLow />
+        <Ion.Outline.volumeLow />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"volumeLow"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.volumeMedium />
+        <Ion.Outline.volumeMedium />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"volumeMedium"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.volumeMute />
+        <Ion.Outline.volumeMute />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"volumeMute"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.volumeOff />
+        <Ion.Outline.volumeOff />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"volumeOff"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.walk />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"walk"->Utils.str} </h2>
+        <Ion.Outline.walk /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"walk"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.wallet />
+        <Ion.Outline.wallet />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"wallet"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.warning />
+        <Ion.Outline.warning />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"warning"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.watch />
+        <Ion.Outline.watch />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"watch"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.water />
+        <Ion.Outline.water />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"water"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.wifi />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"wifi"->Utils.str} </h2>
+        <Ion.Outline.wifi /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"wifi"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.wine />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"wine"->Utils.str} </h2>
+        <Ion.Outline.wine /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"wine"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Outline.woman />
+        <Ion.Outline.woman />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"woman"->Utils.str} </h2>
       </div>
     </div>
@@ -1736,484 +1665,466 @@ let default = () => {
         Styles.gridBreakpoints830,
       ])}>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.accessibility />
+        <Ion.Filled.accessibility />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"accessibility"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.add />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"add"->Utils.str} </h2>
+        <Ion.Filled.add /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"add"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.addCircle />
+        <Ion.Filled.addCircle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"addCircle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.airplane />
+        <Ion.Filled.airplane />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"airplane"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.alarm />
+        <Ion.Filled.alarm />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"alarm"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.albums />
+        <Ion.Filled.albums />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"albums"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.alert />
+        <Ion.Filled.alert />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"alert"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.alertCircle />
+        <Ion.Filled.alertCircle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"alertCircle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.americanFootball />
+        <Ion.Filled.americanFootball />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"americanFootball"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.analytics />
+        <Ion.Filled.analytics />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"analytics"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.aperture />
+        <Ion.Filled.aperture />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"aperture"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.apps />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"apps"->Utils.str} </h2>
+        <Ion.Filled.apps /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"apps"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.archive />
+        <Ion.Filled.archive />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"archive"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.arrowBack />
+        <Ion.Filled.arrowBack />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"arrowBack"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.arrowBackCircle />
+        <Ion.Filled.arrowBackCircle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"arrowBackCircle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.arrowDown />
+        <Ion.Filled.arrowDown />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"arrowDown"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.arrowDownCircle />
+        <Ion.Filled.arrowDownCircle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"arrowDownCircle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.arrowForward />
+        <Ion.Filled.arrowForward />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"arrowForward"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.arrowForwardCircle />
+        <Ion.Filled.arrowForwardCircle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"arrowForwardCircle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.arrowRedo />
+        <Ion.Filled.arrowRedo />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"arrowRedo"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.arrowRedoCircle />
+        <Ion.Filled.arrowRedoCircle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"arrowRedoCircle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.arrowUndo />
+        <Ion.Filled.arrowUndo />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"arrowUndo"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.arrowUndoCircle />
+        <Ion.Filled.arrowUndoCircle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"arrowUndoCircle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.arrowUp />
+        <Ion.Filled.arrowUp />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"arrowUp"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.arrowUpCircle />
+        <Ion.Filled.arrowUpCircle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"arrowUpCircle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.at /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"at"->Utils.str} </h2>
+        <Ion.Filled.at /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"at"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.atCircle />
+        <Ion.Filled.atCircle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"atCircle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.attach />
+        <Ion.Filled.attach />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"attach"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.backspace />
+        <Ion.Filled.backspace />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"backspace"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.bag />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"bag"->Utils.str} </h2>
+        <Ion.Filled.bag /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"bag"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.bagAdd />
+        <Ion.Filled.bagAdd />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"bagAdd"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.bagCheck />
+        <Ion.Filled.bagCheck />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"bagCheck"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.bagHandle />
+        <Ion.Filled.bagHandle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"bagHandle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.bagRemove />
+        <Ion.Filled.bagRemove />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"bagRemove"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.ballon />
+        <Ion.Filled.ballon />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"ballon"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.ban />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"ban"->Utils.str} </h2>
+        <Ion.Filled.ban /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"ban"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.bandage />
+        <Ion.Filled.bandage />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"bandage"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.barChart />
+        <Ion.Filled.barChart />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"barChart"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.barbell />
+        <Ion.Filled.barbell />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"barbell"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.barcode />
+        <Ion.Filled.barcode />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"barcode"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.baseball />
+        <Ion.Filled.baseball />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"baseball"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.basket />
+        <Ion.Filled.basket />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"basket"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.basketball />
+        <Ion.Filled.basketball />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"basketball"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.batteryCharging />
+        <Ion.Filled.batteryCharging />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"batteryCharging"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.batteryDead />
+        <Ion.Filled.batteryDead />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"batteryDead"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.batteryFull />
+        <Ion.Filled.batteryFull />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"batteryFull"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.batteryHalf />
+        <Ion.Filled.batteryHalf />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"batteryHalf"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.beaker />
+        <Ion.Filled.beaker />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"beaker"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.bed />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"bed"->Utils.str} </h2>
+        <Ion.Filled.bed /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"bed"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.beer />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"beer"->Utils.str} </h2>
+        <Ion.Filled.beer /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"beer"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.bicycle />
+        <Ion.Filled.bicycle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"bicycle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.bluetooth />
+        <Ion.Filled.bluetooth />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"bluetooth"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.boat />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"boat"->Utils.str} </h2>
+        <Ion.Filled.boat /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"boat"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.body />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"body"->Utils.str} </h2>
+        <Ion.Filled.body /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"body"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.bonefire />
+        <Ion.Filled.bonefire />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"bonefire"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.book />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"book"->Utils.str} </h2>
+        <Ion.Filled.book /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"book"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.bookmark />
+        <Ion.Filled.bookmark />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"bookmark"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.bookmarks />
+        <Ion.Filled.bookmarks />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"bookmarks"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.bowlingBall />
+        <Ion.Filled.bowlingBall />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"bowlingBall"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.briefcase />
+        <Ion.Filled.briefcase />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"briefcase"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.browsers />
+        <Ion.Filled.browsers />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"browsers"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.brush />
+        <Ion.Filled.brush />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"brush"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.bug />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"bug"->Utils.str} </h2>
+        <Ion.Filled.bug /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"bug"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.build />
+        <Ion.Filled.build />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"build"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.bulb />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"bulb"->Utils.str} </h2>
+        <Ion.Filled.bulb /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"bulb"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.bus />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"bus"->Utils.str} </h2>
+        <Ion.Filled.bus /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"bus"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.business />
+        <Ion.Filled.business />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"business"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.cafe />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"cafe"->Utils.str} </h2>
+        <Ion.Filled.cafe /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"cafe"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.calculator />
+        <Ion.Filled.calculator />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"calculator"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.calendar />
+        <Ion.Filled.calendar />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"calendar"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.calendarClear />
+        <Ion.Filled.calendarClear />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"calendarClear"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.calendarNumber />
+        <Ion.Filled.calendarNumber />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"calendarNumber"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.call />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"call"->Utils.str} </h2>
+        <Ion.Filled.call /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"call"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.camera />
+        <Ion.Filled.camera />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"camera"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.cameraReverse />
+        <Ion.Filled.cameraReverse />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"cameraReverse"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.car />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"car"->Utils.str} </h2>
+        <Ion.Filled.car /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"car"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.carSport />
+        <Ion.Filled.carSport />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"carSport"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.card />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"card"->Utils.str} </h2>
+        <Ion.Filled.card /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"card"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.caretBack />
+        <Ion.Filled.caretBack />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"caretBack"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.caretBackCircle />
+        <Ion.Filled.caretBackCircle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"caretBackCircle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.caretDown />
+        <Ion.Filled.caretDown />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"caretDown"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.caretDownCircle />
+        <Ion.Filled.caretDownCircle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"caretDownCircle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.caretForward />
+        <Ion.Filled.caretForward />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"caretForward"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.caretForwardCircle />
+        <Ion.Filled.caretForwardCircle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"caretForwardCircle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.caretUp />
+        <Ion.Filled.caretUp />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"caretUp"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.caretUpCircle />
+        <Ion.Filled.caretUpCircle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"caretUpCircle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.cart />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"cart"->Utils.str} </h2>
+        <Ion.Filled.cart /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"cart"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.cash />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"cash"->Utils.str} </h2>
+        <Ion.Filled.cash /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"cash"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.cellular />
+        <Ion.Filled.cellular />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"cellular"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.chatbox />
+        <Ion.Filled.chatbox />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"chatbox"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.chatboxEllipses />
+        <Ion.Filled.chatboxEllipses />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"chatboxEllipses"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.chatbubble />
+        <Ion.Filled.chatbubble />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"chatbubble"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.chatbubbleEllipses />
+        <Ion.Filled.chatbubbleEllipses />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"chatbubbleEllipses"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.chatbubbles />
+        <Ion.Filled.chatbubbles />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"chatbubbles"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.checkbox />
+        <Ion.Filled.checkbox />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"checkbox"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.checkmark />
+        <Ion.Filled.checkmark />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"checkmark"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.checkmarkCircle />
+        <Ion.Filled.checkmarkCircle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"checkmarkDone"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.checkmarkDone />
+        <Ion.Filled.checkmarkDone />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"checkmarkDone"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.checkmarkDoneCircle />
+        <Ion.Filled.checkmarkDoneCircle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"checkmarkDoneCircle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Filled.chevronBack />
+        <Ion.Filled.chevronBack />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"chevronBack"->Utils.str} </h2>
       </div>
       // <div className={Tailwind.merge(.[Styles.block])}>
-      //   <IonIcons.Filled.caretForwardCircle />
+      //   <Ion.Filled.caretForwardCircle />
       //   <h2 className={Tailwind.merge(.[Styles.h2])}> {"caretForwardCircle"->Utils.str} </h2>
       // </div>
       // <div className={Tailwind.merge(.[Styles.block])}>
-      //   <IonIcons.Filled.caretForwardCircle />
+      //   <Ion.Filled.caretForwardCircle />
       //   <h2 className={Tailwind.merge(.[Styles.h2])}> {"caretForwardCircle"->Utils.str} </h2>
       // </div>
       // <div className={Tailwind.merge(.[Styles.block])}>
-      //   <IonIcons.Filled.caretForwardCircle />
+      //   <Ion.Filled.caretForwardCircle />
       //   <h2 className={Tailwind.merge(.[Styles.h2])}> {"caretForwardCircle"->Utils.str} </h2>
       // </div>
       // <div className={Tailwind.merge(.[Styles.block])}>
-      //   <IonIcons.Filled.caretForwardCircle />
+      //   <Ion.Filled.caretForwardCircle />
       //   <h2 className={Tailwind.merge(.[Styles.h2])}> {"caretForwardCircle"->Utils.str} </h2>
       // </div>
       // <div className={Tailwind.merge(.[Styles.block])}>
-      //   <IonIcons.Filled.caretForwardCircle />
+      //   <Ion.Filled.caretForwardCircle />
       //   <h2 className={Tailwind.merge(.[Styles.h2])}> {"caretForwardCircle"->Utils.str} </h2>
       // </div>
       // <div className={Tailwind.merge(.[Styles.block])}>
-      //   <IonIcons.Filled.caretForwardCircle />
+      //   <Ion.Filled.caretForwardCircle />
       //   <h2 className={Tailwind.merge(.[Styles.h2])}> {"caretForwardCircle"->Utils.str} </h2>
       // </div>
       // <div className={Tailwind.merge(.[Styles.block])}>
-      //   <IonIcons.Filled.caretForwardCircle />
+      //   <Ion.Filled.caretForwardCircle />
       //   <h2 className={Tailwind.merge(.[Styles.h2])}> {"caretForwardCircle"->Utils.str} </h2>
       // </div>
       // <div className={Tailwind.merge(.[Styles.block])}>
-      //   <IonIcons.Filled.caretForwardCircle />
+      //   <Ion.Filled.caretForwardCircle />
       //   <h2 className={Tailwind.merge(.[Styles.h2])}> {"caretForwardCircle"->Utils.str} </h2>
       // </div>
       // <div className={Tailwind.merge(.[Styles.block])}>
-      //   <IonIcons.Filled.caretForwardCircle />
+      //   <Ion.Filled.caretForwardCircle />
       //   <h2 className={Tailwind.merge(.[Styles.h2])}> {"caretForwardCircle"->Utils.str} </h2>
       // </div>
       // <div className={Tailwind.merge(.[Styles.block])}>
-      //   <IonIcons.Filled.caretForwardCircle />
+      //   <Ion.Filled.caretForwardCircle />
       //   <h2 className={Tailwind.merge(.[Styles.h2])}> {"caretForwardCircle"->Utils.str} </h2>
       // </div>
       // ten
       // icons
       // <div className={Tailwind.merge(.[Styles.block])}>
-      //   <IonIcons.Filled.caretForwardCircle />
+      //   <Ion.Filled.caretForwardCircle />
       //   <h2 className={Tailwind.merge(.[Styles.h2])}> {"caretForwardCircle"->Utils.str} </h2>
       // </div>
       // <div className={Tailwind.merge(.[Styles.block])}>
-      //   <IonIcons.Filled.caretForwardCircle />
+      //   <Ion.Filled.caretForwardCircle />
       //   <h2 className={Tailwind.merge(.[Styles.h2])}> {"caretForwardCircle"->Utils.str} </h2>
       // </div>
       // <div className={Tailwind.merge(.[Styles.block])}>
-      //   <IonIcons.Filled.caretForwardCircle />
+      //   <Ion.Filled.caretForwardCircle />
       //   <h2 className={Tailwind.merge(.[Styles.h2])}> {"caretForwardCircle"->Utils.str} </h2>
       // </div>
       // <div className={Tailwind.merge(.[Styles.block])}>
-      //   <IonIcons.Filled.caretForwardCircle />
+      //   <Ion.Filled.caretForwardCircle />
       //   <h2 className={Tailwind.merge(.[Styles.h2])}> {"caretForwardCircle"->Utils.str} </h2>
       // </div>
       // <div className={Tailwind.merge(.[Styles.block])}>
-      //   <IonIcons.Filled.caretForwardCircle />
+      //   <Ion.Filled.caretForwardCircle />
       //   <h2 className={Tailwind.merge(.[Styles.h2])}> {"caretForwardCircle"->Utils.str} </h2>
       // </div>
       // <div className={Tailwind.merge(.[Styles.block])}>
-      //   <IonIcons.Filled.caretForwardCircle />
+      //   <Ion.Filled.caretForwardCircle />
       //   <h2 className={Tailwind.merge(.[Styles.h2])}> {"caretForwardCircle"->Utils.str} </h2>
       // </div>
       // <div className={Tailwind.merge(.[Styles.block])}>
-      //   <IonIcons.Filled.caretForwardCircle />
+      //   <Ion.Filled.caretForwardCircle />
       //   <h2 className={Tailwind.merge(.[Styles.h2])}> {"caretForwardCircle"->Utils.str} </h2>
       // </div>
       // <div className={Tailwind.merge(.[Styles.block])}>
-      //   <IonIcons.Filled.caretForwardCircle />
+      //   <Ion.Filled.caretForwardCircle />
       //   <h2 className={Tailwind.merge(.[Styles.h2])}> {"caretForwardCircle"->Utils.str} </h2>
       // </div>
       // <div className={Tailwind.merge(.[Styles.block])}>
-      //   <IonIcons.Filled.caretForwardCircle />
+      //   <Ion.Filled.caretForwardCircle />
       //   <h2 className={Tailwind.merge(.[Styles.h2])}> {"caretForwardCircle"->Utils.str} </h2>
       // </div>
       // <div className={Tailwind.merge(.[Styles.block])}>
-      //   <IonIcons.Filled.caretForwardCircle />
+      //   <Ion.Filled.caretForwardCircle />
       //   <h2 className={Tailwind.merge(.[Styles.h2])}> {"caretForwardCircle"->Utils.str} </h2>
       // </div>
 
@@ -2227,119 +2138,116 @@ let default = () => {
         Styles.gridBreakpoints830,
       ])}>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Sharp.accessibility />
+        <Ion.Sharp.accessibility />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"accessibility"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Sharp.add />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"add"->Utils.str} </h2>
+        <Ion.Sharp.add /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"add"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Sharp.addCircle />
+        <Ion.Sharp.addCircle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"addCircle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Sharp.airPlane />
+        <Ion.Sharp.airPlane />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"airPlane"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Sharp.alarm />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"alarm"->Utils.str} </h2>
+        <Ion.Sharp.alarm /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"alarm"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Sharp.albums />
+        <Ion.Sharp.albums />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"albums"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Sharp.alert />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"alart"->Utils.str} </h2>
+        <Ion.Sharp.alert /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"alart"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Sharp.alertCircle />
+        <Ion.Sharp.alertCircle />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"alartCircle"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Sharp.americanFootball />
+        <Ion.Sharp.americanFootball />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"americanFootball"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Sharp.analyticsSharp />
+        <Ion.Sharp.analyticsSharp />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"analyticsSharp"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Sharp.apetureSharp />
+        <Ion.Sharp.apetureSharp />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"apetureSharp"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Sharp.appsSharp />
+        <Ion.Sharp.appsSharp />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"appsSharp"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Sharp.archiveSharp />
+        <Ion.Sharp.archiveSharp />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"archiveSharp"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Sharp.arrowBackSharp />
+        <Ion.Sharp.arrowBackSharp />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"arrowBackSharp"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Sharp.arrowBackCircleSharp />
+        <Ion.Sharp.arrowBackCircleSharp />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"arrowBackCircleSharp"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Sharp.arrowDownSharp />
+        <Ion.Sharp.arrowDownSharp />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"arrowDownSharp"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Sharp.arrowDownCircleSharp />
+        <Ion.Sharp.arrowDownCircleSharp />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"arrowDownCircleSharp"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Sharp.arrowForwardSharp />
+        <Ion.Sharp.arrowForwardSharp />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"arrowForwardSharp"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Sharp.arrowForwardCircleSharp />
+        <Ion.Sharp.arrowForwardCircleSharp />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"arrowForwardCircleSharp"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Sharp.arrowRedoSharp />
+        <Ion.Sharp.arrowRedoSharp />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"arrowRedoSharp"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Sharp.arrowRedoCircleSharp />
+        <Ion.Sharp.arrowRedoCircleSharp />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"arrowRedoCircleSharp"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Sharp.arrowUndoSharp />
+        <Ion.Sharp.arrowUndoSharp />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"arrowUndoSharp"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Sharp.arrowUndoCircleSharp />
+        <Ion.Sharp.arrowUndoCircleSharp />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"arrowUndoCircleSharp"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Sharp.arrowUpSharp />
+        <Ion.Sharp.arrowUpSharp />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"arrowUpSharp"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Sharp.arrowUpCircleSharp />
+        <Ion.Sharp.arrowUpCircleSharp />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"arrowUpCircleSharp"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Sharp.atSharp />
+        <Ion.Sharp.atSharp />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"atSharp"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Sharp.atCircleSharp />
+        <Ion.Sharp.atCircleSharp />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"atCircleSharp"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Sharp.attachSharp />
+        <Ion.Sharp.attachSharp />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"attachSharp"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Sharp.backspaceSharp />
+        <Ion.Sharp.backspaceSharp />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"backspaceSharp"->Utils.str} </h2>
       </div>
     </div>
@@ -2351,362 +2259,338 @@ let default = () => {
         Styles.gridBreakpoints830,
       ])}>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.alipay />
+        <Ion.Logos.alipay />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"alipay"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.amazon />
+        <Ion.Logos.amazon />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"amazon"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.amplify />
+        <Ion.Logos.amplify />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"amplify"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.android />
+        <Ion.Logos.android />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"android"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.angular />
+        <Ion.Logos.angular />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"angular"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.apple />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"apple"->Utils.str} </h2>
+        <Ion.Logos.apple /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"apple"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.appleAppStore />
+        <Ion.Logos.appleAppStore />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"appleAppStore"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.appleAr />
+        <Ion.Logos.appleAr />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"appleAr"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.behance />
+        <Ion.Logos.behance />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"behance"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.bitBucket />
+        <Ion.Logos.bitBucket />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"bitBucket"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.bitCoin />
+        <Ion.Logos.bitCoin />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"bitCoin"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.buffer />
+        <Ion.Logos.buffer />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"buffer"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.capacitor />
+        <Ion.Logos.capacitor />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"capacitor"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.chrome />
+        <Ion.Logos.chrome />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"chrome"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.closedCaptioning />
+        <Ion.Logos.closedCaptioning />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"closedCaptioning"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.codepen />
+        <Ion.Logos.codepen />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"codepen"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.css3 />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"css3"->Utils.str} </h2>
+        <Ion.Logos.css3 /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"css3"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.designerNews />
+        <Ion.Logos.designerNews />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"designerNews"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.devianStart />
+        <Ion.Logos.devianStart />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"devianStart"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.discord />
+        <Ion.Logos.discord />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"discord"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.docker />
+        <Ion.Logos.docker />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"docker"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.dribbble />
+        <Ion.Logos.dribbble />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"dribbble"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.dropBox />
+        <Ion.Logos.dropBox />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"dropBox"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.edge />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"edge"->Utils.str} </h2>
+        <Ion.Logos.edge /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"edge"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.electron />
+        <Ion.Logos.electron />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"electron"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.euro />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"euro"->Utils.str} </h2>
+        <Ion.Logos.euro /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"euro"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.facebook />
+        <Ion.Logos.facebook />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"facebook"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.figma />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"figma"->Utils.str} </h2>
+        <Ion.Logos.figma /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"figma"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.fireBase />
+        <Ion.Logos.fireBase />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"fireBase"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.fireFox />
+        <Ion.Logos.fireFox />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"fireFox"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.flickr />
+        <Ion.Logos.flickr />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"flickr"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.fourSquare />
+        <Ion.Logos.fourSquare />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"fourSquare"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.github />
+        <Ion.Logos.github />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"github"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.gitlab />
+        <Ion.Logos.gitlab />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"gitlab"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.google />
+        <Ion.Logos.google />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"google"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.googlePlayStore />
+        <Ion.Logos.googlePlayStore />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"googlePlayStore"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.hackerNews />
+        <Ion.Logos.hackerNews />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"hackerNews"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.html5 />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"html5"->Utils.str} </h2>
+        <Ion.Logos.html5 /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"html5"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.instagram />
+        <Ion.Logos.instagram />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"instagram"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.ionic />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"ionic"->Utils.str} </h2>
+        <Ion.Logos.ionic /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"ionic"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.ionitron />
+        <Ion.Logos.ionitron />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"ionitron"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.javascript />
+        <Ion.Logos.javascript />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"javascript"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.laravel />
+        <Ion.Logos.laravel />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"laravel"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.linkedin />
+        <Ion.Logos.linkedin />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"linkedin"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.markDown />
+        <Ion.Logos.markDown />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"markDown"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.mastodon />
+        <Ion.Logos.mastodon />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"mastodon"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.medium />
+        <Ion.Logos.medium />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"medium"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.microsoft />
+        <Ion.Logos.microsoft />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"microsoft"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.noSmoking />
+        <Ion.Logos.noSmoking />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"noSmoking"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.nodejs />
+        <Ion.Logos.nodejs />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"nodejs"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.npm />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"npm"->Utils.str} </h2>
+        <Ion.Logos.npm /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"npm"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.octocat />
+        <Ion.Logos.octocat />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"octocat"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.paypal />
+        <Ion.Logos.paypal />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"paypal"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.pinterest />
+        <Ion.Logos.pinterest />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"pinterest"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.playstation />
+        <Ion.Logos.playstation />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"playstation"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.pwa />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"pwa"->Utils.str} </h2>
+        <Ion.Logos.pwa /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"pwa"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.python />
+        <Ion.Logos.python />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"python"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.react />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"react"->Utils.str} </h2>
+        <Ion.Logos.react /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"react"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.reddit />
+        <Ion.Logos.reddit />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"reddit"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.rrs />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"rrs"->Utils.str} </h2>
+        <Ion.Logos.rrs /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"rrs"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.sass />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"sass"->Utils.str} </h2>
+        <Ion.Logos.sass /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"sass"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.skype />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"skype"->Utils.str} </h2>
+        <Ion.Logos.skype /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"skype"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.slack />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"slack"->Utils.str} </h2>
+        <Ion.Logos.slack /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"slack"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.snapChat />
+        <Ion.Logos.snapChat />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"snapChat"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.soundCloud />
+        <Ion.Logos.soundCloud />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"soundCloud"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.stackOverFlow />
+        <Ion.Logos.stackOverFlow />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"stackOverFlow"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.steam />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"steam"->Utils.str} </h2>
+        <Ion.Logos.steam /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"steam"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.stencil />
+        <Ion.Logos.stencil />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"stencil"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.tableau />
+        <Ion.Logos.tableau />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"tableau"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.tikTok />
+        <Ion.Logos.tikTok />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"tikTok"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.tumblr />
+        <Ion.Logos.tumblr />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"tumblr"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.tux />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"tux"->Utils.str} </h2>
+        <Ion.Logos.tux /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"tux"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.twitch />
+        <Ion.Logos.twitch />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"twitch"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.twitter />
+        <Ion.Logos.twitter />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"twitter"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.usd />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"usd"->Utils.str} </h2>
+        <Ion.Logos.usd /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"usd"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.venmo />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"venmo"->Utils.str} </h2>
+        <Ion.Logos.venmo /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"venmo"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.vercel />
+        <Ion.Logos.vercel />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"vercel"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.vimeo />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"vimeo"->Utils.str} </h2>
+        <Ion.Logos.vimeo /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"vimeo"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.vk /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"vk"->Utils.str} </h2>
+        <Ion.Logos.vk /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"vk"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.vue />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"vue"->Utils.str} </h2>
+        <Ion.Logos.vue /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"vue"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.webComponent />
+        <Ion.Logos.webComponent />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"webComponent"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.weChat />
+        <Ion.Logos.weChat />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"weChat"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.whatsapp />
+        <Ion.Logos.whatsapp />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"whatsapp"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.windows />
+        <Ion.Logos.windows />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"windows"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.wordpress />
+        <Ion.Logos.wordpress />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"wordpress"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.xbox />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"xbox"->Utils.str} </h2>
+        <Ion.Logos.xbox /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"xbox"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.xing />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"xing"->Utils.str} </h2>
+        <Ion.Logos.xing /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"xing"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.yahoo />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"yahoo"->Utils.str} </h2>
+        <Ion.Logos.yahoo /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"yahoo"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.yen />
-        <h2 className={Tailwind.merge(.[Styles.h2])}> {"yen"->Utils.str} </h2>
+        <Ion.Logos.yen /> <h2 className={Tailwind.merge(.[Styles.h2])}> {"yen"->Utils.str} </h2>
       </div>
       <div className={Tailwind.merge(.[Styles.block])}>
-        <IonIcons.Logos.youtube />
+        <Ion.Logos.youtube />
         <h2 className={Tailwind.merge(.[Styles.h2])}> {"youtube"->Utils.str} </h2>
       </div>
     </div>

@@ -111,7 +111,7 @@ let default = () => {
           </svg>
           {"Button"->Utils.str}
         </button>
-        <IonIcons.Outline.add
+        <Ion.Outline.add
           className={Tailwind.merge(.[
             Tailwind.twStyle([Tailwind.textColor(#red400), Tailwind.fillCurrent]),
           ])}
