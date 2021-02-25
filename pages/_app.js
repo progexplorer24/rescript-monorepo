@@ -1,4 +1,30 @@
+import React from 'react'
 import ResApp from "src/App.bs.js"
+// import {make as TypographyLayoutRes} from "src/layouts/TypographyLayout.bs.js"
+import {
+  p as P,
+  h2 as H2,
+  h3 as H3,
+  h4 as H4,
+  blockquote as Blockquote,
+  ul as Ul,
+  ol as Ol,
+  li as Li,
+  wrapper as Wrapper,
+  pre as Pre,
+  inlineCode as InlineCode,
+  em as Em,
+  strong as Strong,
+  hr as Hr,
+  a as A,
+  img as Img,
+  table as Table,
+  thead as Thead,
+  tbody as Tbody,
+  tr as Tr,
+  td as Td
+} from "src/components/Mdx.bs.js"
+import {MDXProvider} from '@mdx-js/react'
 // TODO: Learn more about Fast Refresh
 // TODO: Change project structure
 // TODO: https://github.com/ryyppy/rescript-nextjs-template/pull/23
@@ -26,8 +52,36 @@ import ResApp from "src/App.bs.js"
 // If you don't do this, your Fast-Refresh will
 // not work!
 
+
+const components = {
+  p: ({children}) => <P>{children}</P>,
+  h2: ({children}) => <H2>{children}</H2>,
+  h3: ({children}) => <H3>{children}</H3>,
+  h4: ({children}) => <H4>{children}</H4>,
+  blockquote: ({children}) => <Blockquote>{children}</Blockquote>,
+  ol: ({children}) => <Ol>{children}</Ol>,
+  ul: ({children}) => <Ul>{children}</Ul>,
+  li: ({children}) => <Li>{children}</Li>,
+  wrapper: ({children}) => <Wrapper>{children}</Wrapper>,
+  pre: ({children}) => <Pre>{children}</Pre>,
+  inlineCode: ({children}) => <InlineCode>{children}</InlineCode>,
+  em: ({children}) => <Em>{children}</Em>,
+  strong: ({children}) => <Strong>{children}</Strong>,
+  hr: ({children}) => <Hr>{children}</Hr>,
+  a: ({children}) => <A>{children}</A>,
+  img: ({children, src}) => <Img src={src}>{children}</Img>,
+  table: ({children}) => <Table>{children}</Table>,
+  thead: ({children}) => <Thead>{children}</Thead>,
+  tbody: ({children}) => <Tbody>{children}</Tbody>,
+  tr: ({children}) => <Tr>{children}</Tr>,
+  td: ({children}) => <Td>{children}</Td>,
+}
 function App(props) {
-  return <ResApp {...props} />
+  return <MDXProvider components={components} >
+  <ResApp {...props} />
+</MDXProvider>
+  
+ 
   
 }
 
