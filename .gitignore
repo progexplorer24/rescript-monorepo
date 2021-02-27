@@ -45,3 +45,13 @@ _build
 *.bs.js
 .DS_Store
 out
+
+
+# yarn 
+.yarn/*
+!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
