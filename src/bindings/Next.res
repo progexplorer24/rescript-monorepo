@@ -12,14 +12,19 @@ module GetServerSideProps = {
   }
 
   // See: https://github.com/zeit/next.js/blob/canary/packages/next/types/index.d.ts
-  type context<'props, 'params> = {
+  type context<'props, 'params, 'previewData> = {
     params: Js.t<'params>,
     query: Js.Dict.t<string>,
+    preview: option<bool>, // preview is true if the page is in the preview mode and undefined otherwise.
+    previewData: Js.Nullable.t<'previewData>,
     req: Req.t,
     res: Res.t,
   }
 
-  type t<'props, 'params> = context<'props, 'params> => Js.Promise.t<{"props": 'props}>
+  // The definition of a getServerSideProps function
+  type t<'props, 'params, 'previewData> = context<'props, 'params, 'previewData> => Js.Promise.t<{
+    "props": 'props,
+  }>
 }
 
 module GetStaticProps = {
@@ -27,11 +32,10 @@ module GetStaticProps = {
   type context<'props, 'params, 'previewData> = {
     params: 'params,
     preview: option<bool>, // preview is true if the page is in the preview mode and undefined otherwise.
-    previewData: Js.t<'previewData>,
-    query: Js.Dict.t<string>,
-    req: Js.Nullable.t<Js.t<'props>>,
+    previewData: Js.Nullable.t<'previewData>,
   }
 
+  // The definition of a getStaticProps function
   type t<'props, 'params, 'previewData> = context<'props, 'params, 'previewData> => Js.Promise.t<{
     "props": 'props,
   }>
@@ -51,9 +55,9 @@ module GetStaticPaths = {
 }
 
 module Link = {
-  @bs.module("next/link") @react.component
+  @module("next/link") @react.component
   external make: (
-    ~href: string=?,
+    ~href: string,
     ~_as: string=?,
     ~prefetch: bool=?,
     ~replace: option<bool>=?,
@@ -70,10 +74,10 @@ module Router = {
   module Events = {
     type t
 
-    @bs.send
+    @send
     external on: (
       t,
-      @bs.string
+      @string
       [
         | #routeChangeStart(string => unit)
         | #routeChangeComplete(string => unit)
@@ -81,10 +85,10 @@ module Router = {
       ],
     ) => unit = "on"
 
-    @bs.send
+    @send
     external off: (
       t,
-      @bs.string
+      @string
       [
         | #routeChangeStart(string => unit)
         | #routeChangeComplete(string => unit)
@@ -97,36 +101,44 @@ module Router = {
     route: string,
     asPath: string,
     events: Events.t,
+    pathname: string,
     query: Js.Dict.t<string>,
   }
 
-  @bs.send external push: (router, string) => unit = "push"
+  type pathObj = {
+    pathname: string,
+    query: Js.Dict.t<string>,
+  }
 
-  @bs.module("next/router") external useRouter: unit => router = "useRouter"
-  @bs.send external replace: (router, string) => unit = "replace"
+  @send external push: (router, string) => unit = "push"
+  @send external pushObj: (router, pathObj) => unit = "push"
+
+  @module("next/router") external useRouter: unit => router = "useRouter"
+  @send external replace: (router, string) => unit = "replace"
+  @send external replaceObj: (router, pathObj) => unit = "replace"
 }
 
 module Head = {
-  @bs.module("next/head") @react.component
+  @module("next/head") @react.component
   external make: (~children: React.element) => React.element = "default"
 }
 
 module Error = {
-  @bs.module("next/error") @react.component
+  @module("next/error") @react.component
   external make: (~statusCode: int, ~children: React.element) => React.element = "default"
 }
 
 module Dynamic = {
-  @bs.deriving(abstract)
+  @deriving(abstract)
   type options = {
-    @bs.optional
+    @optional
     ssr: bool,
-    @bs.optional
+    @optional
     loading: unit => React.element,
   }
 
-  @bs.module("next/dynamic")
+  @module("next/dynamic")
   external dynamic: (unit => Js.Promise.t<'a>, options) => 'a = "default"
 
-  @bs.val external \"import": string => Js.Promise.t<'a> = "import"
+  @val external import_: string => Js.Promise.t<'a> = "import"
 }
