@@ -1,9 +1,3 @@
-// const withTM = require('next-transpile-modules')(['bs-platform'])
-
-// module.exports = withTM({
-//   pageExtensions: ['jsx', 'js', 'bs.js'],
-// })
-
 const bsconfig = require('./bsconfig.json');
 const withCSS = require('@zeit/next-css');
 
