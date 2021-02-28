@@ -1996,7 +1996,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/mdx@npm:^10.0.4":
+"@next/mdx@npm:^10.0.7":
   version: 10.0.7
   resolution: "@next/mdx@npm:10.0.7"
   peerDependencies:
@@ -8857,7 +8857,7 @@ fsevents@~2.3.1:
   resolution: "rescript-template@workspace:."
   dependencies:
     "@mdx-js/loader": ^1.6.22
-    "@next/mdx": ^10.0.4
+    "@next/mdx": ^10.0.7
     "@rescript/react": ^0.10.1
     "@tailwindcss/forms": ^0.2.1
     "@tailwindcss/postcss7-compat": ^2.0.2
