@@ -1,5 +1,4 @@
 const bsconfig = require('./bsconfig.json');
-// const withCSS = require('@zeit/next-css');
 
 // NOTE: https://forum.rescript-lang.org/t/purpose-alternatives-to-next-transpile-modules-in-next-rescript-projects/827/5
 const transpileModules = ["bs-platform"].concat(bsconfig["bs-dependencies"]);
