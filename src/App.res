@@ -510,15 +510,10 @@ let default = (props: props): React.element => {
 
   switch router.route {
   | "/" => content
-  | "/loruki/loruki" => content
-  | "/typography/typography_solution" => content
+  | "/loruki/" => content
+  | "/typography/" => content
+  | "/ionicons/" => content
+  | "/omnifood/" => content
   | _ => content
   }
 }
-
-// // import "../styles/base.css"
-// function MyApp({ Component, pageProps }) {
-//   return <Component {...pageProps} />
-// }
-
-// export default MyApp
