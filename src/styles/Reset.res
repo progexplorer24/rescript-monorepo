@@ -18,7 +18,7 @@ let addReset = () => {
 
   let _root = CssJs.global(.
     ":root",
-    [CssJs.unsafe("tab-size", "4"), CssJs.unsafe("-moz-tab-size", "4")],
+    [CssJs.unsafe("tabSize", "4"), CssJs.unsafe("MozTabSize", "4")],
   )
 
   /*
@@ -28,7 +28,7 @@ let addReset = () => {
 
   let _html = CssJs.global(.
     "html",
-    [CssJs.lineHeight(#abs(1.5)), CssJs.unsafe("-webkit-text-size-adjust", "100%")],
+    [CssJs.lineHeight(#abs(1.5)), CssJs.unsafe("WebkitTextSizeAdjust", "100%")],
   )
 
   /*
@@ -135,7 +135,7 @@ let addReset = () => {
 
   let _table = CssJs.global(.
     "table",
-    [CssJs.textIndent(#zero), CssJs.unsafe("border-color", "inherit")],
+    [CssJs.textIndent(#zero), CssJs.unsafe("borderColor", "inherit")],
   )
 
   /*
@@ -175,7 +175,7 @@ let addReset = () => {
   [type='button'],
   [type='reset'],
   [type='submit']",
-    [CssJs.unsafe("-webkit-appearance", "button")],
+    [CssJs.unsafe("WebkitAppearance", "button")],
   )
 
   /*
@@ -228,7 +228,7 @@ let addReset = () => {
 
   let _search = CssJs.global(.
     "[type='search']",
-    [CssJs.unsafe("-webkit-appearance", "textfield"), CssJs.outlineOffset(#px(-2))],
+    [CssJs.unsafe("WebkitAppearance", "textfield"), CssJs.outlineOffset(#px(-2))],
   )
 
   /*
@@ -236,7 +236,7 @@ let addReset = () => {
  */
   let _searchDecoration = CssJs.global(.
     "::-webkit-search-decoration",
-    [CssJs.unsafe("-webkit-appearance", "none")],
+    [CssJs.unsafe("WebkitAppearance", "none")],
   )
 
   /*
@@ -246,7 +246,7 @@ let addReset = () => {
 
   let _uploadButton = CssJs.global(.
     "::-webkit-file-upload-button",
-    [CssJs.unsafe("-webkit-appearance", "button"), CssJs.unsafe("font", "inherit")],
+    [CssJs.unsafe("WebkitAppearance", "button"), CssJs.unsafe("font", "inherit")],
   )
 
   /*

@@ -168,15 +168,15 @@ let overflowYScroll = [overflowY(#scroll)]
 
 // NOTE: Overscroll Behavior - Utilities for controlling how the browser behaves when reaching the boundary of a scrolling area.
 // TODO: Test if unsafe utilities are working
-let overscrollAuto = [CssJs.unsafe("overscroll-behavior", "auto")]
-let overscrollContain = [CssJs.unsafe("overscroll-behavior", "contain")]
-let overscrollNone = [CssJs.unsafe("overscroll-behavior", "none")]
-let overscrollYAuto = [CssJs.unsafe("overscroll-behavior-y", "auto")]
-let overscrollYContain = [CssJs.unsafe("overscroll-behavior-y", "contain")]
-let overscrollYNone = [CssJs.unsafe("overscroll-behavior-y", "none")]
-let overscrollXAuto = [CssJs.unsafe("overscroll-behavior-x", "auto")]
-let overscrollXContain = [CssJs.unsafe("overscroll-behavior-x", "contain")]
-let overscrollXNone = [CssJs.unsafe("overscroll-behavior-x", "none")]
+let overscrollAuto = [CssJs.unsafe("overscrollBehavior", "auto")]
+let overscrollContain = [CssJs.unsafe("overscrollBehavior", "contain")]
+let overscrollNone = [CssJs.unsafe("overscrollBehavior", "none")]
+let overscrollYAuto = [CssJs.unsafe("overscrollBehaviorY", "auto")]
+let overscrollYContain = [CssJs.unsafe("overscrollBehaviorY", "contain")]
+let overscrollYNone = [CssJs.unsafe("overscrollBehaviorY", "none")]
+let overscrollXAuto = [CssJs.unsafe("overscrollBehaviorX", "auto")]
+let overscrollXContain = [CssJs.unsafe("overscrollBehaviorX", "contain")]
+let overscrollXNone = [CssJs.unsafe("overscrollBehaviorX", "none")]
 
 // NOTE: Position - Utilities for controlling how an element is positioned in the DOM.
 let static = [position(#static)]
@@ -333,7 +333,7 @@ type zIndex = Theme.ZIndex.t
 type index = [zIndex | #auto]
 let z = (index: index) =>
   switch index {
-  | #auto => [CssJs.unsafe("z-index", "auto")]
+  | #auto => [CssJs.unsafe("zIndex", "auto")]
   | #...zIndex as z => [zIndex(Theme.ZIndex.toValue(z))]
   }
 
@@ -373,7 +373,7 @@ type gridColumnType = [#none | gCols]
 
 let gridCols = columns =>
   switch columns {
-  | #none => [CssJs.unsafe("grid-template-columns", "none")]
+  | #none => [CssJs.unsafe("gridTemplateColumns", "none")]
   | #...gCols as cols => [gridTemplateColumns(Theme.GridCols.toValue(cols))]
   }
 
@@ -382,15 +382,15 @@ type spanType = Theme.ColSpan.t
 type colStartEnd = Theme.ColStart.t
 type colStartEndType = [#auto | colStartEnd]
 
-let col = column => [CssJs.unsafe("grid-column", Theme.ColSpan.toValue(column))]
+let col = column => [CssJs.unsafe("gridColumn", Theme.ColSpan.toValue(column))]
 let colStart = (cols: colStartEndType) =>
   switch cols {
-  | #auto => [CssJs.unsafe("grid-column-start", "auto")]
+  | #auto => [CssJs.unsafe("gridColumnStart", "auto")]
   | #...colStartEnd as cs => [gridColumnStart(Theme.ColStart.toValue(cs))]
   }
 let colEnd = (cols: colStartEndType) =>
   switch cols {
-  | #auto => [CssJs.unsafe("grid-column-end", "auto")]
+  | #auto => [CssJs.unsafe("gridColumnEnd", "auto")]
   | #...colStartEnd as cs => [gridColumnEnd(Theme.ColStart.toValue(cs))]
   }
 
@@ -400,7 +400,7 @@ type gridRowsType = [#none | gRows]
 
 let gridRows = (rows: gridRowsType) =>
   switch rows {
-  | #none => [CssJs.unsafe("grid-template-rows", "none")]
+  | #none => [CssJs.unsafe("gridTemplateRows", "none")]
   | #...gRows as r => [gridTemplateRows(Theme.GridRows.toValue(r))]
   }
 
@@ -409,9 +409,9 @@ type rowSpan = Theme.RowSpan.t
 type rowSpanType = [rowSpan | #auto | #full]
 let row = count =>
   switch count {
-  | #auto => [CssJs.unsafe("grid-row", "auto")]
+  | #auto => [CssJs.unsafe("gridRow", "auto")]
   | #full => [gridRow(1, -1)]
-  | #...rowSpan as rs => [CssJs.unsafe("grid-row", Theme.RowSpan.toValue(rs))]
+  | #...rowSpan as rs => [CssJs.unsafe("gridRow", Theme.RowSpan.toValue(rs))]
   }
 
 type rowS = Theme.Row.t
@@ -419,13 +419,13 @@ type rowStartEnd = [rowS | #auto]
 
 let rowStart = (rows: rowStartEnd) =>
   switch rows {
-  | #auto => [CssJs.unsafe("grid-row-start", "auto")]
+  | #auto => [CssJs.unsafe("gridRowStart", "auto")]
   | #...rowS as r => [gridRowStart(Theme.Row.toValue(r))]
   }
 
 let rowEnd = (rows: rowStartEnd) =>
   switch rows {
-  | #auto => [CssJs.unsafe("grid-row-end", "auto")]
+  | #auto => [CssJs.unsafe("gridRowEnd", "auto")]
   | #...rowS as r => [gridRowEnd(Theme.Row.toValue(r))]
   }
 
@@ -463,11 +463,11 @@ let justifyAround = [justifyContent(#spaceAround)]
 let justifyEvenly = [justifyContent(#spaceEvenly)]
 
 // NOTE: Justify Items - Utilities for controlling how grid items are aligned along their inline axis.
-let justifyItemsAuto = [CssJs.unsafe("justify-items", "auto")]
+let justifyItemsAuto = [CssJs.unsafe("justifyItems", "auto")]
 let justifyItemsStart = [justifyItems(#start)]
 let justifyItemsEnd = [justifyItems(#end_)]
 let justifyItemsCenter = [justifyItems(#center)]
-let justifyItemsStretch = [CssJs.unsafe("justify-items", "stretch")]
+let justifyItemsStretch = [CssJs.unsafe("justifyItems", "stretch")]
 
 // NOTE: Justify Self - Utilities for controlling how an individual grid item is aligned along its inline axis.
 let justifySelfAuto = [justifySelf(#auto)]
@@ -500,29 +500,29 @@ let selfStretch = [alignSelf(#stretch)]
 
 // NOTE: Place Content - Utilities for controlling how content is justified and aligned at the same time.
 // TODO: Test if unsafe utilities are working
-let placeContentCenter = [CssJs.unsafe("place-content", "center")]
-let placeContentStart = [CssJs.unsafe("place-content", "start")]
-let placeContentBetween = [CssJs.unsafe("place-content", "end")]
-let placeContentEnd = [CssJs.unsafe("place-content", "space-between")]
-let placeContentAround = [CssJs.unsafe("place-content", "space-around")]
-let placeContentEvenly = [CssJs.unsafe("place-content", "space-evenly")]
-let placeContentStretch = [CssJs.unsafe("place-content", "stretch")]
+let placeContentCenter = [CssJs.unsafe("placeContent", "center")]
+let placeContentStart = [CssJs.unsafe("placeContent", "start")]
+let placeContentBetween = [CssJs.unsafe("placeContent", "end")]
+let placeContentEnd = [CssJs.unsafe("placeContent", "space-between")]
+let placeContentAround = [CssJs.unsafe("placeContent", "space-around")]
+let placeContentEvenly = [CssJs.unsafe("placeContent", "space-evenly")]
+let placeContentStretch = [CssJs.unsafe("placeContent", "stretch")]
 
 // NOTE: Place Items - Utilities for controlling how items are justified and aligned at the same time.
 // TODO: Test if unsafe utilities are working
-let placeItemsAuto = [CssJs.unsafe("place-items", "auto")]
-let placeItemsStart = [CssJs.unsafe("place-items", "start")]
-let placeItemsEnd = [CssJs.unsafe("place-items", "end")]
-let placeItemsCenter = [CssJs.unsafe("place-items", "center")]
-let placeItemsStretch = [CssJs.unsafe("place-items", "stretch")]
+let placeItemsAuto = [CssJs.unsafe("placeItems", "auto")]
+let placeItemsStart = [CssJs.unsafe("placeItems", "start")]
+let placeItemsEnd = [CssJs.unsafe("placeItems", "end")]
+let placeItemsCenter = [CssJs.unsafe("placeItems", "center")]
+let placeItemsStretch = [CssJs.unsafe("placeItems", "stretch")]
 
 // NOTE: Place Self - Utilities for controlling how an individual item is justified and aligned at the same time.
 // TODO: Test if unsafe utilities are working
-let placeSelfAuto = [CssJs.unsafe("place-self", "auto")]
-let placeSelfStart = [CssJs.unsafe("place-self", "start")]
-let placeSelfEnd = [CssJs.unsafe("place-self", "end")]
-let placeSelfCenter = [CssJs.unsafe("place-self", "center")]
-let placeSelfStretch = [CssJs.unsafe("place-self", "stretch")]
+let placeSelfAuto = [CssJs.unsafe("placeSelf", "auto")]
+let placeSelfStart = [CssJs.unsafe("placeSelf", "start")]
+let placeSelfEnd = [CssJs.unsafe("placeSelf", "end")]
+let placeSelfCenter = [CssJs.unsafe("placeSelf", "center")]
+let placeSelfStretch = [CssJs.unsafe("placeSelf", "stretch")]
 
 // INFO: SPACING
 // NOTE: Padding - Utilities for controlling an element's padding.
@@ -630,8 +630,8 @@ let w = (width: spacingWidth) =>
 // NOTE:  Min-Width - Utilities for setting the minimum width of an element
 let minW0 = [minWidth(#px(0))]
 let minWFull = [minWidth(#percent(100.))]
-let minWMin = [CssJs.unsafe("min-width", "min-content")]
-let minWMax = [CssJs.unsafe("min-width", "max-content")]
+let minWMin = [CssJs.unsafe("minWidth", "min-content")]
+let minWMax = [CssJs.unsafe("minWidth", "max-content")]
 
 // NOTE: Max-Width - Utilities for setting the maximum width of an element
 type widths = Theme.MaxWidth.t
@@ -640,8 +640,8 @@ type maxWidth = [widths | screens | #minContent | #maxContent]
 
 let maxW = (max: maxWidth) =>
   switch max {
-  | #minContent => [CssJs.unsafe("max-width", "min-content")]
-  | #maxContent => [CssJs.unsafe("max-width", "max-content")]
+  | #minContent => [CssJs.unsafe("maxWidth", "min-content")]
+  | #maxContent => [CssJs.unsafe("maxWidth", "max-content")]
   | #...widths as wd => [maxWidth(Theme.MaxWidth.toValue(wd))]
   | #...screens as sc => [maxWidth(Theme.Screens.toValue(sc))]
   }
@@ -739,15 +739,15 @@ let noItalic = [fontStyle(#normal)]
 let fontWeight = weight => [CssJs.fontWeight(Theme.FontWeight.toValue(weight))]
 
 // NOTE: Font Variant Numeric - Utilities for controlling the variant of numbers.
-let normalNums = [CssJs.unsafe("font-variant-numeric", "normal")]
-let ordinal = [CssJs.unsafe("font-variant-numeric", "ordinal")]
-let slashedZero = [CssJs.unsafe("font-variant-numeric", "slashed-zero")]
-let liningNums = [CssJs.unsafe("font-variant-numeric", "lining-nums")]
-let oldstyleNums = [CssJs.unsafe("font-variant-numeric", "oldstyle-nums")]
-let proportionalNums = [CssJs.unsafe("font-variant-numeric", "proportional-nums")]
-let tabularNums = [CssJs.unsafe("font-variant-numeric", "tabular-nums")]
-let diagonalFractions = [CssJs.unsafe("font-variant-numeric", "diagonal-fractions")]
-let stackedFractions = [CssJs.unsafe("font-variant-numeric", "stacked-fractions")]
+let normalNums = [CssJs.unsafe("fontVariantNumeric", "normal")]
+let ordinal = [CssJs.unsafe("fontVariantNumeric", "ordinal")]
+let slashedZero = [CssJs.unsafe("fontVariantNumeric", "slashed-zero")]
+let liningNums = [CssJs.unsafe("fontVariantNumeric", "lining-nums")]
+let oldstyleNums = [CssJs.unsafe("fontVariantNumeric", "oldstyle-nums")]
+let proportionalNums = [CssJs.unsafe("fontVariantNumeric", "proportional-nums")]
+let tabularNums = [CssJs.unsafe("fontVariantNumeric", "tabular-nums")]
+let diagonalFractions = [CssJs.unsafe("fontVariantNumeric", "diagonal-fractions")]
+let stackedFractions = [CssJs.unsafe("fontVariantNumeric", "stacked-fractions")]
 
 // NOTE: Letter Spacing - Utilities for controlling the tracking (letter spacing) of an element.
 let tracking = wide => [letterSpacing(Theme.LetterSpacing.toValue(wide))]
@@ -804,8 +804,8 @@ let alignBaseline = [verticalAlign(#baseline)]
 let alignTop = [verticalAlign(#top)]
 let alignMiddle = [verticalAlign(#middle)]
 let alignBottom = [verticalAlign(#bottom)]
-let alignTextTop = [CssJs.unsafe("vertical-align", "text-top")]
-let alignTextBottom = [CssJs.unsafe("vertical-align", "text-bottom")]
+let alignTextTop = [CssJs.unsafe("verticalAlign", "text-top")]
+let alignTextBottom = [CssJs.unsafe("verticalAlign", "text-bottom")]
 
 // NOTE: Whitespace - Utilities for controlling an element's white-space property.
 let whitespaceNormal = [whiteSpace(#normal)]
@@ -829,7 +829,7 @@ let bgScroll = [backgroundAttachment(#scroll)]
 let bgClipBorder = [backgroundClip(#borderBox)]
 let bgClipPadding = [backgroundClip(#paddingBox)]
 let bgClipContent = [backgroundClip(#contentBox)]
-let bgClipText = [CssJs.unsafe("background-clip", "text")]
+let bgClipText = [CssJs.unsafe("backgroundClip", "text")]
 
 // NOTE: Background Color - Utilities for controlling an element's background color.
 let bg = (~opacity=1., color: colorType) => [backgroundColor(Theme.Colors.toColor(color, ~opacity))]
@@ -882,28 +882,28 @@ let toL = colorList => CssJs.Types.Gradient.toString(CssJs.linearGradient(deg(27
 let toTl = colorList => linGradient("to top left", colorList)
 
 let bgGradientToT = (colorList: list<colorTuple>) => [
-  CssJs.unsafe("background-image", toT(colorList)),
+  CssJs.unsafe("backgroundImage", toT(colorList)),
 ]
 let bgGradientToTr = (colorList: list<colorTuple>) => [
-  CssJs.unsafe("background-image", toTr(colorList)),
+  CssJs.unsafe("backgroundImage", toTr(colorList)),
 ]
 let bgGradientToR = (colorList: list<colorTuple>) => [
-  CssJs.unsafe("background-image", toR(colorList)),
+  CssJs.unsafe("backgroundImage", toR(colorList)),
 ]
 let bgGradientToBr = (colorList: list<colorTuple>) => [
-  CssJs.unsafe("background-image", toBr(colorList)),
+  CssJs.unsafe("backgroundImage", toBr(colorList)),
 ]
 let bgGradientToB = (colorList: list<colorTuple>) => [
-  CssJs.unsafe("background-image", toB(colorList)),
+  CssJs.unsafe("backgroundImage", toB(colorList)),
 ]
 let bgGradientToBl = (colorList: list<colorTuple>) => [
-  CssJs.unsafe("background-image", toBl(colorList)),
+  CssJs.unsafe("backgroundImage", toBl(colorList)),
 ]
 let bgGradientToL = (colorList: list<colorTuple>) => [
-  CssJs.unsafe("background-image", toL(colorList)),
+  CssJs.unsafe("backgroundImage", toL(colorList)),
 ]
 let bgGradientToTl = (colorList: list<colorTuple>) => [
-  CssJs.unsafe("background-image", toTl(colorList)),
+  CssJs.unsafe("backgroundImage", toTl(colorList)),
 ]
 
 // INFO: BORDERS
