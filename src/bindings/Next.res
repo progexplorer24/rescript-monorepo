@@ -6,9 +6,9 @@ module GetServerSideProps = {
   module Res = {
     type t
 
-    @bs.send external setHeader: (t, string, string) => unit = "setHeader"
-    @bs.send external write: (t, string) => unit = "write"
-    @bs.send external end_: t => unit = "end"
+    @send external setHeader: (t, string, string) => unit = "setHeader"
+    @send external write: (t, string) => unit = "write"
+    @send external end_: t => unit = "end"
   }
 
   // See: https://github.com/zeit/next.js/blob/canary/packages/next/types/index.d.ts
