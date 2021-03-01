@@ -203,9 +203,30 @@ module Styles = {
 
   // TODO: Add hamburger icon toggle animation
 }
+// let styles = Emotion.css(. "background-color: hotpink;")
+// let styles2 = Emotion.css(. "color: blue;")
+// let bounce = Emotion.keyframes(. "
+// from, 20%, 53%, 80%, to {
+//     transform: translate3d(0,0,0);
+//   }
+
+//   40%, 43% {
+//     transform: translate3d(0, -30px, 0);
+//   }
+
+//   70% {
+//     transform: translate3d(0, -15px, 0);
+//   }
+
+//   90% {
+//     transform: translate3d(0,-4px,0);
+//   }")
+
+// let styles3 = Emotion.css(. `animation: ${bounce} 1s ease infinite;`)
+// Js.log(styles)
 
 let default = () => {
-  // TODO: Stop animation when mouse leaves window. Use onMouseLeave and onMouseEnter
+  // INFO: Stop animation when mouse leaves window. Use onMouseLeave and onMouseEnter
   useStopAnimationJank()
 
   <div>
