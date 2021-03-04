@@ -176,6 +176,7 @@ module Styles = {
       height(#percent(100.)),
       display(#flex),
       alignItems(#center),
+      // Css.alignContent(#center),
     ]),
     toggleLabel800,
   ])
@@ -224,6 +225,7 @@ module Styles = {
 
 // let styles3 = Emotion.css(. `animation: ${bounce} 1s ease infinite;`)
 // Js.log(styles)
+let styles = Emotion.css(. Css.alignContent(#center))
 
 let default = () => {
   // INFO: Stop animation when mouse leaves window. Use onMouseLeave and onMouseEnter
@@ -237,6 +239,7 @@ let default = () => {
       <header className=Styles.header>
         <h1 className=Styles.logo> {"Logo"->str} </h1>
         // Order is important !
+        <div className=styles />
         <input type_="checkbox" className=Styles.navToggle name="nav-toggle" id="nav-toggle" />
         <label htmlFor="nav-toggle" className=Styles.toggleLabel>
           <span className=Styles.toggleLabelSpan />
