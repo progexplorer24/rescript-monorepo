@@ -16,13 +16,14 @@ import {
   em as Em,
   strong as Strong,
   hr as Hr,
-  a as A,
+  a as Link,
   img as Img,
   table as Table,
   thead as Thead,
   tbody as Tbody,
   tr as Tr,
-  td as Td
+  td as Td,
+  lead as Lead,
 } from "src/components/Mdx.bs.js"
 import {MDXProvider} from '@mdx-js/react'
 // TODO: Learn more about Fast Refresh
@@ -68,13 +69,16 @@ const components = {
   em: ({children}) => <Em>{children}</Em>,
   strong: ({children}) => <Strong>{children}</Strong>,
   hr: ({children}) => <Hr>{children}</Hr>,
-  a: ({children}) => <A>{children}</A>,
+  a: ({children, ...props}) => <Link {...props}>{children}</Link>,
   img: ({children, src}) => <Img src={src}>{children}</Img>,
   table: ({children}) => <Table>{children}</Table>,
   thead: ({children}) => <Thead>{children}</Thead>,
   tbody: ({children}) => <Tbody>{children}</Tbody>,
   tr: ({children}) => <Tr>{children}</Tr>,
   td: ({children}) => <Td>{children}</Td>,
+  Lead,
+  Img,
+  Link,
 }
 function App(props) {
   return <MDXProvider components={components} >

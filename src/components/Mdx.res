@@ -14,7 +14,7 @@ module Styles = {
   let proseLg = twStyle([lg([Typography.fontSize(baseLg), Typography.leading(32., baseLg)])])
   let proseXl = twStyle([xl([Typography.fontSize(baseXl), Typography.leading(40., baseXl)])])
 
-  let prose = merge(.[proseBase, proseSm, proseLg, proseXl, proseFirstChild, proseLastChild])
+  let prose = merge(. [proseBase, proseSm, proseLg, proseXl, proseFirstChild, proseLastChild])
 
   // NOTE: Solution for sm screen size
   let paragraphBase = twStyle([
@@ -26,7 +26,7 @@ module Styles = {
   let paragraphLg = twStyle([lg([Typography.my(24., baseLg)])])
   let paragraphXl = twStyle([xl([Typography.my(32., baseXl)])])
 
-  let paragraph = merge(.[paragraphBase, paragraphSm, paragraphLg, paragraphXl])
+  let paragraph = merge(. [paragraphBase, paragraphSm, paragraphLg, paragraphXl])
 
   let rebaseLead = 18.
   let rebaseLeadSm = 20.
@@ -62,7 +62,7 @@ module Styles = {
     ]),
   ])
 
-  let lead = merge(.[leadBase, leadSm, leadLg, leadXl])
+  let lead = merge(. [leadBase, leadSm, leadLg, leadXl])
 
   let link = twStyle([textColor(#coolGray900), underline, fontWeight(#v500)])
 
@@ -83,7 +83,7 @@ module Styles = {
   let hrLg = twStyle([lg([Typography.my(56., baseLg)])])
   let hrXl = twStyle([xl([Typography.my(72., baseXl)])])
 
-  let hr = merge(.[hrBase, hrSm, hrLg, hrXl])
+  let hr = merge(. [hrBase, hrSm, hrLg, hrXl])
 
   // TODO: Check what happens when you add multiple paragraphs
 
@@ -120,7 +120,7 @@ module Styles = {
     xl([Typography.my(64., rebaseBlockquoteXl), Typography.pl(40., rebaseBlockquoteXl)]),
   ])
 
-  let blockquote = merge(.[blockquoteBase, blockquoteSm, blockquoteLg, blockquoteXl])
+  let blockquote = merge(. [blockquoteBase, blockquoteSm, blockquoteLg, blockquoteXl])
 
   let rebaseCode = 12.
   let rebaseCodeSm = 14.
@@ -139,7 +139,7 @@ module Styles = {
   let codeLg = twStyle([lg([Typography.fontSize(rebaseCodeLg)])])
   let codeXl = twStyle([xl([Typography.fontSize(rebaseCodeXl)])])
 
-  let code = merge(.[codeBase, codeSm, codeLg, codeXl])
+  let code = merge(. [codeBase, codeSm, codeLg, codeXl])
 
   // EDGE CASE: Code element inside h2 & h3
   let codeInsideH2Base = twStyle([selector("& code", [Typography.fontSize(18.)])])
@@ -152,8 +152,8 @@ module Styles = {
   let codeInsideH3Lg = twStyle([lg([selector("& code", [Typography.fontSize(21.)])])])
   let codeInsideH3Xl = twStyle([xl([selector("& code", [Typography.fontSize(32.)])])])
 
-  let codeInsideH2 = merge(.[codeInsideH2Base, codeInsideH2Sm, codeInsideH2Lg, codeInsideH2Xl])
-  let codeInsideH3 = merge(.[codeInsideH3Base, codeInsideH3Sm, codeInsideH3Lg, codeInsideH3Xl])
+  let codeInsideH2 = merge(. [codeInsideH2Base, codeInsideH2Sm, codeInsideH2Lg, codeInsideH2Xl])
+  let codeInsideH3 = merge(. [codeInsideH3Base, codeInsideH3Sm, codeInsideH3Lg, codeInsideH3Xl])
 
   // sm      h1: {
   //         fontSize: em(36, 16),
@@ -187,7 +187,7 @@ module Styles = {
   let rebaseH2Lg = 30.
   let rebaseH2Xl = 48.
 
-  let h2Base = merge(.[
+  let h2Base = merge(. [
     twStyle([
       textColor(#coolGray900),
       fontWeight(#v700),
@@ -227,14 +227,14 @@ module Styles = {
     ]),
   ])
 
-  let h2 = merge(.[h2Base, h2Sm, h2Lg, h2Xl])
+  let h2 = merge(. [h2Base, h2Sm, h2Lg, h2Xl])
 
   let rebaseH3 = 18.
   let rebaseH3Sm = 20.
   let rebaseH3Lg = 24.
   let rebaseH3Xl = 36.
 
-  let h3Base = merge(.[
+  let h3Base = merge(. [
     twStyle([
       textColor(#coolGray900),
       fontWeight(#v600),
@@ -274,7 +274,7 @@ module Styles = {
     ]),
   ])
 
-  let h3 = merge(.[h3Base, h3Sm, h3Lg, h3Xl])
+  let h3 = merge(. [h3Base, h3Sm, h3Lg, h3Xl])
 
   let h4Base = twStyle([
     Typography.leading(20., base),
@@ -297,7 +297,7 @@ module Styles = {
     xl([Typography.mt(40., baseXl), Typography.mb(16., baseXl), Typography.leading(36., baseXl)]),
   ])
 
-  let h4 = merge(.[h4Base, h4Sm, h4Lg, h4Xl])
+  let h4 = merge(. [h4Base, h4Sm, h4Lg, h4Xl])
 
   let rebasePre = 12.
   let rebasePreSm = 14.
@@ -369,7 +369,7 @@ module Styles = {
     ]),
   ])
 
-  let pre = merge(.[preBase, preSm, preLg, preXl])
+  let pre = merge(. [preBase, preSm, preLg, preXl])
 
   // INFO: List Styles
 
@@ -377,13 +377,13 @@ module Styles = {
   let nestedListSm = twStyle([sm([selector("& ul, & ol", [Typography.my(12., baseSm)])])])
   let nestedListLg = twStyle([lg([selector("& ul, & ol", [Typography.my(16., baseLg)])])])
   let nestedListXl = twStyle([xl([selector("& ul, & ol", [Typography.my(16., baseXl)])])])
-  let nestedList = merge(.[nestedListBase, nestedListSm, nestedListLg, nestedListXl])
+  let nestedList = merge(. [nestedListBase, nestedListSm, nestedListLg, nestedListXl])
 
   let listPaddingBase = twStyle([Typography.my(16., base)])
   let listPaddingSm = twStyle([sm([Typography.my(20., baseSm)])])
   let listPaddingLg = twStyle([lg([Typography.my(24., baseLg)])])
   let listPaddingXl = twStyle([xl([Typography.my(32., baseXl)])])
-  let listPadding = merge(.[listPaddingBase, listPaddingSm, listPaddingLg, listPaddingXl])
+  let listPadding = merge(. [listPaddingBase, listPaddingSm, listPaddingLg, listPaddingXl])
 
   // | #circle
   // | #decimal
@@ -441,7 +441,7 @@ module Styles = {
     ]),
   ])
 
-  let li = merge(.[liBase, liSm, liLg, liXl])
+  let li = merge(. [liBase, liSm, liLg, liXl])
 
   type listStyleType = [
     | #decimal
@@ -486,9 +486,9 @@ module Styles = {
   let olItemsLg = twStyle([lg([selector("& > li", [Typography.pl(30., baseLg)])])])
   let olItemsXl = twStyle([xl([selector("& > li", [Typography.pl(40., baseXl)])])])
 
-  let olItems = merge(.[olItemsBase(#decimal), olItemsSm, olItemsLg, olItemsXl])
+  let olItems = merge(. [olItemsBase(#decimal), olItemsSm, olItemsLg, olItemsXl])
 
-  let ol = merge(.[listPadding, olItems, nestedList])
+  let ol = merge(. [listPadding, olItems, nestedList])
 
   let ulElementsBase = twStyle([
     selector(
@@ -556,16 +556,16 @@ module Styles = {
     ]),
   ])
 
-  let ulElements = merge(.[ulElementsBase, ulElementsSm, ulElementsLg, ulElementsXl])
+  let ulElements = merge(. [ulElementsBase, ulElementsSm, ulElementsLg, ulElementsXl])
 
   let liParagraphBase = twStyle([selector("& > li p", [Typography.my(8., base)])])
   let liParagraphSm = twStyle([sm([selector("& > li p", [Typography.my(12., baseSm)])])])
   let liParagraphLg = twStyle([lg([selector("& > li p", [Typography.my(16., baseLg)])])])
   let liParagraphXl = twStyle([xl([selector("& > li p", [Typography.my(20., baseXl)])])])
 
-  let liParagraph = merge(.[liParagraphBase, liParagraphSm, liParagraphLg, liParagraphXl])
+  let liParagraph = merge(. [liParagraphBase, liParagraphSm, liParagraphLg, liParagraphXl])
 
-  let ul = merge(.[listPadding, ulElements, liParagraph, nestedList])
+  let ul = merge(. [listPadding, ulElements, liParagraph, nestedList])
   // HACK: Increase specifity because styles are not applied
   let anyChild = selector("&& > *", [my(#v0)])
 
@@ -625,7 +625,7 @@ module Styles = {
     ]),
   ])
 
-  let figureFigcaption = merge(.[
+  let figureFigcaption = merge(. [
     figureFigcaptionBase,
     figureFigcaptionSm,
     figureFigcaptionLg,
@@ -647,20 +647,20 @@ module Styles = {
   //   marginBottom: em(48, 24),
   // },
 
-  let figureBase = merge(.[twStyle([Typography.my(24., base), anyChild]), figureFigcaption])
+  let figureBase = merge(. [twStyle([Typography.my(24., base), anyChild]), figureFigcaption])
 
   let figureSm = twStyle([sm([Typography.my(32., baseSm)])])
   let figureLg = twStyle([lg([Typography.my(32., baseLg)])])
   let figureXl = twStyle([xl([Typography.my(48., baseXl)])])
 
-  let figure = merge(.[figureBase, figureSm, figureLg, figureXl])
+  let figure = merge(. [figureBase, figureSm, figureLg, figureXl])
 
   let imgBase = twStyle([Typography.my(24., base)])
   let imgSm = twStyle([sm([Typography.my(32., baseSm)])])
   let imgLg = twStyle([lg([Typography.my(32., baseLg)])])
   let imgXl = twStyle([xl([Typography.my(48., baseXl)])])
 
-  let img = merge(.[imgBase, imgSm, imgLg, imgXl])
+  let img = merge(. [imgBase, imgSm, imgLg, imgXl])
 
   let rebaseTable = 12.
   let rebaseTableSm = 14.
@@ -686,7 +686,7 @@ module Styles = {
     xl([Typography.fontSize(rebaseTableXl), Typography.leading(28., rebaseTableXl)]),
   ])
 
-  let table = merge(.[tableBase, tableSm, tableLg, tableXl])
+  let table = merge(. [tableBase, tableSm, tableLg, tableXl])
 
   let theadThBase = twStyle([
     selector(
@@ -713,9 +713,9 @@ module Styles = {
     xl([selector("& th", [Typography.px(12., rebaseTableXl), Typography.pb(16., rebaseTableXl)])]),
   ])
 
-  let theadTh = merge(.[theadThBase, theadThSm, theadThLg, theadThXl])
+  let theadTh = merge(. [theadThBase, theadThSm, theadThLg, theadThXl])
 
-  let thead = merge(.[
+  let thead = merge(. [
     theadTh,
     twStyle([textColor(#coolGray900), fontWeight(#v600), borderB(#v1), borderColor(#coolGray300)]),
   ])
@@ -746,143 +746,122 @@ module Styles = {
     xl([selector("& td", [Typography.py(16., rebaseTableXl), Typography.px(12., rebaseTableXl)])]),
   ])
 
-  let tbodyTd = merge(.[tbodyTdBase, tbodyTdSm, tbodyTdLg, tbodyTdXl])
+  let tbodyTd = merge(. [tbodyTdBase, tbodyTdSm, tbodyTdLg, tbodyTdXl])
 
   let tbodyTr = selector(
     "& tr",
     [borderB(#v1), borderColor(#coolGray300), lastChild([borderB(#v0)])],
   )
 
-  let tbody = merge(.[tbodyTd, twStyle([tbodyTr])])
+  let tbody = merge(. [tbodyTd, twStyle([tbodyTr])])
 }
 
 // REGION: Mdx Components
 
 @react.component
 let lead = (~children, ~className="") =>
-  <p className={Tailwind.merge(.[Styles.lead, className])}> children </p>
+  <p className={Tailwind.merge(. [Styles.lead, className])}> children </p>
 
 @react.component
 let wrapper = (~children) =>
   <TypographyLayout>
-    <article> <div className={Tailwind.merge(.[Styles.prose])}> children </div> </article>
+    <article> <div className={Tailwind.merge(. [Styles.prose])}> children </div> </article>
   </TypographyLayout>
 
 @react.component
 let p = (~children, ~className="") =>
-  <p className={Tailwind.merge(.[Styles.paragraph, className])}> children </p>
+  <p className={Tailwind.merge(. [Styles.paragraph, className])}> children </p>
 
 @react.component
 let h2 = (~children, ~className="") =>
-  <h2 className={Tailwind.merge(.[Styles.h2, className])}> children </h2>
+  <h2 className={Tailwind.merge(. [Styles.h2, className])}> children </h2>
 
 @react.component
 let h3 = (~children, ~className="") =>
-  <h3 className={Tailwind.merge(.[Styles.h3, className])}> children </h3>
+  <h3 className={Tailwind.merge(. [Styles.h3, className])}> children </h3>
 
 @react.component
 let h4 = (~children, ~className="") =>
-  <h4 className={Tailwind.merge(.[Styles.h4, className])}> children </h4>
+  <h4 className={Tailwind.merge(. [Styles.h4, className])}> children </h4>
 
 @react.component
 let blockquote = (~children, ~className="") =>
-  <blockquote className={Tailwind.merge(.[Styles.blockquote, className])}> children </blockquote>
+  <blockquote className={Tailwind.merge(. [Styles.blockquote, className])}> children </blockquote>
 
 // REGION: List elements
 
 @react.component
 let ul = (~children, ~className="") =>
-  <ul className={Tailwind.merge(.[Styles.ul, className])}> children </ul>
+  <ul className={Tailwind.merge(. [Styles.ul, className])}> children </ul>
 
 @react.component
 let ol = (~children, ~className="") =>
-  <ol className={Tailwind.merge(.[Styles.ol, className])}> children </ol>
+  <ol className={Tailwind.merge(. [Styles.ol, className])}> children </ol>
 
 @react.component
 let li = (~children, ~className="") =>
-  <li className={Tailwind.merge(.[Styles.li, className])}> children </li>
+  <li className={Tailwind.merge(. [Styles.li, className])}> children </li>
 
 @react.component
 let pre = (~children, ~className="") =>
-  <pre className={Tailwind.merge(.[Styles.pre, className])}> <code> children </code> </pre>
+  <pre className={Tailwind.merge(. [Styles.pre, className])}> <code> children </code> </pre>
 
 @react.component
 let inlineCode = (~children, ~className="") =>
-  <code className={Tailwind.merge(.[Styles.code, className])}> children </code>
+  <code className={Tailwind.merge(. [Styles.code, className])}> children </code>
 
 @react.component
 let em = (~children, ~className="") => <em className> children </em>
 
 @react.component
 let strong = (~children, ~className="") =>
-  <strong className={Tailwind.merge(.[Styles.strong, className])}> children </strong>
+  <strong className={Tailwind.merge(. [Styles.strong, className])}> children </strong>
 
 // @react.component
 // let del = (~children, ~className="") => <del className> children </del>
 
 @react.component
-let hr = (~className="") => <hr className={Tailwind.merge(.[Styles.hr, className])} />
+let hr = (~className="") => <hr className={Tailwind.merge(. [Styles.hr, className])} />
 
 @react.component
-let a = (~children, ~href, ~className="") =>
-  <a href className={Tailwind.merge(.[Styles.link, className])}> children </a>
+let a = (~children, ~href, ~className="", ~internal=false) =>
+  internal
+    ? <Next.Link href>
+        <a className={Tailwind.merge(. [Styles.link, className])}> children </a>
+      </Next.Link>
+    : <a href target="_blank" className={Tailwind.merge(. [Styles.link, className])}> children </a>
 
 @react.component
-let img = (~src, ~alt="", ~className="") =>
+let img = (~src, ~alt="", ~className="", ~figcaption=?) => {
+  let figcaptionElement = switch figcaption {
+  | None => React.null
+  | Some(string) => <figcaption> {string->Utils.str} </figcaption>
+  }
+
   <figure className=Styles.figure>
-    <img src alt className={Tailwind.merge(.[Styles.img, className])} />
-    <figcaption>
-      {"Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old."->Utils.str}
-    </figcaption>
+    <Next.Image
+      src alt width=1920 height=1271 className={Tailwind.merge(. [Styles.img, className])}
+    />
+    figcaptionElement
   </figure>
+}
 
 // REGION: Table elements
 
 @react.component
 let table = (~children, ~className="") =>
-  <table className={Tailwind.merge(.[Styles.table, className])}> children </table>
+  <table className={Tailwind.merge(. [Styles.table, className])}> children </table>
 
 @react.component
 let thead = (~children, ~className="") =>
-  <thead className={Tailwind.merge(.[Styles.thead, className])}> children </thead>
+  <thead className={Tailwind.merge(. [Styles.thead, className])}> children </thead>
 
 @react.component
 let tbody = (~children, ~className="") =>
-  <tbody className={Tailwind.merge(.[Styles.tbody, className])}> children </tbody>
+  <tbody className={Tailwind.merge(. [Styles.tbody, className])}> children </tbody>
 
 @react.component
 let tr = (~children, ~className="") => <tr className> children </tr>
 
 @react.component
 let td = (~children, ~className="") => <td className> children </td>
-
-// module MdxInternal = {
-//   // @react.component
-//   // let h1 = (~children, ~className="") => <h1 className> children </h1>
-
-//   // @react.component
-//   // let h5 = (~children, ~className="") => <h5 className> children </h5>
-
-//   // @react.component
-//   // let h6 = (~children, ~className="") => <h6 className> children </h6>
-
-// }
-
-// type default = {
-//   // wrapper: (~children: React.element) => React.element,
-//   // p: (~children: React.element, ~className: string) => React.element,
-//   // h2: (~children: React.element, ~className: string) => React.element,
-//   // h3: (~children: React.element, ~className: string) => React.element,
-//   // h4: (~children: React.element, ~className: string) => React.element,
-// }
-
-// let default = {
-//   // wrapper: (~children) =>
-//   //   <TypographyLayout>
-//   //     <article> <div className={Tailwind.merge(.[Styles.prose])}> children </div> </article>
-//   //   </TypographyLayout>,
-//   // p: (~children, ~className="") => <P className> children </P>,
-//   // h2: (~children, ~className) => <H2 className> children </H2>,
-//   // h3: (~children, ~className) => <H3 className> children </H3>,
-//   // h4: (~children, ~className) => <H4 className> children </H4>,
-// }

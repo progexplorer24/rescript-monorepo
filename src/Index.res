@@ -258,6 +258,7 @@ let default = () => {
       <div
         className={CssJs.merge(. [Styles.content, Tailwind.twStyle([Tailwind.placeItemsCenter])])}>
         <h2> {"Your content would go here"->str} </h2>
+        <Image src="/posts/nature.jpg" alt="nature" width=1920 height=1271 />
       </div>
     </main>
   </div>
