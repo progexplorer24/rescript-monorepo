@@ -4,12 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "bsb -clean-world -make-world && npx tailwindcss-cli@latest build ./styles/base.css -c ./tailwind.config.js -o ./tailwind.css && next build",
+    "build": "bsb -clean-world -make-world && next build",
     "start": "next start",
     "res:build": "bsb -make-world",
     "res:clean": "bsb -clean-world",
     "res:start": "bsb -make-world -w",
-    "tailwind:build": "npx tailwindcss-cli@latest build ./styles/base.css -c ./tailwind.config.js -o ./tailwind.css"
   },
   "dependencies": {
     "@emotion/css": "^11.1.3",
