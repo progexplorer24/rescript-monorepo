@@ -41,6 +41,8 @@ _build
 .DS_Store
 out
 
+# tests
+!__tests__/*.bs.js
 
 # yarn 
 .yarn/*

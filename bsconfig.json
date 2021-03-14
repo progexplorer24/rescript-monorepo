@@ -8,8 +8,12 @@
   "ppx-flags": [],
   "sources": [
     {
-      "dir": "src",
+      "dir": "src/",
       "subdirs": true
+    },
+    {
+      "dir": "__tests__",
+      "type": "dev"
     }
   ],
   "package-specs": [
