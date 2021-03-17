@@ -868,6 +868,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@emotion/css-prettifier@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@emotion/css-prettifier@npm:1.0.0"
+  dependencies:
+    "@emotion/memoize": ^0.7.4
+    stylis: ^4.0.3
+  checksum: a83b0000b5fa1ea76217f6a4b9b1fc3fefd430ce099e24628a6142659cb244e6e0f4653cfd99c93ef9c7d0eb8d6d2565cfdc97a0fd235038f5e1337337403a4e
+  languageName: node
+  linkType: hard
+
 "@emotion/css@npm:^11.1.3":
   version: 11.1.3
   resolution: "@emotion/css@npm:11.1.3"
@@ -890,6 +900,27 @@ __metadata:
   version: 0.8.0
   resolution: "@emotion/hash@npm:0.8.0"
   checksum: 8fd781e18428745d6c7121bebf3965cad12c61f3bd5fb773e46f16f1d7b7ae1346770df438fcfe8bc73ecf6762a54baef7cf259a694575d4f06cabb79ebcf7c0
+  languageName: node
+  linkType: hard
+
+"@emotion/jest@npm:^11.2.1":
+  version: 11.2.1
+  resolution: "@emotion/jest@npm:11.2.1"
+  dependencies:
+    "@babel/runtime": ^7.7.2
+    "@emotion/css-prettifier": ^1.0.0
+    chalk: ^4.1.0
+    specificity: ^0.4.1
+    stylis: ^4.0.3
+  peerDependencies:
+    "@types/jest": ^26.0.14
+    enzyme-to-json: ^3.2.1
+  peerDependenciesMeta:
+    "@types/jest":
+      optional: true
+    enzyme-to-json:
+      optional: true
+  checksum: 240a9e5c6545e9b35abf1cf0331712d46a54038360cfefd8b02226dd3a0e1450ae120374e07588ebed1bb7f0b76b098587e2e7e9f306b029d9ccc7384ada300e
   languageName: node
   linkType: hard
 
@@ -6851,6 +6882,7 @@ __metadata:
   resolution: "rescript-template@workspace:."
   dependencies:
     "@emotion/css": ^11.1.3
+    "@emotion/jest": ^11.2.1
     "@mdx-js/loader": ^1.6.22
     "@next/mdx": ^10.0.7
     "@rescript/react": ^0.10.1
@@ -7382,6 +7414,15 @@ __metadata:
   version: 3.0.7
   resolution: "spdx-license-ids@npm:3.0.7"
   checksum: 21e38ec5dd970643f78d37700b6c6ebd42d68c0e4618db914a56cabd2fe4cc1608404ce6abc7535d5165c6555560e821553d06edf6af6ae439617883cf932c0e
+  languageName: node
+  linkType: hard
+
+"specificity@npm:^0.4.1":
+  version: 0.4.1
+  resolution: "specificity@npm:0.4.1"
+  bin:
+    specificity: ./bin/specificity
+  checksum: 025221cfc21c1226e64158c35a8a5ae0c9e46d0adf0f66dabab9a103c390a7f1aa9a605fa1321d319a3a16c6a5f27ae5ae00fc98740d07e8188e5743041b5445
   languageName: node
   linkType: hard
 

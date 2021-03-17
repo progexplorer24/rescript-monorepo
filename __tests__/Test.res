@@ -1,7 +1,11 @@
 open Jest
 
-let sum = Sum.sum
+/* REGION: Before & after #region 
+    
+   ENDREGION: Before & after #endregion */
 
+let sum = Sum.sum
+type callback
 let drinkAll = (callback, flavour) => flavour !== "octopus" ? flavour : callback(flavour)
 
 type data = {num: int, name: string}
@@ -15,6 +19,27 @@ type obj = {
   product: string,
   url: string,
 }
+
+let globalValue1 = ref(0)
+
+describe(."Snapshots", (. ()) => {
+  module H1 = {
+    let styles = Css.declaration("float", "left")
+
+    @react.component
+    let make = (~children) => <h1 className=styles> children </h1>
+  }
+
+  test(."renders with correct styles", (. ()) => {
+    let tree =
+      ReactTestRenderer.create(<H1> {"hello world"->Utils.str} </H1>)->ReactTestRenderer.toJSON
+
+    expect(. tree)->toMatchSnapshot()
+  })
+  ()
+})
+
+// INFO: afterAll & beforeAll not working
 
 describe(."Common Matchers", (. ()) => {
   test(."toBe", (. ()) => {
@@ -97,7 +122,7 @@ describe(."Common Matchers", (. ()) => {
     expect(. shoppingList)->notToContain("BEER")
 
     // TODO: Fix imports from Belt std
-    // let shoppingSet = Belt.Set.fromArray(shoppingList)
+    // let shoppingSet = Belt.Set.String.fromArray(shoppingList)
     // expect(. shoppingSet)->toContain("beer")
   })
 
@@ -135,18 +160,6 @@ describe(."Common Matchers", (. ()) => {
     expect(. "abcdefghijk")->toEqual(stringContaining("abcde"))
     expect(. "abcdefghijk")->notToEqual(stringContaining("abce"))
   })
-
-  /*
-  NOTE: Not implemented:
-  - expect.anything - pointless when there's `option`, `Js.null` etc.
-  - expect.any - pointless when you have types, except against < .. > Js.t, but how to implement this?
-  - expect.arrayContaining - implement as overloads of `toEqual`, `toBeCalledWith`, `objectContaining` and `toMatchObject`
-  - expect.assertions - Not supported. There should be only one assertion per test.
-  - expect.objectContaining - implement as separate matcher and overload of `toBeCalledWith`
-  - expect.stringContaining - implement as overloads of `toEqual`, `toBeCalledWith`, `objectContaining` and `toMatchObject`
-  - expect.stringMatching - implement as overloads of `toEqual`, `toBeCalledWith`, `objectContaining` and `toMatchObject`
- */
-
   ()
 })
 
@@ -173,6 +186,160 @@ describe(."stringMatching in arrayContaining", (. ()) => {
   })
   it(."does not match if received does not contain expected elements", (. ()) => {
     expect(. ["Roberto", "Evelina"])->notToEqual(arrayContaining(expected))
+  })
+  ()
+})
+
+describe(."Mock function", (. ()) => {
+  test(."drinks something lemon-flavoured", (. ()) => {
+    let mockFn = Mock.fn()
+    let _call = mockFn()
+    expect(. mockFn)->toHaveBeenCalled()
+  })
+
+  ()
+})
+describe(."Mock function with implementation", (. ()) => {
+  test(."drinks something lemon-flavoured", (. ()) => {
+    let returnsTrue = Mock.fnWithImplementation(() => true)
+    expect(. returnsTrue())->toBe(true)
+  })
+
+  ()
+})
+
+//  TODO: Make it work
+// describe(."drinkAll", (. ()) => {
+//   test(."drinks something lemon-flavoured", (. ()) => {
+//     let drink = Mock.fn()
+//     drinkAll(drink, "lemon")
+//     expect(drink).toHaveBeenCalled()
+//   })
+
+//   test("does not drink something octopus-flavoured", () => {
+//     let drink = jest.fn()
+//     drinkAll(drink, "octopus")
+//     expect(drink).not.toHaveBeenCalled()
+//   })
+//   ()
+// })
+
+describe(."Lifecycle", (. ()) => {
+  let persistentValue = ref(0)
+
+  beforeEach(.(. ()) => persistentValue := persistentValue.contents + 1)
+
+  afterEach(.(. ()) => {persistentValue := persistentValue.contents - 1})
+
+  test(."runs lifecycle the first time", (. ()) => {
+    expect(. persistentValue.contents)->toBe(1)
+  })
+
+  test(."runs lifecycle each time", (. ()) => {
+    expect(. persistentValue.contents)->toBe(1)
+  })
+  ()
+})
+
+// describeOnly(."Execute only this block", (. ()) => {
+//   let persistentValue = ref(0)
+
+//   beforeEach(.(. ()) => persistentValue := persistentValue.contents + 1)
+
+//   afterEach(.(. ()) => {persistentValue := persistentValue.contents - 1})
+
+//   test(."runs lifecycle the first time", (. ()) => {
+//     expect(. persistentValue.contents)->toBe(1)
+//   })
+
+//   test(."runs lifecycle each time", (. ()) => {
+//     expect(. persistentValue.contents)->toBe(1)
+//   })
+//   ()
+// })
+
+// describe(."Test only each", (. ()) => {
+//   testOnlyEach(. [[1, 1, 2], [1, 2, 3], [2, 1, 3]])(.".add(%i, %i)", (. a, b, expected) => {
+//     expect(. a + b)->toBe(expected)
+//   })
+// })
+
+// describeOnlyEach(. [[1, 1, 2], [1, 2, 3], [2, 1, 3]])(.".add(%i, %i)", (. a, b, expected) => {
+//   test(.`returns ${Belt.Int.toString(expected)}`, (. ()) => {
+//     expect(. a + b)->toBe(expected)
+//   })
+//   ()
+// })
+
+describe(."Skips other tests", (. ()) => {
+  let persistentValue = ref(0)
+
+  beforeEach(.(. ()) => persistentValue := persistentValue.contents + 1)
+
+  afterEach(.(. ()) => {persistentValue := persistentValue.contents - 1})
+
+  testSkip(."runs lifecycle the first time", (. ()) => {
+    expect(. persistentValue.contents)->toBe(1)
+  })
+
+  test(."runs lifecycle each time", (. ()) => {
+    expect(. persistentValue.contents)->toBe(1)
+  })
+  ()
+})
+
+describeSkip(."Lifecycle", (. ()) => {
+  let persistentValue = ref(0)
+
+  beforeEach(.(. ()) => persistentValue := persistentValue.contents + 1)
+
+  afterEach(.(. ()) => {persistentValue := persistentValue.contents - 1})
+
+  test(."runs lifecycle the first time", (. ()) => {
+    expect(. persistentValue.contents)->toBe(1)
+  })
+
+  test(."runs lifecycle each time", (. ()) => {
+    expect(. persistentValue.contents)->toBe(1)
+  })
+  ()
+})
+
+describe(."Test each functionality", (. ()) => {
+  testEach(. [[1, 1, 2], [1, 2, 3], [2, 1, 3]])(.".add(%i, %i)", (. a, b, expected) => {
+    expect(. a + b)->toBe(expected)
+  })
+  itEach(. [[1, 1, 2], [1, 2, 3], [2, 1, 3]])(.".add(%i, %i)", (. a, b, expected) => {
+    expect(. a + b)->toBe(expected)
+  })
+  ()
+})
+
+describe(."Test skip each", (. ()) => {
+  testSkipEach(. [[1, 1, 2], [1, 2, 3], [2, 1, 3]])(.".add(%i, %i)", (. a, b, expected) => {
+    expect(. a + b)->toBe(expected)
+  })
+  ()
+})
+
+describe(."Todo works", (. ()) => {
+  testTodo(. "Write test 1")
+  testTodo(. "Write test 2")
+  testTodo(. "Write test 3")
+  ()
+})
+
+describeEach(. [[1, 1, 2], [1, 2, 3], [2, 1, 3]])(.".add(%i, %i)", (. a, b, expected) => {
+  test(.`returns ${Belt.Int.toString(expected)}`, (. ()) => {
+    expect(. a + b)->toBe(expected)
+  })
+
+  test(.`returned value not be greater than ${Belt.Int.toString(expected)}`, (. ()) => {
+    expect(. a + b)->notToBeGreaterThan(expected)
+  })
+
+  test(.`returned value not be less than ${Belt.Int.toString(expected)}`, (. ()) => {
+    expect(. a + b)->notToBeLessThan(expected)
   })
   ()
 })
