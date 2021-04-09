@@ -7,7 +7,7 @@ type re = Js.Re.t
 
 @val external describe: (. string, (. unit) => unit) => unit = "describe"
 @scope("describe") @val
-external describeEach: (. array<array<'a>>, . string, (. 'a, 'a, 'a) => unit) => unit = "each"
+external describeEach2: (. array<array<'a>>, . string, (. 'a, 'a, 'a) => unit) => unit = "each"
 @scope("describe") @val external describeOnly: (. string, (. unit) => unit) => unit = "only"
 @scope(("describe", "only")) @val
 external describeOnlyEach: (. array<array<'a>>, . string, (. 'a, 'a, 'a) => unit) => unit = "each"
@@ -50,8 +50,8 @@ let itOnlyEach = testOnlyEach
 let fitEach = testOnlyEach
 
 @val external afterAll: (unit => unit) => unit = "afterAll"
+@val external beforeAll: (unit => unit) => unit = "beforeAll"
 @val external afterEach: (. (. unit) => unit) => unit = "afterEach"
-@val external beforeAll: (. (. unit) => unit) => unit = "beforeAll"
 @val external beforeEach: (. (. unit) => unit) => unit = "beforeEach"
 
 // #endregion #ENDREGION:
