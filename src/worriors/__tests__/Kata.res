@@ -1,6 +1,11 @@
 open Kata_8
 open Jest
 
+// INFO: Comment this out if you want to start your kata
+describeOnly(."Cancell all tests", (. ()) => {
+  expect(. true)->toEqual(true)
+})
+
 describe(."Test repeatStr functionality", (. ()) => {
   it(."repeats I six times", (. ()) => {
     expect(. repeatStr(6, "I"))->toEqual("IIIIII")
