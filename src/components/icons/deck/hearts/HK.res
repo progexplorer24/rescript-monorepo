@@ -4,7 +4,13 @@ module Styles = {
 }
 
 @react.component
-let make = (~backgroundFill=CardDefaults.backgroundFill, ~cardBorder=CardDefaults.cardBorder) =>
+let make = (
+  ~backgroundFill=CardDefaults.backgroundFill,
+  ~cardBorder=CardDefaults.cardBorder,
+  ~strokeWidth=CardDefaults.strokeWidth,
+  ~cardTextColor=CardDefaults.redTextColor,
+  ~suitColor=CardDefaults.redTextColor,
+) =>
   <svg
     className=Styles.elementStyles
     viewBox="0 0 351 464"
@@ -28,17 +34,18 @@ let make = (~backgroundFill=CardDefaults.backgroundFill, ~cardBorder=CardDefault
         rx="19.5"
         transform="rotate(0.308765 36.6203 29.5027)"
         stroke=cardBorder
+        strokeWidth={Belt.Int.toString(strokeWidth)}
       />
     </g>
     <path
       d="M94.7278 102.504L88.5988 109.034L88.5112 125.284L76.7927 125.221L77.0992 68.3464L88.8177 68.4095L88.6788 94.1904L93.8731 87.148L108.466 68.5154L122.88 68.5931L102.549 93.7573L123.159 125.47L109.214 125.395L94.7278 102.504Z"
-      fill="#F24822"
+      fill=cardTextColor
     />
     <path
       fillRule="evenodd"
       clipRule="evenodd"
       d="M109.757 160.401C99.0663 160.508 96.8756 172.666 96.8756 172.666C96.8756 172.666 94.4745 160.483 83.7857 160.261C73.0968 160.039 66.4678 169.377 70.0329 179.264C73.5977 189.151 77.1906 191.391 82.8325 198.575C88.4742 205.76 96.6716 218.18 96.6146 221.099C96.5894 218.179 104.578 205.847 110.297 198.723C116.016 191.6 119.633 189.399 123.304 179.551C126.975 169.703 120.448 160.294 109.757 160.401Z"
-      fill="#F24822"
+      fill=suitColor
     />
     <defs>
       <filter
