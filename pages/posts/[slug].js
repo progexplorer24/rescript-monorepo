@@ -2,11 +2,13 @@ import fs from 'fs'
 import matter from 'gray-matter'
 import {serialize} from 'next-mdx-remote/serialize'
 import { MDXRemote } from 'next-mdx-remote'
+import remarkMath from 'remark-math'
+import rehypeKatex from 'rehype-katex'
 import Link from 'next/link'
 import path from 'path'
-import {make as Layout} from '../../src/layouts/TypographyLayout.bs'
 import { postFilePaths, POSTS_PATH } from '../../src/utils/mdxUtils'
 import {make as Test} from '../../src/components/Name.bs'
+import {make as Layout} from '../../src/layouts/TypographyLayout.bs'
 
 const components = { Test }
 
@@ -41,7 +43,11 @@ export const getStaticProps = async ({ params }) => {
   const { content, data } = matter(source)
 
   const mdxSource = await serialize(content, {
-    scope: data
+    scope: data,
+    mdxOptions: {
+      remarkPlugins: [remarkMath],
+      rehypePlugins: [rehypeKatex],
+    }
   })
 
   return {
