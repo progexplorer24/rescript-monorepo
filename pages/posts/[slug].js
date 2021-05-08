@@ -10,6 +10,10 @@ import {make as Test} from '../../src/components/Name.bs'
 
 const components = { Test }
 
+const data = {
+  name: "Sarah"
+}
+
 export default function Examples({source, frontMatter}) {
   return   <Layout>
     <header>
@@ -25,7 +29,7 @@ export default function Examples({source, frontMatter}) {
           <p className="description">{frontMatter.description}</p>
         )}
       </div>
-      <main><MDXRemote {...source} components={components} /></main>  
+      <main><MDXRemote {...source} components={components} scope={data} /></main>  
 </Layout>
 }
 
