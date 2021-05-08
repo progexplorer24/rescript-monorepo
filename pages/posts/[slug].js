@@ -2,13 +2,13 @@ import fs from 'fs'
 import matter from 'gray-matter'
 import {serialize} from 'next-mdx-remote/serialize'
 import { MDXRemote } from 'next-mdx-remote'
-import remarkMath from 'remark-math'
-import rehypeKatex from 'rehype-katex'
 import Link from 'next/link'
 import path from 'path'
+import remarkMath from 'remark-math'
+import rehypeKatex from 'rehype-katex'
+import {make as Layout} from '../../src/layouts/TypographyLayout.bs'
 import { postFilePaths, POSTS_PATH } from '../../src/utils/mdxUtils'
 import {make as Test} from '../../src/components/Name.bs'
-import {make as Layout} from '../../src/layouts/TypographyLayout.bs'
 
 const components = { Test }
 
@@ -17,6 +17,7 @@ const data = {
 }
 
 export default function Examples({source, frontMatter}) {
+  console.log(frontMatter)
   return   <Layout>
     <header>
         <nav>
