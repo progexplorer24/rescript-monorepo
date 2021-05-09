@@ -1,4 +1,11 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
+
+
+/*
+  Inter - 400/700/800 ?
+  / dark background #111827 font - gray100
+*/
+
 class MyDocument extends Document {
   render() {
     return (
