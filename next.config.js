@@ -4,9 +4,9 @@ const fs = require("fs");
 // NOTE: https://forum.rescript-lang.org/t/purpose-alternatives-to-next-transpile-modules-in-next-rescript-projects/827/5
 const transpileModules = ["bs-platform"].concat(bsconfig["bs-dependencies"]);
 const withTM = require("next-transpile-modules")(transpileModules);
-const withMDX = require('@next/mdx')({
-  extension: /\.mdx?$/,
-})
+// const withMDX = require('@next/mdx')({
+//   extension: /\.mdx?$/,
+// })
 
 // There is an issue where webpack doesn't detect npm packages within node_modules when
 // there is no dedicated package.json "main" entry + index.js file existent.
@@ -66,4 +66,4 @@ const config = {
   },
 };
 
-module.exports = withMDX(withTM(config));
+module.exports = withTM(config);
