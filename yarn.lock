@@ -663,6 +663,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/runtime@npm:^7.13.10":
+  version: 7.14.0
+  resolution: "@babel/runtime@npm:7.14.0"
+  dependencies:
+    regenerator-runtime: ^0.13.4
+  checksum: ab6653f2f8ecdaebf36674894cef458a9d4f881dc007fdcd50a8261f5c6d9731e03fda2c17e32ecf0e6c779d69eb6cf49d68a48c780aaf07d5b572e8b7ef0508
+  languageName: node
+  linkType: hard
+
 "@babel/template@npm:^7.10.4":
   version: 7.10.4
   resolution: "@babel/template@npm:7.10.4"
@@ -903,11 +912,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/jest@npm:^11.2.1":
-  version: 11.2.1
-  resolution: "@emotion/jest@npm:11.2.1"
+"@emotion/jest@npm:^11.3.0":
+  version: 11.3.0
+  resolution: "@emotion/jest@npm:11.3.0"
   dependencies:
-    "@babel/runtime": ^7.7.2
+    "@babel/runtime": ^7.13.10
     "@emotion/css-prettifier": ^1.0.0
     chalk: ^4.1.0
     specificity: ^0.4.1
@@ -920,7 +929,7 @@ __metadata:
       optional: true
     enzyme-to-json:
       optional: true
-  checksum: 240a9e5c6545e9b35abf1cf0331712d46a54038360cfefd8b02226dd3a0e1450ae120374e07588ebed1bb7f0b76b098587e2e7e9f306b029d9ccc7384ada300e
+  checksum: 9ea69361eba6dda7242fed1c7816fd9387411d5b8cfd67cb79df8cb0308664fc4daca418bbe1f7e7ec51232ff5b5781305519ec97fb0f51b9737f37e140792b0
   languageName: node
   linkType: hard
 
@@ -1455,9 +1464,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/jest-dom@npm:^5.11.9":
-  version: 5.11.9
-  resolution: "@testing-library/jest-dom@npm:5.11.9"
+"@testing-library/jest-dom@npm:^5.12.0":
+  version: 5.12.0
+  resolution: "@testing-library/jest-dom@npm:5.12.0"
   dependencies:
     "@babel/runtime": ^7.9.2
     "@types/testing-library__jest-dom": ^5.9.1
@@ -1467,20 +1476,20 @@ __metadata:
     css.escape: ^1.5.1
     lodash: ^4.17.15
     redent: ^3.0.0
-  checksum: c285c044edf42b9c4daffbeddd5489564af1c9d625f0ef3781e2e9864688239ccc2521badec9147fea66685c60b736c922e35ea69011aa577eabc156c0e1f5b6
+  checksum: 8bffa1c4113fbcdeb2aad1be48054ab46ee73da3b9b8a588e7e635e96f06ffe221689dfa494d2ac06520350ab7aa1fa2e2565aa30b02dd34c8d086072ba9ed57
   languageName: node
   linkType: hard
 
-"@testing-library/react@npm:^11.2.5":
-  version: 11.2.5
-  resolution: "@testing-library/react@npm:11.2.5"
+"@testing-library/react@npm:^11.2.6":
+  version: 11.2.6
+  resolution: "@testing-library/react@npm:11.2.6"
   dependencies:
     "@babel/runtime": ^7.12.5
     "@testing-library/dom": ^7.28.1
   peerDependencies:
     react: "*"
     react-dom: "*"
-  checksum: 1389b4eb110ad32ac328634846fd92570979c0cb739a3ee99eeb2278860a1910a81126612457379fc306dbd6417b4b5ff1ddd88ede3d8ebb1da3972e70877e83
+  checksum: 3ad25d7b88650b83d54990665fabac4f75ff8229773ae877c18ec7a431c17773832d4c3279cecc229815660ffc8be2c86f39de9930777b4dbc1519fb7bca63a5
   languageName: node
   linkType: hard
 
@@ -7174,13 +7183,13 @@ __metadata:
   resolution: "rescript-template@workspace:."
   dependencies:
     "@emotion/css": ^11.1.3
-    "@emotion/jest": ^11.2.1
+    "@emotion/jest": ^11.3.0
     "@mdx-js/loader": ^1.6.22
     "@next/mdx": ^10.0.7
     "@prisma/client": 2.22.1
     "@rescript/react": ^0.10.3
-    "@testing-library/jest-dom": ^5.11.9
-    "@testing-library/react": ^11.2.5
+    "@testing-library/jest-dom": ^5.12.0
+    "@testing-library/react": ^11.2.6
     babel-jest: ^26.6.3
     bs-css-emotion: ^2.4.0
     bs-platform: ^9.0.2
