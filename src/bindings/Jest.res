@@ -71,9 +71,9 @@ type expectResult
 @scope(("expect", "not")) @val
 external notArrayContaining: array<'a> => expectResult = "arrayContaining"
 
-@scope("expect") @val external objectContaining: Js.t<'a> => expectResult = "objectContaining"
+@scope("expect") @val external objectContaining: 'a => expectResult = "objectContaining"
 @scope(("expect", "not")) @val
-external notObjectContaining: Js.t<'a> => expectResult = "objectContaining"
+external notObjectContaining: 'a => expectResult = "objectContaining"
 
 @scope("expect") @val external stringContaining: string => expectResult = "stringContaining"
 @scope(("expect", "not")) @val
