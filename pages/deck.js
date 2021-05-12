@@ -1,4 +1,4 @@
-import DeckPage from "src/DeckPage.bs.js";
+import DeckPage from "src/DeckPage.mjs";
 
 
 export default function Examples(props) {

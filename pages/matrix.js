@@ -1,4 +1,4 @@
-import MatrixPage from "src/MatrixPage.bs.js";
+import MatrixPage from "src/MatrixPage.mjs";
 
 
 export default function Examples(props) {

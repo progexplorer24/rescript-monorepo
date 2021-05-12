@@ -1,4 +1,4 @@
-import Omnifood from "src/Omnifood.bs.js";
+import Omnifood from "src/Omnifood.mjs";
 
 
 export default function Examples(props) {

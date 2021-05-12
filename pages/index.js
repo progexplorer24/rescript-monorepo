@@ -1,5 +1,5 @@
 
-import IndexRes from "src/Index.bs.js";
+import IndexRes from "src/Index.mjs";
 
 // Note:
 // We need to wrap the make call with

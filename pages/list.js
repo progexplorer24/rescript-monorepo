@@ -2,7 +2,7 @@ import fs from 'fs'
 import matter from 'gray-matter'
 import Link from 'next/link'
 import path from 'path'
-import {make as Layout} from '../src/layouts/TypographyLayout.bs'
+import {make as Layout} from '../src/layouts/TypographyLayout.mjs'
 import { postFilePaths, POSTS_PATH } from '../src/utils/mdxUtils'
 
 export default function Examples({posts}) {

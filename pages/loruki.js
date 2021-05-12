@@ -1,4 +1,4 @@
-import Loruki from "src/Loruki.bs.js";
+import Loruki from "src/Loruki.mjs";
 
 
 export default function Examples(props) {

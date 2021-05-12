@@ -1,5 +1,5 @@
 import React from 'react'
-import ResApp from "src/App.bs.js"
+import ResApp from "src/App.mjs"
 // import {make as TypographyLayoutRes} from "src/layouts/TypographyLayout.bs.js"
 import {
   p as P,
@@ -24,7 +24,7 @@ import {
   tr as Tr,
   td as Td,
   lead as Lead,
-} from "src/components/Mdx.bs.js"
+} from "src/components/Mdx.mjs"
 import {MDXProvider} from '@mdx-js/react'
 // TODO: Learn more about Fast Refresh
 // TODO: Change project structure
@@ -78,7 +78,6 @@ const components = {
   td: ({children}) => <Td>{children}</Td>,
   Lead,
   Img,
-  Link,
 }
 function App(props) {
   return <MDXProvider components={components} >

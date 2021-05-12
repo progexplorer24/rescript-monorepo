@@ -1,4 +1,4 @@
-import Ionicons from "src/Ionicons.bs.js";
+import Ionicons from "src/Ionicons.mjs";
 
 
 export default function Examples(props) {

@@ -3,7 +3,7 @@ import { MDXRemote } from 'next-mdx-remote'
 import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
 
-import {make as Test} from '../src/components/icons/deck/Unknown.bs.js'
+import {make as Test} from '../src/components/icons/deck/Unknown.mjs'
 
 const components = { Test }
 const data = { product: "next" }
