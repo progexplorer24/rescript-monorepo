@@ -155,32 +155,48 @@ module Styles = {
   let codeInsideH2 = merge(. [codeInsideH2Base, codeInsideH2Sm, codeInsideH2Lg, codeInsideH2Xl])
   let codeInsideH3 = merge(. [codeInsideH3Base, codeInsideH3Sm, codeInsideH3Lg, codeInsideH3Xl])
 
-  // sm      h1: {
-  //         fontSize: em(36, 16),
-  //         marginTop: '0',
-  //         marginBottom: em(32, 36),
-  //         lineHeight: round(40 / 36),
-  //       },
-  // base h1: {
-  //         fontSize: em(30, 14),
-  //         marginTop: '0',
-  //         marginBottom: em(24, 30),
-  //         lineHeight: round(36 / 30),
-  //       },
-  //    lg h1: {
-  //       fontSize: em(48, 18),
-  //       marginTop: '0',
-  //       marginBottom: em(40, 48),
-  //       lineHeight: round(48 / 48),
-  //     },
-  // xl h1: {
-  //   fontSize: em(64, 24),
-  //   marginTop: '0',
-  //   marginBottom: em(56, 64),
-  //   lineHeight: round(64 / 64),
-  // },
+  let rebaseH1 = 30.
+  let rebaseH1Sm = 36.
+  let rebaseH1Lg = 48.
+  let rebaseH1Xl = 64.
 
-  // let h1 = twStyle([textColor(#coolGray900), fontWeight(#v800)])
+  let h1Base = twStyle([
+    textColor(#coolGray900),
+    fontWeight(#v800),
+    Typography.fontSize(rebaseH1),
+    Typography.leading(36., rebaseH1),
+    Typography.mt(0., rebaseH1),
+    Typography.mb(24., rebaseH1),
+  ])
+
+  let h1Sm = twStyle([
+    sm([
+      Typography.fontSize(rebaseH1Sm),
+      Typography.leading(40., rebaseH1Sm),
+      Typography.mt(0., rebaseH1Sm),
+      Typography.mb(32., rebaseH1Sm),
+    ]),
+  ])
+
+  let h1Lg = twStyle([
+    lg([
+      Typography.fontSize(rebaseH1Lg),
+      Typography.leading(48., rebaseH1Lg),
+      Typography.mt(0., rebaseH1Lg),
+      Typography.mb(40., rebaseH1Lg),
+    ]),
+  ])
+
+  let h1Xl = twStyle([
+    xl([
+      Typography.fontSize(rebaseH1Xl),
+      Typography.leading(64., rebaseH1Xl),
+      Typography.mt(0., rebaseH1Xl),
+      Typography.mb(56., rebaseH1Xl),
+    ]),
+  ])
+
+  let h1 = merge(. [h1Base, h1Sm, h1Lg, h1Xl])
 
   let rebaseH2 = 20.
   let rebaseH2Sm = 24.
@@ -773,6 +789,10 @@ let p = (~children, ~className="") =>
   <p className={Tailwind.merge(. [Styles.paragraph, className])}> children </p>
 
 @react.component
+let h1 = (~children, ~className="") =>
+  <h1 className={Tailwind.merge(. [Styles.h2, className])}> children </h1>
+
+@react.component
 let h2 = (~children, ~className="") =>
   <h2 className={Tailwind.merge(. [Styles.h2, className])}> children </h2>
 
@@ -824,12 +844,29 @@ let strong = (~children, ~className="") =>
 let hr = (~className="") => <hr className={Tailwind.merge(. [Styles.hr, className])} />
 
 @react.component
-let a = (~children, ~href, ~className="", ~internal=false) =>
-  internal
-    ? <Next.Link href>
-        <a className={Tailwind.merge(. [Styles.link, className])}> children </a>
-      </Next.Link>
-    : <a href target="_blank" className={Tailwind.merge(. [Styles.link, className])}> children </a>
+let a = (~children, ~href="/", ~className="", ~ariaLabel="") =>
+  if Js.String2.startsWith("/", href) {
+    <Next.Link href={href}>
+      <a className={Tailwind.merge(. [Styles.link, className])} ariaLabel />
+    </Next.Link>
+  } else if Js.String2.startsWith("#", href) {
+    <a ariaLabel className={Tailwind.merge(. [Styles.link, className])} href={href}> children </a>
+  } else {
+    <a
+      className={Tailwind.merge(. [Styles.link, className])}
+      ariaLabel
+      target="_blank"
+      rel="noopener noreferrer"
+      href={href}>
+      children
+    </a>
+  }
+
+// internal
+//   ? <Next.Link href>
+//       <a className={Tailwind.merge(. [Styles.link, className])}> children </a>
+//     </Next.Link>
+//   : <a href target="_blank" className={Tailwind.merge(. [Styles.link, className])}> children </a>
 
 @react.component
 let img = (~src, ~alt="", ~className="", ~figcaption=?) => {
