@@ -7,9 +7,9 @@
     "dev:w": "next-remote-watch ./src/posts",
     "build": "bsb -clean-world -make-world && next build",
     "start": "next start",
-    "res:build": "bsb -make-world",
-    "res:clean": "bsb -clean-world",
-    "res:start": "bsb -make-world -w",
+    "res:build": "rescript build -with-deps",
+    "res:clean": "rescript clean",
+    "res:start": "rescript build -w -with-deps",
     "test": "jest --watch",
     "test:ci": "jest --ci"
   },
@@ -33,10 +33,10 @@
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.6",
     "babel-jest": "^26.6.3",
-    "bs-platform": "^9.0.2",
     "jest": "^26.6.3",
     "next-remote-watch": "^1.0.0",
     "prisma": "2.22.1",
-    "react-test-renderer": "^17.0.2"
+    "react-test-renderer": "^17.0.2",
+    "rescript": "^9.1.2"
   }
 }
