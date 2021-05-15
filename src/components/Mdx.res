@@ -869,19 +869,22 @@ let a = (~children, ~href="/", ~className="", ~ariaLabel="") =>
 //   : <a href target="_blank" className={Tailwind.merge(. [Styles.link, className])}> children </a>
 
 @react.component
-let img = (~src, ~alt="", ~className="", ~figcaption=?) => {
-  let figcaptionElement = switch figcaption {
-  | None => React.null
-  | Some(string) => <figcaption> {string->Utils.str} </figcaption>
+let img = (~src, ~alt="", ~className="", ~figcaption=?) =>
+  switch figcaption {
+  | None =>
+    <figure className=Styles.figure>
+      <Next.Image
+        src alt width=1920 height=1271 className={Tailwind.merge(. [Styles.img, className])}
+      />
+    </figure>
+  | Some(string) =>
+    <figure className=Styles.figure>
+      <Next.Image
+        src alt width=1920 height=1271 className={Tailwind.merge(. [Styles.img, className])}
+      />
+      <figcaption> string </figcaption>
+    </figure>
   }
-
-  <figure className=Styles.figure>
-    <Next.Image
-      src alt width=1920 height=1271 className={Tailwind.merge(. [Styles.img, className])}
-    />
-    figcaptionElement
-  </figure>
-}
 
 // REGION: Table elements
 

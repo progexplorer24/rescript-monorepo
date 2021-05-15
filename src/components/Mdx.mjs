@@ -4,6 +4,7 @@ import * as CssJs from "bs-css-emotion/src/CssJs.mjs";
 import * as React from "react";
 import Link from "next/link";
 import $$Image from "next/image";
+import * as Caml_option from "rescript/lib/es6/caml_option.js";
 import * as Utils$RescriptMonorepo from "../utils/Utils.mjs";
 import * as Tailwind$RescriptMonorepo from "../styles/tailwind/Tailwind.mjs";
 import * as TypographyLayout$RescriptMonorepo from "../layouts/TypographyLayout.mjs";
@@ -1268,19 +1269,33 @@ function Mdx$img(Props) {
   var figcaption = Props.figcaption;
   var alt = altOpt !== undefined ? altOpt : "";
   var className = classNameOpt !== undefined ? classNameOpt : "";
-  var figcaptionElement = figcaption !== undefined ? React.createElement("figcaption", undefined, Utils$RescriptMonorepo.str(figcaption)) : null;
-  return React.createElement("figure", {
-              className: figure
-            }, React.createElement($$Image, {
-                  src: src,
-                  alt: alt,
-                  width: 1920,
-                  height: 1271,
-                  className: Tailwind$RescriptMonorepo.merge([
-                        img,
-                        className
-                      ])
-                }), figcaptionElement);
+  if (figcaption !== undefined) {
+    return React.createElement("figure", {
+                className: figure
+              }, React.createElement($$Image, {
+                    src: src,
+                    alt: alt,
+                    width: 1920,
+                    height: 1271,
+                    className: Tailwind$RescriptMonorepo.merge([
+                          img,
+                          className
+                        ])
+                  }), React.createElement("figcaption", undefined, Caml_option.valFromOption(figcaption)));
+  } else {
+    return React.createElement("figure", {
+                className: figure
+              }, React.createElement($$Image, {
+                    src: src,
+                    alt: alt,
+                    width: 1920,
+                    height: 1271,
+                    className: Tailwind$RescriptMonorepo.merge([
+                          img,
+                          className
+                        ])
+                  }));
+  }
 }
 
 function Mdx$table(Props) {
