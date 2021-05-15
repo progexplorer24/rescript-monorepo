@@ -7,6 +7,10 @@ type t = [
   | #v8
   | #v9
   | #v10
+  | #v11
+  | #v12
+  | #v13
+  | #v14
   | #none
   | #tight
   | #snug
@@ -25,6 +29,10 @@ let toValue = lineHeight =>
   | #v8 => #rem(2.)
   | #v9 => #rem(2.25)
   | #v10 => #rem(2.5)
+  | #v11 => #rem(2.75)
+  | #v12 => #rem(3.)
+  | #v13 => #rem(3.25)
+  | #v14 => #rem(3.5)
   | #none => #abs(1.)
   | #tight => #abs(1.25)
   | #snug => #abs(1.375)
