@@ -2,48 +2,61 @@ import fs from 'fs'
 import matter from 'gray-matter'
 import {serialize} from 'next-mdx-remote/serialize'
 import { MDXRemote } from 'next-mdx-remote'
-import Link from 'next/link'
 import path from 'path'
 import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
-import {make as Layout} from '../../src/layouts/TypographyLayout.bs'
-import { postFilePaths, POSTS_PATH } from '../../src/utils/mdxUtils'
-import {make as Test} from '../../src/components/Name.bs'
-
-const components = { Test }
+import {make as Layout} from '../../src/layouts/PostLayout.mjs'
+import {mdxContentLocation, postFilePaths, readdirRecursive} from '../../src/lib/Mdx__helpers.mjs'
+import {components} from "../../src/components/blog/MDXComponents.mjs"
 
 const data = {
   name: "Sarah"
 }
 
-export default function Examples({source, frontMatter}) {
-  console.log(frontMatter)
+export default function PostTemplate({source, frontMatter}) {
   return   <Layout>
-    <header>
-        <nav>
-          <Link href="/">
-            <a>👈 Go back home</a>
-          </Link>
-        </nav>
-      </header>
-      <div className="post-header">
-        <h1>{frontMatter.title}</h1>
-        {frontMatter.description && (
-          <p className="description">{frontMatter.description}</p>
-        )}
-      </div>
       <main><MDXRemote {...source} components={components} scope={data} /></main>  
 </Layout>
 }
 
 
 export const getStaticProps = async ({ params }) => {
-  const postFilePath = path.join(POSTS_PATH, `${params.slug}.mdx`)
+  console.log(readdirRecursive(mdxContentLocation))
+  const postFilePath = path.join(mdxContentLocation, `${params.slug}.mdx`)
   const source = fs.readFileSync(postFilePath)
 
   const { content, data } = matter(source)
 
+    // const mdxSource = await renderToString(content, {
+  //   components: MDXComponents,
+  //   mdxOptions: {
+  //     remarkPlugins: [
+  //       require('remark-slug'),
+  //       require('remark-autolink-headings'),
+  //       require('remark-code-titles'),
+  //       require('remark-math'),
+  //       imgToJsx,
+  //     ],
+  //     inlineNotes: true,
+  //     rehypePlugins: [
+  //       require('rehype-katex'),
+  //       require('@mapbox/rehype-prism'),
+  //       () => {
+  //         return (tree) => {
+  //           visit(tree, 'element', (node, index, parent) => {
+  //             let [token, type] = node.properties.className || []
+  //             if (token === 'token') {
+  //               node.properties.className = [tokenClassNames[type]]
+  //             }
+  //           })
+  //         }
+  //       },
+  //     ],
+  //   },
+  // })
+
   const mdxSource = await serialize(content, {
+    components,
     scope: data,
     mdxOptions: {
       remarkPlugins: [remarkMath],
