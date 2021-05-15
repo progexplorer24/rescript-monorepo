@@ -1,17 +1,17 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 
-
-/*
-  Inter - 400/700/800 ?
-  / dark background #111827 font - gray100
-*/
-
 class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
         <Head>
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+            rel="preload"
+            href="/fonts/InterVarSubset.woff2"
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
+          />
         <link
             rel="preload"
             href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/fonts/KaTeX_Main-Regular.woff2"
