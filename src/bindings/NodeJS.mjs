@@ -6,14 +6,26 @@ var Process = {};
 
 var Path = {};
 
-function readdirSync(path) {
+function statSync(bigintOpt, throwIfNoEntryOpt, string) {
+  var bigint = bigintOpt !== undefined ? bigintOpt : false;
+  var throwIfNoEntry = throwIfNoEntryOpt !== undefined ? throwIfNoEntryOpt : true;
+  return Fs.statSync(string, {
+              bigint: bigint,
+              throwIfNoEntry: throwIfNoEntry
+            });
+}
+
+function readdirSync(encodingOpt, withFileTypesOpt, path) {
+  var encoding = encodingOpt !== undefined ? encodingOpt : "utf-8";
+  var withFileTypes = withFileTypesOpt !== undefined ? withFileTypesOpt : false;
   return Fs.readdirSync(path, {
-              encoding: "utf-8",
-              withFileTypes: false
+              encoding: encoding,
+              withFileTypes: withFileTypes
             });
 }
 
 var Fs$1 = {
+  statSync: statSync,
   readdirSync: readdirSync
 };
 
