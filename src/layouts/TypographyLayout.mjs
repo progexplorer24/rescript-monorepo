@@ -3,7 +3,6 @@
 import * as CssJs from "bs-css-emotion/src/CssJs.mjs";
 import * as React from "react";
 import * as Tailwind$RescriptMonorepo from "../styles/tailwind/Tailwind.mjs";
-import * as HeadConfiguration$RescriptMonorepo from "./HeadConfiguration.mjs";
 
 var wrapperXl = Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.xl([Tailwind$RescriptMonorepo.maxW("xl6")])]);
 
@@ -15,38 +14,8 @@ var wrapperBase = Tailwind$RescriptMonorepo.twStyle([
       [CssJs.fontFamilies([
               {
                 NAME: "custom",
-                VAL: "ui-sans-serif"
+                VAL: "Inter"
               },
-              "systemUi",
-              {
-                NAME: "custom",
-                VAL: "-apple-system"
-              },
-              {
-                NAME: "custom",
-                VAL: "BlinkMacSystemFont"
-              },
-              {
-                NAME: "custom",
-                VAL: "Segoe UI"
-              },
-              {
-                NAME: "custom",
-                VAL: "Roboto"
-              },
-              {
-                NAME: "custom",
-                VAL: "Helvetica Neue"
-              },
-              {
-                NAME: "custom",
-                VAL: "Arial"
-              },
-              {
-                NAME: "custom",
-                VAL: "Noto Sans"
-              },
-              "sansSerif",
               {
                 NAME: "custom",
                 VAL: "Apple Color Emoji"
@@ -94,12 +63,9 @@ var Styles = {
 
 function TypographyLayout(Props) {
   var children = Props.children;
-  return React.createElement(HeadConfiguration$RescriptMonorepo.make, {
-              children: React.createElement("main", undefined, React.createElement("div", {
-                        className: Tailwind$RescriptMonorepo.merge([wrapper])
-                      }, children)),
-              title: "Typography Example"
-            });
+  return React.createElement("div", {
+              className: Tailwind$RescriptMonorepo.merge([wrapper])
+            }, children);
 }
 
 var make = TypographyLayout;
