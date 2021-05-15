@@ -1,7 +1,7 @@
 module Styles = {
   open Tailwind
   let container = twStyle([maxW(#xl4), mx(#auto)])
-  let heading = twStyle([textCenter])
+  let heading = twStyle([textCenter, [CssJs.fontFamily(#custom("Inter"))]])
   let row = twStyle([flex])
   let bottomDeck = twStyle([mb(#v16)])
 }
