@@ -1,5 +1,4 @@
-
-import IndexPage from "../src/Index.mjs";
+import { default as IndexPage } from "../src/Index.mjs";
 
 // Note:
 // We need to wrap the make call with
@@ -8,6 +7,9 @@ import IndexPage from "../src/Index.mjs";
 //
 // If you don't do this, your Fast-Refresh will
 // not work!
+
 export default function Index(props) {
   return <IndexPage {...props}/>;
 }
+
+export {getStaticProps} from "../src/Index.mjs"
