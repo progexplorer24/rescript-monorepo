@@ -847,7 +847,7 @@ let hr = (~className="") => <hr className={Tailwind.merge(. [Styles.hr, classNam
 let a = (~children, ~href="/", ~className="", ~ariaLabel="") =>
   if Js.String2.startsWith("/", href) {
     <Next.Link href={href}>
-      <a className={Tailwind.merge(. [Styles.link, className])} ariaLabel />
+      <a className={Tailwind.merge(. [Styles.link, className])} ariaLabel> children </a>
     </Next.Link>
   } else if Js.String2.startsWith("#", href) {
     <a ariaLabel className={Tailwind.merge(. [Styles.link, className])} href={href}> children </a>

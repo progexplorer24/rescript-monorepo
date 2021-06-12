@@ -5,9 +5,9 @@ import * as React from "react";
 import Link from "next/link";
 import $$Image from "next/image";
 import * as Caml_option from "rescript/lib/es6/caml_option.js";
-import * as Utils$RescriptMonorepo from "../utils/Utils.mjs";
-import * as Tailwind$RescriptMonorepo from "../styles/tailwind/Tailwind.mjs";
-import * as TypographyLayout$RescriptMonorepo from "../layouts/TypographyLayout.mjs";
+import * as Utils$RescriptMonorepo from "../../utils/Utils.mjs";
+import * as Tailwind$RescriptMonorepo from "../../styles/tailwind/Tailwind.mjs";
+import * as TypographyLayout$RescriptMonorepo from "../../layouts/TypographyLayout.mjs";
 
 var proseFirstChild = Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.selector("& >", [Tailwind$RescriptMonorepo.firstChild([Tailwind$RescriptMonorepo.mt("v0")])])]);
 
@@ -1237,7 +1237,7 @@ function Mdx$a(Props) {
                             link,
                             className
                           ])
-                    })
+                    }, children)
               });
   } else if ("#".startsWith(href)) {
     return React.createElement("a", {

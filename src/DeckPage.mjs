@@ -54,7 +54,7 @@ import * as SJ$RescriptMonorepo from "./components/icons/deck/spades/SJ.mjs";
 import * as SK$RescriptMonorepo from "./components/icons/deck/spades/SK.mjs";
 import * as SQ$RescriptMonorepo from "./components/icons/deck/spades/SQ.mjs";
 import * as ST$RescriptMonorepo from "./components/icons/deck/spades/ST.mjs";
-import * as Mdx$RescriptMonorepo from "./components/Mdx.mjs";
+import * as Mdx$RescriptMonorepo from "./components/blog/Mdx.mjs";
 import * as Utils$RescriptMonorepo from "./utils/Utils.mjs";
 import * as Unknown$RescriptMonorepo from "./components/icons/deck/Unknown.mjs";
 import * as Tailwind$RescriptMonorepo from "./styles/tailwind/Tailwind.mjs";
