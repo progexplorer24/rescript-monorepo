@@ -24,9 +24,19 @@ function readdirSync(encodingOpt, withFileTypesOpt, path) {
             });
 }
 
+function readFileSync(encodingOpt, flagOpt, path) {
+  var encoding = encodingOpt !== undefined ? encodingOpt : "utf-8";
+  var flag = flagOpt !== undefined ? flagOpt : "r";
+  return Fs.readFileSync(path, {
+              encoding: encoding,
+              flag: flag
+            });
+}
+
 var Fs$1 = {
   statSync: statSync,
-  readdirSync: readdirSync
+  readdirSync: readdirSync,
+  readFileSync: readFileSync
 };
 
 export {
