@@ -22,6 +22,8 @@ var grave = "\u0060";
 
 var transmitState = "\u0094";
 
+var rarr = "\u2192";
+
 export {
   str ,
   clog ,
@@ -31,6 +33,7 @@ export {
   nbsp ,
   grave ,
   transmitState ,
+  rarr ,
   
 }
 /* No side effect */
