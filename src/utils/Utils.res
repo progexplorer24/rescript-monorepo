@@ -6,3 +6,4 @@ let lsquo = `\u201C`
 let nbsp = `\u00A0`
 let grave = `\u0060`
 let transmitState = `\u0094`
+let rarr = `\u2192`
