@@ -25,7 +25,7 @@
     "bs-webapi"
   ],
   "warnings": {
-    "number": "+A-42-48",
-    "error": "+A-3-44-102-103"
+    "number": "-3",
+    "error": "+101+8"
   }
 }
