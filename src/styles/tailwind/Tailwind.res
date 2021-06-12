@@ -967,7 +967,7 @@ let borderNone = [borderStyle(#none)]
 
 // NOTE: Divide Width - Utilities for controlling the border width between elements.
 
-let divideY = (width, ~reverse=false, ()) =>
+let divideY = (~reverse=false, width) =>
   reverse
     ? [
         selector(

@@ -1416,7 +1416,7 @@ var borderDouble = [CssJs.borderStyle("double")];
 
 var borderNone = [CssJs.borderStyle("none")];
 
-function divideY(width, reverseOpt, param) {
+function divideY(reverseOpt, width) {
   var reverse = reverseOpt !== undefined ? reverseOpt : false;
   if (reverse) {
     return [CssJs.selector(Selectors$RescriptMonorepo.ignoreFirstChild, [
