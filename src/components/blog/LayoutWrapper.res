@@ -1,24 +1,42 @@
 module Styles = {
   open Tailwind
-  let flexWrapper = twStyle([flex, flexCol, justifyBetween, h(#screen)])
-  let header = twStyle([flex, itemsCenter, justifyBetween, py(#v10)])
+  let flexWrapper = twStyle([flex, flexCol, justifyBetween, [CssJs.fontFamily(#custom("Inter"))]])
+  let header = twStyle([flex, itemsCenter, justifyBetween, pt(#v4), pb(#v6), sm([py(#v10)])])
   let linkWrapper = twStyle([flex, itemsCenter, justifyBetween])
-  let linkDiv = twStyle([mr(#v3)])
+  let linkDiv = twStyle([text(#base), fontWeight(#v800)])
+  let titleStyles = twStyle([noUnderline])
+
+  let linksBlock = twStyle([flex, itemsCenter, leading(#v5)])
+  let hideForSm = twStyle([hidden, sm([block])])
 }
 
 @react.component
-let make = (~children) =>
+let make = (~children, ~headerTitle="") => {
+  let renderLinks = (links: array<Blog__Data.link>) =>
+    Belt.Array.map(links, link =>
+      <HeaderLink
+        key={link.title} href={link.href} className={Tailwind.twStyle([Tailwind.noUnderline])}>
+        {link.title->Utils.str}
+      </HeaderLink>
+    )
+
   <SectionContainer>
     <div className={Tailwind.merge(. [Styles.flexWrapper])}>
-      <header>
+      <header className=Styles.header>
         <div>
-          <Mdx.a href="/" ariaLabel="isensei blog">
+          <Mdx.a href="/" className=Styles.titleStyles ariaLabel="iSensei Personal Blog">
             <div className=Styles.linkWrapper>
-              <div className={Tailwind.merge(. [Styles.linkDiv])} />
+              <div className=Styles.linkDiv> {headerTitle->Utils.str} </div>
             </div>
           </Mdx.a>
+        </div>
+        <div className=Styles.linksBlock>
+          <div className=Styles.hideForSm>
+            {React.array(renderLinks(Blog__Data.headerNavLinks))}
+          </div>
         </div>
       </header>
       children
     </div>
   </SectionContainer>
+}
