@@ -7,7 +7,7 @@ import * as Mdx$RescriptMonorepo from "./components/blog/Mdx.mjs";
 import * as Tag$RescriptMonorepo from "./components/blog/Tag.mjs";
 import * as Utils$RescriptMonorepo from "./utils/Utils.mjs";
 import * as Tailwind$RescriptMonorepo from "./styles/tailwind/Tailwind.mjs";
-import * as Mdx__helpers$RescriptMonorepo from "./lib/Mdx__helpers.mjs";
+import * as Mdx__helpers$RescriptMonorepo from "./server/Mdx__helpers.mjs";
 import * as LayoutWrapper$RescriptMonorepo from "./components/blog/LayoutWrapper.mjs";
 
 var wrapper = Tailwind$RescriptMonorepo.twStyle([

@@ -6,7 +6,7 @@
 // import remarkMath from 'remark-math'
 // import rehypeKatex from 'rehype-katex'
 // import {make as Layout} from '../../src/layouts/PostLayout.mjs'
-import {  getFormattedFiles } from '../../src/lib/Mdx__helpers.mjs'
+import {  getFormattedFiles } from '../../src/server/Mdx__helpers.mjs'
 // import {components} from "../../src/components/blog/MDXComponents.mjs"
 
 const data = {

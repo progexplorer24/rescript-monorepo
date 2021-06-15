@@ -4,7 +4,7 @@ import * as React from "react";
 import Link from "next/link";
 import * as Utils$RescriptMonorepo from "../../utils/Utils.mjs";
 import * as Tailwind$RescriptMonorepo from "../../styles/tailwind/Tailwind.mjs";
-import * as Mdx__helpers$RescriptMonorepo from "../../lib/Mdx__helpers.mjs";
+import * as Mdx__helpers$RescriptMonorepo from "../../server/Mdx__helpers.mjs";
 
 var elementStyles = Tailwind$RescriptMonorepo.twStyle([
       Tailwind$RescriptMonorepo.mr("v3"),
