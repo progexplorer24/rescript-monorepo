@@ -10,7 +10,7 @@
     "res:build": "rescript build -with-deps",
     "res:clean": "rescript clean",
     "res:start": "rescript build -w -with-deps",
-    "test": "jest --watch",
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest --watch",
     "test:ci": "jest --ci"
   },
   "dependencies": {
