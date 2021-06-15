@@ -3,7 +3,9 @@ open Jest
 
 // INFO: Comment this out if you want to start your kata
 describeOnly(."Cancell all tests", (. ()) => {
-  expect(. true)->toEqual(true)
+  it(."does not run the test. To run tests comment me out", (. ()) => {
+    expect(. true)->toEqual(true)
+  })
 })
 
 describe(."Test repeatStr functionality", (. ()) => {

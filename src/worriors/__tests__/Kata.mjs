@@ -4,8 +4,10 @@ import * as Jest$RescriptMonorepo from "../../bindings/Jest.mjs";
 import * as Kata_8$RescriptMonorepo from "../Kata_8.mjs";
 
 describe.only("Cancell all tests", (function () {
-        expect(true).toEqual(true);
-        
+        return Jest$RescriptMonorepo.it("does not run the test. To run tests comment me out", (function () {
+                      expect(true).toEqual(true);
+                      
+                    }));
       }));
 
 describe("Test repeatStr functionality", (function () {
