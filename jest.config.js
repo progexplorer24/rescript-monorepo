@@ -1,19 +1,24 @@
-module.exports = {
-  collectCoverageFrom: [
-    '**/*.{js,jsx}',
+const {defaults} = require('jest-config');
+
+module.exports = async () => {
+  return {
+    verbose: true,
+    moduleFileExtensions: [...defaults.moduleFileExtensions, 'mjs'],
+    testMatch: ["**/__tests__/+([a-zA-Z0-9_-]).@(js|mjs)"],
+    setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+    transformIgnorePatterns: ["node_modules/(?!(rescript)/)"],
+    testEnvironment: "jsdom",
+    transform: {
+      '^.+\\.(js|mjs)$': '<rootDir>/node_modules/babel-jest',
+    },
+    testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/.next/', '<rootDir>/lib/'],
+    collectCoverageFrom: [
+    '**/*.{js,mjs}',
     '!**/node_modules/**',
     '!**/__tests__/**',
-  ],
-  // testMatch: ["**/__tests__/+([a-zA-Z0-9_-]).@(bs|bsc).@(js|ts|tsx)", "**/__tests__/+([a-zA-Z0-9_-]).@(js|ts|tsx)"],
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
-  transformIgnorePatterns: [
-    "node_modules/(?!(bs-platform)/)"
-  ],
-  testPathIgnorePatterns: ['/node_modules/', '/.next/'],
-  transform: {
-    '^.+\\.(js|jsx|ts|tsx)$': '<rootDir>/node_modules/babel-jest',
-  },
-  snapshotSerializers: [
-    '@emotion/jest/serializer' /* if needed other snapshotSerializers should go here */
-  ]
-}
+    ],
+    snapshotSerializers: [
+      '@emotion/jest/serializer' /* if needed other snapshotSerializers should go here */
+    ]
+  };
+};
