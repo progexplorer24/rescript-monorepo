@@ -3,11 +3,13 @@
 import * as Curry from "rescript/lib/es6/curry.js";
 import * as React from "react";
 import * as ReactTestRenderer from "react-test-renderer";
-import * as Css$RescriptMonorepo from "../styles/Css.mjs";
 import * as Sum$RescriptMonorepo from "../Sum.mjs";
 import * as Jest$RescriptMonorepo from "../bindings/Jest.mjs";
 import * as Utils$RescriptMonorepo from "../utils/Utils.mjs";
 import * as ResJest$RescriptMonorepo from "../ResJest.mjs";
+
+import {jest} from '@jest/globals'
+;
 
 function drinkAll(callback, flavour) {
   if (flavour !== "octopus") {
@@ -22,16 +24,13 @@ var globalValue1 = {
 };
 
 ResJest$RescriptMonorepo.describe("Snapshots", (function (param) {
-        var styles = Css$RescriptMonorepo.declaration("float", "left");
-        var Test = function (Props) {
-          var children = Props.children;
-          return React.createElement("h1", {
-                      className: styles
-                    }, children);
-        };
         ResJest$RescriptMonorepo.test("renders with correct styles", (function (param) {
+                var Test = function (Props) {
+                  var children = Props.children;
+                  return React.createElement("h1", undefined, children);
+                };
                 var tree = ReactTestRenderer.create(React.createElement(Test, {
-                            children: Utils$RescriptMonorepo.str("hello world")
+                            children: Utils$RescriptMonorepo.str("hello world!")
                           })).toJSON();
                 ResJest$RescriptMonorepo.expect(tree).toMatchSnapshot();
                 

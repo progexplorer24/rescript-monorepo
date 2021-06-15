@@ -1,3 +1,7 @@
+%%raw(`
+import {jest} from '@jest/globals'
+`)
+
 open Jest
 
 /* REGION: Before & after #region 
@@ -25,16 +29,16 @@ let globalValue1 = ref(0)
 // INFO: afterAll & beforeAll not working
 
 ResJest.describe("Snapshots", () => {
-  module H1 = {
-    let styles = Css.declaration("float", "left")
-
-    @react.component
-    let make = (~children) => <h1 className=styles> children </h1>
-  }
-
   ResJest.test("renders with correct styles", () => {
+    module H1 = {
+      // let styles = Css.declaration("float", "left")
+
+      @react.component
+      let make = (~children) => <h1> children </h1>
+    }
+
     let tree =
-      ReactTestRenderer.create(<H1> {"hello world"->Utils.str} </H1>)->ReactTestRenderer.toJSON
+      ReactTestRenderer.create(<H1> {"hello world!"->Utils.str} </H1>)->ReactTestRenderer.toJSON
 
     ResJest.expect(tree)->toMatchSnapshot()
   })
