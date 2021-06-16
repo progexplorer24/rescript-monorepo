@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "dev:w": "next-remote-watch ./src/posts",
-    "build": "rescript -clean-world -make-world && next build",
+    "build": "rescript && next build",
     "start": "next start",
     "res:build": "rescript build -with-deps",
     "res:clean": "rescript clean",
