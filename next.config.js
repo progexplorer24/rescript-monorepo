@@ -4,7 +4,6 @@ const fs = require("fs");
 // NOTE: https://forum.rescript-lang.org/t/purpose-alternatives-to-next-transpile-modules-in-next-rescript-projects/827/5
 const transpileModules = ["rescript"].concat(bsconfig["bs-dependencies"]);
 const withTM = require("next-transpile-modules")(transpileModules);
-const isWebpack5 = true;
 
 const config = {
   target: "serverless",
@@ -15,7 +14,6 @@ const config = {
   webpack: (config, options) => {
     const { isServer } = options;
 
-    if (isWebpack5) {
 
       if (!isServer) {
         // We shim fs for things like the blog slugs component
@@ -24,8 +22,6 @@ const config = {
           fs: false,
           path: false,
         };
-
-    }
 
     
     }
@@ -41,9 +37,6 @@ const config = {
     });
 
     return config
-  },
-  future: {
-    webpack5: true
   },
   images: {
     domains: ['vercel.com'],
