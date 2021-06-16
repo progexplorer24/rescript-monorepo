@@ -3,7 +3,7 @@ import {serialize} from 'next-mdx-remote/serialize'
 import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
 import prisma from '../../src/utils/prisma'
-import {make as Layout} from "../../src/layouts/TypographyLayout.bs"
+import {make as Layout} from "../../src/layouts/TypographyLayout"
 
 export const getServerSideProps = async ({ params }) => {
   const post = await prisma.post.findUnique({
