@@ -17,8 +17,8 @@ function join(prim) {
 
 var readFileSync = NodeJS$RescriptMonorepo.Fs.readFileSync;
 
-function postFilePathsFn(param) {
-  return Belt_Array.keep(NodeJS$RescriptMonorepo.Fs.readdirSync(undefined, undefined, Path.join(root, "data", "blog")), (function (path) {
+function postFilePaths($$location) {
+  return Belt_Array.keep(NodeJS$RescriptMonorepo.Fs.readdirSync(undefined, undefined, Path.join(root, "data", $$location)), (function (path) {
                 return /\.mdx?$/.test(path);
               }));
 }
@@ -176,21 +176,19 @@ function kebabCase(str) {
   }
 }
 
+var Params = {};
+
 function getFormattedFiles($$location) {
-  return getFiles(undefined, $$location).map(function (slug) {
-              return {
-                      params: {
-                        slug: slug.replace(/^\/blog\//, "")
-                      }
-                    };
-            });
+  return Belt_Array.map(getFiles(undefined, $$location), (function (slug) {
+                return slug.replace(/^\/blog\//, "");
+              }));
 }
 
 export {
   root ,
   join ,
   readFileSync ,
-  postFilePathsFn ,
+  postFilePaths ,
   prependPathSegment ,
   readdirPreserveRelativePath ,
   readdirRecursive ,
@@ -203,6 +201,7 @@ export {
   getBlogPostsFromLatest ,
   returnSiteMetadata ,
   kebabCase ,
+  Params ,
   getFormattedFiles ,
   
 }

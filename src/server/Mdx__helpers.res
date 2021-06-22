@@ -11,21 +11,16 @@ type frontmatterAndSlug = {
 }
 // NOTE: Process cwd is not a pure function
 let root = NodeJS.Process.cwd()
-// let blogPath = Belt.Array.concat([root, "data", "blog"])
 
 let join = NodeJS.Path.join
 let readFileSync = NodeJS.Fs.readFileSync
 
-// let mdxContentLocation = NodeJS.Path.join([root, "data", "blog"])
-
 // TODO: Document this functions and describe better what they do
 
-let postFilePathsFn = () =>
-  NodeJS.Fs.readdirSync(NodeJS.Path.join([root, "data", "blog"]))->Belt.Array.keep(path =>
+let postFilePaths = location =>
+  NodeJS.Fs.readdirSync(NodeJS.Path.join([root, "data", location]))->Belt.Array.keep(path =>
     Js.Re.test_(%re("/\.mdx?$/"), path)
   )
-
-// let postFilePaths = postFilePathsFn()
 
 let prependPathSegment = (location, pathSegment) => NodeJS.Path.join([location, pathSegment])
 
@@ -188,13 +183,6 @@ let kebabCase = str => {
     %re("/[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+/g"),
   )
 
-  // let kebabCaseString = (array: option<array<Js.String2.t>>) =>
-  //   switch array {
-  //   | None => ""
-  //   | Some(array) =>
-  //     Js.Array2.map(array, x => Js.String2.toLocaleLowerCase(x))->Js.Array2.joinWith("-")
-  //   }
-
   switch matches {
   | None => ""
   | Some(array) =>
@@ -202,20 +190,15 @@ let kebabCase = str => {
   }
 }
 
-type paramsRecord = {slug: string}
+module Params = {
+  type t = {slug: array<string>}
+}
 
-type pathsRecord = {params: paramsRecord}
+// type params = {slug: string}
 
-type slugRecord = {paths: pathsRecord}
+type paramsRecord = {params: Params.t}
+
+type slugRecord = {paths: paramsRecord}
 
 let getFormattedFiles = location =>
-  getFiles(location)->Js.Array2.map(slug => {
-    // Utils.clog(slug)
-    // let pathArray = Js.String2.split(slug, "/")
-    // Utils.clog(pathArray)
-    {
-      params: {
-        slug: Js.String2.replaceByRe(slug, %re("/^\/blog\//"), ""),
-      },
-    }
-  })
+  getFiles(location)->Belt.Array.map(slug => Js.String2.replaceByRe(slug, %re("/^\/blog\//"), ""))
