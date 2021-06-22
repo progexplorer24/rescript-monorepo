@@ -3,7 +3,7 @@ import matter from 'gray-matter'
 import Link from 'next/link'
 import path from 'path'
 import {make as Layout} from '../src/layouts/TypographyLayout.mjs'
-import { postFilePaths, POSTS_PATH } from '../src/server/Mdx__helpers.mjs'
+import { postFilePaths, root} from '../src/server/Mdx__helpers.mjs'
 
 export default function Examples({posts}) {
 
@@ -30,8 +30,10 @@ export default function Examples({posts}) {
 
 
 export function getStaticProps() {
-  const posts = postFilePaths.map((filePath) => {
-    const source = fs.readFileSync(path.join(POSTS_PATH, filePath))
+  const postsRaw = postFilePaths("blog")
+  console.log(postsRaw)
+  const posts = postsRaw.map((filePath) => {
+    const source = fs.readFileSync(path.join(root, "data/blog", filePath))
     const { content, data } = matter(source)
 
     return {
