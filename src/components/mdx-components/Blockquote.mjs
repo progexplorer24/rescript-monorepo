@@ -10,7 +10,7 @@ var elementStyles = Tailwind$RescriptMonorepo.twStyle([
       Tailwind$RescriptMonorepo.text("base"),
       Tailwind$RescriptMonorepo.breakWords,
       Tailwind$RescriptMonorepo.bg(undefined, "indigo100"),
-      Tailwind$RescriptMonorepo.borderL("v4"),
+      Tailwind$RescriptMonorepo.borderL(4),
       Tailwind$RescriptMonorepo.borderColor("indigo800"),
       Tailwind$RescriptMonorepo.italic,
       Tailwind$RescriptMonorepo.shadow("sm"),

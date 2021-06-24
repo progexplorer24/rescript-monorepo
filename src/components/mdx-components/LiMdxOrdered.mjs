@@ -6,7 +6,7 @@ import * as Tailwind$RescriptMonorepo from "../../styles/tailwind/Tailwind.mjs";
 var orderedElementStyles = Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.mb("v4")]);
 
 var numerationStyles = Tailwind$RescriptMonorepo.twStyle([
-      Tailwind$RescriptMonorepo.borderR("v1"),
+      Tailwind$RescriptMonorepo.borderR(1),
       Tailwind$RescriptMonorepo.pr("v1_5"),
       Tailwind$RescriptMonorepo.roundedR("full"),
       Tailwind$RescriptMonorepo.borderColor("indigo800"),

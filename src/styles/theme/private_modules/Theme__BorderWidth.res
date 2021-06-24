@@ -1,10 +1,10 @@
-type t = [#v1 | #v0 | #v4 | #v8]
+type t = [#1 | #0 | #4 | #8]
 
 let toWidth = width =>
   switch width {
-  | #v0 => #px(0)
-  | #v1 => #px(1)
-  | #v2 => #px(2)
-  | #v4 => #px(4)
-  | #v8 => #px(8)
+  | #0 => #px(0)
+  | #1 => #px(1)
+  | #2 => #px(2)
+  | #4 => #px(4)
+  | #8 => #px(8)
   }

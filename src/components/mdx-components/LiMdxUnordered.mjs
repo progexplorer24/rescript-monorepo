@@ -8,8 +8,8 @@ var elementStyles = Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo
 var bulletStyles = Tailwind$RescriptMonorepo.twStyle([
       Tailwind$RescriptMonorepo.w("v3"),
       Tailwind$RescriptMonorepo.borderColor("indigo800"),
-      Tailwind$RescriptMonorepo.borderL("v1"),
-      Tailwind$RescriptMonorepo.borderR("v1"),
+      Tailwind$RescriptMonorepo.borderL(1),
+      Tailwind$RescriptMonorepo.borderR(1),
       Tailwind$RescriptMonorepo.rounded("full"),
       Tailwind$RescriptMonorepo.bg(undefined, "indigo50"),
       Tailwind$RescriptMonorepo.itemsCenter,

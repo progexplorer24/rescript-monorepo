@@ -5,8 +5,8 @@ module Styles = {
   let bulletStyles = twStyle([
     w(#v3),
     borderColor(#indigo800),
-    borderL(#v1),
-    borderR(#v1),
+    borderL(#1),
+    borderR(#1),
     rounded(#full),
     bg(#indigo50),
     itemsCenter,
@@ -19,6 +19,6 @@ module Styles = {
 
 @react.component
 let make = (~children, ~className="") =>
-  <li className={Tailwind.merge(.[Styles.elementStyles, className])}>
+  <li className={Tailwind.merge(. [Styles.elementStyles, className])}>
     <span className=Styles.bulletStyles /> children
   </li>

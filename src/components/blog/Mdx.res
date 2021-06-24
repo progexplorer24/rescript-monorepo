@@ -73,7 +73,7 @@ module Styles = {
   let removeTopMarginFromNextElement = selector("&& + *", [mt(#v0)])
 
   let hrBase = twStyle([
-    borderT(#v1),
+    borderT(#1),
     borderColor(#coolGray200),
     Typography.my(40., base),
     removeTopMarginFromNextElement,
@@ -97,7 +97,7 @@ module Styles = {
     italic,
     borderColor(#coolGray200),
     fontWeight(#v500),
-    borderL(#v4),
+    borderL(#4),
     selector(
       "p",
       [
@@ -333,9 +333,9 @@ module Styles = {
     selector(
       "& code",
       [
-        border(#v0),
+        border(#0),
         fontWeight(#v400),
-        borderR(#v0),
+        borderR(#0),
         bg(#transparent),
         p(#v0),
         fontFamilies([
@@ -733,7 +733,7 @@ module Styles = {
 
   let thead = merge(. [
     theadTh,
-    twStyle([textColor(#coolGray900), fontWeight(#v600), borderB(#v1), borderColor(#coolGray300)]),
+    twStyle([textColor(#coolGray900), fontWeight(#v600), borderB(#1), borderColor(#coolGray300)]),
   ])
 
   let tbodyTdBase = twStyle([
@@ -764,10 +764,7 @@ module Styles = {
 
   let tbodyTd = merge(. [tbodyTdBase, tbodyTdSm, tbodyTdLg, tbodyTdXl])
 
-  let tbodyTr = selector(
-    "& tr",
-    [borderB(#v1), borderColor(#coolGray300), lastChild([borderB(#v0)])],
-  )
+  let tbodyTr = selector("& tr", [borderB(#1), borderColor(#coolGray300), lastChild([borderB(#0)])])
 
   let tbody = merge(. [tbodyTd, twStyle([tbodyTr])])
 }
@@ -861,12 +858,6 @@ let a = (~children, ~href="/", ~className="", ~ariaLabel="") =>
       children
     </a>
   }
-
-// internal
-//   ? <Next.Link href>
-//       <a className={Tailwind.merge(. [Styles.link, className])}> children </a>
-//     </Next.Link>
-//   : <a href target="_blank" className={Tailwind.merge(. [Styles.link, className])}> children </a>
 
 @react.component
 let img = (~src, ~alt="", ~className="", ~figcaption=?) =>

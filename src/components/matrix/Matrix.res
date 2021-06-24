@@ -5,7 +5,7 @@ module Styles = {
     h(#v20),
     w(#v20),
     bg(#coolGray900),
-    border(#v1),
+    border(#1),
     borderCollapse,
     borderColor(#coolGray800),
     m(#v0),

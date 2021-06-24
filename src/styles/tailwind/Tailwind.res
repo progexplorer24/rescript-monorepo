@@ -973,7 +973,7 @@ let divideY = (~reverse=false, width) =>
         selector(
           Selectors.ignoreFirstChild,
           [
-            borderTopWidth(Theme.BorderWidth.toWidth(#v0)),
+            borderTopWidth(Theme.BorderWidth.toWidth(#0)),
             borderBottomWidth(Theme.BorderWidth.toWidth(width)),
           ],
         ),
@@ -983,19 +983,19 @@ let divideY = (~reverse=false, width) =>
           Selectors.ignoreFirstChild,
           [
             borderTopWidth(Theme.BorderWidth.toWidth(width)),
-            borderBottomWidth(Theme.BorderWidth.toWidth(#v0)),
+            borderBottomWidth(Theme.BorderWidth.toWidth(#0)),
           ],
         ),
       ]
 
-let divideX = (width, ~reverse=false, ()) =>
+let divideX = (~reverse=false, width) =>
   reverse
     ? [
         selector(
           Selectors.ignoreFirstChild,
           [
             borderRightWidth(Theme.BorderWidth.toWidth(width)),
-            borderLeftWidth(Theme.BorderWidth.toWidth(#v0)),
+            borderLeftWidth(Theme.BorderWidth.toWidth(#0)),
           ],
         ),
       ]
@@ -1004,7 +1004,7 @@ let divideX = (width, ~reverse=false, ()) =>
           Selectors.ignoreFirstChild,
           [
             borderLeftWidth(Theme.BorderWidth.toWidth(width)),
-            borderRightWidth(Theme.BorderWidth.toWidth(#v0)),
+            borderRightWidth(Theme.BorderWidth.toWidth(#0)),
           ],
         ),
       ]

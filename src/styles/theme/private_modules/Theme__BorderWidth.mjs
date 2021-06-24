@@ -2,22 +2,22 @@
 
 
 function toWidth(width) {
-  if (width === "v1") {
+  if (width === 1) {
     return {
             NAME: "px",
             VAL: 1
           };
-  } else if (width === "v2") {
+  } else if (width === 2) {
     return {
             NAME: "px",
             VAL: 2
           };
-  } else if (width === "v4") {
+  } else if (width === 4) {
     return {
             NAME: "px",
             VAL: 4
           };
-  } else if (width === "v8") {
+  } else if (width === 8) {
     return {
             NAME: "px",
             VAL: 8

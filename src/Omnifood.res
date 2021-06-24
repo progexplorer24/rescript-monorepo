@@ -79,16 +79,16 @@ module Styles = {
   let omnifoodSm = Tailwind.minWBreakpoint(481)
   let omnifoodMd = Tailwind.minWBreakpoint(767)
 
-  let smallGlobal = style(.[
+  let smallGlobal = style(. [
     media("screen and (max-width: 767px)", [overflowX(#hidden), fontSize(#px(15))]),
   ])
 
-  let mediumBreakpointGlobal = style(.[
+  let mediumBreakpointGlobal = style(. [
     media("screen and (max-width: 1023px)", [fontSize(#px(18))]),
   ])
 
-  let globalStyles = CssJs.merge(.[
-    style(.[
+  let globalStyles = CssJs.merge(. [
+    style(. [
       backgroundColor(hex("fff")),
       color(hex("555")),
       fontSize(px(20)),
@@ -99,21 +99,21 @@ module Styles = {
     smallGlobal,
   ])
 
-  let smallRow = style(.[
+  let smallRow = style(. [
     media("screen and (max-width: 767px)", [padding2(~v=#px(0), ~h=#percent(4.))]),
   ])
 
-  let largeBreakpointRow = style(.[
+  let largeBreakpointRow = style(. [
     media("screen and (max-width: 1200px)", [padding2(~v=#px(0), ~h=#percent(2.))]),
   ])
 
-  let row = CssJs.merge(.[
-    style(.[maxWidth(px(1140)), margin2(~v=#zero, ~h=#auto)]),
+  let row = CssJs.merge(. [
+    style(. [maxWidth(px(1140)), margin2(~v=#zero, ~h=#auto)]),
     largeBreakpointRow,
     smallRow,
   ])
 
-  let headerStyles = style(.[
+  let headerStyles = style(. [
     backgrounds([
       linearGradient(
         deg(0.),
@@ -130,22 +130,22 @@ module Styles = {
     backgroundAttachment(#fixed),
   ])
 
-  let smallTextBox = style(.[
+  let smallTextBox = style(. [
     media(
       "screen and (max-width: 767px)",
       [width(#percent(100.)), padding2(~v=#px(0), ~h=#percent(4.))],
     ),
   ])
 
-  let largeBreakpointTextBox = style(.[
+  let largeBreakpointTextBox = style(. [
     media(
       "screen and (max-width: 1200px)",
       [width(#percent(100.)), padding2(~v=#px(0), ~h=#percent(2.))],
     ),
   ])
 
-  let textBox = CssJs.merge(.[
-    style(.[
+  let textBox = CssJs.merge(. [
+    style(. [
       position(#absolute),
       width(px(1140)),
       top(#percent(Belt.Int.toFloat(50))),
@@ -156,12 +156,12 @@ module Styles = {
     smallTextBox,
   ])
 
-  let headingStyles = style(.[fontWeight(#num(300)), textTransform(#uppercase)])
+  let headingStyles = style(. [fontWeight(#num(300)), textTransform(#uppercase)])
 
-  let smallH1 = style(.[media("screen and (max-width: 767px)", [fontSize(#percent(180.))])])
+  let smallH1 = style(. [media("screen and (max-width: 767px)", [fontSize(#percent(180.))])])
 
-  let h1 = CssJs.merge(.[
-    style(.[
+  let h1 = CssJs.merge(. [
+    style(. [
       margin(#zero),
       color(hex("fff")),
       fontSize(#percent(240.)),
@@ -171,7 +171,7 @@ module Styles = {
     smallH1,
   ])
 
-  let btn = style(.[
+  let btn = style(. [
     display(#inlineBlock),
     padding2(~v=px(10), ~h=px(30)),
     fontWeight(#num(300)),
@@ -179,24 +179,24 @@ module Styles = {
     transition("background-color, color, border", ~duration=200),
   ])
 
-  let btnHover = style(.[hover([backgroundColor(hex("cf6d17"))])])
+  let btnHover = style(. [hover([backgroundColor(hex("cf6d17"))])])
 
-  let hoverStyles2 = style(.[hover([color(hex("fff")), border(px(1), solid, #hex("cf6d17"))])])
+  let hoverStyles2 = style(. [hover([color(hex("fff")), border(px(1), solid, #hex("cf6d17"))])])
 
-  let btnFull = merge(.[
+  let btnFull = merge(. [
     btn,
     btnHover,
-    style(.[backgroundColor(hex("e67e22")), color(#hex("fff")), marginRight(px(15))]),
+    style(. [backgroundColor(hex("e67e22")), color(#hex("fff")), marginRight(px(15))]),
   ])
 
-  let btnGhost = merge(.[
+  let btnGhost = merge(. [
     btn,
     btnHover,
     hoverStyles2,
-    style(.[border(px(1), solid, #hex("e67e22")), color(#hex("e67e22"))]),
+    style(. [border(px(1), solid, #hex("e67e22")), color(#hex("e67e22"))]),
   ])
 
-  let logo = style(.[
+  let logo = style(. [
     height(px(50)),
     width(#auto),
     CssJs.float(#left),
@@ -204,7 +204,7 @@ module Styles = {
     marginBottom(px(5)),
   ])
 
-  let stickyNav = style(.[
+  let stickyNav = style(. [
     position(#fixed),
     top(#px(0)),
     left(#px(0)),
@@ -216,13 +216,13 @@ module Styles = {
 
   // let smallMainNav = style(.[media("screen and (max-width: 767px)", [display(#none)])])
 
-  let mainNavSticky = style(.[color(#hex("555"))])
+  let mainNavSticky = style(. [color(#hex("555"))])
 
-  let mainNav = CssJs.merge(.[style(.[CssJs.float(#right), marginTop(px(18))]), mainNavSticky])
+  let mainNav = CssJs.merge(. [style(. [CssJs.float(#right), marginTop(px(18))]), mainNavSticky])
 
-  let liNav = style(.[display(#inlineBlock), marginLeft(#px(40))])
+  let liNav = style(. [display(#inlineBlock), marginLeft(#px(40))])
 
-  let linkBase = style(.[
+  let linkBase = style(. [
     color(#hex("555")),
     textTransform(#uppercase),
     fontSize(#percent(90.)),
@@ -231,13 +231,13 @@ module Styles = {
     padding2(~v=px(16), ~h=#zero),
   ])
 
-  let linkHover = style(.[hover([borderBottom(#px(2), #solid, #hex(mainOrange))])])
+  let linkHover = style(. [hover([borderBottom(#px(2), #solid, #hex(mainOrange))])])
 
-  let link = merge(.[linkBase, linkHover])
+  let link = merge(. [linkBase, linkHover])
 
   // NOTE: This part is a features section
 
-  let h2After = style(.[
+  let h2After = style(. [
     after([
       display(#block),
       height(#px(2)),
@@ -249,11 +249,11 @@ module Styles = {
     ]),
   ])
 
-  let h2Small = style(.[media("screen and (max-width: 767px)", [fontSize(#percent(150.))])])
+  let h2Small = style(. [media("screen and (max-width: 767px)", [fontSize(#percent(150.))])])
 
-  let h2 = CssJs.merge(.[
+  let h2 = CssJs.merge(. [
     headingStyles,
-    style(.[
+    style(. [
       fontSize(#percent(180.)),
       wordSpacing(px(2)),
       textAlign(#center),
@@ -264,18 +264,21 @@ module Styles = {
     h2Small,
   ])
 
-  let h3 = CssJs.merge(.[headingStyles, style(.[fontSize(#percent(110.)), marginBottom(#px(15))])])
+  let h3 = CssJs.merge(. [
+    headingStyles,
+    style(. [fontSize(#percent(110.)), marginBottom(#px(15))]),
+  ])
 
-  let smallP = style(.[
+  let smallP = style(. [
     media("screen and (max-width: 767px)", [width(#percent(100.)), marginLeft(#px(0))]),
   ])
 
-  let mediumP = style(.[
+  let mediumP = style(. [
     media("screen and (max-width: 1023px)", [width(#percent(80.)), marginLeft(#percent(10.))]),
   ])
 
-  let p = CssJs.merge(.[
-    style(.[
+  let p = CssJs.merge(. [
+    style(. [
       lineHeight(#percent(140.)),
       width(#percent(70.)),
       marginLeft(#percent(15.)),
@@ -285,19 +288,19 @@ module Styles = {
     smallP,
   ])
 
-  let featuresParagraph = style(.[fontSize(#percent(90.)), lineHeight(#percent(140.))])
+  let featuresParagraph = style(. [fontSize(#percent(90.)), lineHeight(#percent(140.))])
 
-  let box = style(.[padding(#percent(1.))])
+  let box = style(. [padding(#percent(1.))])
 
   // NOTE: Icon styles
-  let bigIcons = CssJs.merge(.[
-    style(.[color(#hex(mainOrange)), marginBottom(#px(10))]),
+  let bigIcons = CssJs.merge(. [
+    style(. [color(#hex(mainOrange)), marginBottom(#px(10))]),
     Tailwind.twStyle([Tailwind.w(#v16), Tailwind.h(#v16), Tailwind.block, Tailwind.fillCurrent]),
   ])
 
   // NOTE: Favourite meals
 
-  let clearfix = style(.[
+  let clearfix = style(. [
     after([
       contentRule(#text(".")),
       clear(#both),
@@ -307,21 +310,21 @@ module Styles = {
     ]),
   ])
 
-  let mealsShowcase = CssJs.merge(.[style(.[width(#percent(100.))]), clearfix])
+  let mealsShowcase = CssJs.merge(. [style(. [width(#percent(100.))]), clearfix])
 
-  let mealsLi = style(.[display(#block), CssJs.float(#left), width(#percent(25.))])
+  let mealsLi = style(. [display(#block), CssJs.float(#left), width(#percent(25.))])
 
-  let mealFigure = style(.[
+  let mealFigure = style(. [
     width(#percent(100.)),
     margin(#px(0)),
     overflow(#hidden),
     backgroundColor(#hex("000000")),
   ])
 
-  let mealImgHover = style(.[hover([transform(#scale(1., 1.)), opacity(1.)])])
+  let mealImgHover = style(. [hover([transform(#scale(1., 1.)), opacity(1.)])])
 
-  let mealImg = CssJs.merge(.[
-    style(.[
+  let mealImg = CssJs.merge(. [
+    style(. [
       width(#percent(100.)),
       height(#auto),
       transform(#scale(1.15, 1.15)),
@@ -336,51 +339,51 @@ module Styles = {
 
   // NOTE: How it works section
 
-  let smallStepsBox = style(.[media("screen and (max-width: 767px)", [marginTop(#px(10))])])
+  let smallStepsBox = style(. [media("screen and (max-width: 767px)", [marginTop(#px(10))])])
 
-  let mediumStepsBox = style(.[media("screen and (max-width: 1023px)", [marginTop(#px(10))])])
+  let mediumStepsBox = style(. [media("screen and (max-width: 1023px)", [marginTop(#px(10))])])
 
-  let stepsBox = CssJs.merge(.[style(.[marginTop(#px(30))]), mediumStepsBox, smallStepsBox])
+  let stepsBox = CssJs.merge(. [style(. [marginTop(#px(30))]), mediumStepsBox, smallStepsBox])
 
-  let smallLeftSection = style(.[
+  let smallLeftSection = style(. [
     media("screen and (max-width: 767px)", [textAlign(#center), paddingRight(#px(0))]),
   ])
 
-  let leftSection = CssJs.merge(.[
+  let leftSection = CssJs.merge(. [
     stepsBox,
-    style(.[textAlign(#right), paddingRight(#percent(10.))]),
+    style(. [textAlign(#right), paddingRight(#percent(10.))]),
     smallLeftSection,
   ])
 
-  let rightSection = CssJs.merge(.[
+  let rightSection = CssJs.merge(. [
     stepsBox,
-    style(.[paddingLeft(#percent(3.)), marginTop(#px(70))]),
+    style(. [paddingLeft(#percent(3.)), marginTop(#px(70))]),
   ])
 
-  let smallAppScreen = style(.[media("screen and (max-width: 767px)", [width(#percent(40.))])])
+  let smallAppScreen = style(. [media("screen and (max-width: 767px)", [width(#percent(40.))])])
 
-  let mediumAppScreen = style(.[media("screen and (max-width: 1023px)", [width(#percent(50.))])])
+  let mediumAppScreen = style(. [media("screen and (max-width: 1023px)", [width(#percent(50.))])])
 
-  let appScreen = CssJs.merge(.[
-    style(.[width(#percent(40.)), display(#inlineBlock)]),
+  let appScreen = CssJs.merge(. [
+    style(. [width(#percent(40.)), display(#inlineBlock)]),
     mediumAppScreen,
     smallAppScreen,
   ])
 
-  let smallWorkStop = style(.[media("screen and (max-width: 767px)", [marginBottom(#px(20))])])
+  let smallWorkStop = style(. [media("screen and (max-width: 767px)", [marginBottom(#px(20))])])
 
-  let mediumWorkStop = style(.[media("screen and (max-width: 1023px)", [marginBottom(#px(40))])])
+  let mediumWorkStop = style(. [media("screen and (max-width: 1023px)", [marginBottom(#px(40))])])
 
-  let worksStop = CssJs.merge(.[
+  let worksStop = CssJs.merge(. [
     Tailwind.twStyle([Tailwind.flex, Tailwind.itemsCenter, omnifoodMd([Tailwind.itemsStart])]),
-    style(.[overflow(#auto), marginBottom(#px(50))]),
+    style(. [overflow(#auto), marginBottom(#px(50))]),
     mediumWorkStop,
     smallWorkStop,
   ])
 
-  let lastWorkStop = CssJs.merge(.[worksStop, style(.[marginBottom(#px(80))])])
+  let lastWorkStop = CssJs.merge(. [worksStop, style(. [marginBottom(#px(80))])])
 
-  let smallWorkStopNumber = style(.[
+  let smallWorkStopNumber = style(. [
     media(
       "screen and (max-width: 767px)",
       [
@@ -393,9 +396,9 @@ module Styles = {
     ),
   ])
 
-  let workStopNumber = CssJs.merge(.[
+  let workStopNumber = CssJs.merge(. [
     Tailwind.twStyle([Tailwind.flexShrink0]),
-    style(.[
+    style(. [
       color(#hex(mainOrange)),
       border(px(2), #solid, #hex(mainOrange)),
       display(#inlineBlock),
@@ -411,43 +414,43 @@ module Styles = {
     smallWorkStopNumber,
   ])
 
-  let btnAppImage = style(.[
+  let btnAppImage = style(. [
     height(#px(50)),
     width(#auto),
     marginRight(#px(10)),
     display(#inlineBlock),
   ])
 
-  let xsSection = style(.[
+  let xsSection = style(. [
     media("screen and (max-width: 480px)", [padding2(~v=#px(25), ~h=#px(0))]),
   ])
 
-  let smallSection = style(.[padding2(~v=#px(30), ~h=#px(0))])
+  let smallSection = style(. [padding2(~v=#px(30), ~h=#px(0))])
 
-  let mediumSection = style(.[
+  let mediumSection = style(. [
     media("screen and (max-width: 1023px)", [padding2(~v=#px(60), ~h=#px(0))]),
   ])
 
-  let section = CssJs.merge(.[
-    style(.[padding2(~v=px(80), ~h=px(0))]),
+  let section = CssJs.merge(. [
+    style(. [padding2(~v=px(80), ~h=px(0))]),
     mediumSection,
     smallSection,
     xsSection,
   ])
 
-  let sectionSteps = CssJs.merge(.[section, style(.[backgroundColor(#hex("f4f4f4"))])])
+  let sectionSteps = CssJs.merge(. [section, style(. [backgroundColor(#hex("f4f4f4"))])])
 
   // NOTE: Cities section
 
-  let boxImage = style(.[width(#percent(100.)), height(#auto), marginBottom(#px(15))])
+  let boxImage = style(. [width(#percent(100.)), height(#auto), marginBottom(#px(15))])
 
-  let mediumCityFeature = style(.[
+  let mediumCityFeature = style(. [
     media("screen and (max-width: 1023px)", [fontSize(#percent(90.))]),
   ])
 
-  let cityFeature = CssJs.merge(.[style(.[marginBottom(#px(10))]), mediumCityFeature])
+  let cityFeature = CssJs.merge(. [style(. [marginBottom(#px(10))]), mediumCityFeature])
 
-  let fourColumns = CssJs.merge(.[
+  let fourColumns = CssJs.merge(. [
     Tailwind.twStyle([
       Tailwind.grid,
       Tailwind.gridCols(#v1),
@@ -457,12 +460,12 @@ module Styles = {
     row,
   ])
 
-  let mediumIconSmall = style(.[
+  let mediumIconSmall = style(. [
     media("screen and (max-width: 1023px)", [width(#px(16)), marginRight(#px(5))]),
   ])
 
-  let iconSmall = CssJs.merge(.[
-    style(.[
+  let iconSmall = CssJs.merge(. [
+    style(. [
       display(#inlineBlock),
       width(#px(30)),
       textAlign(#center),
@@ -477,12 +480,12 @@ module Styles = {
     mediumIconSmall,
   ])
 
-  let twitterHover = style(.[
+  let twitterHover = style(. [
     hover([color(#hex("555")), borderBottom(#px(1), #solid, #transparent)]),
   ])
 
-  let twitterLink = CssJs.merge(.[
-    style(.[
+  let twitterLink = CssJs.merge(. [
+    style(. [
       color(#hex(mainOrange)),
       borderBottom(#px(1), #solid, #hex(mainOrange)),
       paddingBottom(#px(1)),
@@ -494,7 +497,7 @@ module Styles = {
 
   // NOTE: Customer experiance
 
-  let threeColumns = CssJs.merge(.[
+  let threeColumns = CssJs.merge(. [
     Tailwind.twStyle([
       Tailwind.grid,
       Tailwind.gridCols(#v1),
@@ -503,9 +506,9 @@ module Styles = {
     row,
   ])
 
-  let customerSection = CssJs.merge(.[
+  let customerSection = CssJs.merge(. [
     section,
-    style(.[
+    style(. [
       backgrounds([
         linearGradient(
           deg(0.),
@@ -522,7 +525,7 @@ module Styles = {
     Tailwind.twStyle([Tailwind.textColor(#white)]),
   ])
 
-  let blockquoteBefore = style(.[
+  let blockquoteBefore = style(. [
     before([
       contentRule(#text(lsquo)),
       fontSize(#percent(500.)),
@@ -533,8 +536,8 @@ module Styles = {
     ]),
   ])
 
-  let blockquote = CssJs.merge(.[
-    style(.[
+  let blockquote = CssJs.merge(. [
+    style(. [
       padding(#percent(2.)),
       fontStyle(#italic),
       lineHeight(#percent(145.)),
@@ -544,9 +547,9 @@ module Styles = {
     blockquoteBefore,
   ])
 
-  let cite = style(.[fontSize(#percent(90.)), marginTop(#px(25)), display(#block)])
+  let cite = style(. [fontSize(#percent(90.)), marginTop(#px(25)), display(#block)])
 
-  let customerImage = style(.[
+  let customerImage = style(. [
     height(#px(45)),
     borderRadius(#percent(50.)),
     marginRight(#px(10)),
@@ -556,14 +559,14 @@ module Styles = {
 
   // NOTE: Pricing plans
 
-  let sectionPlans = CssJs.merge(.[section, style(.[backgroundColor(#hex("f4f4f4"))])])
+  let sectionPlans = CssJs.merge(. [section, style(. [backgroundColor(#hex("f4f4f4"))])])
 
-  let mediumPlanBox = style(.[
+  let mediumPlanBox = style(. [
     media("screen and (max-width: 1023px)", [width(#percent(100.)), marginLeft(#px(0))]),
   ])
 
-  let planBox = CssJs.merge(.[
-    style(.[
+  let planBox = CssJs.merge(. [
+    style(. [
       backgroundColor(#hex("fff")),
       borderRadius(#px(5)),
       boxShadow(Shadow.box(~x=px(0), ~y=px(2), ~blur=px(2), #hex("efefef"))),
@@ -571,26 +574,26 @@ module Styles = {
     mediumPlanBox,
   ])
 
-  let mediumPlanBoxDiv = style(.[media("screen and (max-width: 1023px)", [padding(#px(20))])])
+  let mediumPlanBoxDiv = style(. [media("screen and (max-width: 1023px)", [padding(#px(20))])])
 
-  let planBoxDiv = CssJs.merge(.[
-    style(.[padding(#px(40)), borderBottom(#px(1), #solid, #rgb(243, 244, 246))]),
+  let planBoxDiv = CssJs.merge(. [
+    style(. [padding(#px(40)), borderBottom(#px(1), #solid, #rgb(243, 244, 246))]),
     mediumPlanBoxDiv,
   ])
 
-  let threeColumnsPricing = CssJs.merge(.[
+  let threeColumnsPricing = CssJs.merge(. [
     Tailwind.twStyle([Tailwind.grid, Tailwind.gap(#v6), omnifoodMd([Tailwind.gridCols(#v3)])]),
     row,
   ])
 
-  let smPlanPrice = style(.[media("screen and (max-width: 1023px)", [fontSize(#percent(300.))])])
+  let smPlanPrice = style(. [media("screen and (max-width: 1023px)", [fontSize(#percent(300.))])])
 
-  let mediumPlanPrice = style(.[
+  let mediumPlanPrice = style(. [
     media("screen and (max-width: 1023px)", [fontSize(#percent(250.))]),
   ])
 
-  let planPrice = CssJs.merge(.[
-    style(.[
+  let planPrice = CssJs.merge(. [
+    style(. [
       fontSize(#percent(300.)),
       marginBottom(#px(10)),
       fontWeight(#num(100)),
@@ -600,24 +603,24 @@ module Styles = {
     smPlanPrice,
   ])
 
-  let planPriceSpan = style(.[fontSize(#percent(30.)), fontWeight(#num(300))])
+  let planPriceSpan = style(. [fontSize(#percent(30.)), fontWeight(#num(300))])
 
-  let smallPlanPriceMeal = style(.[
+  let smallPlanPriceMeal = style(. [
     media("screen and (max-width: 1023px)", [fontSize(#percent(100.))]),
   ])
 
-  let planPriceMeal = CssJs.merge(.[style(.[fontSize(#percent(80.))]), smallPlanPriceMeal])
+  let planPriceMeal = CssJs.merge(. [style(. [fontSize(#percent(80.))]), smallPlanPriceMeal])
 
-  let planBoxLi = style(.[padding2(~h=px(0), ~v=px(5))])
+  let planBoxLi = style(. [padding2(~h=px(0), ~v=px(5))])
 
-  let buttonSection = CssJs.merge(.[
+  let buttonSection = CssJs.merge(. [
     planBoxDiv,
-    style(.[textAlign(#center), borderBottom(#px(1), #solid, #transparent)]),
+    style(. [textAlign(#center), borderBottom(#px(1), #solid, #transparent)]),
   ])
 
-  let priceSection = CssJs.merge(.[
+  let priceSection = CssJs.merge(. [
     planBoxDiv,
-    style(.[
+    style(. [
       backgroundColor(#hex("fcfcfc")),
       borderTopRightRadius(#px(5)),
       borderTopLeftRadius(#px(5)),
@@ -626,17 +629,17 @@ module Styles = {
 
   // NOTE: Contact form
 
-  let xsContactForm = style(.[media("screen and (max-width: 1023px)", [width(#percent(100.))])])
+  let xsContactForm = style(. [media("screen and (max-width: 1023px)", [width(#percent(100.))])])
 
-  let mediumContactForm = style(.[width(#percent(80.))])
+  let mediumContactForm = style(. [width(#percent(80.))])
 
-  let contactForm = CssJs.merge(.[
-    style(.[width(#percent(60.)), margin2(~v=#px(0), ~h=#auto)]),
+  let contactForm = CssJs.merge(. [
+    style(. [width(#percent(60.)), margin2(~v=#px(0), ~h=#auto)]),
     mediumContactForm,
     xsContactForm,
   ])
 
-  let inputStyles = style(.[
+  let inputStyles = style(. [
     width(#percent(100.)),
     padding(#px(7)),
     borderRadius(#px(3)),
@@ -644,36 +647,38 @@ module Styles = {
     margin2(~v=#px(5), ~h=#px(0)),
   ])
 
-  let textareaStyles = CssJs.merge(.[inputStyles, style(.[height(#percent(100.))])])
+  let textareaStyles = CssJs.merge(. [inputStyles, style(. [height(#percent(100.))])])
 
-  let checkboxStyles = style(.[margin4(~top=#px(10), ~right=#px(5), ~bottom=#px(10), ~left=#px(0))])
+  let checkboxStyles = style(. [
+    margin4(~top=#px(10), ~right=#px(5), ~bottom=#px(10), ~left=#px(0)),
+  ])
 
   // NOTE: Footer Section
 
-  let twoColumns = CssJs.merge(.[
+  let twoColumns = CssJs.merge(. [
     Tailwind.twStyle([Tailwind.grid, Tailwind.gridCols(#v2), Tailwind.gap(#v6)]),
     row,
   ])
 
-  let footer = style(.[backgroundColor(#hex("333")), padding2(~v=#px(20), ~h=#px(0))])
+  let footer = style(. [backgroundColor(#hex("333")), padding2(~v=#px(20), ~h=#px(0))])
 
-  let footerNav = style(.[CssJs.float(#left)])
+  let footerNav = style(. [CssJs.float(#left)])
 
-  let socialLinks = style(.[CssJs.float(#right)])
+  let socialLinks = style(. [CssJs.float(#right)])
 
-  let footerLi = style(.[display(#inlineBlock), marginRight(#px(20))])
-  let lastLi = style(.[display(#inlineBlock), marginRight(#px(0))])
+  let footerLi = style(. [display(#inlineBlock), marginRight(#px(20))])
+  let lastLi = style(. [display(#inlineBlock), marginRight(#px(0))])
 
-  let linkHover = style(.[hover([color(#hex("ddd"))])])
+  let linkHover = style(. [hover([color(#hex("ddd"))])])
 
-  let navLink = CssJs.merge(.[
-    style(.[textDecoration(#none), borderWidth(#px(0)), color(#hex("AAA"))]),
+  let navLink = CssJs.merge(. [
+    style(. [textDecoration(#none), borderWidth(#px(0)), color(#hex("AAA"))]),
     linkHover,
   ])
 
-  let iconNav = CssJs.merge(.[iconSmall, style(.[color(#hex("AAA"))]), linkHover])
+  let iconNav = CssJs.merge(. [iconSmall, style(. [color(#hex("AAA"))]), linkHover])
 
-  let footerText = style(.[color(#hex("AAA")), textAlign(#center), paddingTop(#px(25))])
+  let footerText = style(. [color(#hex("AAA")), textAlign(#center), paddingTop(#px(25))])
 }
 
 let default = () => {
@@ -723,7 +728,7 @@ let default = () => {
           "->str}
         </p>
         <div
-          className={Tailwind.merge(.[
+          className={Tailwind.merge(. [
             Tailwind.twStyle([
               Tailwind.grid,
               Tailwind.mt(#v8),
@@ -911,7 +916,7 @@ let default = () => {
         <h2 className=Styles.h2> {`How it works ${mdash} Simple as 1, 2, 3`->str} </h2>
       </div>
       <div
-        className={CssJs.merge(.[
+        className={CssJs.merge(. [
           Styles.row,
           Tailwind.twStyle([Tailwind.grid, Styles.omnifoodMd([Tailwind.gridCols(#v2)])]),
         ])}>
@@ -1088,7 +1093,7 @@ let default = () => {
         <h2 className=Styles.h2> {"Our customers can't live without us"->str} </h2>
       </div>
       <div
-        className={CssJs.merge(.[
+        className={CssJs.merge(. [
           Tailwind.twStyle([
             Tailwind.grid,
             Tailwind.gridCols(#v1),
@@ -1392,12 +1397,12 @@ let default = () => {
         <form action="#" method="post" className=Styles.contactForm>
           <div className=Styles.threeColumns>
             <div
-              className={Tailwind.merge(.[
-                Tailwind.twStyle([Styles.omnifoodSm([Tailwind.col(#span1)])]),
+              className={Tailwind.merge(. [
+                Tailwind.twStyle([Styles.omnifoodSm([Tailwind.col(#1)])]),
               ])}>
               <label
                 htmlFor="name"
-                className={Tailwind.merge(.[
+                className={Tailwind.merge(. [
                   Tailwind.twStyle([
                     Styles.omnifoodMd([Tailwind.flex, Tailwind.h(#full), Tailwind.itemsCenter]),
                   ]),
@@ -1406,8 +1411,8 @@ let default = () => {
               </label>
             </div>
             <div
-              className={Tailwind.merge(.[
-                Tailwind.twStyle([Tailwind.col(#span1), Styles.omnifoodSm([Tailwind.col(#span2)])]),
+              className={Tailwind.merge(. [
+                Tailwind.twStyle([Tailwind.col(#1), Styles.omnifoodSm([Tailwind.col(#2)])]),
               ])}>
               <input
                 type_="text"
@@ -1421,15 +1426,15 @@ let default = () => {
           </div>
           <div className=Styles.threeColumns>
             <div
-              className={Tailwind.merge(.[
+              className={Tailwind.merge(. [
                 Tailwind.twStyle([
                   Tailwind.mt(#v4),
-                  Tailwind.col(#span1),
+                  Tailwind.col(#1),
                   Styles.omnifoodSm([Tailwind.mt(#v0)]),
                 ]),
               ])}>
               <label
-                className={Tailwind.merge(.[
+                className={Tailwind.merge(. [
                   Tailwind.twStyle([
                     Styles.omnifoodSm([Tailwind.flex, Tailwind.h(#full), Tailwind.itemsCenter]),
                   ]),
@@ -1438,7 +1443,7 @@ let default = () => {
                 {"Email"->str}
               </label>
             </div>
-            <div className={Tailwind.merge(.[Tailwind.twStyle([Tailwind.col(#span2)])])}>
+            <div className={Tailwind.merge(. [Tailwind.twStyle([Tailwind.col(#2)])])}>
               <input
                 type_="email"
                 name="name"
@@ -1451,15 +1456,15 @@ let default = () => {
           </div>
           <div className=Styles.threeColumns>
             <div
-              className={Tailwind.merge(.[
+              className={Tailwind.merge(. [
                 Tailwind.twStyle([
                   Tailwind.mt(#v4),
-                  Tailwind.col(#span1),
+                  Tailwind.col(#1),
                   Styles.omnifoodSm([Tailwind.mt(#v0)]),
                 ]),
               ])}>
               <label
-                className={Tailwind.merge(.[
+                className={Tailwind.merge(. [
                   Tailwind.twStyle([
                     Styles.omnifoodSm([Tailwind.flex, Tailwind.h(#full), Tailwind.itemsCenter]),
                   ]),
@@ -1468,7 +1473,7 @@ let default = () => {
                 {"How did you find us"->str}
               </label>
             </div>
-            <div className={Tailwind.merge(.[Tailwind.twStyle([Tailwind.col(#span2)])])}>
+            <div className={Tailwind.merge(. [Tailwind.twStyle([Tailwind.col(#2)])])}>
               <select name="find-us" id="find-us" className=Styles.inputStyles>
                 <option value="friends" selected=true> {"Friends"->str} </option>
                 <option value="search"> {"Search engine"->str} </option>
@@ -1479,15 +1484,15 @@ let default = () => {
           </div>
           <div className=Styles.threeColumns>
             <div
-              className={Tailwind.merge(.[
+              className={Tailwind.merge(. [
                 Tailwind.twStyle([
-                  Tailwind.col(#span1),
+                  Tailwind.col(#1),
                   Tailwind.mt(#v4),
                   Styles.omnifoodSm([Tailwind.mt(#v0)]),
                 ]),
               ])}>
               <label
-                className={Tailwind.merge(.[
+                className={Tailwind.merge(. [
                   Tailwind.twStyle([
                     Styles.omnifoodSm([Tailwind.flex, Tailwind.h(#full), Tailwind.itemsEnd]),
                   ]),
@@ -1496,22 +1501,22 @@ let default = () => {
                 {"Newsletter"->str}
               </label>
             </div>
-            <div className={Tailwind.merge(.[Tailwind.twStyle([Tailwind.col(#span2)])])}>
+            <div className={Tailwind.merge(. [Tailwind.twStyle([Tailwind.col(#2)])])}>
               <input type_="checkbox" name="news" id="news" className=Styles.checkboxStyles />
               {"Yes, please"->str}
             </div>
           </div>
           <div className=Styles.threeColumns>
             <div
-              className={Tailwind.merge(.[
+              className={Tailwind.merge(. [
                 Tailwind.twStyle([
-                  Tailwind.col(#span1),
+                  Tailwind.col(#1),
                   Tailwind.mt(#v4),
                   Styles.omnifoodSm([Tailwind.mt(#v0)]),
                 ]),
               ])}>
               <label
-                className={Tailwind.merge(.[
+                className={Tailwind.merge(. [
                   Tailwind.twStyle([
                     Styles.omnifoodSm([Tailwind.flex, Tailwind.h(#full), Tailwind.itemsCenter]),
                   ]),
@@ -1520,7 +1525,7 @@ let default = () => {
                 {"Drop us a line"->str}
               </label>
             </div>
-            <div className={Tailwind.merge(.[Tailwind.twStyle([Tailwind.col(#span2)])])}>
+            <div className={Tailwind.merge(. [Tailwind.twStyle([Tailwind.col(#2)])])}>
               <textarea
                 name="message"
                 id="message"
@@ -1530,13 +1535,13 @@ let default = () => {
             </div>
           </div>
           <div className=Styles.threeColumns>
-            <div className={Tailwind.merge(.[Tailwind.twStyle([Tailwind.col(#span1)])])}>
+            <div className={Tailwind.merge(. [Tailwind.twStyle([Tailwind.col(#1)])])}>
               <label htmlFor=""> {nbsp->str} </label>
             </div>
-            <div className={Tailwind.merge(.[Tailwind.twStyle([Tailwind.col(#span2)])])}>
+            <div className={Tailwind.merge(. [Tailwind.twStyle([Tailwind.col(#2)])])}>
               <button
                 type_="submit"
-                className={CssJs.merge(.[Styles.btnFull, Tailwind.twStyle([Tailwind.mt(#v5)])])}>
+                className={CssJs.merge(. [Styles.btnFull, Tailwind.twStyle([Tailwind.mt(#v5)])])}>
                 {"Send it!"->str}
               </button>
             </div>

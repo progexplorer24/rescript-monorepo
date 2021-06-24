@@ -10,7 +10,7 @@ var cell = Tailwind$RescriptMonorepo.twStyle([
       Tailwind$RescriptMonorepo.h("v20"),
       Tailwind$RescriptMonorepo.w("v20"),
       Tailwind$RescriptMonorepo.bg(undefined, "coolGray900"),
-      Tailwind$RescriptMonorepo.border("v1"),
+      Tailwind$RescriptMonorepo.border(1),
       Tailwind$RescriptMonorepo.borderCollapse,
       Tailwind$RescriptMonorepo.borderColor("coolGray800"),
       Tailwind$RescriptMonorepo.m("v0"),

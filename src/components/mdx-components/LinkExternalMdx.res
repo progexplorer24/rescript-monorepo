@@ -3,7 +3,7 @@ module Styles = {
 
   let elementStyles = twStyle([
     borderColor(#blue700),
-    borderB(#v1),
+    borderB(#1),
     cursorPointer,
     textColor(#blue700),
     fontWeight(#v700),
@@ -16,6 +16,6 @@ let make = (~children, ~className="", ~href) =>
     href
     target="_blank"
     rel="noopener noreferrer"
-    className={Tailwind.merge(.[Styles.elementStyles, className])}>
+    className={Tailwind.merge(. [Styles.elementStyles, className])}>
     children
   </a>

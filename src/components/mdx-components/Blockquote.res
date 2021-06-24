@@ -7,7 +7,7 @@ module Styles = {
     text(#base),
     breakWords,
     bg(#indigo100),
-    borderL(#v4),
+    borderL(#4),
     borderColor(#indigo800),
     italic,
     shadow(#sm),
@@ -17,4 +17,6 @@ module Styles = {
 
 @react.component
 let make = (~children, ~className="") =>
-  <blockquote className={Tailwind.merge(.[Styles.elementStyles, className])}> children </blockquote>
+  <blockquote className={Tailwind.merge(. [Styles.elementStyles, className])}>
+    children
+  </blockquote>

@@ -2114,7 +2114,7 @@ function $$default(param) {
                         }, React.createElement("div", {
                               className: threeColumns
                             }, React.createElement("div", {
-                                  className: Tailwind$RescriptMonorepo.merge([Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.minWBreakpoint(481, [Tailwind$RescriptMonorepo.col("span1")])])])
+                                  className: Tailwind$RescriptMonorepo.merge([Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.minWBreakpoint(481, [Tailwind$RescriptMonorepo.col(1)])])])
                                 }, React.createElement("label", {
                                       className: Tailwind$RescriptMonorepo.merge([Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.minWBreakpoint(767, [
                                                         Tailwind$RescriptMonorepo.flex,
@@ -2124,8 +2124,8 @@ function $$default(param) {
                                       htmlFor: "name"
                                     }, Utils$RescriptMonorepo.str("Name"))), React.createElement("div", {
                                   className: Tailwind$RescriptMonorepo.merge([Tailwind$RescriptMonorepo.twStyle([
-                                              Tailwind$RescriptMonorepo.col("span1"),
-                                              Tailwind$RescriptMonorepo.minWBreakpoint(481, [Tailwind$RescriptMonorepo.col("span2")])
+                                              Tailwind$RescriptMonorepo.col(1),
+                                              Tailwind$RescriptMonorepo.minWBreakpoint(481, [Tailwind$RescriptMonorepo.col(2)])
                                             ])])
                                 }, React.createElement("input", {
                                       className: inputStyles,
@@ -2139,7 +2139,7 @@ function $$default(param) {
                             }, React.createElement("div", {
                                   className: Tailwind$RescriptMonorepo.merge([Tailwind$RescriptMonorepo.twStyle([
                                               Tailwind$RescriptMonorepo.mt("v4"),
-                                              Tailwind$RescriptMonorepo.col("span1"),
+                                              Tailwind$RescriptMonorepo.col(1),
                                               Tailwind$RescriptMonorepo.minWBreakpoint(481, [Tailwind$RescriptMonorepo.mt("v0")])
                                             ])])
                                 }, React.createElement("label", {
@@ -2150,7 +2150,7 @@ function $$default(param) {
                                                       ])])]),
                                       htmlFor: "email"
                                     }, Utils$RescriptMonorepo.str("Email"))), React.createElement("div", {
-                                  className: Tailwind$RescriptMonorepo.merge([Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.col("span2")])])
+                                  className: Tailwind$RescriptMonorepo.merge([Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.col(2)])])
                                 }, React.createElement("input", {
                                       className: inputStyles,
                                       id: "email",
@@ -2163,7 +2163,7 @@ function $$default(param) {
                             }, React.createElement("div", {
                                   className: Tailwind$RescriptMonorepo.merge([Tailwind$RescriptMonorepo.twStyle([
                                               Tailwind$RescriptMonorepo.mt("v4"),
-                                              Tailwind$RescriptMonorepo.col("span1"),
+                                              Tailwind$RescriptMonorepo.col(1),
                                               Tailwind$RescriptMonorepo.minWBreakpoint(481, [Tailwind$RescriptMonorepo.mt("v0")])
                                             ])])
                                 }, React.createElement("label", {
@@ -2174,7 +2174,7 @@ function $$default(param) {
                                                       ])])]),
                                       htmlFor: "find-us"
                                     }, Utils$RescriptMonorepo.str("How did you find us"))), React.createElement("div", {
-                                  className: Tailwind$RescriptMonorepo.merge([Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.col("span2")])])
+                                  className: Tailwind$RescriptMonorepo.merge([Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.col(2)])])
                                 }, React.createElement("select", {
                                       className: inputStyles,
                                       id: "find-us",
@@ -2192,7 +2192,7 @@ function $$default(param) {
                               className: threeColumns
                             }, React.createElement("div", {
                                   className: Tailwind$RescriptMonorepo.merge([Tailwind$RescriptMonorepo.twStyle([
-                                              Tailwind$RescriptMonorepo.col("span1"),
+                                              Tailwind$RescriptMonorepo.col(1),
                                               Tailwind$RescriptMonorepo.mt("v4"),
                                               Tailwind$RescriptMonorepo.minWBreakpoint(481, [Tailwind$RescriptMonorepo.mt("v0")])
                                             ])])
@@ -2204,7 +2204,7 @@ function $$default(param) {
                                                       ])])]),
                                       htmlFor: "news"
                                     }, Utils$RescriptMonorepo.str("Newsletter"))), React.createElement("div", {
-                                  className: Tailwind$RescriptMonorepo.merge([Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.col("span2")])])
+                                  className: Tailwind$RescriptMonorepo.merge([Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.col(2)])])
                                 }, React.createElement("input", {
                                       className: checkboxStyles,
                                       id: "news",
@@ -2214,7 +2214,7 @@ function $$default(param) {
                               className: threeColumns
                             }, React.createElement("div", {
                                   className: Tailwind$RescriptMonorepo.merge([Tailwind$RescriptMonorepo.twStyle([
-                                              Tailwind$RescriptMonorepo.col("span1"),
+                                              Tailwind$RescriptMonorepo.col(1),
                                               Tailwind$RescriptMonorepo.mt("v4"),
                                               Tailwind$RescriptMonorepo.minWBreakpoint(481, [Tailwind$RescriptMonorepo.mt("v0")])
                                             ])])
@@ -2226,7 +2226,7 @@ function $$default(param) {
                                                       ])])]),
                                       htmlFor: "message"
                                     }, Utils$RescriptMonorepo.str("Drop us a line"))), React.createElement("div", {
-                                  className: Tailwind$RescriptMonorepo.merge([Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.col("span2")])])
+                                  className: Tailwind$RescriptMonorepo.merge([Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.col(2)])])
                                 }, React.createElement("textarea", {
                                       className: textareaStyles,
                                       id: "message",
@@ -2235,11 +2235,11 @@ function $$default(param) {
                                     }))), React.createElement("div", {
                               className: threeColumns
                             }, React.createElement("div", {
-                                  className: Tailwind$RescriptMonorepo.merge([Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.col("span1")])])
+                                  className: Tailwind$RescriptMonorepo.merge([Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.col(1)])])
                                 }, React.createElement("label", {
                                       htmlFor: ""
                                     }, Utils$RescriptMonorepo.str(Utils$RescriptMonorepo.nbsp))), React.createElement("div", {
-                                  className: Tailwind$RescriptMonorepo.merge([Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.col("span2")])])
+                                  className: Tailwind$RescriptMonorepo.merge([Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.col(2)])])
                                 }, React.createElement("button", {
                                       className: CssJs.merge([
                                             btnFull,

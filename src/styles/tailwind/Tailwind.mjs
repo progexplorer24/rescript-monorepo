@@ -1420,28 +1420,28 @@ function divideY(reverseOpt, width) {
   var reverse = reverseOpt !== undefined ? reverseOpt : false;
   if (reverse) {
     return [CssJs.selector(Selectors$RescriptMonorepo.ignoreFirstChild, [
-                  CssJs.borderTopWidth(Theme__BorderWidth$RescriptMonorepo.toWidth("v0")),
+                  CssJs.borderTopWidth(Theme__BorderWidth$RescriptMonorepo.toWidth(0)),
                   CssJs.borderBottomWidth(Theme__BorderWidth$RescriptMonorepo.toWidth(width))
                 ])];
   } else {
     return [CssJs.selector(Selectors$RescriptMonorepo.ignoreFirstChild, [
                   CssJs.borderTopWidth(Theme__BorderWidth$RescriptMonorepo.toWidth(width)),
-                  CssJs.borderBottomWidth(Theme__BorderWidth$RescriptMonorepo.toWidth("v0"))
+                  CssJs.borderBottomWidth(Theme__BorderWidth$RescriptMonorepo.toWidth(0))
                 ])];
   }
 }
 
-function divideX(width, reverseOpt, param) {
+function divideX(reverseOpt, width) {
   var reverse = reverseOpt !== undefined ? reverseOpt : false;
   if (reverse) {
     return [CssJs.selector(Selectors$RescriptMonorepo.ignoreFirstChild, [
                   CssJs.borderRightWidth(Theme__BorderWidth$RescriptMonorepo.toWidth(width)),
-                  CssJs.borderLeftWidth(Theme__BorderWidth$RescriptMonorepo.toWidth("v0"))
+                  CssJs.borderLeftWidth(Theme__BorderWidth$RescriptMonorepo.toWidth(0))
                 ])];
   } else {
     return [CssJs.selector(Selectors$RescriptMonorepo.ignoreFirstChild, [
                   CssJs.borderLeftWidth(Theme__BorderWidth$RescriptMonorepo.toWidth(width)),
-                  CssJs.borderRightWidth(Theme__BorderWidth$RescriptMonorepo.toWidth("v0"))
+                  CssJs.borderRightWidth(Theme__BorderWidth$RescriptMonorepo.toWidth(0))
                 ])];
   }
 }
