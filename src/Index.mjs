@@ -11,7 +11,7 @@ import * as Mdx__helpers$RescriptMonorepo from "./server/Mdx__helpers.mjs";
 import * as LayoutWrapper$RescriptMonorepo from "./components/blog/LayoutWrapper.mjs";
 
 var wrapper = Tailwind$RescriptMonorepo.twStyle([
-      Tailwind$RescriptMonorepo.divideY(undefined, "v1"),
+      Tailwind$RescriptMonorepo.divideY(undefined, 1),
       Tailwind$RescriptMonorepo.borderColor("gray200")
     ]);
 

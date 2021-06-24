@@ -2,9 +2,8 @@ type props = {allFrontmatter: array<Mdx__helpers.frontmatterAndSlug>, metadata: 
 
 module Styles = {
   open Tailwind
-  let wrapper = twStyle([divideY(#v1), borderColor(#gray200)])
+  let wrapper = twStyle([divideY(#1), borderColor(#gray200)])
   let wrapper2 = twStyle([pt(#v0), pb(#v8), spaceY(#v2), md([spaceY(#v5)])])
-  // text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14
   let h1 = twStyle([
     text(#xl3),
     fontWeight(#v800),
@@ -24,9 +23,7 @@ module Styles = {
 
   let dd = twStyle([text(#base), fontWeight(#v500), leading(#v6), textColor(#gray500)])
   let summaryStyles = twStyle([textColor(#gray500), maxW(#none)])
-  // "text-base font-medium leading-6"
   let readMoreSection = twStyle([text(#base), fontWeight(#v500), leading(#v6)])
-  // "text-blue-500 hover:text-blue-600 dark:hover:text-blue-400"
   let readMoreLink = twStyle([textColor(#blue600), hover([textColor(#blue700)])])
 }
 
