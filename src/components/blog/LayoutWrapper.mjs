@@ -2,12 +2,8 @@
 
 import * as CssJs from "bs-css-emotion/src/CssJs.mjs";
 import * as React from "react";
-import * as Belt_Array from "rescript/lib/es6/belt_Array.js";
-import * as Mdx$RescriptMonorepo from "./Mdx.mjs";
-import * as Utils$RescriptMonorepo from "../../utils/Utils.mjs";
 import * as Tailwind$RescriptMonorepo from "../../styles/tailwind/Tailwind.mjs";
-import * as Blog__Data$RescriptMonorepo from "./Blog__Data.mjs";
-import * as HeaderLink$RescriptMonorepo from "./HeaderLink.mjs";
+import * as Navigation$RescriptMonorepo from "./Navigation.mjs";
 import * as SectionContainer$RescriptMonorepo from "./SectionContainer.mjs";
 
 var flexWrapper = Tailwind$RescriptMonorepo.twStyle([
@@ -20,83 +16,21 @@ var flexWrapper = Tailwind$RescriptMonorepo.twStyle([
             })]
     ]);
 
-var header = Tailwind$RescriptMonorepo.twStyle([
-      Tailwind$RescriptMonorepo.flex,
-      Tailwind$RescriptMonorepo.itemsCenter,
-      Tailwind$RescriptMonorepo.justifyBetween,
-      Tailwind$RescriptMonorepo.pt("v4"),
-      Tailwind$RescriptMonorepo.pb("v6"),
-      Tailwind$RescriptMonorepo.sm([Tailwind$RescriptMonorepo.py("v10")])
-    ]);
-
-var linkWrapper = Tailwind$RescriptMonorepo.twStyle([
-      Tailwind$RescriptMonorepo.flex,
-      Tailwind$RescriptMonorepo.itemsCenter,
-      Tailwind$RescriptMonorepo.justifyBetween
-    ]);
-
-var linkDiv = Tailwind$RescriptMonorepo.twStyle([
-      Tailwind$RescriptMonorepo.text("base"),
-      Tailwind$RescriptMonorepo.fontWeight("v800")
-    ]);
-
-var titleStyles = Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.noUnderline]);
-
-var linksBlock = Tailwind$RescriptMonorepo.twStyle([
-      Tailwind$RescriptMonorepo.flex,
-      Tailwind$RescriptMonorepo.itemsCenter,
-      Tailwind$RescriptMonorepo.leading("v5")
-    ]);
-
-var hideForSm = Tailwind$RescriptMonorepo.twStyle([
-      Tailwind$RescriptMonorepo.hidden,
-      Tailwind$RescriptMonorepo.sm([Tailwind$RescriptMonorepo.block])
-    ]);
-
 var Styles = {
-  flexWrapper: flexWrapper,
-  header: header,
-  linkWrapper: linkWrapper,
-  linkDiv: linkDiv,
-  titleStyles: titleStyles,
-  linksBlock: linksBlock,
-  hideForSm: hideForSm
+  flexWrapper: flexWrapper
 };
 
 function LayoutWrapper(Props) {
   var children = Props.children;
   var headerTitleOpt = Props.headerTitle;
   var headerTitle = headerTitleOpt !== undefined ? headerTitleOpt : "";
-  var renderLinks = function (links) {
-    return Belt_Array.map(links, (function (link) {
-                  return React.createElement(HeaderLink$RescriptMonorepo.make, {
-                              children: Utils$RescriptMonorepo.str(link.title),
-                              className: Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.noUnderline]),
-                              href: link.href,
-                              key: link.title
-                            });
-                }));
-  };
   return React.createElement(SectionContainer$RescriptMonorepo.make, {
-              children: React.createElement("div", {
-                    className: Tailwind$RescriptMonorepo.merge([flexWrapper])
-                  }, React.createElement("header", {
-                        className: header
-                      }, React.createElement("div", undefined, React.createElement(Mdx$RescriptMonorepo.a, {
-                                children: React.createElement("div", {
-                                      className: linkWrapper
-                                    }, React.createElement("div", {
-                                          className: linkDiv
-                                        }, Utils$RescriptMonorepo.str(headerTitle))),
-                                href: "/",
-                                className: titleStyles,
-                                ariaLabel: "iSensei Personal Blog"
-                              })), React.createElement("div", {
-                            className: linksBlock
-                          }, React.createElement("div", {
-                                className: hideForSm
-                              }, renderLinks(Blog__Data$RescriptMonorepo.headerNavLinks)))), children)
-            });
+              children: null
+            }, React.createElement(Navigation$RescriptMonorepo.make, {
+                  headerTitle: headerTitle
+                }), React.createElement("div", {
+                  className: Tailwind$RescriptMonorepo.merge([flexWrapper])
+                }, children));
 }
 
 var make = LayoutWrapper;
