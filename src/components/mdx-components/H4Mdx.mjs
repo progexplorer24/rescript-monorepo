@@ -4,9 +4,9 @@ import * as React from "react";
 import * as Tailwind$RescriptMonorepo from "../../styles/tailwind/Tailwind.mjs";
 
 var elementStyles = Tailwind$RescriptMonorepo.twStyle([
-      Tailwind$RescriptMonorepo.mb("v6"),
+      Tailwind$RescriptMonorepo.mb(6),
       Tailwind$RescriptMonorepo.text("xl"),
-      Tailwind$RescriptMonorepo.fontWeight("v700"),
+      Tailwind$RescriptMonorepo.fontWeight(700),
       Tailwind$RescriptMonorepo.tracking("wide")
     ]);
 

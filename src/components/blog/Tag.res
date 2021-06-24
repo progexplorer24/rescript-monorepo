@@ -1,9 +1,9 @@
 module Styles = {
   open Tailwind
   let elementStyles = twStyle([
-    mr(#v3),
+    mr(#3),
     text(#sm),
-    fontWeight(#v500),
+    fontWeight(#500),
     uppercase,
     hover([textColor(#blue600)]),
   ])

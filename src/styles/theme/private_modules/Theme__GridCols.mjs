@@ -24,27 +24,27 @@ function repeatCols(columns) {
 }
 
 function toValue(cols) {
-  if (cols === "v2") {
+  if (cols === 2) {
     return repeatCols(2);
-  } else if (cols === "v3") {
+  } else if (cols === 3) {
     return repeatCols(3);
-  } else if (cols === "v4") {
+  } else if (cols === 4) {
     return repeatCols(4);
-  } else if (cols === "v5") {
+  } else if (cols === 5) {
     return repeatCols(5);
-  } else if (cols === "v6") {
+  } else if (cols === 6) {
     return repeatCols(6);
-  } else if (cols === "v7") {
+  } else if (cols === 7) {
     return repeatCols(7);
-  } else if (cols === "v8") {
+  } else if (cols === 8) {
     return repeatCols(8);
-  } else if (cols === "v9") {
+  } else if (cols === 9) {
     return repeatCols(9);
-  } else if (cols === "v10") {
+  } else if (cols === 10) {
     return repeatCols(10);
-  } else if (cols === "v11") {
+  } else if (cols === 11) {
     return repeatCols(11);
-  } else if (cols === "v12") {
+  } else if (cols === 12) {
     return repeatCols(12);
   } else {
     return repeatCols(1);

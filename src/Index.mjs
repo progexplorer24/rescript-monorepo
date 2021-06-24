@@ -16,49 +16,49 @@ var wrapper = Tailwind$RescriptMonorepo.twStyle([
     ]);
 
 var wrapper2 = Tailwind$RescriptMonorepo.twStyle([
-      Tailwind$RescriptMonorepo.pt("v0"),
-      Tailwind$RescriptMonorepo.pb("v8"),
-      Tailwind$RescriptMonorepo.spaceY("v2"),
-      Tailwind$RescriptMonorepo.md([Tailwind$RescriptMonorepo.spaceY("v5")])
+      Tailwind$RescriptMonorepo.pt(0),
+      Tailwind$RescriptMonorepo.pb(8),
+      Tailwind$RescriptMonorepo.spaceY(2),
+      Tailwind$RescriptMonorepo.md([Tailwind$RescriptMonorepo.spaceY(5)])
     ]);
 
 var h1 = Tailwind$RescriptMonorepo.twStyle([
       Tailwind$RescriptMonorepo.text("xl3"),
-      Tailwind$RescriptMonorepo.fontWeight("v800"),
-      Tailwind$RescriptMonorepo.leading("v9"),
+      Tailwind$RescriptMonorepo.fontWeight(800),
+      Tailwind$RescriptMonorepo.leading(9),
       Tailwind$RescriptMonorepo.tracking("tight"),
       Tailwind$RescriptMonorepo.textColor(undefined, "gray900"),
       Tailwind$RescriptMonorepo.sm([
             Tailwind$RescriptMonorepo.text("xl4"),
-            Tailwind$RescriptMonorepo.leading("v10")
+            Tailwind$RescriptMonorepo.leading(10)
           ]),
       Tailwind$RescriptMonorepo.md([
             Tailwind$RescriptMonorepo.text("xl6"),
-            Tailwind$RescriptMonorepo.leading("v14")
+            Tailwind$RescriptMonorepo.leading(14)
           ])
     ]);
 
 var h2 = Tailwind$RescriptMonorepo.twStyle([
       Tailwind$RescriptMonorepo.text("xl2"),
-      Tailwind$RescriptMonorepo.fontWeight("v700"),
-      Tailwind$RescriptMonorepo.leading("v8"),
+      Tailwind$RescriptMonorepo.fontWeight(700),
+      Tailwind$RescriptMonorepo.leading(8),
       Tailwind$RescriptMonorepo.tracking("tight")
     ]);
 
 var p = Tailwind$RescriptMonorepo.twStyle([
       Tailwind$RescriptMonorepo.text("lg"),
-      Tailwind$RescriptMonorepo.leading("v7"),
+      Tailwind$RescriptMonorepo.leading(7),
       Tailwind$RescriptMonorepo.textColor(undefined, "gray500")
     ]);
 
-var li = Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.py("v12")]);
+var li = Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.py(12)]);
 
 var dt = Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.srOnly]);
 
 var dd = Tailwind$RescriptMonorepo.twStyle([
       Tailwind$RescriptMonorepo.text("base"),
-      Tailwind$RescriptMonorepo.fontWeight("v500"),
-      Tailwind$RescriptMonorepo.leading("v6"),
+      Tailwind$RescriptMonorepo.fontWeight(500),
+      Tailwind$RescriptMonorepo.leading(6),
       Tailwind$RescriptMonorepo.textColor(undefined, "gray500")
     ]);
 
@@ -69,8 +69,8 @@ var summaryStyles = Tailwind$RescriptMonorepo.twStyle([
 
 var readMoreSection = Tailwind$RescriptMonorepo.twStyle([
       Tailwind$RescriptMonorepo.text("base"),
-      Tailwind$RescriptMonorepo.fontWeight("v500"),
-      Tailwind$RescriptMonorepo.leading("v6")
+      Tailwind$RescriptMonorepo.fontWeight(500),
+      Tailwind$RescriptMonorepo.leading(6)
     ]);
 
 var readMoreLink = Tailwind$RescriptMonorepo.twStyle([

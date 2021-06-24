@@ -2,22 +2,22 @@ module Styles = {
   open Tailwind
   // [CssJs.backgroundColor(#hex("2E2E33"))],
   let cell = twStyle([
-    h(#v20),
-    w(#v20),
+    h(#20),
+    w(#20),
     bg(#coolGray900),
     border(#1),
     borderCollapse,
     borderColor(#coolGray800),
-    m(#v0),
+    m(#0),
     textCenter,
     textColor(#coolGray100),
-    fontWeight(#v700),
+    fontWeight(#700),
     flex,
     itemsCenter,
     justifyCenter,
   ])
   let row = twStyle([flex, justifyCenter])
-  let matrix = twStyle([mb(#v16)])
+  let matrix = twStyle([mb(#16)])
 }
 
 type pairs = [

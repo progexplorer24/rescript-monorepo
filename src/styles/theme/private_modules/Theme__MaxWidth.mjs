@@ -9,7 +9,7 @@ function toValue(width) {
           };
   } else if (width === "none") {
     return "none";
-  } else if (width === "zero") {
+  } else if (width === 0 || width === "zero") {
     return {
             NAME: "rem",
             VAL: 0

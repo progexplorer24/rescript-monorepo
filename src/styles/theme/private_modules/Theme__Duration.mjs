@@ -2,22 +2,22 @@
 
 
 function toValue(duration) {
-  if (duration === "v150") {
+  if (duration === 100) {
+    return 100;
+  } else if (duration === 150) {
     return 150;
-  } else if (duration === "v200") {
+  } else if (duration === 200) {
     return 200;
-  } else if (duration === "v300") {
+  } else if (duration === 300) {
     return 300;
-  } else if (duration === "v500") {
+  } else if (duration === 500) {
     return 500;
-  } else if (duration === "v700") {
+  } else if (duration === 700) {
     return 700;
-  } else if (duration === "v75") {
-    return 75;
-  } else if (duration === "v1000") {
+  } else if (duration === 1000) {
     return 1000;
   } else {
-    return 100;
+    return 75;
   }
 }
 

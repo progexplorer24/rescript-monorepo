@@ -5,16 +5,16 @@ import * as Tailwind$RescriptMonorepo from "../../styles/tailwind/Tailwind.mjs";
 
 var elementStyles = Tailwind$RescriptMonorepo.twStyle([
       Tailwind$RescriptMonorepo.text("xl3"),
-      Tailwind$RescriptMonorepo.fontWeight("v800"),
+      Tailwind$RescriptMonorepo.fontWeight(800),
       Tailwind$RescriptMonorepo.tracking("tight"),
       Tailwind$RescriptMonorepo.textColor(undefined, "gray900"),
       Tailwind$RescriptMonorepo.sm([
             Tailwind$RescriptMonorepo.text("xl4"),
-            Tailwind$RescriptMonorepo.leading("v10")
+            Tailwind$RescriptMonorepo.leading(10)
           ]),
       Tailwind$RescriptMonorepo.md([
             Tailwind$RescriptMonorepo.text("xl5"),
-            Tailwind$RescriptMonorepo.leading("v14")
+            Tailwind$RescriptMonorepo.leading(14)
           ])
     ]);
 

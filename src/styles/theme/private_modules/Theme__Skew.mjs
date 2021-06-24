@@ -2,27 +2,27 @@
 
 
 function toValue(degrees) {
-  if (degrees === "v1") {
+  if (degrees === 1) {
     return {
             NAME: "deg",
             VAL: 1
           };
-  } else if (degrees === "v2") {
+  } else if (degrees === 2) {
     return {
             NAME: "deg",
             VAL: 2
           };
-  } else if (degrees === "v3") {
+  } else if (degrees === 3) {
     return {
             NAME: "deg",
             VAL: 3
           };
-  } else if (degrees === "v6") {
+  } else if (degrees === 6) {
     return {
             NAME: "deg",
             VAL: 6
           };
-  } else if (degrees === "v12") {
+  } else if (degrees === 12) {
     return {
             NAME: "deg",
             VAL: 12

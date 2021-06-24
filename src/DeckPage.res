@@ -3,7 +3,7 @@ module Styles = {
   let container = twStyle([maxW(#xl4), mx(#auto)])
   let heading = twStyle([textCenter, [CssJs.fontFamily(#custom("Inter"))]])
   let row = twStyle([flex])
-  let bottomDeck = twStyle([mb(#v16)])
+  let bottomDeck = twStyle([mb(#16)])
 }
 
 let default = () =>

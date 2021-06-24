@@ -5,11 +5,11 @@ import * as Tailwind$RescriptMonorepo from "../../styles/tailwind/Tailwind.mjs";
 
 var elementStyles = Tailwind$RescriptMonorepo.twStyle([
       Tailwind$RescriptMonorepo.rounded("default"),
-      Tailwind$RescriptMonorepo.p("v1"),
+      Tailwind$RescriptMonorepo.p(1),
       Tailwind$RescriptMonorepo.bg(undefined, "indigo50"),
       Tailwind$RescriptMonorepo.textColor(undefined, "indigo800"),
       Tailwind$RescriptMonorepo.fontMono,
-      Tailwind$RescriptMonorepo.fontWeight("v700")
+      Tailwind$RescriptMonorepo.fontWeight(700)
     ]);
 
 var Styles = {

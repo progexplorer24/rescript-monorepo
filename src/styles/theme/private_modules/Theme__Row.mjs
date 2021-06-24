@@ -2,17 +2,17 @@
 
 
 function toValue(span) {
-  if (span === "v2") {
+  if (span === 2) {
     return 2;
-  } else if (span === "v3") {
+  } else if (span === 3) {
     return 3;
-  } else if (span === "v4") {
+  } else if (span === 4) {
     return 4;
-  } else if (span === "v5") {
+  } else if (span === 5) {
     return 5;
-  } else if (span === "v6") {
+  } else if (span === 6) {
     return 6;
-  } else if (span === "v7") {
+  } else if (span === 7) {
     return 7;
   } else {
     return 1;

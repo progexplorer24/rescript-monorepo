@@ -59,8 +59,6 @@ var RowSpan;
 
 var Row;
 
-var GoogleFonts;
-
 export {
   Screens ,
   Spacing ,
@@ -91,7 +89,6 @@ export {
   GridRows ,
   RowSpan ,
   Row ,
-  GoogleFonts ,
   
 }
 /* No side effect */

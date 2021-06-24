@@ -2,28 +2,28 @@
 
 
 function toValue(index) {
-  if (index === "z0") {
-    return 0;
-  } else if (index === "z10") {
+  if (index === 10) {
     return 10;
-  } else if (index === "z20") {
+  } else if (index === 20) {
     return 20;
-  } else if (index === "z30") {
+  } else if (index === 30) {
     return 30;
-  } else if (index === "z40") {
+  } else if (index === 40) {
     return 40;
-  } else if (index === "z50") {
+  } else if (index === 50) {
     return 50;
-  } else if (index === "z60") {
+  } else if (index === 60) {
     return 60;
-  } else if (index === "z70") {
+  } else if (index === 70) {
     return 70;
-  } else if (index === "z80") {
+  } else if (index === 80) {
     return 80;
-  } else if (index === "z90") {
+  } else if (index === 90) {
     return 90;
-  } else {
+  } else if (index === 100) {
     return 100;
+  } else {
+    return 0;
   }
 }
 

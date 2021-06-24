@@ -2,48 +2,48 @@
 
 
 function toValue(opacity) {
-  if (opacity === "v0") {
-    return 0;
-  } else if (opacity === "v5") {
+  if (opacity === 5) {
     return 0.05;
-  } else if (opacity === "v10") {
+  } else if (opacity === 10) {
     return 0.1;
-  } else if (opacity === "v15") {
+  } else if (opacity === 15) {
     return 0.15;
-  } else if (opacity === "v20") {
+  } else if (opacity === 20) {
     return 0.20;
-  } else if (opacity === "v25") {
+  } else if (opacity === 25) {
     return 0.25;
-  } else if (opacity === "v30") {
+  } else if (opacity === 30) {
     return 0.3;
-  } else if (opacity === "v35") {
+  } else if (opacity === 35) {
     return 0.35;
-  } else if (opacity === "v40") {
+  } else if (opacity === 40) {
     return 0.40;
-  } else if (opacity === "v45") {
+  } else if (opacity === 45) {
     return 0.45;
-  } else if (opacity === "v50") {
+  } else if (opacity === 50) {
     return 0.50;
-  } else if (opacity === "v55") {
+  } else if (opacity === 55) {
     return 0.55;
-  } else if (opacity === "v60") {
+  } else if (opacity === 60) {
     return 0.60;
-  } else if (opacity === "v65") {
+  } else if (opacity === 65) {
     return 0.65;
-  } else if (opacity === "v70") {
+  } else if (opacity === 70) {
     return 0.70;
-  } else if (opacity === "v75") {
+  } else if (opacity === 75) {
     return 0.75;
-  } else if (opacity === "v80") {
+  } else if (opacity === 80) {
     return 0.80;
-  } else if (opacity === "v85") {
+  } else if (opacity === 85) {
     return 0.85;
-  } else if (opacity === "v90") {
+  } else if (opacity === 90) {
     return 0.90;
-  } else if (opacity === "v95") {
+  } else if (opacity === 95) {
     return 0.95;
-  } else {
+  } else if (opacity === 100) {
     return 1;
+  } else {
+    return 0;
   }
 }
 

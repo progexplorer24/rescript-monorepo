@@ -4,8 +4,8 @@ module Styles = {
     bg(#coolGray900),
     border(#4),
     textColor(#white),
-    px(#v6),
-    py(#v6),
+    px(#6),
+    py(#6),
   ])
 }
 

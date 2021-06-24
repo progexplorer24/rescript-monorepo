@@ -6,8 +6,8 @@ module Styles = {
   let baseXl = 24.
 
   // EDGE CASE: Don't add top margin for first child element and bottom margin for last child element
-  let proseFirstChild = twStyle([selector("& >", [firstChild([mt(#v0)])])])
-  let proseLastChild = twStyle([selector("& >", [lastChild([mb(#v0)])])])
+  let proseFirstChild = twStyle([selector("& >", [firstChild([mt(#0)])])])
+  let proseLastChild = twStyle([selector("& >", [lastChild([mb(#0)])])])
 
   let proseBase = twStyle([mx(#auto), Typography.maxW(65), Typography.fontSize(base)])
   let proseSm = twStyle([sm([Typography.fontSize(baseSm), Typography.leading(28., baseSm)])])
@@ -64,13 +64,13 @@ module Styles = {
 
   let lead = merge(. [leadBase, leadSm, leadLg, leadXl])
 
-  let link = twStyle([textColor(#coolGray900), underline, fontWeight(#v500)])
+  let link = twStyle([textColor(#coolGray900), underline, fontWeight(#500)])
 
-  let strong = twStyle([textColor(#coolGray900), fontWeight(#v600)])
+  let strong = twStyle([textColor(#coolGray900), fontWeight(#600)])
 
   // HACK: Increase specifity because styles are not applied
   // EDGE CASE: Remove margin top from next element of h2-h4 & hr
-  let removeTopMarginFromNextElement = selector("&& + *", [mt(#v0)])
+  let removeTopMarginFromNextElement = selector("&& + *", [mt(#0)])
 
   let hrBase = twStyle([
     borderT(#1),
@@ -96,7 +96,7 @@ module Styles = {
   let blockquoteBase = twStyle([
     italic,
     borderColor(#coolGray200),
-    fontWeight(#v500),
+    fontWeight(#500),
     borderL(#4),
     selector(
       "p",
@@ -130,7 +130,7 @@ module Styles = {
     fontMono,
     Typography.fontSize(rebaseCode),
     textColor(#coolGray900),
-    fontWeight(#v600),
+    fontWeight(#600),
     before([contentText(Utils.grave)]),
     after([contentText(Utils.grave)]),
   ])
@@ -162,7 +162,7 @@ module Styles = {
 
   let h1Base = twStyle([
     textColor(#coolGray900),
-    fontWeight(#v800),
+    fontWeight(#800),
     Typography.fontSize(rebaseH1),
     Typography.leading(36., rebaseH1),
     Typography.mt(0., rebaseH1),
@@ -206,7 +206,7 @@ module Styles = {
   let h2Base = merge(. [
     twStyle([
       textColor(#coolGray900),
-      fontWeight(#v700),
+      fontWeight(#700),
       Typography.fontSize(rebaseH2),
       Typography.leading(28., rebaseH2),
       Typography.mt(32., rebaseH2),
@@ -253,7 +253,7 @@ module Styles = {
   let h3Base = merge(. [
     twStyle([
       textColor(#coolGray900),
-      fontWeight(#v600),
+      fontWeight(#600),
       Typography.fontSize(rebaseH3),
       Typography.leading(28., rebaseH3),
       Typography.mt(28., rebaseH3),
@@ -297,7 +297,7 @@ module Styles = {
     Typography.mt(20., base),
     Typography.mb(8., base),
     textColor(#coolGray900),
-    fontWeight(#v600),
+    fontWeight(#600),
     removeTopMarginFromNextElement,
   ])
 
@@ -334,10 +334,10 @@ module Styles = {
       "& code",
       [
         border(#0),
-        fontWeight(#v400),
+        fontWeight(#400),
         borderR(#0),
         bg(#transparent),
-        p(#v0),
+        p(#0),
         fontFamilies([
           #custom("ui-monospace"),
           #custom("SFMono-Regular"),
@@ -488,9 +488,9 @@ module Styles = {
           before([
             [CssJs.contentRules([#counter("list-item", selectedType), #text(".")])],
             absolute,
-            fontWeight(#v400),
+            fontWeight(#400),
             textColor(#coolGray500),
-            left(#v0),
+            left(#0),
           ]),
         ],
       ),
@@ -583,7 +583,7 @@ module Styles = {
 
   let ul = merge(. [listPadding, ulElements, liParagraph, nestedList])
   // HACK: Increase specifity because styles are not applied
-  let anyChild = selector("&& > *", [my(#v0)])
+  let anyChild = selector("&& > *", [my(#0)])
 
   let rebaseFigcaption = 12.
   let rebaseFigcaptionSm = 14.
@@ -710,8 +710,8 @@ module Styles = {
       [
         Typography.px(12., rebaseTable),
         Typography.pb(8., rebaseTable),
-        firstChild([pl(#v0)]),
-        lastChild([pr(#v0)]),
+        firstChild([pl(#0)]),
+        lastChild([pr(#0)]),
         alignBottom,
       ],
     ),
@@ -733,7 +733,7 @@ module Styles = {
 
   let thead = merge(. [
     theadTh,
-    twStyle([textColor(#coolGray900), fontWeight(#v600), borderB(#1), borderColor(#coolGray300)]),
+    twStyle([textColor(#coolGray900), fontWeight(#600), borderB(#1), borderColor(#coolGray300)]),
   ])
 
   let tbodyTdBase = twStyle([
@@ -744,8 +744,8 @@ module Styles = {
         Typography.py(8., rebaseTable),
         alignTop,
         textColor(#coolGray700),
-        firstChild([pl(#v0)]),
-        lastChild([pr(#v0)]),
+        firstChild([pl(#0)]),
+        lastChild([pr(#0)]),
       ],
     ),
   ])

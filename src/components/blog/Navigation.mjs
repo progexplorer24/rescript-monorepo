@@ -13,9 +13,9 @@ var header = Tailwind$RescriptMonorepo.twStyle([
       Tailwind$RescriptMonorepo.flex,
       Tailwind$RescriptMonorepo.itemsCenter,
       Tailwind$RescriptMonorepo.justifyBetween,
-      Tailwind$RescriptMonorepo.pt("v4"),
-      Tailwind$RescriptMonorepo.pb("v6"),
-      Tailwind$RescriptMonorepo.sm([Tailwind$RescriptMonorepo.py("v10")])
+      Tailwind$RescriptMonorepo.pt(4),
+      Tailwind$RescriptMonorepo.pb(6),
+      Tailwind$RescriptMonorepo.sm([Tailwind$RescriptMonorepo.py(10)])
     ]);
 
 var linkWrapper = Tailwind$RescriptMonorepo.twStyle([
@@ -26,7 +26,7 @@ var linkWrapper = Tailwind$RescriptMonorepo.twStyle([
 
 var linkDiv = Tailwind$RescriptMonorepo.twStyle([
       Tailwind$RescriptMonorepo.text("base"),
-      Tailwind$RescriptMonorepo.fontWeight("v800")
+      Tailwind$RescriptMonorepo.fontWeight(800)
     ]);
 
 var titleStyles = Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.noUnderline]);
@@ -34,7 +34,7 @@ var titleStyles = Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.n
 var linksBlock = Tailwind$RescriptMonorepo.twStyle([
       Tailwind$RescriptMonorepo.flex,
       Tailwind$RescriptMonorepo.itemsCenter,
-      Tailwind$RescriptMonorepo.leading("v5")
+      Tailwind$RescriptMonorepo.leading(5)
     ]);
 
 var hideForSm = Tailwind$RescriptMonorepo.twStyle([

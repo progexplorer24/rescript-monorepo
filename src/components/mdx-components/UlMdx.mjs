@@ -4,7 +4,7 @@ import * as React from "react";
 import * as Tailwind$RescriptMonorepo from "../../styles/tailwind/Tailwind.mjs";
 import * as LiMdxUnordered$RescriptMonorepo from "./LiMdxUnordered.mjs";
 
-var elementStyles = Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.mb("v6")]);
+var elementStyles = Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.mb(6)]);
 
 var Styles = {
   elementStyles: elementStyles

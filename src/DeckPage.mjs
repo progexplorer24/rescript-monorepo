@@ -75,7 +75,7 @@ var heading = Tailwind$RescriptMonorepo.twStyle([
 
 var row = Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.flex]);
 
-var bottomDeck = Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.mb("v16")]);
+var bottomDeck = Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.mb(16)]);
 
 function $$default(param) {
   return React.createElement("div", {

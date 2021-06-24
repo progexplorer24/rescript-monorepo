@@ -2,10 +2,10 @@ module Styles = {
   open Tailwind
   let elementStyles = twStyle([
     maxW(#xl3),
-    px(#v4),
+    px(#4),
     mx(#auto),
-    sm([px(#v6)]),
-    xl([maxW(#xl5), px(#v0)]),
+    sm([px(#6)]),
+    xl([maxW(#xl5), px(#0)]),
   ])
 }
 

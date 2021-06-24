@@ -10,23 +10,23 @@ import * as SiteMetadata$RescriptMonorepo from "../data/SiteMetadata.mjs";
 import * as SectionContainer$RescriptMonorepo from "../components/blog/SectionContainer.mjs";
 
 var header = Tailwind$RescriptMonorepo.twStyle([
-      Tailwind$RescriptMonorepo.pt("v6"),
-      Tailwind$RescriptMonorepo.xl([Tailwind$RescriptMonorepo.pb("v6")])
+      Tailwind$RescriptMonorepo.pt(6),
+      Tailwind$RescriptMonorepo.xl([Tailwind$RescriptMonorepo.pb(6)])
     ]);
 
 var div1 = Tailwind$RescriptMonorepo.twStyle([
-      Tailwind$RescriptMonorepo.spaceY("v1"),
+      Tailwind$RescriptMonorepo.spaceY(1),
       Tailwind$RescriptMonorepo.textCenter
     ]);
 
-var dl = Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.spaceY("v10")]);
+var dl = Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.spaceY(10)]);
 
 var dt = Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.srOnly]);
 
 var dd = Tailwind$RescriptMonorepo.twStyle([
       Tailwind$RescriptMonorepo.text("base"),
-      Tailwind$RescriptMonorepo.fontWeight("v500"),
-      Tailwind$RescriptMonorepo.leading("v6"),
+      Tailwind$RescriptMonorepo.fontWeight(500),
+      Tailwind$RescriptMonorepo.leading(6),
       Tailwind$RescriptMonorepo.textColor(undefined, "gray500")
     ]);
 
@@ -36,16 +36,16 @@ var div2 = Tailwind$RescriptMonorepo.twStyle([
       Tailwind$RescriptMonorepo.xl([
             Tailwind$RescriptMonorepo.divideY(undefined, 0),
             Tailwind$RescriptMonorepo.grid,
-            Tailwind$RescriptMonorepo.gridCols("v4"),
-            Tailwind$RescriptMonorepo.gapX("v6")
+            Tailwind$RescriptMonorepo.gridCols(4),
+            Tailwind$RescriptMonorepo.gapX(6)
           ])
     ]);
 
 var dlAuthors = Tailwind$RescriptMonorepo.twStyle([
-      Tailwind$RescriptMonorepo.pt("v6"),
-      Tailwind$RescriptMonorepo.pb("v10"),
+      Tailwind$RescriptMonorepo.pt(6),
+      Tailwind$RescriptMonorepo.pb(10),
       Tailwind$RescriptMonorepo.xl([
-            Tailwind$RescriptMonorepo.pt("v11"),
+            Tailwind$RescriptMonorepo.pt(11),
             Tailwind$RescriptMonorepo.borderB(1),
             Tailwind$RescriptMonorepo.borderColor("gray500")
           ])
@@ -56,31 +56,31 @@ var dtAuthors = Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.srO
 var ul = Tailwind$RescriptMonorepo.twStyle([
       Tailwind$RescriptMonorepo.flex,
       Tailwind$RescriptMonorepo.justifyCenter,
-      Tailwind$RescriptMonorepo.spaceX("v8"),
-      Tailwind$RescriptMonorepo.sm([Tailwind$RescriptMonorepo.spaceX("v12")]),
+      Tailwind$RescriptMonorepo.spaceX(8),
+      Tailwind$RescriptMonorepo.sm([Tailwind$RescriptMonorepo.spaceX(12)]),
       Tailwind$RescriptMonorepo.xl([
-            Tailwind$RescriptMonorepo.spaceX("v0"),
+            Tailwind$RescriptMonorepo.spaceX(0),
             Tailwind$RescriptMonorepo.block,
-            Tailwind$RescriptMonorepo.spaceY("v8")
+            Tailwind$RescriptMonorepo.spaceY(8)
           ])
     ]);
 
 var li = Tailwind$RescriptMonorepo.twStyle([
       Tailwind$RescriptMonorepo.flex,
       Tailwind$RescriptMonorepo.itemsCenter,
-      Tailwind$RescriptMonorepo.spaceX("v2")
+      Tailwind$RescriptMonorepo.spaceX(2)
     ]);
 
 var avatar = Tailwind$RescriptMonorepo.twStyle([
-      Tailwind$RescriptMonorepo.w("v14"),
-      Tailwind$RescriptMonorepo.h("v14"),
+      Tailwind$RescriptMonorepo.w(14),
+      Tailwind$RescriptMonorepo.h(14),
       Tailwind$RescriptMonorepo.rounded("full")
     ]);
 
 var dlAuthors2 = Tailwind$RescriptMonorepo.twStyle([
       Tailwind$RescriptMonorepo.text("sm"),
-      Tailwind$RescriptMonorepo.fontWeight("v500"),
-      Tailwind$RescriptMonorepo.leading("v5"),
+      Tailwind$RescriptMonorepo.fontWeight(500),
+      Tailwind$RescriptMonorepo.leading(5),
       Tailwind$RescriptMonorepo.whitespaceNowrap
     ]);
 
@@ -90,9 +90,9 @@ var mdxWrapper = Tailwind$RescriptMonorepo.twStyle([
       Tailwind$RescriptMonorepo.divideY(undefined, 1),
       Tailwind$RescriptMonorepo.borderColor("gray200"),
       Tailwind$RescriptMonorepo.xl([
-            Tailwind$RescriptMonorepo.pb("v0"),
+            Tailwind$RescriptMonorepo.pb(0),
             Tailwind$RescriptMonorepo.col(3),
-            Tailwind$RescriptMonorepo.row("v2")
+            Tailwind$RescriptMonorepo.row(2)
           ])
     ]);
 

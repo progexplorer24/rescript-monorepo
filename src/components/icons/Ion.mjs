@@ -4,8 +4,8 @@ import * as React from "react";
 import * as Tailwind$RescriptMonorepo from "../../styles/tailwind/Tailwind.mjs";
 
 var defaultSize = Tailwind$RescriptMonorepo.twStyle([
-      Tailwind$RescriptMonorepo.w("v10"),
-      Tailwind$RescriptMonorepo.h("v10")
+      Tailwind$RescriptMonorepo.w(10),
+      Tailwind$RescriptMonorepo.h(10)
     ]);
 
 function Ion$Outline$accessibility(Props) {
@@ -16326,8 +16326,8 @@ var Outline = {
 };
 
 var defaultSize$1 = Tailwind$RescriptMonorepo.twStyle([
-      Tailwind$RescriptMonorepo.w("v10"),
-      Tailwind$RescriptMonorepo.h("v10")
+      Tailwind$RescriptMonorepo.w(10),
+      Tailwind$RescriptMonorepo.h(10)
     ]);
 
 function Ion$Filled$accessibility(Props) {
@@ -18483,8 +18483,8 @@ var Filled = {
 };
 
 var defaultSize$2 = Tailwind$RescriptMonorepo.twStyle([
-      Tailwind$RescriptMonorepo.w("v10"),
-      Tailwind$RescriptMonorepo.h("v10")
+      Tailwind$RescriptMonorepo.w(10),
+      Tailwind$RescriptMonorepo.h(10)
     ]);
 
 function Ion$Sharp$accessibility(Props) {
@@ -19138,8 +19138,8 @@ var Sharp = {
 };
 
 var defaultSize$3 = Tailwind$RescriptMonorepo.twStyle([
-      Tailwind$RescriptMonorepo.w("v10"),
-      Tailwind$RescriptMonorepo.h("v10")
+      Tailwind$RescriptMonorepo.w(10),
+      Tailwind$RescriptMonorepo.h(10)
     ]);
 
 function Ion$Logos$alipay(Props) {

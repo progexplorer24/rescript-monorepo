@@ -6,7 +6,7 @@ module Styles = {
     borderB(#1),
     cursorPointer,
     textColor(#blue700),
-    fontWeight(#v700),
+    fontWeight(#700),
   ])
 }
 

@@ -7,35 +7,35 @@ let transitionNone = [transitionProperty("none")]
 let transitionAll = [
   transition(
     "all",
-    ~duration=Theme.Duration.toValue(#v150),
+    ~duration=Theme.Duration.toValue(#150),
     ~timingFunction=Theme.TimingFunction.toValue(#easeInOut),
   ),
 ]
 let transition = [
   transition(
     "background-color, border-color, color, fill, stroke, opacity, box-shadow, transform",
-    ~duration=Theme.Duration.toValue(#v150),
+    ~duration=Theme.Duration.toValue(#150),
     ~timingFunction=Theme.TimingFunction.toValue(#easeInOut),
   ),
 ]
 let transitionColors = [
   CssJs.transition(
     "background-color, border-color, color, fill, stroke, opacity, box-shadow, transform",
-    ~duration=Theme.Duration.toValue(#v150),
+    ~duration=Theme.Duration.toValue(#150),
     ~timingFunction=Theme.TimingFunction.toValue(#easeInOut),
   ),
 ]
 let transitionOpacity = [
   CssJs.transition(
     "opacity",
-    ~duration=Theme.Duration.toValue(#v150),
+    ~duration=Theme.Duration.toValue(#150),
     ~timingFunction=Theme.TimingFunction.toValue(#easeInOut),
   ),
 ]
 let transitionShadow = [
   CssJs.transition(
     "box-shadow",
-    ~duration=Theme.Duration.toValue(#v150),
+    ~duration=Theme.Duration.toValue(#150),
     ~timingFunction=Theme.TimingFunction.toValue(#easeInOut),
   ),
 ]
@@ -43,7 +43,7 @@ let transitionShadow = [
 let transitionTransform = [
   CssJs.transition(
     "transform",
-    ~duration=Theme.Duration.toValue(#v150),
+    ~duration=Theme.Duration.toValue(#150),
     ~timingFunction=Theme.TimingFunction.toValue(#easeInOut),
   ),
 ]
@@ -586,28 +586,28 @@ let nml = (size: negativeMargin) => [marginLeft(Theme.SpacingNegative.toValue(si
 let spaceY = (size: spacing) => [
   selector(
     Selectors.ignoreFirstChild,
-    [marginTop(Theme.Spacing.toValue(size)), marginBottom(Theme.Spacing.toValue(#v0))],
+    [marginTop(Theme.Spacing.toValue(size)), marginBottom(Theme.Spacing.toValue(#0))],
   ),
 ]
 
 let nspaceY = (size: negativeMargin) => [
   selector(
     Selectors.ignoreFirstChild,
-    [marginTop(Theme.SpacingNegative.toValue(size)), marginBottom(Theme.Spacing.toValue(#v0))],
+    [marginTop(Theme.SpacingNegative.toValue(size)), marginBottom(Theme.Spacing.toValue(#0))],
   ),
 ]
 
 let spaceX = (size: spacing) => [
   selector(
     Selectors.ignoreFirstChild,
-    [marginLeft(Theme.Spacing.toValue(size)), marginRight(Theme.Spacing.toValue(#v0))],
+    [marginLeft(Theme.Spacing.toValue(size)), marginRight(Theme.Spacing.toValue(#0))],
   ),
 ]
 
 let nspaceX = (size: negativeMargin) => [
   selector(
     Selectors.ignoreFirstChild,
-    [marginLeft(Theme.SpacingNegative.toValue(size)), marginRight(Theme.Spacing.toValue(#v0))],
+    [marginLeft(Theme.SpacingNegative.toValue(size)), marginRight(Theme.Spacing.toValue(#0))],
   ),
 ]
 
@@ -717,14 +717,14 @@ let fontMono = [
 type fontSize = Theme.FontSize.t
 let text = size =>
   switch size {
-  | #xs => [fontSize(Theme.FontSize.toValue(size)), lineHeight(Theme.LineHeight.toValue(#v5))]
-  | #sm => [fontSize(Theme.FontSize.toValue(size)), lineHeight(Theme.LineHeight.toValue(#v5))]
-  | #base => [fontSize(Theme.FontSize.toValue(size)), lineHeight(Theme.LineHeight.toValue(#v6))]
-  | #lg => [fontSize(Theme.FontSize.toValue(size)), lineHeight(Theme.LineHeight.toValue(#v7))]
-  | #xl => [fontSize(Theme.FontSize.toValue(size)), lineHeight(Theme.LineHeight.toValue(#v7))]
-  | #xl2 => [fontSize(Theme.FontSize.toValue(size)), lineHeight(Theme.LineHeight.toValue(#v8))]
-  | #xl3 => [fontSize(Theme.FontSize.toValue(size)), lineHeight(Theme.LineHeight.toValue(#v9))]
-  | #xl4 => [fontSize(Theme.FontSize.toValue(size)), lineHeight(Theme.LineHeight.toValue(#v10))]
+  | #xs => [fontSize(Theme.FontSize.toValue(size)), lineHeight(Theme.LineHeight.toValue(#5))]
+  | #sm => [fontSize(Theme.FontSize.toValue(size)), lineHeight(Theme.LineHeight.toValue(#5))]
+  | #base => [fontSize(Theme.FontSize.toValue(size)), lineHeight(Theme.LineHeight.toValue(#6))]
+  | #lg => [fontSize(Theme.FontSize.toValue(size)), lineHeight(Theme.LineHeight.toValue(#7))]
+  | #xl => [fontSize(Theme.FontSize.toValue(size)), lineHeight(Theme.LineHeight.toValue(#7))]
+  | #xl2 => [fontSize(Theme.FontSize.toValue(size)), lineHeight(Theme.LineHeight.toValue(#8))]
+  | #xl3 => [fontSize(Theme.FontSize.toValue(size)), lineHeight(Theme.LineHeight.toValue(#9))]
+  | #xl4 => [fontSize(Theme.FontSize.toValue(size)), lineHeight(Theme.LineHeight.toValue(#10))]
   | #xl5 | #xl6 | #xl7 | #xl8 | #xl9 => [
       fontSize(Theme.FontSize.toValue(size)),
       lineHeight(Theme.LineHeight.toValue(#none)),

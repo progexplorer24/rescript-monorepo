@@ -3,8 +3,8 @@ module Styles = {
 
   let wrapperXl = twStyle([xl([maxW(#xl6)])])
   let wrapperBase = twStyle([
-    px(#v4),
-    py(#v10),
+    px(#4),
+    py(#10),
     mx(#auto),
     maxW(#xl3),
     [
@@ -19,8 +19,8 @@ module Styles = {
       ]),
     ],
   ])
-  let wrapperSm = twStyle([sm([py(#v12), px(#v6)])])
-  let wrapperLg = twStyle([lg([px(#v8), py(#v16), maxW(#xl4)])])
+  let wrapperSm = twStyle([sm([py(#12), px(#6)])])
+  let wrapperLg = twStyle([lg([px(#8), py(#16), maxW(#xl4)])])
   let wrapper = merge(. [wrapperBase, wrapperSm, wrapperLg, wrapperXl])
 }
 

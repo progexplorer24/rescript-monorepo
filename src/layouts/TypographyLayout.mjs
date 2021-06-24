@@ -7,8 +7,8 @@ import * as Tailwind$RescriptMonorepo from "../styles/tailwind/Tailwind.mjs";
 var wrapperXl = Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.xl([Tailwind$RescriptMonorepo.maxW("xl6")])]);
 
 var wrapperBase = Tailwind$RescriptMonorepo.twStyle([
-      Tailwind$RescriptMonorepo.px("v4"),
-      Tailwind$RescriptMonorepo.py("v10"),
+      Tailwind$RescriptMonorepo.px(4),
+      Tailwind$RescriptMonorepo.py(10),
       Tailwind$RescriptMonorepo.mx("auto"),
       Tailwind$RescriptMonorepo.maxW("xl3"),
       [CssJs.fontFamilies([
@@ -36,13 +36,13 @@ var wrapperBase = Tailwind$RescriptMonorepo.twStyle([
     ]);
 
 var wrapperSm = Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.sm([
-            Tailwind$RescriptMonorepo.py("v12"),
-            Tailwind$RescriptMonorepo.px("v6")
+            Tailwind$RescriptMonorepo.py(12),
+            Tailwind$RescriptMonorepo.px(6)
           ])]);
 
 var wrapperLg = Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.lg([
-            Tailwind$RescriptMonorepo.px("v8"),
-            Tailwind$RescriptMonorepo.py("v16"),
+            Tailwind$RescriptMonorepo.px(8),
+            Tailwind$RescriptMonorepo.py(16),
             Tailwind$RescriptMonorepo.maxW("xl4")
           ])]);
 

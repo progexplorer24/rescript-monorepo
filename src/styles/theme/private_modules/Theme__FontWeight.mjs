@@ -2,42 +2,42 @@
 
 
 function toValue(fontWeight) {
-  if (fontWeight === "v200") {
+  if (fontWeight === 200) {
     return {
             NAME: "num",
             VAL: 200
           };
-  } else if (fontWeight === "v300") {
+  } else if (fontWeight === 300) {
     return {
             NAME: "num",
             VAL: 300
           };
-  } else if (fontWeight === "v400") {
+  } else if (fontWeight === 400) {
     return {
             NAME: "num",
             VAL: 400
           };
-  } else if (fontWeight === "v500") {
+  } else if (fontWeight === 500) {
     return {
             NAME: "num",
             VAL: 500
           };
-  } else if (fontWeight === "v600") {
+  } else if (fontWeight === 600) {
     return {
             NAME: "num",
             VAL: 600
           };
-  } else if (fontWeight === "v700") {
+  } else if (fontWeight === 700) {
     return {
             NAME: "num",
             VAL: 700
           };
-  } else if (fontWeight === "v800") {
+  } else if (fontWeight === 800) {
     return {
             NAME: "num",
             VAL: 800
           };
-  } else if (fontWeight === "v900") {
+  } else if (fontWeight === 900) {
     return {
             NAME: "num",
             VAL: 900

@@ -5,12 +5,12 @@ import * as Tailwind$RescriptMonorepo from "../../styles/tailwind/Tailwind.mjs";
 
 var elementStyles = Tailwind$RescriptMonorepo.twStyle([
       Tailwind$RescriptMonorepo.maxW("xl3"),
-      Tailwind$RescriptMonorepo.px("v4"),
+      Tailwind$RescriptMonorepo.px(4),
       Tailwind$RescriptMonorepo.mx("auto"),
-      Tailwind$RescriptMonorepo.sm([Tailwind$RescriptMonorepo.px("v6")]),
+      Tailwind$RescriptMonorepo.sm([Tailwind$RescriptMonorepo.px(6)]),
       Tailwind$RescriptMonorepo.xl([
             Tailwind$RescriptMonorepo.maxW("xl5"),
-            Tailwind$RescriptMonorepo.px("v0")
+            Tailwind$RescriptMonorepo.px(0)
           ])
     ]);
 

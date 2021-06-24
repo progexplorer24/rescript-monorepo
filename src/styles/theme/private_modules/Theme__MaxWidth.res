@@ -1,6 +1,7 @@
 type t = [
   | #none
   | #zero
+  | #0
   | #xs
   | #sm
   | #md
@@ -19,7 +20,7 @@ type t = [
 let toValue = width =>
   switch width {
   | #none => #none
-  | #zero => #rem(0.)
+  | #zero | #0 => #rem(0.)
   | #xs => #rem(20.)
   | #sm => #rem(24.)
   | #md => #rem(28.)

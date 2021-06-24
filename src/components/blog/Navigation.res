@@ -1,12 +1,12 @@
 module Styles = {
   open Tailwind
 
-  let header = twStyle([flex, itemsCenter, justifyBetween, pt(#v4), pb(#v6), sm([py(#v10)])])
+  let header = twStyle([flex, itemsCenter, justifyBetween, pt(#4), pb(#6), sm([py(#10)])])
   let linkWrapper = twStyle([flex, itemsCenter, justifyBetween])
-  let linkDiv = twStyle([text(#base), fontWeight(#v800)])
+  let linkDiv = twStyle([text(#base), fontWeight(#800)])
   let titleStyles = twStyle([noUnderline])
 
-  let linksBlock = twStyle([flex, itemsCenter, leading(#v5)])
+  let linksBlock = twStyle([flex, itemsCenter, leading(#5)])
   let hideForSm = twStyle([hidden, sm([block])])
 }
 

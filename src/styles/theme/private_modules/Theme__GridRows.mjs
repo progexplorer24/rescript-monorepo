@@ -24,15 +24,15 @@ function rows(num) {
 }
 
 function toValue(colStart) {
-  if (colStart === "v2") {
+  if (colStart === 2) {
     return rows(2);
-  } else if (colStart === "v3") {
+  } else if (colStart === 3) {
     return rows(3);
-  } else if (colStart === "v4") {
+  } else if (colStart === 4) {
     return rows(4);
-  } else if (colStart === "v5") {
+  } else if (colStart === 5) {
     return rows(5);
-  } else if (colStart === "v6") {
+  } else if (colStart === 6) {
     return rows(6);
   } else {
     return rows(1);

@@ -501,8 +501,8 @@ var bigIcons = CssJs.merge([
                 })
           ]),
       Tailwind$RescriptMonorepo.twStyle([
-            Tailwind$RescriptMonorepo.w("v16"),
-            Tailwind$RescriptMonorepo.h("v16"),
+            Tailwind$RescriptMonorepo.w(16),
+            Tailwind$RescriptMonorepo.h(16),
             Tailwind$RescriptMonorepo.block,
             Tailwind$RescriptMonorepo.fillCurrent
           ])
@@ -844,9 +844,9 @@ var cityFeature = CssJs.merge([
 var fourColumns = CssJs.merge([
       Tailwind$RescriptMonorepo.twStyle([
             Tailwind$RescriptMonorepo.grid,
-            Tailwind$RescriptMonorepo.gridCols("v1"),
-            Tailwind$RescriptMonorepo.gap("v6"),
-            Tailwind$RescriptMonorepo.minWBreakpoint(767, [Tailwind$RescriptMonorepo.gridCols("v4")])
+            Tailwind$RescriptMonorepo.gridCols(1),
+            Tailwind$RescriptMonorepo.gap(6),
+            Tailwind$RescriptMonorepo.minWBreakpoint(767, [Tailwind$RescriptMonorepo.gridCols(4)])
           ]),
       row
     ]);
@@ -933,10 +933,10 @@ var twitterLink = CssJs.merge([
 var threeColumns = CssJs.merge([
       Tailwind$RescriptMonorepo.twStyle([
             Tailwind$RescriptMonorepo.grid,
-            Tailwind$RescriptMonorepo.gridCols("v1"),
+            Tailwind$RescriptMonorepo.gridCols(1),
             Tailwind$RescriptMonorepo.minWBreakpoint(481, [
-                  Tailwind$RescriptMonorepo.gridCols("v3"),
-                  Tailwind$RescriptMonorepo.gap("v6")
+                  Tailwind$RescriptMonorepo.gridCols(3),
+                  Tailwind$RescriptMonorepo.gap(6)
                 ])
           ]),
       row
@@ -1131,8 +1131,8 @@ var planBoxDiv = CssJs.merge([
 var threeColumnsPricing = CssJs.merge([
       Tailwind$RescriptMonorepo.twStyle([
             Tailwind$RescriptMonorepo.grid,
-            Tailwind$RescriptMonorepo.gap("v6"),
-            Tailwind$RescriptMonorepo.minWBreakpoint(767, [Tailwind$RescriptMonorepo.gridCols("v3")])
+            Tailwind$RescriptMonorepo.gap(6),
+            Tailwind$RescriptMonorepo.minWBreakpoint(767, [Tailwind$RescriptMonorepo.gridCols(3)])
           ]),
       row
     ]);
@@ -1304,8 +1304,8 @@ var checkboxStyles = CssJs.style([CssJs.margin4({
 var twoColumns = CssJs.merge([
       Tailwind$RescriptMonorepo.twStyle([
             Tailwind$RescriptMonorepo.grid,
-            Tailwind$RescriptMonorepo.gridCols("v2"),
-            Tailwind$RescriptMonorepo.gap("v6")
+            Tailwind$RescriptMonorepo.gridCols(2),
+            Tailwind$RescriptMonorepo.gap(6)
           ]),
       row
     ]);
@@ -1453,10 +1453,10 @@ function $$default(param) {
                         }, Utils$RescriptMonorepo.str("Hello, we're Omnifood, your new premium food delivery service. We know you're always busy. No time for cooking. So let us take care of that, we're really good at it, we promise!\n          ")), React.createElement("div", {
                           className: Tailwind$RescriptMonorepo.merge([Tailwind$RescriptMonorepo.twStyle([
                                       Tailwind$RescriptMonorepo.grid,
-                                      Tailwind$RescriptMonorepo.mt("v8"),
-                                      Tailwind$RescriptMonorepo.gap("v4"),
-                                      Tailwind$RescriptMonorepo.gridCols("v1"),
-                                      Tailwind$RescriptMonorepo.minWBreakpoint(767, [Tailwind$RescriptMonorepo.gridCols("v4")])
+                                      Tailwind$RescriptMonorepo.mt(8),
+                                      Tailwind$RescriptMonorepo.gap(4),
+                                      Tailwind$RescriptMonorepo.gridCols(1),
+                                      Tailwind$RescriptMonorepo.minWBreakpoint(767, [Tailwind$RescriptMonorepo.gridCols(4)])
                                     ])])
                         }, React.createElement("div", {
                               className: box
@@ -1643,7 +1643,7 @@ function $$default(param) {
                             row,
                             Tailwind$RescriptMonorepo.twStyle([
                                   Tailwind$RescriptMonorepo.grid,
-                                  Tailwind$RescriptMonorepo.minWBreakpoint(767, [Tailwind$RescriptMonorepo.gridCols("v2")])
+                                  Tailwind$RescriptMonorepo.minWBreakpoint(767, [Tailwind$RescriptMonorepo.gridCols(2)])
                                 ])
                           ])
                     }, React.createElement("div", {
@@ -1836,9 +1836,9 @@ function $$default(param) {
                       className: CssJs.merge([
                             Tailwind$RescriptMonorepo.twStyle([
                                   Tailwind$RescriptMonorepo.grid,
-                                  Tailwind$RescriptMonorepo.gridCols("v1"),
-                                  Tailwind$RescriptMonorepo.gap("v6"),
-                                  Tailwind$RescriptMonorepo.minWBreakpoint(767, [Tailwind$RescriptMonorepo.gridCols("v3")])
+                                  Tailwind$RescriptMonorepo.gridCols(1),
+                                  Tailwind$RescriptMonorepo.gap(6),
+                                  Tailwind$RescriptMonorepo.minWBreakpoint(767, [Tailwind$RescriptMonorepo.gridCols(3)])
                                 ]),
                             row
                           ])
@@ -2138,9 +2138,9 @@ function $$default(param) {
                               className: threeColumns
                             }, React.createElement("div", {
                                   className: Tailwind$RescriptMonorepo.merge([Tailwind$RescriptMonorepo.twStyle([
-                                              Tailwind$RescriptMonorepo.mt("v4"),
+                                              Tailwind$RescriptMonorepo.mt(4),
                                               Tailwind$RescriptMonorepo.col(1),
-                                              Tailwind$RescriptMonorepo.minWBreakpoint(481, [Tailwind$RescriptMonorepo.mt("v0")])
+                                              Tailwind$RescriptMonorepo.minWBreakpoint(481, [Tailwind$RescriptMonorepo.mt(0)])
                                             ])])
                                 }, React.createElement("label", {
                                       className: Tailwind$RescriptMonorepo.merge([Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.minWBreakpoint(481, [
@@ -2162,9 +2162,9 @@ function $$default(param) {
                               className: threeColumns
                             }, React.createElement("div", {
                                   className: Tailwind$RescriptMonorepo.merge([Tailwind$RescriptMonorepo.twStyle([
-                                              Tailwind$RescriptMonorepo.mt("v4"),
+                                              Tailwind$RescriptMonorepo.mt(4),
                                               Tailwind$RescriptMonorepo.col(1),
-                                              Tailwind$RescriptMonorepo.minWBreakpoint(481, [Tailwind$RescriptMonorepo.mt("v0")])
+                                              Tailwind$RescriptMonorepo.minWBreakpoint(481, [Tailwind$RescriptMonorepo.mt(0)])
                                             ])])
                                 }, React.createElement("label", {
                                       className: Tailwind$RescriptMonorepo.merge([Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.minWBreakpoint(481, [
@@ -2193,8 +2193,8 @@ function $$default(param) {
                             }, React.createElement("div", {
                                   className: Tailwind$RescriptMonorepo.merge([Tailwind$RescriptMonorepo.twStyle([
                                               Tailwind$RescriptMonorepo.col(1),
-                                              Tailwind$RescriptMonorepo.mt("v4"),
-                                              Tailwind$RescriptMonorepo.minWBreakpoint(481, [Tailwind$RescriptMonorepo.mt("v0")])
+                                              Tailwind$RescriptMonorepo.mt(4),
+                                              Tailwind$RescriptMonorepo.minWBreakpoint(481, [Tailwind$RescriptMonorepo.mt(0)])
                                             ])])
                                 }, React.createElement("label", {
                                       className: Tailwind$RescriptMonorepo.merge([Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.minWBreakpoint(481, [
@@ -2215,8 +2215,8 @@ function $$default(param) {
                             }, React.createElement("div", {
                                   className: Tailwind$RescriptMonorepo.merge([Tailwind$RescriptMonorepo.twStyle([
                                               Tailwind$RescriptMonorepo.col(1),
-                                              Tailwind$RescriptMonorepo.mt("v4"),
-                                              Tailwind$RescriptMonorepo.minWBreakpoint(481, [Tailwind$RescriptMonorepo.mt("v0")])
+                                              Tailwind$RescriptMonorepo.mt(4),
+                                              Tailwind$RescriptMonorepo.minWBreakpoint(481, [Tailwind$RescriptMonorepo.mt(0)])
                                             ])])
                                 }, React.createElement("label", {
                                       className: Tailwind$RescriptMonorepo.merge([Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.minWBreakpoint(481, [
@@ -2243,7 +2243,7 @@ function $$default(param) {
                                 }, React.createElement("button", {
                                       className: CssJs.merge([
                                             btnFull,
-                                            Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.mt("v5")])
+                                            Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.mt(5)])
                                           ]),
                                       type: "submit"
                                     }, Utils$RescriptMonorepo.str("Send it!"))))))), React.createElement("footer", {

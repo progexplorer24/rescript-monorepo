@@ -10,7 +10,7 @@ var globalStyles = Tailwind$RescriptMonorepo.twStyle([
               NAME: "custom",
               VAL: "Lato"
             }]),
-      Tailwind$RescriptMonorepo.fontWeight("v300"),
+      Tailwind$RescriptMonorepo.fontWeight(300),
       Tailwind$RescriptMonorepo.w("full"),
       Tailwind$RescriptMonorepo.h("full"),
       Tailwind$RescriptMonorepo.bg(undefined, "gray50"),

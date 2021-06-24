@@ -7,9 +7,9 @@ import * as Tailwind$RescriptMonorepo from "../../styles/tailwind/Tailwind.mjs";
 import * as Mdx__helpers$RescriptMonorepo from "../../server/Mdx__helpers.mjs";
 
 var elementStyles = Tailwind$RescriptMonorepo.twStyle([
-      Tailwind$RescriptMonorepo.mr("v3"),
+      Tailwind$RescriptMonorepo.mr(3),
       Tailwind$RescriptMonorepo.text("sm"),
-      Tailwind$RescriptMonorepo.fontWeight("v500"),
+      Tailwind$RescriptMonorepo.fontWeight(500),
       Tailwind$RescriptMonorepo.uppercase,
       Tailwind$RescriptMonorepo.hover([Tailwind$RescriptMonorepo.textColor(undefined, "blue600")])
     ]);

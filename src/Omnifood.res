@@ -295,7 +295,7 @@ module Styles = {
   // NOTE: Icon styles
   let bigIcons = CssJs.merge(. [
     style(. [color(#hex(mainOrange)), marginBottom(#px(10))]),
-    Tailwind.twStyle([Tailwind.w(#v16), Tailwind.h(#v16), Tailwind.block, Tailwind.fillCurrent]),
+    Tailwind.twStyle([Tailwind.w(#16), Tailwind.h(#16), Tailwind.block, Tailwind.fillCurrent]),
   ])
 
   // NOTE: Favourite meals
@@ -453,9 +453,9 @@ module Styles = {
   let fourColumns = CssJs.merge(. [
     Tailwind.twStyle([
       Tailwind.grid,
-      Tailwind.gridCols(#v1),
-      Tailwind.gap(#v6),
-      omnifoodMd([Tailwind.gridCols(#v4)]),
+      Tailwind.gridCols(#1),
+      Tailwind.gap(#6),
+      omnifoodMd([Tailwind.gridCols(#4)]),
     ]),
     row,
   ])
@@ -500,8 +500,8 @@ module Styles = {
   let threeColumns = CssJs.merge(. [
     Tailwind.twStyle([
       Tailwind.grid,
-      Tailwind.gridCols(#v1),
-      omnifoodSm([Tailwind.gridCols(#v3), Tailwind.gap(#v6)]),
+      Tailwind.gridCols(#1),
+      omnifoodSm([Tailwind.gridCols(#3), Tailwind.gap(#6)]),
     ]),
     row,
   ])
@@ -582,7 +582,7 @@ module Styles = {
   ])
 
   let threeColumnsPricing = CssJs.merge(. [
-    Tailwind.twStyle([Tailwind.grid, Tailwind.gap(#v6), omnifoodMd([Tailwind.gridCols(#v3)])]),
+    Tailwind.twStyle([Tailwind.grid, Tailwind.gap(#6), omnifoodMd([Tailwind.gridCols(#3)])]),
     row,
   ])
 
@@ -656,7 +656,7 @@ module Styles = {
   // NOTE: Footer Section
 
   let twoColumns = CssJs.merge(. [
-    Tailwind.twStyle([Tailwind.grid, Tailwind.gridCols(#v2), Tailwind.gap(#v6)]),
+    Tailwind.twStyle([Tailwind.grid, Tailwind.gridCols(#2), Tailwind.gap(#6)]),
     row,
   ])
 
@@ -731,10 +731,10 @@ let default = () => {
           className={Tailwind.merge(. [
             Tailwind.twStyle([
               Tailwind.grid,
-              Tailwind.mt(#v8),
-              Tailwind.gap(#v4),
-              Tailwind.gridCols(#v1),
-              Styles.omnifoodMd([Tailwind.gridCols(#v4)]),
+              Tailwind.mt(#8),
+              Tailwind.gap(#4),
+              Tailwind.gridCols(#1),
+              Styles.omnifoodMd([Tailwind.gridCols(#4)]),
             ]),
           ])}>
           <div className=Styles.box>
@@ -918,7 +918,7 @@ let default = () => {
       <div
         className={CssJs.merge(. [
           Styles.row,
-          Tailwind.twStyle([Tailwind.grid, Styles.omnifoodMd([Tailwind.gridCols(#v2)])]),
+          Tailwind.twStyle([Tailwind.grid, Styles.omnifoodMd([Tailwind.gridCols(#2)])]),
         ])}>
         <div className=Styles.leftSection>
           <img
@@ -1096,9 +1096,9 @@ let default = () => {
         className={CssJs.merge(. [
           Tailwind.twStyle([
             Tailwind.grid,
-            Tailwind.gridCols(#v1),
-            Tailwind.gap(#v6),
-            Styles.omnifoodMd([Tailwind.gridCols(#v3)]),
+            Tailwind.gridCols(#1),
+            Tailwind.gap(#6),
+            Styles.omnifoodMd([Tailwind.gridCols(#3)]),
           ]),
           Styles.row,
         ])}>
@@ -1428,9 +1428,9 @@ let default = () => {
             <div
               className={Tailwind.merge(. [
                 Tailwind.twStyle([
-                  Tailwind.mt(#v4),
+                  Tailwind.mt(#4),
                   Tailwind.col(#1),
-                  Styles.omnifoodSm([Tailwind.mt(#v0)]),
+                  Styles.omnifoodSm([Tailwind.mt(#0)]),
                 ]),
               ])}>
               <label
@@ -1458,9 +1458,9 @@ let default = () => {
             <div
               className={Tailwind.merge(. [
                 Tailwind.twStyle([
-                  Tailwind.mt(#v4),
+                  Tailwind.mt(#4),
                   Tailwind.col(#1),
-                  Styles.omnifoodSm([Tailwind.mt(#v0)]),
+                  Styles.omnifoodSm([Tailwind.mt(#0)]),
                 ]),
               ])}>
               <label
@@ -1487,8 +1487,8 @@ let default = () => {
               className={Tailwind.merge(. [
                 Tailwind.twStyle([
                   Tailwind.col(#1),
-                  Tailwind.mt(#v4),
-                  Styles.omnifoodSm([Tailwind.mt(#v0)]),
+                  Tailwind.mt(#4),
+                  Styles.omnifoodSm([Tailwind.mt(#0)]),
                 ]),
               ])}>
               <label
@@ -1511,8 +1511,8 @@ let default = () => {
               className={Tailwind.merge(. [
                 Tailwind.twStyle([
                   Tailwind.col(#1),
-                  Tailwind.mt(#v4),
-                  Styles.omnifoodSm([Tailwind.mt(#v0)]),
+                  Tailwind.mt(#4),
+                  Styles.omnifoodSm([Tailwind.mt(#0)]),
                 ]),
               ])}>
               <label
@@ -1541,7 +1541,7 @@ let default = () => {
             <div className={Tailwind.merge(. [Tailwind.twStyle([Tailwind.col(#2)])])}>
               <button
                 type_="submit"
-                className={CssJs.merge(. [Styles.btnFull, Tailwind.twStyle([Tailwind.mt(#v5)])])}>
+                className={CssJs.merge(. [Styles.btnFull, Tailwind.twStyle([Tailwind.mt(#5)])])}>
                 {"Send it!"->str}
               </button>
             </div>

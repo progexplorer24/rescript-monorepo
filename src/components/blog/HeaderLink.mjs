@@ -5,10 +5,10 @@ import * as Mdx$RescriptMonorepo from "./Mdx.mjs";
 import * as Tailwind$RescriptMonorepo from "../../styles/tailwind/Tailwind.mjs";
 
 var elementStyles = Tailwind$RescriptMonorepo.twStyle([
-      Tailwind$RescriptMonorepo.p("v1"),
-      Tailwind$RescriptMonorepo.fontWeight("v500"),
+      Tailwind$RescriptMonorepo.p(1),
+      Tailwind$RescriptMonorepo.fontWeight(500),
       Tailwind$RescriptMonorepo.textColor(undefined, "gray900"),
-      Tailwind$RescriptMonorepo.sm([Tailwind$RescriptMonorepo.p("v4")])
+      Tailwind$RescriptMonorepo.sm([Tailwind$RescriptMonorepo.p(4)])
     ]);
 
 var Styles = {

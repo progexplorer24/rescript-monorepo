@@ -1,11 +1,11 @@
-type t = [#v0 | #v1 | #v2 | #v3 | #v6 | #v12]
+type t = [#0 | #1 | #2 | #3 | #6 | #12]
 
 let toValue = degrees =>
   switch degrees {
-  | #v0 => #deg(0.)
-  | #v1 => #deg(1.)
-  | #v2 => #deg(2.)
-  | #v3 => #deg(3.)
-  | #v6 => #deg(6.)
-  | #v12 => #deg(12.)
+  | #0 => #deg(0.)
+  | #1 => #deg(1.)
+  | #2 => #deg(2.)
+  | #3 => #deg(3.)
+  | #6 => #deg(6.)
+  | #12 => #deg(12.)
   }

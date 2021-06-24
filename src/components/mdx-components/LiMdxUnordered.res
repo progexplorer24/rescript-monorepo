@@ -1,9 +1,9 @@
 module Styles = {
   open Tailwind
-  let elementStyles = twStyle([mb(#v4)])
+  let elementStyles = twStyle([mb(#4)])
 
   let bulletStyles = twStyle([
-    w(#v3),
+    w(#3),
     borderColor(#indigo800),
     borderL(#1),
     borderR(#1),
@@ -11,8 +11,8 @@ module Styles = {
     bg(#indigo50),
     itemsCenter,
     justifyCenter,
-    h(#v3),
-    mr(#v4),
+    h(#3),
+    mr(#4),
     inlineFlex,
   ])
 }

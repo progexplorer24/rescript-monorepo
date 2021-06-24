@@ -3,14 +3,14 @@
 import * as React from "react";
 import * as Tailwind$RescriptMonorepo from "../../styles/tailwind/Tailwind.mjs";
 
-var orderedElementStyles = Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.mb("v4")]);
+var orderedElementStyles = Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.mb(4)]);
 
 var numerationStyles = Tailwind$RescriptMonorepo.twStyle([
       Tailwind$RescriptMonorepo.borderR(1),
-      Tailwind$RescriptMonorepo.pr("v1_5"),
+      Tailwind$RescriptMonorepo.pr("1_5"),
       Tailwind$RescriptMonorepo.roundedR("full"),
       Tailwind$RescriptMonorepo.borderColor("indigo800"),
-      Tailwind$RescriptMonorepo.mr("v3"),
+      Tailwind$RescriptMonorepo.mr(3),
       Tailwind$RescriptMonorepo.inlineFlex,
       Tailwind$RescriptMonorepo.textColor(undefined, "indigo800")
     ]);

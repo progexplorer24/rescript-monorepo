@@ -8,7 +8,7 @@ var elementStyles = Tailwind$RescriptMonorepo.twStyle([
       Tailwind$RescriptMonorepo.borderB(1),
       Tailwind$RescriptMonorepo.cursorPointer,
       Tailwind$RescriptMonorepo.textColor(undefined, "blue700"),
-      Tailwind$RescriptMonorepo.fontWeight("v700")
+      Tailwind$RescriptMonorepo.fontWeight(700)
     ]);
 
 var Styles = {

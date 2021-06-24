@@ -3,7 +3,7 @@
 import * as React from "react";
 import * as Tailwind$RescriptMonorepo from "../../styles/tailwind/Tailwind.mjs";
 
-var elementStyles = Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.p("v2")]);
+var elementStyles = Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.p(2)]);
 
 var Styles = {
   elementStyles: elementStyles

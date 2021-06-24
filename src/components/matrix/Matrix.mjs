@@ -7,16 +7,16 @@ import * as Utils$RescriptMonorepo from "../../utils/Utils.mjs";
 import * as Tailwind$RescriptMonorepo from "../../styles/tailwind/Tailwind.mjs";
 
 var cell = Tailwind$RescriptMonorepo.twStyle([
-      Tailwind$RescriptMonorepo.h("v20"),
-      Tailwind$RescriptMonorepo.w("v20"),
+      Tailwind$RescriptMonorepo.h(20),
+      Tailwind$RescriptMonorepo.w(20),
       Tailwind$RescriptMonorepo.bg(undefined, "coolGray900"),
       Tailwind$RescriptMonorepo.border(1),
       Tailwind$RescriptMonorepo.borderCollapse,
       Tailwind$RescriptMonorepo.borderColor("coolGray800"),
-      Tailwind$RescriptMonorepo.m("v0"),
+      Tailwind$RescriptMonorepo.m(0),
       Tailwind$RescriptMonorepo.textCenter,
       Tailwind$RescriptMonorepo.textColor(undefined, "coolGray100"),
-      Tailwind$RescriptMonorepo.fontWeight("v700"),
+      Tailwind$RescriptMonorepo.fontWeight(700),
       Tailwind$RescriptMonorepo.flex,
       Tailwind$RescriptMonorepo.itemsCenter,
       Tailwind$RescriptMonorepo.justifyCenter
@@ -27,7 +27,7 @@ var row = Tailwind$RescriptMonorepo.twStyle([
       Tailwind$RescriptMonorepo.justifyCenter
     ]);
 
-var matrix = Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.mb("v16")]);
+var matrix = Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.mb(16)]);
 
 var Styles = {
   cell: cell,

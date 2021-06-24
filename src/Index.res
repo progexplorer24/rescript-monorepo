@@ -3,27 +3,27 @@ type props = {allFrontmatter: array<Mdx__helpers.frontmatterAndSlug>, metadata: 
 module Styles = {
   open Tailwind
   let wrapper = twStyle([divideY(#1), borderColor(#gray200)])
-  let wrapper2 = twStyle([pt(#v0), pb(#v8), spaceY(#v2), md([spaceY(#v5)])])
+  let wrapper2 = twStyle([pt(#0), pb(#8), spaceY(#2), md([spaceY(#5)])])
   let h1 = twStyle([
     text(#xl3),
-    fontWeight(#v800),
-    leading(#v9),
+    fontWeight(#800),
+    leading(#9),
     tracking(#tight),
     textColor(#gray900),
-    sm([text(#xl4), leading(#v10)]),
-    md([text(#xl6), leading(#v14)]),
+    sm([text(#xl4), leading(#10)]),
+    md([text(#xl6), leading(#14)]),
   ])
 
-  let h2 = twStyle([text(#xl2), fontWeight(#v700), leading(#v8), tracking(#tight)])
+  let h2 = twStyle([text(#xl2), fontWeight(#700), leading(#8), tracking(#tight)])
 
-  let p = twStyle([text(#lg), leading(#v7), textColor(#gray500)])
+  let p = twStyle([text(#lg), leading(#7), textColor(#gray500)])
 
-  let li = twStyle([py(#v12)])
+  let li = twStyle([py(#12)])
   let dt = twStyle([srOnly])
 
-  let dd = twStyle([text(#base), fontWeight(#v500), leading(#v6), textColor(#gray500)])
+  let dd = twStyle([text(#base), fontWeight(#500), leading(#6), textColor(#gray500)])
   let summaryStyles = twStyle([textColor(#gray500), maxW(#none)])
-  let readMoreSection = twStyle([text(#base), fontWeight(#v500), leading(#v6)])
+  let readMoreSection = twStyle([text(#base), fontWeight(#500), leading(#6)])
   let readMoreLink = twStyle([textColor(#blue600), hover([textColor(#blue700)])])
 }
 

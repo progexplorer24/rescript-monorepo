@@ -1,9 +1,9 @@
 module Styles = {
   open Tailwind
   let elementStyles = twStyle([
-    m(#v0),
-    py(#v4),
-    pl(#v6),
+    m(#0),
+    py(#4),
+    pl(#6),
     text(#base),
     breakWords,
     bg(#indigo100),
@@ -11,7 +11,7 @@ module Styles = {
     borderColor(#indigo800),
     italic,
     shadow(#sm),
-    mb(#v6),
+    mb(#6),
   ])
 }
 

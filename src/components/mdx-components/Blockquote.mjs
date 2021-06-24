@@ -4,9 +4,9 @@ import * as React from "react";
 import * as Tailwind$RescriptMonorepo from "../../styles/tailwind/Tailwind.mjs";
 
 var elementStyles = Tailwind$RescriptMonorepo.twStyle([
-      Tailwind$RescriptMonorepo.m("v0"),
-      Tailwind$RescriptMonorepo.py("v4"),
-      Tailwind$RescriptMonorepo.pl("v6"),
+      Tailwind$RescriptMonorepo.m(0),
+      Tailwind$RescriptMonorepo.py(4),
+      Tailwind$RescriptMonorepo.pl(6),
       Tailwind$RescriptMonorepo.text("base"),
       Tailwind$RescriptMonorepo.breakWords,
       Tailwind$RescriptMonorepo.bg(undefined, "indigo100"),
@@ -14,7 +14,7 @@ var elementStyles = Tailwind$RescriptMonorepo.twStyle([
       Tailwind$RescriptMonorepo.borderColor("indigo800"),
       Tailwind$RescriptMonorepo.italic,
       Tailwind$RescriptMonorepo.shadow("sm"),
-      Tailwind$RescriptMonorepo.mb("v6")
+      Tailwind$RescriptMonorepo.mb(6)
     ]);
 
 var Styles = {

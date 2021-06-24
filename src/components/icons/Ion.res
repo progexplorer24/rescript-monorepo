@@ -1,7 +1,7 @@
 open Tailwind
 
 module Outline = {
-  let defaultSize = twStyle([w(#v10), h(#v10)])
+  let defaultSize = twStyle([w(#10), h(#10)])
 
   @react.component
   let accessibility = (
@@ -11294,7 +11294,7 @@ module Outline = {
 }
 
 module Filled = {
-  let defaultSize = twStyle([w(#v10), h(#v10)])
+  let defaultSize = twStyle([w(#10), h(#10)])
 
   @react.component
   let accessibility = (~className="") =>
@@ -12702,7 +12702,7 @@ module Filled = {
   // ten icons
 }
 module Sharp = {
-  let defaultSize = twStyle([w(#v10), h(#v10)])
+  let defaultSize = twStyle([w(#10), h(#10)])
 
   @react.component
   let accessibility = (~className="") =>
@@ -13113,7 +13113,7 @@ module Sharp = {
 }
 
 module Logos = {
-  let defaultSize = twStyle([w(#v10), h(#v10)])
+  let defaultSize = twStyle([w(#10), h(#10)])
 
   @react.component
   let alipay = (~className="") =>

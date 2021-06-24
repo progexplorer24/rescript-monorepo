@@ -4,8 +4,8 @@ import * as React from "react";
 import * as Tailwind$RescriptMonorepo from "../../styles/tailwind/Tailwind.mjs";
 
 var elementStyles = Tailwind$RescriptMonorepo.twStyle([
-      Tailwind$RescriptMonorepo.w("v8"),
-      Tailwind$RescriptMonorepo.h("v8")
+      Tailwind$RescriptMonorepo.w(8),
+      Tailwind$RescriptMonorepo.h(8)
     ]);
 
 var Styles = {

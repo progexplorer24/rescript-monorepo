@@ -5,7 +5,7 @@ import * as React from "react";
 import * as Tailwind$RescriptMonorepo from "../../styles/tailwind/Tailwind.mjs";
 
 var elementStyles = CssJs.merge([Tailwind$RescriptMonorepo.style(Tailwind$RescriptMonorepo.tw([
-                Tailwind$RescriptMonorepo.mb("v6"),
+                Tailwind$RescriptMonorepo.mb(6),
                 Tailwind$RescriptMonorepo.leading("loose")
               ]))]);
 

@@ -17,62 +17,62 @@ function toValue(lineHeight) {
             NAME: "abs",
             VAL: 2
           };
-  } else if (lineHeight === "v3") {
+  } else if (lineHeight === 3) {
     return {
             NAME: "rem",
             VAL: 0.75
           };
-  } else if (lineHeight === "v4") {
+  } else if (lineHeight === 4) {
     return {
             NAME: "rem",
             VAL: 1
           };
-  } else if (lineHeight === "v5") {
+  } else if (lineHeight === 5) {
     return {
             NAME: "rem",
             VAL: 1.25
           };
-  } else if (lineHeight === "v6") {
+  } else if (lineHeight === 6) {
     return {
             NAME: "rem",
             VAL: 1.5
           };
-  } else if (lineHeight === "v7") {
+  } else if (lineHeight === 7) {
     return {
             NAME: "rem",
             VAL: 1.75
           };
-  } else if (lineHeight === "v8") {
+  } else if (lineHeight === 8) {
     return {
             NAME: "rem",
             VAL: 2
           };
-  } else if (lineHeight === "v9") {
+  } else if (lineHeight === 9) {
     return {
             NAME: "rem",
             VAL: 2.25
           };
-  } else if (lineHeight === "v10") {
+  } else if (lineHeight === 10) {
     return {
             NAME: "rem",
             VAL: 2.5
           };
-  } else if (lineHeight === "v11") {
+  } else if (lineHeight === 11) {
     return {
             NAME: "rem",
             VAL: 2.75
           };
-  } else if (lineHeight === "v12") {
+  } else if (lineHeight === 12) {
     return {
             NAME: "rem",
             VAL: 3
           };
-  } else if (lineHeight === "v13") {
+  } else if (lineHeight === 13) {
     return {
             NAME: "rem",
             VAL: 3.25
           };
-  } else if (lineHeight === "v14") {
+  } else if (lineHeight === 14) {
     return {
             NAME: "rem",
             VAL: 3.5

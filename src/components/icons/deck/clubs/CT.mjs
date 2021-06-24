@@ -4,7 +4,7 @@ import * as React from "react";
 import * as Tailwind$RescriptMonorepo from "../../../../styles/tailwind/Tailwind.mjs";
 import * as CardDefaults$RescriptMonorepo from "../CardDefaults.mjs";
 
-var elementStyles = Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.w("v20")]);
+var elementStyles = Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.w(20)]);
 
 var Styles = {
   elementStyles: elementStyles

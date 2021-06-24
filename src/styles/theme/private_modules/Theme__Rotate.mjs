@@ -17,55 +17,55 @@ function toValue(rotate) {
             NAME: "deg",
             VAL: -6
           };
-  } else if (rotate === "v180") {
-    return {
-            NAME: "deg",
-            VAL: 180
-          };
   } else if (rotate === "neg180") {
     return {
             NAME: "deg",
             VAL: -180
           };
-  } else if (rotate === "v0") {
+  } else if (rotate === 0) {
     return {
             NAME: "deg",
             VAL: 0
           };
-  } else if (rotate === "v1") {
+  } else if (rotate === 1) {
     return {
             NAME: "deg",
             VAL: 1
           };
-  } else if (rotate === "v2") {
+  } else if (rotate === 2) {
     return {
             NAME: "deg",
             VAL: 2
           };
-  } else if (rotate === "v3") {
+  } else if (rotate === 3) {
     return {
             NAME: "deg",
             VAL: 3
           };
-  } else if (rotate === "v6") {
+  } else if (rotate === 6) {
     return {
             NAME: "deg",
             VAL: 6
           };
-  } else if (rotate === "v12") {
+  } else if (rotate === 12) {
     return {
             NAME: "deg",
             VAL: 12
           };
-  } else if (rotate === "v45") {
+  } else if (rotate === 45) {
     return {
             NAME: "deg",
             VAL: 45
           };
-  } else if (rotate === "v90") {
+  } else if (rotate === 90) {
     return {
             NAME: "deg",
             VAL: 90
+          };
+  } else if (rotate === 180) {
+    return {
+            NAME: "deg",
+            VAL: 180
           };
   } else if (rotate === "neg12") {
     return {

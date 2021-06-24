@@ -36,17 +36,17 @@ import * as Theme__ProportionsNegative$RescriptMonorepo from "../theme/private_m
 
 var transitionNone = [CssJs.transitionProperty("none")];
 
-var transitionAll = [CssJs.transition(Theme__Duration$RescriptMonorepo.toValue("v150"), undefined, Theme__TimingFunction$RescriptMonorepo.toValue("easeInOut"), "all")];
+var transitionAll = [CssJs.transition(Theme__Duration$RescriptMonorepo.toValue(150), undefined, Theme__TimingFunction$RescriptMonorepo.toValue("easeInOut"), "all")];
 
-var transition = [CssJs.transition(Theme__Duration$RescriptMonorepo.toValue("v150"), undefined, Theme__TimingFunction$RescriptMonorepo.toValue("easeInOut"), "background-color, border-color, color, fill, stroke, opacity, box-shadow, transform")];
+var transition = [CssJs.transition(Theme__Duration$RescriptMonorepo.toValue(150), undefined, Theme__TimingFunction$RescriptMonorepo.toValue("easeInOut"), "background-color, border-color, color, fill, stroke, opacity, box-shadow, transform")];
 
-var transitionColors = [CssJs.transition(Theme__Duration$RescriptMonorepo.toValue("v150"), undefined, Theme__TimingFunction$RescriptMonorepo.toValue("easeInOut"), "background-color, border-color, color, fill, stroke, opacity, box-shadow, transform")];
+var transitionColors = [CssJs.transition(Theme__Duration$RescriptMonorepo.toValue(150), undefined, Theme__TimingFunction$RescriptMonorepo.toValue("easeInOut"), "background-color, border-color, color, fill, stroke, opacity, box-shadow, transform")];
 
-var transitionOpacity = [CssJs.transition(Theme__Duration$RescriptMonorepo.toValue("v150"), undefined, Theme__TimingFunction$RescriptMonorepo.toValue("easeInOut"), "opacity")];
+var transitionOpacity = [CssJs.transition(Theme__Duration$RescriptMonorepo.toValue(150), undefined, Theme__TimingFunction$RescriptMonorepo.toValue("easeInOut"), "opacity")];
 
-var transitionShadow = [CssJs.transition(Theme__Duration$RescriptMonorepo.toValue("v150"), undefined, Theme__TimingFunction$RescriptMonorepo.toValue("easeInOut"), "box-shadow")];
+var transitionShadow = [CssJs.transition(Theme__Duration$RescriptMonorepo.toValue(150), undefined, Theme__TimingFunction$RescriptMonorepo.toValue("easeInOut"), "box-shadow")];
 
-var transitionTransform = [CssJs.transition(Theme__Duration$RescriptMonorepo.toValue("v150"), undefined, Theme__TimingFunction$RescriptMonorepo.toValue("easeInOut"), "transform")];
+var transitionTransform = [CssJs.transition(Theme__Duration$RescriptMonorepo.toValue(150), undefined, Theme__TimingFunction$RescriptMonorepo.toValue("easeInOut"), "transform")];
 
 function duration(miliseconds) {
   return [CssJs.transitionDuration(Theme__Duration$RescriptMonorepo.toValue(miliseconds))];
@@ -254,7 +254,7 @@ var relative = [CssJs.position("relative")];
 var sticky = [CssJs.position("sticky")];
 
 function inset(value) {
-  if (value === "v96" || value === "v92" || value === "v88" || value === "v84" || value === "v80" || value === "v76" || value === "v72" || value === "v68" || value === "v64" || value === "v60" || value === "v56" || value === "v52" || value === "v48" || value === "v44" || value === "v40" || value === "v36" || value === "v32" || value === "v28" || value === "v24" || value === "v20" || value === "v18" || value === "v16" || value === "v14" || value === "v12" || value === "v11" || value === "v10" || value === "v9" || value === "v8" || value === "v7" || value === "v6" || value === "v5" || value === "v4" || value === "v3" || value === "v2" || value === "v1" || value === "v0" || value === "px" || value === "v3_5" || value === "v2_5" || value === "v200" || value === "v1_5" || value === "v196" || value === "v192" || value === "v188" || value === "v184" || value === "v180" || value === "v176" || value === "v172" || value === "v168" || value === "v164" || value === "v160" || value === "v156" || value === "v152" || value === "v148" || value === "v144" || value === "v140" || value === "v136" || value === "v132" || value === "v128" || value === "v124" || value === "v120" || value === "v116" || value === "v112" || value === "v108" || value === "v104" || value === "v100" || value === "v0_5" || value === "full") {
+  if (value === "3_5" || value === "2_5" || value === 200 || value === "1_5" || value === 196 || value === 192 || value === 188 || value === 184 || value === 180 || value === 176 || value === 172 || value === 168 || value === 164 || value === 160 || value === 156 || value === 152 || value === 148 || value === 144 || value === 140 || value === 136 || value === 132 || value === 128 || value === 124 || value === 120 || value === 116 || value === 112 || value === 108 || value === 104 || value === 100 || value === "0_5" || value === "px" || value === 96 || value === 92 || value === 88 || value === 84 || value === 80 || value === 76 || value === 72 || value === 68 || value === 64 || value === 60 || value === 56 || value === 52 || value === 48 || value === 44 || value === 40 || value === 36 || value === 32 || value === 28 || value === 24 || value === 20 || value === 18 || value === 16 || value === 14 || value === 12 || value === 11 || value === 10 || value === 9 || value === 8 || value === 7 || value === 6 || value === 5 || value === 4 || value === 3 || value === 2 || value === 1 || value === 0 || value === "full") {
     return [
             CssJs.top(Theme__Spacing$RescriptMonorepo.toValue(value)),
             CssJs.right(Theme__Spacing$RescriptMonorepo.toValue(value)),
@@ -279,7 +279,7 @@ function inset(value) {
 }
 
 function insetX(value) {
-  if (value === "v96" || value === "v92" || value === "v88" || value === "v84" || value === "v80" || value === "v76" || value === "v72" || value === "v68" || value === "v64" || value === "v60" || value === "v56" || value === "v52" || value === "v48" || value === "v44" || value === "v40" || value === "v36" || value === "v32" || value === "v28" || value === "v24" || value === "v20" || value === "v18" || value === "v16" || value === "v14" || value === "v12" || value === "v11" || value === "v10" || value === "v9" || value === "v8" || value === "v7" || value === "v6" || value === "v5" || value === "v4" || value === "v3" || value === "v2" || value === "v1" || value === "v0" || value === "px" || value === "v3_5" || value === "v2_5" || value === "v200" || value === "v1_5" || value === "v196" || value === "v192" || value === "v188" || value === "v184" || value === "v180" || value === "v176" || value === "v172" || value === "v168" || value === "v164" || value === "v160" || value === "v156" || value === "v152" || value === "v148" || value === "v144" || value === "v140" || value === "v136" || value === "v132" || value === "v128" || value === "v124" || value === "v120" || value === "v116" || value === "v112" || value === "v108" || value === "v104" || value === "v100" || value === "v0_5" || value === "full") {
+  if (value === "3_5" || value === "2_5" || value === 200 || value === "1_5" || value === 196 || value === 192 || value === 188 || value === 184 || value === 180 || value === 176 || value === 172 || value === 168 || value === 164 || value === 160 || value === 156 || value === 152 || value === 148 || value === 144 || value === 140 || value === 136 || value === 132 || value === 128 || value === 124 || value === 120 || value === 116 || value === 112 || value === 108 || value === 104 || value === 100 || value === "0_5" || value === "px" || value === 96 || value === 92 || value === 88 || value === 84 || value === 80 || value === 76 || value === 72 || value === 68 || value === 64 || value === 60 || value === 56 || value === 52 || value === 48 || value === 44 || value === 40 || value === 36 || value === 32 || value === 28 || value === 24 || value === 20 || value === 18 || value === 16 || value === 14 || value === 12 || value === 11 || value === 10 || value === 9 || value === 8 || value === 7 || value === 6 || value === 5 || value === 4 || value === 3 || value === 2 || value === 1 || value === 0 || value === "full") {
     return [
             CssJs.right(Theme__Spacing$RescriptMonorepo.toValue(value)),
             CssJs.left(Theme__Spacing$RescriptMonorepo.toValue(value))
@@ -298,7 +298,7 @@ function insetX(value) {
 }
 
 function insetY(value) {
-  if (value === "v96" || value === "v92" || value === "v88" || value === "v84" || value === "v80" || value === "v76" || value === "v72" || value === "v68" || value === "v64" || value === "v60" || value === "v56" || value === "v52" || value === "v48" || value === "v44" || value === "v40" || value === "v36" || value === "v32" || value === "v28" || value === "v24" || value === "v20" || value === "v18" || value === "v16" || value === "v14" || value === "v12" || value === "v11" || value === "v10" || value === "v9" || value === "v8" || value === "v7" || value === "v6" || value === "v5" || value === "v4" || value === "v3" || value === "v2" || value === "v1" || value === "v0" || value === "px" || value === "v3_5" || value === "v2_5" || value === "v200" || value === "v1_5" || value === "v196" || value === "v192" || value === "v188" || value === "v184" || value === "v180" || value === "v176" || value === "v172" || value === "v168" || value === "v164" || value === "v160" || value === "v156" || value === "v152" || value === "v148" || value === "v144" || value === "v140" || value === "v136" || value === "v132" || value === "v128" || value === "v124" || value === "v120" || value === "v116" || value === "v112" || value === "v108" || value === "v104" || value === "v100" || value === "v0_5" || value === "full") {
+  if (value === "3_5" || value === "2_5" || value === 200 || value === "1_5" || value === 196 || value === 192 || value === 188 || value === 184 || value === 180 || value === 176 || value === 172 || value === 168 || value === 164 || value === 160 || value === 156 || value === 152 || value === 148 || value === 144 || value === 140 || value === 136 || value === 132 || value === 128 || value === 124 || value === 120 || value === 116 || value === 112 || value === 108 || value === 104 || value === 100 || value === "0_5" || value === "px" || value === 96 || value === 92 || value === 88 || value === 84 || value === 80 || value === 76 || value === 72 || value === 68 || value === 64 || value === 60 || value === 56 || value === 52 || value === 48 || value === 44 || value === 40 || value === 36 || value === 32 || value === 28 || value === 24 || value === 20 || value === 18 || value === 16 || value === 14 || value === 12 || value === 11 || value === 10 || value === 9 || value === 8 || value === 7 || value === 6 || value === 5 || value === 4 || value === 3 || value === 2 || value === 1 || value === 0 || value === "full") {
     return [
             CssJs.top(Theme__Spacing$RescriptMonorepo.toValue(value)),
             CssJs.bottom(Theme__Spacing$RescriptMonorepo.toValue(value))
@@ -317,7 +317,7 @@ function insetY(value) {
 }
 
 function top(value) {
-  if (value === "v96" || value === "v92" || value === "v88" || value === "v84" || value === "v80" || value === "v76" || value === "v72" || value === "v68" || value === "v64" || value === "v60" || value === "v56" || value === "v52" || value === "v48" || value === "v44" || value === "v40" || value === "v36" || value === "v32" || value === "v28" || value === "v24" || value === "v20" || value === "v18" || value === "v16" || value === "v14" || value === "v12" || value === "v11" || value === "v10" || value === "v9" || value === "v8" || value === "v7" || value === "v6" || value === "v5" || value === "v4" || value === "v3" || value === "v2" || value === "v1" || value === "v0" || value === "px" || value === "v3_5" || value === "v2_5" || value === "v200" || value === "v1_5" || value === "v196" || value === "v192" || value === "v188" || value === "v184" || value === "v180" || value === "v176" || value === "v172" || value === "v168" || value === "v164" || value === "v160" || value === "v156" || value === "v152" || value === "v148" || value === "v144" || value === "v140" || value === "v136" || value === "v132" || value === "v128" || value === "v124" || value === "v120" || value === "v116" || value === "v112" || value === "v108" || value === "v104" || value === "v100" || value === "v0_5" || value === "full") {
+  if (value === "3_5" || value === "2_5" || value === 200 || value === "1_5" || value === 196 || value === 192 || value === 188 || value === 184 || value === 180 || value === 176 || value === 172 || value === 168 || value === 164 || value === 160 || value === 156 || value === 152 || value === 148 || value === 144 || value === 140 || value === 136 || value === 132 || value === 128 || value === 124 || value === 120 || value === 116 || value === 112 || value === 108 || value === 104 || value === 100 || value === "0_5" || value === "px" || value === 96 || value === 92 || value === 88 || value === 84 || value === 80 || value === 76 || value === 72 || value === 68 || value === 64 || value === 60 || value === 56 || value === 52 || value === 48 || value === 44 || value === 40 || value === 36 || value === 32 || value === 28 || value === 24 || value === 20 || value === 18 || value === 16 || value === 14 || value === 12 || value === 11 || value === 10 || value === 9 || value === 8 || value === 7 || value === 6 || value === 5 || value === 4 || value === 3 || value === 2 || value === 1 || value === 0 || value === "full") {
     return [CssJs.top(Theme__Spacing$RescriptMonorepo.toValue(value))];
   } else if (value === "v3By12" || value === "v9By12" || value === "v11By12" || value === "v2By12" || value === "v8By12" || value === "v5By6" || value === "v4By6" || value === "v4By5" || value === "v3By6" || value === "v3By5" || value === "v3By4" || value === "v2By6" || value === "v2By5" || value === "v2By4" || value === "v2By3" || value === "v1By6" || value === "v1By5" || value === "v1By4" || value === "v1By3" || value === "v1By2" || value === "v10By12" || value === "v1By12" || value === "v7By12" || value === "v6By12" || value === "v5By12" || value === "v4By12") {
     return [CssJs.top(Theme__Proportions$RescriptMonorepo.toValue(value))];
@@ -327,7 +327,7 @@ function top(value) {
 }
 
 function bottom(value) {
-  if (value === "v96" || value === "v92" || value === "v88" || value === "v84" || value === "v80" || value === "v76" || value === "v72" || value === "v68" || value === "v64" || value === "v60" || value === "v56" || value === "v52" || value === "v48" || value === "v44" || value === "v40" || value === "v36" || value === "v32" || value === "v28" || value === "v24" || value === "v20" || value === "v18" || value === "v16" || value === "v14" || value === "v12" || value === "v11" || value === "v10" || value === "v9" || value === "v8" || value === "v7" || value === "v6" || value === "v5" || value === "v4" || value === "v3" || value === "v2" || value === "v1" || value === "v0" || value === "px" || value === "v3_5" || value === "v2_5" || value === "v200" || value === "v1_5" || value === "v196" || value === "v192" || value === "v188" || value === "v184" || value === "v180" || value === "v176" || value === "v172" || value === "v168" || value === "v164" || value === "v160" || value === "v156" || value === "v152" || value === "v148" || value === "v144" || value === "v140" || value === "v136" || value === "v132" || value === "v128" || value === "v124" || value === "v120" || value === "v116" || value === "v112" || value === "v108" || value === "v104" || value === "v100" || value === "v0_5" || value === "full") {
+  if (value === "3_5" || value === "2_5" || value === 200 || value === "1_5" || value === 196 || value === 192 || value === 188 || value === 184 || value === 180 || value === 176 || value === 172 || value === 168 || value === 164 || value === 160 || value === 156 || value === 152 || value === 148 || value === 144 || value === 140 || value === 136 || value === 132 || value === 128 || value === 124 || value === 120 || value === 116 || value === 112 || value === 108 || value === 104 || value === 100 || value === "0_5" || value === "px" || value === 96 || value === 92 || value === 88 || value === 84 || value === 80 || value === 76 || value === 72 || value === 68 || value === 64 || value === 60 || value === 56 || value === 52 || value === 48 || value === 44 || value === 40 || value === 36 || value === 32 || value === 28 || value === 24 || value === 20 || value === 18 || value === 16 || value === 14 || value === 12 || value === 11 || value === 10 || value === 9 || value === 8 || value === 7 || value === 6 || value === 5 || value === 4 || value === 3 || value === 2 || value === 1 || value === 0 || value === "full") {
     return [CssJs.bottom(Theme__Spacing$RescriptMonorepo.toValue(value))];
   } else if (value === "v3By12" || value === "v9By12" || value === "v11By12" || value === "v2By12" || value === "v8By12" || value === "v5By6" || value === "v4By6" || value === "v4By5" || value === "v3By6" || value === "v3By5" || value === "v3By4" || value === "v2By6" || value === "v2By5" || value === "v2By4" || value === "v2By3" || value === "v1By6" || value === "v1By5" || value === "v1By4" || value === "v1By3" || value === "v1By2" || value === "v10By12" || value === "v1By12" || value === "v7By12" || value === "v6By12" || value === "v5By12" || value === "v4By12") {
     return [CssJs.bottom(Theme__Proportions$RescriptMonorepo.toValue(value))];
@@ -337,7 +337,7 @@ function bottom(value) {
 }
 
 function left(value) {
-  if (value === "v96" || value === "v92" || value === "v88" || value === "v84" || value === "v80" || value === "v76" || value === "v72" || value === "v68" || value === "v64" || value === "v60" || value === "v56" || value === "v52" || value === "v48" || value === "v44" || value === "v40" || value === "v36" || value === "v32" || value === "v28" || value === "v24" || value === "v20" || value === "v18" || value === "v16" || value === "v14" || value === "v12" || value === "v11" || value === "v10" || value === "v9" || value === "v8" || value === "v7" || value === "v6" || value === "v5" || value === "v4" || value === "v3" || value === "v2" || value === "v1" || value === "v0" || value === "px" || value === "v3_5" || value === "v2_5" || value === "v200" || value === "v1_5" || value === "v196" || value === "v192" || value === "v188" || value === "v184" || value === "v180" || value === "v176" || value === "v172" || value === "v168" || value === "v164" || value === "v160" || value === "v156" || value === "v152" || value === "v148" || value === "v144" || value === "v140" || value === "v136" || value === "v132" || value === "v128" || value === "v124" || value === "v120" || value === "v116" || value === "v112" || value === "v108" || value === "v104" || value === "v100" || value === "v0_5" || value === "full") {
+  if (value === "3_5" || value === "2_5" || value === 200 || value === "1_5" || value === 196 || value === 192 || value === 188 || value === 184 || value === 180 || value === 176 || value === 172 || value === 168 || value === 164 || value === 160 || value === 156 || value === 152 || value === 148 || value === 144 || value === 140 || value === 136 || value === 132 || value === 128 || value === 124 || value === 120 || value === 116 || value === 112 || value === 108 || value === 104 || value === 100 || value === "0_5" || value === "px" || value === 96 || value === 92 || value === 88 || value === 84 || value === 80 || value === 76 || value === 72 || value === 68 || value === 64 || value === 60 || value === 56 || value === 52 || value === 48 || value === 44 || value === 40 || value === 36 || value === 32 || value === 28 || value === 24 || value === 20 || value === 18 || value === 16 || value === 14 || value === 12 || value === 11 || value === 10 || value === 9 || value === 8 || value === 7 || value === 6 || value === 5 || value === 4 || value === 3 || value === 2 || value === 1 || value === 0 || value === "full") {
     return [CssJs.left(Theme__Spacing$RescriptMonorepo.toValue(value))];
   } else if (value === "v3By12" || value === "v9By12" || value === "v11By12" || value === "v2By12" || value === "v8By12" || value === "v5By6" || value === "v4By6" || value === "v4By5" || value === "v3By6" || value === "v3By5" || value === "v3By4" || value === "v2By6" || value === "v2By5" || value === "v2By4" || value === "v2By3" || value === "v1By6" || value === "v1By5" || value === "v1By4" || value === "v1By3" || value === "v1By2" || value === "v10By12" || value === "v1By12" || value === "v7By12" || value === "v6By12" || value === "v5By12" || value === "v4By12") {
     return [CssJs.left(Theme__Proportions$RescriptMonorepo.toValue(value))];
@@ -347,7 +347,7 @@ function left(value) {
 }
 
 function right(value) {
-  if (value === "v96" || value === "v92" || value === "v88" || value === "v84" || value === "v80" || value === "v76" || value === "v72" || value === "v68" || value === "v64" || value === "v60" || value === "v56" || value === "v52" || value === "v48" || value === "v44" || value === "v40" || value === "v36" || value === "v32" || value === "v28" || value === "v24" || value === "v20" || value === "v18" || value === "v16" || value === "v14" || value === "v12" || value === "v11" || value === "v10" || value === "v9" || value === "v8" || value === "v7" || value === "v6" || value === "v5" || value === "v4" || value === "v3" || value === "v2" || value === "v1" || value === "v0" || value === "px" || value === "v3_5" || value === "v2_5" || value === "v200" || value === "v1_5" || value === "v196" || value === "v192" || value === "v188" || value === "v184" || value === "v180" || value === "v176" || value === "v172" || value === "v168" || value === "v164" || value === "v160" || value === "v156" || value === "v152" || value === "v148" || value === "v144" || value === "v140" || value === "v136" || value === "v132" || value === "v128" || value === "v124" || value === "v120" || value === "v116" || value === "v112" || value === "v108" || value === "v104" || value === "v100" || value === "v0_5" || value === "full") {
+  if (value === "3_5" || value === "2_5" || value === 200 || value === "1_5" || value === 196 || value === 192 || value === 188 || value === 184 || value === 180 || value === 176 || value === 172 || value === 168 || value === 164 || value === 160 || value === 156 || value === 152 || value === 148 || value === 144 || value === 140 || value === 136 || value === 132 || value === 128 || value === 124 || value === 120 || value === 116 || value === 112 || value === 108 || value === 104 || value === 100 || value === "0_5" || value === "px" || value === 96 || value === 92 || value === 88 || value === 84 || value === 80 || value === 76 || value === 72 || value === 68 || value === 64 || value === 60 || value === 56 || value === 52 || value === 48 || value === 44 || value === 40 || value === 36 || value === 32 || value === 28 || value === 24 || value === 20 || value === 18 || value === 16 || value === 14 || value === 12 || value === 11 || value === 10 || value === 9 || value === 8 || value === 7 || value === 6 || value === 5 || value === 4 || value === 3 || value === 2 || value === 1 || value === 0 || value === "full") {
     return [CssJs.right(Theme__Spacing$RescriptMonorepo.toValue(value))];
   } else if (value === "v3By12" || value === "v9By12" || value === "v11By12" || value === "v2By12" || value === "v8By12" || value === "v5By6" || value === "v4By6" || value === "v4By5" || value === "v3By6" || value === "v3By5" || value === "v3By4" || value === "v2By6" || value === "v2By5" || value === "v2By4" || value === "v2By3" || value === "v1By6" || value === "v1By5" || value === "v1By4" || value === "v1By3" || value === "v1By2" || value === "v10By12" || value === "v1By12" || value === "v7By12" || value === "v6By12" || value === "v5By12" || value === "v4By12") {
     return [CssJs.right(Theme__Proportions$RescriptMonorepo.toValue(value))];
@@ -439,7 +439,7 @@ var visible = [CssJs.visibility("visible")];
 var invisible = [CssJs.visibility("hidden")];
 
 function z(index) {
-  if (index === "z90" || index === "z80" || index === "z70" || index === "z60" || index === "z50" || index === "z40" || index === "z30" || index === "z20" || index === "z10" || index === "z0" || index === "z100") {
+  if (index === 100 || index === 90 || index === 80 || index === 70 || index === 60 || index === 50 || index === 40 || index === 30 || index === 20 || index === 10 || index === 0) {
     return [CssJs.zIndex(Theme__ZIndex$RescriptMonorepo.toValue(index))];
   } else {
     return [CssJs.unsafe("zIndex", "auto")];
@@ -484,7 +484,7 @@ function order(order$1) {
 }
 
 function gridCols(columns) {
-  if (columns === "v12" || columns === "v11" || columns === "v10" || columns === "v9" || columns === "v8" || columns === "v7" || columns === "v6" || columns === "v5" || columns === "v4" || columns === "v3" || columns === "v2" || columns === "v1") {
+  if (columns === 12 || columns === 11 || columns === 10 || columns === 9 || columns === 8 || columns === 7 || columns === 6 || columns === 5 || columns === 4 || columns === 3 || columns === 2 || columns === 1) {
     return [CssJs.gridTemplateColumns(Theme__GridCols$RescriptMonorepo.toValue(columns))];
   } else {
     return [CssJs.unsafe("gridTemplateColumns", "none")];
@@ -496,7 +496,7 @@ function col(column) {
 }
 
 function colStart(cols) {
-  if (cols === "v13" || cols === "v12" || cols === "v11" || cols === "v10" || cols === "v9" || cols === "v8" || cols === "v7" || cols === "v6" || cols === "v5" || cols === "v4" || cols === "v3" || cols === "v2" || cols === "v1") {
+  if (cols === 13 || cols === 12 || cols === 11 || cols === 10 || cols === 9 || cols === 8 || cols === 7 || cols === 6 || cols === 5 || cols === 4 || cols === 3 || cols === 2 || cols === 1) {
     return [CssJs.gridColumnStart(Theme__ColStart$RescriptMonorepo.toValue(cols))];
   } else {
     return [CssJs.unsafe("gridColumnStart", "auto")];
@@ -504,7 +504,7 @@ function colStart(cols) {
 }
 
 function colEnd(cols) {
-  if (cols === "v13" || cols === "v12" || cols === "v11" || cols === "v10" || cols === "v9" || cols === "v8" || cols === "v7" || cols === "v6" || cols === "v5" || cols === "v4" || cols === "v3" || cols === "v2" || cols === "v1") {
+  if (cols === 13 || cols === 12 || cols === 11 || cols === 10 || cols === 9 || cols === 8 || cols === 7 || cols === 6 || cols === 5 || cols === 4 || cols === 3 || cols === 2 || cols === 1) {
     return [CssJs.gridColumnEnd(Theme__ColStart$RescriptMonorepo.toValue(cols))];
   } else {
     return [CssJs.unsafe("gridColumnEnd", "auto")];
@@ -512,7 +512,7 @@ function colEnd(cols) {
 }
 
 function gridRows(rows) {
-  if (rows === "v6" || rows === "v5" || rows === "v4" || rows === "v3" || rows === "v2" || rows === "v1") {
+  if (rows === 6 || rows === 5 || rows === 4 || rows === 3 || rows === 2 || rows === 1) {
     return [CssJs.gridTemplateRows(Theme__GridRows$RescriptMonorepo.toValue(rows))];
   } else {
     return [CssJs.unsafe("gridTemplateRows", "none")];
@@ -522,7 +522,7 @@ function gridRows(rows) {
 function row(count) {
   if (count === "full") {
     return [CssJs.gridRow(1, -1)];
-  } else if (count === "v6" || count === "v5" || count === "v4" || count === "v3" || count === "v2" || count === "v1") {
+  } else if (count === 6 || count === 5 || count === 4 || count === 3 || count === 2 || count === 1) {
     return [CssJs.unsafe("gridRow", Theme__RowSpan$RescriptMonorepo.toValue(count))];
   } else {
     return [CssJs.unsafe("gridRow", "auto")];
@@ -530,7 +530,7 @@ function row(count) {
 }
 
 function rowStart(rows) {
-  if (rows === "v7" || rows === "v6" || rows === "v5" || rows === "v4" || rows === "v3" || rows === "v2" || rows === "v1") {
+  if (rows === 7 || rows === 6 || rows === 5 || rows === 4 || rows === 3 || rows === 2 || rows === 1) {
     return [CssJs.gridRowStart(Theme__Row$RescriptMonorepo.toValue(rows))];
   } else {
     return [CssJs.unsafe("gridRowStart", "auto")];
@@ -538,7 +538,7 @@ function rowStart(rows) {
 }
 
 function rowEnd(rows) {
-  if (rows === "v7" || rows === "v6" || rows === "v5" || rows === "v4" || rows === "v3" || rows === "v2" || rows === "v1") {
+  if (rows === 7 || rows === 6 || rows === 5 || rows === 4 || rows === 3 || rows === 2 || rows === 1) {
     return [CssJs.gridRowEnd(Theme__Row$RescriptMonorepo.toValue(rows))];
   } else {
     return [CssJs.unsafe("gridRowEnd", "auto")];
@@ -743,7 +743,7 @@ function my(size) {
 }
 
 function mx(size) {
-  if (size === "v96" || size === "v92" || size === "v88" || size === "v84" || size === "v80" || size === "v76" || size === "v72" || size === "v68" || size === "v64" || size === "v60" || size === "v56" || size === "v52" || size === "v48" || size === "v44" || size === "v40" || size === "v36" || size === "v32" || size === "v28" || size === "v24" || size === "v20" || size === "v18" || size === "v16" || size === "v14" || size === "v12" || size === "v11" || size === "v10" || size === "v9" || size === "v8" || size === "v7" || size === "v6" || size === "v5" || size === "v4" || size === "v3" || size === "v2" || size === "v1" || size === "v0" || size === "px" || size === "v3_5" || size === "v2_5" || size === "v200" || size === "v1_5" || size === "v196" || size === "v192" || size === "v188" || size === "v184" || size === "v180" || size === "v176" || size === "v172" || size === "v168" || size === "v164" || size === "v160" || size === "v156" || size === "v152" || size === "v148" || size === "v144" || size === "v140" || size === "v136" || size === "v132" || size === "v128" || size === "v124" || size === "v120" || size === "v116" || size === "v112" || size === "v108" || size === "v104" || size === "v100" || size === "v0_5" || size === "full") {
+  if (size === "3_5" || size === "2_5" || size === 200 || size === "1_5" || size === 196 || size === 192 || size === 188 || size === 184 || size === 180 || size === 176 || size === 172 || size === 168 || size === 164 || size === 160 || size === 156 || size === 152 || size === 148 || size === 144 || size === 140 || size === 136 || size === 132 || size === 128 || size === 124 || size === 120 || size === 116 || size === 112 || size === 108 || size === 104 || size === 100 || size === "0_5" || size === "px" || size === 96 || size === 92 || size === 88 || size === 84 || size === 80 || size === 76 || size === 72 || size === 68 || size === 64 || size === 60 || size === 56 || size === 52 || size === 48 || size === 44 || size === 40 || size === 36 || size === 32 || size === 28 || size === 24 || size === 20 || size === 18 || size === 16 || size === 14 || size === 12 || size === 11 || size === 10 || size === 9 || size === 8 || size === 7 || size === 6 || size === 5 || size === 4 || size === 3 || size === 2 || size === 1 || size === 0 || size === "full") {
     return [
             CssJs.marginLeft(Theme__Spacing$RescriptMonorepo.toValue(size)),
             CssJs.marginRight(Theme__Spacing$RescriptMonorepo.toValue(size))
@@ -809,33 +809,33 @@ function nml(size) {
 function spaceY(size) {
   return [CssJs.selector(Selectors$RescriptMonorepo.ignoreFirstChild, [
                 CssJs.marginTop(Theme__Spacing$RescriptMonorepo.toValue(size)),
-                CssJs.marginBottom(Theme__Spacing$RescriptMonorepo.toValue("v0"))
+                CssJs.marginBottom(Theme__Spacing$RescriptMonorepo.toValue(0))
               ])];
 }
 
 function nspaceY(size) {
   return [CssJs.selector(Selectors$RescriptMonorepo.ignoreFirstChild, [
                 CssJs.marginTop(Theme__SpacingNegative$RescriptMonorepo.toValue(size)),
-                CssJs.marginBottom(Theme__Spacing$RescriptMonorepo.toValue("v0"))
+                CssJs.marginBottom(Theme__Spacing$RescriptMonorepo.toValue(0))
               ])];
 }
 
 function spaceX(size) {
   return [CssJs.selector(Selectors$RescriptMonorepo.ignoreFirstChild, [
                 CssJs.marginLeft(Theme__Spacing$RescriptMonorepo.toValue(size)),
-                CssJs.marginRight(Theme__Spacing$RescriptMonorepo.toValue("v0"))
+                CssJs.marginRight(Theme__Spacing$RescriptMonorepo.toValue(0))
               ])];
 }
 
 function nspaceX(size) {
   return [CssJs.selector(Selectors$RescriptMonorepo.ignoreFirstChild, [
                 CssJs.marginLeft(Theme__SpacingNegative$RescriptMonorepo.toValue(size)),
-                CssJs.marginRight(Theme__Spacing$RescriptMonorepo.toValue("v0"))
+                CssJs.marginRight(Theme__Spacing$RescriptMonorepo.toValue(0))
               ])];
 }
 
 function w(width) {
-  if (width === "v96" || width === "v92" || width === "v88" || width === "v84" || width === "v80" || width === "v76" || width === "v72" || width === "v68" || width === "v64" || width === "v60" || width === "v56" || width === "v52" || width === "v48" || width === "v44" || width === "v40" || width === "v36" || width === "v32" || width === "v28" || width === "v24" || width === "v20" || width === "v18" || width === "v16" || width === "v14" || width === "v12" || width === "v11" || width === "v10" || width === "v9" || width === "v8" || width === "v7" || width === "v6" || width === "v5" || width === "v4" || width === "v3" || width === "v2" || width === "v1" || width === "v0" || width === "px" || width === "v3_5" || width === "v2_5" || width === "v200" || width === "v1_5" || width === "v196" || width === "v192" || width === "v188" || width === "v184" || width === "v180" || width === "v176" || width === "v172" || width === "v168" || width === "v164" || width === "v160" || width === "v156" || width === "v152" || width === "v148" || width === "v144" || width === "v140" || width === "v136" || width === "v132" || width === "v128" || width === "v124" || width === "v120" || width === "v116" || width === "v112" || width === "v108" || width === "v104" || width === "v100" || width === "v0_5" || width === "full") {
+  if (width === "3_5" || width === "2_5" || width === 200 || width === "1_5" || width === 196 || width === 192 || width === 188 || width === 184 || width === 180 || width === 176 || width === 172 || width === 168 || width === 164 || width === 160 || width === 156 || width === 152 || width === 148 || width === 144 || width === 140 || width === 136 || width === 132 || width === 128 || width === 124 || width === 120 || width === 116 || width === 112 || width === 108 || width === 104 || width === 100 || width === "0_5" || width === "px" || width === 96 || width === 92 || width === 88 || width === 84 || width === 80 || width === 76 || width === 72 || width === 68 || width === 64 || width === 60 || width === 56 || width === 52 || width === 48 || width === 44 || width === 40 || width === 36 || width === 32 || width === 28 || width === 24 || width === 20 || width === 18 || width === 16 || width === 14 || width === 12 || width === 11 || width === 10 || width === 9 || width === 8 || width === 7 || width === 6 || width === 5 || width === 4 || width === 3 || width === 2 || width === 1 || width === 0 || width === "full") {
     return [CssJs.width(Theme__Spacing$RescriptMonorepo.toValue(width))];
   } else if (width === "screen") {
     return [CssJs.width({
@@ -880,7 +880,7 @@ function maxW(max) {
 }
 
 function h(height) {
-  if (height === "v96" || height === "v92" || height === "v88" || height === "v84" || height === "v80" || height === "v76" || height === "v72" || height === "v68" || height === "v64" || height === "v60" || height === "v56" || height === "v52" || height === "v48" || height === "v44" || height === "v40" || height === "v36" || height === "v32" || height === "v28" || height === "v24" || height === "v20" || height === "v18" || height === "v16" || height === "v14" || height === "v12" || height === "v11" || height === "v10" || height === "v9" || height === "v8" || height === "v7" || height === "v6" || height === "v5" || height === "v4" || height === "v3" || height === "v2" || height === "v1" || height === "v0" || height === "px" || height === "v3_5" || height === "v2_5" || height === "v200" || height === "v1_5" || height === "v196" || height === "v192" || height === "v188" || height === "v184" || height === "v180" || height === "v176" || height === "v172" || height === "v168" || height === "v164" || height === "v160" || height === "v156" || height === "v152" || height === "v148" || height === "v144" || height === "v140" || height === "v136" || height === "v132" || height === "v128" || height === "v124" || height === "v120" || height === "v116" || height === "v112" || height === "v108" || height === "v104" || height === "v100" || height === "v0_5" || height === "full") {
+  if (height === "3_5" || height === "2_5" || height === 200 || height === "1_5" || height === 196 || height === 192 || height === 188 || height === 184 || height === 180 || height === 176 || height === 172 || height === 168 || height === 164 || height === 160 || height === 156 || height === 152 || height === 148 || height === 144 || height === 140 || height === 136 || height === 132 || height === 128 || height === 124 || height === 120 || height === 116 || height === 112 || height === 108 || height === 104 || height === 100 || height === "0_5" || height === "px" || height === 96 || height === 92 || height === 88 || height === 84 || height === 80 || height === 76 || height === 72 || height === 68 || height === 64 || height === 60 || height === 56 || height === 52 || height === 48 || height === 44 || height === 40 || height === 36 || height === 32 || height === 28 || height === 24 || height === 20 || height === 18 || height === 16 || height === 14 || height === 12 || height === 11 || height === 10 || height === 9 || height === 8 || height === 7 || height === 6 || height === 5 || height === 4 || height === 3 || height === 2 || height === 1 || height === 0 || height === "full") {
     return [CssJs.height(Theme__Spacing$RescriptMonorepo.toValue(height))];
   } else if (height === "screen") {
     return [CssJs.height({
@@ -1036,27 +1036,27 @@ function text(size) {
   if (size === "xl" || size === "lg") {
     return [
             CssJs.fontSize(Theme__FontSize$RescriptMonorepo.toValue(size)),
-            CssJs.lineHeight(Theme__LineHeight$RescriptMonorepo.toValue("v7"))
+            CssJs.lineHeight(Theme__LineHeight$RescriptMonorepo.toValue(7))
           ];
   } else if (size === "xs" || size === "sm") {
     return [
             CssJs.fontSize(Theme__FontSize$RescriptMonorepo.toValue(size)),
-            CssJs.lineHeight(Theme__LineHeight$RescriptMonorepo.toValue("v5"))
+            CssJs.lineHeight(Theme__LineHeight$RescriptMonorepo.toValue(5))
           ];
   } else if (size === "xl2") {
     return [
             CssJs.fontSize(Theme__FontSize$RescriptMonorepo.toValue(size)),
-            CssJs.lineHeight(Theme__LineHeight$RescriptMonorepo.toValue("v8"))
+            CssJs.lineHeight(Theme__LineHeight$RescriptMonorepo.toValue(8))
           ];
   } else if (size === "xl3") {
     return [
             CssJs.fontSize(Theme__FontSize$RescriptMonorepo.toValue(size)),
-            CssJs.lineHeight(Theme__LineHeight$RescriptMonorepo.toValue("v9"))
+            CssJs.lineHeight(Theme__LineHeight$RescriptMonorepo.toValue(9))
           ];
   } else if (size === "xl4") {
     return [
             CssJs.fontSize(Theme__FontSize$RescriptMonorepo.toValue(size)),
-            CssJs.lineHeight(Theme__LineHeight$RescriptMonorepo.toValue("v10"))
+            CssJs.lineHeight(Theme__LineHeight$RescriptMonorepo.toValue(10))
           ];
   } else if (size === "xl9" || size === "xl8" || size === "xl7" || size === "xl6" || size === "xl5") {
     return [
@@ -1066,7 +1066,7 @@ function text(size) {
   } else {
     return [
             CssJs.fontSize(Theme__FontSize$RescriptMonorepo.toValue(size)),
-            CssJs.lineHeight(Theme__LineHeight$RescriptMonorepo.toValue("v6"))
+            CssJs.lineHeight(Theme__LineHeight$RescriptMonorepo.toValue(6))
           ];
   }
 }

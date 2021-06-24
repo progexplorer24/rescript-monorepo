@@ -6,15 +6,15 @@ function spanStr(value) {
 }
 
 function toValue(span) {
-  if (span === "v2") {
+  if (span === 2) {
     return spanStr(2);
-  } else if (span === "v3") {
+  } else if (span === 3) {
     return spanStr(3);
-  } else if (span === "v4") {
+  } else if (span === 4) {
     return spanStr(4);
-  } else if (span === "v5") {
+  } else if (span === 5) {
     return spanStr(5);
-  } else if (span === "v6") {
+  } else if (span === 6) {
     return spanStr(6);
   } else {
     return spanStr(1);

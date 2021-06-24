@@ -2,11 +2,11 @@ module Styles = {
   open Tailwind
   let elementStyles = twStyle([
     text(#xl3),
-    fontWeight(#v800),
+    fontWeight(#800),
     tracking(#tight),
     textColor(#gray900),
-    sm([text(#xl4), leading(#v10)]),
-    md([text(#xl5), leading(#v14)]),
+    sm([text(#xl4), leading(#10)]),
+    md([text(#xl5), leading(#14)]),
   ])
 }
 
