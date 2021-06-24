@@ -1,4 +1,13 @@
 // DANGER: Remember to use all exported code on client side - because otherwise you will be calling server side on client side
+type frontmatter = {
+  title: string,
+  date: string,
+  tags: array<string>,
+  lastmod: string,
+  draft: bool,
+  summary: string,
+  images: array<string>,
+}
 type frontmatterAndSlug = {
   title: string,
   date: string,
@@ -115,12 +124,11 @@ let sortDesc = (a, b) => {
   }
 }
 
-let getBlogPostsFromLatest = (~cwd=root, ~path=["data", "blog"], ()) => {
-  let buildPath = join(Js.Array2.concat([cwd], path))
+// let blogPath = join([root, "data", "blog"])
 
-  let files = readdirRecursive(buildPath)
-
-  let frontmatterArray: array<frontmatterAndSlug> = Js.Array2.reduce(
+let getAllFrontMatter = blogPath => {
+  let files = readdirRecursive(blogPath)
+  Js.Array2.reduce(
     files,
     (acc, file) => {
       // NOTE: Replace for Windows paths
@@ -168,6 +176,11 @@ let getBlogPostsFromLatest = (~cwd=root, ~path=["data", "blog"], ()) => {
     },
     [],
   )
+}
+
+let getBlogPostsFromLatest = (~cwd=root, ~path=["data", "blog"], ()) => {
+  let buildPath = join(Js.Array2.concat([cwd], path))
+  let frontmatterArray = getAllFrontMatter(buildPath)
   Js.Array2.sortInPlaceWith(frontmatterArray, (a, b) => sortDesc(a.date, b.date))
 }
 

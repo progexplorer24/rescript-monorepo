@@ -110,6 +110,43 @@ function sortDesc(a, b) {
   }
 }
 
+function getAllFrontMatter(blogPath) {
+  var files = readdirRecursive(blogPath);
+  return files.reduce((function (acc, file) {
+                var fileName = file.replace(/\\/g, "/");
+                var source = readFileSync(undefined, undefined, fileName);
+                var slug = removeMdxExtension(removeRoot(undefined, fileName));
+                var match = GrayMatter(source);
+                var data = match.data;
+                var string = data.lastmod;
+                var lastmod = (string == null) ? "" : string;
+                var bool = data.draft;
+                var isDraft = (bool == null) ? true : bool;
+                var string$1 = data.summary;
+                var summary = (string$1 == null) ? "" : string$1;
+                var array = data.images;
+                var images = (array == null) ? [] : array;
+                var withSlug_title = data.title;
+                var withSlug_date = data.date;
+                var withSlug_tags = data.tags;
+                var bool$1 = data.draft;
+                if (!(bool$1 == null) && !bool$1) {
+                  return acc.concat([{
+                                title: withSlug_title,
+                                date: withSlug_date,
+                                tags: withSlug_tags,
+                                lastmod: lastmod,
+                                draft: bool$1,
+                                summary: summary,
+                                images: images,
+                                slug: slug
+                              }]);
+                } else {
+                  return acc;
+                }
+              }), []);
+}
+
 function getBlogPostsFromLatest(cwdOpt, pathOpt, param) {
   var cwd = cwdOpt !== undefined ? cwdOpt : root;
   var path = pathOpt !== undefined ? pathOpt : [
@@ -117,40 +154,7 @@ function getBlogPostsFromLatest(cwdOpt, pathOpt, param) {
       "blog"
     ];
   var buildPath = Caml_splice_call.spliceApply(Path.join, [[cwd].concat(path)]);
-  var files = readdirRecursive(buildPath);
-  var frontmatterArray = files.reduce((function (acc, file) {
-          var fileName = file.replace(/\\/g, "/");
-          var source = readFileSync(undefined, undefined, fileName);
-          var slug = removeMdxExtension(removeRoot(undefined, fileName));
-          var match = GrayMatter(source);
-          var data = match.data;
-          var string = data.lastmod;
-          var lastmod = (string == null) ? "" : string;
-          var bool = data.draft;
-          var isDraft = (bool == null) ? true : bool;
-          var string$1 = data.summary;
-          var summary = (string$1 == null) ? "" : string$1;
-          var array = data.images;
-          var images = (array == null) ? [] : array;
-          var withSlug_title = data.title;
-          var withSlug_date = data.date;
-          var withSlug_tags = data.tags;
-          var bool$1 = data.draft;
-          if (!(bool$1 == null) && !bool$1) {
-            return acc.concat([{
-                          title: withSlug_title,
-                          date: withSlug_date,
-                          tags: withSlug_tags,
-                          lastmod: lastmod,
-                          draft: bool$1,
-                          summary: summary,
-                          images: images,
-                          slug: slug
-                        }]);
-          } else {
-            return acc;
-          }
-        }), []);
+  var frontmatterArray = getAllFrontMatter(buildPath);
   return frontmatterArray.sort(function (a, b) {
               return sortDesc(a.date, b.date);
             });
@@ -198,6 +202,7 @@ export {
   removeRoot ,
   getFiles ,
   sortDesc ,
+  getAllFrontMatter ,
   getBlogPostsFromLatest ,
   returnSiteMetadata ,
   kebabCase ,
