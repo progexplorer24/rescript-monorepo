@@ -7,9 +7,9 @@ type mdxOptions = {
   compilers: array<string>,
 }
 
-type serializeResult = {
+type serializeResult<'a> = {
   compiledSource: string,
-  scope: {.},
+  scope: 'a,
 }
 type config = {
   scope: GrayMatter.data,
@@ -18,7 +18,7 @@ type config = {
 }
 
 @module("next-mdx-remote/serialize")
-external serialize: (string, config) => Js.Promise.t<serializeResult> = "serialize"
+external serialize: (string, config) => Js.Promise.t<serializeResult<'a>> = "serialize"
 
 @module("remark-math") external remarkMath: remarkPlugin = "default"
 @module("rehype-katex") external rehypeKatex: rehypePlugin = "default"
@@ -29,6 +29,6 @@ module MdxRemote = {
     ~components: MDXComponents.mdxComponents,
     ~\"lazy": bool,
     ~compiledSource: string,
-    ~scope: {.},
+    ~scope: 'a,
   ) => React.element = "MDXRemote"
 }

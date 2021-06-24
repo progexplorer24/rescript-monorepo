@@ -2,7 +2,10 @@
 // Error - error - ./node_modules/esbuild/lib/main.js:1524:0
 // Module not found: Can't resolve 'child_process'
 // null
-type props = {path: array<string>, mdxSource: NextMdxRemote.serializeResult}
+type props = {
+  path: array<string>,
+  mdxSource: NextMdxRemote.serializeResult<Mdx__helpers.frontmatter>,
+}
 
 let getStaticProps: Next.GetStaticProps.t<props, Mdx__helpers.Params.t, _> = ({params}) => {
   let {slug} = params
