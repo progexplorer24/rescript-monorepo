@@ -3,19 +3,39 @@
 import * as React from "react";
 import * as Belt_Array from "rescript/lib/es6/belt_Array.js";
 import * as NextMdxRemote from "next-mdx-remote";
+import * as PostLayout$RescriptMonorepo from "./layouts/PostLayout.mjs";
 import * as Mdx__helpers$RescriptMonorepo from "./server/Mdx__helpers.mjs";
-import * as LayoutWrapper$RescriptMonorepo from "./components/blog/LayoutWrapper.mjs";
 import * as MDXComponents$RescriptMonorepo from "./components/blog/MDXComponents.mjs";
 
-function $$default(param) {
-  var mdxSource = param.mdxSource;
-  return React.createElement(LayoutWrapper$RescriptMonorepo.make, {
+function $$default(props) {
+  var mdxSource = props.mdxSource;
+  var scope = mdxSource.scope;
+  var frontmatter_title = scope.title;
+  var frontmatter_date = scope.date;
+  var frontmatter_tags = scope.tags;
+  var frontmatter_lastmod = scope.lastmod;
+  var frontmatter_draft = scope.draft;
+  var frontmatter_summary = scope.summary;
+  var frontmatter_images = scope.images;
+  var frontmatter_slug = props.path.join("/");
+  var frontmatter = {
+    title: frontmatter_title,
+    date: frontmatter_date,
+    tags: frontmatter_tags,
+    lastmod: frontmatter_lastmod,
+    draft: frontmatter_draft,
+    summary: frontmatter_summary,
+    images: frontmatter_images,
+    slug: frontmatter_slug
+  };
+  return React.createElement(PostLayout$RescriptMonorepo.make, {
               children: React.createElement("main", undefined, React.createElement(NextMdxRemote.MDXRemote, {
                         components: MDXComponents$RescriptMonorepo.components,
                         lazy: false,
                         compiledSource: mdxSource.compiledSource,
-                        scope: mdxSource.scope
-                      }))
+                        scope: scope
+                      })),
+              frontmatter: frontmatter
             });
 }
 

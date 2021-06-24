@@ -1,16 +1,31 @@
 // type props = Static.props
-type props = {path: array<string>, mdxSource: NextMdxRemote.serializeResult}
+type props = {
+  path: array<string>,
+  mdxSource: NextMdxRemote.serializeResult<Mdx__helpers.frontmatter>,
+}
 type previewData
 
-let default = ({mdxSource}: props) => {
+let default = props => {
+  let {mdxSource, path} = props
   let {compiledSource, scope} = mdxSource
-  <LayoutWrapper>
+  let {title, date, tags, lastmod, draft, summary, images} = scope
+  let frontmatter: Mdx__helpers.frontmatterAndSlug = {
+    title: title,
+    date: date,
+    tags: tags,
+    lastmod: lastmod,
+    draft: draft,
+    summary: summary,
+    images: images,
+    slug: Js.Array2.joinWith(path, "/"),
+  }
+  <PostLayout frontmatter>
     <main>
       <NextMdxRemote.MdxRemote
         components=MDXComponents.components \"lazy"={false} compiledSource scope
       />
     </main>
-  </LayoutWrapper>
+  </PostLayout>
 }
 
 let getStaticPaths: Next.GetStaticPaths.t<Mdx__helpers.Params.t> = () => {
