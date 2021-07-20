@@ -60,7 +60,20 @@ let toSelfPosition = selfPosition =>
   | #selfEnd => "self-end"
   }
 
+// https://developer.mozilla.org/en-US/docs/Web/CSS/align-content
+
 module AlignContent = {
+  /*
+    The CSS align-content property sets the distribution of space between and around content items along a flexbox's cross-axis or a grid's block axis.
+
+    This property has no effect on single line flex containers (i.e. ones with flex-wrap: nowrap).
+
+    NOTE: Links
+    https://developer.mozilla.org/en-US/docs/Web/CSS/align-content
+    https://drafts.csswg.org/css-flexbox-1
+    
+ */
+  // Initial value - normal
   type t = [
     | #normal
     | contentPosition
