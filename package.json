@@ -10,6 +10,8 @@
     "res:build": "rescript build -with-deps",
     "res:clean": "rescript clean",
     "res:start": "rescript build -w -with-deps",
+    "test:integration": "cypress open",
+    "test:component": "cypress open-ct",
     "test": "NODE_OPTIONS=--experimental-vm-modules jest --watch",
     "test:ci": "jest --ci"
   },
@@ -28,13 +30,23 @@
     "remark-math": "3.0.1"
   },
   "devDependencies": {
+    "@cypress/react": "^5.9.1",
+    "@cypress/webpack-dev-server": "^1.4.0",
     "@emotion/jest": "^11.3.0",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "babel-jest": "^27.0.2",
+    "constants": "^0.0.2",
+    "cypress": "^7.6.0",
+    "html-webpack-plugin": "5",
     "jest": "^27.0.4",
+    "module": "^1.2.5",
     "next-remote-watch": "^1.0.0",
+    "os": "^0.1.1",
     "react-test-renderer": "^17.0.2",
-    "rescript": "^9.1.4"
+    "rescript": "^9.1.4",
+    "stream": "^0.0.2",
+    "webpack": "^5.40.0",
+    "webpack-dev-server": "^3.11.2"
   }
 }
