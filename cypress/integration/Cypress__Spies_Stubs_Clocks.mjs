@@ -42,7 +42,7 @@ Cypress$RescriptMonorepo.context("Spies, Stubs, and Clock", (function (param) {
                       
                     })
                 };
-                var stub = (cy.stub(obj, "foo"), undefined).as("foo");
+                var stub = cy.stub(obj, "foo").as("foo");
                 Curry._2(obj.foo, "foo", "bar");
                 Cypress$RescriptMonorepo.expect(stub).to.be.called;
                 

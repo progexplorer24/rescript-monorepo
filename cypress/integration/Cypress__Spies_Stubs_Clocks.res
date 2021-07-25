@@ -4,7 +4,6 @@ type greeter = {greet: string => string}
 type greeter2 = {foo: string => unit}
 type greeter3<'a, 'b> = {foo: ('a, 'b) => unit}
 
-// type obj = {foo: unit => {.}}
 type obj = {foo: unit => string}
 
 context("Spies, Stubs, and Clock", () => {
@@ -62,7 +61,7 @@ context("Spies, Stubs, and Clock", () => {
       foo: (a, b) => Js.log4("a", a, "b", b),
     }
 
-    let stub = cyStubWithObjectAndString(obj, "foo")->as_P("foo")
+    let stub = cyStubWithObjectAndStringP(obj, "foo")->as_P("foo")
 
     obj.foo("foo", "bar")
 
@@ -125,12 +124,19 @@ context("Spies, Stubs, and Clock", () => {
       greet: name => `Hello, ${name}!`,
     }
 
-    // cyStub(greeter, "greet")
-    //   .callThrough() // if you want non-matched calls to call the real method
-    //   .withArgs(Cypress.sinon.match.string).returns("Hi")
-    //   .withArgs(Cypress.sinon.match.number).throws(new Error("Invalid name"))
+    //   cy.stub(greeter, 'greet')
+    // .callThrough() // if you want non-matched calls to call the real method
+    // .withArgs(Cypress.sinon.match.string).returns('Hi')
+    // .withArgs(Cypress.sinon.match.number).throws(new Error('Invalid name'))
 
-    // expect(greeter.greet("World")).to.equal("Hi")
+    // cyStubWithObjectAndStringP(greeter, "greet")
+    // ->callThroughP()
+    // ->withArgs(Sinon.matchString)
+    // ->returns("Hi") // if you want non-matched calls to call the real method
+    // ->withArgs(Sinon.matchNumber)
+    // ->throws(Js.Exn.raiseError("Tonio nicht gut."))
+
+    // expect(greeter.greet("World"))->toEqual("Hi")
     // // @ts-ignore
     // expect(() => greeter.greet(42)).to.throw("Invalid name")
     // expect(greeter.greet).to.have.been.calledTwice
