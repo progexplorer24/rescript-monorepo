@@ -453,9 +453,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cypress/react@npm:^5.9.1":
-  version: 5.9.1
-  resolution: "@cypress/react@npm:5.9.1"
+"@cypress/react@npm:^5.9.2":
+  version: 5.9.2
+  resolution: "@cypress/react@npm:5.9.2"
   dependencies:
     "@cypress/mount-utils": 1.0.2
     debug: 4.3.2
@@ -487,7 +487,7 @@ __metadata:
       optional: true
     webpack:
       optional: true
-  checksum: 030bfe0383b5bcd9f3420361df38661d07bc2aa04ff93e5de48b632e2da67709325fba6a583c39f797273e340f99930d83a2e6a9e4f6d737329c9f25e5e3cdd1
+  checksum: 0d034a4675df7828379c9a53fdaf1f1e60ccfa2889907d9a3dd92becbe3cc874403ce0976502d8c225d895f4f4e1833cb5b4f9e251d715c2f9ec5c0f12c4a8dc
   languageName: node
   linkType: hard
 
@@ -2832,9 +2832,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cypress@npm:^7.6.0":
-  version: 7.6.0
-  resolution: "cypress@npm:7.6.0"
+"cypress@npm:^8.0.0":
+  version: 8.0.0
+  resolution: "cypress@npm:8.0.0"
   dependencies:
     "@cypress/request": ^2.88.5
     "@cypress/xvfb": ^1.2.4
@@ -2879,7 +2879,7 @@ __metadata:
     yauzl: ^2.10.0
   bin:
     cypress: bin/cypress
-  checksum: 736885175b4c5bea7e73ce282428bb533f130b4ef712252c2900f251ab7e49137717ca22617435f22a6adf0189b6ceb9c025c3c367c8921b58e9acbda9e86b10
+  checksum: 03986bbb0db57f462dca8fbabb236b8ef90685be394ca8e7a1f097e976a7cd774fcdc79638a0e798480276df8ab37a60a66139ede8df6dcc8a758871d5a0937c
   languageName: node
   linkType: hard
 
@@ -8158,14 +8158,14 @@ fsevents@~2.3.1:
   version: 0.0.0-use.local
   resolution: "rescript-template@workspace:."
   dependencies:
-    "@cypress/react": ^5.9.1
+    "@cypress/react": ^5.9.2
     "@cypress/webpack-dev-server": ^1.4.0
     "@emotion/css": ^11.1.3
     "@rescript/react": ^0.10.3
     bs-css-emotion: ^3.0.0
     bs-webapi: ^0.19.1
     constants: ^0.0.2
-    cypress: ^7.6.0
+    cypress: ^8.0.0
     gray-matter: ^4.0.3
     html-webpack-plugin: 5
     module: ^1.2.5
