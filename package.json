@@ -11,7 +11,7 @@
     "res:clean": "rescript clean",
     "res:start": "rescript build -w -with-deps",
     "test:integration": "cypress open",
-    "test:component": "cypress open-ct",
+    "test:component": "cypress open-ct"
   },
   "dependencies": {
     "@emotion/css": "^11.1.3",
