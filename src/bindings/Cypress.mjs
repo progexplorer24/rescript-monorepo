@@ -561,13 +561,6 @@ var SetCookieOptions = {
   make: make$13
 };
 
-function createAddOptionsObject(prevSubjectOpt, param) {
-  var prevSubject = prevSubjectOpt !== undefined ? prevSubjectOpt : false;
-  return {
-          prevSubject: prevSubject
-        };
-}
-
 function toValue$4(val) {
   if (val === "viewport") {
     return "viewport";
@@ -1320,6 +1313,8 @@ function shouldHaveBeenCalledTwice(element) {
   return should(element, "beCalledTwice", [undefined]);
 }
 
+var Sinon = {};
+
 function toValue$5(val) {
   if (val === "head") {
     return "HEAD";
@@ -1583,7 +1578,20 @@ var WaitOptions = {
 
 var WriteFileOptions = {};
 
-var Commands = {};
+function make$20(prevSubjectOpt, param) {
+  var prevSubject = prevSubjectOpt !== undefined ? prevSubjectOpt : false;
+  return {
+          prevSubject: prevSubject
+        };
+}
+
+var AddOptions = {
+  make: make$20
+};
+
+var Commands = {
+  AddOptions: AddOptions
+};
 
 var SelectOptions;
 
@@ -1991,7 +1999,6 @@ export {
   ClickOptions ,
   SameSite ,
   SetCookieOptions ,
-  createAddOptionsObject ,
   ScreenshotOptions ,
   ScreenshotDefaults ,
   Bindings ,
@@ -2295,6 +2302,7 @@ export {
   andNotMatchRe ,
   andNotMatchReP ,
   shouldHaveBeenCalledTwice ,
+  Sinon ,
   RequestMethod ,
   Encoding ,
   createRequestOptionsObject ,

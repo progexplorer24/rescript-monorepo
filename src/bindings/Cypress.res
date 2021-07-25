@@ -1,4 +1,3 @@
-// type element = 'element
 type function
 type subject
 type subjectValue
@@ -657,12 +656,6 @@ module SetCookieOptions = {
   }
 }
 
-type addOptions = {prevSubject: bool}
-
-let createAddOptionsObject = (~prevSubject=false, ()) => {
-  prevSubject: prevSubject,
-}
-
 type clipObject = {
   x: int,
   y: int,
@@ -779,6 +772,10 @@ let expect = rule => Bindings.expectRaw(. rule)
 let expectWithDescription = (rule, description) =>
   Bindings.expectRawWithDescription(. rule, description)
 
+// NOTE: Wrap value into the chain? Needs inspection
+@scope("cy") @val external cyWrap: 'a => 'element = "wrap"
+@scope("cy") @val external cyWrapWithOptions: ('a, WrapOptions.t) => 'a = "wrap"
+
 @send @variadic
 external shouldRaw: ('element, string, array<'a>) => unit = "should"
 @send @variadic
@@ -827,9 +824,6 @@ external shouldWithPostResponse: ('element, response2<'a, 'b, 'c, 'd> => unit) =
 @send
 external shouldWithPostResponseP: ('element, response2<'a, 'b, 'c, 'd> => unit) => 'element =
   "should"
-// NOTE: Wrap value into the chain? Needs inspection
-@scope("cy") @val external cyWrap: 'a => 'element = "wrap"
-@scope("cy") @val external cyWrapWithOptions: ('a, WrapOptions.t) => 'a = "wrap"
 
 @send external toEqual: ('element, 'a) => unit = "equal"
 @scope("not") @send external notToEqual: ('element, 'a) => unit = "equal"
@@ -1485,7 +1479,20 @@ external notToBeCalledP: 'element => 'element = "called"
 
 let shouldHaveBeenCalledTwice = element => should(element, #beCalledTwice, [()])
 
-@scope(("Cypress", "Cookies")) @val external cookiesDebug: bool => unit = "debug"
+@send external callThrough: ('element, unit) => unit = "callThrough"
+@send external callThroughP: ('element, unit) => 'element = "callThrough"
+
+@send external returns: ('element, 'returnVal) => 'element = "returns"
+@send external throws: ('element, Js.Exn.t) => unit = "throws"
+
+module Sinon = {
+  @scope(("Cypress", "sinon", "match")) @val
+  external matchString: 'element = "string"
+  @scope(("Cypress", "sinon", "match")) @val
+  external matchNumber: 'element = "number"
+}
+
+@send external withArgs: ('element, 'args) => 'element = "withArgs"
 
 module RequestMethod = {
   type t = [
@@ -1641,28 +1648,6 @@ external shouldWithLocationObject: (
   locationObject<'authObj>,
   locationObject<'authObj> => unit,
 ) => unit = "should"
-
-type browserObject = {
-  channel: string,
-  displayName: string,
-  family: string,
-  isChosen: bool,
-  majorVersion: int,
-  name: string,
-  path: string,
-  version: string,
-  isHeadless: bool,
-  isHeaded: bool,
-}
-
-@scope("Cypress") @val external platform: string = "platform"
-@scope("Cypress") @val external arch: string = "arch"
-@scope("Cypress") @val external browser: browserObject = "browser"
-
-@scope("Cypress") @val external env: unit => {.} = "env"
-@scope("Cypress") @val external envString: string => Js.undefined<string> = "env"
-@scope(("Cypress", "Screenshot")) @val
-external screenshotDefaults: ScreenshotDefaults.t => unit = "defaults"
 
 /*
       // INFO: Assign an alias for later use. Reference the alias later within a cy.get() or cy.wait() command with an @ prefix.
@@ -3351,11 +3336,64 @@ external cyWriteFile: (
 ) => unit = "cy.writeFile"
 
 module Commands = {
-  @scope(("Cypress", "Commands")) @val external add: (string, function) => unit = "add"
+  module AddOptions = {
+    type t = {prevSubject: bool}
+
+    let make = (~prevSubject=false, ()) => {
+      prevSubject: prevSubject,
+    }
+  }
+
+  // NOTE: Cypress API
+
   @scope(("Cypress", "Commands")) @val
-  external addWithOptions: (string, function, addOptions) => unit = "add"
+  external add: (string, ~options: AddOptions.t=?, function) => unit = "add"
+  // @scope(("Cypress", "Commands")) @val
+  // external addWithOptions: (string, function, addOptions) => unit = "add"
   @scope(("Cypress", "Commands")) @val
-  external overwrite: (string, function, addOptions) => unit = "overwrite"
+  external overwrite: (string, function) => unit = "overwrite"
 }
+
+type cookiesDefaults<'a> = {preserve: 'a}
+
+@scope(("Cypress", "Cookies")) @val external cookiesDebug: bool => unit = "debug"
+@scope(("Cypress", "Cookies")) @variadic @val
+external cookiesPreserveOnce: array<string> => unit = "preserveOnce"
+@scope(("Cypress", "Cookies")) @val
+external cookiesDefaults: cookiesDefaults<'a> => unit = "defaults"
+
+type browserObject = {
+  channel: string,
+  displayName: string,
+  family: string,
+  isChosen: bool,
+  majorVersion: int,
+  name: string,
+  path: string,
+  version: string,
+  isHeadless: bool,
+  isHeaded: bool,
+}
+
+@scope("Cypress") @val external platform: string = "platform"
+@scope("Cypress") @val external arch: string = "arch"
+@scope("Cypress") @val external browser: browserObject = "browser"
+@scope("Cypress") @val external spec: 'specObj = "browser"
+@scope("Cypress") @val external testingType: string = "testingType"
+@scope("Cypress") @val external version: string = "testingType"
+
+// NOTE: Get all environment variables from configuration file (cypress.json by default)
+@scope("Cypress") @val external env: unit => 'envObj = "env"
+@scope("Cypress") @val external envWithString: string => Js.undefined<'value> = "env"
+@scope("Cypress") @val external envWithStringAndValue: (string, 'value) => unit = "env"
+@scope("Cypress") @val external envWithObject: 'obj => unit = "env"
+
+@scope(("Cypress", "Screenshot")) @val
+external screenshotDefaults: ScreenshotDefaults.t => unit = "defaults"
+
+@scope("Cypress") @val external isBrowser: string => bool = "isBrowser"
+@scope("Cypress") @val external isBrowserWithArray: array<string> => bool = "isBrowser"
+// TODO: Finish filter implementation
+@scope("Cypress") @val external isBrowserWithFilters: 'filter => bool = "isBrowser"
 
 @val @module("@cypress/react") external mount: React.element => unit = "mount"
