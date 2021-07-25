@@ -32,7 +32,7 @@ context("Misc", () => {
     // https://on.cypress/io/platform
     cyLog(`Platform ${platform} architecture ${arch}`)
     Js.log(browser)
-    Js.log(envString("circle"))
+    Js.log(envWithString("circle"))
 
     // on CircleCI Windows build machines we have a failure to run bash shell
     // https://github.com/cypress-io/cypress/issues/5169
@@ -44,7 +44,7 @@ context("Misc", () => {
       | None => false
       }
 
-    let isCircleOnWindows = platform === "win32" && envExists(envString("circle"))
+    let isCircleOnWindows = platform === "win32" && envExists(envWithString("circle"))
 
     Js.log(isCircleOnWindows)
 
@@ -54,7 +54,7 @@ context("Misc", () => {
 
     // cy.exec problem on Shippable CI
     // https://github.com/cypress-io/cypress/issues/6718
-    let isShippable = platform === "linux" && envExists(envString("shippable"))
+    let isShippable = platform === "linux" && envExists(envWithString("shippable"))
 
     let _shippable = if isShippable {
       cyLog("Skipping test on ShippableCI")
