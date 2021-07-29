@@ -4,10 +4,10 @@ import * as CssJs from "bs-css-emotion/src/CssJs.mjs";
 import * as React from "react";
 import Head from "next/head";
 import * as Belt_Array from "rescript/lib/es6/belt_Array.js";
-import $$Image from "next/image";
 import * as Css from "@emotion/css";
 import * as Css$RescriptMonorepo from "./styles/Css.mjs";
 import * as Hooks$RescriptMonorepo from "./hooks/Hooks.mjs";
+import * as Image$RescriptMonorepo from "./components/blog/Image.mjs";
 import * as Utils$RescriptMonorepo from "./utils/Utils.mjs";
 import * as Tailwind$RescriptMonorepo from "./styles/tailwind/Tailwind.mjs";
 
@@ -424,7 +424,7 @@ function $$default(param) {
                             content,
                             Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.placeItemsCenter])
                           ])
-                    }, React.createElement("h2", undefined, Utils$RescriptMonorepo.str("Your content would go here")), React.createElement($$Image, {
+                    }, React.createElement("h2", undefined, Utils$RescriptMonorepo.str("Your content would go here")), React.createElement(Image$RescriptMonorepo.make, {
                           src: "/posts/nature.jpg",
                           alt: "nature",
                           width: 1920,

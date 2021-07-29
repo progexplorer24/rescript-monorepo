@@ -1,4 +1,3 @@
-open Next
 open Utils
 open Hooks
 
@@ -232,9 +231,9 @@ let default = () => {
   useStopAnimationJank()
 
   <div>
-    <Head>
+    <Next.Head>
       <title> {"Development"->React.string} </title> <link rel="icon" href="/favicon.ico" />
-    </Head>
+    </Next.Head>
     <main className=Styles.globalStyles>
       <header className=Styles.header>
         <h1 className=Styles.logo> {"Logo"->str} </h1>
