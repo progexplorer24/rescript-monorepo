@@ -15,6 +15,11 @@ type t = [
   | #xl7
   | #full
   | #prose
+  | #screenSm
+  | #screenMd
+  | #screenLg
+  | #screenXl
+  | #screen2Xl
 ]
 
 let toValue = width =>
@@ -34,4 +39,9 @@ let toValue = width =>
   | #xl7 => #rem(80.)
   | #full => #percent(100.)
   | #prose => #ch(65.)
+  | #screenSm => #px(640)
+  | #screenMd => #px(768)
+  | #screenLg => #px(1024)
+  | #screenXl => #px(1280)
+  | #screen2Xl => #px(1536)
   }

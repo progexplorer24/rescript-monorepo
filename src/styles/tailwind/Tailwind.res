@@ -1,5 +1,7 @@
 open CssJs
 
+let emptyRule = [CssJs.unsafe("", "")]
+
 // INFO: TRANSITIONS AND ANIMATIONS
 // NOTE: Transition Property - Utilities for controlling which CSS properties transition.
 
@@ -646,6 +648,8 @@ let maxW = (max: maxWidth) =>
   | #...screens as sc => [maxWidth(Theme.Screens.toValue(sc))]
   }
 
+let maxWPx = px => [CssJs.maxWidth(#px(px))]
+
 // NOTE: Height - Utilities for setting the height of an element
 let h = (height: spacingHeight) =>
   switch height {
@@ -754,6 +758,7 @@ let tracking = wide => [letterSpacing(Theme.LetterSpacing.toValue(wide))]
 
 // NOTE: Line Height - Utilities for controlling the leading (line height) of an element.
 let leading = value => [lineHeight(Theme.LineHeight.toValue(value))]
+let leadingFloat = float => [lineHeight(#abs(float))]
 
 // NOTE: List Style Type - Utilities for controlling the bullet/number style of a list.
 let listNone = [listStyleType(#none)]
@@ -956,7 +961,7 @@ let borderR = width => [borderRightWidth(Theme.BorderWidth.toWidth(width))]
 // NOTE: Border Color - Utilities for controlling the color of an element's borders.
 type borderColor = Theme.Colors.t
 
-let borderColor = color => [borderColor(Theme.Colors.toColor(color))]
+let borderColor = (~opacity=1., color) => [borderColor(Theme.Colors.toColor(~opacity, color))]
 
 // NOTE: Border Style - Utilities for controlling the style of an element's borders.
 let borderSolid = [borderStyle(#solid)]
@@ -966,13 +971,13 @@ let borderDouble = [borderStyle(#double)]
 let borderNone = [borderStyle(#none)]
 
 // NOTE: Divide Width - Utilities for controlling the border width between elements.
-
-let divideY = (~reverse=false, width) =>
+let divideY = (~reverse=false, ~color=#gray400, width) =>
   reverse
     ? [
         selector(
           Selectors.ignoreFirstChild,
           [
+            CssJs.borderColor(Theme.Colors.toColor(color)),
             borderTopWidth(Theme.BorderWidth.toWidth(#0)),
             borderBottomWidth(Theme.BorderWidth.toWidth(width)),
           ],
@@ -982,13 +987,14 @@ let divideY = (~reverse=false, width) =>
         selector(
           Selectors.ignoreFirstChild,
           [
+            CssJs.borderColor(Theme.Colors.toColor(color)),
             borderTopWidth(Theme.BorderWidth.toWidth(width)),
             borderBottomWidth(Theme.BorderWidth.toWidth(#0)),
           ],
         ),
       ]
 
-let divideX = (~reverse=false, width) =>
+let divideX = (~reverse=false, ~color=#gray400, width) =>
   reverse
     ? [
         selector(
@@ -996,6 +1002,7 @@ let divideX = (~reverse=false, width) =>
           [
             borderRightWidth(Theme.BorderWidth.toWidth(width)),
             borderLeftWidth(Theme.BorderWidth.toWidth(#0)),
+            CssJs.borderColor(Theme.Colors.toColor(color)),
           ],
         ),
       ]
@@ -1005,6 +1012,7 @@ let divideX = (~reverse=false, width) =>
           [
             borderLeftWidth(Theme.BorderWidth.toWidth(width)),
             borderRightWidth(Theme.BorderWidth.toWidth(#0)),
+            CssJs.borderColor(Theme.Colors.toColor(color)),
           ],
         ),
       ]
@@ -1034,6 +1042,7 @@ let ringShadow = (~inset, ~spread, color) =>
 
 let whiteShadow = CssJs.Shadow.box(~x=#px(0), ~y=#px(0), Theme.Colors.toColor(#white))
 
+// TODO: Ring utility issues on focus
 let ring = (
   ~inset=false,
   ~offsetWidth=0,
@@ -1237,10 +1246,25 @@ let contentText = text => [CssJs.contentRule(#text(text))]
 let contentNone = [CssJs.contentRule(#none)]
 let contentOpen = [CssJs.contentRule(#openQuote)]
 let contentClose = [CssJs.contentRule(#closeQuote)]
+
+let container = tw([
+  w(#full),
+  sm([maxW(#screenSm)]),
+  md([maxW(#screenMd), lg([maxW(#screenLg)]), xl([maxW(#screenXl)]), xl2([maxW(#screen2Xl)])]),
+])
 // INFO: Selectors
 
 let selector = (string, rules) => [CssJs.selector(string, tw(rules))]
+// WARNING: Experiment
+let smSpecifity = rules => [[CssJs.selector(".sm &", tw(rules))]]
+let minWBreakpointNew = (breakpoint, styles) => [
+  CssJs.media(`screen and (min-width: ${Belt.Int.toString(breakpoint)}px)`, tw(styles)),
+]
 
+let smNew = rules => minWBreakpointNew(640, smSpecifity(rules))
+
+// END WARNING:
+let dark = rules => [CssJs.selector(".dark &", tw(rules))]
 let marker = rules => [CssJs.selector("&::marker", tw(rules))]
 let active = rules => [CssJs.active(tw(rules))]
 let checked = rules => [CssJs.checked(tw(rules))]

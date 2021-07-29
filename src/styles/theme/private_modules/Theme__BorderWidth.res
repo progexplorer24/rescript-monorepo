@@ -1,4 +1,4 @@
-type t = [#1 | #0 | #4 | #8]
+type t = [#1 | #0 | #2 | #4 | #8]
 
 let toWidth = width =>
   switch width {

@@ -34,6 +34,8 @@ import * as Theme__TimingFunction$RescriptMonorepo from "../theme/private_module
 import * as Theme__SpacingNegative$RescriptMonorepo from "../theme/private_modules/Theme__SpacingNegative.mjs";
 import * as Theme__ProportionsNegative$RescriptMonorepo from "../theme/private_modules/Theme__ProportionsNegative.mjs";
 
+var emptyRule = [CssJs.unsafe("", "")];
+
 var transitionNone = [CssJs.transitionProperty("none")];
 
 var transitionAll = [CssJs.transition(Theme__Duration$RescriptMonorepo.toValue(150), undefined, Theme__TimingFunction$RescriptMonorepo.toValue("easeInOut"), "all")];
@@ -868,15 +870,22 @@ var minWMin = [CssJs.unsafe("minWidth", "min-content")];
 var minWMax = [CssJs.unsafe("minWidth", "max-content")];
 
 function maxW(max) {
-  if (max === "screenXl2" || max === "screenXl" || max === "screenSm" || max === "screenMd" || max === "screenLg") {
-    return [CssJs.maxWidth(Theme__Screens$RescriptMonorepo.toValue(max))];
-  } else if (max === "minContent") {
+  if (max === "minContent") {
     return [CssJs.unsafe("maxWidth", "min-content")];
   } else if (max === "maxContent") {
     return [CssJs.unsafe("maxWidth", "max-content")];
+  } else if (max === "screenXl2") {
+    return [CssJs.maxWidth(Theme__Screens$RescriptMonorepo.toValue(max))];
   } else {
     return [CssJs.maxWidth(Theme__MaxWidth$RescriptMonorepo.toValue(max))];
   }
+}
+
+function maxWPx(px) {
+  return [CssJs.maxWidth({
+                NAME: "px",
+                VAL: px
+              })];
 }
 
 function h(height) {
@@ -1103,6 +1112,13 @@ function tracking(wide) {
 
 function leading(value) {
   return [CssJs.lineHeight(Theme__LineHeight$RescriptMonorepo.toValue(value))];
+}
+
+function leadingFloat($$float) {
+  return [CssJs.lineHeight({
+                NAME: "abs",
+                VAL: $$float
+              })];
 }
 
 var listNone = [CssJs.listStyleType("none")];
@@ -1402,8 +1418,9 @@ function borderR(width) {
   return [CssJs.borderRightWidth(Theme__BorderWidth$RescriptMonorepo.toWidth(width))];
 }
 
-function borderColor(color) {
-  return [CssJs.borderColor(Theme__Colors$RescriptMonorepo.toColor(undefined, color))];
+function borderColor(opacityOpt, color) {
+  var opacity = opacityOpt !== undefined ? opacityOpt : 1;
+  return [CssJs.borderColor(Theme__Colors$RescriptMonorepo.toColor(opacity, color))];
 }
 
 var borderSolid = [CssJs.borderStyle("solid")];
@@ -1416,32 +1433,38 @@ var borderDouble = [CssJs.borderStyle("double")];
 
 var borderNone = [CssJs.borderStyle("none")];
 
-function divideY(reverseOpt, width) {
+function divideY(reverseOpt, colorOpt, width) {
   var reverse = reverseOpt !== undefined ? reverseOpt : false;
+  var color = colorOpt !== undefined ? colorOpt : "gray400";
   if (reverse) {
     return [CssJs.selector(Selectors$RescriptMonorepo.ignoreFirstChild, [
+                  CssJs.borderColor(Theme__Colors$RescriptMonorepo.toColor(undefined, color)),
                   CssJs.borderTopWidth(Theme__BorderWidth$RescriptMonorepo.toWidth(0)),
                   CssJs.borderBottomWidth(Theme__BorderWidth$RescriptMonorepo.toWidth(width))
                 ])];
   } else {
     return [CssJs.selector(Selectors$RescriptMonorepo.ignoreFirstChild, [
+                  CssJs.borderColor(Theme__Colors$RescriptMonorepo.toColor(undefined, color)),
                   CssJs.borderTopWidth(Theme__BorderWidth$RescriptMonorepo.toWidth(width)),
                   CssJs.borderBottomWidth(Theme__BorderWidth$RescriptMonorepo.toWidth(0))
                 ])];
   }
 }
 
-function divideX(reverseOpt, width) {
+function divideX(reverseOpt, colorOpt, width) {
   var reverse = reverseOpt !== undefined ? reverseOpt : false;
+  var color = colorOpt !== undefined ? colorOpt : "gray400";
   if (reverse) {
     return [CssJs.selector(Selectors$RescriptMonorepo.ignoreFirstChild, [
                   CssJs.borderRightWidth(Theme__BorderWidth$RescriptMonorepo.toWidth(width)),
-                  CssJs.borderLeftWidth(Theme__BorderWidth$RescriptMonorepo.toWidth(0))
+                  CssJs.borderLeftWidth(Theme__BorderWidth$RescriptMonorepo.toWidth(0)),
+                  CssJs.borderColor(Theme__Colors$RescriptMonorepo.toColor(undefined, color))
                 ])];
   } else {
     return [CssJs.selector(Selectors$RescriptMonorepo.ignoreFirstChild, [
                   CssJs.borderLeftWidth(Theme__BorderWidth$RescriptMonorepo.toWidth(width)),
-                  CssJs.borderRightWidth(Theme__BorderWidth$RescriptMonorepo.toWidth(0))
+                  CssJs.borderRightWidth(Theme__BorderWidth$RescriptMonorepo.toWidth(0)),
+                  CssJs.borderColor(Theme__Colors$RescriptMonorepo.toColor(undefined, color))
                 ])];
   }
 }
@@ -1862,8 +1885,35 @@ var contentOpen = [CssJs.contentRule("openQuote")];
 
 var contentClose = [CssJs.contentRule("closeQuote")];
 
+var container = Belt_Array.concatMany([
+      w("full"),
+      minWBreakpoint(640, [maxW("screenSm")]),
+      minWBreakpoint(768, [
+            maxW("screenMd"),
+            minWBreakpoint(1024, [maxW("screenLg")]),
+            minWBreakpoint(1280, [maxW("screenXl")]),
+            minWBreakpoint(1536, [maxW("screen2Xl")])
+          ])
+    ]);
+
 function selector(string, rules) {
   return [CssJs.selector(string, Belt_Array.concatMany(rules))];
+}
+
+function smSpecifity(rules) {
+  return [[CssJs.selector(".sm &", Belt_Array.concatMany(rules))]];
+}
+
+function minWBreakpointNew(breakpoint, styles) {
+  return [CssJs.media("screen and (min-width: " + String(breakpoint) + "px)", Belt_Array.concatMany(styles))];
+}
+
+function smNew(rules) {
+  return minWBreakpointNew(640, smSpecifity(rules));
+}
+
+function dark(rules) {
+  return [CssJs.selector(".dark &", Belt_Array.concatMany(rules))];
 }
 
 function marker(rules) {
@@ -2246,6 +2296,7 @@ var merge = CssJs.merge;
 var style = CssJs.style;
 
 export {
+  emptyRule ,
   transitionNone ,
   transitionAll ,
   transition ,
@@ -2468,6 +2519,7 @@ export {
   minWMin ,
   minWMax ,
   maxW ,
+  maxWPx ,
   h ,
   minH0 ,
   minHFull ,
@@ -2491,6 +2543,7 @@ export {
   stackedFractions ,
   tracking ,
   leading ,
+  leadingFloat ,
   listNone ,
   listDisc ,
   listDecimal ,
@@ -2665,7 +2718,12 @@ export {
   contentNone ,
   contentOpen ,
   contentClose ,
+  container ,
   selector ,
+  smSpecifity ,
+  minWBreakpointNew ,
+  smNew ,
+  dark ,
   marker ,
   active ,
   checked ,
@@ -2707,4 +2765,4 @@ export {
   Typography ,
   
 }
-/* transitionNone Not a pure module */
+/* emptyRule Not a pure module */
