@@ -15,6 +15,7 @@ function $$default(props) {
     case "/ionicons/" :
     case "/loruki/" :
     case "/omnifood/" :
+    case "/projects/" :
     case "/typography/" :
         return content;
     default:

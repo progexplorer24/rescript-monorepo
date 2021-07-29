@@ -17,10 +17,6 @@ type props = {
 // Add global styles resets
 let _reset = Reset.addReset()
 
-// #region REGION: Style Reset
-
-// #endregion   ENDREGION: Style Reset
-
 // We are not using `[@react.component]` since we will never
 // use <App/> within our Reason code. It's only used within `pages/_app.js`
 let default = (props: props): React.element => {
@@ -32,6 +28,7 @@ let default = (props: props): React.element => {
 
   switch router.route {
   | "/" => content
+  | "/projects/" => content
   | "/loruki/" => content
   | "/typography/" => content
   | "/ionicons/" => content
