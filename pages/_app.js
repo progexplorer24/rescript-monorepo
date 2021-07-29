@@ -1,5 +1,8 @@
 import React from 'react'
 import ResApp from "src/App.mjs"
+import {make as Wrapper} from "src/components/blog/LayoutWrapper.mjs"
+import Head from 'next/head'
+import { ThemeProvider } from 'next-themes'
 import '../src/styles/fonts.css';
 // NOTE: https://github.com/ryyppy/rescript-nextjs-template/pull/23
 // INFO: Next js info on fast refresh:
@@ -11,7 +14,15 @@ import '../src/styles/fonts.css';
 
 // NOTE: We need to create this file to have upper-cased page component - Fast Refresh Requirement
 function App(props) {
-  return <ResApp {...props} /> 
+  return <ThemeProvider attribute="class">
+     <Head>
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+      </Head>
+      <Wrapper>
+
+    <ResApp {...props} />
+      </Wrapper>
+  </ThemeProvider>
 }
 
 export default App
