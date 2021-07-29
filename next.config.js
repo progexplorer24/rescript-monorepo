@@ -1,5 +1,4 @@
 const bsconfig = require('./bsconfig.json');
-const fs = require("fs");
 
 // NOTE: https://forum.rescript-lang.org/t/purpose-alternatives-to-next-transpile-modules-in-next-rescript-projects/827/5
 const transpileModules = ["rescript"].concat(bsconfig["bs-dependencies"]);
