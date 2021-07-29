@@ -3,8 +3,11 @@
 
 var ignoreFirstChild = "& > :not([hidden]) ~ :not([hidden])";
 
+var allChildren = "& > *";
+
 export {
   ignoreFirstChild ,
+  allChildren ,
   
 }
 /* No side effect */
