@@ -2,7 +2,27 @@
 
 
 function toValue(width) {
-  if (width === "prose") {
+  if (width === "screenLg") {
+    return {
+            NAME: "px",
+            VAL: 1024
+          };
+  } else if (width === "screenMd") {
+    return {
+            NAME: "px",
+            VAL: 768
+          };
+  } else if (width === "screenSm") {
+    return {
+            NAME: "px",
+            VAL: 640
+          };
+  } else if (width === "screenXl") {
+    return {
+            NAME: "px",
+            VAL: 1280
+          };
+  } else if (width === "prose") {
     return {
             NAME: "ch",
             VAL: 65
@@ -68,6 +88,11 @@ function toValue(width) {
     return {
             NAME: "rem",
             VAL: 80
+          };
+  } else if (width === "screen2Xl") {
+    return {
+            NAME: "px",
+            VAL: 1536
           };
   } else {
     return {
