@@ -7,7 +7,7 @@ var elementStyles = Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo
 
 var bulletStyles = Tailwind$RescriptMonorepo.twStyle([
       Tailwind$RescriptMonorepo.w(3),
-      Tailwind$RescriptMonorepo.borderColor("indigo800"),
+      Tailwind$RescriptMonorepo.borderColor(undefined, "indigo800"),
       Tailwind$RescriptMonorepo.borderL(1),
       Tailwind$RescriptMonorepo.borderR(1),
       Tailwind$RescriptMonorepo.rounded("full"),

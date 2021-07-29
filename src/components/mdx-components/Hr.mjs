@@ -6,7 +6,7 @@ import * as Tailwind$RescriptMonorepo from "../../styles/tailwind/Tailwind.mjs";
 var elementStyles = Tailwind$RescriptMonorepo.twStyle([
       Tailwind$RescriptMonorepo.my(10),
       Tailwind$RescriptMonorepo.borderT(1),
-      Tailwind$RescriptMonorepo.borderColor("gray300")
+      Tailwind$RescriptMonorepo.borderColor(undefined, "gray300")
     ]);
 
 var Styles = {

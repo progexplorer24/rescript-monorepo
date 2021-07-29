@@ -4,7 +4,7 @@ import * as React from "react";
 import * as Tailwind$RescriptMonorepo from "../../styles/tailwind/Tailwind.mjs";
 
 var elementStyles = Tailwind$RescriptMonorepo.twStyle([
-      Tailwind$RescriptMonorepo.borderColor("blue700"),
+      Tailwind$RescriptMonorepo.borderColor(undefined, "blue700"),
       Tailwind$RescriptMonorepo.borderB(1),
       Tailwind$RescriptMonorepo.cursorPointer,
       Tailwind$RescriptMonorepo.textColor(undefined, "blue700"),
