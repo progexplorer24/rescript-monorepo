@@ -113,38 +113,38 @@ context("Spies, Stubs, and Clock", () => {
     cyGet("#tick-div", ())->clickP()->shouldHaveText("1489449610")
   })
 
-  it("cy.stub() matches depending on arguments", () => {
-    // see all possible matchers at
-    // https://sinonjs.org/releases/latest/matchers/
-    let greeter = {
-      /**
-       * Greets a person
-       * @param {string} name
-       */
-      greet: name => `Hello, ${name}!`,
-    }
+  // it("cy.stub() matches depending on arguments", () => {
+  //   // see all possible matchers at
+  //   // https://sinonjs.org/releases/latest/matchers/
+  //   // let greeter = {
+  //   //   /**
+  //   //    * Greets a person
+  //   //    * @param {string} name
+  //   //    */
+  //   //   greet: name => `Hello, ${name}!`,
+  //   // }
 
-    //   cy.stub(greeter, 'greet')
-    // .callThrough() // if you want non-matched calls to call the real method
-    // .withArgs(Cypress.sinon.match.string).returns('Hi')
-    // .withArgs(Cypress.sinon.match.number).throws(new Error('Invalid name'))
+  //   //   cy.stub(greeter, 'greet')
+  //   // .callThrough() // if you want non-matched calls to call the real method
+  //   // .withArgs(Cypress.sinon.match.string).returns('Hi')
+  //   // .withArgs(Cypress.sinon.match.number).throws(new Error('Invalid name'))
 
-    // cyStubWithObjectAndStringP(greeter, "greet")
-    // ->callThroughP()
-    // ->withArgs(Sinon.matchString)
-    // ->returns("Hi") // if you want non-matched calls to call the real method
-    // ->withArgs(Sinon.matchNumber)
-    // ->throws(Js.Exn.raiseError("Tonio nicht gut."))
+  //   // cyStubWithObjectAndStringP(greeter, "greet")
+  //   // ->callThroughP()
+  //   // ->withArgs(Sinon.matchString)
+  //   // ->returns("Hi") // if you want non-matched calls to call the real method
+  //   // ->withArgs(Sinon.matchNumber)
+  //   // ->throws(Js.Exn.raiseError("Tonio nicht gut."))
 
-    // expect(greeter.greet("World"))->toEqual("Hi")
-    // // @ts-ignore
-    // expect(() => greeter.greet(42)).to.throw("Invalid name")
-    // expect(greeter.greet).to.have.been.calledTwice
+  //   // expect(greeter.greet("World"))->toEqual("Hi")
+  //   // // @ts-ignore
+  //   // expect(() => greeter.greet(42)).to.throw("Invalid name")
+  //   // expect(greeter.greet).to.have.been.calledTwice
 
-    // // non-matched calls goes the actual method
-    // // @ts-ignore
-    // expect(greeter.greet()).to.equal("Hello, undefined!")
-  })
+  //   // // non-matched calls goes the actual method
+  //   // // @ts-ignore
+  //   // expect(greeter.greet()).to.equal("Hello, undefined!")
+  // })
 
   // it("matches call arguments using Sinon matchers", () => {
   //   // see all possible matchers at

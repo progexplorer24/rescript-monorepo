@@ -59,16 +59,13 @@ Cypress$RescriptMonorepo.context("Spies, Stubs, and Clock", (function (param) {
                 cy.visit("https://example.cypress.io/commands/spies-stubs-clocks", undefined);
                 return Cypress$RescriptMonorepo.shouldHaveText(cy.get("#clock-div", undefined).click(undefined), "1489449600");
               }));
-        Cypress$RescriptMonorepo.it("cy.tick() - move time in the browser", (function (param) {
-                var now = new Date(Date.UTC(2017, 2, 14)).getTime();
-                cy.clock(now, undefined, undefined);
-                cy.visit("https://example.cypress.io/commands/spies-stubs-clocks", undefined);
-                Cypress$RescriptMonorepo.shouldHaveText(cy.get("#tick-div", undefined).click(undefined), "1489449600");
-                cy.tick(10000, undefined);
-                return Cypress$RescriptMonorepo.shouldHaveText(cy.get("#tick-div", undefined).click(undefined), "1489449610");
-              }));
-        return Cypress$RescriptMonorepo.it("cy.stub() matches depending on arguments", (function (param) {
-                      
+        return Cypress$RescriptMonorepo.it("cy.tick() - move time in the browser", (function (param) {
+                      var now = new Date(Date.UTC(2017, 2, 14)).getTime();
+                      cy.clock(now, undefined, undefined);
+                      cy.visit("https://example.cypress.io/commands/spies-stubs-clocks", undefined);
+                      Cypress$RescriptMonorepo.shouldHaveText(cy.get("#tick-div", undefined).click(undefined), "1489449600");
+                      cy.tick(10000, undefined);
+                      return Cypress$RescriptMonorepo.shouldHaveText(cy.get("#tick-div", undefined).click(undefined), "1489449610");
                     }));
       }));
 
