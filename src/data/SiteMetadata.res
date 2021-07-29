@@ -17,16 +17,15 @@ type metadata = {
   locale: string,
 }
 
-// let metadata = Mdx__helpers.returnSiteMetadata()
 let metadata = {
-  title: "Next.js Starter Blog",
-  author: "Tails Azimuth",
+  title: "iSensei - Developer, teacher, free spirit.",
+  author: "Patryk Szymkowiak",
   headerTitle: "iSensei",
-  description: "A blog created with Next.js and Tailwind.css",
+  description: "Teacher, content creator, web developer.",
   language: "en-us",
   siteUrl: "https://tailwind-nextjs-starter-blog.vercel.app",
   siteRepo: "https://github.com/timlrx/tailwind-nextjs-starter-blog",
-  image: "/avatar.jpg",
+  image: "/static/images/avatar.png",
   socialBanner: "/static/images/twitter-card.png",
   email: "address@yoursite.com",
   github: "https://github.com",
