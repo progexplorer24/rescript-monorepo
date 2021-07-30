@@ -29,7 +29,7 @@
     "bs-webapi"
   ],
   "warnings": {
-    "number": "-3",
+    "number": "+a",
     "error": "+101+8"
   }
 }
