@@ -1,6 +1,6 @@
 module Styles = {
   open Tailwind
-  let link = twStyle([textColor(#coolGray900), underline, fontWeight(#500)])
+  let link = twStyle([textColor(#coolGray900), noUnderline, fontWeight(#500)])
 }
 
 @react.component

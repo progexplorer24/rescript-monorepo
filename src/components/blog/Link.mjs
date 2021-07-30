@@ -6,7 +6,7 @@ import * as Tailwind$RescriptMonorepo from "../../styles/tailwind/Tailwind.mjs";
 
 var link = Tailwind$RescriptMonorepo.twStyle([
       Tailwind$RescriptMonorepo.textColor(undefined, "coolGray900"),
-      Tailwind$RescriptMonorepo.underline,
+      Tailwind$RescriptMonorepo.noUnderline,
       Tailwind$RescriptMonorepo.fontWeight(500)
     ]);
 
