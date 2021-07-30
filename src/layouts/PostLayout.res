@@ -1,23 +1,37 @@
 module Styles = {
   open Tailwind
+  let wrapper = twStyle([xl([divideY(~color=#gray200, #1), dark([divideY(~color=#gray700, #1)])])])
   let header = twStyle([pt(#6), xl([pb(#6)])])
-  let div1 = twStyle([spaceY(#1), textCenter])
+  let headerContainer = twStyle([spaceY(#1), textCenter])
   let dl = twStyle([spaceY(#10)])
   let dt = twStyle([srOnly])
-  let dd = twStyle([text(#base), fontWeight(#500), leading(#6), textColor(#gray500)])
-  let div2 = twStyle([
-    divideY(#1),
-    borderColor(#gray200),
+  let dd = twStyle([
+    text(#base),
+    fontWeight(#500),
+    leading(#6),
+    textColor(#gray500),
+    dark([textColor(#gray400)]),
+  ])
+  let mainContent = twStyle([
+    pb(#8),
+    divideY(~color=#gray200, #1),
+    dark([divideY(~color=#gray700, #1)]),
+    [CssJs.unsafe("gridTemplateRows", "auto 1fr")],
     xl([divideY(#0), grid, gridCols(#4), gapX(#6)]),
   ])
-  let dlAuthors = twStyle([pt(#6), pb(#10), xl([pt(#11), borderB(#1), borderColor(#gray500)])])
+  let dlAuthors = twStyle([
+    pt(#6),
+    pb(#10),
+    xl([pt(#11), borderB(#1), borderColor(#gray200), dark([borderColor(#gray700)])]),
+  ])
   let dtAuthors = twStyle([srOnly])
+
   let ul = twStyle([
     flex,
     justifyCenter,
     spaceX(#8),
     sm([spaceX(#12)]),
-    xl([spaceX(#0), block, spaceY(#8)]),
+    xl([spaceX(#0), spaceY(#8)]),
   ])
   let li = twStyle([flex, itemsCenter, spaceX(#2)])
   let avatar = twStyle([w(#14), h(#14), rounded(#full)])
@@ -48,15 +62,14 @@ let discussUrl = slug =>
 
 @react.component
 let make = (~children, ~frontmatter: Mdx__helpers.frontmatterAndSlug) => {
-  let {slug, date, title, tags} = frontmatter
+  let {slug, date, title, tags, _} = frontmatter
 
   // (date, title, tags, lastmod, draft, summary, images)->Utils.clog
   <SectionContainer>
-    <LayoutWrapper.Navigation />
     <article>
-      <div>
+      <div className=Styles.wrapper>
         <header className=Styles.header>
-          <div className=Styles.div1>
+          <div className=Styles.headerContainer>
             <dl className=Styles.dl>
               <div>
                 <dt className=Styles.dt> {"Published on"->Utils.str} </dt>
@@ -75,7 +88,7 @@ let make = (~children, ~frontmatter: Mdx__helpers.frontmatterAndSlug) => {
             <div> <PageTitle> {title->Utils.str} </PageTitle> </div>
           </div>
         </header>
-        <div className=Styles.div2>
+        <div className=Styles.mainContent>
           <dl className=Styles.dlAuthors>
             <dt className=Styles.dtAuthors> {"Authors"->Utils.str} </dt>
             <dd>
