@@ -22,6 +22,18 @@ const config = {
           path: false,
         };
 
+        // config.resolve = {
+        //   ...config.resolve,
+        //   fallback: {
+        //     ...config.resolve.fallback,
+        //     child_process: false,
+        //     fs: false,
+        //     path: false,
+        //     'builtin-modules': false,
+        //     worker_threads: false,
+        //   },
+        // }
+
     
     }
 
