@@ -7,7 +7,7 @@ type props = {
   mdxSource: NextMdxRemote.serializeResult<Mdx__helpers.frontmatter>,
 }
 
-let getStaticProps: Next.GetStaticProps.t<props, Mdx__helpers.Params.t, _> = ({params}) => {
+let getStaticProps: Next.GetStaticProps.t<props, Mdx__helpers.Params.t, _> = ({params, _}) => {
   let {slug} = params
   let postFilePath = Mdx__helpers.join([
     Mdx__helpers.root,
@@ -16,7 +16,7 @@ let getStaticProps: Next.GetStaticProps.t<props, Mdx__helpers.Params.t, _> = ({p
     `${Js.Array2.joinWith(slug, "/")}.mdx`,
   ])
   let source = Mdx__helpers.readFileSync(postFilePath)
-  let {content, data} = GrayMatter.matter(source)
+  let {content, data, _} = GrayMatter.matter(source)
 
   NextMdxRemote.serialize(
     content,

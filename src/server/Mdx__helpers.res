@@ -113,7 +113,7 @@ let getAllFrontMatter = blogPath => {
       let fileName = Js.String2.replaceByRe(file, %re("/\\\\/g"), "/")
       let source = readFileSync(fileName)
       let slug = removeMdxExtension(removeRoot(fileName))
-      let {data} = GrayMatter.matter(source)
+      let {data, _} = GrayMatter.matter(source)
 
       let lastmod = switch Js.toOption(data.lastmod) {
       | None => ""
@@ -222,7 +222,7 @@ let createTagsDictionary = folder => {
   })
   let tagsMatrix = Js.Array2.map(postFilePaths, postFilePath => {
     let source = readFileSync(postFilePath)
-    let {data} = GrayMatter.matter(source)
+    let {data, _} = GrayMatter.matter(source)
     data
   })
 

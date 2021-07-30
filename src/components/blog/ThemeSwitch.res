@@ -15,7 +15,7 @@ module Styles = {
 @react.component
 let make = (~className="") => {
   let (mounted, setMounted) = React.useState(_ => false)
-  let {theme, setTheme, resolvedTheme} = NextThemes.useTheme()
+  let {theme, setTheme, resolvedTheme, _} = NextThemes.useTheme()
   // When mounted on client, now we can show the UI
   React.useEffect0(() => {
     setMounted(_ => true)

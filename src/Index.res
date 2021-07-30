@@ -78,7 +78,7 @@ let default = (props: props) => {
     <ul className={Styles.ul}>
       {React.array(
         Belt.Array.map(array, frontmatter => {
-          let {slug, date, title, summary, tags} = frontmatter
+          let {slug, date, title, summary, tags, _} = frontmatter
 
           <li key={slug} className=Styles.li>
             <article>

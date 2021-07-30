@@ -109,7 +109,7 @@ let make = (
       : filteredBlogPosts
 
   let renderPosts = displayPosts->Js.Array2.map(frontmatter => {
-    let {slug, date, title, summary, tags} = frontmatter
+    let {slug, date, title, summary, tags, _} = frontmatter
 
     <li key={slug} className=Styles.li>
       <article className=Styles.article>
@@ -121,9 +121,7 @@ let make = (
         </dl>
         <div className=Styles.contentSection>
           <div>
-            <h3>
-              <Link href={`/blog/${slug}`} className=Styles.h3Link> {title->Utils.str} </Link>
-            </h3>
+            <h3> <Link href={slug} className=Styles.h3Link> {title->Utils.str} </Link> </h3>
             <div className=Styles.flexWrapper>
               {React.array(tags->Js.Array2.map(tag => <Tag key={tag} text={tag} />))}
             </div>

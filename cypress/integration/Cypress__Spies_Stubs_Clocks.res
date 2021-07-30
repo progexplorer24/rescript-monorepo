@@ -11,7 +11,7 @@ context("Spies, Stubs, and Clock", () => {
     // https://on.cypress.io/spy
     cyVisit("https://example.cypress.io/commands/spies-stubs-clocks", ())
 
-    let obj = {
+    let obj: obj = {
       foo: () => "hello",
     }
 

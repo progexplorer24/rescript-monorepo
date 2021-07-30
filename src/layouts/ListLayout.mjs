@@ -187,7 +187,7 @@ function ListLayout(Props) {
                             className: contentSection
                           }, React.createElement("div", undefined, React.createElement("h3", undefined, React.createElement(Link$RescriptMonorepo.make, {
                                         children: Utils$RescriptMonorepo.str(frontmatter.title),
-                                        href: "/blog/" + slug,
+                                        href: slug,
                                         className: h3Link
                                       })), React.createElement("div", {
                                     className: flexWrapper
