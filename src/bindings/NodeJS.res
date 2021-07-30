@@ -1,10 +1,17 @@
 module Process = {
+  type env
   @val @scope("process") external cwd: unit => string = "cwd"
+  @val @scope("process") external platform: string = "platform"
+  @val @scope("process") external env: env = "env"
+  @get external getESBuildPath: env => string = "ESBUILD_BINARY_PATH"
+  @set external setESBuildPath: (env, string) => string = "ESBUILD_BINARY_PATH"
+  // @set @scope(("process", "env")) external setESBuildPath: env = "ESBUILD_BINARY_PATH"
 }
 
 module Path = {
   @module("path") external dirname: string => string = "dirname"
   @module("path") @variadic external join: array<string> => string = "join"
+  @module("path") external extname: string => string = "extname"
 }
 
 module Fs = {
