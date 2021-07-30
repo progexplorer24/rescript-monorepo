@@ -114,39 +114,42 @@ function sortDesc(a, b) {
 
 function getAllFrontMatter(blogPath) {
   var files = readdirRecursive(blogPath);
-  return files.reduce((function (acc, file) {
-                var fileName = file.replace(/\\/g, "/");
-                var source = readFileSync(undefined, undefined, fileName);
-                var slug = removeMdxExtension(removeRoot(undefined, fileName));
-                var match = GrayMatter(source);
-                var data = match.data;
-                var string = data.lastmod;
-                var lastmod = (string == null) ? "" : string;
-                var bool = data.draft;
-                var isDraft = (bool == null) ? true : bool;
-                var string$1 = data.summary;
-                var summary = (string$1 == null) ? "" : string$1;
-                var array = data.images;
-                var images = (array == null) ? [] : array;
-                var withSlug_title = data.title;
-                var withSlug_date = data.date;
-                var withSlug_tags = data.tags;
-                var bool$1 = data.draft;
-                if (!(bool$1 == null) && !bool$1) {
-                  return acc.concat([{
-                                title: withSlug_title,
-                                date: withSlug_date,
-                                tags: withSlug_tags,
-                                lastmod: lastmod,
-                                draft: bool$1,
-                                summary: summary,
-                                images: images,
-                                slug: slug
-                              }]);
-                } else {
-                  return acc;
-                }
-              }), []);
+  var allFrontmatter = files.reduce((function (acc, file) {
+          var fileName = file.replace(/\\/g, "/");
+          var source = readFileSync(undefined, undefined, fileName);
+          var slug = removeMdxExtension(removeRoot(undefined, fileName));
+          var match = GrayMatter(source);
+          var data = match.data;
+          var string = data.lastmod;
+          var lastmod = (string == null) ? "" : string;
+          var bool = data.draft;
+          var isDraft = (bool == null) ? true : bool;
+          var string$1 = data.summary;
+          var summary = (string$1 == null) ? "" : string$1;
+          var array = data.images;
+          var images = (array == null) ? [] : array;
+          var withSlug_title = data.title;
+          var withSlug_date = data.date;
+          var withSlug_tags = data.tags;
+          var bool$1 = data.draft;
+          if (!(bool$1 == null) && !bool$1) {
+            return acc.concat([{
+                          title: withSlug_title,
+                          date: withSlug_date,
+                          tags: withSlug_tags,
+                          lastmod: lastmod,
+                          draft: bool$1,
+                          summary: summary,
+                          images: images,
+                          slug: slug
+                        }]);
+          } else {
+            return acc;
+          }
+        }), []);
+  return allFrontmatter.sort(function (frontmatter1, frontmatter2) {
+              return sortDesc(frontmatter1.date, frontmatter2.date);
+            });
 }
 
 function getBlogPostsFromLatest(cwdOpt, pathOpt, param) {
@@ -165,9 +168,9 @@ function getBlogPostsFromLatest(cwdOpt, pathOpt, param) {
 var Params = {};
 
 function getFormattedFiles($$location) {
-  return Belt_Array.map(getFiles(undefined, $$location), (function (slug) {
-                return slug.replace(/^\/blog\//, "");
-              }));
+  return getFiles(undefined, $$location).map(function (slug) {
+              return slug.replace(/^\/blog\//, "");
+            });
 }
 
 function returnSiteMetadata(pathOpt, param) {

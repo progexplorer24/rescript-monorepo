@@ -25,7 +25,6 @@ let join = NodeJS.Path.join
 let readFileSync = NodeJS.Fs.readFileSync
 
 // TODO: Document this functions and describe better what they do
-
 let postFilePaths = location =>
   NodeJS.Fs.readdirSync(NodeJS.Path.join([root, "data", location]))->Belt.Array.keep(path =>
     Js.Re.test_(%re("/\.mdx?$/"), path)
@@ -55,11 +54,74 @@ let toFileTypeValue = extension =>
   | #mdx => "mdx"
   }
 
+// TODO: Improvements
 let getFileBySlug = (~root=root, slug) => {
-  let mdxPath = NodeJS.Path.join([root, "data", `${Js.Array2.joinWith(slug, "/")}.mdx`])
-  let mdPath = NodeJS.Path.join([root, "data", `${Js.Array2.joinWith(slug, "/")}.mdx`])
+  let mdxPath = join([root, "data", `${Js.Array2.joinWith(slug, "/")}.mdx`])
+  let mdPath = join([root, "data", `${Js.Array2.joinWith(slug, "/")}.mdx`])
 
-  NodeJS.Fs.existsSync(mdxPath) ? NodeJS.Fs.readFileSync(mdxPath) : NodeJS.Fs.readFileSync(mdPath)
+  let source = NodeJS.Fs.existsSync(mdxPath)
+    ? NodeJS.Fs.readFileSync(mdxPath)
+    : NodeJS.Fs.readFileSync(mdPath)
+
+  // //  // https://github.com/kentcdodds/mdx-bundler#nextjs-esbuild-enoent
+  // let _setEnvPath = if NodeJS.Process.platform === "win32" {
+  //   NodeJS.Process.setESBuildPath(
+  //     NodeJS.Process.env,
+  //     join([NodeJS.Process.cwd(), "node_modules", "esbuild", "esbuild.exe"]),
+  //   )
+  // } else {
+  //   NodeJS.Process.setESBuildPath(
+  //     NodeJS.Process.env,
+  //     join([NodeJS.Process.cwd(), "node_modules", "esbuild", "bin", "esbuild"]),
+  //   )
+  // }
+
+  // let result = MdxBundler.bundleMDX(
+  //   source,
+  //   {
+  //     cwd: join([NodeJS.Process.cwd(), "components"]),
+  //     xdmOptions: options => {
+  //       // this is the recommended way to add custom remark/rehype plugins:
+  //       // The syntax might look weird, but it protects you in case we add/remove
+  //       // plugins in the future.
+  //       //   options.remarkPlugins = [
+  //       //   ...(options.remarkPlugins ?? []),
+  //       //   require("remark-slug"),
+  //       //   require("remark-autolink-headings"),
+  //       //   require("remark-gfm"),
+  //       //   codeTitles,
+  //       //   [require("remark-footnotes"), { inlineNotes: true }],
+  //       //   require("remark-math"),
+  //       //   imgToJsx,
+  //       // ]
+  //       // options.rehypePlugins = [
+  //       //   ...(options.rehypePlugins ?? []),
+  //       //   require("rehype-katex"),
+  //       //   [require("rehype-prism-plus"), { ignoreMissing: true }],
+  //       //   () => {
+  //       //     return (tree) => {
+  //       //       visit(tree, "element", (node, index, parent) => {
+  //       //         let [token, type_] = node.properties.className || []
+  //       //         if (token === "token") {
+  //       //           node.properties.className = [tokenClassNames[type_]]
+  //       //         }
+  //       //       })
+  //       //     }
+  //       //   }
+  //       // ]
+  //       options
+  //     },
+  //     esbuildOptions: options => {
+  //       options
+  //     },
+  //   },
+  // )->Js.Promise.then_((value: MdxBundler.serializeResult) => {
+  //   Js.Promise.resolve(value)
+  // }, _)
+
+  // Js.log(result)
+
+  source
 }
 
 let removeRoot = (~root=root, string) =>
@@ -106,11 +168,12 @@ let sortDesc = (a, b) => {
 
 let getAllFrontMatter = blogPath => {
   let files = readdirRecursive(blogPath)
-  Js.Array2.reduce(
+  let allFrontmatter = Js.Array2.reduce(
     files,
     (acc, file) => {
       // NOTE: Replace for Windows paths
       let fileName = Js.String2.replaceByRe(file, %re("/\\\\/g"), "/")
+
       let source = readFileSync(fileName)
       let slug = removeMdxExtension(removeRoot(fileName))
       let {data, _} = GrayMatter.matter(source)
@@ -152,6 +215,10 @@ let getAllFrontMatter = blogPath => {
     },
     [],
   )
+
+  Js.Array2.sortInPlaceWith(allFrontmatter, (frontmatter1, frontmatter2) =>
+    sortDesc(frontmatter1.date, frontmatter2.date)
+  )
 }
 
 let getBlogPostsFromLatest = (~cwd=root, ~path=["data", "blog"], ()) => {
@@ -171,7 +238,7 @@ type paramsRecord = {params: Params.t}
 type slugRecord = {paths: paramsRecord}
 
 let getFormattedFiles = location =>
-  getFiles(location)->Belt.Array.map(slug => Js.String2.replaceByRe(slug, %re("/^\/blog\//"), ""))
+  getFiles(location)->Js.Array2.map(slug => Js.String2.replaceByRe(slug, %re("/^\/blog\//"), ""))
 
 // NOTE: Utils functions for blog
 
