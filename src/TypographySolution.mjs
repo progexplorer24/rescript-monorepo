@@ -132,7 +132,7 @@ var removeTopMarginFromNextElement = Tailwind$RescriptMonorepo.selector("&& + *"
 
 var hrBase = Tailwind$RescriptMonorepo.twStyle([
       Tailwind$RescriptMonorepo.borderT(1),
-      Tailwind$RescriptMonorepo.borderColor("coolGray200"),
+      Tailwind$RescriptMonorepo.borderColor(undefined, "coolGray200"),
       Tailwind$RescriptMonorepo.Typography.my(40, 14),
       removeTopMarginFromNextElement
     ]);
@@ -152,7 +152,7 @@ var hr = Tailwind$RescriptMonorepo.merge([
 
 var blockquoteBase = Tailwind$RescriptMonorepo.twStyle([
       Tailwind$RescriptMonorepo.italic,
-      Tailwind$RescriptMonorepo.borderColor("coolGray200"),
+      Tailwind$RescriptMonorepo.borderColor(undefined, "coolGray200"),
       Tailwind$RescriptMonorepo.fontWeight(500),
       Tailwind$RescriptMonorepo.borderL(4),
       Tailwind$RescriptMonorepo.selector("p", [
@@ -796,7 +796,7 @@ var thead = Tailwind$RescriptMonorepo.merge([
             Tailwind$RescriptMonorepo.textColor(undefined, "coolGray900"),
             Tailwind$RescriptMonorepo.fontWeight(600),
             Tailwind$RescriptMonorepo.borderB(1),
-            Tailwind$RescriptMonorepo.borderColor("coolGray300")
+            Tailwind$RescriptMonorepo.borderColor(undefined, "coolGray300")
           ])
     ]);
 
@@ -833,7 +833,7 @@ var tbodyTd = Tailwind$RescriptMonorepo.merge([
 
 var tbodyTr = Tailwind$RescriptMonorepo.selector("& tr", [
       Tailwind$RescriptMonorepo.borderB(1),
-      Tailwind$RescriptMonorepo.borderColor("coolGray300"),
+      Tailwind$RescriptMonorepo.borderColor(undefined, "coolGray300"),
       Tailwind$RescriptMonorepo.lastChild([Tailwind$RescriptMonorepo.borderB(0)])
     ]);
 
