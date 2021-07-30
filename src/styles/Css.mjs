@@ -35,6 +35,22 @@ function sm(styles) {
   return Css.css(minWidth(640, styles));
 }
 
+function active(rules) {
+  return Css.css("&:active {\n  " + rules + "\n}");
+}
+
+function link(rules) {
+  return Css.css("&:link {\n  " + rules + "\n}");
+}
+
+function visited(rules) {
+  return Css.css("&:visited {\n  " + rules + "\n}");
+}
+
+function hover(rules) {
+  return Css.css("&:hover {\n  " + rules + "\n}");
+}
+
 function toValue$1(value) {
   if (value === "initial") {
     return "initial";
@@ -219,16 +235,151 @@ var AnimationDuration = {
   toValue: toValue$7
 };
 
-var AnimationFillMode = {};
+function toValue$8(value) {
+  if (value === "none") {
+    return "none";
+  } else if (value === "backwards") {
+    return "backwards";
+  } else if (value === "forwards") {
+    return "forwards";
+  } else {
+    return "both";
+  }
+}
 
-var AnimationIterationCount = {};
+function toManyValues$1(values) {
+  return values.map(toValue$8).join(", ");
+}
 
-function toValue$8(color) {
+var AnimationFillMode = {
+  toValue: toValue$8,
+  toManyValues: toManyValues$1
+};
+
+function toValue$9(value) {
+  if (typeof value === "object") {
+    return String(value.VAL);
+  } else {
+    return "infinite";
+  }
+}
+
+function toManyValues$2(values) {
+  return values.map(toValue$9).join(", ");
+}
+
+var AnimationIterationCount = {
+  toValue: toValue$9,
+  toManyValues: toManyValues$2
+};
+
+function toValue$10(value) {
+  if (typeof value === "object") {
+    return value.VAL;
+  } else {
+    return "none";
+  }
+}
+
+function toManyValues$3(values) {
+  return values.map(toValue$10).join(", ");
+}
+
+var AnimationName = {
+  toValue: toValue$10,
+  toManyValues: toManyValues$3
+};
+
+function toValue$11(value) {
+  if (value === "paused") {
+    return "paused";
+  } else {
+    return "running";
+  }
+}
+
+function toManyValues$4(values) {
+  return values.map(toValue$11).join(", ");
+}
+
+var AnimationPlayState = {
+  toValue: toValue$11,
+  toManyValues: toManyValues$4
+};
+
+function toValue$12(val) {
+  if (typeof val === "object") {
+    return String(val.VAL);
+  } else if (val === "jumpNone") {
+    return "jump-none";
+  } else if (val === "end") {
+    return "end";
+  } else if (val === "start") {
+    return "start";
+  } else if (val === "jumpEnd") {
+    return "jump-end";
+  } else if (val === "jumpStart") {
+    return "jump-start";
+  } else {
+    return "jump-both";
+  }
+}
+
+var Steps = {
+  toValue: toValue$12
+};
+
+function toValue$13(value) {
+  if (typeof value !== "object") {
+    if (value === "easeInOut") {
+      return "ease-in-out";
+    } else if (value === "linear") {
+      return "linear";
+    } else if (value === "stepStart") {
+      return "steps(1, start)";
+    } else if (value === "stepEnd") {
+      return "steps(1)";
+    } else if (value === "easeIn") {
+      return "ease-in";
+    } else if (value === "easeOut") {
+      return "ease-out";
+    } else {
+      return "ease";
+    }
+  }
+  if (value.NAME === "steps") {
+    var match = value.VAL;
+    var v2 = match[1];
+    var v1 = match[0];
+    if (v2 === "jumpEnd" || v2 === "end") {
+      return "steps(" + toValue$12(v1) + ")";
+    } else {
+      return "steps(" + toValue$12(v1) + ", " + toValue$12(v2) + ")";
+    }
+  }
+  var match$1 = value.VAL;
+  return "cubic-bezier(" + String(match$1[0]) + ", " + String(match$1[1]) + ", " + String(match$1[2]) + ", " + String(match$1[3]) + ")";
+}
+
+var AnimationTimingFunction = {
+  Steps: Steps,
+  toValue: toValue$13
+};
+
+function toValue$14(color) {
   return "#" + color.VAL;
 }
 
 var Color = {
-  toValue: toValue$8
+  toValue: toValue$14
+};
+
+function toValue$15(color) {
+  return "#" + color.VAL;
+}
+
+var Background = {
+  toValue: toValue$15
 };
 
 function alignContent(value) {
@@ -267,15 +418,58 @@ function animationDuration(value) {
   return Css.css(declaration("animation-duration", toValue$7(value)));
 }
 
+function animationFillMode(value) {
+  return Css.css(declaration("animation-fill-mode", toValue$8(value)));
+}
+
+function animationFillModeMany(values) {
+  return Css.css(declaration("animation-fill-mode", toManyValues$1(values)));
+}
+
+function animationIterationCount(value) {
+  return Css.css(declaration("animation-iteration-count", toValue$9(value)));
+}
+
+function animationIterationCountMany(values) {
+  return Css.css(declaration("animation-iteration-count", toManyValues$2(values)));
+}
+
+function animationName(value) {
+  return Css.css(declaration("animation-name", toValue$10(value)));
+}
+
+function animationNameMany(values) {
+  return Css.css(declaration("animation-name", toManyValues$3(values)));
+}
+
+function animationPlayState(value) {
+  return Css.css(declaration("animation-play-state", toValue$11(value)));
+}
+
+function animationPlayStateMany(values) {
+  return Css.css(declaration("animation-play-state", toManyValues$4(values)));
+}
+
+function animationTimingFunction(value) {
+  return Css.css(declaration("animation-timing-function", toValue$13(value)));
+}
+
+function background(hex) {
+  return Css.css(declaration("background", toValue$14({
+                      NAME: "hex",
+                      VAL: hex
+                    })));
+}
+
 function color(hex) {
-  return Css.css(declaration("color", toValue$8({
+  return Css.css(declaration("color", toValue$14({
                       NAME: "hex",
                       VAL: hex
                     })));
 }
 
 function colorRaw(hex) {
-  return declaration("color", toValue$8({
+  return declaration("color", toValue$14({
                   NAME: "hex",
                   VAL: hex
                 }));
@@ -288,6 +482,10 @@ export {
   responsiveBreakpoint ,
   minWidth ,
   sm ,
+  active ,
+  link ,
+  visited ,
+  hover ,
   AlignContent ,
   AlignItems ,
   AlignSelf ,
@@ -299,7 +497,11 @@ export {
   AnimationDuration ,
   AnimationFillMode ,
   AnimationIterationCount ,
+  AnimationName ,
+  AnimationPlayState ,
+  AnimationTimingFunction ,
   Color ,
+  Background ,
   alignContent ,
   alignContentRaw ,
   alignItems ,
@@ -309,6 +511,16 @@ export {
   animationDirection ,
   animationDirectionMany ,
   animationDuration ,
+  animationFillMode ,
+  animationFillModeMany ,
+  animationIterationCount ,
+  animationIterationCountMany ,
+  animationName ,
+  animationNameMany ,
+  animationPlayState ,
+  animationPlayStateMany ,
+  animationTimingFunction ,
+  background ,
   color ,
   colorRaw ,
   

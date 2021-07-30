@@ -1,4 +1,5 @@
 // NOTE: Sources: https://www.digitalocean.com/community/tutorials/css-inherit-initial-unset
+// TODO: Compiler errors on illegal values? Alternatives?
 let declaration = (property, value) => `${property}: ${value};`
 
 let breakpointSpecifity = (breakpoint, rules) =>
@@ -37,6 +38,33 @@ let minWidth = (breakpoint: int, rules: string) =>
   )
 
 let sm = styles => Emotion.css(. minWidth(640, styles))
+
+// NOTE: Pseudoclasses
+let active = rules =>
+  Emotion.css(.
+    `&:active {
+  ${rules}
+}`,
+  )
+let link = rules =>
+  Emotion.css(.
+    `&:link {
+  ${rules}
+}`,
+  )
+let visited = rules =>
+  Emotion.css(.
+    `&:visited {
+  ${rules}
+}`,
+  )
+let hover = rules =>
+  Emotion.css(.
+    `&:hover {
+  ${rules}
+}`,
+  )
+
 // INFO: The meaning of global values
 // inherit: Get the property from the parent element.
 // initial: The default value for the property (the browser default).
@@ -197,11 +225,93 @@ module AnimationDuration = {
 }
 
 module AnimationFillMode = {
-
+  type t = [#none | #forwards | #backwards | #both]
+  let toValue = value =>
+    switch value {
+    | #none => "none"
+    | #forwards => "forwards"
+    | #backwards => "backwards"
+    | #both => "both"
+    }
+  let toManyValues = values => renderMultipleValues(Js.Array2.map(values, value => toValue(value)))
 }
 
 module AnimationIterationCount = {
+  type t = [#abs(float) | #infinite]
+  let toValue = value =>
+    switch value {
+    | #abs(float) => float->Belt.Float.toString
+    | #infinite => "infinite"
+    }
+  let toManyValues = values => renderMultipleValues(Js.Array2.map(values, value => toValue(value)))
+}
 
+module AnimationName = {
+  type t = [#none | #str(string)]
+  let toValue = value =>
+    switch value {
+    | #none => "none"
+    | #str(s) => s
+    }
+  let toManyValues = values => renderMultipleValues(Js.Array2.map(values, value => toValue(value)))
+}
+
+module AnimationPlayState = {
+  type t = [#running | #paused]
+  let toValue = value =>
+    switch value {
+    | #running => "running"
+    | #paused => "paused"
+    }
+  let toManyValues = values => renderMultipleValues(Js.Array2.map(values, value => toValue(value)))
+}
+
+module AnimationTimingFunction = {
+  module Steps = {
+    type t = [#jumpStart | #jumpEnd | #jumpNone | #jumpBoth | #start | #end | #num(int)]
+    let toValue = val =>
+      switch val {
+      | #jumpStart => "jump-start"
+      | #jumpEnd => "jump-end"
+      | #jumpNone => "jump-none"
+      | #jumpBoth => "jump-both"
+      | #start => "start"
+      | #end => "end"
+      | #num(int) => Belt.Int.toString(int)
+      }
+  }
+  // TODO: Account for the fact that values inside cubicBezier are from range <0,1>
+  type t = [
+    | #ease
+    | #easeIn
+    | #easeOut
+    | #easeInOut
+    | #linear
+    | #stepStart
+    | #stepEnd
+    | #cubicBezier(float, float, float, float)
+    | #steps(Steps.t, Steps.t)
+  ]
+
+  let toValue = value =>
+    switch value {
+    | #ease => "ease"
+    | #easeIn => "ease-in"
+    | #easeOut => "ease-out"
+    | #easeInOut => "ease-in-out"
+    | #linear => "linear"
+    | #stepStart => "steps(1, start)"
+    | #stepEnd => "steps(1)"
+    | #cubicBezier(v1, v2, v3, v4) =>
+      `cubic-bezier(${Belt.Float.toString(v1)}, ${Belt.Float.toString(v2)}, ${Belt.Float.toString(
+          v3,
+        )}, ${Belt.Float.toString(v4)})`
+    | #steps(v1, v2) =>
+      switch v2 {
+      | #end | #jumpEnd => `steps(${Steps.toValue(v1)})`
+      | _ => `steps(${Steps.toValue(v1)}, ${Steps.toValue(v2)})`
+      }
+    }
 }
 
 // module Time = {
@@ -221,15 +331,6 @@ module AnimationIterationCount = {
 //     | #reverse => "reverse"
 //     | #alternate => "alternate"
 //     | #alternateReverse => "alternate-reverse"
-//     }
-// }
-
-// module AnimationPlayState = {
-//   type t = [#running | #paused]
-//   let toValue = value =>
-//     switch value {
-//     | #running => "running"
-//     | #paused => "paused"
 //     }
 // }
 
@@ -254,20 +355,14 @@ module AnimationIterationCount = {
 //   }
 // }
 
-// module AnimationTimingFunction = {
-//   type t = [#ease | #easeIn | #easeOut | #easeInOut | #linear | #cubicBezier]
-// }
-
-// module AnimationName = {
-//   type t = [#none | #str(string)]
-//   let toValue = value =>
-//     switch value {
-//     | #none => "none"
-//     | #str(s) => s
-//     }
-// }
-
 module Color = {
+  type t = [#hex(string)]
+  let toValue = (color: t) =>
+    switch color {
+    | #hex(string) => `#${string}`
+    }
+}
+module Background = {
   type t = [#hex(string)]
   let toValue = (color: t) =>
     switch color {
@@ -302,5 +397,35 @@ let animationDirectionMany = (values: array<AnimationDirection.t>): rule =>
 let animationDuration = (value: AnimationDuration.t): rule =>
   Emotion.css(. declaration("animation-duration", AnimationDuration.toValue(value)))
 
+let animationFillMode = (value: AnimationFillMode.t): rule =>
+  Emotion.css(. declaration("animation-fill-mode", AnimationFillMode.toValue(value)))
+
+let animationFillModeMany = (values: array<AnimationFillMode.t>): rule =>
+  Emotion.css(. declaration("animation-fill-mode", AnimationFillMode.toManyValues(values)))
+
+let animationIterationCount = (value: AnimationIterationCount.t): rule =>
+  Emotion.css(. declaration("animation-iteration-count", AnimationIterationCount.toValue(value)))
+
+let animationIterationCountMany = (values: array<AnimationIterationCount.t>): rule =>
+  Emotion.css(.
+    declaration("animation-iteration-count", AnimationIterationCount.toManyValues(values)),
+  )
+
+let animationName = (value: AnimationName.t): rule =>
+  Emotion.css(. declaration("animation-name", AnimationName.toValue(value)))
+
+let animationNameMany = (values: array<AnimationName.t>): rule =>
+  Emotion.css(. declaration("animation-name", AnimationName.toManyValues(values)))
+
+let animationPlayState = (value: AnimationPlayState.t): rule =>
+  Emotion.css(. declaration("animation-play-state", AnimationPlayState.toValue(value)))
+
+let animationPlayStateMany = (values: array<AnimationPlayState.t>): rule =>
+  Emotion.css(. declaration("animation-play-state", AnimationPlayState.toManyValues(values)))
+
+let animationTimingFunction = (value: AnimationTimingFunction.t): rule =>
+  Emotion.css(. declaration("animation-timing-function", AnimationTimingFunction.toValue(value)))
+
+let background = hex => Emotion.css(. declaration("background", Color.toValue(#hex(hex))))
 let color = hex => Emotion.css(. declaration("color", Color.toValue(#hex(hex))))
 let colorRaw = hex => declaration("color", Color.toValue(#hex(hex)))
