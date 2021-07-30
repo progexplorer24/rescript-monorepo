@@ -14,8 +14,19 @@ var elementStyles = Tailwind$RescriptMonorepo.twStyle([
           ])
     ]);
 
+var bodyWrapper = Tailwind$RescriptMonorepo.twStyle([
+      Tailwind$RescriptMonorepo.w("full"),
+      Tailwind$RescriptMonorepo.textColor(undefined, "gray900"),
+      Tailwind$RescriptMonorepo.bg(undefined, "gray100"),
+      Tailwind$RescriptMonorepo.dark([
+            Tailwind$RescriptMonorepo.textColor(undefined, "gray100"),
+            Tailwind$RescriptMonorepo.bg(undefined, "gray900")
+          ])
+    ]);
+
 var Styles = {
-  elementStyles: elementStyles
+  elementStyles: elementStyles,
+  bodyWrapper: bodyWrapper
 };
 
 function SectionContainer(Props) {
@@ -23,11 +34,13 @@ function SectionContainer(Props) {
   var classNameOpt = Props.className;
   var className = classNameOpt !== undefined ? classNameOpt : "";
   return React.createElement("div", {
-              className: Tailwind$RescriptMonorepo.merge([
-                    elementStyles,
-                    className
-                  ])
-            }, children);
+              className: bodyWrapper
+            }, React.createElement("div", {
+                  className: Tailwind$RescriptMonorepo.merge([
+                        elementStyles,
+                        className
+                      ])
+                }, children));
 }
 
 var make = SectionContainer;
