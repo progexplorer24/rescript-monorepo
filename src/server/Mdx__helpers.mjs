@@ -2,12 +2,14 @@
 
 import * as Fs from "fs";
 import * as Path from "path";
+import * as Js_dict from "rescript/lib/es6/js_dict.js";
 import * as Belt_Array from "rescript/lib/es6/belt_Array.js";
 import * as Caml_array from "rescript/lib/es6/caml_array.js";
 import * as Caml_format from "rescript/lib/es6/caml_format.js";
 import GrayMatter from "gray-matter";
 import * as Caml_splice_call from "rescript/lib/es6/caml_splice_call.js";
 import * as NodeJS$RescriptMonorepo from "../bindings/NodeJS.mjs";
+import * as SiteMetadata$RescriptMonorepo from "../data/SiteMetadata.mjs";
 
 var root = process.cwd();
 
@@ -160,6 +162,14 @@ function getBlogPostsFromLatest(cwdOpt, pathOpt, param) {
             });
 }
 
+var Params = {};
+
+function getFormattedFiles($$location) {
+  return Belt_Array.map(getFiles(undefined, $$location), (function (slug) {
+                return slug.replace(/^\/blog\//, "");
+              }));
+}
+
 function returnSiteMetadata(pathOpt, param) {
   var path = pathOpt !== undefined ? pathOpt : [
       "data",
@@ -180,12 +190,41 @@ function kebabCase(str) {
   }
 }
 
-var Params = {};
+function formatDateString(date) {
+  return new Date(date).toLocaleDateString(SiteMetadata$RescriptMonorepo.metadata.locale, {
+              year: "numeric",
+              month: "long",
+              day: "numeric"
+            });
+}
 
-function getFormattedFiles($$location) {
-  return Belt_Array.map(getFiles(undefined, $$location), (function (slug) {
-                return slug.replace(/^\/blog\//, "");
-              }));
+function createTagsDictionary(folder) {
+  var files = getFormattedFiles(folder);
+  var postFilePaths = files.map(function (file) {
+        return Path.join(root, "data", folder, file + ".mdx");
+      });
+  var tagsMatrix = postFilePaths.map(function (postFilePath) {
+        var source = readFileSync(undefined, undefined, postFilePath);
+        return GrayMatter(source).data;
+      });
+  var buildDict = function (dictAcc, data) {
+    var bool = data.draft;
+    var isDraft = (bool == null) ? true : bool;
+    if (data.tags.length > 0 && isDraft !== true) {
+      data.tags.forEach(function (tag) {
+            var formattedTag = kebabCase(tag);
+            var value = Js_dict.get(dictAcc, formattedTag);
+            if (value !== undefined) {
+              dictAcc[formattedTag] = value + 1 | 0;
+            } else {
+              dictAcc[formattedTag] = 1;
+            }
+            
+          });
+    }
+    return dictAcc;
+  };
+  return tagsMatrix.reduce(buildDict, {});
 }
 
 export {
@@ -204,10 +243,12 @@ export {
   sortDesc ,
   getAllFrontMatter ,
   getBlogPostsFromLatest ,
-  returnSiteMetadata ,
-  kebabCase ,
   Params ,
   getFormattedFiles ,
+  returnSiteMetadata ,
+  kebabCase ,
+  formatDateString ,
+  createTagsDictionary ,
   
 }
 /* root Not a pure module */

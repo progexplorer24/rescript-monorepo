@@ -62,26 +62,6 @@ let getFileBySlug = (~root=root, slug) => {
   NodeJS.Fs.existsSync(mdxPath) ? NodeJS.Fs.readFileSync(mdxPath) : NodeJS.Fs.readFileSync(mdPath)
 }
 
-// export async function getAllFilesFrontMatter(folder) {
-//   const prefixPaths = path.join(root, 'data', folder)
-
-//   const files = getAllFilesRecursively(prefixPaths)
-
-//   const allFrontMatter = []
-
-//   files.forEach((file) => {
-//     // Replace is needed to work on Windows
-//     const fileName = file.slice(prefixPaths.length + 1).replace(/\\/g, '/')
-//     const source = fs.readFileSync(file, 'utf8')
-//     const { data } = matter(source)
-//     if (data.draft !== true) {
-//       allFrontMatter.push({ ...data, slug: formatSlug(fileName) })
-//     }
-//   })
-
-//   return allFrontMatter.sort((a, b) => dateSortDesc(a.date, b.date))
-// }
-
 let removeRoot = (~root=root, string) =>
   Js.String2.replace(string, NodeJS.Path.join([root, "/data"]), "")
 
@@ -124,8 +104,6 @@ let sortDesc = (a, b) => {
   }
 }
 
-// let blogPath = join([root, "data", "blog"])
-
 let getAllFrontMatter = blogPath => {
   let files = readdirRecursive(blogPath)
   Js.Array2.reduce(
@@ -136,8 +114,6 @@ let getAllFrontMatter = blogPath => {
       let source = readFileSync(fileName)
       let slug = removeMdxExtension(removeRoot(fileName))
       let {data} = GrayMatter.matter(source)
-
-      // Utils.clog(slug)
 
       let lastmod = switch Js.toOption(data.lastmod) {
       | None => ""
@@ -184,6 +160,21 @@ let getBlogPostsFromLatest = (~cwd=root, ~path=["data", "blog"], ()) => {
   Js.Array2.sortInPlaceWith(frontmatterArray, (a, b) => sortDesc(a.date, b.date))
 }
 
+module Params = {
+  type t = {slug: array<string>}
+}
+
+// type params = {slug: string}
+
+type paramsRecord = {params: Params.t}
+
+type slugRecord = {paths: paramsRecord}
+
+let getFormattedFiles = location =>
+  getFiles(location)->Belt.Array.map(slug => Js.String2.replaceByRe(slug, %re("/^\/blog\//"), ""))
+
+// NOTE: Utils functions for blog
+
 let returnSiteMetadata = (~path=["data", "siteMetadata.json"], ()) => {
   let metadataPath = join(Js.Array2.concat([root], path))
   let jsonFile = NodeJS.Fs.readFileSync(metadataPath)
@@ -203,15 +194,54 @@ let kebabCase = str => {
   }
 }
 
-module Params = {
-  type t = {slug: array<string>}
+type dateTemplate = {
+  year: string,
+  month: string,
+  day: string,
 }
 
-// type params = {slug: string}
+let formatDateString = (date: string) => {
+  let dateTemplate = {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  }
 
-type paramsRecord = {params: Params.t}
+  Global.toLocaleDateStringWithOptions(
+    Js.Date.fromString(date),
+    SiteMetadata.metadata.locale,
+    dateTemplate,
+  )
+}
 
-type slugRecord = {paths: paramsRecord}
+let createTagsDictionary = folder => {
+  let files = getFormattedFiles(folder)
 
-let getFormattedFiles = location =>
-  getFiles(location)->Belt.Array.map(slug => Js.String2.replaceByRe(slug, %re("/^\/blog\//"), ""))
+  let postFilePaths = Js.Array2.map(files, file => {
+    join([root, "data", folder, `${file}.mdx`])
+  })
+  let tagsMatrix = Js.Array2.map(postFilePaths, postFilePath => {
+    let source = readFileSync(postFilePath)
+    let {data} = GrayMatter.matter(source)
+    data
+  })
+
+  let buildDict = (dictAcc, data: GrayMatter.data) => {
+    let isDraft = switch Js.toOption(data.draft) {
+    | None => true
+    | Some(bool) => bool
+    }
+
+    Js.Array2.length(data.tags) > 0 && isDraft !== true
+      ? Js.Array2.forEach(data.tags, tag => {
+          let formattedTag = kebabCase(tag)
+          switch Js.Dict.get(dictAcc, formattedTag) {
+          | Some(value) => Js.Dict.set(dictAcc, formattedTag, value + 1)
+          | None => Js.Dict.set(dictAcc, formattedTag, 1)
+          }
+        })
+      : ()
+    dictAcc
+  }
+  Js.Array2.reduce(tagsMatrix, buildDict, Js.Dict.empty())
+}
