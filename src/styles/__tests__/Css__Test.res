@@ -150,3 +150,184 @@ describe("animation-duration works", () => {
     })
   })
 })
+
+describe("animation-fill-mode works", () => {
+  let valArr = [#none, #forwards, #backwards, #both]
+
+  let _animationTests = Js.Array2.map(valArr, val => {
+    it(`animation-fill-mode: ${Css.AnimationFillMode.toValue(val)} - works`, () => {
+      mount(<Component className={Css.animationFillMode(val)}> {"Hello tester"} </Component>)
+      cyGet("#id", ())->shouldHaveCss("animation-fill-mode", Css.AnimationFillMode.toValue(val))
+    })
+  })
+})
+
+describe("animation-fill-mode for multiple values works", () => {
+  let valArr: array<array<Css.AnimationFillMode.t>> = [
+    [#none, #forwards],
+    [#both, #forwards, #none],
+  ]
+
+  let _animationTests = Js.Array2.map(valArr, val => {
+    it(
+      `animation-fill-mode: ${Css.renderMultipleValues(
+          val->Js.Array2.map(item => Css.AnimationFillMode.toValue(item)),
+        )} - works`,
+      () => {
+        mount(<Component className={Css.animationFillModeMany(val)}> {"Hello tester"} </Component>)
+        cyGet("#id", ())->shouldHaveCss(
+          "animation-fill-mode",
+          Css.AnimationFillMode.toManyValues(val),
+        )
+      },
+    )
+  })
+})
+
+describe("animation-iteration-count works", () => {
+  let valArr = [#infinite, #abs(3.), #abs(2.4)]
+
+  let _animationTests = Js.Array2.map(valArr, val => {
+    it(`animation-fill-mode: ${Css.AnimationIterationCount.toValue(val)} - works`, () => {
+      mount(<Component className={Css.animationIterationCount(val)}> {"Hello tester"} </Component>)
+      cyGet("#id", ())->shouldHaveCss(
+        "animation-iteration-count",
+        Css.AnimationIterationCount.toValue(val),
+      )
+    })
+  })
+})
+
+describe("animation-iteration-count for multiple values works", () => {
+  let valArr: array<array<Css.AnimationIterationCount.t>> = [
+    [#abs(2.), #abs(0.), #infinite],
+    [#abs(0.5), #abs(3.), #abs(0.4), #abs(0.2)],
+  ]
+
+  let _animationTests = Js.Array2.map(valArr, val => {
+    it(
+      `animation-iteration-count: ${Css.renderMultipleValues(
+          val->Js.Array2.map(item => Css.AnimationIterationCount.toValue(item)),
+        )} - works`,
+      () => {
+        mount(
+          <Component className={Css.animationIterationCountMany(val)}>
+            {"Hello tester"}
+          </Component>,
+        )
+        cyGet("#id", ())->shouldHaveCss(
+          "animation-iteration-count",
+          Css.AnimationIterationCount.toManyValues(val),
+        )
+      },
+    )
+  })
+})
+
+describe("animation-name works", () => {
+  let valArr = [#none, #str("test_05"), #str("-specific"), #str("sliding-vertically")]
+
+  let _animationTests = Js.Array2.map(valArr, val => {
+    it(`animation-name: ${Css.AnimationName.toValue(val)} - works`, () => {
+      mount(<Component className={Css.animationName(val)}> {"Hello tester"} </Component>)
+      cyGet("#id", ())->shouldHaveCss("animation-name", Css.AnimationName.toValue(val))
+    })
+  })
+})
+
+describe("animation-name for multiple values works", () => {
+  let valArr: array<array<Css.AnimationName.t>> = [
+    [#str("test1"), #str("animation4"), #none],
+    [#none, #str("-moz-specific"), #str("sliding")],
+  ]
+
+  let _animationTests = Js.Array2.map(valArr, val => {
+    it(
+      `animation-name: ${Css.renderMultipleValues(
+          val->Js.Array2.map(item => Css.AnimationName.toValue(item)),
+        )} - works`,
+      () => {
+        mount(<Component className={Css.animationNameMany(val)}> {"Hello tester"} </Component>)
+        cyGet("#id", ())->shouldHaveCss("animation-name", Css.AnimationName.toManyValues(val))
+      },
+    )
+  })
+})
+
+describe("animation-play-state works", () => {
+  let valArr = [#running, #paused]
+
+  let _animationTests = Js.Array2.map(valArr, val => {
+    it(`animation-play-state: ${Css.AnimationPlayState.toValue(val)} - works`, () => {
+      mount(<Component className={Css.animationPlayState(val)}> {"Hello tester"} </Component>)
+      cyGet("#id", ())->shouldHaveCss("animation-play-state", Css.AnimationPlayState.toValue(val))
+    })
+  })
+})
+
+describe("animation-play-state for multiple values works", () => {
+  let valArr: array<array<Css.AnimationPlayState.t>> = [
+    [#paused, #running, #running],
+    [#running, #paused, #running],
+  ]
+
+  let _animationTests = Js.Array2.map(valArr, val => {
+    it(
+      `animation-play-state: ${Css.renderMultipleValues(
+          val->Js.Array2.map(item => Css.AnimationPlayState.toValue(item)),
+        )} - works`,
+      () => {
+        mount(<Component className={Css.animationPlayStateMany(val)}> {"Hello tester"} </Component>)
+        cyGet("#id", ())->shouldHaveCss(
+          "animation-play-state",
+          Css.AnimationPlayState.toManyValues(val),
+        )
+      },
+    )
+  })
+})
+
+describe("animation-timing-function works", () => {
+  let valArr = [
+    #ease,
+    #easeIn,
+    #easeOut,
+    #easeInOut,
+    #linear,
+    #stepStart,
+    #stepEnd,
+    #steps(#num(4), #end),
+    #steps(#num(4), #jumpStart),
+    #steps(#num(10), #jumpEnd),
+    #steps(#num(20), #jumpNone),
+    #steps(#num(5), #jumpBoth),
+    #steps(#num(6), #start),
+    #steps(#num(8), #end),
+    #cubicBezier(0.9, 0.7, 0.1, 0.3),
+    #cubicBezier(0.1, 0.7, 1.0, 0.1),
+    #cubicBezier(0.1, 0.87, 0.1, 0.01),
+  ]
+
+  let _animationTests = Js.Array2.map(valArr, val => {
+    it(`animation-timing-function: ${Css.AnimationTimingFunction.toValue(val)} - works`, () => {
+      mount(<Component className={Css.animationTimingFunction(val)}> {"Hello tester"} </Component>)
+      cyGet("#id", ())->shouldHaveCss(
+        "animation-timing-function",
+        Css.AnimationTimingFunction.toValue(val),
+      )
+    })
+  })
+})
+
+// TODO: We need to work on that.
+describeOnly(":active pseudoselector works", () => {
+  module Link = {
+    @react.component
+    let make = (~children: string, ~className) => <a href="#" className> {children->Utils.str} </a>
+  }
+
+  it(`applying :active pseudoclass - works`, () => {
+    mount(<Link className={Css.color("000000")}> {"Hello tester"} </Link>)
+    cyGet("a", ())->shouldExist
+  })
+})

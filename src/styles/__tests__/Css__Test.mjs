@@ -223,6 +223,369 @@ Cypress$RescriptMonorepo.describe("animation-duration works", (function (param) 
         
       }));
 
+Cypress$RescriptMonorepo.describe("animation-fill-mode works", (function (param) {
+        var valArr = [
+          "none",
+          "forwards",
+          "backwards",
+          "both"
+        ];
+        valArr.map(function (val) {
+              return Cypress$RescriptMonorepo.it("animation-fill-mode: " + Css$RescriptMonorepo.AnimationFillMode.toValue(val) + " - works", (function (param) {
+                            React$1.mount(React.createElement(Css__Test$Component, {
+                                      children: "Hello tester",
+                                      className: Css$RescriptMonorepo.animationFillMode(val)
+                                    }));
+                            return Cypress$RescriptMonorepo.shouldHaveCss(cy.get("#id", undefined), "animation-fill-mode", Css$RescriptMonorepo.AnimationFillMode.toValue(val));
+                          }));
+            });
+        
+      }));
+
+Cypress$RescriptMonorepo.describe("animation-fill-mode for multiple values works", (function (param) {
+        var valArr = [
+          [
+            "none",
+            "forwards"
+          ],
+          [
+            "both",
+            "forwards",
+            "none"
+          ]
+        ];
+        valArr.map(function (val) {
+              return Cypress$RescriptMonorepo.it("animation-fill-mode: " + Css$RescriptMonorepo.renderMultipleValues(val.map(function (item) {
+                                  return Css$RescriptMonorepo.AnimationFillMode.toValue(item);
+                                })) + " - works", (function (param) {
+                            React$1.mount(React.createElement(Css__Test$Component, {
+                                      children: "Hello tester",
+                                      className: Css$RescriptMonorepo.animationFillModeMany(val)
+                                    }));
+                            return Cypress$RescriptMonorepo.shouldHaveCss(cy.get("#id", undefined), "animation-fill-mode", Css$RescriptMonorepo.AnimationFillMode.toManyValues(val));
+                          }));
+            });
+        
+      }));
+
+Cypress$RescriptMonorepo.describe("animation-iteration-count works", (function (param) {
+        var valArr = [
+          "infinite",
+          {
+            NAME: "abs",
+            VAL: 3
+          },
+          {
+            NAME: "abs",
+            VAL: 2.4
+          }
+        ];
+        valArr.map(function (val) {
+              return Cypress$RescriptMonorepo.it("animation-fill-mode: " + Css$RescriptMonorepo.AnimationIterationCount.toValue(val) + " - works", (function (param) {
+                            React$1.mount(React.createElement(Css__Test$Component, {
+                                      children: "Hello tester",
+                                      className: Css$RescriptMonorepo.animationIterationCount(val)
+                                    }));
+                            return Cypress$RescriptMonorepo.shouldHaveCss(cy.get("#id", undefined), "animation-iteration-count", Css$RescriptMonorepo.AnimationIterationCount.toValue(val));
+                          }));
+            });
+        
+      }));
+
+Cypress$RescriptMonorepo.describe("animation-iteration-count for multiple values works", (function (param) {
+        var valArr = [
+          [
+            {
+              NAME: "abs",
+              VAL: 2
+            },
+            {
+              NAME: "abs",
+              VAL: 0
+            },
+            "infinite"
+          ],
+          [
+            {
+              NAME: "abs",
+              VAL: 0.5
+            },
+            {
+              NAME: "abs",
+              VAL: 3
+            },
+            {
+              NAME: "abs",
+              VAL: 0.4
+            },
+            {
+              NAME: "abs",
+              VAL: 0.2
+            }
+          ]
+        ];
+        valArr.map(function (val) {
+              return Cypress$RescriptMonorepo.it("animation-iteration-count: " + Css$RescriptMonorepo.renderMultipleValues(val.map(function (item) {
+                                  return Css$RescriptMonorepo.AnimationIterationCount.toValue(item);
+                                })) + " - works", (function (param) {
+                            React$1.mount(React.createElement(Css__Test$Component, {
+                                      children: "Hello tester",
+                                      className: Css$RescriptMonorepo.animationIterationCountMany(val)
+                                    }));
+                            return Cypress$RescriptMonorepo.shouldHaveCss(cy.get("#id", undefined), "animation-iteration-count", Css$RescriptMonorepo.AnimationIterationCount.toManyValues(val));
+                          }));
+            });
+        
+      }));
+
+Cypress$RescriptMonorepo.describe("animation-name works", (function (param) {
+        var valArr = [
+          "none",
+          {
+            NAME: "str",
+            VAL: "test_05"
+          },
+          {
+            NAME: "str",
+            VAL: "-specific"
+          },
+          {
+            NAME: "str",
+            VAL: "sliding-vertically"
+          }
+        ];
+        valArr.map(function (val) {
+              return Cypress$RescriptMonorepo.it("animation-name: " + Css$RescriptMonorepo.AnimationName.toValue(val) + " - works", (function (param) {
+                            React$1.mount(React.createElement(Css__Test$Component, {
+                                      children: "Hello tester",
+                                      className: Css$RescriptMonorepo.animationName(val)
+                                    }));
+                            return Cypress$RescriptMonorepo.shouldHaveCss(cy.get("#id", undefined), "animation-name", Css$RescriptMonorepo.AnimationName.toValue(val));
+                          }));
+            });
+        
+      }));
+
+Cypress$RescriptMonorepo.describe("animation-name for multiple values works", (function (param) {
+        var valArr = [
+          [
+            {
+              NAME: "str",
+              VAL: "test1"
+            },
+            {
+              NAME: "str",
+              VAL: "animation4"
+            },
+            "none"
+          ],
+          [
+            "none",
+            {
+              NAME: "str",
+              VAL: "-moz-specific"
+            },
+            {
+              NAME: "str",
+              VAL: "sliding"
+            }
+          ]
+        ];
+        valArr.map(function (val) {
+              return Cypress$RescriptMonorepo.it("animation-name: " + Css$RescriptMonorepo.renderMultipleValues(val.map(function (item) {
+                                  return Css$RescriptMonorepo.AnimationName.toValue(item);
+                                })) + " - works", (function (param) {
+                            React$1.mount(React.createElement(Css__Test$Component, {
+                                      children: "Hello tester",
+                                      className: Css$RescriptMonorepo.animationNameMany(val)
+                                    }));
+                            return Cypress$RescriptMonorepo.shouldHaveCss(cy.get("#id", undefined), "animation-name", Css$RescriptMonorepo.AnimationName.toManyValues(val));
+                          }));
+            });
+        
+      }));
+
+Cypress$RescriptMonorepo.describe("animation-play-state works", (function (param) {
+        var valArr = [
+          "running",
+          "paused"
+        ];
+        valArr.map(function (val) {
+              return Cypress$RescriptMonorepo.it("animation-play-state: " + Css$RescriptMonorepo.AnimationPlayState.toValue(val) + " - works", (function (param) {
+                            React$1.mount(React.createElement(Css__Test$Component, {
+                                      children: "Hello tester",
+                                      className: Css$RescriptMonorepo.animationPlayState(val)
+                                    }));
+                            return Cypress$RescriptMonorepo.shouldHaveCss(cy.get("#id", undefined), "animation-play-state", Css$RescriptMonorepo.AnimationPlayState.toValue(val));
+                          }));
+            });
+        
+      }));
+
+Cypress$RescriptMonorepo.describe("animation-play-state for multiple values works", (function (param) {
+        var valArr = [
+          [
+            "paused",
+            "running",
+            "running"
+          ],
+          [
+            "running",
+            "paused",
+            "running"
+          ]
+        ];
+        valArr.map(function (val) {
+              return Cypress$RescriptMonorepo.it("animation-play-state: " + Css$RescriptMonorepo.renderMultipleValues(val.map(function (item) {
+                                  return Css$RescriptMonorepo.AnimationPlayState.toValue(item);
+                                })) + " - works", (function (param) {
+                            React$1.mount(React.createElement(Css__Test$Component, {
+                                      children: "Hello tester",
+                                      className: Css$RescriptMonorepo.animationPlayStateMany(val)
+                                    }));
+                            return Cypress$RescriptMonorepo.shouldHaveCss(cy.get("#id", undefined), "animation-play-state", Css$RescriptMonorepo.AnimationPlayState.toManyValues(val));
+                          }));
+            });
+        
+      }));
+
+Cypress$RescriptMonorepo.describe("animation-timing-function works", (function (param) {
+        var valArr = [
+          "ease",
+          "easeIn",
+          "easeOut",
+          "easeInOut",
+          "linear",
+          "stepStart",
+          "stepEnd",
+          {
+            NAME: "steps",
+            VAL: [
+              {
+                NAME: "num",
+                VAL: 4
+              },
+              "end"
+            ]
+          },
+          {
+            NAME: "steps",
+            VAL: [
+              {
+                NAME: "num",
+                VAL: 4
+              },
+              "jumpStart"
+            ]
+          },
+          {
+            NAME: "steps",
+            VAL: [
+              {
+                NAME: "num",
+                VAL: 10
+              },
+              "jumpEnd"
+            ]
+          },
+          {
+            NAME: "steps",
+            VAL: [
+              {
+                NAME: "num",
+                VAL: 20
+              },
+              "jumpNone"
+            ]
+          },
+          {
+            NAME: "steps",
+            VAL: [
+              {
+                NAME: "num",
+                VAL: 5
+              },
+              "jumpBoth"
+            ]
+          },
+          {
+            NAME: "steps",
+            VAL: [
+              {
+                NAME: "num",
+                VAL: 6
+              },
+              "start"
+            ]
+          },
+          {
+            NAME: "steps",
+            VAL: [
+              {
+                NAME: "num",
+                VAL: 8
+              },
+              "end"
+            ]
+          },
+          {
+            NAME: "cubicBezier",
+            VAL: [
+              0.9,
+              0.7,
+              0.1,
+              0.3
+            ]
+          },
+          {
+            NAME: "cubicBezier",
+            VAL: [
+              0.1,
+              0.7,
+              1.0,
+              0.1
+            ]
+          },
+          {
+            NAME: "cubicBezier",
+            VAL: [
+              0.1,
+              0.87,
+              0.1,
+              0.01
+            ]
+          }
+        ];
+        valArr.map(function (val) {
+              return Cypress$RescriptMonorepo.it("animation-timing-function: " + Css$RescriptMonorepo.AnimationTimingFunction.toValue(val) + " - works", (function (param) {
+                            React$1.mount(React.createElement(Css__Test$Component, {
+                                      children: "Hello tester",
+                                      className: Css$RescriptMonorepo.animationTimingFunction(val)
+                                    }));
+                            return Cypress$RescriptMonorepo.shouldHaveCss(cy.get("#id", undefined), "animation-timing-function", Css$RescriptMonorepo.AnimationTimingFunction.toValue(val));
+                          }));
+            });
+        
+      }));
+
+Cypress$RescriptMonorepo.describeOnly(":active pseudoselector works", (function (param) {
+        var Css__Test = function (Props) {
+          var children = Props.children;
+          var className = Props.className;
+          return React.createElement("a", {
+                      className: className,
+                      href: "#"
+                    }, Utils$RescriptMonorepo.str(children));
+        };
+        return Cypress$RescriptMonorepo.it("applying :active pseudoclass - works", (function (param) {
+                      React$1.mount(React.createElement(Css__Test, {
+                                children: "Hello tester",
+                                className: Css$RescriptMonorepo.color("000000")
+                              }));
+                      return Cypress$RescriptMonorepo.shouldExist(cy.get("a", undefined));
+                    }));
+      }));
+
 export {
   Component ,
   
