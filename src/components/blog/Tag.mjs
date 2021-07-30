@@ -11,7 +11,9 @@ var elementStyles = Tailwind$RescriptMonorepo.twStyle([
       Tailwind$RescriptMonorepo.text("sm"),
       Tailwind$RescriptMonorepo.fontWeight(500),
       Tailwind$RescriptMonorepo.uppercase,
-      Tailwind$RescriptMonorepo.hover([Tailwind$RescriptMonorepo.textColor(undefined, "blue600")])
+      Tailwind$RescriptMonorepo.textColor(undefined, "blue500"),
+      Tailwind$RescriptMonorepo.hover([Tailwind$RescriptMonorepo.textColor(undefined, "blue600")]),
+      Tailwind$RescriptMonorepo.dark([Tailwind$RescriptMonorepo.hover([Tailwind$RescriptMonorepo.textColor(undefined, "blue400")])])
     ]);
 
 var Styles = {
@@ -30,7 +32,7 @@ function Tag(Props) {
                           elementStyles,
                           className
                         ])
-                  }, Utils$RescriptMonorepo.str(text))
+                  }, Utils$RescriptMonorepo.str(text.split(" ").join("-")))
             });
 }
 
