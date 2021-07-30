@@ -26,7 +26,14 @@ module Styles = {
   let mdxWrapper = twStyle([divideY(#1), borderColor(#gray200), xl([pb(#0), col(#3), row(#2)])])
 }
 
-let postDateTemplate: Global.dateTemplate = {
+type dateTemplate = {
+  weekday: string,
+  year: string,
+  month: string,
+  day: string,
+}
+
+let postDateTemplate = {
   weekday: "long",
   year: "numeric",
   month: "long",
@@ -45,7 +52,7 @@ let make = (~children, ~frontmatter: Mdx__helpers.frontmatterAndSlug) => {
 
   // (date, title, tags, lastmod, draft, summary, images)->Utils.clog
   <SectionContainer>
-    <Navigation />
+    <LayoutWrapper.Navigation />
     <article>
       <div>
         <header className=Styles.header>
@@ -56,7 +63,10 @@ let make = (~children, ~frontmatter: Mdx__helpers.frontmatterAndSlug) => {
                 <dd className=Styles.dd>
                   <time dateTime={date}>
                     {Js.Date.fromString(date)
-                    ->Global.toLocaleDateStringWith(SiteMetadata.metadata.locale, postDateTemplate)
+                    ->Global.toLocaleDateStringWithOptions(
+                      SiteMetadata.metadata.locale,
+                      postDateTemplate,
+                    )
                     ->Utils.str}
                   </time>
                 </dd>

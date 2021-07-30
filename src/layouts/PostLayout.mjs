@@ -5,8 +5,8 @@ import * as Mdx$RescriptMonorepo from "../components/blog/Mdx.mjs";
 import * as Utils$RescriptMonorepo from "../utils/Utils.mjs";
 import * as Tailwind$RescriptMonorepo from "../styles/tailwind/Tailwind.mjs";
 import * as PageTitle$RescriptMonorepo from "../components/blog/PageTitle.mjs";
-import * as Navigation$RescriptMonorepo from "../components/blog/Navigation.mjs";
 import * as SiteMetadata$RescriptMonorepo from "../data/SiteMetadata.mjs";
+import * as LayoutWrapper$RescriptMonorepo from "../components/blog/LayoutWrapper.mjs";
 import * as SectionContainer$RescriptMonorepo from "../components/blog/SectionContainer.mjs";
 
 var header = Tailwind$RescriptMonorepo.twStyle([
@@ -31,10 +31,10 @@ var dd = Tailwind$RescriptMonorepo.twStyle([
     ]);
 
 var div2 = Tailwind$RescriptMonorepo.twStyle([
-      Tailwind$RescriptMonorepo.divideY(undefined, 1),
-      Tailwind$RescriptMonorepo.borderColor("gray200"),
+      Tailwind$RescriptMonorepo.divideY(undefined, undefined, 1),
+      Tailwind$RescriptMonorepo.borderColor(undefined, "gray200"),
       Tailwind$RescriptMonorepo.xl([
-            Tailwind$RescriptMonorepo.divideY(undefined, 0),
+            Tailwind$RescriptMonorepo.divideY(undefined, undefined, 0),
             Tailwind$RescriptMonorepo.grid,
             Tailwind$RescriptMonorepo.gridCols(4),
             Tailwind$RescriptMonorepo.gapX(6)
@@ -47,7 +47,7 @@ var dlAuthors = Tailwind$RescriptMonorepo.twStyle([
       Tailwind$RescriptMonorepo.xl([
             Tailwind$RescriptMonorepo.pt(11),
             Tailwind$RescriptMonorepo.borderB(1),
-            Tailwind$RescriptMonorepo.borderColor("gray500")
+            Tailwind$RescriptMonorepo.borderColor(undefined, "gray500")
           ])
     ]);
 
@@ -87,8 +87,8 @@ var dlAuthors2 = Tailwind$RescriptMonorepo.twStyle([
 var ddAuthors = Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.textColor(undefined, "gray900")]);
 
 var mdxWrapper = Tailwind$RescriptMonorepo.twStyle([
-      Tailwind$RescriptMonorepo.divideY(undefined, 1),
-      Tailwind$RescriptMonorepo.borderColor("gray200"),
+      Tailwind$RescriptMonorepo.divideY(undefined, undefined, 1),
+      Tailwind$RescriptMonorepo.borderColor(undefined, "gray200"),
       Tailwind$RescriptMonorepo.xl([
             Tailwind$RescriptMonorepo.pb(0),
             Tailwind$RescriptMonorepo.col(3),
@@ -135,7 +135,7 @@ function PostLayout(Props) {
   var date = frontmatter.date;
   return React.createElement(SectionContainer$RescriptMonorepo.make, {
               children: null
-            }, React.createElement(Navigation$RescriptMonorepo.make, {}), React.createElement("article", undefined, React.createElement("div", undefined, React.createElement("header", {
+            }, React.createElement(LayoutWrapper$RescriptMonorepo.Navigation.make, {}), React.createElement("article", undefined, React.createElement("div", undefined, React.createElement("header", {
                           className: header
                         }, React.createElement("div", {
                               className: div1
