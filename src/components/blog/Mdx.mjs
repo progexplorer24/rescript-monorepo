@@ -2,9 +2,9 @@
 
 import * as CssJs from "bs-css-emotion/src/CssJs.mjs";
 import * as React from "react";
-import Link from "next/link";
 import $$Image from "next/image";
 import * as Caml_option from "rescript/lib/es6/caml_option.js";
+import * as Link$RescriptMonorepo from "./Link.mjs";
 import * as Utils$RescriptMonorepo from "../../utils/Utils.mjs";
 import * as Tailwind$RescriptMonorepo from "../../styles/tailwind/Tailwind.mjs";
 import * as TypographyLayout$RescriptMonorepo from "../../layouts/TypographyLayout.mjs";
@@ -62,6 +62,12 @@ var paragraph = Tailwind$RescriptMonorepo.merge([
       paragraphXl
     ]);
 
+var link = Tailwind$RescriptMonorepo.twStyle([
+      Tailwind$RescriptMonorepo.textColor(undefined, "coolGray900"),
+      Tailwind$RescriptMonorepo.noUnderline,
+      Tailwind$RescriptMonorepo.fontWeight(500)
+    ]);
+
 var leadBase = Tailwind$RescriptMonorepo.twStyle([
       Tailwind$RescriptMonorepo.textColor(undefined, "coolGray600"),
       Tailwind$RescriptMonorepo.Typography.fontSize(18),
@@ -94,12 +100,6 @@ var lead = Tailwind$RescriptMonorepo.merge([
       leadXl
     ]);
 
-var link = Tailwind$RescriptMonorepo.twStyle([
-      Tailwind$RescriptMonorepo.textColor(undefined, "coolGray900"),
-      Tailwind$RescriptMonorepo.underline,
-      Tailwind$RescriptMonorepo.fontWeight(500)
-    ]);
-
 var strong = Tailwind$RescriptMonorepo.twStyle([
       Tailwind$RescriptMonorepo.textColor(undefined, "coolGray900"),
       Tailwind$RescriptMonorepo.fontWeight(600)
@@ -109,7 +109,7 @@ var removeTopMarginFromNextElement = Tailwind$RescriptMonorepo.selector("&& + *"
 
 var hrBase = Tailwind$RescriptMonorepo.twStyle([
       Tailwind$RescriptMonorepo.borderT(1),
-      Tailwind$RescriptMonorepo.borderColor("coolGray200"),
+      Tailwind$RescriptMonorepo.borderColor(undefined, "coolGray200"),
       Tailwind$RescriptMonorepo.Typography.my(40, 14),
       removeTopMarginFromNextElement
     ]);
@@ -129,7 +129,7 @@ var hr = Tailwind$RescriptMonorepo.merge([
 
 var blockquoteBase = Tailwind$RescriptMonorepo.twStyle([
       Tailwind$RescriptMonorepo.italic,
-      Tailwind$RescriptMonorepo.borderColor("coolGray200"),
+      Tailwind$RescriptMonorepo.borderColor(undefined, "coolGray200"),
       Tailwind$RescriptMonorepo.fontWeight(500),
       Tailwind$RescriptMonorepo.borderL(4),
       Tailwind$RescriptMonorepo.selector("p", [
@@ -810,7 +810,7 @@ var thead = Tailwind$RescriptMonorepo.merge([
             Tailwind$RescriptMonorepo.textColor(undefined, "coolGray900"),
             Tailwind$RescriptMonorepo.fontWeight(600),
             Tailwind$RescriptMonorepo.borderB(1),
-            Tailwind$RescriptMonorepo.borderColor("coolGray300")
+            Tailwind$RescriptMonorepo.borderColor(undefined, "coolGray300")
           ])
     ]);
 
@@ -847,7 +847,7 @@ var tbodyTd = Tailwind$RescriptMonorepo.merge([
 
 var tbodyTr = Tailwind$RescriptMonorepo.selector("& tr", [
       Tailwind$RescriptMonorepo.borderB(1),
-      Tailwind$RescriptMonorepo.borderColor("coolGray300"),
+      Tailwind$RescriptMonorepo.borderColor(undefined, "coolGray300"),
       Tailwind$RescriptMonorepo.lastChild([Tailwind$RescriptMonorepo.borderB(0)])
     ]);
 
@@ -873,6 +873,7 @@ var Styles = {
   paragraphLg: paragraphLg,
   paragraphXl: paragraphXl,
   paragraph: paragraph,
+  link: link,
   rebaseLead: 18,
   rebaseLeadSm: 20,
   rebaseLeadLg: 22,
@@ -882,7 +883,6 @@ var Styles = {
   leadLg: leadLg,
   leadXl: leadXl,
   lead: lead,
-  link: link,
   strong: strong,
   removeTopMarginFromNextElement: removeTopMarginFromNextElement,
   hrBase: hrBase,
@@ -1228,38 +1228,15 @@ function Mdx$a(Props) {
   var href = hrefOpt !== undefined ? hrefOpt : "/";
   var className = classNameOpt !== undefined ? classNameOpt : "";
   var ariaLabel = ariaLabelOpt !== undefined ? ariaLabelOpt : "";
-  if ("/".startsWith(href)) {
-    return React.createElement(Link, {
-                href: href,
-                children: React.createElement("a", {
-                      "aria-label": ariaLabel,
-                      className: Tailwind$RescriptMonorepo.merge([
-                            link,
-                            className
-                          ])
-                    }, children)
-              });
-  } else if ("#".startsWith(href)) {
-    return React.createElement("a", {
-                "aria-label": ariaLabel,
-                className: Tailwind$RescriptMonorepo.merge([
-                      link,
-                      className
-                    ]),
-                href: href
-              }, children);
-  } else {
-    return React.createElement("a", {
-                "aria-label": ariaLabel,
-                className: Tailwind$RescriptMonorepo.merge([
-                      link,
-                      className
-                    ]),
-                href: href,
-                rel: "noopener noreferrer",
-                target: "_blank"
-              }, children);
-  }
+  return React.createElement(Link$RescriptMonorepo.make, {
+              children: children,
+              href: href,
+              className: Tailwind$RescriptMonorepo.merge([
+                    link,
+                    className
+                  ]),
+              ariaLabel: ariaLabel
+            });
 }
 
 function Mdx$img(Props) {

@@ -28,6 +28,8 @@ module Styles = {
 
   let paragraph = merge(. [paragraphBase, paragraphSm, paragraphLg, paragraphXl])
 
+  let link = twStyle([textColor(#coolGray900), noUnderline, fontWeight(#500)])
+
   let rebaseLead = 18.
   let rebaseLeadSm = 20.
   let rebaseLeadLg = 22.
@@ -63,8 +65,6 @@ module Styles = {
   ])
 
   let lead = merge(. [leadBase, leadSm, leadLg, leadXl])
-
-  let link = twStyle([textColor(#coolGray900), underline, fontWeight(#500)])
 
   let strong = twStyle([textColor(#coolGray900), fontWeight(#600)])
 
@@ -842,22 +842,7 @@ let hr = (~className="") => <hr className={Tailwind.merge(. [Styles.hr, classNam
 
 @react.component
 let a = (~children, ~href="/", ~className="", ~ariaLabel="") =>
-  if Js.String2.startsWith("/", href) {
-    <Next.Link href={href}>
-      <a className={Tailwind.merge(. [Styles.link, className])} ariaLabel> children </a>
-    </Next.Link>
-  } else if Js.String2.startsWith("#", href) {
-    <a ariaLabel className={Tailwind.merge(. [Styles.link, className])} href={href}> children </a>
-  } else {
-    <a
-      className={Tailwind.merge(. [Styles.link, className])}
-      ariaLabel
-      target="_blank"
-      rel="noopener noreferrer"
-      href={href}>
-      children
-    </a>
-  }
+  <Link ariaLabel className={Tailwind.merge(. [Styles.link, className])} href> children </Link>
 
 @react.component
 let img = (~src, ~alt="", ~className="", ~figcaption=?) =>
