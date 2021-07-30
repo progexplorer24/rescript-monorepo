@@ -8,6 +8,17 @@ import * as Mdx__helpers$RescriptMonorepo from "./server/Mdx__helpers.mjs";
 
 function getStaticProps(param) {
   var slug = param.params.slug;
+  var slugWithBlog = ["/blog"].concat(slug);
+  var path = Mdx__helpers$RescriptMonorepo.join([
+        Mdx__helpers$RescriptMonorepo.root,
+        "data",
+        "blog"
+      ]);
+  var allPosts = Mdx__helpers$RescriptMonorepo.getAllFrontMatter(path);
+  allPosts.findIndex(function (post) {
+        return post.slug === slugWithBlog.join("/");
+      });
+  Mdx__helpers$RescriptMonorepo.getFileBySlug(undefined, slugWithBlog);
   var postFilePath = Mdx__helpers$RescriptMonorepo.join([
         Mdx__helpers$RescriptMonorepo.root,
         "data",

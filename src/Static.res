@@ -9,6 +9,15 @@ type props = {
 
 let getStaticProps: Next.GetStaticProps.t<props, Mdx__helpers.Params.t, _> = ({params, _}) => {
   let {slug} = params
+  let slugWithBlog = Js.Array2.concat(["/blog"], slug)
+  let path = Mdx__helpers.join([Mdx__helpers.root, "data", "blog"])
+  let allPosts = Mdx__helpers.getAllFrontMatter(path)
+  let _postIndex =
+    allPosts->Js.Array2.findIndex(post => post.slug === Js.Array2.joinWith(slugWithBlog, "/"))
+  // let prev = Belt.Array.get(allPosts, postIndex + 1)
+  // let next = Belt.Array.get(allPosts, postIndex - 1)
+  let _post = Mdx__helpers.getFileBySlug(slugWithBlog)
+
   let postFilePath = Mdx__helpers.join([
     Mdx__helpers.root,
     "data",
