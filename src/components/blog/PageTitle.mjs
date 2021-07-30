@@ -7,7 +7,7 @@ var elementStyles = Tailwind$RescriptMonorepo.twStyle([
       Tailwind$RescriptMonorepo.text("xl3"),
       Tailwind$RescriptMonorepo.fontWeight(800),
       Tailwind$RescriptMonorepo.tracking("tight"),
-      Tailwind$RescriptMonorepo.textColor(undefined, "gray900"),
+      Tailwind$RescriptMonorepo.leading(9),
       Tailwind$RescriptMonorepo.sm([
             Tailwind$RescriptMonorepo.text("xl4"),
             Tailwind$RescriptMonorepo.leading(10)
@@ -15,7 +15,9 @@ var elementStyles = Tailwind$RescriptMonorepo.twStyle([
       Tailwind$RescriptMonorepo.md([
             Tailwind$RescriptMonorepo.text("xl5"),
             Tailwind$RescriptMonorepo.leading(14)
-          ])
+          ]),
+      Tailwind$RescriptMonorepo.textColor(undefined, "gray900"),
+      Tailwind$RescriptMonorepo.dark([Tailwind$RescriptMonorepo.textColor(undefined, "gray100")])
     ]);
 
 var Styles = {
