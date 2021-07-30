@@ -2,42 +2,165 @@
 
 import * as CssJs from "bs-css-emotion/src/CssJs.mjs";
 import * as React from "react";
+import * as Belt_Array from "rescript/lib/es6/belt_Array.js";
+import * as Link$RescriptMonorepo from "./Link.mjs";
+import * as Utils$RescriptMonorepo from "../../utils/Utils.mjs";
+import * as Footer$RescriptMonorepo from "./Footer.mjs";
 import * as Tailwind$RescriptMonorepo from "../../styles/tailwind/Tailwind.mjs";
-import * as Navigation$RescriptMonorepo from "./Navigation.mjs";
+import * as ThemeSwitch$RescriptMonorepo from "./ThemeSwitch.mjs";
+import * as SiteMetadata$RescriptMonorepo from "../../data/SiteMetadata.mjs";
+import * as HeaderNavLinks$RescriptMonorepo from "../../data/HeaderNavLinks.mjs";
 import * as SectionContainer$RescriptMonorepo from "./SectionContainer.mjs";
 
-var flexWrapper = Tailwind$RescriptMonorepo.twStyle([
+var header = Tailwind$RescriptMonorepo.twStyle([
+      Tailwind$RescriptMonorepo.flex,
+      Tailwind$RescriptMonorepo.itemsCenter,
+      Tailwind$RescriptMonorepo.justifyBetween,
+      Tailwind$RescriptMonorepo.py(10)
+    ]);
+
+var linkWrapper = Tailwind$RescriptMonorepo.twStyle([
+      Tailwind$RescriptMonorepo.flex,
+      Tailwind$RescriptMonorepo.itemsCenter,
+      Tailwind$RescriptMonorepo.justifyBetween,
+      Tailwind$RescriptMonorepo.text("base"),
+      Tailwind$RescriptMonorepo.fontWeight(800),
+      Tailwind$RescriptMonorepo.textColor(undefined, "gray900"),
+      Tailwind$RescriptMonorepo.dark([Tailwind$RescriptMonorepo.textColor(undefined, "gray100")])
+    ]);
+
+var titleStyles = Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.noUnderline]);
+
+var linksBlock = Tailwind$RescriptMonorepo.twStyle([
+      Tailwind$RescriptMonorepo.flex,
+      Tailwind$RescriptMonorepo.itemsCenter,
+      Tailwind$RescriptMonorepo.text("base"),
+      Tailwind$RescriptMonorepo.leading(5)
+    ]);
+
+var hideForSm = Tailwind$RescriptMonorepo.twStyle([
+      Tailwind$RescriptMonorepo.hidden,
+      Tailwind$RescriptMonorepo.sm([Tailwind$RescriptMonorepo.block])
+    ]);
+
+var headerLink = Tailwind$RescriptMonorepo.twStyle([
+      Tailwind$RescriptMonorepo.p(1),
+      Tailwind$RescriptMonorepo.fontWeight(500),
+      Tailwind$RescriptMonorepo.noUnderline,
+      Tailwind$RescriptMonorepo.sm([Tailwind$RescriptMonorepo.p(4)]),
+      Tailwind$RescriptMonorepo.textColor(undefined, "gray900"),
+      Tailwind$RescriptMonorepo.dark([Tailwind$RescriptMonorepo.textColor(undefined, "gray100")])
+    ]);
+
+var Styles = {
+  header: header,
+  linkWrapper: linkWrapper,
+  titleStyles: titleStyles,
+  linksBlock: linksBlock,
+  hideForSm: hideForSm,
+  headerLink: headerLink
+};
+
+function LayoutWrapper$Navigation$HeaderLink(Props) {
+  var children = Props.children;
+  var classNameOpt = Props.className;
+  var href = Props.href;
+  var className = classNameOpt !== undefined ? classNameOpt : "";
+  return React.createElement(Link$RescriptMonorepo.make, {
+              children: children,
+              href: href,
+              className: Tailwind$RescriptMonorepo.merge([
+                    headerLink,
+                    className
+                  ])
+            });
+}
+
+var HeaderLink = {
+  make: LayoutWrapper$Navigation$HeaderLink
+};
+
+function LayoutWrapper$Navigation(Props) {
+  var classNameOpt = Props.className;
+  var headerTitleOpt = Props.headerTitle;
+  var className = classNameOpt !== undefined ? classNameOpt : "";
+  var headerTitle = headerTitleOpt !== undefined ? headerTitleOpt : SiteMetadata$RescriptMonorepo.metadata.headerTitle;
+  var renderLinks = function (links) {
+    return Belt_Array.map(links, (function (link) {
+                  return React.createElement(LayoutWrapper$Navigation$HeaderLink, {
+                              children: Utils$RescriptMonorepo.str(link.title),
+                              href: link.href,
+                              key: link.title
+                            });
+                }));
+  };
+  return React.createElement("header", {
+              className: Tailwind$RescriptMonorepo.merge([
+                    header,
+                    className
+                  ])
+            }, React.createElement("div", undefined, React.createElement(Link$RescriptMonorepo.make, {
+                      children: React.createElement("div", {
+                            className: linkWrapper
+                          }, Utils$RescriptMonorepo.str(headerTitle)),
+                      href: "/",
+                      className: titleStyles,
+                      ariaLabel: "iSensei Personal Blog"
+                    })), React.createElement("div", {
+                  className: linksBlock
+                }, React.createElement("div", {
+                      className: hideForSm
+                    }, renderLinks(HeaderNavLinks$RescriptMonorepo.headerNavLinks)), React.createElement(ThemeSwitch$RescriptMonorepo.make, {})));
+}
+
+var Navigation = {
+  Styles: Styles,
+  HeaderLink: HeaderLink,
+  make: LayoutWrapper$Navigation
+};
+
+var mainWrapper = Tailwind$RescriptMonorepo.twStyle([
       Tailwind$RescriptMonorepo.flex,
       Tailwind$RescriptMonorepo.flexCol,
       Tailwind$RescriptMonorepo.justifyBetween,
+      Tailwind$RescriptMonorepo.minHScreen,
       [CssJs.fontFamily({
               NAME: "custom",
               VAL: "Inter"
             })]
     ]);
 
-var Styles = {
-  flexWrapper: flexWrapper
+var flexWrapper = Tailwind$RescriptMonorepo.twStyle([
+      Tailwind$RescriptMonorepo.flex,
+      Tailwind$RescriptMonorepo.flexCol,
+      Tailwind$RescriptMonorepo.justifyBetween
+    ]);
+
+var mainStyles = Tailwind$RescriptMonorepo.twStyle([[CssJs.marginBottom("auto")]]);
+
+var Styles$1 = {
+  mainWrapper: mainWrapper,
+  flexWrapper: flexWrapper,
+  mainStyles: mainStyles
 };
 
 function LayoutWrapper(Props) {
   var children = Props.children;
-  var headerTitleOpt = Props.headerTitle;
-  var headerTitle = headerTitleOpt !== undefined ? headerTitleOpt : "";
   return React.createElement(SectionContainer$RescriptMonorepo.make, {
-              children: null
-            }, React.createElement(Navigation$RescriptMonorepo.make, {
-                  headerTitle: headerTitle
-                }), React.createElement("div", {
-                  className: Tailwind$RescriptMonorepo.merge([flexWrapper])
-                }, children));
+              children: React.createElement("div", {
+                    className: mainWrapper
+                  }, React.createElement(LayoutWrapper$Navigation, {}), React.createElement("main", {
+                        className: mainStyles
+                      }, children), React.createElement(Footer$RescriptMonorepo.make, {}))
+            });
 }
 
 var make = LayoutWrapper;
 
 export {
-  Styles ,
+  Navigation ,
+  Styles$1 as Styles,
   make ,
   
 }
-/* flexWrapper Not a pure module */
+/* header Not a pure module */
