@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
+import * as Caml_option from "rescript/lib/es6/caml_option.js";
 import * as Tailwind$RescriptMonorepo from "../../styles/tailwind/Tailwind.mjs";
 
 var link = Tailwind$RescriptMonorepo.twStyle([
@@ -19,30 +20,27 @@ function Link$1(Props) {
   var hrefOpt = Props.href;
   var classNameOpt = Props.className;
   var ariaLabelOpt = Props.ariaLabel;
+  var rel = Props.rel;
   var href = hrefOpt !== undefined ? hrefOpt : "/";
   var className = classNameOpt !== undefined ? classNameOpt : "";
   var ariaLabel = ariaLabelOpt !== undefined ? ariaLabelOpt : "";
   if (href.startsWith("/")) {
+    var tmp = {
+      "aria-label": ariaLabel,
+      className: Tailwind$RescriptMonorepo.merge([
+            link,
+            className
+          ])
+    };
+    if (rel !== undefined) {
+      tmp.rel = Caml_option.valFromOption(rel);
+    }
     return React.createElement(Link, {
                 href: href,
-                children: React.createElement("a", {
-                      "aria-label": ariaLabel,
-                      className: Tailwind$RescriptMonorepo.merge([
-                            link,
-                            className
-                          ])
-                    }, children)
+                children: React.createElement("a", tmp, children)
               });
-  } else if (href.startsWith("#")) {
-    return React.createElement("a", {
-                "aria-label": ariaLabel,
-                className: Tailwind$RescriptMonorepo.merge([
-                      link,
-                      className
-                    ]),
-                href: href
-              }, children);
-  } else {
+  }
+  if (!href.startsWith("#")) {
     return React.createElement("a", {
                 "aria-label": ariaLabel,
                 className: Tailwind$RescriptMonorepo.merge([
@@ -50,10 +48,31 @@ function Link$1(Props) {
                       className
                     ]),
                 href: href,
-                rel: "noopener noreferrer",
+                rel: (
+                    rel !== undefined ? [
+                        "noopener",
+                        "noreferrer",
+                        rel
+                      ] : [
+                        "noopener",
+                        "noreferrer"
+                      ]
+                  ).join(" "),
                 target: "_blank"
               }, children);
   }
+  var tmp$1 = {
+    "aria-label": ariaLabel,
+    className: Tailwind$RescriptMonorepo.merge([
+          link,
+          className
+        ]),
+    href: href
+  };
+  if (rel !== undefined) {
+    tmp$1.rel = Caml_option.valFromOption(rel);
+  }
+  return React.createElement("a", tmp$1, children);
 }
 
 var make = Link$1;
