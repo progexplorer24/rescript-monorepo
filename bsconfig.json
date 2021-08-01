@@ -24,6 +24,7 @@
   ],
   "bs-dependencies": [
     "@rescript/react",
+    "@ryyppy/rescript-promise",
     "bs-css",
     "bs-css-emotion",
     "bs-webapi"

@@ -922,6 +922,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@ryyppy/rescript-promise@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "@ryyppy/rescript-promise@npm:2.1.0"
+  checksum: 599d560ccdcd78bea3aae0e2b15aa65a26dee4bec9902c05fadd8fd6129c04f3ea00e8106321e330ea6813fbf414d0113feb4a57b8fae21af60ee41c4bf6b101
+  languageName: node
+  linkType: hard
+
 "@sindresorhus/is@npm:^4.0.0":
   version: 4.0.1
   resolution: "@sindresorhus/is@npm:4.0.1"
@@ -8994,6 +9001,7 @@ fsevents@~2.3.1:
     "@emotion/babel-plugin": ^11.3.0
     "@emotion/css": ^11.1.3
     "@rescript/react": ^0.10.3
+    "@ryyppy/rescript-promise": ^2.1.0
     bs-css-emotion: ^3.0.0
     bs-webapi: ^0.19.1
     constants: ^0.0.2

@@ -32,6 +32,7 @@
     "@cypress/react": "^5.9.2",
     "@cypress/webpack-dev-server": "^1.4.0",
     "@emotion/babel-plugin": "^11.3.0",
+    "@ryyppy/rescript-promise": "^2.1.0",
     "constants": "^0.0.2",
     "cypress": "^8.0.0",
     "esbuild": "^0.12.17",
