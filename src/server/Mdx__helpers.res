@@ -1,4 +1,16 @@
 // DANGER: Remember to use all exported code on client side - because otherwise you will be calling server side on client side
+type data = {
+  title: string,
+  date: string,
+  tags: array<string>,
+  lastmod: Js.Nullable.t<string>,
+  draft: Js.Nullable.t<bool>,
+  summary: Js.Nullable.t<string>,
+  images: Js.Nullable.t<array<string>>,
+  authors: Js.Nullable.t<array<string>>,
+  layout: Js.Nullable.t<string>,
+}
+
 type frontmatter = {
   title: string,
   date: string,
@@ -57,7 +69,7 @@ let toFileTypeValue = extension =>
 // TODO: Improvements
 let getFileBySlug = (~root=root, slug) => {
   let mdxPath = join([root, "data", `${Js.Array2.joinWith(slug, "/")}.mdx`])
-  let mdPath = join([root, "data", `${Js.Array2.joinWith(slug, "/")}.mdx`])
+  let mdPath = join([root, "data", `${Js.Array2.joinWith(slug, "/")}.md`])
 
   let source = NodeJS.Fs.existsSync(mdxPath)
     ? NodeJS.Fs.readFileSync(mdxPath)
@@ -123,6 +135,30 @@ let getFileBySlug = (~root=root, slug) => {
 
   source
 }
+// TODO: Needs to be finished for mdx bundler
+let getFileBySlugNew = (~root=root, slug) => {
+  let mdxPath = join([root, "data", `${Js.Array2.joinWith(slug, "/")}.mdx`])
+  let mdPath = join([root, "data", `${Js.Array2.joinWith(slug, "/")}.mdx`])
+
+  let source = NodeJS.Fs.existsSync(mdxPath)
+    ? NodeJS.Fs.readFileSync(mdxPath)
+    : NodeJS.Fs.readFileSync(mdPath)
+
+  //  // https://github.com/kentcdodds/mdx-bundler#nextjs-esbuild-enoent
+  let _setEnvPath = if NodeJS.Process.platform === "win32" {
+    NodeJS.Process.setESBuildPath(
+      NodeJS.Process.env,
+      join([NodeJS.Process.cwd(), "node_modules", "esbuild", "esbuild.exe"]),
+    )
+  } else {
+    NodeJS.Process.setESBuildPath(
+      NodeJS.Process.env,
+      join([NodeJS.Process.cwd(), "node_modules", "esbuild", "bin", "esbuild"]),
+    )
+  }
+
+  source
+}
 
 let removeRoot = (~root=root, string) =>
   Js.String2.replace(string, NodeJS.Path.join([root, "/data"]), "")
@@ -176,7 +212,7 @@ let getAllFrontMatter = blogPath => {
 
       let source = readFileSync(fileName)
       let slug = removeMdxExtension(removeRoot(fileName))
-      let {data, _} = GrayMatter.matter(source)
+      let {data, _}: GrayMatter.returnObject<data> = GrayMatter.matter(source)
 
       let lastmod = switch Js.toOption(data.lastmod) {
       | None => ""
@@ -293,7 +329,7 @@ let createTagsDictionary = folder => {
     data
   })
 
-  let buildDict = (dictAcc, data: GrayMatter.data) => {
+  let buildDict = (dictAcc, data: data) => {
     let isDraft = switch Js.toOption(data.draft) {
     | None => true
     | Some(bool) => bool

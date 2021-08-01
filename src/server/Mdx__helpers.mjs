@@ -60,12 +60,25 @@ function toFileTypeValue(extension) {
 function getFileBySlug(rootOpt, slug) {
   var root$1 = rootOpt !== undefined ? rootOpt : root;
   var mdxPath = Path.join(root$1, "data", slug.join("/") + ".mdx");
-  var mdPath = Path.join(root$1, "data", slug.join("/") + ".mdx");
+  var mdPath = Path.join(root$1, "data", slug.join("/") + ".md");
   if (Fs.existsSync(mdxPath)) {
     return NodeJS$RescriptMonorepo.Fs.readFileSync(undefined, undefined, mdxPath);
   } else {
     return NodeJS$RescriptMonorepo.Fs.readFileSync(undefined, undefined, mdPath);
   }
+}
+
+function getFileBySlugNew(rootOpt, slug) {
+  var root$1 = rootOpt !== undefined ? rootOpt : root;
+  var mdxPath = Path.join(root$1, "data", slug.join("/") + ".mdx");
+  var mdPath = Path.join(root$1, "data", slug.join("/") + ".mdx");
+  var source = Fs.existsSync(mdxPath) ? NodeJS$RescriptMonorepo.Fs.readFileSync(undefined, undefined, mdxPath) : NodeJS$RescriptMonorepo.Fs.readFileSync(undefined, undefined, mdPath);
+  if (process.platform === "win32") {
+    process.env.ESBUILD_BINARY_PATH = Path.join(process.cwd(), "node_modules", "esbuild", "esbuild.exe");
+  } else {
+    process.env.ESBUILD_BINARY_PATH = Path.join(process.cwd(), "node_modules", "esbuild", "bin", "esbuild");
+  }
+  return source;
 }
 
 function removeRoot(rootOpt, string) {
@@ -241,6 +254,7 @@ export {
   removeMdxExtension ,
   toFileTypeValue ,
   getFileBySlug ,
+  getFileBySlugNew ,
   removeRoot ,
   getFiles ,
   sortDesc ,
