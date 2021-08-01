@@ -2,7 +2,9 @@
 
 import * as CssJs from "bs-css-emotion/src/CssJs.mjs";
 import * as React from "react";
-import * as Mdx$RescriptMonorepo from "../components/blog/Mdx.mjs";
+import * as Tag$RescriptMonorepo from "../components/blog/Tag.mjs";
+import * as Link$RescriptMonorepo from "../components/blog/Link.mjs";
+import * as Image$RescriptMonorepo from "../components/blog/Image.mjs";
 import * as Utils$RescriptMonorepo from "../utils/Utils.mjs";
 import * as Tailwind$RescriptMonorepo from "../styles/tailwind/Tailwind.mjs";
 import * as PageTitle$RescriptMonorepo from "../components/blog/PageTitle.mjs";
@@ -28,7 +30,7 @@ var dl = Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.spaceY(10)
 
 var dt = Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.srOnly]);
 
-var dd = Tailwind$RescriptMonorepo.twStyle([
+var dateStyles = Tailwind$RescriptMonorepo.twStyle([
       Tailwind$RescriptMonorepo.text("base"),
       Tailwind$RescriptMonorepo.fontWeight(500),
       Tailwind$RescriptMonorepo.leading(6),
@@ -69,6 +71,7 @@ var ul = Tailwind$RescriptMonorepo.twStyle([
       Tailwind$RescriptMonorepo.sm([Tailwind$RescriptMonorepo.spaceX(12)]),
       Tailwind$RescriptMonorepo.xl([
             Tailwind$RescriptMonorepo.spaceX(0),
+            Tailwind$RescriptMonorepo.block,
             Tailwind$RescriptMonorepo.spaceY(8)
           ])
     ]);
@@ -92,16 +95,108 @@ var dlAuthors2 = Tailwind$RescriptMonorepo.twStyle([
       Tailwind$RescriptMonorepo.whitespaceNowrap
     ]);
 
-var ddAuthors = Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.textColor(undefined, "gray900")]);
+var ddAuthors = Tailwind$RescriptMonorepo.twStyle([
+      Tailwind$RescriptMonorepo.textColor(undefined, "gray900"),
+      Tailwind$RescriptMonorepo.dark([Tailwind$RescriptMonorepo.textColor(undefined, "gray100")])
+    ]);
+
+var twitterLink = Tailwind$RescriptMonorepo.twStyle([
+      Tailwind$RescriptMonorepo.textColor(undefined, "blue500"),
+      Tailwind$RescriptMonorepo.hover([Tailwind$RescriptMonorepo.textColor(undefined, "blue600")]),
+      Tailwind$RescriptMonorepo.dark([Tailwind$RescriptMonorepo.hover([Tailwind$RescriptMonorepo.textColor(undefined, "blue400")])])
+    ]);
 
 var mdxWrapper = Tailwind$RescriptMonorepo.twStyle([
-      Tailwind$RescriptMonorepo.divideY(undefined, undefined, 1),
-      Tailwind$RescriptMonorepo.borderColor(undefined, "gray200"),
+      Tailwind$RescriptMonorepo.divideY(undefined, "gray200", 1),
+      Tailwind$RescriptMonorepo.dark([Tailwind$RescriptMonorepo.divideY(undefined, "gray700", 1)]),
       Tailwind$RescriptMonorepo.xl([
             Tailwind$RescriptMonorepo.pb(0),
             Tailwind$RescriptMonorepo.col(3),
             Tailwind$RescriptMonorepo.row(2)
           ])
+    ]);
+
+var childrenWrapper = Tailwind$RescriptMonorepo.twStyle([
+      Tailwind$RescriptMonorepo.pt(10),
+      Tailwind$RescriptMonorepo.pb(8),
+      Tailwind$RescriptMonorepo.dark([Tailwind$RescriptMonorepo.maxW("none")])
+    ]);
+
+var articleLinksSection = Tailwind$RescriptMonorepo.twStyle([
+      Tailwind$RescriptMonorepo.pt(6),
+      Tailwind$RescriptMonorepo.pb(6),
+      Tailwind$RescriptMonorepo.text("sm"),
+      Tailwind$RescriptMonorepo.fontWeight(400),
+      Tailwind$RescriptMonorepo.textColor(undefined, "gray700"),
+      Tailwind$RescriptMonorepo.dark([Tailwind$RescriptMonorepo.textColor(undefined, "gray300")])
+    ]);
+
+var articleLink = Tailwind$RescriptMonorepo.twStyle([
+      Tailwind$RescriptMonorepo.text("sm"),
+      Tailwind$RescriptMonorepo.fontWeight(400),
+      Tailwind$RescriptMonorepo.textColor(undefined, "gray700"),
+      Tailwind$RescriptMonorepo.dark([Tailwind$RescriptMonorepo.textColor(undefined, "gray300")])
+    ]);
+
+var footerWrapper = Tailwind$RescriptMonorepo.twStyle([
+      Tailwind$RescriptMonorepo.text("sm"),
+      Tailwind$RescriptMonorepo.fontWeight(500),
+      Tailwind$RescriptMonorepo.leading(5),
+      Tailwind$RescriptMonorepo.divideY(undefined, "gray200", 0),
+      Tailwind$RescriptMonorepo.dark([Tailwind$RescriptMonorepo.divideY(undefined, "gray700", 0)]),
+      Tailwind$RescriptMonorepo.xl([
+            Tailwind$RescriptMonorepo.divideY(undefined, "gray200", 1),
+            Tailwind$RescriptMonorepo.colStart(1),
+            Tailwind$RescriptMonorepo.rowStart(2)
+          ])
+    ]);
+
+var tagsSection = Tailwind$RescriptMonorepo.twStyle([
+      Tailwind$RescriptMonorepo.py(4),
+      Tailwind$RescriptMonorepo.xl([Tailwind$RescriptMonorepo.py(8)])
+    ]);
+
+var tagsTitle = Tailwind$RescriptMonorepo.twStyle([
+      Tailwind$RescriptMonorepo.text("xs"),
+      Tailwind$RescriptMonorepo.tracking("wide"),
+      Tailwind$RescriptMonorepo.textColor(undefined, "gray500"),
+      Tailwind$RescriptMonorepo.uppercase,
+      Tailwind$RescriptMonorepo.dark([Tailwind$RescriptMonorepo.textColor(undefined, "gray400")])
+    ]);
+
+var tagsWrapper = Tailwind$RescriptMonorepo.twStyle([
+      Tailwind$RescriptMonorepo.flex,
+      Tailwind$RescriptMonorepo.flexWrap
+    ]);
+
+var paginationWrapper = Tailwind$RescriptMonorepo.twStyle([
+      Tailwind$RescriptMonorepo.flex,
+      Tailwind$RescriptMonorepo.justifyBetween,
+      Tailwind$RescriptMonorepo.py(4),
+      Tailwind$RescriptMonorepo.xl([
+            Tailwind$RescriptMonorepo.block,
+            Tailwind$RescriptMonorepo.spaceY(8),
+            Tailwind$RescriptMonorepo.py(8)
+          ])
+    ]);
+
+var paginationTitle = Tailwind$RescriptMonorepo.twStyle([
+      Tailwind$RescriptMonorepo.text("xs"),
+      Tailwind$RescriptMonorepo.tracking("wide"),
+      Tailwind$RescriptMonorepo.textColor(undefined, "gray500"),
+      Tailwind$RescriptMonorepo.uppercase,
+      Tailwind$RescriptMonorepo.dark([Tailwind$RescriptMonorepo.textColor(undefined, "gray400")])
+    ]);
+
+var paginationLink = Tailwind$RescriptMonorepo.twStyle([
+      Tailwind$RescriptMonorepo.textColor(undefined, "blue500"),
+      Tailwind$RescriptMonorepo.hover([Tailwind$RescriptMonorepo.textColor(undefined, "blue600")]),
+      Tailwind$RescriptMonorepo.dark([Tailwind$RescriptMonorepo.hover([Tailwind$RescriptMonorepo.textColor(undefined, "blue400")])])
+    ]);
+
+var goBackSection = Tailwind$RescriptMonorepo.twStyle([
+      Tailwind$RescriptMonorepo.pt(4),
+      Tailwind$RescriptMonorepo.xl([Tailwind$RescriptMonorepo.pt(8)])
     ]);
 
 var Styles = {
@@ -110,7 +205,7 @@ var Styles = {
   headerContainer: headerContainer,
   dl: dl,
   dt: dt,
-  dd: dd,
+  dateStyles: dateStyles,
   mainContent: mainContent,
   dlAuthors: dlAuthors,
   dtAuthors: dtAuthors,
@@ -119,7 +214,19 @@ var Styles = {
   avatar: avatar,
   dlAuthors2: dlAuthors2,
   ddAuthors: ddAuthors,
-  mdxWrapper: mdxWrapper
+  twitterLink: twitterLink,
+  mdxWrapper: mdxWrapper,
+  childrenWrapper: childrenWrapper,
+  articleLinksSection: articleLinksSection,
+  articleLink: articleLink,
+  footerWrapper: footerWrapper,
+  tagsSection: tagsSection,
+  tagsTitle: tagsTitle,
+  tagsWrapper: tagsWrapper,
+  paginationWrapper: paginationWrapper,
+  paginationTitle: paginationTitle,
+  paginationLink: paginationLink,
+  goBackSection: goBackSection
 };
 
 var postDateTemplate = {
@@ -140,8 +247,87 @@ function discussUrl(slug) {
 function PostLayout(Props) {
   var children = Props.children;
   var frontmatter = Props.frontmatter;
+  var authorsArray = Props.authorsArray;
+  var next = Props.next;
+  var prev = Props.prev;
   var slug = frontmatter.slug;
+  var tags = frontmatter.tags;
   var date = frontmatter.date;
+  var renderAuthors = function (authorsArray) {
+    return React.createElement("ul", {
+                className: ul
+              }, authorsArray.map(function (author) {
+                    return React.createElement("li", {
+                                key: author.name,
+                                className: li
+                              }, React.createElement(Image$RescriptMonorepo.make, {
+                                    src: author.avatar,
+                                    alt: "avatar",
+                                    width: 56,
+                                    height: 56,
+                                    className: avatar
+                                  }), React.createElement("dl", {
+                                    className: dlAuthors2
+                                  }, React.createElement("dt", {
+                                        className: dtAuthors
+                                      }, Utils$RescriptMonorepo.str("Name")), React.createElement("dd", {
+                                        className: ddAuthors
+                                      }, Utils$RescriptMonorepo.str(SiteMetadata$RescriptMonorepo.metadata.author)), React.createElement("dt", {
+                                        className: dtAuthors
+                                      }, Utils$RescriptMonorepo.str("Twitter")), React.createElement("dd", undefined, React.createElement(Link$RescriptMonorepo.make, {
+                                            children: Utils$RescriptMonorepo.str(SiteMetadata$RescriptMonorepo.metadata.twitter.replace("https://twitter.com/", "@")),
+                                            href: SiteMetadata$RescriptMonorepo.metadata.twitter,
+                                            className: twitterLink
+                                          }))));
+                  }));
+  };
+  var renderTags = tags.length === 0 ? null : React.createElement("div", {
+          className: tagsSection
+        }, React.createElement("h2", {
+              className: tagsTitle
+            }, Utils$RescriptMonorepo.str("Tags")), React.createElement("div", {
+              className: "flex flex-wrap"
+            }, tags.map(function (tag) {
+                  return React.createElement(Tag$RescriptMonorepo.make, {
+                              text: tag,
+                              key: tag
+                            });
+                })));
+  var renderPrev = prev !== null ? React.createElement("div", undefined, React.createElement("h2", {
+              className: paginationTitle
+            }, Utils$RescriptMonorepo.str("Previous Article")), React.createElement("div", undefined, React.createElement(Link$RescriptMonorepo.make, {
+                  children: Utils$RescriptMonorepo.str(prev.title),
+                  href: "/blog/" + prev.slug,
+                  className: paginationLink
+                }))) : null;
+  var renderNext = next !== null ? React.createElement("div", undefined, React.createElement("h2", {
+              className: paginationTitle
+            }, Utils$RescriptMonorepo.str("Next Article")), React.createElement("div", undefined, React.createElement(Link$RescriptMonorepo.make, {
+                  children: Utils$RescriptMonorepo.str(next.title),
+                  href: "/blog/" + next.slug,
+                  className: paginationLink
+                }))) : null;
+  var renderPrevAndNext;
+  var exit = 0;
+  if (prev !== null || next !== null) {
+    exit = 1;
+  } else {
+    renderPrevAndNext = null;
+  }
+  if (exit === 1) {
+    renderPrevAndNext = React.createElement("div", {
+          className: paginationWrapper
+        }, renderPrev, renderNext);
+  }
+  var renderFooter = React.createElement("footer", undefined, React.createElement("div", {
+            className: footerWrapper
+          }, renderTags, renderPrevAndNext), React.createElement("div", {
+            className: goBackSection
+          }, React.createElement(Link$RescriptMonorepo.make, {
+                children: Utils$RescriptMonorepo.str(Utils$RescriptMonorepo.larr + " Back to the blog"),
+                href: "/blog",
+                className: paginationLink
+              })));
   return React.createElement(SectionContainer$RescriptMonorepo.make, {
               children: React.createElement("article", undefined, React.createElement("div", {
                         className: wrapper
@@ -154,7 +340,7 @@ function PostLayout(Props) {
                                   }, React.createElement("div", undefined, React.createElement("dt", {
                                             className: dt
                                           }, Utils$RescriptMonorepo.str("Published on")), React.createElement("dd", {
-                                            className: dd
+                                            className: dateStyles
                                           }, React.createElement("time", {
                                                 dateTime: date
                                               }, Utils$RescriptMonorepo.str(new Date(date).toLocaleDateString(SiteMetadata$RescriptMonorepo.metadata.locale, postDateTemplate)))))), React.createElement("div", undefined, React.createElement(PageTitle$RescriptMonorepo.make, {
@@ -165,36 +351,22 @@ function PostLayout(Props) {
                                 className: dlAuthors
                               }, React.createElement("dt", {
                                     className: dtAuthors
-                                  }, Utils$RescriptMonorepo.str("Authors")), React.createElement("dd", undefined, React.createElement("ul", {
-                                        className: ul
-                                      }, React.createElement("li", {
-                                            className: li
-                                          }, React.createElement("img", {
-                                                className: avatar,
-                                                alt: "avatar",
-                                                src: SiteMetadata$RescriptMonorepo.metadata.image
-                                              }), React.createElement("dl", {
-                                                className: dlAuthors2
-                                              }, React.createElement("dt", {
-                                                    className: dtAuthors
-                                                  }, Utils$RescriptMonorepo.str("Name")), React.createElement("dd", {
-                                                    className: ddAuthors
-                                                  }, Utils$RescriptMonorepo.str(SiteMetadata$RescriptMonorepo.metadata.author)), React.createElement("dt", {
-                                                    className: dtAuthors
-                                                  }, Utils$RescriptMonorepo.str("Twitter")), React.createElement("dd", undefined, React.createElement(Mdx$RescriptMonorepo.a, {
-                                                        children: Utils$RescriptMonorepo.str(SiteMetadata$RescriptMonorepo.metadata.twitter.replace("https://twitter.com/", "@")),
-                                                        href: SiteMetadata$RescriptMonorepo.metadata.twitter
-                                                      }))))))), React.createElement("div", {
+                                  }, Utils$RescriptMonorepo.str("Authors")), React.createElement("dd", undefined, renderAuthors(authorsArray))), React.createElement("div", {
                                 className: mdxWrapper
-                              }, React.createElement("div", undefined, children), React.createElement("div", {
-                                    className: "pt-6 pb-6 text-sm text-gray-700 dark:text-gray-300"
-                                  }, React.createElement(Mdx$RescriptMonorepo.a, {
+                              }, React.createElement("div", {
+                                    className: childrenWrapper
+                                  }, children), React.createElement("div", {
+                                    className: articleLinksSection
+                                  }, React.createElement(Link$RescriptMonorepo.make, {
                                         children: Utils$RescriptMonorepo.str("Discuss on Twitter"),
-                                        href: discussUrl(slug)
-                                      }), Utils$RescriptMonorepo.str(" • "), React.createElement(Mdx$RescriptMonorepo.a, {
+                                        href: discussUrl(slug),
+                                        className: articleLink,
+                                        rel: "nofollow"
+                                      }), Utils$RescriptMonorepo.str(" • "), React.createElement(Link$RescriptMonorepo.make, {
                                         children: Utils$RescriptMonorepo.str("View on GitHub"),
-                                        href: editUrl(slug + ".mdx")
-                                      }))))))
+                                        href: editUrl(slug + ".mdx"),
+                                        className: articleLink
+                                      }))), renderFooter)))
             });
 }
 
