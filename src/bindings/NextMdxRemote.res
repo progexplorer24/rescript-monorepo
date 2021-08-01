@@ -1,5 +1,6 @@
 type remarkPlugin
 type rehypePlugin
+type frontmatter
 
 type mdxOptions = {
   remarkPlugins: array<remarkPlugin>,
@@ -11,14 +12,14 @@ type serializeResult<'a> = {
   compiledSource: string,
   scope: 'a,
 }
-type config = {
-  scope: GrayMatter.data,
+type config<'scope> = {
+  scope: 'scope,
   mdxOptions: mdxOptions,
   target: array<string>,
 }
 
 @module("next-mdx-remote/serialize")
-external serialize: (string, config) => Js.Promise.t<serializeResult<'a>> = "serialize"
+external serialize: (string, config<'scope>) => Js.Promise.t<serializeResult<'b>> = "serialize"
 
 @module("remark-math") external remarkMath: remarkPlugin = "default"
 @module("rehype-katex") external rehypeKatex: rehypePlugin = "default"
