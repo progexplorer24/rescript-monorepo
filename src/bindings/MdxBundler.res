@@ -19,6 +19,8 @@ type config = {
   esbuildOptions: esbuildOptions => esbuildOptions,
 }
 
+type files = {files: Js.Dict.t<string>}
+
 //  = {
 //   scope: GrayMatter.data,
 //   mdxOptions: mdxOptions,
@@ -26,7 +28,12 @@ type config = {
 // }
 
 @module("mdx-bundler")
-external bundleMDX: (string, config) => Js.Promise.t<serializeResult> = "bundleMDX"
+external bundleMDXSimple: string => Promise.t<serializeResult> = "bundleMDX"
+
+@module("mdx-bundler")
+external bundleMDX: (string, config) => Promise.t<serializeResult> = "bundleMDX"
+@module("mdx-bundler")
+external bundleMDXFiles: (string, files) => Promise.t<serializeResult> = "bundleMDX"
 
 @module("mdx-bundler/client")
 external getMDXComponent: (string, array<string>) => React.element = "getMDXComponent"
