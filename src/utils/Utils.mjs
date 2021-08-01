@@ -22,7 +22,13 @@ var grave = "\u0060";
 
 var transmitState = "\u0094";
 
-var rarr = "\u2192";
+var rarr = "→";
+
+var larr = "←";
+
+var uaar = "↑";
+
+var daar = "↓";
 
 export {
   str ,
@@ -34,6 +40,9 @@ export {
   grave ,
   transmitState ,
   rarr ,
+  larr ,
+  uaar ,
+  daar ,
   
 }
 /* No side effect */
