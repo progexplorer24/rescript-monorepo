@@ -1,13 +1,15 @@
-// type props = Static.props
-type props = {
-  path: array<string>,
-  mdxSource: NextMdxRemote.serializeResult<Mdx__helpers.frontmatter>,
-}
+type props = Static.props
+
 type previewData
 
-let default = props => {
-  let {mdxSource, path} = props
-  let {compiledSource, scope} = mdxSource
+module Styles = {
+  open Tailwind
+  let underConstruction = twStyle([mt(#24), textCenter])
+}
+
+let default = (props: props) => {
+  let {post, prev, next, path, authorsArray} = props
+  let {compiledSource, scope} = post
   let {title, date, tags, lastmod, draft, summary, images} = scope
   let frontmatter: Mdx__helpers.frontmatterAndSlug = {
     title: title,
@@ -19,13 +21,27 @@ let default = props => {
     images: images,
     slug: Js.Array2.joinWith(path, "/"),
   }
-  <PostLayout frontmatter>
-    <main>
-      <NextMdxRemote.MdxRemote
-        components=MDXComponents.components \"lazy"={false} compiledSource scope
-      />
-    </main>
-  </PostLayout>
+
+  let renderPost =
+    frontmatter.draft !== true
+      ? <PostLayout frontmatter prev next authorsArray>
+          <main>
+            <NextMdxRemote.MdxRemote
+              components=MDXComponents.components \"lazy"={false} compiledSource scope
+            />
+          </main>
+        </PostLayout>
+      : <main>
+          <div className=Styles.underConstruction>
+            <PageTitle>
+              {"Under
+            Construction"->Utils.str}
+              <span role="img" ariaLabel="roadwork sign"> {`🚧`->Utils.str} </span>
+            </PageTitle>
+          </div>
+        </main>
+
+  <> renderPost </>
 }
 
 let getStaticPaths: Next.GetStaticPaths.t<Mdx__helpers.Params.t> = () => {
