@@ -18,7 +18,7 @@ var footerWrapper = Tailwind$RescriptMonorepo.twStyle([
 var iconsWrapper = Tailwind$RescriptMonorepo.twStyle([
       Tailwind$RescriptMonorepo.flex,
       Tailwind$RescriptMonorepo.mb(3),
-      Tailwind$RescriptMonorepo.spaceX(4)
+      Tailwind$RescriptMonorepo.dividers([Tailwind$RescriptMonorepo.spaceX(4)])
     ]);
 
 var footerInfo = Tailwind$RescriptMonorepo.twStyle([
@@ -27,7 +27,7 @@ var footerInfo = Tailwind$RescriptMonorepo.twStyle([
       Tailwind$RescriptMonorepo.justifyCenter,
       Tailwind$RescriptMonorepo.leading("loose"),
       Tailwind$RescriptMonorepo.mb(2),
-      Tailwind$RescriptMonorepo.spaceX(2),
+      Tailwind$RescriptMonorepo.dividers([Tailwind$RescriptMonorepo.spaceX(2)]),
       Tailwind$RescriptMonorepo.text("sm"),
       Tailwind$RescriptMonorepo.textColor(undefined, "gray500"),
       Tailwind$RescriptMonorepo.selector(Selectors$RescriptMonorepo.allChildren, [Tailwind$RescriptMonorepo.pt(1)]),

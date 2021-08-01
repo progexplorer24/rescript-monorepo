@@ -5,9 +5,16 @@ type pagination = {
 
 module Styles = {
   open Tailwind
-  let divider = twStyle([divideY(~color=#gray300, #1)])
-  let searchSection = twStyle([pt(#6), pb(#8), spaceY(#2), md([spaceY(#5)])])
-  // text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14
+  let divider = twStyle([
+    dividers([divideY(~color=#gray200, #1), dark([divideY(~color=#gray800, #1)])]),
+  ])
+  let searchSection = twStyle([
+    pt(#6),
+    pb(#8),
+    dividers([spaceY(#2)]),
+    md([dividers([spaceY(#5)])]),
+  ])
+
   let h1 = twStyle([
     text(#xl3),
     fontWeight(#800),
@@ -47,7 +54,10 @@ module Styles = {
 
   let li = twStyle([py(#4)])
   // "space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0 xl:items-baseline"
-  let article = twStyle([spaceY(#2), xl([grid, gridCols(#4), spaceY(#0), itemsBaseline])])
+  let article = twStyle([
+    dividers([spaceY(#2)]),
+    xl([grid, gridCols(#4), dividers([spaceY(#0)]), itemsBaseline]),
+  ])
   let dt = twStyle([srOnly])
   // text-base font-medium leading-6 text-gray-500 dark:text-gray-400
   let dd = twStyle([
@@ -57,7 +67,7 @@ module Styles = {
     textColor(#gray500),
     dark([textColor(#gray400)]),
   ])
-  let contentSection = twStyle([spaceY(#3), xl([col(#3)])])
+  let contentSection = twStyle([dividers([spaceY(#3)]), xl([col(#3)])])
   let h3Link = twStyle([
     text(#xl2),
     fontWeight(#700),

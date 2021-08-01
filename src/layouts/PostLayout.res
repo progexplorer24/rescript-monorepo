@@ -1,9 +1,11 @@
 module Styles = {
   open Tailwind
-  let wrapper = twStyle([xl([divideY(~color=#gray200, #1), dark([divideY(~color=#gray700, #1)])])])
+  let wrapper = twStyle([
+    xl([dividers([divideY(~color=#gray200, #1), dark([divideY(~color=#gray700, #1)])])]),
+  ])
   let header = twStyle([pt(#6), xl([pb(#6)])])
-  let headerContainer = twStyle([spaceY(#1), textCenter])
-  let dl = twStyle([spaceY(#10)])
+  let headerContainer = twStyle([dividers([spaceY(#1)]), textCenter])
+  let dl = twStyle([dividers([spaceY(#10)])])
   let dt = twStyle([srOnly])
   let dateStyles = twStyle([
     text(#base),
@@ -14,10 +16,9 @@ module Styles = {
   ])
   let mainContent = twStyle([
     pb(#8),
-    divideY(~color=#gray200, #1),
-    dark([divideY(~color=#gray700, #1)]),
+    dividers([divideY(~color=#gray200, #1), dark([divideY(~color=#gray700, #1)])]),
     [CssJs.unsafe("gridTemplateRows", "auto 1fr")],
-    xl([divideY(#0), grid, gridCols(#4), gapX(#6)]),
+    xl([dividers([divideY(#0)]), grid, gridCols(#4), gapX(#6)]),
   ])
   let dlAuthors = twStyle([
     pt(#6),
@@ -29,11 +30,11 @@ module Styles = {
   let ul = twStyle([
     flex,
     justifyCenter,
-    spaceX(#8),
-    sm([spaceX(#12)]),
-    xl([spaceX(#0), block, spaceY(#8)]),
+    dividers([spaceX(#8)]),
+    sm([dividers([spaceX(#12)])]),
+    xl([dividers([spaceX(#0), spaceY(#8)]), block]),
   ])
-  let li = twStyle([flex, itemsCenter, spaceX(#2)])
+  let li = twStyle([flex, itemsCenter, dividers([spaceX(#2)])])
   let avatar = twStyle([w(#14), h(#14), rounded(#full)])
   let dlAuthors2 = twStyle([text(#sm), fontWeight(#500), leading(#5), whitespaceNowrap])
   let ddAuthors = twStyle([textColor(#gray900), dark([textColor(#gray100)])])
@@ -43,13 +44,11 @@ module Styles = {
     dark([hover([textColor(#blue400)])]),
   ])
   let mdxWrapper = twStyle([
-    divideY(~color=#gray200, #1),
-    dark([divideY(~color=#gray700, #1)]),
+    dividers([divideY(~color=#gray200, #1), dark([divideY(~color=#gray700, #1)])]),
     xl([pb(#0), col(#3), row(#2)]),
   ])
   // TODO: Work on tailwind typography and prose class application
   let childrenWrapper = twStyle([pt(#10), pb(#8), dark([maxW(#none)])])
-  // pt-6 pb-6 text-sm text-gray-700 dark:text-gray-300
   let articleLinksSection = twStyle([
     pt(#6),
     pb(#6),
@@ -64,13 +63,12 @@ module Styles = {
     textColor(#gray700),
     dark([textColor(#gray300)]),
   ])
-  // "text-sm font-medium leading-5 divide-gray-200 xl:divide-y dark:divide-gray-700 xl:col-start-1 xl:row-start-2"
+
   let footerWrapper = twStyle([
     text(#sm),
     fontWeight(#500),
     leading(#5),
-    divideY(~color=#gray200, #0),
-    dark([divideY(~color=#gray700, #0)]),
+    dividers([divideY(~color=#gray200, #0), dark([divideY(~color=#gray700, #0)])]),
     xl([divideY(~color=#gray200, #1), colStart(#1), rowStart(#2)]),
   ])
   let tagsSection = twStyle([py(#4), xl([py(#8)])])
@@ -83,7 +81,12 @@ module Styles = {
   ])
   let tagsWrapper = twStyle([flex, flexWrap])
 
-  let paginationWrapper = twStyle([flex, justifyBetween, py(#4), xl([block, spaceY(#8), py(#8)])])
+  let paginationWrapper = twStyle([
+    flex,
+    justifyBetween,
+    py(#4),
+    xl([block, dividers([spaceY(#8)]), py(#8)]),
+  ])
 
   let paginationTitle = twStyle([
     text(#xs),

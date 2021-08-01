@@ -586,31 +586,23 @@ let nml = (size: negativeMargin) => [marginLeft(Theme.SpacingNegative.toValue(si
 // NOTE: Space Between - Utilities for controlling the space between child elements.
 
 let spaceY = (size: spacing) => [
-  selector(
-    Selectors.ignoreFirstChild,
-    [marginTop(Theme.Spacing.toValue(size)), marginBottom(Theme.Spacing.toValue(#0))],
-  ),
+  marginTop(Theme.Spacing.toValue(size)),
+  marginBottom(Theme.Spacing.toValue(#0)),
 ]
 
 let nspaceY = (size: negativeMargin) => [
-  selector(
-    Selectors.ignoreFirstChild,
-    [marginTop(Theme.SpacingNegative.toValue(size)), marginBottom(Theme.Spacing.toValue(#0))],
-  ),
+  marginTop(Theme.SpacingNegative.toValue(size)),
+  marginBottom(Theme.Spacing.toValue(#0)),
 ]
 
 let spaceX = (size: spacing) => [
-  selector(
-    Selectors.ignoreFirstChild,
-    [marginLeft(Theme.Spacing.toValue(size)), marginRight(Theme.Spacing.toValue(#0))],
-  ),
+  marginLeft(Theme.Spacing.toValue(size)),
+  marginRight(Theme.Spacing.toValue(#0)),
 ]
 
 let nspaceX = (size: negativeMargin) => [
-  selector(
-    Selectors.ignoreFirstChild,
-    [marginLeft(Theme.SpacingNegative.toValue(size)), marginRight(Theme.Spacing.toValue(#0))],
-  ),
+  marginLeft(Theme.SpacingNegative.toValue(size)),
+  marginRight(Theme.Spacing.toValue(#0)),
 ]
 
 // INFO: SIZING
@@ -974,47 +966,27 @@ let borderNone = [borderStyle(#none)]
 let divideY = (~reverse=false, ~color=#gray400, width) =>
   reverse
     ? [
-        selector(
-          Selectors.ignoreFirstChild,
-          [
-            CssJs.borderColor(Theme.Colors.toColor(color)),
-            borderTopWidth(Theme.BorderWidth.toWidth(#0)),
-            borderBottomWidth(Theme.BorderWidth.toWidth(width)),
-          ],
-        ),
+        CssJs.borderColor(Theme.Colors.toColor(color)),
+        borderTopWidth(Theme.BorderWidth.toWidth(#0)),
+        borderBottomWidth(Theme.BorderWidth.toWidth(width)),
       ]
     : [
-        selector(
-          Selectors.ignoreFirstChild,
-          [
-            CssJs.borderColor(Theme.Colors.toColor(color)),
-            borderTopWidth(Theme.BorderWidth.toWidth(width)),
-            borderBottomWidth(Theme.BorderWidth.toWidth(#0)),
-          ],
-        ),
+        CssJs.borderColor(Theme.Colors.toColor(color)),
+        borderTopWidth(Theme.BorderWidth.toWidth(width)),
+        borderBottomWidth(Theme.BorderWidth.toWidth(#0)),
       ]
 
 let divideX = (~reverse=false, ~color=#gray400, width) =>
   reverse
     ? [
-        selector(
-          Selectors.ignoreFirstChild,
-          [
-            borderRightWidth(Theme.BorderWidth.toWidth(width)),
-            borderLeftWidth(Theme.BorderWidth.toWidth(#0)),
-            CssJs.borderColor(Theme.Colors.toColor(color)),
-          ],
-        ),
+        borderRightWidth(Theme.BorderWidth.toWidth(width)),
+        borderLeftWidth(Theme.BorderWidth.toWidth(#0)),
+        CssJs.borderColor(Theme.Colors.toColor(color)),
       ]
     : [
-        selector(
-          Selectors.ignoreFirstChild,
-          [
-            borderLeftWidth(Theme.BorderWidth.toWidth(width)),
-            borderRightWidth(Theme.BorderWidth.toWidth(#0)),
-            CssJs.borderColor(Theme.Colors.toColor(color)),
-          ],
-        ),
+        borderLeftWidth(Theme.BorderWidth.toWidth(width)),
+        borderRightWidth(Theme.BorderWidth.toWidth(#0)),
+        CssJs.borderColor(Theme.Colors.toColor(color)),
       ]
 
 // NOTE: Divide Style - Utilities for controlling the border style between elements.
@@ -1255,15 +1227,7 @@ let container = tw([
 // INFO: Selectors
 
 let selector = (string, rules) => [CssJs.selector(string, tw(rules))]
-// WARNING: Experiment
-let smSpecifity = rules => [[CssJs.selector(".sm &", tw(rules))]]
-let minWBreakpointNew = (breakpoint, styles) => [
-  CssJs.media(`screen and (min-width: ${Belt.Int.toString(breakpoint)}px)`, tw(styles)),
-]
-
-let smNew = rules => minWBreakpointNew(640, smSpecifity(rules))
-
-// END WARNING:
+let dividers = rules => [CssJs.selector(Selectors.ignoreFirstChild, tw(rules))]
 let dark = rules => [CssJs.selector(".dark &", tw(rules))]
 let marker = rules => [CssJs.selector("&::marker", tw(rules))]
 let active = rules => [CssJs.active(tw(rules))]

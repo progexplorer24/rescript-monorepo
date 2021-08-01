@@ -8,15 +8,15 @@ import * as Tailwind$RescriptMonorepo from "./styles/tailwind/Tailwind.mjs";
 import * as ProjectsData$RescriptMonorepo from "./data/ProjectsData.mjs";
 import * as SiteMetadata$RescriptMonorepo from "./data/SiteMetadata.mjs";
 
-var mainWrapper = Tailwind$RescriptMonorepo.twStyle([
-      Tailwind$RescriptMonorepo.divideY(undefined, "gray200", 1),
-      Tailwind$RescriptMonorepo.dark([Tailwind$RescriptMonorepo.divideY(undefined, "gray700", 1)])
-    ]);
+var mainWrapper = Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.dividers([
+            Tailwind$RescriptMonorepo.divideY(undefined, "gray200", 1),
+            Tailwind$RescriptMonorepo.dark([Tailwind$RescriptMonorepo.divideY(undefined, "gray700", 1)])
+          ])]);
 
 var titleSection = Tailwind$RescriptMonorepo.twStyle([
       Tailwind$RescriptMonorepo.pt(6),
       Tailwind$RescriptMonorepo.pb(8),
-      Tailwind$RescriptMonorepo.md([Tailwind$RescriptMonorepo.spaceY(5)])
+      Tailwind$RescriptMonorepo.md([Tailwind$RescriptMonorepo.dividers([Tailwind$RescriptMonorepo.spaceY(5)])])
     ]);
 
 var h1 = Tailwind$RescriptMonorepo.twStyle([

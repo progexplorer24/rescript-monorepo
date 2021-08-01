@@ -7,13 +7,13 @@ import * as Utils$RescriptMonorepo from "../utils/Utils.mjs";
 import * as Tailwind$RescriptMonorepo from "../styles/tailwind/Tailwind.mjs";
 import * as SocialIcons$RescriptMonorepo from "../components/blog/SocialIcons.mjs";
 
-var pageWrapper = Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.divideY(undefined, "gray200", 1)]);
+var pageWrapper = Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.dividers([Tailwind$RescriptMonorepo.divideY(undefined, "gray200", 1)])]);
 
 var h1Wrapper = Tailwind$RescriptMonorepo.twStyle([
       Tailwind$RescriptMonorepo.pt(6),
       Tailwind$RescriptMonorepo.pb(8),
-      Tailwind$RescriptMonorepo.spaceY(2),
-      Tailwind$RescriptMonorepo.md([Tailwind$RescriptMonorepo.spaceY(5)])
+      Tailwind$RescriptMonorepo.dividers([Tailwind$RescriptMonorepo.spaceY(2)]),
+      Tailwind$RescriptMonorepo.md([Tailwind$RescriptMonorepo.dividers([Tailwind$RescriptMonorepo.spaceY(5)])])
     ]);
 
 var h1 = Tailwind$RescriptMonorepo.twStyle([
@@ -35,12 +35,12 @@ var h1 = Tailwind$RescriptMonorepo.twStyle([
 
 var bioGrid = Tailwind$RescriptMonorepo.twStyle([
       Tailwind$RescriptMonorepo.itemsStart,
-      Tailwind$RescriptMonorepo.spaceY(2),
+      Tailwind$RescriptMonorepo.dividers([Tailwind$RescriptMonorepo.spaceY(2)]),
       Tailwind$RescriptMonorepo.xl([
             Tailwind$RescriptMonorepo.grid,
             Tailwind$RescriptMonorepo.gridCols(3),
             Tailwind$RescriptMonorepo.gapX(8),
-            Tailwind$RescriptMonorepo.spaceY(0)
+            Tailwind$RescriptMonorepo.dividers([Tailwind$RescriptMonorepo.spaceY(0)])
           ])
     ]);
 
@@ -49,7 +49,7 @@ var bioFlex = Tailwind$RescriptMonorepo.twStyle([
       Tailwind$RescriptMonorepo.flexCol,
       Tailwind$RescriptMonorepo.itemsCenter,
       Tailwind$RescriptMonorepo.pt(8),
-      Tailwind$RescriptMonorepo.spaceX(2)
+      Tailwind$RescriptMonorepo.dividers([Tailwind$RescriptMonorepo.spaceX(2)])
     ]);
 
 var image = Tailwind$RescriptMonorepo.twStyle([
@@ -75,7 +75,7 @@ var bioParagraphs = Tailwind$RescriptMonorepo.twStyle([
 var iconsWrapper = Tailwind$RescriptMonorepo.twStyle([
       Tailwind$RescriptMonorepo.flex,
       Tailwind$RescriptMonorepo.pt(6),
-      Tailwind$RescriptMonorepo.spaceX(3)
+      Tailwind$RescriptMonorepo.dividers([Tailwind$RescriptMonorepo.spaceX(3)])
     ]);
 
 var childrenWrapper = Tailwind$RescriptMonorepo.twStyle([

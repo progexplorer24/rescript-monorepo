@@ -1,8 +1,9 @@
 module Styles = {
   open Tailwind
-  let mainWrapper = twStyle([divideY(~color=#gray200, #1), dark([divideY(~color=#gray700, #1)])])
-  let titleSection = twStyle([pt(#6), pb(#8), md([spaceY(#5)])])
-  // text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14
+  let mainWrapper = twStyle([
+    dividers([divideY(~color=#gray200, #1), dark([divideY(~color=#gray700, #1)])]),
+  ])
+  let titleSection = twStyle([pt(#6), pb(#8), md([dividers([spaceY(#5)])])])
   let h1 = twStyle([
     text(#xl3),
     fontWeight(#800),
@@ -13,7 +14,7 @@ module Styles = {
     sm([text(#xl4), leading(#10)]),
     md([text(#xl6), leading(#14)]),
   ])
-  // text-lg leading-7 text-gray-500 dark:text-gray-400
+
   let showcase = twStyle([text(#lg), leading(#7), textColor(#gray500), dark([textColor(#gray400)])])
   let container = twStyle([container, py(#12)])
   let flexWrapper = twStyle([flex, flexWrap, nm(#4)])

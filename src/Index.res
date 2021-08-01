@@ -5,9 +5,11 @@ type props = {
 
 module Styles = {
   open Tailwind
-  let wrapper = twStyle([divideY(~color=#gray200, #1), dark([divideY(~color=#gray700, #1)])])
+  let wrapper = twStyle([
+    dividers([divideY(~color=#gray200, #1), dark([divideY(~color=#gray700, #1)])]),
+  ])
 
-  let wrapper2 = twStyle([pt(#0), pb(#8), spaceY(#2), md([spaceY(#5)])])
+  let wrapper2 = twStyle([pt(#0), pb(#8), dividers([spaceY(#2)]), md([dividers([spaceY(#5)])])])
   let h1 = twStyle([
     text(#xl3),
     fontWeight(#800),
@@ -29,7 +31,7 @@ module Styles = {
 
   let p = twStyle([text(#lg), leading(#7), textColor(#gray500), dark([textColor(#gray400)])])
 
-  let ul = twStyle([divideY(~color=#gray200, #1), dark([divideY(~color=#gray700, #1)])])
+  let ul = twStyle([dividers([divideY(~color=#gray200, #1), dark([divideY(~color=#gray700, #1)])])])
 
   let li = twStyle([py(#12)])
   let dt = twStyle([srOnly])

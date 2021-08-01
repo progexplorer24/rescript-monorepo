@@ -10,13 +10,16 @@ import * as Pagination$RescriptMonorepo from "../components/blog/Pagination.mjs"
 import * as Mdx__helpers$RescriptMonorepo from "../server/Mdx__helpers.mjs";
 import * as Theme__Colors$RescriptMonorepo from "../styles/theme/private_modules/Theme__Colors.mjs";
 
-var divider = Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.divideY(undefined, "gray300", 1)]);
+var divider = Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.dividers([
+            Tailwind$RescriptMonorepo.divideY(undefined, "gray200", 1),
+            Tailwind$RescriptMonorepo.dark([Tailwind$RescriptMonorepo.divideY(undefined, "gray800", 1)])
+          ])]);
 
 var searchSection = Tailwind$RescriptMonorepo.twStyle([
       Tailwind$RescriptMonorepo.pt(6),
       Tailwind$RescriptMonorepo.pb(8),
-      Tailwind$RescriptMonorepo.spaceY(2),
-      Tailwind$RescriptMonorepo.md([Tailwind$RescriptMonorepo.spaceY(5)])
+      Tailwind$RescriptMonorepo.dividers([Tailwind$RescriptMonorepo.spaceY(2)]),
+      Tailwind$RescriptMonorepo.md([Tailwind$RescriptMonorepo.dividers([Tailwind$RescriptMonorepo.spaceY(5)])])
     ]);
 
 var h1 = Tailwind$RescriptMonorepo.twStyle([
@@ -76,11 +79,11 @@ var searchIcon = Tailwind$RescriptMonorepo.twStyle([
 var li = Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.py(4)]);
 
 var article = Tailwind$RescriptMonorepo.twStyle([
-      Tailwind$RescriptMonorepo.spaceY(2),
+      Tailwind$RescriptMonorepo.dividers([Tailwind$RescriptMonorepo.spaceY(2)]),
       Tailwind$RescriptMonorepo.xl([
             Tailwind$RescriptMonorepo.grid,
             Tailwind$RescriptMonorepo.gridCols(4),
-            Tailwind$RescriptMonorepo.spaceY(0),
+            Tailwind$RescriptMonorepo.dividers([Tailwind$RescriptMonorepo.spaceY(0)]),
             Tailwind$RescriptMonorepo.itemsBaseline
           ])
     ]);
@@ -96,7 +99,7 @@ var dd = Tailwind$RescriptMonorepo.twStyle([
     ]);
 
 var contentSection = Tailwind$RescriptMonorepo.twStyle([
-      Tailwind$RescriptMonorepo.spaceY(3),
+      Tailwind$RescriptMonorepo.dividers([Tailwind$RescriptMonorepo.spaceY(3)]),
       Tailwind$RescriptMonorepo.xl([Tailwind$RescriptMonorepo.col(3)])
     ]);
 

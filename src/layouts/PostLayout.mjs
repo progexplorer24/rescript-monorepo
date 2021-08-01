@@ -11,10 +11,10 @@ import * as PageTitle$RescriptMonorepo from "../components/blog/PageTitle.mjs";
 import * as SiteMetadata$RescriptMonorepo from "../data/SiteMetadata.mjs";
 import * as SectionContainer$RescriptMonorepo from "../components/blog/SectionContainer.mjs";
 
-var wrapper = Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.xl([
-            Tailwind$RescriptMonorepo.divideY(undefined, "gray200", 1),
-            Tailwind$RescriptMonorepo.dark([Tailwind$RescriptMonorepo.divideY(undefined, "gray700", 1)])
-          ])]);
+var wrapper = Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.xl([Tailwind$RescriptMonorepo.dividers([
+                  Tailwind$RescriptMonorepo.divideY(undefined, "gray200", 1),
+                  Tailwind$RescriptMonorepo.dark([Tailwind$RescriptMonorepo.divideY(undefined, "gray700", 1)])
+                ])])]);
 
 var header = Tailwind$RescriptMonorepo.twStyle([
       Tailwind$RescriptMonorepo.pt(6),
@@ -22,11 +22,11 @@ var header = Tailwind$RescriptMonorepo.twStyle([
     ]);
 
 var headerContainer = Tailwind$RescriptMonorepo.twStyle([
-      Tailwind$RescriptMonorepo.spaceY(1),
+      Tailwind$RescriptMonorepo.dividers([Tailwind$RescriptMonorepo.spaceY(1)]),
       Tailwind$RescriptMonorepo.textCenter
     ]);
 
-var dl = Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.spaceY(10)]);
+var dl = Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.dividers([Tailwind$RescriptMonorepo.spaceY(10)])]);
 
 var dt = Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.srOnly]);
 
@@ -40,11 +40,13 @@ var dateStyles = Tailwind$RescriptMonorepo.twStyle([
 
 var mainContent = Tailwind$RescriptMonorepo.twStyle([
       Tailwind$RescriptMonorepo.pb(8),
-      Tailwind$RescriptMonorepo.divideY(undefined, "gray200", 1),
-      Tailwind$RescriptMonorepo.dark([Tailwind$RescriptMonorepo.divideY(undefined, "gray700", 1)]),
+      Tailwind$RescriptMonorepo.dividers([
+            Tailwind$RescriptMonorepo.divideY(undefined, "gray200", 1),
+            Tailwind$RescriptMonorepo.dark([Tailwind$RescriptMonorepo.divideY(undefined, "gray700", 1)])
+          ]),
       [CssJs.unsafe("gridTemplateRows", "auto 1fr")],
       Tailwind$RescriptMonorepo.xl([
-            Tailwind$RescriptMonorepo.divideY(undefined, undefined, 0),
+            Tailwind$RescriptMonorepo.dividers([Tailwind$RescriptMonorepo.divideY(undefined, undefined, 0)]),
             Tailwind$RescriptMonorepo.grid,
             Tailwind$RescriptMonorepo.gridCols(4),
             Tailwind$RescriptMonorepo.gapX(6)
@@ -67,19 +69,21 @@ var dtAuthors = Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.srO
 var ul = Tailwind$RescriptMonorepo.twStyle([
       Tailwind$RescriptMonorepo.flex,
       Tailwind$RescriptMonorepo.justifyCenter,
-      Tailwind$RescriptMonorepo.spaceX(8),
-      Tailwind$RescriptMonorepo.sm([Tailwind$RescriptMonorepo.spaceX(12)]),
+      Tailwind$RescriptMonorepo.dividers([Tailwind$RescriptMonorepo.spaceX(8)]),
+      Tailwind$RescriptMonorepo.sm([Tailwind$RescriptMonorepo.dividers([Tailwind$RescriptMonorepo.spaceX(12)])]),
       Tailwind$RescriptMonorepo.xl([
-            Tailwind$RescriptMonorepo.spaceX(0),
-            Tailwind$RescriptMonorepo.block,
-            Tailwind$RescriptMonorepo.spaceY(8)
+            Tailwind$RescriptMonorepo.dividers([
+                  Tailwind$RescriptMonorepo.spaceX(0),
+                  Tailwind$RescriptMonorepo.spaceY(8)
+                ]),
+            Tailwind$RescriptMonorepo.block
           ])
     ]);
 
 var li = Tailwind$RescriptMonorepo.twStyle([
       Tailwind$RescriptMonorepo.flex,
       Tailwind$RescriptMonorepo.itemsCenter,
-      Tailwind$RescriptMonorepo.spaceX(2)
+      Tailwind$RescriptMonorepo.dividers([Tailwind$RescriptMonorepo.spaceX(2)])
     ]);
 
 var avatar = Tailwind$RescriptMonorepo.twStyle([
@@ -107,8 +111,10 @@ var twitterLink = Tailwind$RescriptMonorepo.twStyle([
     ]);
 
 var mdxWrapper = Tailwind$RescriptMonorepo.twStyle([
-      Tailwind$RescriptMonorepo.divideY(undefined, "gray200", 1),
-      Tailwind$RescriptMonorepo.dark([Tailwind$RescriptMonorepo.divideY(undefined, "gray700", 1)]),
+      Tailwind$RescriptMonorepo.dividers([
+            Tailwind$RescriptMonorepo.divideY(undefined, "gray200", 1),
+            Tailwind$RescriptMonorepo.dark([Tailwind$RescriptMonorepo.divideY(undefined, "gray700", 1)])
+          ]),
       Tailwind$RescriptMonorepo.xl([
             Tailwind$RescriptMonorepo.pb(0),
             Tailwind$RescriptMonorepo.col(3),
@@ -142,8 +148,10 @@ var footerWrapper = Tailwind$RescriptMonorepo.twStyle([
       Tailwind$RescriptMonorepo.text("sm"),
       Tailwind$RescriptMonorepo.fontWeight(500),
       Tailwind$RescriptMonorepo.leading(5),
-      Tailwind$RescriptMonorepo.divideY(undefined, "gray200", 0),
-      Tailwind$RescriptMonorepo.dark([Tailwind$RescriptMonorepo.divideY(undefined, "gray700", 0)]),
+      Tailwind$RescriptMonorepo.dividers([
+            Tailwind$RescriptMonorepo.divideY(undefined, "gray200", 0),
+            Tailwind$RescriptMonorepo.dark([Tailwind$RescriptMonorepo.divideY(undefined, "gray700", 0)])
+          ]),
       Tailwind$RescriptMonorepo.xl([
             Tailwind$RescriptMonorepo.divideY(undefined, "gray200", 1),
             Tailwind$RescriptMonorepo.colStart(1),
@@ -175,7 +183,7 @@ var paginationWrapper = Tailwind$RescriptMonorepo.twStyle([
       Tailwind$RescriptMonorepo.py(4),
       Tailwind$RescriptMonorepo.xl([
             Tailwind$RescriptMonorepo.block,
-            Tailwind$RescriptMonorepo.spaceY(8),
+            Tailwind$RescriptMonorepo.dividers([Tailwind$RescriptMonorepo.spaceY(8)]),
             Tailwind$RescriptMonorepo.py(8)
           ])
     ]);

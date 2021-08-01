@@ -8,7 +8,7 @@ import * as Tailwind$RescriptMonorepo from "../../styles/tailwind/Tailwind.mjs";
 var mainWrapper = Tailwind$RescriptMonorepo.twStyle([
       Tailwind$RescriptMonorepo.pt(6),
       Tailwind$RescriptMonorepo.pb(8),
-      Tailwind$RescriptMonorepo.spaceY(2),
+      Tailwind$RescriptMonorepo.dividers([Tailwind$RescriptMonorepo.spaceY(2)]),
       Tailwind$RescriptMonorepo.md([Tailwind$RescriptMonorepo.spaceY(5)])
     ]);
 

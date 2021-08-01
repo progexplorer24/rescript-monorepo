@@ -9,16 +9,16 @@ import * as Tailwind$RescriptMonorepo from "./styles/tailwind/Tailwind.mjs";
 import * as Mdx__helpers$RescriptMonorepo from "./server/Mdx__helpers.mjs";
 import * as SiteMetadata$RescriptMonorepo from "./data/SiteMetadata.mjs";
 
-var wrapper = Tailwind$RescriptMonorepo.twStyle([
-      Tailwind$RescriptMonorepo.divideY(undefined, "gray200", 1),
-      Tailwind$RescriptMonorepo.dark([Tailwind$RescriptMonorepo.divideY(undefined, "gray700", 1)])
-    ]);
+var wrapper = Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.dividers([
+            Tailwind$RescriptMonorepo.divideY(undefined, "gray200", 1),
+            Tailwind$RescriptMonorepo.dark([Tailwind$RescriptMonorepo.divideY(undefined, "gray700", 1)])
+          ])]);
 
 var wrapper2 = Tailwind$RescriptMonorepo.twStyle([
       Tailwind$RescriptMonorepo.pt(0),
       Tailwind$RescriptMonorepo.pb(8),
-      Tailwind$RescriptMonorepo.spaceY(2),
-      Tailwind$RescriptMonorepo.md([Tailwind$RescriptMonorepo.spaceY(5)])
+      Tailwind$RescriptMonorepo.dividers([Tailwind$RescriptMonorepo.spaceY(2)]),
+      Tailwind$RescriptMonorepo.md([Tailwind$RescriptMonorepo.dividers([Tailwind$RescriptMonorepo.spaceY(5)])])
     ]);
 
 var h1 = Tailwind$RescriptMonorepo.twStyle([
@@ -53,10 +53,10 @@ var p = Tailwind$RescriptMonorepo.twStyle([
       Tailwind$RescriptMonorepo.dark([Tailwind$RescriptMonorepo.textColor(undefined, "gray400")])
     ]);
 
-var ul = Tailwind$RescriptMonorepo.twStyle([
-      Tailwind$RescriptMonorepo.divideY(undefined, "gray200", 1),
-      Tailwind$RescriptMonorepo.dark([Tailwind$RescriptMonorepo.divideY(undefined, "gray700", 1)])
-    ]);
+var ul = Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.dividers([
+            Tailwind$RescriptMonorepo.divideY(undefined, "gray200", 1),
+            Tailwind$RescriptMonorepo.dark([Tailwind$RescriptMonorepo.divideY(undefined, "gray700", 1)])
+          ])]);
 
 var li = Tailwind$RescriptMonorepo.twStyle([Tailwind$RescriptMonorepo.py(12)]);
 

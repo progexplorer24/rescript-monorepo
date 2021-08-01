@@ -5,10 +5,10 @@ module Styles = {
     flexCol,
     itemsCenter,
     justifyStart,
-    md([justifyCenter, itemsCenter, flexRow, spaceX(#6), mt(#24)]),
+    md([justifyCenter, itemsCenter, flexRow, dividers([spaceX(#6)]), mt(#24)]),
   ])
 
-  let titleSection = twStyle([pt(#6), pb(#8), spaceX(#2), md([spaceY(#5)])])
+  let titleSection = twStyle([pt(#6), pb(#8), dividers([spaceX(#2)]), md([dividers([spaceY(#5)])])])
 
   let h1 = twStyle([
     text(#xl6),

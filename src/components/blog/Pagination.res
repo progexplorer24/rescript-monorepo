@@ -1,8 +1,7 @@
 module Styles = {
   open Tailwind
-  let mainWrapper = twStyle([pt(#6), pb(#8), spaceY(#2), md([spaceY(#5)])])
+  let mainWrapper = twStyle([pt(#6), pb(#8), dividers([spaceY(#2)]), md([spaceY(#5)])])
   let nav = twStyle([flex, justifyBetween])
-  // "cursor-auto disabled:opacity-50"
   let disabled = twStyle([cursorAuto, disabled([opacity(#50)])])
 }
 

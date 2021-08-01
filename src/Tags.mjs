@@ -3,7 +3,6 @@
 import * as React from "react";
 import * as Js_dict from "rescript/lib/es6/js_dict.js";
 import * as Css from "@emotion/css";
-import * as Css$RescriptMonorepo from "./styles/Css.mjs";
 import * as SEO$RescriptMonorepo from "./components/blog/SEO.mjs";
 import * as Tag$RescriptMonorepo from "./components/blog/Tag.mjs";
 import * as Link$RescriptMonorepo from "./components/blog/Link.mjs";
@@ -17,31 +16,29 @@ var pageWrapper = Tailwind$RescriptMonorepo.twStyle([
       Tailwind$RescriptMonorepo.flexCol,
       Tailwind$RescriptMonorepo.itemsStart,
       Tailwind$RescriptMonorepo.justifyStart,
+      Tailwind$RescriptMonorepo.dividers([
+            Tailwind$RescriptMonorepo.divideY(undefined, "gray200", 1),
+            Tailwind$RescriptMonorepo.dark([Tailwind$RescriptMonorepo.divideY(undefined, "gray800", 1)])
+          ]),
       Tailwind$RescriptMonorepo.md([
             Tailwind$RescriptMonorepo.justifyCenter,
             Tailwind$RescriptMonorepo.itemsCenter,
             Tailwind$RescriptMonorepo.flexRow,
-            Tailwind$RescriptMonorepo.spaceX(6),
+            Tailwind$RescriptMonorepo.dividers([
+                  Tailwind$RescriptMonorepo.spaceX(6),
+                  Tailwind$RescriptMonorepo.divideY(undefined, "transparent", 1),
+                  Tailwind$RescriptMonorepo.dark([Tailwind$RescriptMonorepo.divideY(undefined, "transparent", 1)])
+                ]),
             Tailwind$RescriptMonorepo.mt(24)
-          ]),
-      Tailwind$RescriptMonorepo.dark([Tailwind$RescriptMonorepo.divideY(undefined, "gray700", 1)])
+          ])
     ]);
 
 var titleContainer = Tailwind$RescriptMonorepo.twStyle([
       Tailwind$RescriptMonorepo.pt(6),
       Tailwind$RescriptMonorepo.pb(8),
-      Tailwind$RescriptMonorepo.spaceX(2),
-      Tailwind$RescriptMonorepo.md([Tailwind$RescriptMonorepo.spaceY(5)])
+      Tailwind$RescriptMonorepo.dividers([Tailwind$RescriptMonorepo.spaceX(2)]),
+      Tailwind$RescriptMonorepo.md([Tailwind$RescriptMonorepo.dividers([Tailwind$RescriptMonorepo.spaceY(5)])])
     ]);
-
-var h1Small = Css$RescriptMonorepo.sm(Tailwind$RescriptMonorepo.twStyle([
-          Tailwind$RescriptMonorepo.text("xl4"),
-          Tailwind$RescriptMonorepo.leading(10)
-        ]));
-
-var h1New = Css$RescriptMonorepo.color("FF00FF");
-
-var h1New2 = Css$RescriptMonorepo.responsiveBreakpoint(440, Css$RescriptMonorepo.colorRaw("FF0000"), undefined, undefined);
 
 var h1 = Tailwind$RescriptMonorepo.twStyle([
       Tailwind$RescriptMonorepo.text("xl3"),
@@ -53,7 +50,9 @@ var h1 = Tailwind$RescriptMonorepo.twStyle([
             Tailwind$RescriptMonorepo.text("xl6"),
             Tailwind$RescriptMonorepo.leading(14),
             Tailwind$RescriptMonorepo.borderR(2),
-            Tailwind$RescriptMonorepo.px(6)
+            Tailwind$RescriptMonorepo.px(6),
+            Tailwind$RescriptMonorepo.borderColor(undefined, "gray200"),
+            Tailwind$RescriptMonorepo.dark([Tailwind$RescriptMonorepo.borderColor(undefined, "gray700")])
           ]),
       Tailwind$RescriptMonorepo.dark([Tailwind$RescriptMonorepo.textColor(undefined, "gray100")])
     ]);
@@ -67,13 +66,7 @@ var tagsSection = Tailwind$RescriptMonorepo.twStyle([
 var tagsWrapper = Tailwind$RescriptMonorepo.twStyle([
       Tailwind$RescriptMonorepo.flex,
       Tailwind$RescriptMonorepo.flexWrap,
-      Tailwind$RescriptMonorepo.maxW("lg"),
-      Tailwind$RescriptMonorepo.borderT(1),
-      Tailwind$RescriptMonorepo.borderColor(undefined, "gray300"),
-      Tailwind$RescriptMonorepo.dark([
-            Tailwind$RescriptMonorepo.borderColor(undefined, "gray700"),
-            Tailwind$RescriptMonorepo.md([Tailwind$RescriptMonorepo.borderT(0)])
-          ])
+      Tailwind$RescriptMonorepo.maxW("lg")
     ]);
 
 var linkStyles = Tailwind$RescriptMonorepo.twStyle([
@@ -92,8 +85,6 @@ function $$default(param) {
   };
   var entries = Js_dict.entries(param.tags);
   var sortedTags = entries.sort(byValue);
-  console.log(sortedTags);
-  console.log(h1New2);
   var notTagsMsg = entries.length === 0 ? React.createElement(React.Fragment, undefined, Utils$RescriptMonorepo.str("No tags found.")) : null;
   var renderTags = sortedTags.map(function (param) {
         var key = param[0];
@@ -116,15 +107,7 @@ function $$default(param) {
                 }, React.createElement("div", {
                       className: titleContainer
                     }, React.createElement("h1", {
-                          className: Css.cx([
-                                h1,
-                                h1Small
-                              ])
-                        }, Utils$RescriptMonorepo.str("Tags")), React.createElement("h1", {
-                          className: Css.cx([
-                                h1New,
-                                h1New2
-                              ])
+                          className: Css.cx([h1])
                         }, Utils$RescriptMonorepo.str("Tags"))), React.createElement("div", {
                       className: tagsWrapper
                     }, notTagsMsg, renderTags)));

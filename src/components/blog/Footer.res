@@ -1,14 +1,14 @@
 module Styles = {
   open Tailwind
   let footerWrapper = twStyle([flex, flexCol, itemsCenter, mt(#16)])
-  let iconsWrapper = twStyle([flex, mb(#3), spaceX(#4)])
+  let iconsWrapper = twStyle([flex, mb(#3), dividers([spaceX(#4)])])
   let footerInfo = twStyle([
     flex,
     flexWrap,
     justifyCenter,
     leading(#loose),
     mb(#2),
-    spaceX(#2),
+    dividers([spaceX(#2)]),
     text(#sm),
     textColor(#gray500),
     selector(Selectors.allChildren, [pt(#1)]),

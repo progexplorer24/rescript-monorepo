@@ -809,31 +809,31 @@ function nml(size) {
 }
 
 function spaceY(size) {
-  return [CssJs.selector(Selectors$RescriptMonorepo.ignoreFirstChild, [
-                CssJs.marginTop(Theme__Spacing$RescriptMonorepo.toValue(size)),
-                CssJs.marginBottom(Theme__Spacing$RescriptMonorepo.toValue(0))
-              ])];
+  return [
+          CssJs.marginTop(Theme__Spacing$RescriptMonorepo.toValue(size)),
+          CssJs.marginBottom(Theme__Spacing$RescriptMonorepo.toValue(0))
+        ];
 }
 
 function nspaceY(size) {
-  return [CssJs.selector(Selectors$RescriptMonorepo.ignoreFirstChild, [
-                CssJs.marginTop(Theme__SpacingNegative$RescriptMonorepo.toValue(size)),
-                CssJs.marginBottom(Theme__Spacing$RescriptMonorepo.toValue(0))
-              ])];
+  return [
+          CssJs.marginTop(Theme__SpacingNegative$RescriptMonorepo.toValue(size)),
+          CssJs.marginBottom(Theme__Spacing$RescriptMonorepo.toValue(0))
+        ];
 }
 
 function spaceX(size) {
-  return [CssJs.selector(Selectors$RescriptMonorepo.ignoreFirstChild, [
-                CssJs.marginLeft(Theme__Spacing$RescriptMonorepo.toValue(size)),
-                CssJs.marginRight(Theme__Spacing$RescriptMonorepo.toValue(0))
-              ])];
+  return [
+          CssJs.marginLeft(Theme__Spacing$RescriptMonorepo.toValue(size)),
+          CssJs.marginRight(Theme__Spacing$RescriptMonorepo.toValue(0))
+        ];
 }
 
 function nspaceX(size) {
-  return [CssJs.selector(Selectors$RescriptMonorepo.ignoreFirstChild, [
-                CssJs.marginLeft(Theme__SpacingNegative$RescriptMonorepo.toValue(size)),
-                CssJs.marginRight(Theme__Spacing$RescriptMonorepo.toValue(0))
-              ])];
+  return [
+          CssJs.marginLeft(Theme__SpacingNegative$RescriptMonorepo.toValue(size)),
+          CssJs.marginRight(Theme__Spacing$RescriptMonorepo.toValue(0))
+        ];
 }
 
 function w(width) {
@@ -1437,17 +1437,17 @@ function divideY(reverseOpt, colorOpt, width) {
   var reverse = reverseOpt !== undefined ? reverseOpt : false;
   var color = colorOpt !== undefined ? colorOpt : "gray400";
   if (reverse) {
-    return [CssJs.selector(Selectors$RescriptMonorepo.ignoreFirstChild, [
-                  CssJs.borderColor(Theme__Colors$RescriptMonorepo.toColor(undefined, color)),
-                  CssJs.borderTopWidth(Theme__BorderWidth$RescriptMonorepo.toWidth(0)),
-                  CssJs.borderBottomWidth(Theme__BorderWidth$RescriptMonorepo.toWidth(width))
-                ])];
+    return [
+            CssJs.borderColor(Theme__Colors$RescriptMonorepo.toColor(undefined, color)),
+            CssJs.borderTopWidth(Theme__BorderWidth$RescriptMonorepo.toWidth(0)),
+            CssJs.borderBottomWidth(Theme__BorderWidth$RescriptMonorepo.toWidth(width))
+          ];
   } else {
-    return [CssJs.selector(Selectors$RescriptMonorepo.ignoreFirstChild, [
-                  CssJs.borderColor(Theme__Colors$RescriptMonorepo.toColor(undefined, color)),
-                  CssJs.borderTopWidth(Theme__BorderWidth$RescriptMonorepo.toWidth(width)),
-                  CssJs.borderBottomWidth(Theme__BorderWidth$RescriptMonorepo.toWidth(0))
-                ])];
+    return [
+            CssJs.borderColor(Theme__Colors$RescriptMonorepo.toColor(undefined, color)),
+            CssJs.borderTopWidth(Theme__BorderWidth$RescriptMonorepo.toWidth(width)),
+            CssJs.borderBottomWidth(Theme__BorderWidth$RescriptMonorepo.toWidth(0))
+          ];
   }
 }
 
@@ -1455,17 +1455,17 @@ function divideX(reverseOpt, colorOpt, width) {
   var reverse = reverseOpt !== undefined ? reverseOpt : false;
   var color = colorOpt !== undefined ? colorOpt : "gray400";
   if (reverse) {
-    return [CssJs.selector(Selectors$RescriptMonorepo.ignoreFirstChild, [
-                  CssJs.borderRightWidth(Theme__BorderWidth$RescriptMonorepo.toWidth(width)),
-                  CssJs.borderLeftWidth(Theme__BorderWidth$RescriptMonorepo.toWidth(0)),
-                  CssJs.borderColor(Theme__Colors$RescriptMonorepo.toColor(undefined, color))
-                ])];
+    return [
+            CssJs.borderRightWidth(Theme__BorderWidth$RescriptMonorepo.toWidth(width)),
+            CssJs.borderLeftWidth(Theme__BorderWidth$RescriptMonorepo.toWidth(0)),
+            CssJs.borderColor(Theme__Colors$RescriptMonorepo.toColor(undefined, color))
+          ];
   } else {
-    return [CssJs.selector(Selectors$RescriptMonorepo.ignoreFirstChild, [
-                  CssJs.borderLeftWidth(Theme__BorderWidth$RescriptMonorepo.toWidth(width)),
-                  CssJs.borderRightWidth(Theme__BorderWidth$RescriptMonorepo.toWidth(0)),
-                  CssJs.borderColor(Theme__Colors$RescriptMonorepo.toColor(undefined, color))
-                ])];
+    return [
+            CssJs.borderLeftWidth(Theme__BorderWidth$RescriptMonorepo.toWidth(width)),
+            CssJs.borderRightWidth(Theme__BorderWidth$RescriptMonorepo.toWidth(0)),
+            CssJs.borderColor(Theme__Colors$RescriptMonorepo.toColor(undefined, color))
+          ];
   }
 }
 
@@ -1900,16 +1900,8 @@ function selector(string, rules) {
   return [CssJs.selector(string, Belt_Array.concatMany(rules))];
 }
 
-function smSpecifity(rules) {
-  return [[CssJs.selector(".sm &", Belt_Array.concatMany(rules))]];
-}
-
-function minWBreakpointNew(breakpoint, styles) {
-  return [CssJs.media("screen and (min-width: " + String(breakpoint) + "px)", Belt_Array.concatMany(styles))];
-}
-
-function smNew(rules) {
-  return minWBreakpointNew(640, smSpecifity(rules));
+function dividers(rules) {
+  return [CssJs.selector(Selectors$RescriptMonorepo.ignoreFirstChild, Belt_Array.concatMany(rules))];
 }
 
 function dark(rules) {
@@ -2720,9 +2712,7 @@ export {
   contentClose ,
   container ,
   selector ,
-  smSpecifity ,
-  minWBreakpointNew ,
-  smNew ,
+  dividers ,
   dark ,
   marker ,
   active ,

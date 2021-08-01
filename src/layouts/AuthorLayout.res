@@ -1,7 +1,7 @@
 module Styles = {
   open Tailwind
-  let pageWrapper = twStyle([divideY(~color=#gray200, #1)])
-  let h1Wrapper = twStyle([pt(#6), pb(#8), spaceY(#2), md([spaceY(#5)])])
+  let pageWrapper = twStyle([dividers([divideY(~color=#gray200, #1)])])
+  let h1Wrapper = twStyle([pt(#6), pb(#8), dividers([spaceY(#2)]), md([dividers([spaceY(#5)])])])
   let h1 = twStyle([
     text(#xl3),
     fontWeight(#800),
@@ -12,14 +12,17 @@ module Styles = {
     sm([text(#xl4), leading(#10)]),
     md([text(#xl6), leading(#14)]),
   ])
-  let bioGrid = twStyle([itemsStart, spaceY(#2), xl([grid, gridCols(#3), gapX(#8), spaceY(#0)])])
-  let bioFlex = twStyle([flex, flexCol, itemsCenter, pt(#8), spaceX(#2)])
+  let bioGrid = twStyle([
+    itemsStart,
+    dividers([spaceY(#2)]),
+    xl([grid, gridCols(#3), gapX(#8), dividers([spaceY(#0)])]),
+  ])
+  let bioFlex = twStyle([flex, flexCol, itemsCenter, pt(#8), dividers([spaceX(#2)])])
 
   let image = twStyle([w(#48), h(#48), rounded(#full)])
   let name = twStyle([pt(#4), pb(#2), text(#xl2), fontWeight(#700), leading(#8), tracking(#tight)])
   let bioParagraphs = twStyle([textColor(#gray500), dark([textColor(#gray400)])])
-  let iconsWrapper = twStyle([flex, pt(#6), spaceX(#3)])
-  // "pt-8 pb-8 prose dark:prose-dark max-w-none xl:col-span-2"
+  let iconsWrapper = twStyle([flex, pt(#6), dividers([spaceX(#3)])])
   let childrenWrapper = twStyle([pt(#8), pb(#8), maxW(#none), xl([col(#1)])])
 }
 

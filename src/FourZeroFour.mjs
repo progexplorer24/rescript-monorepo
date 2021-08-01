@@ -15,7 +15,7 @@ var wrapper = Tailwind$RescriptMonorepo.twStyle([
             Tailwind$RescriptMonorepo.justifyCenter,
             Tailwind$RescriptMonorepo.itemsCenter,
             Tailwind$RescriptMonorepo.flexRow,
-            Tailwind$RescriptMonorepo.spaceX(6),
+            Tailwind$RescriptMonorepo.dividers([Tailwind$RescriptMonorepo.spaceX(6)]),
             Tailwind$RescriptMonorepo.mt(24)
           ])
     ]);
@@ -23,8 +23,8 @@ var wrapper = Tailwind$RescriptMonorepo.twStyle([
 var titleSection = Tailwind$RescriptMonorepo.twStyle([
       Tailwind$RescriptMonorepo.pt(6),
       Tailwind$RescriptMonorepo.pb(8),
-      Tailwind$RescriptMonorepo.spaceX(2),
-      Tailwind$RescriptMonorepo.md([Tailwind$RescriptMonorepo.spaceY(5)])
+      Tailwind$RescriptMonorepo.dividers([Tailwind$RescriptMonorepo.spaceX(2)]),
+      Tailwind$RescriptMonorepo.md([Tailwind$RescriptMonorepo.dividers([Tailwind$RescriptMonorepo.spaceY(5)])])
     ]);
 
 var h1 = Tailwind$RescriptMonorepo.twStyle([
