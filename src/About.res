@@ -6,11 +6,6 @@ let default = () => <div />
 
 // const DEFAULT_LAYOUT = 'AuthorLayout'
 
-// export async function getStaticProps() {
-//   const authorDetails = await getFileBySlug('authors', ['default'])
-//   return { props: { authorDetails } }
-// }
-
 // export default function About({ authorDetails }) {
 //   const { mdxSource, frontMatter } = authorDetails
 
@@ -22,3 +17,24 @@ let default = () => <div />
 //     />
 //   )
 // }
+
+type props = {frontmatter: Static.authorFrontmatter, content: string}
+
+let default = ({frontmatter, content}) => {
+  <AuthorLayout frontmatter> {""->Utils.str} </AuthorLayout>
+}
+
+let getStaticProps = _ctx => {
+  let authorDetails = Mdx__helpers.getFileBySlug(["authors", "sensei"])
+
+  let {content, data, _}: GrayMatter.returnObject<Static.authorFrontmatter> = GrayMatter.matter(
+    authorDetails,
+  )
+
+  let props = {
+    frontmatter: data,
+    content: content,
+  }
+
+  Js.Promise.resolve({"props": props})
+}
