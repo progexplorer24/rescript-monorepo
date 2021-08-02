@@ -54,10 +54,11 @@ let components = {
 
 @react.component
 let make = (~mdxSource: string, ~layout: string) => {
-  module MDXLayout = {
-    @react.component
-    let make = (~mdxSource: string, ~layout: string, ~components: mdxComponents) =>
-      React.useMemo0(() => MdxBundler.getMDXComponent(mdxSource, [mdxSource]))
-  }
-  <MDXLayout mdxSource layout={layout} components />
+  // module MDXLayout = {
+  //   @react.component
+  //   let make = (~mdxSource: string, ~layout: string, ~components: mdxComponents) =>
+  //     React.useMemo0(() => MdxBundler.getMDXComponent(mdxSource, [mdxSource]))
+  // }
+  // <MDXLayout mdxSource layout={layout} components />
+  <> </>
 }
