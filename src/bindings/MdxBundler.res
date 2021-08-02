@@ -1,9 +1,17 @@
 type remarkPlugin
 type rehypePlugin
 
+type globals<'any> = Js.Dict.t<'any>
+
+type frontmatter = {
+  title: string,
+  description: string,
+  published: Js.Date.t,
+}
+
 type serializeResult = {
   code: string,
-  frontmatter: string,
+  frontmatter: frontmatter,
 }
 
 type xdmOptions = {
@@ -30,10 +38,14 @@ type files = {files: Js.Dict.t<string>}
 @module("mdx-bundler")
 external bundleMDXSimple: string => Promise.t<serializeResult> = "bundleMDX"
 
-@module("mdx-bundler")
-external bundleMDX: (string, config) => Promise.t<serializeResult> = "bundleMDX"
-@module("mdx-bundler")
-external bundleMDXFiles: (string, files) => Promise.t<serializeResult> = "bundleMDX"
+// @module("mdx-bundler")
+// external bundleMDX: (string, config) => Promise.t<serializeResult> = "bundleMDX"
+// @module("mdx-bundler")
+// external bundleMDXFiles: (string, files) => Promise.t<serializeResult> = "bundleMDX"
 
 @module("mdx-bundler/client")
-external getMDXComponent: (string, array<string>) => React.element = "getMDXComponent"
+external getMDXComponent: (string, globals<'any>) => React.element = "getMDXComponent"
+
+@module("mdx-bundler/client")
+external getMDXComponent2: (string, globals<'any>) => React.component<Js.Dict.t<'a>> =
+  "getMDXComponent"

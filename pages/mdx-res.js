@@ -1,8 +1,6 @@
 import * as React from 'react'
-// import { default as MdxExamplePage } from "../src/MdxExample.mjs";
-import * as Client from "mdx-bundler/client";
+import { default as MdxExamplePage } from "../src/MdxExample.mjs";
 import {bundleMDX} from 'mdx-bundler'
-import {str} from "../src/utils/Utils.mjs"
 
 // export {getStaticProps} from "../src/Static2.mjs"
 
@@ -44,16 +42,9 @@ const {code, frontmatter} = result
 }
 
 
-export default function MdxExample(param) {
-  var frontmatter = param.frontmatter;
-  var code = param.code;
-  var make = Client.getMDXComponent(code, {});
+export default function MdxExample(props) {
 
-
-  return React.createElement(React.Fragment, undefined, React.createElement("header", undefined, React.createElement("h1", undefined, str(frontmatter.title)), React.createElement("p", undefined, str(frontmatter.description))), React.createElement("main", undefined, React.createElement(make, {})));
+  return <MdxExamplePage code={props.code} frontmatter={props.frontmatter} />
   
 }
-
-
-
 
