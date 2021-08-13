@@ -68,22 +68,9 @@ function getFileBySlug(rootOpt, slug) {
   }
 }
 
-function getFileBySlugNew(rootOpt, slug) {
-  var root$1 = rootOpt !== undefined ? rootOpt : root;
-  var mdxPath = Path.join(root$1, "data", slug.join("/") + ".mdx");
-  var mdPath = Path.join(root$1, "data", slug.join("/") + ".mdx");
-  var source = Fs.existsSync(mdxPath) ? NodeJS$RescriptMonorepo.Fs.readFileSync(undefined, undefined, mdxPath) : NodeJS$RescriptMonorepo.Fs.readFileSync(undefined, undefined, mdPath);
-  if (process.platform === "win32") {
-    process.env.ESBUILD_BINARY_PATH = Path.join(process.cwd(), "node_modules", "esbuild", "esbuild.exe");
-  } else {
-    process.env.ESBUILD_BINARY_PATH = Path.join(process.cwd(), "node_modules", "esbuild", "bin", "esbuild");
-  }
-  return source;
-}
-
 function removeRoot(rootOpt, string) {
   var root$1 = rootOpt !== undefined ? rootOpt : root;
-  return string.replace(Path.join(root$1, "/data"), "");
+  return string.replace(Path.join(root$1, "/data", "blog"), "");
 }
 
 function getFiles(rootOpt, $$location) {
@@ -125,6 +112,59 @@ function sortDesc(a, b) {
   }
 }
 
+function toValue(val) {
+  if (val === "authors") {
+    return "authors";
+  } else {
+    return "blog";
+  }
+}
+
+var DataType = {
+  toValue: toValue
+};
+
+function toValue$1(frontmatterRawData, slug, type_, root, param) {
+  var mdxPath = Path.join(root, "data", toValue(type_), slug + ".mdx");
+  var mdPath = Path.join(root, "data", toValue(type_), slug + ".md");
+  if (Fs.existsSync(mdxPath)) {
+    NodeJS$RescriptMonorepo.Fs.readFileSync(undefined, undefined, mdxPath);
+  } else {
+    NodeJS$RescriptMonorepo.Fs.readFileSync(undefined, undefined, mdPath);
+  }
+  var fileName = Fs.existsSync(mdxPath) ? slug + ".mdx" : slug + ".md";
+  var string = frontmatterRawData.lastmod;
+  var lastmod = (string == null) ? "" : string;
+  var bool = frontmatterRawData.draft;
+  var isDraft = (bool == null) ? true : bool;
+  var string$1 = frontmatterRawData.summary;
+  var summary = (string$1 == null) ? "" : string$1;
+  var array = frontmatterRawData.images;
+  var images = (array == null) ? [] : array;
+  var array$1 = frontmatterRawData.authors;
+  var authors = (array$1 == null) ? [] : array$1;
+  var str = frontmatterRawData.layout;
+  var layout = (str == null) ? "" : str;
+  return {
+          title: frontmatterRawData.title,
+          date: frontmatterRawData.date,
+          tags: frontmatterRawData.tags,
+          lastmod: lastmod,
+          draft: isDraft,
+          summary: summary,
+          images: images,
+          authors: authors,
+          layout: layout,
+          readingTime: "5m",
+          slug: toValue(type_) + slug,
+          fileName: fileName
+        };
+}
+
+var FrontMatterFull = {
+  toValue: toValue$1
+};
+
 function getAllFrontMatter(blogPath) {
   var files = readdirRecursive(blogPath);
   var allFrontmatter = files.reduce((function (acc, file) {
@@ -132,33 +172,8 @@ function getAllFrontMatter(blogPath) {
           var source = readFileSync(undefined, undefined, fileName);
           var slug = removeMdxExtension(removeRoot(undefined, fileName));
           var match = GrayMatter(source);
-          var data = match.data;
-          var string = data.lastmod;
-          var lastmod = (string == null) ? "" : string;
-          var bool = data.draft;
-          var isDraft = (bool == null) ? true : bool;
-          var string$1 = data.summary;
-          var summary = (string$1 == null) ? "" : string$1;
-          var array = data.images;
-          var images = (array == null) ? [] : array;
-          var withSlug_title = data.title;
-          var withSlug_date = data.date;
-          var withSlug_tags = data.tags;
-          var bool$1 = data.draft;
-          if (!(bool$1 == null) && !bool$1) {
-            return acc.concat([{
-                          title: withSlug_title,
-                          date: withSlug_date,
-                          tags: withSlug_tags,
-                          lastmod: lastmod,
-                          draft: bool$1,
-                          summary: summary,
-                          images: images,
-                          slug: slug
-                        }]);
-          } else {
-            return acc;
-          }
+          var frontmatterFull = toValue$1(match.data, slug, "blog", process.cwd(), undefined);
+          return acc.concat([frontmatterFull]);
         }), []);
   return allFrontmatter.sort(function (frontmatter1, frontmatter2) {
               return sortDesc(frontmatter1.date, frontmatter2.date);
@@ -179,12 +194,6 @@ function getBlogPostsFromLatest(cwdOpt, pathOpt, param) {
 }
 
 var Params = {};
-
-function getFormattedFiles($$location) {
-  return getFiles(undefined, $$location).map(function (slug) {
-              return slug.replace(/^\/blog\//, "");
-            });
-}
 
 function returnSiteMetadata(pathOpt, param) {
   var path = pathOpt !== undefined ? pathOpt : [
@@ -214,10 +223,14 @@ function formatDateString(date) {
             });
 }
 
-function createTagsDictionary(folder) {
-  var files = getFormattedFiles(folder);
-  var postFilePaths = files.map(function (file) {
-        return Path.join(root, "data", folder, file + ".mdx");
+function createTagsDictionary(rootOpt, type_Opt, folder) {
+  var root$1 = rootOpt !== undefined ? rootOpt : root;
+  var type_ = type_Opt !== undefined ? type_Opt : "blog";
+  var paths = getFiles(undefined, folder);
+  var postFilePaths = paths.map(function (path) {
+        var mdxPath = Path.join(root$1, "data", toValue(type_), path + ".mdx");
+        var fileName = Fs.existsSync(mdxPath) ? path + ".mdx" : path + ".md";
+        return Path.join(root$1, "data", folder, fileName);
       });
   var tagsMatrix = postFilePaths.map(function (postFilePath) {
         var source = readFileSync(undefined, undefined, postFilePath);
@@ -254,14 +267,14 @@ export {
   removeMdxExtension ,
   toFileTypeValue ,
   getFileBySlug ,
-  getFileBySlugNew ,
   removeRoot ,
   getFiles ,
   sortDesc ,
+  DataType ,
+  FrontMatterFull ,
   getAllFrontMatter ,
   getBlogPostsFromLatest ,
   Params ,
-  getFormattedFiles ,
   returnSiteMetadata ,
   kebabCase ,
   formatDateString ,

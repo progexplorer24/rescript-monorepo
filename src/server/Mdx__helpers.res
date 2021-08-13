@@ -11,6 +11,21 @@ type data = {
   layout: Js.Nullable.t<string>,
 }
 
+type frontmatterFull = {
+  title: string,
+  date: string,
+  tags: array<string>,
+  lastmod: string,
+  draft: bool,
+  summary: string,
+  images: array<string>,
+  authors: array<string>,
+  layout: string,
+  readingTime: string,
+  slug: string,
+  fileName: string,
+}
+
 type frontmatter = {
   title: string,
   date: string,
@@ -30,6 +45,12 @@ type frontmatterAndSlug = {
   images: array<string>,
   slug: string,
 }
+
+type props = {
+  code: string,
+  frontmatter: frontmatterFull,
+}
+
 // NOTE: Process cwd is not a pure function
 let root = NodeJS.Process.cwd()
 
@@ -75,93 +96,11 @@ let getFileBySlug = (~root=root, slug) => {
     ? NodeJS.Fs.readFileSync(mdxPath)
     : NodeJS.Fs.readFileSync(mdPath)
 
-  // //  // https://github.com/kentcdodds/mdx-bundler#nextjs-esbuild-enoent
-  // let _setEnvPath = if NodeJS.Process.platform === "win32" {
-  //   NodeJS.Process.setESBuildPath(
-  //     NodeJS.Process.env,
-  //     join([NodeJS.Process.cwd(), "node_modules", "esbuild", "esbuild.exe"]),
-  //   )
-  // } else {
-  //   NodeJS.Process.setESBuildPath(
-  //     NodeJS.Process.env,
-  //     join([NodeJS.Process.cwd(), "node_modules", "esbuild", "bin", "esbuild"]),
-  //   )
-  // }
-
-  // let result = MdxBundler.bundleMDX(
-  //   source,
-  //   {
-  //     cwd: join([NodeJS.Process.cwd(), "components"]),
-  //     xdmOptions: options => {
-  //       // this is the recommended way to add custom remark/rehype plugins:
-  //       // The syntax might look weird, but it protects you in case we add/remove
-  //       // plugins in the future.
-  //       //   options.remarkPlugins = [
-  //       //   ...(options.remarkPlugins ?? []),
-  //       //   require("remark-slug"),
-  //       //   require("remark-autolink-headings"),
-  //       //   require("remark-gfm"),
-  //       //   codeTitles,
-  //       //   [require("remark-footnotes"), { inlineNotes: true }],
-  //       //   require("remark-math"),
-  //       //   imgToJsx,
-  //       // ]
-  //       // options.rehypePlugins = [
-  //       //   ...(options.rehypePlugins ?? []),
-  //       //   require("rehype-katex"),
-  //       //   [require("rehype-prism-plus"), { ignoreMissing: true }],
-  //       //   () => {
-  //       //     return (tree) => {
-  //       //       visit(tree, "element", (node, index, parent) => {
-  //       //         let [token, type_] = node.properties.className || []
-  //       //         if (token === "token") {
-  //       //           node.properties.className = [tokenClassNames[type_]]
-  //       //         }
-  //       //       })
-  //       //     }
-  //       //   }
-  //       // ]
-  //       options
-  //     },
-  //     esbuildOptions: options => {
-  //       options
-  //     },
-  //   },
-  // )->Js.Promise.then_((value: MdxBundler.serializeResult) => {
-  //   Js.Promise.resolve(value)
-  // }, _)
-
-  // Js.log(result)
-
-  source
-}
-// TODO: Needs to be finished for mdx bundler
-let getFileBySlugNew = (~root=root, slug) => {
-  let mdxPath = join([root, "data", `${Js.Array2.joinWith(slug, "/")}.mdx`])
-  let mdPath = join([root, "data", `${Js.Array2.joinWith(slug, "/")}.mdx`])
-
-  let source = NodeJS.Fs.existsSync(mdxPath)
-    ? NodeJS.Fs.readFileSync(mdxPath)
-    : NodeJS.Fs.readFileSync(mdPath)
-
-  //  // https://github.com/kentcdodds/mdx-bundler#nextjs-esbuild-enoent
-  let _setEnvPath = if NodeJS.Process.platform === "win32" {
-    NodeJS.Process.setESBuildPath(
-      NodeJS.Process.env,
-      join([NodeJS.Process.cwd(), "node_modules", "esbuild", "esbuild.exe"]),
-    )
-  } else {
-    NodeJS.Process.setESBuildPath(
-      NodeJS.Process.env,
-      join([NodeJS.Process.cwd(), "node_modules", "esbuild", "bin", "esbuild"]),
-    )
-  }
-
   source
 }
 
 let removeRoot = (~root=root, string) =>
-  Js.String2.replace(string, NodeJS.Path.join([root, "/data"]), "")
+  Js.String2.replace(string, NodeJS.Path.join([root, "/data", "blog"]), "")
 
 let getFiles = (~root=root, location) => {
   let prefixPaths = join([root, "data", location])
@@ -202,52 +141,103 @@ let sortDesc = (a, b) => {
   }
 }
 
-let getAllFrontMatter = blogPath => {
+module DataType = {
+  type t = [#authors | #blog]
+  let toValue = val =>
+    switch val {
+    | #authors => "authors"
+    | #blog => "blog"
+    }
+}
+
+module FrontMatterFull = {
+  type t = data
+
+  let toValue = (
+    ~frontmatterRawData: data,
+    ~slug: string,
+    ~type_: DataType.t,
+    ~root: string,
+    (),
+  ) => {
+    let mdxPath = NodeJS.Path.join([root, "data", DataType.toValue(type_), `${slug}.mdx`])
+    let mdPath = NodeJS.Path.join([root, "data", DataType.toValue(type_), `${slug}.md`])
+
+    let source = NodeJS.Fs.existsSync(mdxPath)
+      ? NodeJS.Fs.readFileSync(mdxPath)
+      : NodeJS.Fs.readFileSync(mdPath)
+
+    let fileName = NodeJS.Fs.existsSync(mdxPath) ? `${slug}.mdx` : `${slug}.md`
+
+    let lastmod = switch Js.toOption(frontmatterRawData.lastmod) {
+    | None => ""
+    | Some(string) => string
+    }
+    let isDraft = switch Js.toOption(frontmatterRawData.draft) {
+    | None => true
+    | Some(bool) => bool
+    }
+
+    let summary = switch Js.toOption(frontmatterRawData.summary) {
+    | None => ""
+    | Some(string) => string
+    }
+
+    let images = switch Js.toOption(frontmatterRawData.images) {
+    | None => []
+    | Some(array) => array
+    }
+
+    let authors = switch Js.toOption(frontmatterRawData.authors) {
+    | None => []
+    | Some(array) => array
+    }
+
+    let layout = switch Js.toOption(frontmatterRawData.layout) {
+    | None => ""
+    | Some(str) => str
+    }
+
+    let frontmatterFull: frontmatterFull = {
+      title: frontmatterRawData.title,
+      date: frontmatterRawData.date,
+      tags: frontmatterRawData.tags,
+      lastmod: lastmod,
+      draft: isDraft,
+      summary: summary,
+      images: images,
+      authors: authors,
+      layout: layout,
+      fileName: fileName,
+      readingTime: "5m",
+      slug: `${DataType.toValue(type_)}${slug}`,
+    }
+
+    frontmatterFull
+  }
+}
+
+let getAllFrontMatter = (blogPath: string) => {
   let files = readdirRecursive(blogPath)
   let allFrontmatter = Js.Array2.reduce(
     files,
     (acc, file) => {
       // NOTE: Replace for Windows paths
       let fileName = Js.String2.replaceByRe(file, %re("/\\\\/g"), "/")
-
       let source = readFileSync(fileName)
       let slug = removeMdxExtension(removeRoot(fileName))
       let {data, _}: GrayMatter.returnObject<data> = GrayMatter.matter(source)
 
-      let lastmod = switch Js.toOption(data.lastmod) {
-      | None => ""
-      | Some(string) => string
-      }
-      let isDraft = switch Js.toOption(data.draft) {
-      | None => true
-      | Some(bool) => bool
-      }
+      // This is probably the problem
+      let frontmatterFull = FrontMatterFull.toValue(
+        ~frontmatterRawData=data,
+        ~slug,
+        ~root=NodeJS.Process.cwd(),
+        ~type_=#blog,
+        (),
+      )
 
-      let summary = switch Js.toOption(data.summary) {
-      | None => ""
-      | Some(string) => string
-      }
-
-      let images = switch Js.toOption(data.images) {
-      | None => []
-      | Some(array) => array
-      }
-
-      let withSlug = {
-        title: data.title,
-        date: data.date,
-        tags: data.tags,
-        lastmod: lastmod,
-        draft: isDraft,
-        summary: summary,
-        images: images,
-        slug: slug,
-      }
-
-      switch Js.Nullable.toOption(data.draft) {
-      | None => acc
-      | Some(bool) => bool ? acc : Js.Array2.concat(acc, [{...withSlug, draft: bool}])
-      }
+      Js.Array2.concat(acc, [frontmatterFull])
     },
     [],
   )
@@ -272,9 +262,6 @@ module Params = {
 type paramsRecord = {params: Params.t}
 
 type slugRecord = {paths: paramsRecord}
-
-let getFormattedFiles = location =>
-  getFiles(location)->Js.Array2.map(slug => Js.String2.replaceByRe(slug, %re("/^\/blog\//"), ""))
 
 // NOTE: Utils functions for blog
 
@@ -317,11 +304,14 @@ let formatDateString = (date: string) => {
   )
 }
 
-let createTagsDictionary = folder => {
-  let files = getFormattedFiles(folder)
+let createTagsDictionary = (~root=root, ~type_=#blog, folder) => {
+  let paths = getFiles(folder)
 
-  let postFilePaths = Js.Array2.map(files, file => {
-    join([root, "data", folder, `${file}.mdx`])
+  let postFilePaths = Js.Array2.map(paths, path => {
+    let mdxPath = NodeJS.Path.join([root, "data", DataType.toValue(type_), `${path}.mdx`])
+
+    let fileName = NodeJS.Fs.existsSync(mdxPath) ? `${path}.mdx` : `${path}.md`
+    join([root, "data", folder, fileName])
   })
   let tagsMatrix = Js.Array2.map(postFilePaths, postFilePath => {
     let source = readFileSync(postFilePath)
