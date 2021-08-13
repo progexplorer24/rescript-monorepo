@@ -1,51 +1,48 @@
-// type remarkPlugin
-// type rehypePlugin
+type remarkPlugin
+type rehypePlugin
 
 type globals<'any> = Js.Dict.t<'any>
 
 type files = {files: Js.Dict.t<string>}
 
-type frontmatter = {
-  title: string,
-  description: string,
-  published: Js.Date.t,
-}
-
-type serializeResult = {
+type serializeResult<'frontmatter> = {
   code: string,
-  frontmatter: frontmatter,
+  frontmatter: 'frontmatter,
 }
 
-// type xdmOptions = {
-//   remarkPlugins: array<remarkPlugin>,
-//   rehypePlugins: array<rehypePlugin>,
-// }
+type xdm = {
+  remarkPlugins: array<remarkPlugin>,
+  rehypePlugins: array<rehypePlugin>,
+}
 
-// type esbuildOptions = {loader: Js.Dict.t<string>}
+type xdmOptions = xdm => xdm
 
-// type config = {
-//   cwd: string,
-//   xdmOptions: xdmOptions => xdmOptions,
-//   esbuildOptions: esbuildOptions => esbuildOptions,
-// }
+type esbuild = {loader: Js.Dict.t<string>}
+type esbuildOptions = esbuild => esbuild
 
-// type files = {files: Js.Dict.t<string>}
-
-type bundleConfg<'files, 'xdm, 'esbuildOptions, 'globals, 'matter> = {
+type bundleConfg<'files, 'globals, 'matter> = {
   files: 'files,
-  xdmOptions: 'xdm => 'xdm,
-  esbuildOptions: 'esbuildOptions => 'esbuildOptions,
+  xdmOptions: xdmOptions,
+  esbuildOptions: esbuildOptions,
   globals: 'globals,
   cwd: string,
-  grayMatterOptions: 'matter => 'matter,
 }
 
 @module("mdx-bundler")
-external bundleMDXSimple: string => Js.Promise.t<serializeResult> = "bundleMDX"
+external bundleMDXSimple: string => Promise.t<serializeResult<'frontmatter>> = "bundleMDX"
 
 @module("mdx-bundler")
-external bundleMDXFiles: (string, files) => Js.Promise.t<serializeResult> = "bundleMDX"
+external bundleMDXFiles: (string, files) => Promise.t<serializeResult<'frontmatter>> = "bundleMDX"
+
+@module("mdx-bundler")
+external bundleMDX: (
+  string,
+  bundleConfg<'files, 'globals, 'matter>,
+) => Promise.t<serializeResult<'frontmatter>> = "bundleMDX"
 
 @module("mdx-bundler/client")
 external getMDXComponent: (string, globals<'any>) => React.component<Js.Dict.t<'a>> =
   "getMDXComponent"
+
+@module("mdx-bundler/client")
+external getMDXComponent2: (string, globals<'any>) => React.component<Js.t<'a>> = "getMDXComponent"
