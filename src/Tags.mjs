@@ -114,7 +114,7 @@ function $$default(param) {
 }
 
 function getStaticProps(_ctx) {
-  var tagsDictionary = Mdx__helpers$RescriptMonorepo.createTagsDictionary("blog");
+  var tagsDictionary = Mdx__helpers$RescriptMonorepo.createTagsDictionary(undefined, undefined, "blog");
   var props = {
     tags: tagsDictionary
   };
