@@ -79,43 +79,6 @@ let getFileBySlugNew = (
   ) => {
     let {code, frontmatter} = result
 
-    // let authors = switch Js.Nullable.toOption(frontmatter.authors) {
-    // | Some(auth) => auth
-    // | None => []
-    // }
-
-    // let layout = switch Js.Nullable.toOption(frontmatter.layout) {
-    // | Some(lt) => lt
-    // | None => ""
-    // }
-
-    // let draft = switch Js.Nullable.toOption(frontmatter.draft) {
-    // | Some(value) => value
-    // | None => true
-    // }
-
-    // let lastmod = switch Js.Nullable.toOption(frontmatter.lastmod) {
-    // | Some(date) => date
-    // | None => ""
-    // }
-
-    // let fileName = NodeJS.Fs.existsSync(mdxPath) ? `${slug}.mdx` : `${slug}.md`
-
-    // let frontmatterFull: Mdx__helpers.frontmatterFull = {
-    //   title: frontmatter.title,
-    //   date: frontmatter.date,
-    //   tags: frontmatter.tags,
-    //   lastmod: lastmod,
-    //   draft: draft,
-    //   summary: frontmatter.summary,
-    //   images: frontmatter.images,
-    //   authors: authors,
-    //   layout: layout,
-    //   readingTime: "5m",
-    //   slug: slug,
-    //   fileName: fileName,
-    // }
-
     let frontmatterFull = Mdx__helpers.FrontMatterFull.toValue(
       ~frontmatterRawData=frontmatter,
       ~type_,
