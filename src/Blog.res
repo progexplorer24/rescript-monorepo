@@ -1,6 +1,6 @@
 type props = {
-  initialDisplayPosts: array<Mdx__helpers.frontmatterAndSlug>,
-  posts: array<Mdx__helpers.frontmatterAndSlug>,
+  initialDisplayPosts: array<Mdx__helpers.frontmatterFull>,
+  posts: array<Mdx__helpers.frontmatterFull>,
   pagination: ListLayout.pagination,
 }
 
