@@ -130,10 +130,10 @@ type authorsArray = array<Static.authorFrontmatter>
 @react.component
 let make = (
   ~children,
-  ~frontmatter: Mdx__helpers.frontmatterAndSlug,
+  ~frontmatter: Mdx__helpers.frontmatterFull,
   ~authorsArray: authorsArray,
-  ~next: Js.Null.t<Mdx__helpers.frontmatterAndSlug>,
-  ~prev: Js.Null.t<Mdx__helpers.frontmatterAndSlug>,
+  ~next: Js.Null.t<Mdx__helpers.frontmatterFull>,
+  ~prev: Js.Null.t<Mdx__helpers.frontmatterFull>,
 ) => {
   let {slug, date, title, tags, _} = frontmatter
 
