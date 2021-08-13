@@ -2,13 +2,12 @@
 
 import * as React from "react";
 import * as Belt_Array from "rescript/lib/es6/belt_Array.js";
-import * as NextMdxRemote from "next-mdx-remote";
 import * as Utils$RescriptMonorepo from "./utils/Utils.mjs";
 import * as Tailwind$RescriptMonorepo from "./styles/tailwind/Tailwind.mjs";
 import * as PageTitle$RescriptMonorepo from "./components/blog/PageTitle.mjs";
 import * as PostLayout$RescriptMonorepo from "./layouts/PostLayout.mjs";
 import * as Mdx__helpers$RescriptMonorepo from "./server/Mdx__helpers.mjs";
-import * as MDXComponents$RescriptMonorepo from "./components/blog/MDXComponents.mjs";
+import * as MDXLayoutRenderer$RescriptMonorepo from "./components/blog/MDXLayoutRenderer.mjs";
 
 var underConstruction = Tailwind$RescriptMonorepo.twStyle([
       Tailwind$RescriptMonorepo.mt(24),
@@ -16,32 +15,15 @@ var underConstruction = Tailwind$RescriptMonorepo.twStyle([
     ]);
 
 function $$default(props) {
+  console.log(props);
   var post = props.post;
-  var scope = post.scope;
-  var draft = scope.draft;
-  var frontmatter_title = scope.title;
-  var frontmatter_date = scope.date;
-  var frontmatter_tags = scope.tags;
-  var frontmatter_lastmod = scope.lastmod;
-  var frontmatter_summary = scope.summary;
-  var frontmatter_images = scope.images;
-  var frontmatter_slug = props.path.join("/");
-  var frontmatter = {
-    title: frontmatter_title,
-    date: frontmatter_date,
-    tags: frontmatter_tags,
-    lastmod: frontmatter_lastmod,
-    draft: draft,
-    summary: frontmatter_summary,
-    images: frontmatter_images,
-    slug: frontmatter_slug
-  };
-  var renderPost = draft !== true ? React.createElement(PostLayout$RescriptMonorepo.make, {
-          children: React.createElement("main", undefined, React.createElement(NextMdxRemote.MDXRemote, {
-                    components: MDXComponents$RescriptMonorepo.components,
-                    lazy: false,
-                    compiledSource: post.compiledSource,
-                    scope: scope
+  var frontmatter = post.frontmatter;
+  var layout = frontmatter.layout === "" ? "PostLayout" : frontmatter.layout;
+  var renderPost = frontmatter.draft !== true ? React.createElement(PostLayout$RescriptMonorepo.make, {
+          children: React.createElement("main", undefined, React.createElement(MDXLayoutRenderer$RescriptMonorepo.make, {
+                    mdxSource: post.code,
+                    layout: layout,
+                    frontmatter: frontmatter
                   })),
           frontmatter: frontmatter,
           authorsArray: props.authorsArray,
@@ -54,15 +36,18 @@ function $$default(props) {
                 }, Utils$RescriptMonorepo.str("Under\n            Construction"), React.createElement("span", {
                       "aria-label": "roadwork sign",
                       role: "img"
-                    }, Utils$RescriptMonorepo.str("🚧")))));
+                    }, Utils$RescriptMonorepo.str(" 🚧")))));
   return React.createElement(React.Fragment, undefined, renderPost);
 }
 
 function getStaticPaths(param) {
-  var paths = Belt_Array.map(Mdx__helpers$RescriptMonorepo.getFormattedFiles("blog"), (function (string) {
+  var nonEmpty = function (s) {
+    return s !== "";
+  };
+  var paths = Belt_Array.map(Mdx__helpers$RescriptMonorepo.getFiles(undefined, "blog"), (function (string) {
           return {
                   params: {
-                    slug: string.split("/")
+                    slug: string.split("/").filter(nonEmpty)
                   }
                 };
         }));
