@@ -1,21 +1,34 @@
-type frontmatter = {
-  title: string,
-  description: string,
-  published: string,
-}
-type props = {code: string, frontmatter: frontmatter}
+type props = {code: string, frontmatter: Mdx__helpers.frontmatterFull}
 
 let default = ({code, frontmatter}) => {
-  let make = MdxBundler.getMDXComponent2(code, Js.Dict.empty())
-  Js.log(code)
-  Js.log(frontmatter)
+  let renderSummary =
+    frontmatter.summary === "" ? React.null : <p> {frontmatter.summary->React.string} </p>
   <>
-    <header>
-      <h1> {frontmatter.title->React.string} </h1> <p> {frontmatter.description->React.string} </p>
-    </header>
-    <main> {React.createElement(make, Js.Dict.empty())} </main>
+    <header> <h1> {frontmatter.title->React.string} </h1> renderSummary </header>
+    <main> <MDXLayoutRenderer layout="" mdxSource={code} frontmatter={frontmatter} /> </main>
   </>
 }
+
+// type frontmatter = {
+//   title: string,
+//   description: string,
+//   published: string,
+// }
+
+// type frontmatterSource = {
+//   title: string,
+//   description: string,
+//   published: Js.Date.t,
+// }
+
+// type props = MdxBundler.serializeResult
+
+// type frontmatter = {
+//   title: string,
+//   description: string,
+//   published: string,
+// }
+// type props = {code: string, frontmatter: frontmatter}
 
 // let getStaticProps = _ctx => {
 //   let mdxSource = Js.String2.trim(`
@@ -27,42 +40,45 @@ let default = ({code, frontmatter}) => {
 
 // # Wahoo
 
+// import Demo from './demo'
+
 // Here's a **neat** demo:
 
 // <Demo />
 // `)
+//   let config: MdxBundler.files = {
+//     files: Js.Dict.fromArray([
+//       (
+//         "./demo.tsx",
+//         `
+// import * as React from 'react'
 
-//   // let config: MdxBundler.files = {
-//   //   files: Js.Dict.fromArray([
-//   //     (
-//   //       "./demo.tsx",
-//   //       `
-//   // import * as React from 'react'
+// function Demo() {
+//   return <div>Neat demo!</div>
+// }
 
-//   // function Demo() {
-//   //   return <div>Neat demo!</div>
-//   // }
+// export default Demo
+//     `,
+//       ),
+//     ]),
+//   }
 
-//   // export default Demo
-//   //     `,
-//   //     ),
-//   //   ]),
-//   // }
+//   // https://github.com/kentcdodds/mdx-bundler#nextjs-esbuild-enoent
+//   let _setEnvPath = if NodeJS.Process.platform === "win32" {
+//     NodeJS.Process.setESBuildPath(
+//       NodeJS.Process.env,
+//       NodeJS.Path.join([NodeJS.Process.cwd(), "node_modules", "esbuild", "esbuild.exe"]),
+//     )
+//   } else {
+//     NodeJS.Process.setESBuildPath(
+//       NodeJS.Process.env,
+//       NodeJS.Path.join([NodeJS.Process.cwd(), "node_modules", "esbuild", "bin", "esbuild"]),
+//     )
+//   }
 
-//   // //  // https://github.com/kentcdodds/mdx-bundler#nextjs-esbuild-enoent
-//   // let _setEnvPath = if NodeJS.Process.platform === "win32" {
-//   //   NodeJS.Process.setESBuildPath(
-//   //     NodeJS.Process.env,
-//   //     NodeJS.Path.join([NodeJS.Process.cwd(), "node_modules", "esbuild", "esbuild.exe"]),
-//   //   )
-//   // } else {
-//   //   NodeJS.Process.setESBuildPath(
-//   //     NodeJS.Process.env,
-//   //     NodeJS.Path.join([NodeJS.Process.cwd(), "node_modules", "esbuild", "bin", "esbuild"]),
-//   //   )
-//   // }
-
-//   MdxBundler.bundleMDXSimple(mdxSource)->Js.Promise.then_((result: MdxBundler.serializeResult) => {
+//   MdxBundler.bundleMDXFiles(mdxSource, config)->Promise.then((
+//     result: MdxBundler.serializeResult<frontmatterSource>,
+//   ) => {
 //     let {code, frontmatter} = result
 
 //     let frontmatterNew: frontmatter = {
@@ -71,13 +87,10 @@ let default = ({code, frontmatter}) => {
 //       published: Js.Date.toDateString(frontmatter.published),
 //     }
 
-//     let props = {
+//     let props: props = {
 //       code: code,
 //       frontmatter: frontmatterNew,
 //     }
-
-//     Js.Promise.resolve({
-//       "props": props,
-//     })
-//   }, _)
+//     Promise.resolve({"props": props})
+//   })
 // }

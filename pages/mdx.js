@@ -1,8 +1,8 @@
 import * as React from 'react'
 import { default as MdxExamplePage } from "../src/MdxExample.mjs";
-// import {bundleMDX} from 'mdx-bundler'
 
 export {getStaticProps} from "../src/Static3.mjs"
+
 
 export default function MdxExample(props) {
 
