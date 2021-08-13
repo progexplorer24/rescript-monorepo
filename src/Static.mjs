@@ -2,14 +2,13 @@
 
 import * as Belt_Array from "rescript/lib/es6/belt_Array.js";
 import GrayMatter from "gray-matter";
-import RemarkMath from "remark-math";
-import RehypeKatex from "rehype-katex";
-import * as Serialize from "next-mdx-remote/serialize";
+import * as Bundler$RescriptMonorepo from "./server/Bundler.mjs";
 import * as Mdx__helpers$RescriptMonorepo from "./server/Mdx__helpers.mjs";
 
 function getStaticProps(param) {
   var slug = param.params.slug;
   var slugWithBlog = ["/blog"].concat(slug);
+  var slugString = slug.join("/");
   var path = Mdx__helpers$RescriptMonorepo.join([
         Mdx__helpers$RescriptMonorepo.root,
         "data",
@@ -23,31 +22,20 @@ function getStaticProps(param) {
   var prev = value !== undefined ? value : null;
   var value$1 = Belt_Array.get(allPosts, postIndex - 1 | 0);
   var next = value$1 !== undefined ? value$1 : null;
-  var post = Mdx__helpers$RescriptMonorepo.getFileBySlug(undefined, slugWithBlog);
-  var match = GrayMatter(post);
-  var data = match.data;
-  var value$2 = data.authors;
-  var authorList = (value$2 == null) ? ["sensei"] : value$2;
-  var authorData = authorList.map(function (val) {
-        var authorResults = Mdx__helpers$RescriptMonorepo.getFileBySlug(undefined, [
-              "authors",
-              val
-            ]);
-        return GrayMatter(authorResults).data;
-      });
-  var __x = Serialize.serialize(match.content, {
-        scope: data,
-        mdxOptions: {
-          remarkPlugins: [RemarkMath],
-          rehypePlugins: [RehypeKatex],
-          compilers: []
-        },
-        target: ["esnext"]
-      });
-  return __x.then(function (value) {
+  return Bundler$RescriptMonorepo.getFileBySlugNew(undefined, undefined, slugString).then(function (file) {
+              var frontmatter = file.frontmatter;
+              var authorList = frontmatter.authors.length === 0 ? ["sensei"] : frontmatter.authors;
+              var authorData = authorList.map(function (val) {
+                    var authorResults = Mdx__helpers$RescriptMonorepo.getFileBySlug(undefined, [
+                          "authors",
+                          val
+                        ]);
+                    return GrayMatter(authorResults).data;
+                  });
+              console.log(authorData);
               var props = {
                 path: slug,
-                post: value,
+                post: file,
                 prev: prev,
                 next: next,
                 authorsArray: authorData

@@ -3,6 +3,7 @@
 // Module not found: Can't resolve 'child_process'
 // null
 
+type params = {slug: array<string>}
 type authorFrontmatter = {
   name: string,
   avatar: string,
@@ -16,17 +17,19 @@ type authorFrontmatter = {
 
 type props = {
   path: array<string>,
-  post: NextMdxRemote.serializeResult<Mdx__helpers.frontmatter>,
-  prev: Js.Null.t<Mdx__helpers.frontmatterAndSlug>,
-  next: Js.Null.t<Mdx__helpers.frontmatterAndSlug>,
+  post: RescriptMonorepo.Mdx__helpers.props,
+  prev: Js.Null.t<Mdx__helpers.frontmatterFull>,
+  next: Js.Null.t<Mdx__helpers.frontmatterFull>,
   authorsArray: array<authorFrontmatter>,
 }
 
-let getStaticProps: Next.GetStaticProps.t<props, Mdx__helpers.Params.t, _> = ({params, _}) => {
+let getStaticProps: Next.GetStaticProps.t<props, params, _> = ({params, _}) => {
   let {slug} = params
   let slugWithBlog = Js.Array2.concat(["/blog"], slug)
+  let slugString = Js.Array2.joinWith(slug, "/")
   let path = Mdx__helpers.join([Mdx__helpers.root, "data", "blog"])
   let allPosts = Mdx__helpers.getAllFrontMatter(path)
+
   let postIndex =
     allPosts->Js.Array2.findIndex(post => post.slug === Js.Array2.joinWith(slugWithBlog, "/"))
   let prev = switch Belt.Array.get(allPosts, postIndex + 1) {
@@ -38,41 +41,25 @@ let getStaticProps: Next.GetStaticProps.t<props, Mdx__helpers.Params.t, _> = ({p
   | None => Js.Null.empty
   }
 
-  let post = Mdx__helpers.getFileBySlug(slugWithBlog)
+  // TODO: This is the part where you need to start fixing things
+  Bundler.getFileBySlugNew(slugString)->Promise.then(file => {
+    let {frontmatter, _} = file
+    let authorList = Js.Array2.length(frontmatter.authors) === 0 ? ["sensei"] : frontmatter.authors
 
-  let {content, data, _}: GrayMatter.returnObject<Mdx__helpers.data> = GrayMatter.matter(post)
+    let authorData: array<authorFrontmatter> = Js.Array2.map(authorList, val => {
+      let authorResults = Mdx__helpers.getFileBySlug(["authors", val])
+      let {data, _}: GrayMatter.returnObject<authorFrontmatter> = GrayMatter.matter(authorResults)
+      data
+    })
 
-  let authorList = switch Js.Nullable.toOption(data.authors) {
-  | Some(value) => value
-  | None => ["sensei"]
-  }
-
-  let authorData: array<authorFrontmatter> = Js.Array2.map(authorList, val => {
-    let authorResults = Mdx__helpers.getFileBySlug(["authors", val])
-    let {data, _}: GrayMatter.returnObject<authorFrontmatter> = GrayMatter.matter(authorResults)
-    data
-  })
-
-  NextMdxRemote.serialize(
-    content,
-    {
-      scope: data,
-      mdxOptions: {
-        remarkPlugins: [NextMdxRemote.remarkMath],
-        rehypePlugins: [NextMdxRemote.rehypeKatex],
-        compilers: [],
-      },
-      target: ["esnext"],
-    },
-  )->Js.Promise.then_(value => {
-    let props = {
+    Js.log(authorData)
+    let props: props = {
       path: slug,
-      post: value,
       prev: prev,
       next: next,
+      post: file,
       authorsArray: authorData,
     }
-    let ret = {"props": props}
-    Js.Promise.resolve(ret)
-  }, _)
+    Promise.resolve({"props": props})
+  })
 }
