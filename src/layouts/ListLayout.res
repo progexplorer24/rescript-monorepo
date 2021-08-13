@@ -90,7 +90,7 @@ module Styles = {
 
 @react.component
 let make = (
-  ~posts: array<Mdx__helpers.frontmatterAndSlug>,
+  ~posts: array<Mdx__helpers.frontmatterFull>,
   ~title,
   ~initialDisplayPosts=[],
   ~pagination: pagination,
