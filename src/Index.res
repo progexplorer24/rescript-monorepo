@@ -1,7 +1,4 @@
-type props = {
-  allFrontmatter: array<Mdx__helpers.frontmatterAndSlug>,
-  metadata: SiteMetadata.metadata,
-}
+type props = {allFrontmatter: array<Mdx__helpers.frontmatterFull>}
 
 module Styles = {
   open Tailwind
@@ -66,8 +63,8 @@ module Styles = {
 let maxDisplay = 5
 
 let default = (props: props) => {
-  let {allFrontmatter, metadata} = props
-  let description = metadata.description
+  let {allFrontmatter} = props
+  let description = SiteMetadata.metadata.description
 
   let arrLength = array => Belt.Array.length(array)
 
@@ -135,11 +132,8 @@ let default = (props: props) => {
 let getStaticProps = _ctx => {
   let sortedFrontMatter = Mdx__helpers.getBlogPostsFromLatest()
 
-  let metadata = SiteMetadata.metadata
   let props = {
     allFrontmatter: sortedFrontMatter,
-    metadata: metadata,
   }
-
   Js.Promise.resolve({"props": props})
 }

@@ -106,7 +106,7 @@ var allPosts = Tailwind$RescriptMonorepo.twStyle([
 
 function $$default(props) {
   var allFrontmatter = props.allFrontmatter;
-  var description = props.metadata.description;
+  var description = SiteMetadata$RescriptMonorepo.metadata.description;
   var preparePostListArray = function (displayLimitOpt, postsArray) {
     var displayLimit = displayLimitOpt !== undefined ? displayLimitOpt : 5;
     if (postsArray.length === 0) {
@@ -171,8 +171,7 @@ function $$default(props) {
 function getStaticProps(_ctx) {
   var sortedFrontMatter = Mdx__helpers$RescriptMonorepo.getBlogPostsFromLatest(undefined, undefined, undefined);
   var props = {
-    allFrontmatter: sortedFrontMatter,
-    metadata: SiteMetadata$RescriptMonorepo.metadata
+    allFrontmatter: sortedFrontMatter
   };
   return Promise.resolve({
               props: props
