@@ -11,6 +11,59 @@ import * as Caml_splice_call from "rescript/lib/es6/caml_splice_call.js";
 import * as NodeJS$RescriptMonorepo from "../bindings/NodeJS.mjs";
 import * as SiteMetadata$RescriptMonorepo from "../data/SiteMetadata.mjs";
 
+function toValue(val) {
+  if (val === "authors") {
+    return "authors";
+  } else {
+    return "blog";
+  }
+}
+
+var DataType = {
+  toValue: toValue
+};
+
+function toValue$1(frontmatterRawData, slug, type_, root, param) {
+  var mdxPath = Path.join(root, "data", toValue(type_), slug + ".mdx");
+  var mdPath = Path.join(root, "data", toValue(type_), slug + ".md");
+  if (Fs.existsSync(mdxPath)) {
+    NodeJS$RescriptMonorepo.Fs.readFileSync(undefined, undefined, mdxPath);
+  } else {
+    NodeJS$RescriptMonorepo.Fs.readFileSync(undefined, undefined, mdPath);
+  }
+  var fileName = Fs.existsSync(mdxPath) ? slug + ".mdx" : slug + ".md";
+  var string = frontmatterRawData.lastmod;
+  var lastmod = (string == null) ? "" : string;
+  var bool = frontmatterRawData.draft;
+  var isDraft = (bool == null) ? true : bool;
+  var string$1 = frontmatterRawData.summary;
+  var summary = (string$1 == null) ? "" : string$1;
+  var array = frontmatterRawData.images;
+  var images = (array == null) ? [] : array;
+  var array$1 = frontmatterRawData.authors;
+  var authors = (array$1 == null) ? [] : array$1;
+  var str = frontmatterRawData.layout;
+  var layout = (str == null) ? "" : str;
+  return {
+          title: frontmatterRawData.title,
+          date: frontmatterRawData.date,
+          tags: frontmatterRawData.tags,
+          lastmod: lastmod,
+          draft: isDraft,
+          summary: summary,
+          images: images,
+          authors: authors,
+          layout: layout,
+          readingTime: "5m",
+          slug: toValue(type_) + slug,
+          fileName: fileName
+        };
+}
+
+var FrontMatterFull = {
+  toValue: toValue$1
+};
+
 var root = process.cwd();
 
 function join(prim) {
@@ -112,59 +165,6 @@ function sortDesc(a, b) {
   }
 }
 
-function toValue(val) {
-  if (val === "authors") {
-    return "authors";
-  } else {
-    return "blog";
-  }
-}
-
-var DataType = {
-  toValue: toValue
-};
-
-function toValue$1(frontmatterRawData, slug, type_, root, param) {
-  var mdxPath = Path.join(root, "data", toValue(type_), slug + ".mdx");
-  var mdPath = Path.join(root, "data", toValue(type_), slug + ".md");
-  if (Fs.existsSync(mdxPath)) {
-    NodeJS$RescriptMonorepo.Fs.readFileSync(undefined, undefined, mdxPath);
-  } else {
-    NodeJS$RescriptMonorepo.Fs.readFileSync(undefined, undefined, mdPath);
-  }
-  var fileName = Fs.existsSync(mdxPath) ? slug + ".mdx" : slug + ".md";
-  var string = frontmatterRawData.lastmod;
-  var lastmod = (string == null) ? "" : string;
-  var bool = frontmatterRawData.draft;
-  var isDraft = (bool == null) ? true : bool;
-  var string$1 = frontmatterRawData.summary;
-  var summary = (string$1 == null) ? "" : string$1;
-  var array = frontmatterRawData.images;
-  var images = (array == null) ? [] : array;
-  var array$1 = frontmatterRawData.authors;
-  var authors = (array$1 == null) ? [] : array$1;
-  var str = frontmatterRawData.layout;
-  var layout = (str == null) ? "" : str;
-  return {
-          title: frontmatterRawData.title,
-          date: frontmatterRawData.date,
-          tags: frontmatterRawData.tags,
-          lastmod: lastmod,
-          draft: isDraft,
-          summary: summary,
-          images: images,
-          authors: authors,
-          layout: layout,
-          readingTime: "5m",
-          slug: toValue(type_) + slug,
-          fileName: fileName
-        };
-}
-
-var FrontMatterFull = {
-  toValue: toValue$1
-};
-
 function getAllFrontMatter(blogPath) {
   var files = readdirRecursive(blogPath);
   var allFrontmatter = files.reduce((function (acc, file) {
@@ -257,6 +257,8 @@ function createTagsDictionary(rootOpt, type_Opt, folder) {
 }
 
 export {
+  DataType ,
+  FrontMatterFull ,
   root ,
   join ,
   readFileSync ,
@@ -270,8 +272,6 @@ export {
   removeRoot ,
   getFiles ,
   sortDesc ,
-  DataType ,
-  FrontMatterFull ,
   getAllFrontMatter ,
   getBlogPostsFromLatest ,
   Params ,

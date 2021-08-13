@@ -51,6 +51,82 @@ type props = {
   frontmatter: frontmatterFull,
 }
 
+module DataType = {
+  type t = [#authors | #blog]
+  let toValue = val =>
+    switch val {
+    | #authors => "authors"
+    | #blog => "blog"
+    }
+}
+
+module FrontMatterFull = {
+  type t = data
+
+  let toValue = (
+    ~frontmatterRawData: data,
+    ~slug: string,
+    ~type_: DataType.t,
+    ~root: string,
+    (),
+  ) => {
+    let mdxPath = NodeJS.Path.join([root, "data", DataType.toValue(type_), `${slug}.mdx`])
+    let mdPath = NodeJS.Path.join([root, "data", DataType.toValue(type_), `${slug}.md`])
+
+    let source = NodeJS.Fs.existsSync(mdxPath)
+      ? NodeJS.Fs.readFileSync(mdxPath)
+      : NodeJS.Fs.readFileSync(mdPath)
+
+    let fileName = NodeJS.Fs.existsSync(mdxPath) ? `${slug}.mdx` : `${slug}.md`
+
+    let lastmod = switch Js.toOption(frontmatterRawData.lastmod) {
+    | None => ""
+    | Some(string) => string
+    }
+    let isDraft = switch Js.toOption(frontmatterRawData.draft) {
+    | None => true
+    | Some(bool) => bool
+    }
+
+    let summary = switch Js.toOption(frontmatterRawData.summary) {
+    | None => ""
+    | Some(string) => string
+    }
+
+    let images = switch Js.toOption(frontmatterRawData.images) {
+    | None => []
+    | Some(array) => array
+    }
+
+    let authors = switch Js.toOption(frontmatterRawData.authors) {
+    | None => []
+    | Some(array) => array
+    }
+
+    let layout = switch Js.toOption(frontmatterRawData.layout) {
+    | None => ""
+    | Some(str) => str
+    }
+
+    let frontmatterFull: frontmatterFull = {
+      title: frontmatterRawData.title,
+      date: frontmatterRawData.date,
+      tags: frontmatterRawData.tags,
+      lastmod: lastmod,
+      draft: isDraft,
+      summary: summary,
+      images: images,
+      authors: authors,
+      layout: layout,
+      fileName: fileName,
+      readingTime: "5m",
+      slug: `${DataType.toValue(type_)}${slug}`,
+    }
+
+    frontmatterFull
+  }
+}
+
 // NOTE: Process cwd is not a pure function
 let root = NodeJS.Process.cwd()
 
@@ -138,82 +214,6 @@ let sortDesc = (a, b) => {
     }
   } else {
     1
-  }
-}
-
-module DataType = {
-  type t = [#authors | #blog]
-  let toValue = val =>
-    switch val {
-    | #authors => "authors"
-    | #blog => "blog"
-    }
-}
-
-module FrontMatterFull = {
-  type t = data
-
-  let toValue = (
-    ~frontmatterRawData: data,
-    ~slug: string,
-    ~type_: DataType.t,
-    ~root: string,
-    (),
-  ) => {
-    let mdxPath = NodeJS.Path.join([root, "data", DataType.toValue(type_), `${slug}.mdx`])
-    let mdPath = NodeJS.Path.join([root, "data", DataType.toValue(type_), `${slug}.md`])
-
-    let source = NodeJS.Fs.existsSync(mdxPath)
-      ? NodeJS.Fs.readFileSync(mdxPath)
-      : NodeJS.Fs.readFileSync(mdPath)
-
-    let fileName = NodeJS.Fs.existsSync(mdxPath) ? `${slug}.mdx` : `${slug}.md`
-
-    let lastmod = switch Js.toOption(frontmatterRawData.lastmod) {
-    | None => ""
-    | Some(string) => string
-    }
-    let isDraft = switch Js.toOption(frontmatterRawData.draft) {
-    | None => true
-    | Some(bool) => bool
-    }
-
-    let summary = switch Js.toOption(frontmatterRawData.summary) {
-    | None => ""
-    | Some(string) => string
-    }
-
-    let images = switch Js.toOption(frontmatterRawData.images) {
-    | None => []
-    | Some(array) => array
-    }
-
-    let authors = switch Js.toOption(frontmatterRawData.authors) {
-    | None => []
-    | Some(array) => array
-    }
-
-    let layout = switch Js.toOption(frontmatterRawData.layout) {
-    | None => ""
-    | Some(str) => str
-    }
-
-    let frontmatterFull: frontmatterFull = {
-      title: frontmatterRawData.title,
-      date: frontmatterRawData.date,
-      tags: frontmatterRawData.tags,
-      lastmod: lastmod,
-      draft: isDraft,
-      summary: summary,
-      images: images,
-      authors: authors,
-      layout: layout,
-      fileName: fileName,
-      readingTime: "5m",
-      slug: `${DataType.toValue(type_)}${slug}`,
-    }
-
-    frontmatterFull
   }
 }
 
