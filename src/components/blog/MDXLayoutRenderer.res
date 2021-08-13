@@ -1,30 +1,30 @@
-type props = {children: React.element}
+type mdxProps = {children: React.element}
 
 type imgProps = {src: string}
 
 type mdxComponents = {
-  p: props => React.element,
-  h1: props => React.element,
-  h2: props => React.element,
-  h3: props => React.element,
-  h4: props => React.element,
-  blockquote: props => React.element,
-  ol: props => React.element,
-  ul: props => React.element,
-  li: props => React.element,
-  wrapper: props => React.element,
-  pre: props => React.element,
-  inlineCode: props => React.element,
-  em: props => React.element,
-  strong: props => React.element,
+  p: mdxProps => React.element,
+  h1: mdxProps => React.element,
+  h2: mdxProps => React.element,
+  h3: mdxProps => React.element,
+  h4: mdxProps => React.element,
+  blockquote: mdxProps => React.element,
+  ol: mdxProps => React.element,
+  ul: mdxProps => React.element,
+  li: mdxProps => React.element,
+  wrapper: mdxProps => React.element,
+  pre: mdxProps => React.element,
+  inlineCode: mdxProps => React.element,
+  em: mdxProps => React.element,
+  strong: mdxProps => React.element,
   hr: unit => React.element,
-  a: props => React.element,
+  a: mdxProps => React.element,
   img: imgProps => React.element,
-  table: props => React.element,
-  thead: props => React.element,
-  tbody: props => React.element,
-  tr: props => React.element,
-  td: props => React.element,
+  table: mdxProps => React.element,
+  thead: mdxProps => React.element,
+  tbody: mdxProps => React.element,
+  tr: mdxProps => React.element,
+  td: mdxProps => React.element,
 }
 
 let components = {
@@ -52,13 +52,25 @@ let components = {
   td: ({children}) => <Mdx.td> {children} </Mdx.td>,
 }
 
+type props = {
+  layout: string,
+  components: mdxComponents,
+}
+
 @react.component
-let make = (~mdxSource: string, ~layout: string) => {
-  // module MDXLayout = {
-  //   @react.component
-  //   let make = (~mdxSource: string, ~layout: string, ~components: mdxComponents) =>
-  //     React.useMemo0(() => MdxBundler.getMDXComponent(mdxSource, [mdxSource]))
-  // }
-  // <MDXLayout mdxSource layout={layout} components />
-  <> </>
+let make = (~mdxSource: string, ~layout: string, ~frontmatter: Mdx__helpers.frontmatterFull) => {
+  let mdxComponent = React.useMemo1(
+    () => MdxBundler.getMDXComponent(mdxSource, Js.Dict.empty()),
+    [mdxSource],
+  )
+
+  Js.log(frontmatter)
+
+  let props = {
+    "layout": layout,
+    "components": components,
+    "frontmatter": frontmatter,
+  }
+
+  React.createElement(mdxComponent, props)
 }
