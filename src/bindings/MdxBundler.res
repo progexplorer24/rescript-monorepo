@@ -41,8 +41,4 @@ external bundleMDX: (
 ) => Promise.t<serializeResult<'frontmatter>> = "bundleMDX"
 
 @module("mdx-bundler/client")
-external getMDXComponent: (string, globals<'any>) => React.component<Js.Dict.t<'a>> =
-  "getMDXComponent"
-
-@module("mdx-bundler/client")
-external getMDXComponent2: (string, globals<'any>) => React.component<Js.t<'a>> = "getMDXComponent"
+external getMDXComponent: (string, globals<'any>) => React.component<Js.t<'a>> = "getMDXComponent"
