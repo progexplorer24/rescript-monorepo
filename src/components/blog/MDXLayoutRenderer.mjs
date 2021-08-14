@@ -166,7 +166,6 @@ function MDXLayoutRenderer(Props) {
   var mdxComponent = React.useMemo((function () {
           return Client.getMDXComponent(mdxSource, {});
         }), [mdxSource]);
-  console.log(frontmatter);
   var props = {
     layout: layout,
     components: components,

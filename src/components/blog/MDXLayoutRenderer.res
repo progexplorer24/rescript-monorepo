@@ -64,8 +64,6 @@ let make = (~mdxSource: string, ~layout: string, ~frontmatter: Mdx__helpers.fron
     [mdxSource],
   )
 
-  Js.log(frontmatter)
-
   let props = {
     "layout": layout,
     "components": components,
