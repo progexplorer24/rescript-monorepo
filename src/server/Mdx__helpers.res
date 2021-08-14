@@ -26,15 +26,6 @@ type frontmatterFull = {
   fileName: string,
 }
 
-type frontmatter = {
-  title: string,
-  date: string,
-  tags: array<string>,
-  lastmod: string,
-  draft: bool,
-  summary: string,
-  images: array<string>,
-}
 type frontmatterAndSlug = {
   title: string,
   date: string,
@@ -71,11 +62,6 @@ module FrontMatterFull = {
     (),
   ) => {
     let mdxPath = NodeJS.Path.join([root, "data", DataType.toValue(type_), `${slug}.mdx`])
-    let mdPath = NodeJS.Path.join([root, "data", DataType.toValue(type_), `${slug}.md`])
-
-    let source = NodeJS.Fs.existsSync(mdxPath)
-      ? NodeJS.Fs.readFileSync(mdxPath)
-      : NodeJS.Fs.readFileSync(mdPath)
 
     let fileName = NodeJS.Fs.existsSync(mdxPath) ? `${slug}.mdx` : `${slug}.md`
 

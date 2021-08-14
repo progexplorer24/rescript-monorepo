@@ -25,12 +25,6 @@ var DataType = {
 
 function toValue$1(frontmatterRawData, slug, type_, root, param) {
   var mdxPath = Path.join(root, "data", toValue(type_), slug + ".mdx");
-  var mdPath = Path.join(root, "data", toValue(type_), slug + ".md");
-  if (Fs.existsSync(mdxPath)) {
-    NodeJS$RescriptMonorepo.Fs.readFileSync(undefined, undefined, mdxPath);
-  } else {
-    NodeJS$RescriptMonorepo.Fs.readFileSync(undefined, undefined, mdPath);
-  }
   var fileName = Fs.existsSync(mdxPath) ? slug + ".mdx" : slug + ".md";
   var string = frontmatterRawData.lastmod;
   var lastmod = (string == null) ? "" : string;
