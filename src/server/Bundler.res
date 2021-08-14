@@ -1,3 +1,11 @@
+@module("remark-slug") external remarkSlug: MdxBundler.remarkPlugin = "default"
+@module("remark-gfm") external remarkGfm: MdxBundler.remarkPlugin = "default"
+@module("remark-math") external remarkMath: MdxBundler.remarkPlugin = "default"
+// @module("remark-footnotes") external remarkFootnotes: MdxBundler.remarkPlugin = "default"
+@module("remark-autolink-headings")
+external remarkAutoLinkHeadings: MdxBundler.remarkPlugin = "default"
+@module("rehype-katex") external rehypeKatex: MdxBundler.rehypePlugin = "default"
+
 // TODO: Finish configuration of mdx
 let getFileBySlugNew = (
   ~root=NodeJS.Process.cwd(),
@@ -13,8 +21,8 @@ let getFileBySlugNew = (
   let mdPath = NodeJS.Path.join([root, "data", Mdx__helpers.DataType.toValue(type_), `${slug}.md`])
 
   let source = NodeJS.Fs.existsSync(mdxPath)
-    ? NodeJS.Fs.readFileSync(mdxPath)
-    : NodeJS.Fs.readFileSync(mdPath)
+    ? NodeJS.Fs.readFileSync(~encoding="utf8", mdxPath)
+    : NodeJS.Fs.readFileSync(~encoding="utf8", mdPath)
 
   //  // https://github.com/kentcdodds/mdx-bundler#nextjs-esbuild-enoent
   let _setEnvPath = if NodeJS.Process.platform === "win32" {
@@ -29,44 +37,63 @@ let getFileBySlugNew = (
     )
   }
 
-  let esbuildOptions: MdxBundler.esbuildOptions = options => {
-    options
-  }
+  let esbuildOptions: MdxBundler.esbuildOptions<'a> = options => {
+    // let newLoader = {
+    //   ".mjs": "jsx",
+    // }
 
-  let xdmOptions: MdxBundler.xdmOptions = options => {
-    // this is the recommended way to add custom remark/rehype plugins:
-    // The syntax might look weird, but it protects you in case we add/remove
-    // plugins in the future.
-    //  require("remark-slug"),
-    //   require("remark-autolink-headings"),
-    //   require("remark-gfm"),
-    //   codeTitles,
-    //   [require("remark-footnotes"), {inlineNotes: true}],
-    //   require("remark-math"),
-    //   imgToJsx,
-
-    // require("rehype-katex"),
-    // [require("rehype-prism-plus"), {ignoreMissing: true}],
-    // () => {
-    //   tree => {
-    //     visit(tree, "element", (node, index, parent) => {
-    //       let [token, type_] = node.properties.className || []
-    //       if token === "token" {
-    //         node.properties.className = [tokenClassNames[type_]]
-    //       }
-    //     })
-    //   }
-    // },
+    // options["loader"] = newLoader
 
     options
   }
 
-  let files = Js.Dict.empty()
+  let toc = []
+
+  let xdmOptions: MdxBundler.xdmOptions<'a> = options => {
+    let initialRemarkArray = Js.Array2.isArray(options["remarkPlugins"])
+      ? options["remarkPlugins"]
+      : []
+
+    let initialRehypeArray = Js.Array2.isArray(options["rehypePlugins"])
+      ? options["rehypePlugins"]
+      : []
+
+    let remarkPlugins = Js.Array2.concat(
+      initialRemarkArray,
+      [
+        remarkSlug,
+        remarkAutoLinkHeadings,
+        remarkGfm,
+        remarkMath,
+        // remarkFootnotes
+      ],
+    )
+
+    let rehypePlugins = Js.Array2.concat(initialRehypeArray, [rehypeKatex])
+
+    options["remarkPlugins"] = remarkPlugins
+    options["rehypePlugins"] = rehypePlugins
+
+    options
+  }
+
+  let pageTitle = NodeJS.Fs.readFileSync(
+    NodeJS.Path.join([NodeJS.Process.cwd(), "src/components/blog/PageTitle.mjs"]),
+  )
+
+  let files = Js.Dict.fromArray([("../../src/components/blog/PageTitle.mjs", pageTitle)])
+  // let files = Js.Dict.empty()
   let globals = Js.Dict.empty()
 
-  let cwd = NodeJS.Path.join([root, "src", "components"])
-
-  let bundleConfig: MdxBundler.bundleConfg<Js.Dict.t<'a>, Js.Dict.t<'b>, Js.Dict.t<'c>> = {
+  let cwd = NodeJS.Path.join([root, "data", "blog"])
+  // WARNING: File bundling does not work
+  let bundleConfig: MdxBundler.bundleConfg<
+    Js.Dict.t<string>,
+    Js.Dict.t<'b>,
+    Js.Dict.t<'c>,
+    Js.t<'d>,
+    Js.t<'e>,
+  > = {
     cwd: cwd,
     files: files,
     globals: globals,

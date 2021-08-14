@@ -2,8 +2,14 @@
 
 import * as Fs from "fs";
 import * as Path from "path";
+import * as Js_dict from "rescript/lib/es6/js_dict.js";
+import RemarkGfm from "remark-gfm";
 import * as MdxBundler from "mdx-bundler";
+import RemarkMath from "remark-math";
+import RemarkSlug from "remark-slug";
+import RehypeKatex from "rehype-katex";
 import * as NodeJS$RescriptMonorepo from "../bindings/NodeJS.mjs";
+import RemarkAutolinkHeadings from "remark-autolink-headings";
 import * as Mdx__helpers$RescriptMonorepo from "./Mdx__helpers.mjs";
 
 function getFileBySlugNew(rootOpt, type_Opt, slug) {
@@ -11,7 +17,7 @@ function getFileBySlugNew(rootOpt, type_Opt, slug) {
   var type_ = type_Opt !== undefined ? type_Opt : "blog";
   var mdxPath = Path.join(root, "data", Mdx__helpers$RescriptMonorepo.DataType.toValue(type_), slug + ".mdx");
   var mdPath = Path.join(root, "data", Mdx__helpers$RescriptMonorepo.DataType.toValue(type_), slug + ".md");
-  var source = Fs.existsSync(mdxPath) ? NodeJS$RescriptMonorepo.Fs.readFileSync(undefined, undefined, mdxPath) : NodeJS$RescriptMonorepo.Fs.readFileSync(undefined, undefined, mdPath);
+  var source = Fs.existsSync(mdxPath) ? NodeJS$RescriptMonorepo.Fs.readFileSync("utf8", undefined, mdxPath) : NodeJS$RescriptMonorepo.Fs.readFileSync("utf8", undefined, mdPath);
   if (process.platform === "win32") {
     process.env.ESBUILD_BINARY_PATH = Path.join(process.cwd(), "node_modules", "esbuild", "esbuild.exe");
   } else {
@@ -21,11 +27,26 @@ function getFileBySlugNew(rootOpt, type_Opt, slug) {
     return options;
   };
   var xdmOptions = function (options) {
+    var initialRemarkArray = Array.isArray(options.remarkPlugins) ? options.remarkPlugins : [];
+    var initialRehypeArray = Array.isArray(options.rehypePlugins) ? options.rehypePlugins : [];
+    var remarkPlugins = initialRemarkArray.concat([
+          RemarkSlug,
+          RemarkAutolinkHeadings,
+          RemarkGfm,
+          RemarkMath
+        ]);
+    var rehypePlugins = initialRehypeArray.concat([RehypeKatex]);
+    options.remarkPlugins = remarkPlugins;
+    options.rehypePlugins = rehypePlugins;
     return options;
   };
-  var files = {};
+  var pageTitle = NodeJS$RescriptMonorepo.Fs.readFileSync(undefined, undefined, Path.join(process.cwd(), "src/components/blog/PageTitle.mjs"));
+  var files = Js_dict.fromArray([[
+          "../../src/components/blog/PageTitle.mjs",
+          pageTitle
+        ]]);
   var globals = {};
-  var cwd = Path.join(root, "src", "components");
+  var cwd = Path.join(root, "data", "blog");
   var bundleConfig = {
     files: files,
     xdmOptions: xdmOptions,
