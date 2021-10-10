@@ -3,7 +3,7 @@ const withPlugins = require('next-compose-plugins')
 
 // NOTE: https://forum.rescript-lang.org/t/purpose-alternatives-to-next-transpile-modules-in-next-rescript-projects/827/5
 // "remark-slug"
-const transpileModules = ["rescript", "mdast-util-to-string", "remark-slug", "unist-util-is", "remark-gfm", "micromark-extension-gfm", "micromark-util-combine-extensions", "micromark-util-symbol", "micromark-util-encode", "micromark-util-resolve-all", "mdast-util-gfm", "ccount", "mdast-util-find-and-replace", "unist-util-visit-parents", "mdast-util-to-markdown", "markdown-table", "remark-footnotes"].concat(bsconfig["bs-dependencies"]);
+const transpileModules = ["rescript", "mdast-util-to-string", "remark-slug", "unist-util-is", "remark-gfm", "micromark-extension-gfm", "micromark-util-combine-extensions", "micromark-util-symbol", "micromark-util-encode", "micromark-util-resolve-all", "mdast-util-gfm", "ccount", "mdast-util-find-and-replace", "unist-util-visit-parents", "mdast-util-to-markdown", "markdown-table"].concat(bsconfig["bs-dependencies"]);
 console.log(transpileModules)
 const withTM = require("next-transpile-modules")(transpileModules);
 
