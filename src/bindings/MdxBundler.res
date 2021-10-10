@@ -1,5 +1,5 @@
-type remarkPlugin
-type rehypePlugin
+// type remarkPlugin
+// type rehypePlugin
 
 type globals<'any> = Js.Dict.t<'any>
 
