@@ -2,15 +2,43 @@
 
 import * as Fs from "fs";
 import * as Path from "path";
+import * as Img from "./img";
 import * as Js_dict from "rescript/lib/es6/js_dict.js";
+import * as Belt_Array from "rescript/lib/es6/belt_Array.js";
 import RemarkGfm from "remark-gfm";
 import * as MdxBundler from "mdx-bundler";
 import RemarkMath from "remark-math";
-import RemarkSlug from "remark-slug";
 import RehypeKatex from "rehype-katex";
+import * as UnistUtilVisit from "unist-util-visit";
 import * as NodeJS$RescriptMonorepo from "../bindings/NodeJS.mjs";
-import RemarkAutolinkHeadings from "remark-autolink-headings";
 import * as Mdx__helpers$RescriptMonorepo from "./Mdx__helpers.mjs";
+
+var img = Img;
+
+var tokenClassNames = {
+  tag: "text-code-red",
+  "attr-name": "text-code-yellow",
+  "attr-value": "text-code-green",
+  deleted: "text-code-red",
+  inserted: "text-code-green",
+  punctuation: "text-code-white",
+  keyword: "text-code-purple",
+  string: "text-code-green",
+  function: "text-code-blue",
+  boolean: "text-code-red",
+  comment: "text-gray-400 italic"
+};
+
+function rehypePlg(param, tree) {
+  return UnistUtilVisit.visit(tree, (function (param) {
+                return "element";
+              }), (function (node, param, param$1) {
+                var className = Array.isArray(node.properties.className) ? node.properties.className : [];
+                Belt_Array.get(className, 0);
+                Belt_Array.get(className, 1);
+                
+              }));
+}
 
 function getFileBySlugNew(rootOpt, type_Opt, slug) {
   var root = rootOpt !== undefined ? rootOpt : process.cwd();
@@ -30,10 +58,9 @@ function getFileBySlugNew(rootOpt, type_Opt, slug) {
     var initialRemarkArray = Array.isArray(options.remarkPlugins) ? options.remarkPlugins : [];
     var initialRehypeArray = Array.isArray(options.rehypePlugins) ? options.rehypePlugins : [];
     var remarkPlugins = initialRemarkArray.concat([
-          RemarkSlug,
-          RemarkAutolinkHeadings,
           RemarkGfm,
-          RemarkMath
+          RemarkMath,
+          img
         ]);
     var rehypePlugins = initialRehypeArray.concat([RehypeKatex]);
     options.remarkPlugins = remarkPlugins;
@@ -64,7 +91,10 @@ function getFileBySlugNew(rootOpt, type_Opt, slug) {
 }
 
 export {
+  img ,
+  tokenClassNames ,
+  rehypePlg ,
   getFileBySlugNew ,
   
 }
-/* fs Not a pure module */
+/* img Not a pure module */

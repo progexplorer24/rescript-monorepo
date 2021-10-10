@@ -1,10 +1,51 @@
-@module("remark-slug") external remarkSlug: MdxBundler.remarkPlugin = "default"
-@module("remark-gfm") external remarkGfm: MdxBundler.remarkPlugin = "default"
-@module("remark-math") external remarkMath: MdxBundler.remarkPlugin = "default"
+// @module("remark-slug") external remarkSlug: MdxBundler.remarkPlugin = "default"
+@module("remark-gfm") external remarkGfm: 'a = "default"
+@module("remark-math") external remarkMath: 'a = "default"
 // @module("remark-footnotes") external remarkFootnotes: MdxBundler.remarkPlugin = "default"
-@module("remark-autolink-headings")
-external remarkAutoLinkHeadings: MdxBundler.remarkPlugin = "default"
-@module("rehype-katex") external rehypeKatex: MdxBundler.rehypePlugin = "default"
+// @module("remark-autolink-headings")
+// external remarkAutoLinkHeadings: MdxBundler.remarkPlugin = "default"
+@module("rehype-katex") external rehypeKatex: 'a = "default"
+@module external img: 'a = "./img"
+
+let tokenClassNames = {
+  "tag": "text-code-red",
+  "attr-name": "text-code-yellow",
+  "attr-value": "text-code-green",
+  "deleted": "text-code-red",
+  "inserted": "text-code-green",
+  "punctuation": "text-code-white",
+  "keyword": "text-code-purple",
+  "string": "text-code-green",
+  "function": "text-code-blue",
+  "boolean": "text-code-red",
+  "comment": "text-gray-400 italic",
+}
+
+let rehypePlg = () => {
+  tree => {
+    ImgToJsx.visit(
+      tree,
+      () => "element",
+      (node, _, _) => {
+        let className = Js.Array2.isArray(node["properties"]["className"])
+          ? node["properties"]["className"]
+          : []
+        let token = Belt.Array.get(className, 0)
+        let type_ = Belt.Array.get(className, 1)
+
+        switch (token, type_) {
+        | (Some(tok), Some(type_)) =>
+          if tok === "token" {
+            // TODO: Fix this
+            // node["properties"]["className"] = [tokenClassNames[type_]]
+            ()
+          }
+        | (_, _) => ()
+        }
+      },
+    )
+  }
+}
 
 // TODO: Finish configuration of mdx
 let getFileBySlugNew = (
@@ -38,16 +79,10 @@ let getFileBySlugNew = (
   }
 
   let esbuildOptions: MdxBundler.esbuildOptions<'a> = options => {
-    // let newLoader = {
-    //   ".mjs": "jsx",
-    // }
-
-    // options["loader"] = newLoader
-
     options
   }
 
-  let toc = []
+  // let toc = []
 
   let xdmOptions: MdxBundler.xdmOptions<'a> = options => {
     let initialRemarkArray = Js.Array2.isArray(options["remarkPlugins"])
@@ -61,10 +96,12 @@ let getFileBySlugNew = (
     let remarkPlugins = Js.Array2.concat(
       initialRemarkArray,
       [
-        remarkSlug,
-        remarkAutoLinkHeadings,
+        // remarkSlug,
+        // remarkAutoLinkHeadings,
         remarkGfm,
         remarkMath,
+        img,
+        // _ => ImgToJsx.toJsx,
         // remarkFootnotes
       ],
     )
@@ -86,7 +123,7 @@ let getFileBySlugNew = (
   let globals = Js.Dict.empty()
 
   let cwd = NodeJS.Path.join([root, "data", "blog"])
-  // WARNING: File bundling does not work
+  // TODO: Bundling mdx componenets causing errors! Fix this!
   let bundleConfig: MdxBundler.bundleConfg<
     Js.Dict.t<string>,
     Js.Dict.t<'b>,
