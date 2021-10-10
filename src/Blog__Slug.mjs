@@ -15,7 +15,6 @@ var underConstruction = Tailwind$RescriptMonorepo.twStyle([
     ]);
 
 function $$default(props) {
-  console.log(props);
   var post = props.post;
   var frontmatter = post.frontmatter;
   var layout = frontmatter.layout === "" ? "PostLayout" : frontmatter.layout;

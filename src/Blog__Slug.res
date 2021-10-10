@@ -9,7 +9,6 @@ module Styles = {
 let defaultLayout = "PostLayout"
 
 let default = (props: props) => {
-  Js.log(props)
   let {post, prev, next, authorsArray, _} = props
   let {code, frontmatter} = post
 
