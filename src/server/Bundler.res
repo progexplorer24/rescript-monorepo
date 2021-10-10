@@ -1,11 +1,14 @@
-// @module("remark-slug") external remarkSlug: MdxBundler.remarkPlugin = "default"
+// NOTE: Remark Plugins
 @module("remark-gfm") external remarkGfm: 'a = "default"
 @module("remark-math") external remarkMath: 'a = "default"
-// @module("remark-footnotes") external remarkFootnotes: MdxBundler.remarkPlugin = "default"
-// @module("remark-autolink-headings")
-// external remarkAutoLinkHeadings: MdxBundler.remarkPlugin = "default"
-@module("rehype-katex") external rehypeKatex: 'a = "default"
 @module external img: 'a = "./img"
+@module external remarkTocHeadings: 'a = "./toc"
+
+// NOTE: Rehype Plugins
+@module("rehype-katex") external rehypeKatex: 'a = "default"
+// TODO: Figure out why id's are not added
+@module("rehype-slug") external rehypeSlug: 'a = "default"
+@module("rehype-autolink-headings") external rehypeAutolinkHeadings: 'a = "default"
 
 let tokenClassNames = {
   "tag": "text-code-red",
@@ -82,7 +85,7 @@ let getFileBySlugNew = (
     options
   }
 
-  // let toc = []
+  let toc = []
 
   let xdmOptions: MdxBundler.xdmOptions<'a> = options => {
     let initialRemarkArray = Js.Array2.isArray(options["remarkPlugins"])
@@ -96,17 +99,18 @@ let getFileBySlugNew = (
     let remarkPlugins = Js.Array2.concat(
       initialRemarkArray,
       [
-        // remarkSlug,
-        // remarkAutoLinkHeadings,
+        // [remarkTocHeadings, {"exportRef": toc}],
         remarkGfm,
         remarkMath,
         img,
         // _ => ImgToJsx.toJsx,
-        // remarkFootnotes
       ],
     )
 
-    let rehypePlugins = Js.Array2.concat(initialRehypeArray, [rehypeKatex])
+    let rehypePlugins = Js.Array2.concat(
+      initialRehypeArray,
+      [rehypeSlug, rehypeAutolinkHeadings, rehypeKatex],
+    )
 
     options["remarkPlugins"] = remarkPlugins
     options["rehypePlugins"] = rehypePlugins

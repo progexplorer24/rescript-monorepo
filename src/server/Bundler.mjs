@@ -3,17 +3,22 @@
 import * as Fs from "fs";
 import * as Path from "path";
 import * as Img from "./img";
+import * as Toc from "./toc";
 import * as Js_dict from "rescript/lib/es6/js_dict.js";
 import * as Belt_Array from "rescript/lib/es6/belt_Array.js";
 import RemarkGfm from "remark-gfm";
 import * as MdxBundler from "mdx-bundler";
+import RehypeSlug from "rehype-slug";
 import RemarkMath from "remark-math";
 import RehypeKatex from "rehype-katex";
 import * as UnistUtilVisit from "unist-util-visit";
 import * as NodeJS$RescriptMonorepo from "../bindings/NodeJS.mjs";
+import RehypeAutolinkHeadings from "rehype-autolink-headings";
 import * as Mdx__helpers$RescriptMonorepo from "./Mdx__helpers.mjs";
 
 var img = Img;
+
+var remarkTocHeadings = Toc;
 
 var tokenClassNames = {
   tag: "text-code-red",
@@ -62,7 +67,11 @@ function getFileBySlugNew(rootOpt, type_Opt, slug) {
           RemarkMath,
           img
         ]);
-    var rehypePlugins = initialRehypeArray.concat([RehypeKatex]);
+    var rehypePlugins = initialRehypeArray.concat([
+          RehypeSlug,
+          RehypeAutolinkHeadings,
+          RehypeKatex
+        ]);
     options.remarkPlugins = remarkPlugins;
     options.rehypePlugins = rehypePlugins;
     return options;
@@ -92,6 +101,7 @@ function getFileBySlugNew(rootOpt, type_Opt, slug) {
 
 export {
   img ,
+  remarkTocHeadings ,
   tokenClassNames ,
   rehypePlg ,
   getFileBySlugNew ,
