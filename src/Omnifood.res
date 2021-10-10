@@ -80,11 +80,11 @@ module Styles = {
   let omnifoodMd = Tailwind.minWBreakpoint(767)
 
   let smallGlobal = style(. [
-    media("screen and (max-width: 767px)", [overflowX(#hidden), fontSize(#px(15))]),
+    media(. "screen and (max-width: 767px)", [overflowX(#hidden), fontSize(#px(15))]),
   ])
 
   let mediumBreakpointGlobal = style(. [
-    media("screen and (max-width: 1023px)", [fontSize(#px(18))]),
+    media(. "screen and (max-width: 1023px)", [fontSize(#px(18))]),
   ])
 
   let globalStyles = CssJs.merge(. [
@@ -100,11 +100,11 @@ module Styles = {
   ])
 
   let smallRow = style(. [
-    media("screen and (max-width: 767px)", [padding2(~v=#px(0), ~h=#percent(4.))]),
+    media(. "screen and (max-width: 767px)", [padding2(~v=#px(0), ~h=#percent(4.))]),
   ])
 
   let largeBreakpointRow = style(. [
-    media("screen and (max-width: 1200px)", [padding2(~v=#px(0), ~h=#percent(2.))]),
+    media(. "screen and (max-width: 1200px)", [padding2(~v=#px(0), ~h=#percent(2.))]),
   ])
 
   let row = CssJs.merge(. [
@@ -117,10 +117,7 @@ module Styles = {
     backgrounds([
       linearGradient(
         deg(0.),
-        list{
-          (zero, #rgba(0, 0, 0, #percent(70.))),
-          (#percent(100.), #rgba(0, 0, 0, #percent(70.))),
-        },
+        [(zero, #rgba(0, 0, 0, #percent(70.))), (#percent(100.), #rgba(0, 0, 0, #percent(70.)))],
       ),
       url("/omnifood/hero.jpg"),
     ]),
@@ -131,14 +128,14 @@ module Styles = {
   ])
 
   let smallTextBox = style(. [
-    media(
+    media(.
       "screen and (max-width: 767px)",
       [width(#percent(100.)), padding2(~v=#px(0), ~h=#percent(4.))],
     ),
   ])
 
   let largeBreakpointTextBox = style(. [
-    media(
+    media(.
       "screen and (max-width: 1200px)",
       [width(#percent(100.)), padding2(~v=#px(0), ~h=#percent(2.))],
     ),
@@ -158,7 +155,7 @@ module Styles = {
 
   let headingStyles = style(. [fontWeight(#num(300)), textTransform(#uppercase)])
 
-  let smallH1 = style(. [media("screen and (max-width: 767px)", [fontSize(#percent(180.))])])
+  let smallH1 = style(. [media(. "screen and (max-width: 767px)", [fontSize(#percent(180.))])])
 
   let h1 = CssJs.merge(. [
     style(. [
@@ -249,7 +246,7 @@ module Styles = {
     ]),
   ])
 
-  let h2Small = style(. [media("screen and (max-width: 767px)", [fontSize(#percent(150.))])])
+  let h2Small = style(. [media(. "screen and (max-width: 767px)", [fontSize(#percent(150.))])])
 
   let h2 = CssJs.merge(. [
     headingStyles,
@@ -270,11 +267,11 @@ module Styles = {
   ])
 
   let smallP = style(. [
-    media("screen and (max-width: 767px)", [width(#percent(100.)), marginLeft(#px(0))]),
+    media(. "screen and (max-width: 767px)", [width(#percent(100.)), marginLeft(#px(0))]),
   ])
 
   let mediumP = style(. [
-    media("screen and (max-width: 1023px)", [width(#percent(80.)), marginLeft(#percent(10.))]),
+    media(. "screen and (max-width: 1023px)", [width(#percent(80.)), marginLeft(#percent(10.))]),
   ])
 
   let p = CssJs.merge(. [
@@ -339,14 +336,14 @@ module Styles = {
 
   // NOTE: How it works section
 
-  let smallStepsBox = style(. [media("screen and (max-width: 767px)", [marginTop(#px(10))])])
+  let smallStepsBox = style(. [media(. "screen and (max-width: 767px)", [marginTop(#px(10))])])
 
-  let mediumStepsBox = style(. [media("screen and (max-width: 1023px)", [marginTop(#px(10))])])
+  let mediumStepsBox = style(. [media(. "screen and (max-width: 1023px)", [marginTop(#px(10))])])
 
   let stepsBox = CssJs.merge(. [style(. [marginTop(#px(30))]), mediumStepsBox, smallStepsBox])
 
   let smallLeftSection = style(. [
-    media("screen and (max-width: 767px)", [textAlign(#center), paddingRight(#px(0))]),
+    media(. "screen and (max-width: 767px)", [textAlign(#center), paddingRight(#px(0))]),
   ])
 
   let leftSection = CssJs.merge(. [
@@ -360,9 +357,9 @@ module Styles = {
     style(. [paddingLeft(#percent(3.)), marginTop(#px(70))]),
   ])
 
-  let smallAppScreen = style(. [media("screen and (max-width: 767px)", [width(#percent(40.))])])
+  let smallAppScreen = style(. [media(. "screen and (max-width: 767px)", [width(#percent(40.))])])
 
-  let mediumAppScreen = style(. [media("screen and (max-width: 1023px)", [width(#percent(50.))])])
+  let mediumAppScreen = style(. [media(. "screen and (max-width: 1023px)", [width(#percent(50.))])])
 
   let appScreen = CssJs.merge(. [
     style(. [width(#percent(40.)), display(#inlineBlock)]),
@@ -370,9 +367,9 @@ module Styles = {
     smallAppScreen,
   ])
 
-  let smallWorkStop = style(. [media("screen and (max-width: 767px)", [marginBottom(#px(20))])])
+  let smallWorkStop = style(. [media(. "screen and (max-width: 767px)", [marginBottom(#px(20))])])
 
-  let mediumWorkStop = style(. [media("screen and (max-width: 1023px)", [marginBottom(#px(40))])])
+  let mediumWorkStop = style(. [media(. "screen and (max-width: 1023px)", [marginBottom(#px(40))])])
 
   let worksStop = CssJs.merge(. [
     Tailwind.twStyle([Tailwind.flex, Tailwind.itemsCenter, omnifoodMd([Tailwind.itemsStart])]),
@@ -384,7 +381,7 @@ module Styles = {
   let lastWorkStop = CssJs.merge(. [worksStop, style(. [marginBottom(#px(80))])])
 
   let smallWorkStopNumber = style(. [
-    media(
+    media(.
       "screen and (max-width: 767px)",
       [
         height(#px(40)),
@@ -422,13 +419,13 @@ module Styles = {
   ])
 
   let xsSection = style(. [
-    media("screen and (max-width: 480px)", [padding2(~v=#px(25), ~h=#px(0))]),
+    media(. "screen and (max-width: 480px)", [padding2(~v=#px(25), ~h=#px(0))]),
   ])
 
   let smallSection = style(. [padding2(~v=#px(30), ~h=#px(0))])
 
   let mediumSection = style(. [
-    media("screen and (max-width: 1023px)", [padding2(~v=#px(60), ~h=#px(0))]),
+    media(. "screen and (max-width: 1023px)", [padding2(~v=#px(60), ~h=#px(0))]),
   ])
 
   let section = CssJs.merge(. [
@@ -445,7 +442,7 @@ module Styles = {
   let boxImage = style(. [width(#percent(100.)), height(#auto), marginBottom(#px(15))])
 
   let mediumCityFeature = style(. [
-    media("screen and (max-width: 1023px)", [fontSize(#percent(90.))]),
+    media(. "screen and (max-width: 1023px)", [fontSize(#percent(90.))]),
   ])
 
   let cityFeature = CssJs.merge(. [style(. [marginBottom(#px(10))]), mediumCityFeature])
@@ -461,7 +458,7 @@ module Styles = {
   ])
 
   let mediumIconSmall = style(. [
-    media("screen and (max-width: 1023px)", [width(#px(16)), marginRight(#px(5))]),
+    media(. "screen and (max-width: 1023px)", [width(#px(16)), marginRight(#px(5))]),
   ])
 
   let iconSmall = CssJs.merge(. [
@@ -512,10 +509,7 @@ module Styles = {
       backgrounds([
         linearGradient(
           deg(0.),
-          list{
-            (zero, #rgba(0, 0, 0, #percent(80.))),
-            (#percent(100.), #rgba(0, 0, 0, #percent(80.))),
-          },
+          [(zero, #rgba(0, 0, 0, #percent(80.))), (#percent(100.), #rgba(0, 0, 0, #percent(80.)))],
         ),
         #url("/omnifood/back-customers.jpg"),
       ]),
@@ -562,7 +556,7 @@ module Styles = {
   let sectionPlans = CssJs.merge(. [section, style(. [backgroundColor(#hex("f4f4f4"))])])
 
   let mediumPlanBox = style(. [
-    media("screen and (max-width: 1023px)", [width(#percent(100.)), marginLeft(#px(0))]),
+    media(. "screen and (max-width: 1023px)", [width(#percent(100.)), marginLeft(#px(0))]),
   ])
 
   let planBox = CssJs.merge(. [
@@ -574,7 +568,7 @@ module Styles = {
     mediumPlanBox,
   ])
 
-  let mediumPlanBoxDiv = style(. [media("screen and (max-width: 1023px)", [padding(#px(20))])])
+  let mediumPlanBoxDiv = style(. [media(. "screen and (max-width: 1023px)", [padding(#px(20))])])
 
   let planBoxDiv = CssJs.merge(. [
     style(. [padding(#px(40)), borderBottom(#px(1), #solid, #rgb(243, 244, 246))]),
@@ -586,10 +580,10 @@ module Styles = {
     row,
   ])
 
-  let smPlanPrice = style(. [media("screen and (max-width: 1023px)", [fontSize(#percent(300.))])])
+  let smPlanPrice = style(. [media(. "screen and (max-width: 1023px)", [fontSize(#percent(300.))])])
 
   let mediumPlanPrice = style(. [
-    media("screen and (max-width: 1023px)", [fontSize(#percent(250.))]),
+    media(. "screen and (max-width: 1023px)", [fontSize(#percent(250.))]),
   ])
 
   let planPrice = CssJs.merge(. [
@@ -606,7 +600,7 @@ module Styles = {
   let planPriceSpan = style(. [fontSize(#percent(30.)), fontWeight(#num(300))])
 
   let smallPlanPriceMeal = style(. [
-    media("screen and (max-width: 1023px)", [fontSize(#percent(100.))]),
+    media(. "screen and (max-width: 1023px)", [fontSize(#percent(100.))]),
   ])
 
   let planPriceMeal = CssJs.merge(. [style(. [fontSize(#percent(80.))]), smallPlanPriceMeal])
@@ -629,7 +623,7 @@ module Styles = {
 
   // NOTE: Contact form
 
-  let xsContactForm = style(. [media("screen and (max-width: 1023px)", [width(#percent(100.))])])
+  let xsContactForm = style(. [media(. "screen and (max-width: 1023px)", [width(#percent(100.))])])
 
   let mediumContactForm = style(. [width(#percent(80.))])
 

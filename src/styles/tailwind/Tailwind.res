@@ -863,8 +863,8 @@ type colorTuple = (CssJs.Types.Length.t, CssJs.Types.Color.t)
 let combineGradientColors = ((percent, color): colorTuple) =>
   `, ${CssJs.Types.Color.toString(color)} ${CssJs.Types.Length.toString(percent)}`
 
-let linGradient = (direction, listOfTuples: list<colorTuple>) =>
-  `linear-gradient(${direction}${Belt.List.reduce(listOfTuples, ``, (acc, (percent, color)) =>
+let linGradient = (direction, arrayOfTuples: array<colorTuple>) =>
+  `linear-gradient(${direction}${Belt.Array.reduce(arrayOfTuples, ``, (acc, (percent, color)) =>
       acc ++ combineGradientColors((percent, color))
     )})`
 
@@ -878,28 +878,28 @@ let toBl = colorList => linGradient("to bottom left", colorList)
 let toL = colorList => CssJs.Types.Gradient.toString(CssJs.linearGradient(deg(270.), colorList))
 let toTl = colorList => linGradient("to top left", colorList)
 
-let bgGradientToT = (colorList: list<colorTuple>) => [
+let bgGradientToT = (colorList: array<colorTuple>) => [
   CssJs.unsafe("backgroundImage", toT(colorList)),
 ]
-let bgGradientToTr = (colorList: list<colorTuple>) => [
+let bgGradientToTr = (colorList: array<colorTuple>) => [
   CssJs.unsafe("backgroundImage", toTr(colorList)),
 ]
-let bgGradientToR = (colorList: list<colorTuple>) => [
+let bgGradientToR = (colorList: array<colorTuple>) => [
   CssJs.unsafe("backgroundImage", toR(colorList)),
 ]
-let bgGradientToBr = (colorList: list<colorTuple>) => [
+let bgGradientToBr = (colorList: array<colorTuple>) => [
   CssJs.unsafe("backgroundImage", toBr(colorList)),
 ]
-let bgGradientToB = (colorList: list<colorTuple>) => [
+let bgGradientToB = (colorList: array<colorTuple>) => [
   CssJs.unsafe("backgroundImage", toB(colorList)),
 ]
-let bgGradientToBl = (colorList: list<colorTuple>) => [
+let bgGradientToBl = (colorList: array<colorTuple>) => [
   CssJs.unsafe("backgroundImage", toBl(colorList)),
 ]
-let bgGradientToL = (colorList: list<colorTuple>) => [
+let bgGradientToL = (colorList: array<colorTuple>) => [
   CssJs.unsafe("backgroundImage", toL(colorList)),
 ]
-let bgGradientToTl = (colorList: list<colorTuple>) => [
+let bgGradientToTl = (colorList: array<colorTuple>) => [
   CssJs.unsafe("backgroundImage", toTl(colorList)),
 ]
 
@@ -1199,11 +1199,11 @@ let tw = rules => Belt.Array.concatMany(rules)
 let twStyle = rules => CssJs.style(. Belt.Array.concatMany(rules))
 
 let minWBreakpoint = (breakpoint, styles) => [
-  CssJs.media(`screen and (min-width: ${Belt.Int.toString(breakpoint)}px)`, tw(styles)),
+  CssJs.media(. `screen and (min-width: ${Belt.Int.toString(breakpoint)}px)`, tw(styles)),
 ]
 
 let maxWBreakpoint = (breakpoint, styles) => [
-  CssJs.media(`screen and (max-width: ${Belt.Int.toString(breakpoint)}px)`, tw(styles)),
+  CssJs.media(. `screen and (max-width: ${Belt.Int.toString(breakpoint)}px)`, tw(styles)),
 ]
 
 let sm = minWBreakpoint(640)
@@ -1226,10 +1226,10 @@ let container = tw([
 ])
 // INFO: Selectors
 
-let selector = (string, rules) => [CssJs.selector(string, tw(rules))]
-let dividers = rules => [CssJs.selector(Selectors.ignoreFirstChild, tw(rules))]
-let dark = rules => [CssJs.selector(".dark &", tw(rules))]
-let marker = rules => [CssJs.selector("&::marker", tw(rules))]
+let selector = (string, rules) => [CssJs.selector(. string, tw(rules))]
+let dividers = rules => [CssJs.selector(. Selectors.ignoreFirstChild, tw(rules))]
+let dark = rules => [CssJs.selector(. ".dark &", tw(rules))]
+let marker = rules => [CssJs.selector(. "&::marker", tw(rules))]
 let active = rules => [CssJs.active(tw(rules))]
 let checked = rules => [CssJs.checked(tw(rules))]
 let default = rules => [CssJs.default(tw(rules))]

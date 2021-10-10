@@ -36,10 +36,10 @@ module Styles = {
     backgrounds([
       linearGradient(
         deg(0.),
-        list{
+        [
           (zero, #rgba(51, 51, 51, #percent(70.))),
           (#percent(100.), #rgba(51, 51, 51, #percent(70.))),
-        },
+        ],
       ),
       #url("//unsplash.it/1000/1000"),
     ]),
@@ -153,8 +153,8 @@ module Styles = {
 
   let toggleNav = style(. [
     checked([
-      selector("~ nav", [transform(#scale(1., 1.))]),
-      selector(
+      selector(. "~ nav", [transform(#scale(1., 1.))]),
+      selector(.
         "~ nav a",
         // NOTE: This transition fires when you open navigation
         [opacity(1.), transition("opacity", ~duration=250, ~timingFunction=#easeInOut, ~delay=250)],

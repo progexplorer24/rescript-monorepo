@@ -6,8 +6,8 @@ let useStopAnimationJank = () =>
   React.useEffect0(() => {
     module Styles = {
       open CssJs
-      let resizeAnimationStopper = style(.[
-        selector("*", [important(transition("none")), important(animationPlayState(#paused))]),
+      let resizeAnimationStopper = style(. [
+        selector(. "*", [important(transition("none")), important(animationPlayState(#paused))]),
       ])
     }
 

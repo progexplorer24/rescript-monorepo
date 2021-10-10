@@ -33,8 +33,8 @@ var content = CssJs.style([
             VAL: 200
           }),
       CssJs.backgrounds([
-            CssJs.linearGradient(CssJs.deg(0), {
-                  hd: [
+            CssJs.linearGradient(CssJs.deg(0), [
+                  [
                     CssJs.zero,
                     {
                       NAME: "rgba",
@@ -49,28 +49,25 @@ var content = CssJs.style([
                       ]
                     }
                   ],
-                  tl: {
-                    hd: [
-                      {
-                        NAME: "percent",
-                        VAL: 100
-                      },
-                      {
-                        NAME: "rgba",
-                        VAL: [
-                          51,
-                          51,
-                          51,
-                          {
-                            NAME: "percent",
-                            VAL: 70
-                          }
-                        ]
-                      }
-                    ],
-                    tl: /* [] */0
-                  }
-                }),
+                  [
+                    {
+                      NAME: "percent",
+                      VAL: 100
+                    },
+                    {
+                      NAME: "rgba",
+                      VAL: [
+                        51,
+                        51,
+                        51,
+                        {
+                          NAME: "percent",
+                          VAL: 70
+                        }
+                      ]
+                    }
+                  ]
+                ]),
             {
               NAME: "url",
               VAL: "//unsplash.it/1000/1000"

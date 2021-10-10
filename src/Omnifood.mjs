@@ -67,8 +67,8 @@ var row = CssJs.merge([
 
 var headerStyles = CssJs.style([
       CssJs.backgrounds([
-            CssJs.linearGradient(CssJs.deg(0), {
-                  hd: [
+            CssJs.linearGradient(CssJs.deg(0), [
+                  [
                     CssJs.zero,
                     {
                       NAME: "rgba",
@@ -83,28 +83,25 @@ var headerStyles = CssJs.style([
                       ]
                     }
                   ],
-                  tl: {
-                    hd: [
-                      {
-                        NAME: "percent",
-                        VAL: 100
-                      },
-                      {
-                        NAME: "rgba",
-                        VAL: [
-                          0,
-                          0,
-                          0,
-                          {
-                            NAME: "percent",
-                            VAL: 70
-                          }
-                        ]
-                      }
-                    ],
-                    tl: /* [] */0
-                  }
-                }),
+                  [
+                    {
+                      NAME: "percent",
+                      VAL: 100
+                    },
+                    {
+                      NAME: "rgba",
+                      VAL: [
+                        0,
+                        0,
+                        0,
+                        {
+                          NAME: "percent",
+                          VAL: 70
+                        }
+                      ]
+                    }
+                  ]
+                ]),
             CssJs.url("/omnifood/hero.jpg")
           ]),
       CssJs.height({
@@ -946,8 +943,8 @@ var customerSection = CssJs.merge([
       section,
       CssJs.style([
             CssJs.backgrounds([
-                  CssJs.linearGradient(CssJs.deg(0), {
-                        hd: [
+                  CssJs.linearGradient(CssJs.deg(0), [
+                        [
                           CssJs.zero,
                           {
                             NAME: "rgba",
@@ -962,28 +959,25 @@ var customerSection = CssJs.merge([
                             ]
                           }
                         ],
-                        tl: {
-                          hd: [
-                            {
-                              NAME: "percent",
-                              VAL: 100
-                            },
-                            {
-                              NAME: "rgba",
-                              VAL: [
-                                0,
-                                0,
-                                0,
-                                {
-                                  NAME: "percent",
-                                  VAL: 80
-                                }
-                              ]
-                            }
-                          ],
-                          tl: /* [] */0
-                        }
-                      }),
+                        [
+                          {
+                            NAME: "percent",
+                            VAL: 100
+                          },
+                          {
+                            NAME: "rgba",
+                            VAL: [
+                              0,
+                              0,
+                              0,
+                              {
+                                NAME: "percent",
+                                VAL: 80
+                              }
+                            ]
+                          }
+                        ]
+                      ]),
                   {
                     NAME: "url",
                     VAL: "/omnifood/back-customers.jpg"
